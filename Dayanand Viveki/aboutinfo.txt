@@ -1,0 +1,6 @@
+Name:= Dayanand Viveki;
+Email := dayanandviveki@gmail.com
+contact := 7798408988
+Education := B.Sc. Computer Science passout 2020
+Current Location := Karve Nagar,Pune.
+Permant Location := Ahmedmagar,Maharashtra.
