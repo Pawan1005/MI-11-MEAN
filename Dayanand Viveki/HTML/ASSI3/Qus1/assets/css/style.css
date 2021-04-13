@@ -1,0 +1,22 @@
+
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.first-child{
+    color:darkblue;
+}
+
+.sec-child{
+    color:darkslategrey
+}
+.main-list ol ul{
+ 
+    list-style-type:disc;
+
+}
+
+li{  
+    padding-left: 1.3rem;
+    margin-left: 1.3rem;
+}
