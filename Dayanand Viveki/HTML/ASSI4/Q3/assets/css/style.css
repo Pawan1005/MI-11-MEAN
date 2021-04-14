@@ -1,0 +1,35 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+body{
+  
+
+}
+div{
+    display: flexbox;
+   
+    text-align: center;
+}
+#count-table{
+    margin: auto;
+    padding: auto;
+}
+
+#count-table th{
+    font-size: 30px;
+   font-weight: bold;
+}
+
+#count-table td{
+    font-size: 25px;
+}
+
+table{
+    border: 2px solid black;
+}
+
+tr,td,th{
+    border: 1px solid gray;
+}

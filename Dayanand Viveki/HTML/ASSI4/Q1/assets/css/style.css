@@ -1,0 +1,38 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+body{
+  
+
+}
+div{
+    display: flexbox;
+    background-color: gray; 
+    text-align: center;
+}
+p{
+    font-size: 35px;
+    font-weight: bold;
+}
+#count-table{
+    border-collapse: collapse;
+    margin: auto;
+    padding: auto;
+}
+
+#count-table th{
+    font-size: 30px;
+   font-weight: bold;
+}
+
+#count-table td{
+    font-size: 25px;
+}
+
+table,tr,td,th{
+    border: 2px solid black;
+    margin: 10px;
+    padding: 10px;
+}
