@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table</title>
+    <style>
+        table, th, td{
+            border-left: 12px solid grey;
+            border-right: 12px solid grey;
+            border-top: 2px solid grey;
+            border-bottom: 2px solid grey;
+            padding: 15px;
+            border-collapse: collapse;
+        }
+
+        .a{
+            border-top: 12px solid grey;
+        }
+
+        .b{
+            border-top: transparent;
+        }
+
+        .c{
+            border-bottom: 12px solid grey;
+        }
+
+    </style>
+</head>
+<body style="margin: 50px 50px;">
+    <table style="width: 50%;">
+
+        <caption style="color:mediumpurple;"><h1>Jan's Spring Term Afternoon Schedule</h1></caption>
+
+        <tr class="a">
+            <th> </th>
+            <th>Monday</th>
+            <th>Tuesday</th>
+            <th>Wednesday</th>
+            <th>Thursday</th>
+            <th>Friday</th>
+        </tr>
+        <tr>
+            <th>1.00</th>
+            <td rowspan="2">Office</td>
+            <td> </td>
+            <td rowspan="2">Office</td>
+            <td class="c" rowspan="8">Office hours by Appt</td>
+            <td rowspan="2">Office</td>
+        </tr>
+        <tr>
+            <th>1.30</th>
+            <td rowspan="2">Dept<br>Meeting</td>
+        </tr>
+        <tr>
+            <th>2.00</th>
+            <td rowspan="3">MAT<br>108</td>
+            <td rowspan="3">MAT<br>108</td>
+            <td rowspan="3">MAT<br>108</td>
+        </tr>
+        <tr>
+            <th>2.30</th>
+            <td>  </td>
+            <td class="b">  </td>
+            <td class="b">  </td>
+        </tr>
+        <tr>
+            <th>3.00</th>
+            <td rowspan="3">EC<br>Meeting</td>
+            <td> </td>
+            <td> </td>
+        </tr>
+        <tr>
+            <th>3.30</th>
+            <td class="c" rowspan="3">CSC<br>205</td>
+            <td class="c" rowspan="3">CSC<br>205</td>
+            <td class="c" rowspan="3">CSC<br>205</td>
+        </tr>
+        <tr>
+            <th>4.00</th>
+            <td class="b"> </td>
+            <td class="b"> </td>
+            <td class="b"> </td>
+        </tr>
+        <tr>
+            <th class="c">4.30</th>
+            <td class="c"> </td>
+            <td class="c"> </td>
+            <td class="c"> </td>
+        </tr>
+
+    </table>  
+</body>
+</html>
