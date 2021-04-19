@@ -1,60 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Table 1 </title>
-    <style>
-       table, th, td {
-         border: 3px solid black;
-        padding: 20px;
-        border-collapse: collapse;
-        
-  
-}
-#avg{
-    border-bottom: 3px solid darkgray;
-}
-#eye{
-    align-items: center;
-}
-    </style>
-</head>
-<body>
-    <table style="width: 100%; background-color: teal;">
-        <caption><i>A test table with merged cells</i></caption>
-       
-        
-        <thead>
-            <tr>
-                <th rowspan="2"> </th>
-                <th id="avg" colspan="2">Average</th>
-                <th rowspan="2"  id="eye" >Red eyes</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <th></th>
-                <th>height</th>
-                <th>weight</th>
-            </tr>
-        
-
-
-       <tr>
-            <th>Male</th>
-            <td>1.9</td>
-            <td>0.003</td>
-            <td>40%</td>
-        </tr>
-
-        <tr><th>Female</th>
-           <td>1.7</td>
-            <td>0.002</td>
-            <td>43%</td>
-        </tr>
-    </tbody>
-    </table>
-</body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Table 1 </title>
+        <style>
+        table, th, td {
+            border: 3px solid black;
+            padding: 20px;
+            border-collapse: collapse;
+            }
+            #avg{
+                border-bottom: 3px solid darkgray;
+            }
+            #eye{
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <table style="width: 100%; background-color: teal;">
+            <caption><i>A test table with merged cells</i></caption>
+            <thead>
+                    <tr>
+                        <th rowspan="2"> </th>
+                        <th id="avg" colspan="2">Average</th>
+                        <th rowspan="2"  id="eye" >Red eyes</th>
+                    </tr>
+            </thead>
+            <tbody>
+                    <tr>
+                        <th></th>
+                        <th>height</th>
+                        <th>weight</th>
+                    </tr>
+                    <tr>
+                        <th>Male</th>
+                        <td>1.9</td>
+                        <td>0.003</td>
+                        <td>40%</td>
+                    </tr>
+                    <tr>
+                        <th>Female</th>
+                        <td>1.7</td>
+                        <td>0.002</td>
+                        <td>43%</td>
+                    </tr>
+            </tbody>
+        </table>
+    </body>
 </html>
