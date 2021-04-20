@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+p{
+    text-align: center;
+    font-size: 25px;
+    color: hotpink;
+    font-weight: bold;
+    margin: 10px;
+    padding: 10px;
+}
+
+table{
+    border-collapse: collapse;
+    border: 10px solid gray;  
+    margin: auto;
+    padding: auto;
+    text-align: center;
+    width: 15px;
+}
+
+th,tr,td{
+    border-left: 10px solid gray;
+    border-right: 10px solid gray;
+    border-bottom:2px solid  gray;
+    margin: 10px;
+    padding: 10px;
+}
+
