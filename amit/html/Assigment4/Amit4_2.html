@@ -1,0 +1,96 @@
+!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td{
+            border-left:10px solid gray ;
+            border-right: 10px solid gray;
+            border-top: 5px solid gray;
+            border-bottom: 5px solid gray;
+            border-collapse: collapse;
+            text-align-last: center;
+        }
+        th, td{
+            padding: 15px;
+        }
+
+        .a{
+            border-top:  10px solid gray;
+        }
+        .adc{
+            border-bottom: 10px solid gray;
+        }
+        .w{
+            border-top: transparent;
+        }
+   </style>
+</head>
+<body>
+    <table style="width: 100%;" border="20" cellpadding="23">
+        <body>
+            <caption style="color: violet;"><h1>Jan's Spring Term Afternoon Schedule</h1></caption>
+            <tr class="a" >
+                <th rowspan="1"></th>
+             <th>Monday</th>
+             <th>Tuesday</th>
+             <th>Wednesday</th>
+             <th>Thursday</th>
+             <th>Friday</th>
+            </tr>
+        <tr>
+        <th>1:00</th>
+          <td rowspan="2">Office</td>
+          <td rowspan="1"></td>
+          <td rowspan="2">Office</td>
+             <td rowspan="8"; class="adc">Office <br> hours <br> by <br> Appt</td>
+        <td rowspan="2">Office</td>
+        </tr>
+        <tr>
+        <th>1:30</th>
+        <td rowspan="2">Dept <br> meeting</td>
+        </tr>
+
+        <tr>
+        <th>2:00</th>
+          <td rowspan="3">MAT <br> 108</td>
+          <td rowspan="3">MAT <br> 108</td>
+          <td rowspan="3">MAT <br> 108</td>
+        </tr>
+        <tr>
+        <th>2:30</th>
+        <td></td>
+             <td class="w"></td>
+             <td class="w"></td>
+        </tr>
+        <tr>
+        <th>3:00</th>
+        <td rowspan="3">EC <br> Meeting</td>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+        </tr>
+        <tr>
+        <th >3:30</th>
+            <td rowspan="3"; class="adc">CSE <br> 205;</td>
+            <td rowspan="3"; class="adc">CSE <br> 205</td>
+            <td rowspan="3"; class="adc">CSE <br> 205</td>
+        </tr>
+        <tr>
+          <th >4:00</th>
+             <td class="w"></td>
+             <td class="w"></td>
+             <td class="w"></td>
+        </tr>
+        <tr class="adc" >
+           <th>4:30</th>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+             <td>&nbsp;</td>
+        </tr>
+        </body>
+        </table>
+</body>
+</html> 
