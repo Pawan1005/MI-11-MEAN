@@ -7,8 +7,13 @@
     <title>Table_Q2</title>
     <style>
       table {
-        border: 10px solid rgb(107, 105, 105);
         border-collapse: collapse;
+      }
+      .border {
+        border-top: 10px solid gray;
+      }
+      .border-bottom {
+        border-bottom: 10px solid grey;
       }
       th,
       td {
@@ -30,19 +35,19 @@
         Jan's Spring Term Afternoon Schedule
       </caption>
       <tr>
-        <td></td>
-        <th>Monday</th>
-        <th>Tuesday</th>
-        <th>Wednesday</th>
-        <th>Thursday</th>
-        <th>Friday</th>
+        <th class="border"></th>
+        <th class="border">Monday</th>
+        <th class="border">Tuesday</th>
+        <th class="border">Wednesday</th>
+        <th class="border">Thursday</th>
+        <th class="border">Friday</th>
       </tr>
       <tr>
         <th>1:00</th>
         <td rowspan="2">Office</td>
         <td></td>
         <td rowspan="2">Office</td>
-        <td rowspan="8">
+        <td rowspan="8" class="border-bottom">
           Office <br />
           Hours <br />
           by <br />
@@ -80,12 +85,12 @@
       </tr>
       <tr>
         <th>3:30</th>
-        <td rowspan="3">
+        <td rowspan="3" class="border-bottom">
           CSC <br />
           205
         </td>
-        <td rowspan="3">CSC 205</td>
-        <td rowspan="3">CSC <br />205</td>
+        <td rowspan="3" class="border-bottom">CSC 205</td>
+        <td rowspan="3" class="border-bottom">CSC <br />205</td>
       </tr>
       <tr>
         <th>4:00</th>
@@ -94,10 +99,10 @@
         <td></td>
       </tr>
       <tr>
-        <th>4:30</th>
-        <td></td>
-        <td></td>
-        <td></td>
+        <th class="border-bottom">4:30</th>
+        <td class="border-bottom"></td>
+        <td class="border-bottom"></td>
+        <td class="border-bottom"></td>
       </tr>
     </table>
   </body>
