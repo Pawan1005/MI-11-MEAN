@@ -4,108 +4,95 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Table Assignment 2</title>
+    <title>Second Table</title>
+    <style>
+      h2 {
+        color: steelblue;
+      }
+      table,
+      th,
+      td {
+        border-collapse: collapse;
+      }
+
+      table {
+        border: 8px solid slategray;
+      }
+
+      th,
+      td {
+        border: 2px solid slategray;
+        padding: 10px;
+        border-right: 8px solid slategray;
+        /* border-left: 10px slategray; */
+      }
+    </style>
   </head>
+
   <body>
-    <table
-      border="1"
-      style="
-        height: 500px;
-        width: 750px;
-        padding: 25px;
-        margin-left: auto;
-        margin-right: auto;
-        text-align: center;
-      "
-    >
-      <tbody>
-        <center>
-          <h2 style="color: blueviolet">
-            Jan's Spring Term Afternoon Schedule
-          </h2>
-        </center>
+    <h2>
+      <caption>
+        Jan's Spring Term Afternoon Schedule
+      </caption>
+    </h2>
 
-        <tr>
-          <td></td>
-          <td>Monday</td>
-          <td>Tuesday</td>
-          <td>Wednesday</td>
-          <td>Thursday</td>
-          <td>Friday</td>
-        </tr>
-
-        <tr>
-          <td>1:00</td>
-          <td rowspan="2">Office</td>
-          <td></td>
-          <td rowspan="2">Office</td>
-          <td rowspan="8">
-            Office <br />Hour <br />
-            By <br />
-            Appt
-          </td>
-          <td rowspan="2">Office</td>
-        </tr>
-
-        <tr>
-          <td>1:30</td>
-          <td rowspan="2">
-            Dept <br />
-            Meeting
-          </td>
-        </tr>
-
-        <tr>
-          <td>2:00</td>
-          <td rowspan="3">
-            MAT <br />
-            108
-          </td>
-          <td rowspan="3">
-            MAT <br />
-            108
-          </td>
-          <td rowspan="3">
-            MAT <br />
-            108
-          </td>
-        </tr>
-
-        <tr>
-          <td>2:30</td>
-          <td></td>
-        </tr>
-
-        <tr>
-          <td>3:00</td>
-          <td rowspan="3"></td>
-        </tr>
-
-        <tr>
-          <td>3:30</td>
-          <td rowspan="3">
-            CSC <br />
-            205
-          </td>
-          <td rowspan="3">
-            CSC <br />
-            205
-          </td>
-          <td rowspan="3">
-            CSC <br />
-            205
-          </td>
-        </tr>
-
-        <tr>
-          <td>4:00</td>
-        </tr>
-
-        <tr>
-          <td>4:30</td>
-          <td></td>
-        </tr>
-      </tbody>
+    <table>
+      <tr>
+        <th></th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thursday</th>
+        <th>Friday</th>
+      </tr>
+      <tr>
+        <th>1:00</th>
+        <td rowspan="2">Office</td>
+        <td></td>
+        <td rowspan="2">Office</td>
+        <td rowspan="8">Office Hours by Appt</td>
+        <td rowspan="2">Office</td>
+      </tr>
+      <tr>
+        <th>1:30</th>
+        <td rowspan="2">Dept Meeting</td>
+      </tr>
+      <tr>
+        <th>2:00</th>
+        <td rowspan="3">MAT 108</td>
+        <td rowspan="3">MAT 108</td>
+        <td rowspan="3">MAT 108</td>
+      </tr>
+      <tr>
+        <th>2:30</th>
+        <td></td>
+        <td style="border-top: 0px"></td>
+        <td style="border-top: 0px"></td>
+      </tr>
+      <tr>
+        <th>3:00</th>
+        <td rowspan="3">EC Meeting</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <th>3:30</th>
+        <td rowspan="3">CSC 205</td>
+        <td rowspan="3">CSC 205</td>
+        <td rowspan="3">CSC 205</td>
+      </tr>
+      <tr>
+        <th>4:00</th>
+        <td style="border-top: 0px"></td>
+        <td style="border-top: 0px"></td>
+        <td style="border-top: 0px"></td>
+      </tr>
+      <tr>
+        <th>4:30</th>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
     </table>
   </body>
 </html>
