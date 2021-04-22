@@ -2,15 +2,12 @@
     margin: 0px;
     padding: 0px;
 }
-
 table{
     border-collapse: separate;
     border: 1px solid black;
     margin: auto;
     padding: auto;
 }
-
 tr,th,td{
     border: 1.8px solid black;
-
 }
