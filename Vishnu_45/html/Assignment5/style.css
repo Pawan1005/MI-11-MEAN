@@ -1,46 +1,38 @@
-body
-{
-    background: 1px solid black;
-    background-color: rgb(165, 106, 38);
-   
-}   
-h1
-{
-    background-color: rgba(255, 255, 255, 0.925);
+body {
+  background: 1px solid black;
+  background-color: rgb(165, 106, 38);
 }
-section
-{
-    width: 100%;
-    background-color: rgb(255, 153, 0);
-    padding: 28px;
-    height: 127px;
+h1 {
+  background-color: rgba(255, 255, 255, 0.925);
 }
-.name
-{
-    position: relative;
-    top: -95px;
-    left: -30px;
+section {
+  width: 100%;
+  background-color: rgb(255, 153, 0);
+  padding: 28px;
+  height: 127px;
 }
-h2{
-    text-align: right;
-    padding: 10px;
+.name {
+  position: relative;
+  top: -95px;
+  left: -30px;
 }
-.para
-{
-    border: 1px solid black;
-    padding: 20px;
-    margin-right: 10px;
-    color: blue;
+h2 {
+  text-align: right;
+  padding: 10px;
 }
-a:link
-{
-    color: brown;
+.para {
+  border: 1px solid black;
+  padding: 20px;
+  margin-right: 10px;
+  color: blue;
 }
-ul{
-    list-style-type: square;
+a:link {
+  color: brown;
 }
-a:visited
-{
-    top: 100px;
-    color: black;
+ul {
+  list-style-type: square;
+}
+a:visited {
+  top: 100px;
+  color: black;
 }
