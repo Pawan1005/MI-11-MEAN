@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Table 2</title>
+        <style>
+            table, th, td {
+                    padding: 20px;
+                    border-collapse: collapse;
+                    border-left: 12px solid grey;
+                    border-right: 12px solid grey;
+                    border-top: 2px solid grey;
+                    border-bottom: 2px solid grey;
+            }
+            table{
+                border-right: 0px;
+                border-bottom: 12px solid gray;
+                border-top: 12px solid gray;
+                border-collapse: collapse;
+            }
+            .blank{
+                border-top: 0px;
+            }
+            #hdcolor{
+                border-top: 12px solid white;
+                border-right: 0px;
+                border-bottom: 0px;
+            }
+            #hdcol{
+                border-right: 0px;
+                border-bottom: 12px solid white;
+            }
+           h2{
+                text-align: center;
+                color: orchid;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <caption><h2>Jan's Spring Term Afternoon Schedule</h2></caption>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Monday</th>
+                    <th>Tuesday</th>
+                    <th>Wednesday</th>
+                    <th>Thursday</th>
+                    <th>Friday</th>
+                    <th colspan="3" id="hdcolor"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th>1:00</th>
+                    <td rowspan="2">Office</td>
+                    <td></td>
+                    <td rowspan="2">Office</td>
+                    <td rowspan="8" style="text-align: center;">Office <br> Hours<br>by<br> Appt</td>
+                    <td rowspan="2">Office</td>
+                </tr>
+                <tr>
+                    <th>1:30</th>
+                    <td rowspan="2">Dept<br> Meeting</td>
+                </tr>
+                <tr>
+                    <th>2:00</th>
+                    <td rowspan="3">MAT <br>108</td>
+                    <td rowspan="3"> MAT 108</td>
+                    <td rowspan="3">MAT <br>108</td>
+                </tr>
+                <tr>
+                    <th>2:30</th>
+                    <td></td>
+                    <td class="blank"></td>
+                    <td class="blank"></td>
+                </tr>
+                <tr>
+                    <th>3:00</th>
+                    <td rowspan="3">EC Meeting</td>
+                    <td ></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <th>3:30</th>
+                    <td rowspan="3">CSC <br>205</td>
+                    <td rowspan="3">CSC 205</td>
+                    <td rowspan="3">CSC <br>205</td>
+                </tr>
+                <tr>
+                    <th>4:00</th>
+                    <td class="blank"></td>
+                    <td class="blank"></td>
+                    <td class="blank"></td>
+                </tr>
+                <tr>
+                    <th>4:30</th>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td id="hdcol"></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
