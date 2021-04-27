@@ -3,7 +3,6 @@
     <head>
         <title> Assignment-3_1</title>
     </head>
-
     <body>
         <h2> Ambersoft</h2>
         <p>
@@ -11,14 +10,11 @@
                <li style="color: blueviolet;"> MI-MEAN
                 <ol style="list-style-type:lower-roman;" >  
                     <li>MI-MEAN-6</li>
-
                     <ul>
                         <li> Shweta </li> 
                         <li>Ajay</li>
                         <li>Trupti</li>
-
                     </ul>
-
                     <li>MI-MEAN-7</li>
                     <ul>
                         <li>Sagar</li>
@@ -37,7 +33,6 @@
                     </ul>
                 </ol>
                 </li>
-
                 <li style="color:blue;"> SYSTEM
                    <ol style="list-style-type: lower-roman;">
                        <li>SYSTEM-1</li>
@@ -53,7 +48,6 @@
                            </ul>
                    </ol>
                 </li>   
-
             </ol>
         </p>
     </body>
