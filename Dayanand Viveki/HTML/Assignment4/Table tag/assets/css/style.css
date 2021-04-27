@@ -1,0 +1,32 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+div{
+    background-color: gray;
+    margin-left: 500px;
+    margin-right: 500px;
+}
+table{
+    margin: auto;
+ }
+table, th, td {
+    border: 3px solid black;
+    padding: 20px;
+    border-collapse: collapse;
+}
+#avg{
+    border-bottom: 3px solid darkgray;
+}
+#eye{
+    align-items: center;
+}
+p,th{
+    font-size: 30px;
+    text-align: center;
+    font-style: italic;
+    font-weight: bold;
+}
+td{
+    font-size: 30px;
+}
