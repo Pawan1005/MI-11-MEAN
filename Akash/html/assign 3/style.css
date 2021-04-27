@@ -1,15 +1,15 @@
-#left{
+#left {
     float: left;
 }
-#right{
+#right {
     float: right;
 }
-p{
+p {
     text-align: justify;
 }
-body{
+body {
     background-color: pink;
 }
-a{
+a {
     text-align: center;
 }
