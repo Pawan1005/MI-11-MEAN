@@ -1,20 +1,20 @@
-header{
+header {
     height:100%; width:100%;
     text-align: left;
     border: 1px solid black;
     border-color: white;
 }
-nav{
+nav {
     float: center;
     width: 99.7%;
     height: 200px;
 }
-nav ul{
+nav ul {
     float: center;
     list-style: square;
     text-align: justify;
 }
-.divmain{
+.divmain { 
     float: center;
     text-align: center;
     border: 2px solid black;
@@ -23,14 +23,14 @@ nav ul{
     background-repeat: no-repeat;
     background-size: cover;
 }
-.pl{
+.pl {
     text-align: left;
     border: 1px solid black;
     height: 100%;
     width: 99.5%;
 }
-.div2{
+.div2 {
     height: 120px;
     width: 100%;
-    vertical-align:bottom;
+    vertical-align: bottom;
 }
