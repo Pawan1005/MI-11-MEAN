@@ -1,0 +1,19 @@
+.a {
+    text-align-last: right;
+    border: solid blue;
+    background-color: blue;
+    border-radius: 2px 8px;
+}
+.b {
+    text-align-last: right;
+    border: solid blue;
+    background-color: blue;
+    border-radius: 2px 8px;
+}
+.c {
+    font-family: Arial, Helvetica, sans-serif;
+}
+::placeholder {
+    color: gray;
+    opacity: 0.6;
+}
