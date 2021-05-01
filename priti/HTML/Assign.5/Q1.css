@@ -1,0 +1,25 @@
+p {
+    border: 2px solid rgb(230, 26, 26);
+}
+h1 {
+    background-color: rgb(223, 176, 176);
+}
+h4 {
+    text-align: right;
+    padding: 10px;
+}
+.para {
+    border: 2px solid rgb(219, 7, 7);
+    padding: 10;
+    margin: 5;
+    color: rgb(1, 5, 14);
+}
+a.link {
+    color: rgb(223, 11, 82);
+}
+ul {
+    list-style-type: square;
+}
+a:visited {
+    color: red;
+}
