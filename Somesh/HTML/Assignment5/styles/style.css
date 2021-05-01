@@ -1,0 +1,57 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: url("./pexels-pixabay-257897.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: left;
+}
+
+.logo {
+    background: linear-gradient(
+        rgba(0, 0, 0, 0.9),
+        rgba(0, 0, 0, 0.8),
+        rgba(0, 0, 0, 0.7),
+        rgba(0, 0, 0, 0.6)
+    );
+    height: 80px;
+    line-height: 80px;
+    color: white;
+    padding-left: 40px;
+}
+
+section {
+    width: 100%;
+    background-color: rgba(214, 11, 55, 0.349);
+    padding: 30px;
+}
+h2 {
+    text-align: right;
+    color: rgb(255, 255, 255);
+    background-color: rgb(91, 8, 112);
+}
+
+section > div,
+p {
+    font-size: 16px;
+    width: 90%;
+    box-shadow: 5px 7px 9px 7px rgba(0, 0, 0, 0.5);
+    padding: 50px;
+    font-family: "poppins";
+    color: rgb(203, 255, 155);
+    background-color: rgba(17, 1, 109, 0.212);
+}
+
+section > div > ul > li {
+    padding: 14px;
+}
+
+section > div > ul > li a {
+    color: rgb(203, 255, 155);
+}
