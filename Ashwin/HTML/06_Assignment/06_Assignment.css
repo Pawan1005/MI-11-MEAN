@@ -1,0 +1,21 @@
+.blue1 {
+    height: 50px;
+    width: 100%;
+    background-color: rgb(182, 190, 204);
+    text-align: right;
+    border-radius: 5px;
+}
+.blue2 {
+    height: 30px;
+    width: 100%;
+    background-color: rgb(182, 190, 204);
+    text-align: right;
+    border-radius: 5px;
+    font-size: 25px;
+}
+table {
+    border-spacing: 0 7px;
+}
+td {
+    padding: 5px;
+}
