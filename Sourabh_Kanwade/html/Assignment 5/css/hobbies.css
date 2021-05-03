@@ -1,0 +1,21 @@
+body {
+    background-color: rgba(187, 179, 75, 0.897);
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    background-color: rgb(230, 209, 91);
+    border-radius: 20px;
+    box-shadow: 10px 10px grey;
+}
+ul {
+    list-style: none;
+}
