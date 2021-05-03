@@ -1,0 +1,12 @@
+header{
+    text-align: right;
+    background-color: rgb(83, 83, 90);
+    height: 100%;
+    width: 100%;
+    border-radius: 5px 10px;
+}
+h3{
+    text-align: right;
+    background-color: rgb(130, 182, 202);
+    border-radius: 5px 10px;
+}
