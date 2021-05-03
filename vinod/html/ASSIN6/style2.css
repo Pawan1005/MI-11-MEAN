@@ -1,0 +1,40 @@
+
+
+#main    {
+    background-color: #FFFFFF;
+    width: 280px;
+    margin: 50px auto;
+    border: 0px solid;
+ }
+h1{
+      background-color: darkgray;
+ }
+
+}#content {
+    padding: 6em 1em;
+        border: none;
+    margin: 20px;
+ }
+
+   #textblock   {
+    background-color: rgb(247, 240, 240);   
+    width: 900px;
+    border: 2px solid #eee6e6;
+    padding: 10px 7px;
+    float: left;
+    font-size: 110%;
+    text-align: right;
+    height: 600px
+ } 
+
+     #textblock1  {
+        background-color:rgb(245, 245, 145);   
+        width: 500px;
+        top: -47;
+        border: 2px solid #110404;
+        padding: 2px 3px  ;
+        float: left;
+        font-size: 110%;
+        text-align: left;
+        height: 600px
+ } 
