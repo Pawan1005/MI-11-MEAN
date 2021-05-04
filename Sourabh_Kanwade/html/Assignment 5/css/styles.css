@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+#background {
+    background-image: url(../background_image.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+}
+p,
+ul,
+h1 {
+    padding: 20px;
+    list-style: square;
+}
+h1 {
+    color: rgb(4, 38, 102);
+}
+h2 {
+    font-style: italic;
+    float: right;
+    margin: 20px;
+}
+.block {
+    margin-top: 60px;
+    height: 200px;
+    width: 95vw;
+    padding: 20px;
+    border-radius: 25px;
+    background-color: rgba(223, 175, 116, 0.9);
+    box-shadow: 5px 5px rgba(228, 155, 66, 0.9);
+}
