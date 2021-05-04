@@ -38,6 +38,7 @@ body .form-item{
 body .form-item input{
     font-size: 20px;
 }
-body .form-item label , body .form-item input{
+body .form-item label,
+ body .form-item input{
     margin: 9px;
 }

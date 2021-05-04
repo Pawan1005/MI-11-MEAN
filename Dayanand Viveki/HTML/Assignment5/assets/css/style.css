@@ -56,7 +56,8 @@ body .links a{
     margin: 10px;
     color: wheat;
 }
-.info , .links{
+.info,
+.links{
     margin: 1rem;
     text-align: justify;
 }
