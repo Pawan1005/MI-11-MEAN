@@ -9,9 +9,7 @@
     width: 100vw;
     height: 100vh;
 }
-p,
-ul,
-h1 {
+p,ul,h1 {
     padding: 20px;
     list-style: square;
 }
