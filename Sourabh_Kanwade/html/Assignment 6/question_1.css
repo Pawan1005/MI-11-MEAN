@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1,
+h2 {
+    background-color: blueviolet;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+h1 {
+    margin-bottom: 50px;
+}
+label {
+    font-weight: bold;
+}
+#first-name {
+    margin: 20px 0;
+}
+#last-name {
+    margin: 20px 0;
+}
+#other {
+    margin: 20px 0;
+}
