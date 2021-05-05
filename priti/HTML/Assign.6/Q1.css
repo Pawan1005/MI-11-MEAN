@@ -1,9 +1,12 @@
+body {
+     font-family: Arial, Helvetica, sans-serif;
+ }
 .a {
-    border: black;
-    border-style: solid;
-    text-align: right;
-    background-color: rgb(141, 125, 123);
-    border-bottom-left-radius: 8px;
-    border-top-right-radius: 8px;
-    margin-bottom: 3%;
-}
+     border: black;
+     border-style: solid;
+     text-align: right;
+     background-color: rgb(141, 125, 123);
+     border-bottom-left-radius: 8px;
+     border-top-right-radius: 8px;
+     margin-bottom: 3%;
+    }
