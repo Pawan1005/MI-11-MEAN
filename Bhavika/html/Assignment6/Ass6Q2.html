@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>CSS</title>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <style type="text/css"></style>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: #ffffff;
+            }
+            h2 {
+                background-color: #91b1c5;
+                text-align: right;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2><i>Professional Details</i></h2>
+        <fieldset>
+            <legend>Academic Details</legend>
+            <label for="Skill Set">Skill Set:</label>
+            <input type="checkbox" id="HTML" name="checkbox" value="HTML" />
+            <label for="HTML">HTML</label>
+            <input type="checkbox" id="HTML" name="checkbox" value="HTML" />
+            <label for="Java Script">Java Script</label>
+            <input type="checkbox" id="Javascript" name="checkbox" value="Javascript" />
+            <label for="Java">Java</label>
+            <input type="checkbox" id="Java" name="checkbox" value="Java" />
+            <label for="Oracle">Oracle</label><br />
+            <p>
+                <label for="Highest Qualification">Highest Qualification:</label>
+                <select id="Highest Qualification">
+                    <option value="Diploma in Computer Science">Diploma in Computer Science</option>
+                    <option value="Science Graduate">Science Graduate</option>
+                    <option value="Bachelor in Engg">Bachelor in Engg</option>
+                    <option value="Masters in Computer Science">Masters in Computer Science</option>
+                    <option value="Masters in Engg">Masters in Engg</option>
+                    <option value="others">Others</option>
+                </select>
+                <br />
+            </p>
+            <p>
+                <label for="University">University:</label>
+                <input type="text" id="University" name="University" /><br />
+            </p>
+            <br />
+            <p>
+                <label for="Areas of Expertise">Areas of Expertise:</label>
+                <select id="sel" multiple=" multiple=" multiple>
+                    <option value="Software">Software</option>
+                    <option value="Training">Training</option>
+                    <option value="Network">Network</option>
+                    <option value="Management">Management</option>
+                    <option value="Marketing">Marketing</option>
+                </select>
+                <span id="result"></span>
+                <input type="button" id="but1" value="You can Select multiple fields" />
+            </p>
+        </fieldset>
+        <fieldset>
+            <legend>Resume</legend>
+            <label for="Upload Resume">Upload Resume:</label>
+            <button type="file" id="custom-button">Browse...</button>
+            <span id="custom-text">No file Chosen.</span>
+            <p>
+                <br />
+                <label for="Comments">Comments:</label>
+                <label><textarea cols="40" rows="10" name=""></textarea></label>
+            </p>
+        </fieldset>
+        <br />
+        <input type="button" value="Submit" />
+    </body>
+</html>
