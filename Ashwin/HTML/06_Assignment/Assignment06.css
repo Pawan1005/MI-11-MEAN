@@ -1,0 +1,45 @@
+.blue1 {
+    height: 50px;
+    width: 100%;
+    background-color: rgb(182, 190, 204);
+    text-align: right;
+    border-radius: 5px;
+}
+.blue2 {
+    height: 30px;
+    width: 100%;
+    background-color: rgb(182, 190, 204);
+    text-align: right;
+    border-radius: 5px;
+    font-size: 25px;
+}
+table {
+    border-spacing: 0 7px;
+}
+td {
+    padding: 5px;
+}
+fieldset input[list="universities"] {
+    margin-top: 20px;
+    margin-left: 143px;
+    margin-bottom: 20px;
+}
+#Qualification {
+    margin-top: 20px;
+    margin-left: 60px;
+}
+#expertise {
+    margin-left: 90px;
+}
+#resume {
+    margin-left: 95px;
+    margin-bottom: 20px;
+}
+#comment {
+    margin-left: 140px;
+}
+#submit-btn {
+    margin-top: 20px;
+    text-align: center;
+    color: aliceblue;
+}
