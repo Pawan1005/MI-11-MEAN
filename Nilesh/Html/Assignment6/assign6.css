@@ -21,7 +21,41 @@
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
 }
-.checkbox1 {
+.form2 {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 15px;
+}
+.btn1 {
+    text-align: center;
+    margin-top: 14px;
+}
+.qualification {
+    margin-top: 34px;
+}
+.university {
+    margin-top: 34px;
+}
+.multipleoption1 {
+    margin-top: 34px;
+}
+.comment1 {
+    margin-top: 34px;
+}
+.section1 {
+    margin-left: 50px;
+}
+.label-checkbox1 {
+    margin-right: 128px;
+}
+.label-university {
+    margin-right: 118px;
+}
+.label-multiple {
+    margin-right: 60px;
+}
+.label-upload {
+    margin-right: 78px;
+}
+.label-comment {
+    margin-right: 114px;
 }
