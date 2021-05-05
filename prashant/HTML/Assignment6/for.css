@@ -1,11 +1,9 @@
-
 h1{
     text-align: right;
     background-color: #ccccff;
     font-family: Arial, Helvetica, sans-serif;
     margin-bottom: 50px;
     border-radius: 0px 10px 0px 10px;
-    
 }
 h3{
     text-align: right;
@@ -31,7 +29,6 @@ h3{
     margin-top: 50px;
     margin-bottom: 20px;
 }
-
 #qualification{
     border: 3px solid black;
     margin-top: 30px;
@@ -44,6 +41,4 @@ h3{
     display: flex;
     justify-content: center;
     align-items: center;
-  
-    
 }
