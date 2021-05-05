@@ -1,0 +1,29 @@
+body {
+    border: 1px solid black;
+    background-color: burlywood;
+}
+.bgimage {
+    background-image: url(Panda.jpg)
+}
+h1 {
+    background-color: rgb(224, 100, 125);
+}
+h4 {
+    text-align: right;
+    padding: 10px;
+}
+.para {
+    border: 1px solid black;
+    padding: 20px;
+    margin-right: 10px;
+    color: rgb(17, 17, 29);
+}
+a:link {
+    color: rgb(148, 107, 77);
+}
+ul {
+    list-style-type: square;
+}
+a:visited {
+    color: rgb(31, 37, 31);
+}
