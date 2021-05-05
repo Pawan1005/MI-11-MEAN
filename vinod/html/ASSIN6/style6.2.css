@@ -1,8 +1,6 @@
-#main {
-    background-color: #ffffff;
-    width: 280px;
-    margin: 50px auto;
-    border: 0px solid;
+.btn {
+    position: relative;
+    left: 600px;
 }
 
 h1 {
