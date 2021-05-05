@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Assignment 6</title>
+        <link rel="stylesheet" href="assign6que1.css" />
+    </head>
+    <body>
+        <h1 class="a">MI-9-intern HTML Assesment</h1>
+        <br />
+        <hr />
+        <h2>Personal Details</h2>
+        <form class="form1">
+            <b>First Name: <input type="text" name="fname" /></b>
+            <br />
+            <br />
+            <b>Last Name : <input type="text" name="lname" /></b>
+            <br />
+            <br />
+            <b>Gender : <input type="radio" name="radio" /></b>Male <input type="radio" name="radio" />Female <input type="radio" name="radio" />Other
+            <br />
+            <br />
+            <b>Age :<input type="radio" /></b>Less than 18 <input type="radio" />18-25 <input type="radio" />25-40
+            <br />
+            <br />
+            <div>
+                <h2>Professional Details</h2>
+                <b>Skill Set : <input type="checkbox" /></b>HTML <input type="checkbox" />JavaScript <input type="checkbox" />Java
+                <input type="checkbox" />Oracle<br />
+                <br />
+            </div>
+            <fieldset>
+                <legend>Academic Details:</legend>
+                <b>Highest Qualification:</b>
+                <select>
+                    <option value="diploma">Diploma In Competer Science</option>
+                    <option value="graduate">Science Graduate</option>
+                    <option value="bacheler">Bacheler In Enggineering</option>
+                    <option value="mcs">Master In Computer Science</option>
+                    <option value="master">Master In Enggineering</option>
+                    <option value="other">Other</option></select
+                ><br />
+                <br />
+                <b>University:</b>
+                <input list="university" name="university" id="university" />
+                <datalist id="university">
+                    <option value="Mumbai University"></option>
+                    <option value="Pune University"></option>
+                    <option value="Nagpur University"></option>
+                    <option value="Chennai University"></option>
+                    <option value="Badoda University"></option>
+                </datalist>
+                <br />
+                <br />
+                <b>Areas Of Expertise:</b>
+                <select multiple>
+                    <option value="American">Software</option>
+                    <option value="Andean">Trainning</option>
+                    <option value="Chilean">Networking</option>
+                    <option value="James's">Management</option>
+                    <option value="Greater">Marketing</option>
+                </select>
+                You can select multiple fields
+            </fieldset>
+            <br />
+            <fieldset>
+                <legend>Resume:</legend>
+                <b>Upload Resume:</b>
+                <input type="button" value="Browse.." /> No File Selected
+                <br />
+                <br />
+                <b>Comments:</b>
+                <textarea rows="8" cols="30"> </textarea>
+            </fieldset>
+            <br />
+            <div style="text-align: center;">
+            <input type="button" value="Submit"/>
+            </div>
+            <br>
+        </form>
+    </body>
+</html>
