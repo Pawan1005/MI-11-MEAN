@@ -6,7 +6,7 @@ body {
     border: 15px 50px;
     padding: 25px;
     background-color:rgb(238, 73, 73);
-    list-style-type: square;
+    list-style-type:square;
 }
 .moreabout {
     border: solid;
