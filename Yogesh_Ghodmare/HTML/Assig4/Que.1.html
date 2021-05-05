@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Table</title>
+        <style>
+            table,
+            tr,
+            th,
+            td {
+                border: 3px solid gray;
+                border-collapse: collapse;
+            }
+            table,
+            tr,
+            th,
+            td {
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <tableborder="1">
+            <caption>
+                <em>A test table with merged cells</em>
+            </caption>
+            <tr>
+                <th rowspan="2"></th>
+                <th colspan="2">Average</th>
+                <th rowspan="2">
+                    Red<br />Eyes
+                    <tr>
+                        <th>height</th>
+                        <th>weight</th>
+                    </tr>
+                    <tr>
+                        <th>Male</th>
+                        <td>1.9</td>
+                        <td>0.003</td>
+                        <td>40%</td>
+                    </tr>
+                    <tr>
+                        <th>Female</th>
+                        <td>1.7</td>
+                        <td>0.002</td>
+                        <td>43%</td>
+                    </tr>
+                </th>
+            </tr>
+        </table>
+    </body>
+</html>
