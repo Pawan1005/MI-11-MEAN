@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>From2</title>
+        <style>
+            .b {
+                background-color: rgb(137, 167, 224);
+                text-align: right;
+            }
+
+            .button {
+                position: relative;
+                left: 40%;
+            }
+
+            #corners {
+                border-bottom-left-radius: 8px;
+                border-top-right-radius: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <h3 class="b" id="corners"><em>Personal Details</em></h3>
+            <fieldset>
+                <legend>Academic Details</legend>
+                <p>
+                    <label><strong>Skill Set:</strong></label>
+                    <input type="checkbox" id="HTML" name="skillset" value="HTML" />
+                    <label for="html">HTML</label>
+                    <input type="checkbox" id="Javascript" name="skillset" value="Javascript" />
+                    <label for="javascript"> Javascript</label>
+                    <input type="checkbox" id="java" name="skillset" value="java" />
+                    <label for="java"> Java</label>
+                    <input type="checkbox" id="oracle" name="skillset" value="oracle" />
+                    <label for="oracle"> oracle</label>
+                </p>
+                <br />
+                <p>
+                    <label><strong>Highest Qualification:</strong></label>
+                    <select name="highest Qualification" id="Qualification">
+                        <option value="computer science">Diploma In Computer science</option>
+                        <option value="science">science graduate</option>
+                        <option value="engg">Bachelor in Engg</option>
+                        <option value="master">Master in Engg</option>
+                        <option value="other">other</option>
+                    </select>
+                </p>
+                <br />
+                <p>
+                    <label><strong>University:</strong></label>
+                    <input list="browsers" name="browser" id="browser" />
+                    <datalist id="browsers">
+                        <select>
+                            <option value="Mumbai University"></option>
+                            <option value="Pune University"></option>
+                            <option value="Nagpur University"></option>
+                            <option value="Badodara University"></option>
+                            <option value="Chennai University"></option>
+                        </select>
+                    </datalist>
+                </p>
+                <br />
+                <p>
+                    <label><strong>Area of Expertise:</strong></label>
+                    <select multiple>
+                        <option>software</option>
+                        <option>Training</option>
+                        <option>Networking</option>
+                        <option>Management</option>
+                        <option>Marketing</option>
+                    </select>
+                    You can select multiple fields.
+                </p>
+            </fieldset>
+            <fieldset>
+                <legend>Resume</legend>
+                <p>
+                    <label for="myfile"><strong>Upload Resume:</strong></label>
+                    <input type="file" id="myfile" name="myfile" multiple />
+                </p>
+                <p>
+                    <label for="comment"><strong>Comments:</strong></label>
+                    <textarea></textarea>
+                </p>
+            </fieldset>
+            <br />
+            <div class="button">
+                <button>submit</button>
+            </div>
+        </form>
+    </body>
+</html>
+
