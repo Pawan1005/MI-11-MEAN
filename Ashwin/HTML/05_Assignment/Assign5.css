@@ -45,19 +45,6 @@ body {
     margin-right: 10px;
     color: #ffffff;
     background-color: #51cebdcc;
-    padding: 7px;
-    margin-left: 10px;
-    font-size: 14px;
-}
-.info2 {
-    border-style: none inset inset none;
-    border-radius: 90px 1px 90px 1px;
-    border-color: grey;
-    margin-top: 80px;
-    margin-right: 10px;
-    color: #ffffff;
-    background-color: #51cebdcc;
-    padding: 15px;
     margin-left: 10px;
     font-size: 14px;
 }
