@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <title>Personal Details</title>
+    </head>
+    <body>
+        <div class="banner">
+            <div class="headline font-size-35">
+                <p>MI-11 Inter HTML Assesment</p>
+            </div>
+            <hr />
+            <div class="headline font-size-25 italic-font">
+                <p>Personal Details</p>
+            </div>
+            <div class="form-item">
+                <form action="">
+                    <span>
+                        <label for="fname">Frist Name:</label>
+                        <input type="text" id="fname" placeholder="First Name" />
+                    </span>
+                    <br />
+                    <span>
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" placeholder="Last Name" />
+                    </span>
+                    <br />
+                    <span>
+                        <label for="gender">Gender:</label>
+                        <input type="radio" id="gender" name="gender" value="male" />Male
+                        <input type="radio" id="gender" name="gender" value="female" />Female
+                        <input type="radio" id="gender" name="gender" value="other" />Other
+                    </span>
+                    <br />
+                    <span>
+                        <label for="age">Age:</label>
+                        <input type="radio" id="age" name="age" value="lessthan18" />Less than 18
+                        <input type="radio" id="age" name="age" value="18-25" checked />18-25 
+                        <input type="radio" id="age" name="age" value="26-40" />26-40
+                    </span>
+                </form>
+            </div>
+            <div class="headline font-size-25 italic-font">
+                <p>Academic Details</p>
+            </div>
+            <div class="form-item">
+                <form action="">
+                    <span>
+                        <label for="skill">Skill:</label>
+                        <input type="checkbox" id="skill" name="skillset" value="html" />HTML
+                        <input type="checkbox" id="skill" name="skillset" value="javascript" />JavaScript
+                        <input type="checkbox" id="skill" name="skillset" value="java" />Java
+                        <input type="checkbox" id="skill" name="skillset" value="oracle" />Oracle
+                    </span>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

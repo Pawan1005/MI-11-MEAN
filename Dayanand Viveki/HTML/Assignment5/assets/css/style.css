@@ -1,0 +1,64 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    display: flexbox;
+}
+.color-wheat {
+    color: wheat;
+}
+body {
+    color: black;
+}
+.name {
+    font-size: 75px;
+    font-weight: bold;
+    margin: 20px;
+}
+.aboutme {
+    background-image:url('../img/bg-img.jpeg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 82.5vh;
+    padding: 20px;
+    color: wheat;
+    font-size: 25px;
+}
+@media only screen and (max-width: 1650px) {
+    .aboutme {
+        height: 150vh;
+    }
+}
+@media only screen and (max-width: 800px) {
+    .aboutme {
+        height: 250vh;
+    }
+}
+@media only screen and (max-width: 350px) {
+    body {
+        visibility: hidden
+    }
+}
+body .headline {
+    font-size: 60px;
+    text-align: end
+    ;  
+    color: whitesmoke;
+}
+body ul {
+    margin-left:4rem;
+    list-style-type:square;
+    color:green;
+}
+body .links a {
+    text-decoration:none;
+    font-size: 30px;
+    margin: 10px;
+    color: wheat;
+}
+.info,
+.links {  
+    margin: 1rem;
+    text-align: justify;
+}
+ 
