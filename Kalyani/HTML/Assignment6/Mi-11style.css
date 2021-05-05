@@ -21,3 +21,19 @@ h2 {
 label {
     font-weight: bold;
 }
+#Hg {
+     margin-top: 30px;
+     margin-left: 20px;
+}
+fieldset input[list="University"] {
+    margin-top: 30px;
+    margin-left: 160px;
+    margin-bottom: 30px;
+}
+div{
+    text-align: center;
+}
+#Resume{
+    margin-bottom: 50px;
+    margin-top: 60px;
+}
