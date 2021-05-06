@@ -1,45 +1,35 @@
-.bgcolor1{
-    background: rosybrown;
-    background-image:url('backimage.jpg');
+.bgcolor1 {
+    background-image: url("backimage.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    width:96%;
-    padding:7px;">
 }
-.right{
+.right {
     text-align: right;
 }
-.titlet{
+.titlet {
     font-weight: 900;
     font-size: 40px;
 }
 table#table1 {
-    width:100%; 
-   
+    width: 100%;
 }
-table td{
-    border:1px solid #000000;
+table td {
+    border: 1px solid #000000;
 }
-.fourthblock{
-    background: orangered;
-    height: 200px;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-right: 20px;
-}
-li{
+li {
     font-size: 20px;
     padding-top: 5px;
     padding-bottom: 5px;
 }
-#maindiv div {
-    background-color: #8ebf42;
-    padding: 10px;
-  }
 .shadow {
     border: 1px solid;
     padding: 10px;
     box-shadow: 2px 4px;
 }
-li {list-style-type:square;color: blue;font-size: 25px;border: 1px;}
+li {
+    list-style-type: square;
+    color: blue;
+    font-size: 25px;
+    border: 1px;
+}
