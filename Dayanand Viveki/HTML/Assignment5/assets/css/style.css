@@ -49,11 +49,12 @@ body ul {
     list-style-type: square;
     color: green;
 }
-body .links a {
-    text-decoration: none;
+body ul li {
     font-size: 30px;
-    margin: 10px;
-    color: wheat;
+    margin-left: 60px;    
+}
+body ul li a{
+    color: wheat;    
 }
 .info ,
 .links {  
