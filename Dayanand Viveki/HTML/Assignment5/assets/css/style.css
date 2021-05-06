@@ -44,6 +44,8 @@ body .headline {
     text-align: end;  
     color: whitesmoke;
 }
+
+
 body ul {
     margin-left: 4rem;
     list-style-type: square;
@@ -51,9 +53,8 @@ body ul {
 }
 body ul li {
     font-size: 30px;
-    margin-left: 60px;    
+    margin-left: 60px;
 }
-
 .info ,
 .links {  
     margin: 1rem;
