@@ -8,11 +8,11 @@ h2 {
 p {
     color: rgb(0, 0, 0);
 }
-.a {
+.outer_border {
     border: solid rgb(44, 44, 44);
     border-width: 1px;
 }
-.b {
+.inner_border {
     font-family: "Courier New";
     border: solid rgb(44, 44, 50);
     border-width: 1px, 1px, 1px, 1px;
@@ -20,7 +20,7 @@ p {
     background-image: url("3.jpg");
     opacity: 0.8;
 }
-.c {
+.subheading {
     font-family: Georgia, "Times New Roman", Times, serif;
     text-align: right;
 }
