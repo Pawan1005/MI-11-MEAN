@@ -3,13 +3,16 @@
     padding: 0px;
     display: flexbox;
 }
-.font-size-35 {
+.font_size_35 {
     font-size: 35px;
 }
-.font-size-25 {
+.font_size_25 {
     font-size: 25px;
 }
-.italic-font {
+.font_size_20 {
+    font-size: 20px;
+}
+.italic_font {
     font-style: italic;
 }
 body {
@@ -29,15 +32,16 @@ body .headline {
 body hr {
     margin-top: 40px;
 }
-body .form-item {
-    font-size: 20px;
-    margin-left: 24px;
+body .form_item {
     font-weight: bold;
 }
-body .form-item input {
+body .form_item span {
+    margin-left: 40px;
+}
+body .form_item input {
     font-size: 20px;
 }
-body .form-item label,
- body .form-item input {
+body .form_item label,
+ body .form_item input {
     margin: 9px;
 }

@@ -3,7 +3,7 @@
     padding: 0px;
     display: flexbox;
 }
-.color-wheat {
+.color_wheat {
     color: wheat;
 }
 body {
@@ -15,7 +15,7 @@ body {
     margin: 20px;
 }
 .aboutme {
-    background-image:url('../img/bg-img.jpeg');
+    background-image: url('../img/bg-img.jpeg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -41,22 +41,21 @@ body {
 }
 body .headline {
     font-size: 60px;
-    text-align: end
-    ;  
+    text-align: end;  
     color: whitesmoke;
 }
 body ul {
-    margin-left:4rem;
-    list-style-type:square;
-    color:green;
+    margin-left: 4rem;
+    list-style-type: square;
+    color: green;
 }
 body .links a {
-    text-decoration:none;
+    text-decoration: none;
     font-size: 30px;
     margin: 10px;
     color: wheat;
 }
-.info,
+.info ,
 .links {  
     margin: 1rem;
     text-align: justify;
