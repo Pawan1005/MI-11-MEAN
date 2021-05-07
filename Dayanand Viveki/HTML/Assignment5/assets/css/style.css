@@ -9,12 +9,12 @@
 body {
     color: black;
 }
-.name {
+body .name {
     font-size: 75px;
     font-weight: bold;
     margin: 20px;
 }
-.aboutme {
+body .aboutme {
     background-image: url('../img/bg-img.jpeg');
     background-repeat: no-repeat;
     background-position: center;
@@ -24,19 +24,19 @@ body {
     color: wheat;
     font-size: 25px;
 }
+@media only screen and (max-width: 350px) {
+    body {
+        visibility: hidden;
+    }
+}
 @media only screen and (max-width: 1650px) {
-    .aboutme {
+    body .aboutme {
         height: 150vh;
     }
 }
 @media only screen and (max-width: 800px) {
-    .aboutme {
+     body .aboutme {
         height: 250vh;
-    }
-}
-@media only screen and (max-width: 350px) {
-    body {
-        visibility: hidden;
     }
 }
 body .headline {
@@ -53,8 +53,7 @@ body ul li {
     font-size: 30px;
     margin-left: 60px;
 }
-.info ,
-.links {  
-    margin: 1rem;
+body .aboutme .info ,body .aboutme .links {  
+    margin: 2rem;
     text-align: justify;
 }
