@@ -52,13 +52,13 @@ body .form_item .academic_details .sm_headline, body .form_item .resume_details 
     border: 2px solid black;
     margin: -12px 85rem 0px 51px;
 }
-body .form_item .academic_details input{
+body .form_item .academic_details input { 
     margin: 30px 70px;
 }
-body .form_item .academic_details option{
+body .form_item .academic_details option {
     font-size: 15px;
 }
-body .form_item .btn_class{
+body .form_item .btn_class {
     text-align: center;
 }
 body .form_item .btn {
