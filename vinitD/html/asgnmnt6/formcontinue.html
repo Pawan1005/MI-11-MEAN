@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form</title>
+        <style>
+            .h1 {
+                background-color: hsl(216, 38%, 51%);
+                text-align-last: right;
+                border-radius: 2px 8px;
+            }
+            .h2 {
+                background-color: rgb(20, 59, 117);
+                text-align-last: right;
+                border-radius: 2px 8px;
+            }
+            .bt {
+                position: absolute;
+                left: 50%;
+            }
+
+            .z {
+                border: black solid 1px;
+            }
+            .x {
+                border: black solid 1px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h2 class="h2">Professional Details</h2>
+            <h3>academic details</h3>
+            <div class="z">
+                <table>
+                    <tr>
+                        <td>Skill Set :</td>
+                        <td>
+                            <input type="checkbox" name="Skill Set" />HTML <input type="checkbox" name="Skill Set" />Java Script
+                            <input type="checkbox" name="Skill Set" />Java <input type="checkbox" name="Skill Set" />Oracle
+                        </td>
+                    </tr>
+                </table>
+                <br/><br/>
+                <table>
+                    <tr>
+                        <td>Highest Qualification :</td>
+                        <td>
+                            <select>
+                                <option value="Diploma in Computer Science">Diploma In Computer Science</option>
+                                <option value="Science Graduates">Science Graduates</option>
+                                <option value="Bachelor in Engg.">Bachelor In Engg.</option>
+                                <option value="Masters in Computer Science">Master In Computer Science</option>
+                                <option value="Masters in Engg.">Master In Engg.</option>
+                                <option value="Other">Other</option>
+                            </select>
+                        </td>
+                    </tr>
+                </table>
+                <br/><br/>
+                <div>
+                    <table>
+                        <tr>
+                            <td>University :</td>
+                            <td>
+                                <input list="browsers" />
+                                <datalist id="browsers">
+                                    <option value="Mumbai University"></option>
+                                    <option value="Pune University"></option>
+                                    <option value="Chennai University"></option>
+                                    <option value="Nagpur University"></option>
+                                    <option value="Badoda University"></option>
+                                </datalist>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+                <br/><br/>
+                <div>
+                    <table>
+                        <tr>
+                            <td>Areas of Expertise :</td>
+                            <td>
+                                <select id="Areas of Expertise" name="Areas of Expertise" size="3" multiple>
+                                    <option value="Software">Software</option>
+                                    <option value="Training">Training</option>
+                                    <option value="Networking">Networking</option>
+                                    <option value="Marketing">Marketing</option></select
+                                >You can select multiple files
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <br/><br/>
+            <div>
+                <h2 class="h2">Resume</h2>
+                <table>
+                    <div class="x">
+                        <tr>
+                            <td>Upload Resume :</td>
+                            <td>
+                                <button onclick="document.getElementById('file').click()">Browse...</button>No file selected
+                                <input type="file" id="file" name="files" style="display: none" />
+                            </td>
+                        </tr>
+                    </div>
+                </table>
+                <br/><br/>
+                <b>Comments</b> &nbsp; &nbsp; &nbsp; &nbsp; <textarea name="Comments" cols="30" rows="5" form="username"></textarea>
+            </div>
+            <br/><br/>
+            <hr>
+            <div>
+                <button class="bt">Submit</button><br/><br/><br/><br/>
+            </div>
+        </div>
+    </body>
+</html>
