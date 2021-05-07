@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+        <title>Personal Full Details</title>
+    </head>
+    <body>
+        <div class="banner">
+            <div class="headline font_size_35">
+                <p>MI-11 Inter HTML Assesment</p>
+            </div>
+            <hr />
+            <div class="headline font_size_25 italic_font">
+                <p>Personal Details</p>
+            </div>
+            <div class="form_item">
+                <form action="">
+                    <span>
+                        <label for="fname">Frist Name:</label>
+                        <input type="text" id="fname" placeholder="First name" />
+                    </span>
+                    <br />
+                    <span>
+                        <label for="lname">Last Name:</label>
+                        <input type="text" id="lname" placeholder="Last name" />
+                    </span>
+                    <br />
+                    <span>
+                        <label for="gender">Gender:</label>
+                        <input type="radio" id="gender" name="gender" value="male" />Male <input type="radio" id="gender" name="gender" value="female" />Female
+                        <input type="radio" id="gender" name="gender" value="other" />Other
+                    </span>
+                    <br />
+                    <span>
+                        <label for="age">Age:</label>
+                        <input type="radio" id="age" name="age" value="lessthan18" />Less than 18
+                        <input type="radio" id="age" name="age" value="18-25" checked />18-25 <input type="radio" id="age" name="age" value="26-40" />26-40
+                    </span>
+                    <br />
+                    <div class="headline font_size_25 italic-_ont">
+                        <p>Professional Details</p>
+                    </div>
+                    <br />
+                    <div class="academic_details">
+                        <span>
+                            <p class="sm_headline">Academic Details</p>
+                        </span>
+                        <br />
+                        <span>
+                            <label for="skill">Skill:</label>
+                            <input type="checkbox" id="skill" name="skillset" value="html" />HTML
+                            <input type="checkbox" id="skill" name="skillset" value="javascript" />JavaScript
+                            <input type="checkbox" id="skill" name="skillset" value="java" />Java
+                            <input type="checkbox" id="skill" name="skillset" value="oracle" />Oracle
+                        </span>
+                        <br />
+                        <span>
+                            <label for="higest_qualification">Higest qualification:</label>
+                            <select name="higest_qualification" id="higest_qualification">
+                                <option value="diploma_cs">Diploma in Computer Science</option>
+                                <option value="science">Science Graduate</option>
+                                <option value="bachelors_eng">Bachelor in Engineer</option>
+                                <option value="masters_cs">Masters in Computer Science</option>
+                                <option value="masters_eng">Masters in Engineer</option>
+                                <option value="other">Others</option>
+                            </select>
+                        </span>
+                        <br />
+                        <span>
+                            <label for="university">Univarsity:</label>
+                            <input type="text" id="university" placeholder="Univarsity name" />
+                        </span>
+                        <br />
+                        <span>
+                            <label for="ares_of_expertise">Area if Expertise:</label>
+                            <select name="ares_of_expertise" id="ares_of_expertise" multiple>
+                                <option value="software">Software</option>
+                                <option value="traning">Traning</option>
+                                <option value="networking">Networking</option>
+                                <option value="managment">Management</option>
+                            </select>
+                            <span>You can select multiple filds press 'Crtl' and select fild </span>
+                        </span>
+                        <br />
+                    </div>
+                    <div class="resume_details">
+                        <span>
+                            <p class="sm_headline">Resume Details</p>
+                        </span>
+                        <span>
+                            <label for="resume">Upload Resume:</label>
+                            <input type="file" name="resume" is="resume" value="Browse..." />
+                        </span>
+                        <br />
+                        <span>
+                            <label for="comments">Comments:</label>
+                            <textarea name="comments" id="comments" cols="30" rows="7"></textarea>
+                        </span>
+                    </div>
+                    <div class="btn_class">
+                        <button class="btn">Submit</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
