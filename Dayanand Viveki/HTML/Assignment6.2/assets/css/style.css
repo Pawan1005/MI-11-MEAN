@@ -39,24 +39,21 @@ body .form_item {
 body .form_item span {
     margin-left: 40px;
 }
-body .form_item input,
-body  {
+body .form_item input, body .form_item option {
     font-size: 20px;
 }
-body .form_item label,
-body .form_item input {
+body .form_item label, body .form_item input {
     margin: 9px;
 }
-body .form_item .academic_details, 
-body .form_item .resume_details {
+body .form_item .academic_details, body .form_item .resume_details {
     border: 2px solid black;
     margin: 2rem;
     padding-bottom: 20px ;
 }
-body .form_item .academic_details .sm_headline,
-body .form_item .resume_details .sm_headline {
+body .form_item .academic_details .sm_headline, body .form_item .resume_details .sm_headline {
     background-color: white;
-    margin: -37px 85rem 0px 51px;
+    border: 2px solid black;
+    margin: -30px 85rem 0px 51px;
 }
 body .form_item .academic_details input{
     margin: 50px;
