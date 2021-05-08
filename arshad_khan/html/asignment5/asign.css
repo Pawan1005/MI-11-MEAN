@@ -1,0 +1,40 @@
+header {
+    height: 100%;
+    width: 100%;
+    text-align: left;
+    border: 1px solid black;
+    background-color: white;
+}
+nav {
+    float: left;
+    width: 99.7%;
+    height: 200px;
+}
+nav ul {
+    float: left;
+    list-style: square;
+    text-align: justify;
+}
+.divmain {
+    float: right;
+    text-align: right;
+    text-decoration-color: seagreen;
+    border: 2px solid black;
+    width: 100%;
+    background-repeat: no-repeat;
+}
+.p1 {
+    text-align: left;
+    border: 1px solid black;
+    height: 100%;
+    width: 99.5%;
+}
+.div2 {
+    height: 160px;
+    width: 100%;
+    vertical-align: bottom;
+}
+body {
+    background-image: url(2.jpeg);
+    background-size: cover;
+}
