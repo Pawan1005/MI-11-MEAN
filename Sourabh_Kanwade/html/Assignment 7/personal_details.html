@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Personal Details</title>
+        <link rel="stylesheet" href="./css/styles.css" />
+    </head>
+    <body>
+        <div class="sidebar">
+            <div class="sidebar-title">Job<span>Portal</span></div>
+            <a href="./home.html" class="sidebar-links">Home</a>
+            <a href="./personal_details.html" class="sidebar-links">Personal Details</a>
+            <a href="./professional_details.html" class="sidebar-links">Professional Details</a>
+            <a href="./login.html" class="sidebar-links">Login</a>
+        </div>
+        <div class="container">
+            <div class="form-container">
+                <h1>Personal Details</h1>
+                <form>
+                    <label for="first-name">First Name: </label>
+                    <input type="text" name="fname" id="first-name" placeholder="First Name" />
+                    <label for="last-name">Last Name: </label>
+                    <input type="text" name="lname" id="last-name" placeholder="Last Name" />
+                    <label>Gender :</label>
+                    <div>
+                        <input type="radio" id="male" name="gender" value="male" />
+                        <label for="male">Male</label>
+                        <input type="radio" id="female" name="gender" value="female" />
+                        <label for="female">Female</label>
+                        <input type="radio" id="other" name="gender" value="other" />
+                        <label for="other">Other</label>
+                    </div>
+                    <label>Age :</label>
+                    <div>
+                        <input type="radio" id="less-18" name="age" />
+                        <label for="less-18">less than 18</label>
+                        <input type="radio" id="between-18-25" name="age" checked />
+                        <label for="between-18-25">18-25</label>
+                        <input type="radio" id="between-25-40" name="age" />
+                        <label for="between-25-40">25-40</label>
+                    </div>
+                </form>
+                <h1>Academics Details</h1>
+                <form>
+                    <h3>Education</h3>
+                    <label for="Qualification">Highest Qualification:</label>
+                    <select id="Qualification">
+                        <option>Masters in Computer Science</option>
+                        <option>Diploma in Computer Science</option>
+                        <option>Science Graduate</option>
+                        <option>Bachelor in Engg.</option>
+                        <option>Masters in Engg.</option>
+                        <option>Other</option>
+                    </select>
+                    <label for="university">University:</label>
+                    <input list="universities" type="text" name="university" id="university" />
+                    <datalist id="universities">
+                        <option value="Mumbai University"></option>
+                        <option value="Pune University"></option>
+                        <option value="Chennai University"></option>
+                        <option value="Nagpur University"></option>
+                        <option value="Badoda University"></option>
+                    </datalist>
+                    <h3>Skills</h3>
+                    <div>
+                        <input type="checkbox" name="skill-1" id="skill-1" value="HTML" />
+                        <label for="skill-1">HTML</label>
+                        <input type="checkbox" name="skill-2" id="skill-2" value="Java Script" />
+                        <label for="skill-2">Java Script</label>
+                        <input type="checkbox" name="skill-3" id="skill-3" value="Java" />
+                        <label for="skill-3">Java</label>
+                        <input type="checkbox" name="skill-6" id="skill-6" value="Angular" />
+                        <label for="skill-6">Angular</label>
+                        <input type="checkbox" name="skill-4" id="skill-4" value="Oracle" />
+                        <label for="skill-4">Oracle</label>
+                        <input type="checkbox" name="skill-5" id="skill-5" value="React" />
+                        <label for="skill-5">React</label>
+                    </div>
+                    <button>Submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
