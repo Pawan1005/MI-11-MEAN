@@ -1,34 +1,35 @@
-body  {
+body {
     background-image: url("images/flower.jpeg");
-    height:650px; /* You must set a specified height */
+    height: 650px; /* You must set a specified height */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Do not repeat the image */
     background-size: cover; /* Resize the background image to cover the entire container */
-  }
-  h1{
-   background-color:white;  color:rgb(218, 36, 111); 
-   margin-left: 3px;
-   margin-right: 4px;
-   padding: 10px 10px;
-   width:1200px;
-  }
-  .a{
-    border:2px solid red;
-  }
-  .b{
-    background-color:white;
-    color:blueviolet;
-    padding:15px 0px 15px 25px;
-    border:2px solid red;
-    width:1200px;
-  }
-  h2{
-   color:white;
-    text-align:right;
-  }
-  a:link {
-text-decoration:blueviolet;
 }
-ul{
- list-style-type: square;
- }
+h1 {
+    background-color: white;
+    color: rgb(218, 36, 111);
+    margin-left: 3px;
+    margin-right: 4px;
+    padding: 10px 10px;
+    width: 1200px;
+}
+.a {
+    border: 2px solid red;
+}
+.b {
+    background-color: white;
+    color: blueviolet;
+    padding: 15px 0px 15px 25px;
+    border: 2px solid red;
+    width: 1200px;
+}
+h2 {
+    color: white;
+    text-align: right;
+}
+a:link {
+    text-decoration: blueviolet;
+}
+ul {
+    list-style-type: square;
+}
