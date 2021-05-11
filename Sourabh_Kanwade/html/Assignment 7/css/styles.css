@@ -82,7 +82,7 @@ form > button {
     border: none;
     border-radius: 20px;
 }
-form > label,h3 {
+form > label, h3 {
     margin: 15px 0px;
 }
 form > label {

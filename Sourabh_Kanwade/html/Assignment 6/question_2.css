@@ -1,7 +1,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
 }
-h1,h2 {
+h1, h2 {
     background-color: blueviolet;
     border-bottom-left-radius: 10px;
     border-top-right-radius: 10px;
