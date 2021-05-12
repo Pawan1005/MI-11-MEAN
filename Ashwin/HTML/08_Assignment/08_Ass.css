@@ -1,0 +1,17 @@
+.container {
+    width: 100%;
+    height: auto;
+    background-color: cyan;
+    border: solid 2px red;
+}
+.ImageMain {
+    display: flex;
+    justify-content:stretch;
+}
+.ImageMain > img {
+    width: 200px;
+    height: 200px;
+}
+.ImageMain > img, .ImageMain > p {
+    padding: 0 5px;
+}
