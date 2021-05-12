@@ -1,0 +1,14 @@
+.btn {
+    position: relative;
+    left: 600px;
+}
+
+h1 {
+    background-color: darkgray;
+}
+
+#content {
+    padding: 6em 1em;
+    border: none;
+    margin: 20px;
+}
