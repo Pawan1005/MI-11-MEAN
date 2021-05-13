@@ -1,9 +1,9 @@
-body{
+body {
     border: 3px solid black;
     background: url(Website-Design-Background.webp);
     color: white;
 }
-.p-about{
+.p-about {
     text-align: right;
     font-style: italic;
     font-size: 40px;
@@ -11,7 +11,7 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border:  darkslateblue 3px;
 }
-.p-more-about{
+.p-more-about { 
     text-align: right;
     padding-top: 30px;
     font-style: italic;
@@ -20,12 +20,11 @@ body{
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     border: darkslateblue 3px;
 }
-.div-self-description{
+.div-self-description {
     border: solid black 3px;
     padding: 30px;
     padding-bottom: 100px;
     margin-right: 40px;
     margin-top: 40px;
     margin-bottom: 0.1px;
-    
 }
