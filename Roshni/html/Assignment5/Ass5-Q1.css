@@ -1,0 +1,54 @@
+body {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+}
+.bgcolor1 {
+    background: pink;
+    background-image: url("image.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+}
+.right {
+    text-align: right;
+}
+.titlet {
+    font-weight: 900;
+    font-size: 40px;
+}
+table#table1 {
+    width: 100%;
+}
+table td {
+    border: 1px solid #000000;
+}
+.fourthblock {
+    height: 200px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 20px;
+}
+li {
+    font-size: 20px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#maindiv div {
+    padding: 10px;
+}
+.shadow {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 2px 4px;
+}
+li {
+    list-style-type: square;
+    color: yellow;
+    font-size: 25px;
+}
+a {
+    color: black;
+}

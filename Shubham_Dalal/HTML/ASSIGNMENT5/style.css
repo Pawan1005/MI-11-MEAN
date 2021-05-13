@@ -1,0 +1,44 @@
+body {
+    margin: 0px;
+    padding: 0%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.main {
+    display: block;
+    height: 700px;
+    background-color: rgba(231, 169, 144, 0.5);
+}
+.head {
+    height: 60px;
+    width: auto;
+    color: white;
+    background-color: rgb(177, 135, 135);
+}
+.aboutme {
+    display: flex;
+    float: right;
+    height: 40px;
+    width: auto;
+    margin-top: 20px;
+    margin-right: 20px;
+    align-items: center;
+    font-size: 25px;
+    color: rgb(95, 86, 91);
+    border-radius: 5px;
+    font-style: italic;
+}
+.discription {
+    border-style: none inset inset none;
+    border-radius: 1px 10px 150px 50px;
+    border-color: grey;
+    margin-top: 70px;
+    margin-right: 10px;
+    color: rgb(54, 63, 54);
+    background-color: hsla(0, 53%, 58%, 0.2);
+    padding: 30px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.link {
+    text-decoration: none;
+    color: rgb(95, 86, 91);
+}
