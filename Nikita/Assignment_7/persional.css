@@ -1,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-color: rgb(6, 168, 180);
+    height: 100px;
+    background-size: cover;
+    background-position: center;
+}
+div.main {
+    width: 400px;
+    margin: 100px auto 0px auto;
+}
+h2 {
+    text-align: center;
+    padding: 20px;
+    font-family: sans-serif;
+}
+div-register {
+    background-color: blueviolet;
+    width: 100%;
+    font-size: 18px;
+    border-radius: 10px;
+    border-radius: 10px;
+    border: aqua;
+    box-shadow: black;
+    color: burlywood;
+}
