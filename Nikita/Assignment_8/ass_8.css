@@ -1,0 +1,40 @@
+.container{
+    margin: 20px auto; 
+    width: 100%;
+    background-color: tomato;
+    padding: 8px;
+}
+img{
+    float: right;
+    width: 500px;
+    height: 1500px;
+    padding: 10px;
+}
+text{
+    text-align: left;
+    font-family: verdana;
+    height: 200px;
+    
+}
+img{
+    float: left;
+    width: 500px;
+    height: 150px;
+    padding: 10px;
+}
+text{
+    text-align: right;
+    font-family: verdana;
+    height: 200px;
+}
+img{
+    float: left;
+    width: 500px;
+    height: 150px;
+    padding: 10px;
+}
+text{
+    text-align: right;
+    font-family: verdana;
+    height: 200px;
+}
