@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background-color: rosybrown;
+}
+#nav {
+    background-color: rgb(33, 18, 48);
+    color: rgb(255, 255, 255);
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+#intro {
+    background-color: rosybrown;
+    color: rgb(255, 255, 255);
+}
+#skills {
+    background-color: rgb(230, 198, 248);
+}
+#education {
+    background-color: rgb(218, 189, 255);
+}
+.block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    padding: 20px;
+    font-size: 16px;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    background-color: rosybrown;
+    border-radius: 20px;
+    box-shadow: 5px 5px rgb(88, 48, 116);
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+button {
+    background-color: rosybrown;
+    font-weight: bold;
+    color: lavenderblush;
+    padding: 15px;
+    border-radius: 120px;
+    outline: none;
+    border: none;
+}

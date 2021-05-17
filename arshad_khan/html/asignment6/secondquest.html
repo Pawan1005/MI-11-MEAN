@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form</title>
+        <link rel="stylesheet" href="effect1.css" />
+    </head>
+    <body>
+        <div>
+            <header>
+                <h2>MI-9 Intern HTML Assesment</h2>
+            </header>
+            <br /><br />
+            <hr />
+            <h3><i>Personel Details</i></h3>
+            <form action="">
+                <label for="fname">First Name: <input type="text" placeholder="First name" /> </label>
+                <br /><br />
+                <label for="lname">Last Name: <input type="text" placeholder="Last name" /> </label><br /><br />
+                <label for="gender">Gender: 
+                    <input type="radio" name="gender" value="male" />Male <input type="radio" name="gender" value="female" />Female
+                    <input type="radio" name="gender" value="other" />Other
+                </label>
+                <br /><br />
+                <label for="age">Age: 
+                    <input type="radio" name="age" value="lessthan18" />Less than 18 <input type="radio" name="age" value="18-25" />18-25
+                    <input type="radio" name="age" value="26-40" />26-40
+                </label>
+                <h3><i>Academic Details</i></h3>
+                <label for="skill">Skill Set: 
+                    <input type="checkbox" name="skill" value="html" />HTML <input type="checkbox" name="skill" value="javascript" /> Java Script
+                    <input type="checkbox" name="skill" value="java" />Java <input type="checkbox" name="skill" value="oracle" />Oracle </label>
+                <br /><br />
+                <label for="highest">Highest Qualification: 
+                    <select name="highest qualification" id="">
+                        <option value="Diploma">Diploma in computer science</option>
+                        <option value="Science">Science Graduate</option>
+                        <option value="Bachelor engg">Bachelor in Engg</option>
+                        <option value="MCA">Master in computer science</option>
+                        <option value="Mtech">Master in Engg</option>
+                        <option value="Other">Other</option>
+                    </select> </label>
+                <br /><br />
+                <label for="university">University is datalist:
+                    <input list="university" name="university" />
+                    <datalist id="university">
+                        <option value="Mumbai University"></option>
+                        <option value="Pune University"></option>
+                        <option value="Chennai University"></option>
+                        <option value="Lucknow University"></option>
+                        <option value="Hyderabad University"></option>
+                    </datalist> </label>
+                <br /><br />
+                <label for="area">Areas of Expertise:
+                     <select name="areas" id="areas" size="5" multiple>
+                        <option value="Software">Software</option>
+                        <option value="Trainee">Trainee</option>
+                        <option value="Networking">Networking</option>
+                        <option value="Management">Management</option>
+                        <option value="Marketing">Marketing</option>
+                    </select>
+                </label>
+                <label for="">you can select multiple fields</label><br />
+                <fieldset>
+                    <legend>Resume</legend>
+                    <label for="resume">Upload Resume: <input type="file" id="myfile" name="myfile" /> </label><br /><br />
+                    <label for="coments">coments: 
+                        <textarea name="message" id="" cols="30" rows="10"></textarea>
+                    </label>
+                </fieldset>
+                <br />
+                <center>
+                    <input type="submit" value="Submit" />
+                </center>
+            </form>
+        </div>
+    </body>
+</html>

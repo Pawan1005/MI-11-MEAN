@@ -1,0 +1,57 @@
+body {
+    background-image: url("427852.jpg");
+    background-size: cover;
+    background-position: center;
+    font-family: "Baloo Bhaina 2", cursive;
+    margin: 0%;
+    padding: 0%;
+}
+.first {
+    display: block;
+    width: 347px;
+    border: 2px solid black;
+    padding: 148px;
+    margin: 67px;
+    background-color: #ffd580;
+    height: 87px;
+}
+.second {
+    display: inline-block;
+    position: relative;
+    border: 2px solid white;
+    background-color: white;
+    top: -147px;
+    left: -147px;
+    width: 636px;
+}
+.third {
+    position: relative;
+    border: 2px solid red;
+    background-color: darkorange;
+    font-size: 14px;
+    left: 66px;
+    top: -447px;
+    width: 639px;
+    height: 106px;
+}
+#h4 {
+    position: relative;
+    top: -418px;
+    left: 640px;
+}
+.forth {
+    position: relative;
+    border: 2px solid red;
+    background-color: darkorange;
+    color: teal;
+    font-size: 14px;
+    left: 66px;
+    top: -413px;
+    width: 638px;
+    height: 106px;
+}
+.more {
+    position: relative;
+    top: -384px;
+    left: 600px;
+}

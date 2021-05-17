@@ -1,0 +1,33 @@
+.main-heading {
+    text-align-last: right;
+    border: solid blue;
+    background-color: blue;
+    border-radius: 2px 8px;
+}
+.sub-heading {
+    text-align-last: right;
+    border: solid blue;
+    background-color: blue;
+    border-radius: 2px 8px;
+}
+.font-family {
+    font-family: Arial, Helvetica, sans-serif;
+}
+::placeholder {
+    color: gray;
+    opacity: 0.6;
+}
+
+.border {
+    border: 1px solid gray;
+    padding: 10px;
+}
+.inner-heading {
+    margin-top: -20px;
+    width: fit-content;
+    background: white;
+}
+.button-position {
+    position: absolute;
+    left: 50%;
+}
