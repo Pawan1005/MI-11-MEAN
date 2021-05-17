@@ -1,0 +1,43 @@
+.code1 {
+    background-color: rgb(26, 140, 155);
+    border-radius: 0px 10px 0px 10px;
+    position: relative;
+    text-align: right;
+}
+.a {
+    font-family: Arial, Helvetica, sans-serif;
+}
+.button {
+    position: relative;
+    left: 600px;
+}
+div.s,
+div.m,
+div.k,
+div.c {
+    margin-top: 30px;
+}
+.code2 {
+    margin-right: 128px;
+}
+.code3 {
+    margin-right: 15%;
+}
+.lc {
+    margin-right: 128px;
+}
+.ls {
+    margin-right: 35px;
+}
+.lk {
+    margin-right: 118px;
+}
+.lm {
+    margin-right: 65px;
+}
+.lc {
+    margin-right: 114px;
+}
+.lr {
+    margin-right: 55px;
+}
