@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Personal Details</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <form action="" class="glass">
+                <input type="text" placeholder="Name" />
+                <input type="text" placeholder="Email" />
+                <input type="text" placeholder="Phone" />
+                <span class="Gender-label glass">gender</span>
+                <div class="radio-container glass">
+                    <!-- gender:- -->
+                    <input type="radio" id="male" />
+                    <label for="male">Male </label>
+                    <input type="radio" id="Female" />
+                    <label for="Female">Female </label>
+                    <input type="radio" id="other" />
+                    <label for="other">Prefer not to choose </label>
+                </div>
+                <input type="text" placeholder="Age" />
+
+                <span class="qualn-label glass">Qualification</span>
+                <select name="qualif-n" id="q">
+                    <option value="DiplomaCS">
+                        Diploma in Computer Science
+                    </option>
+                    <option value="Science">Science Graduate</option>
+                    <option value="BachelorsEng">Bachelor in Engg.</option>
+                    <option value="MastersCS">
+                        Masters in Computer Science
+                    </option>
+                    <option value="MastersEng">Masters in Engg.</option>
+                    <option value="other">Others</option>
+                </select>
+                <br />
+                <label class="label" for="university">University:</label>
+                <input list="university" name="uni" id="uni" />
+                <br />
+                <datalist id="university">
+                    <option value="Mumbai University"></option>
+                    <option value="Pune University"></option>
+                    <option value="Chennai University"></option>
+                    <option value="Nagpur University"></option>
+                    <option value="Badoda University"></option>
+                </datalist>
+            </form>
+        </div>
+    </body>
+</html>
