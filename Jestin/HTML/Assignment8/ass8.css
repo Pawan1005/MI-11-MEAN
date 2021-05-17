@@ -1,0 +1,14 @@
+.body-width {
+    background-color: aqua;
+    width: 800px;
+    height: 1000px;
+}
+.a img {
+    float: left;
+}
+.b img {
+    float: right;
+}
+.wi {
+    padding: 50px;
+}
