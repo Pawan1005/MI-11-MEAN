@@ -74,7 +74,7 @@ a:link {
     left: 630px;
     top: 268px;
 }
-.p3 {
+.inner-size {
     position: absolute;
     width: 449px;
     height: 48px;
@@ -86,17 +86,6 @@ label,
 input {
     align-items: center;
     font-size: 20px;
-}
-.btn {
-    align-items: center;
-    background-image: url(6.png);
-}
-.k {
-    position: absolute;
-    width: 73px;
-    height: 21px;
-    left: 909px;
-    top: 486px;
 }
 p {
     word-spacing: normal;

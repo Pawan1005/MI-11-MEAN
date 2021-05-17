@@ -3,12 +3,12 @@
     width: 800px;
     height: 1000px;
 }
-.a img {
+.left img {
     float: left;
 }
-.b img {
+.right img {
     float: right;
 }
-.wi {
+.inner-padding {
     padding: 50px;
 }
