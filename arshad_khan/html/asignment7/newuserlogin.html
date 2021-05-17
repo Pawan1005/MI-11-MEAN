@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            div {
+                height: 600px;
+                width: 100%;
+                /*background-color: aqua;
+                border: 2px solid green;*/
+                padding-top: 20px;
+            }
+            body {
+                background-image: url(/home/arshad/Downloads/Careers2.jpg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            header {
+                margin-top: 20px;
+                width: 100%;
+                background-color: #db0618;
+                height: 50px;
+            }
+            form,
+            fieldset {
+                margin-top: 50px;
+                height: 500px;
+                width: 400px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <header>
+                <center>
+                    <nav>
+                        <br />
+                        <a href="home.html">HOME |</a>
+                        <a href="newuserlogin.html">NEW USER LOGIN |</a>
+                        <a href="userdetails.html">USER DETAILS AND ACADEMIC DETAILS |</a>
+                        <a href="professionaldetails.html">PROFESSIONAL DETAILS</a>
+                    </nav>
+                </center>
+            </header>
+            <h2>This is New User Login Page...</h2>
+            <center>
+                <fieldset>
+                    <legend>NEW USER LOGIN</legend>
+                    <form action="login">
+                        <label for="fname">First Name:</label>
+                        <label><input type="text" /></label>
+                        <br /><br />
+                        <label for="lname">Last Name:</label>
+                        <label><input type="text" /></label>
+                        <br /><br />
+                        <label for="Password">Password:</label>
+                        <label><input type="password" /></label>
+                        <br /><br />
+                        <label for="gender">Gender:</label>
+                        <label><input type="radio" name="gender" value="male" /> Male</label>
+                        <label><input type="radio" name="gender" value="female" /> Female</label>
+                        <label><input type="radio" name="gender" value="female" /> Other</label>
+                        <br /><br />
+                        <label for="email">Email id:</label>
+                        <label for=""><input type="email" /></label><br /><br />
+                        <label for="">Date of Birth:</label>
+                        <input type="date" /><br /><br />
+                        <label for="">Phone:</label>
+                        <input type="text" /><br /><br />
+                        <center>
+                            <input type="submit" value="submit" />
+                        </center>
+                    </form>
+                </fieldset>
+            </center>
+        </div>
+    </body>
+</html>
