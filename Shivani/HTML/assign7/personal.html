@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Personal</title>
+        <link rel="stylesheet" href="style2.css" />
+        <link href="https://fonts.googleapis.com/css2?family=Baloo+Bhaina+2&display=swap" rel="stylesheet" />
+    </head>
+    <body>
+        <header>
+            <ul>
+                <li><a class="active" href="#home">Home</a></li>
+                <li><a href="#">Personal Details</a></li>
+                <li><a href="#">Professional Details</a></li>
+                <li><a href="login.html">login</a></li>
+            </ul>
+        </header>
+        <div class="block7">
+            <form>
+                <div class="block1">
+                    <h1>Job Portel</h1>
+                </div>
+                <hr />
+                <div class="block2">
+                    <h2>Personal details</h2>
+                </div>
+                <hr />
+                <div class="block4">
+                    <label>First Name:</label>
+                    <input type="text" name="fname" placeholder="First name" /><br />
+                    <label>Last Name:</label>
+                    <input type="text" name="lname" placeholder="Last name" /><br />
+                    <label for="gender">Gender:</label>
+                    <input type="radio" id="male" name="gender" value="male" />
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female" />
+                    <label for="female">Female</label>
+                    <input type="radio" id="other" name="other" value="other" />
+                    <label for="other">Other</label><br />
+                    <label for="age">Age:</label>
+                    <input type="radio" id="lessthan18" name="age" value="lessthan18" />
+                    <label for="lessthan18">less than 18</label>
+                    <input type="radio" id="18-25" name="age" value="18-25" checked />
+                    <label for="18-25">18-25</label>
+                    <input type="radio" id="26-40" name="age" value="26-40" />
+                    <label for="26-40">26-40</label>
+                </div>
+                <hr />
+                <div class="block3">
+                    <h2>Academic details</h2>
+                </div>
+                <hr />
+                <div class="block5">
+                    <label for="age"> Skill Set:</label>
+                    <input type="checkbox" id="HTML" name="skillset" value="HTML" />
+                    <label for="vehicle1">HTML</label>
+                    <input type="checkbox" id="Javascript" name="skillset" value="Javascript" />
+                    <label for="vehicle2">Javascript</label>
+                    <input type="checkbox" id="java" name="skillset" value="java" />
+                    <label for="vehicle3">Java</label>
+                    <input type="checkbox" id="oracle" name="skillset" value="oracle" />
+                    <label for="vehicle3">oracle</label><br />
+                    <label for="highest Qualification">Highest Qualification:</label>
+                    <select name="highest Qualification" id="Qualification">
+                    <option value="computer science">Diploma In Computer science</option>
+                    <option value="science">science graduate</option>
+                    <option value="engg">Bachelor in Engg</option>
+                    <option value="master">Master in Engg</option>
+                    <option value="other">other</option>
+                    </select><br>
+                <label for="myfile">Upload Resume:</label>
+                <input type="file" id="myfile" name="myfile" multiple />
+                <br /><br>
+                    <button class="btn"><a href="profession.html">continue</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

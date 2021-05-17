@@ -1,0 +1,76 @@
+.block1 {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-family: "Baloo Bhaina 2", cursive;
+}
+.block2 {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-family: "Baloo Bhaina 2", cursive;
+}
+.block3 {
+    position: relative;
+    text-align: center;
+    color: white;
+    font-family: "Baloo Bhaina 2", cursive;
+}
+body {
+    background-image: url("job.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+}
+.block4 {
+    position: relative;
+    text-align: center;
+    font-family: "Baloo Bhaina 2", cursive;
+    left: 20px;
+    color: white;
+    font-size: 18px;
+}
+.block5 {
+    position: relative;
+    text-align: center;
+    font-family: "Baloo Bhaina 2", cursive;
+    left: 20px;
+    color: white;
+    font-size: 18px;
+}
+.block7 {
+    position: relative;
+    width: 516px;
+    left: 365px;
+    background-color: darkblue;
+}
+.btn {
+    position: relative;
+    background-color: white;
+    color: yellow;
+    width: 82px;
+    left: -17px;
+    font-size: 17px;
+    border-radius: 10px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #111;
+}
