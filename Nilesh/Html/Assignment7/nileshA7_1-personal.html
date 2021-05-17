@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment7-personal</title>
+        <link rel="stylesheet" href="personal.css" />
+    </head>
+    <body>
+        <div class="header1">
+            <h1>Job Portal</h1>
+            <div class="link-margin">
+                <a href="nileshA7_1-homepage.html">Home</a>
+                <a href="nileshA7_1-personal.html">Personal Details</a>
+                <a href="nileshA7_1-professional.html">Professional Details</a>
+                <a href="nileshA7_1-login.html">Login</a>
+            </div>
+        </div>
+        <div class="form-name"><h2>Personal Details</h2></div>
+        <div class="login-box">
+            <form>
+                <div id="name">
+                    <label class="first-label">First Name :</label>
+                    <input class="input-first" id="input-id" type="text" placeholder="Enter your first name" /><br />
+                    <label class="second-label">Last Name :</label>
+                    <input class="input-last" id="input-id" type="text" placeholder="Enter your last name" /><br />
+                    <label class="third-label">Email id :</label>
+                    <input class="input-email" id="input-id" type="email" placeholder="Enter your email id" /><br />
+                    <label class="fourth-label">Password :</label>
+                    <input class="input-password" id="input-id" type="password" placeholder="Enter your password" /><br />
+                    <label class="fifth-label">City :</label>
+                    <input class="input-city" id="input-id" type="text" placeholder="Enter your city" /><br />
+                    <label class="sixth-label">Dob :</label>
+                    <input class="input-dob" id="input-id" type="date" /><br />
+                    <label class="seventh-label">Gender :</label>
+                    <div class="input-gender"><input class="input-gender1" type="radio" />Male &nbsp;<input class="input-gender2" type="radio" />Female &nbsp;<input class="input-gender3" type="radio" />other</div>
+                    <input class="btn1" id="btn" type="button" value="Submit" name="Submit" />
+                </div>
+            </form>
+        </div>
+        <div class="form-name" id="form-name-id"><h2>Academic Details</h2></div>
+        <div class="login-box" id="login-box-id">
+            <form>
+                <div id="name">
+                    <div class="qualification">
+                        <label class="label-qualification">Highest Qualificatin:</label>
+                        <select class="select1" id="input-id">
+                            <option>B.E in Computer Science</option>
+                            <option>Science Graduate</option>
+                            <option>Masters in Computer Science</option>
+                            <option>Masters in Engg.</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="university">
+                        <label class="label-university"><b>University:</b></label>
+                        <input class="datalist1" id="input-id" list="university" />
+                        <datalist id="university">
+                            <option value="Mumbai University"></option>
+                            <option value="Pune University"></option>
+                            <option value="Chennai University"></option>
+                            <option value="Nagpur University"></option>
+                            <option value="Badoda University"></option>
+                        </datalist>
+                    </div>
+                    <div class="multipleoption1">
+                        <label class="label-multiple">Areas of Expertise:</label>
+                        <select multiple class="select2" id="input-id">
+                            <option>Software</option>
+                            <option>Training</option>
+                            <option>Networking</option>
+                            <option>Managrment</option>
+                            <option>Maeketing</option>
+                        </select>
+                    </div>
+                    <label class="label-skill">Skill Set :</label>
+                    <div class="input-checkbox"><input class="input-checkbox1" type="checkbox" />Html &nbsp;<input class="input-checkbox2" type="checkbox" />CSS &nbsp;<input class="input-checkbox3" type="checkbox" />Java &nbsp;<input class="input-checkbox4" type="checkbox" />Python</div>
+                    <input class="btn2" id="btn" type="button" value="Submit" name="Submit" />
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
