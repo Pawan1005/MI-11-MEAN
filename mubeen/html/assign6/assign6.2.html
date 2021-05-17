@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assign6.2.css" />
+        <title>Document</title>
+        <style></style>
+    </head>
+    <body class="c">
+        <h2 class="a">MI-9 Intern HTML Assignment</h2>
+        <div>
+            <hr />
+        </div>
+        <div>
+            <h4 class="b">personal Details</h4>
+            <form action="/action_page.php">
+                <label for="fname">first name:</label>
+                <input type="text" id="fname" name="fname" placeholder=" First Name" /><br /><br />
+                <label for="lname">first name:</label>
+                <input type="text" id="lname" name="lname" placeholder="Last Name" /><br /><br />
+                <label for="genter"><b>Gender:</b></label>
+                <input type="radio" id="male" name="male" />
+                <label for="male">Male</label>
+                <input type="radio" id="fmale" name="fmale" />
+                <label for="fmale">Fmale</label>
+                <input type="radio" id="other" name="other" />
+                <label for="other">other</label><br /><br />
+                <label for="age"><b>Age:</b></label>
+                <input type="radio" id="less than 18" name="less than 18" />
+                <label for="less than 18">less than 18</label>
+                <input type="radio" id="18-25" name="18-25" checked />
+                <label for="18-25">18-25</label>
+                <input type="radio" id="26-40" name="26-40" />
+                <label for="26-40">26-40</label>
+            </form>
+        </div>
+        <div>
+            <h4 class="b">Professional Details</h4>
+            <div class="xyz">
+                <h4 class="abc">Academic Details</h4>
+                <form action="">
+                    <label for="age"><b>Skill Set:</b></label>
+                    <input type="checkbox" id="HTML" name="HTML" />
+                    <label for="HTML">HTML</label>
+                    <input type="checkbox" id="Java Script" name="Java Script" />
+                    <label for="Java Script">Java Script</label>
+                    <input type="checkbox" id="Java" name="Java" />
+                    <label for="Java">Java</label>
+                    <input type="checkbox" id="Oracle" name="Oracle" />
+                    <label for="Oracle">Oracle</label><br /><br />
+                    <label for="Highest Qualification"><b>Heighst Qualification:</b></label>
+                    <select name="Highest Qualification" id="">
+                        <option value="Masters in Computer Science">Masters in Computer Science</option>
+                        <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option></select
+                    ><br /><br />
+                    <label for="University"
+                        ><b
+                            >University:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b
+                        ></label
+                    >
+                    <input type="text" id="University" name="University" /><br /><br />
+                    <label for="Area of Expertise"><b>Area of Expertise:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></label>
+                    <select multiple name="Area of Expertise" id="Area of Expertise:">
+                        <option value="Software">Software</option>
+                        <option value="Training">Training</option>
+                        <option value="Networking">Networking</option>
+                        <option value="Management">Management</option></select
+                    >you can select multiple fields
+                </form>
+            </div>
+            <br /><br />
+            <div class="xyz">
+                <h4 class="abc">Resume</h4>
+                <form action="">
+                    <label for="Upload Resume"><b>Upload Resume:</b></label>
+                    <input type="file" name="resume" /><br /><br />
+                    <label for="Comments"><b>Comments:</b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                    <textarea rows="5" cols="40" name="Comments"> </textarea><br />
+                </form>
+            </div>
+            <br /><br />
+            <input class="submit" type="submit" /><br /><br />
+        </div>
+    </body>
+</html>

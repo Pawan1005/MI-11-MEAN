@@ -1,0 +1,36 @@
+.a {
+    text-align-last: right;
+    border: solid rgb(95, 95, 194);
+    background-color: rgb(95, 95, 194);
+    border-radius: 2px 8px;
+}
+.b {
+    text-align-last: right;
+    border: solid rgb(95, 95, 194);
+    background-color: rgb(95, 95, 194);
+    border-radius: 2px 8px;
+}
+.c {
+    font-family: Arial, Helvetica, sans-serif;
+}
+::placeholder {
+    color: gray;
+    opacity: 0.6;
+}
+
+.xyz {
+    border: 1px solid grey;
+    padding: 10px;
+}
+
+.abc {
+    margin-top: -20px;
+    width: fit-content;
+    background: white;
+}
+.submit {
+    position: absolute;
+    right: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+}
