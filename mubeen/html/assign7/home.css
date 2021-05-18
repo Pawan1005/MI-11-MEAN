@@ -1,0 +1,45 @@
+H1 {
+    background-color: rgb(16, 109, 146);
+}
+body {
+    background-image: url('bac.jpg');
+}
+.job {
+    border: 2px solid black;
+    padding: 5px;
+    margin: 5px;
+}
+.login {
+    border: 1px solid black;
+    padding: 10px;
+}
+
+
+form {
+    position: relative;
+    width: 70%;
+    text-align: right;
+}
+
+label {
+    width: 30%;
+    position: absolute;
+    left: 10%;
+    text-align: right;
+    margin-right: 30px;
+}
+
+input[type=submit] {
+    position: absolute;
+    left: 25%;
+    background-color: #9AE5F8;
+}
+
+a:link {
+    text-decoration:none;
+    display:inline-flex;
+    padding: 10px;
+    background-color: darkgrey;
+    border: 1px solid black;
+    
+}
