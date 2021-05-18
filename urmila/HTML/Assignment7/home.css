@@ -1,0 +1,161 @@
+<style>
+    html{
+        scroll-behavior: smooth;
+    }
+   .nav a:hover{
+       background-color:rgb(16, 16, 44);
+       }
+    .f2 {
+        width: 50%;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-left:40px;
+        margin-top:40px; 
+        color: blanchedalmond;
+        }
+    .nav a{
+        float: right;
+        color: cornsilk;
+        text-align: center;
+        padding: 20px 32px;
+        margin: 1%;
+        background-color: rgba(0, 0, 0);  
+    }
+    .nav{
+        background-color: rgba(220, 20, 60, 0.905);
+        overflow: hidden;
+        height: 202px;
+    }
+    .mid{
+        width: 1000px;
+        height:350px;
+        margin-left: 400px;
+        margin-top: 220px;
+        font-size: 30px;
+        color: blanchedalmond;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    body{
+        background-color: rgb(10, 6, 7);
+        opacity: 80%;
+        background-image: url('img1.jpeg');
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-size: cover;
+    }
+    input[type=text1],input[type=text2], .search{
+        float: left;
+        padding: 6px;
+        border: 1px b;
+        margin-top: 40px;
+        margin-left: 40px;
+        margin-top: 100px;
+        font-size: 17px;
+        width: 300px;
+    }
+    input[type=text2], .search{
+        margin-left:10px;
+    }
+    .nav a:hover{
+        background-color:rgb(16, 16, 44);
+    }
+    .f1{
+        border: 3px black;
+        background-color: white;
+        border-style: solid;
+        margin-left: 650px;
+        margin-right: 750px;
+        margin-top: 360px;
+        margin-bottom: 360px;
+    }
+    input[type=text], input[type=password]{
+        width: 70%;
+        height: 20px;
+        margin: 8px 0 8px 0;
+        display:inline-block;
+        padding: 12px 50px;
+        border:1px solid black;
+    }  
+    .con{
+        padding: 16px;
+        width:auto ;
+    }
+    .search {
+        width: auto;
+        color:white;
+        background-color: black;   
+    }
+    .login{
+        color: white;
+        background-color: black;
+        padding: 14px 20px;
+        margin: 8px 0;
+        margin-left: 50px;
+        border: none;
+        cursor: pointer;
+        width: 50%;
+    }
+    h2{
+        border: 5px dotted crimson;
+        background-color: black;
+        color: white;
+        height: 60px;
+        text-align: center;
+    }
+    .fname, .lname{
+        margin-right: 34px;   
+    }
+    .mname{
+        margin-right: 18px;
+    }
+    .mail{
+        margin-right: 54px;
+    }
+    .mob{
+        margin-right:26px ;
+    }
+    .g{
+        margin-right: 50px;
+    }
+    .a{
+        margin-right: 75px;
+    }
+    div.q, div.m, div.u, div.c{ 
+        margin-top: 30px;
+    }
+    .lc{
+        margin-right: 128px;
+    }
+    .lq{
+        margin-right: 38px;
+    }
+    .lu{
+        margin-right: 118px;
+    }
+    .lm{
+        margin-right: 60px;
+    }    
+    .lc{
+        margin-right: 114px;
+    }
+    .lr{
+        margin-right: 75px;
+    }
+    .ss{
+        margin-right: 128px;
+    }
+    .sk{
+        margin-right: 5%;
+    }
+    .btnsubmit{
+        color:crimson;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        margin-left: 700px;
+        background-color: black;
+        width:10%;
+    }
+    #sec1, #sec2, #sec3{
+        height: 200px;
+        padding-top: 60px;
+    }
+</style>
