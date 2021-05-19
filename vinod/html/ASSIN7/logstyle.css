@@ -31,7 +31,6 @@ button {
     text-align: center;
     color: white;
 }
-
 button:hover {
     opacity: 0.7;
 }
