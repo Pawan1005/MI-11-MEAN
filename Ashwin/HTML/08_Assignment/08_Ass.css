@@ -6,7 +6,7 @@
 }
 .ImageMain {
     display: flex;
-    justify-content:stretch;
+    justify-content: stretch;
 }
 .ImageMain > img {
     width: 200px;

@@ -7,6 +7,7 @@
     padding: 30px;
     border-radius: 20px;
 }
+
 .box {
     height: 350px;
     width: 700px;
@@ -14,10 +15,12 @@
     padding: 30px;
     border-radius: 15px;
 }
+
 h2 {
     color: chocolate;
     text-align: center;
 }
+
 body {
     background-image: url("Images/4.jpg");
     background-size: cover;
