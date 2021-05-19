@@ -57,8 +57,7 @@
 				<input type="radio" id="female" name="gender" value="female" />
 				<label for="female"><b>Female </b></label>
 				<input type="radio" id="Other" name="gender" value="other" />
-				<label for="male"><b>Other</b></label
-				><br /><br />
+				<label for="male"><b>Other</b></labe><br /><br />
 				<b class="a">Age:</b>
 				<input type="radio" id="less" name="age" value="number" />
 				<label for="less"><b>less than 18 </b></label>
@@ -74,10 +73,18 @@
 			<div>
 				<form class="f2">
 					<label class="ss"><b>Skill Set: </b></label>
-					<label class="sk"><input type="checkbox" name="skill1" value="html" />HTML </label>
-					<label class="sk"><input type="checkbox" name="skill2" value="javascript" />Java Script </label>
-					<label class="sk"><input type="checkbox" name="skill3" value="java" />Java </label>
-					<label class="sk"><input type="checkbox" name="skill4" value="oracle" />Oracle </label>
+					<label class="sk">
+                        <input type="checkbox" name="skill1" value="html" />HTML 
+                    </label>
+					<label class="sk">
+                        <input type="checkbox" name="skill2" value="javascript" />Java Script 
+                    </label>
+					<label class="sk">
+                        <input type="checkbox" name="skill3" value="java" />Java 
+                    </label>
+					<label class="sk">
+                        <input type="checkbox" name="skill4" value="oracle" />Oracle 
+                    </label>
 					<div class="q">
 						<label class="lq"><b>Highest Qualification:</b></label>
 						<select>
@@ -90,7 +97,9 @@
 						</select>
 					</div>
 					<div class="u">
-						<label class="lu"><b>University:</b></label>
+						<label class="lu">
+                            <b>University:</b>
+                        </label>
 						<input lists="university" placeholder="Select University" />
 						<datalist id="university">
 							<option value="Mumbai University"></option>
@@ -109,7 +118,9 @@
 							<option>Management</option>
 							<option>Marketing</option>
 						</select>
-						<simpletext>You can select multiple fields.</simpletext>
+						<simpletext>
+                            You can select multiple fields.
+                        </simpletext>
 					</div>
 				</form>
 			</div>
@@ -118,10 +129,14 @@
 				<hr />
 				<form class="f2">
 					<b>Resume</b>
-					<label class="lr"><b>Upload Resume:</b></label>
+					<label class="lr">
+                        <b>Upload Resume:</b>
+                    </label>
 					<input type="button" value="Browse..." /> No file selected.<br />
 					<div class="c">
-						<label class="lc"><b>Comments:</b></label>
+						<label class="lc">
+                            <b>Comments:</b>
+                        </label>
 						<textarea name="" cols="30" rows="10"></textarea>
 					</div>
 					<button class="btnsubmit">Submit</button>
