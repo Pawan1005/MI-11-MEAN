@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PersonalDetails</title>
+        <style>
+            body {
+                background-color: turquoise;
+            }
+            form {
+                border: slategrey 2px solid;
+                margin-bottom: 50pxs;
+                width: 500px;
+                height: 250px;
+            }
+            div {
+                background-color: black;
+                width: 1300px;
+                height: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="text-align: right">
+            <a href="NewUser.html">Home</a> | <a href="PersonalDetails.html">PersonalDetails</a> |
+            <a href="Acdmic.html">Acdmic</a>
+        </div>
+        <h2>PersonalDetails</h2>
+        <form>
+            <label for="FullNmae" id="Fname">Enter Full name:</label><br />
+            <input type="text" id="fname" name="Fullname" /><br /><br />
+            <label for="Email" id="Email">Enter Email:</label><br />
+            <input type="email" id="Email" name="Email" /><br /><br />
+            <label for="gender" id="Gender">Gender:</label>
+            <label for="male">male</label>
+            <input type="radio" id="male" name="male" />
+            <label for="Female">Female</label>
+            <input type="radio" name="female" /><br /><br />
+            <label for="city">City</label><br />
+            <input type="text" id="txt" name="city" /><br /><br />
+            <button>Submit</button>
+        </form>
+    </body>
+</html>
