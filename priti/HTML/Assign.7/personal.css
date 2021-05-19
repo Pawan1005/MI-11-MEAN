@@ -1,0 +1,27 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #6abadeba;
+    font-family: "Arial";
+}
+.A1 {
+    width: 382px;
+    overflow: hidden;
+    margin: auto;
+    padding: 20px;
+    background: #c79bb5;
+    border-radius: 10px;
+}
+h2 {
+    text-align: center;
+    color: #277582;
+    padding: 5px;
+}
+.A2 {
+    width: 382px;
+    overflow: hidden;
+    margin: auto;
+    padding: 20px;
+    background: #c79bb5;
+    border-radius: 10px;
+}
