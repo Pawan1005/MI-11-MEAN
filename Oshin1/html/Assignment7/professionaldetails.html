@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Professional_Details</title>
+        <link rel="stylesheet" href="./professional.css" />
+    </head>
+    <body style="background-image: url(./images/jobportal.jpg); background-size: cover;">
+        <div class="paddingnav">
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="professionaldetails.html">Professional Details</a></li>
+                <li><a href="personalacademicpage.html">Personal Details</a></li>
+                <li><a href="Login.html">Login</a></li>
+            </ul>
+        </div>
+        <br />
+        <div class="logincentrecard">
+            <div class="card" style="background-color: azure;">
+                <div class="container" style="text-align: center;">
+                    <h1 class="texttitle">Professional Details</h1>
+                    <br /><br />
+                    <div style="padding-left: 50px; padding-right: 50px;">
+                        <div class="input-container">
+                            <label>
+                                Qualification :
+                            </label>
+                            <select>
+                                <option value="Qualification">Qualification</option>
+                                <option value="BCA">BCA</option>
+                                <option value="BBA">BBA</option>
+                                <option value="B.Tech">B.Tech</option>
+                                <option value="MBA">MBA</option>
+                                <option value="MCA">MCA</option>
+                                <option value="M.Tech">M.Tech</option>
+                            </select>
+                        </div>
+                            <label style="float: left;"> 
+                                Technical Skills Known :
+                            </label>
+                            <br />
+                        <div class="input-container">
+                            <textarea cols="32" rows="5" value="Technical Skills Known" placeholder="Ex:Java,c,html..."> </textarea>
+                        </div>
+                        <div class="input-container">
+                            <input class="input-field" type="text" placeholder="Company name" name="Company Name" />
+                        </div>
+                        <div class="input-container">
+                            <input class="input-field" type="text" placeholder="Certification courses" name="Certification" />
+                        </div>
+                        <div class="input-container">
+                            <input class="input-field" type="text" placeholder="Designation" name="designation" />
+                        </div>
+                        <div class="input-container">
+                            <input class="input-field" type="text" placeholder="Previous work experience" name="experience" />
+                        </div>
+                        <label style="float: left;"> Upload Resume : </label>
+                        <br />
+                        <div class="input-container">
+                            <input class="input-field" type="file" />
+                        </div>
+                        <div class="input-container">
+                            <button type="submit" class="btn">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
