@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Personal Details</title>
+        <style>
+            * {
+                margin: 0;
+                padding: 0;
+            }
+            body {
+                height: 100vh;
+                width: 100%;
+                background-image: url(eiffel-tower-paris-secret-apartment.webp);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Personal Details</h2>
+        <label for="first-name">First Name: </label>
+        <input type="text" name="fname" id="first-name" placeholder="First Name" />
+        <br />
+        <br />
+        <label for="last-name">Last Name: </label>
+        <input type="text" name="lname" id="last-name" placeholder="Last Name" />
+        <br />
+        <br />
+        <label for="email-id">Email id: </label>
+        <input type="text" name="email-id" id="first-name" placeholder="Email-id" />
+        <br />
+        <br />
+        <label>Gender : </label>
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other" />
+        <label for="other">Other</label>
+        <br />
+        <br />
+        <label>Age : </label>
+        <input type="radio" id="less-18" name="age" />
+        <label for="less-18">less than 18</label>
+        <input type="radio" id="between-18-25" name="age" checked />
+        <label for="between-18-25">18-25</label>
+        <input type="radio" id="between-25-40" name="age" />
+        <label for="between-25-40">25-40</label>
+        <br />
+        <br />
+        <br />
+        <input type="submit" value="submit" name="submit" id="submit" />
+    </body>
+</html>
