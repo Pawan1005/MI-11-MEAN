@@ -11,7 +11,6 @@ body {
     background-position: center;
     height: 95vh;
 }
-
 .glass,
 input {
     background: rgba(255, 255, 255, 0.15);
@@ -20,7 +19,6 @@ input {
     border-radius: 10px;
     border: 2px solid rgba(255, 255, 255, 0.18);
 }
-
 .container form {
     display: flex;
     flex-direction: column;
@@ -29,7 +27,6 @@ input {
     height: 70vh;
     width: 80vw;
 }
-
 form input[type="text"],
 .radio-container,
 .checkbox-container {
@@ -46,7 +43,6 @@ form input[type="text"],
     justify-content: center;
     align-items: center;
 }
-
 form input[type="text"]::placeholder {
     color: rgb(100, 42, 55);
 }
@@ -57,7 +53,6 @@ form input[type="text"]::placeholder {
 .checkbox-container label {
     padding-left: 20px;
 }
-
 .Gender-label,
 .desig-label,
 .skill-label,
