@@ -1,0 +1,20 @@
+body {
+    background-color: blue;
+    background-image: url("https://images.unsplash.com/photo-1527689368864-3a821dbccc34?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8am9iJTIwc2VhcmNofGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&w=1000&q=80");
+}
+div.para {
+    margin-left: 450px;
+    margin-top: 100px;
+    padding: auto;
+    margin-bottom: 100px;
+    border: black solid;
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    background-color: cornflowerblue;
+}
+div {
+    background-color: black;
+    width: 1300px;
+    height: 50px;
+}

@@ -1,0 +1,89 @@
+.rectangle {
+    position: absolute;
+    width: 1440px;
+    height: 123px;
+    left: 0px;
+    top: 3px;
+    background-color: black;
+}
+.Logo {
+    position: absolute;
+    width: 125.49px;
+    height: 102px;
+    left: 0px;
+    top: 14px;
+}
+
+.inner_rectangle {
+    position: absolute;
+    width: 622px;
+    height: 54px;
+    left: 818px;
+    top: 72px;
+    background-color: #ffb6b6;
+}
+
+.navigation {
+    font-family: Telex;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 4px;
+    text-align: left;
+}
+li {
+    display: inline;
+}
+ul {
+    word-spacing: 50px;
+}
+a:link {
+    color: black;
+    background-color: none;
+    text-decoration: none;
+}
+.background {
+    position: absolute;
+    width: 1440px;
+    height: 898px;
+    left: 0px;
+    top: 126px;
+}
+.black_shade {
+    position: absolute;
+    width: 1344px;
+    height: 1644px;
+    left: 63px;
+    top: 177px;
+}
+.heading {
+    position: absolute;
+    width: 1440px;
+    height: 100px;
+    left: 0px;
+    top: 100px;
+    background-color: black;
+}
+h1 {
+    text-align: center;
+    color: white;
+}
+.list {
+    position: absolute;
+    width: 805px;
+    height: 1372px;
+    left: 396px;
+    top: 300px;
+    color: white;
+    font-size: 32px;
+}
+button {
+    background-color: hotpink;
+}
+.position {
+    position: absolute;
+    width: 229px;
+    height: 76px;
+    left: 200px;
+    top: 1400px;
+}

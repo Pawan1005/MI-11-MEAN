@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignmnt6</title>
+        <style>
+          .center {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          
+          }
+          .aboutme{
+     background-color:skyblue;
+     font-size: 25px;
+     width: 97%;
+     text-align: right;
+}
+          </style>
+    </head>
+      <body> 
+        <div class="aboutme"><i>Academic Detailes</i></div>
+     <fieldset>
+    <legend>Academic Detailes</legend>
+    <b>Skills set :</b>
+    <input type="checkbox" name="skill-1" id="skill-1" value="HTML" />
+    <label for="skill-1">HTML</label>
+    <input type="checkbox" name="skill-2" id="skill-2" value="Java Script" />
+    <label for="skill-2">Java Script</label>
+    <input type="checkbox" name="skill-3" id="skill-3" value="Java" />
+    <label for="skill-3">Java</label>
+    <input type="checkbox" name="skill-4" id="skill-4" value="Oracle" />
+    <label for="skill-4">Oracle</label><br><br>
+    
+<b>Highest Qualification :</b>
+  <select id="cars" name="cars">
+    <option value="volvo">Diploma in computer science</option>
+    <option value="saab">Science graduate</option>
+    <option value="fiat">bachlore in engg</option>
+    <option value="audi">Master in computer science</option>
+    <option value="audi">Master in engg</option>
+    <option value="audi">other</option>
+  </select> you can select multiple file<br><br>
+
+  <b>University Details :</b>
+    <label for="fname"></label> <input type="text" id="fname" name="fname"><br><br>
+    <b>Area of expertise :</b>
+      <select name="cars" id="cars" multiple> <option value="volvo">Softwere</option>
+        <option value="saab">Training</option>
+        <option value="opel">Networking</option>
+        <option value="audi">Managment</option>
+      </select>
+      <br>  
+    </form>
+  </fieldset>
+  <fieldset>
+    <legend>Resume</legend>
+    <b>Update Resume</b><label for="fname"></label>  <input type="text" id="fname" name="fname"> No file selected<br>
+
+    <b>comment :</b>
+<form action="/action_page.php" id="usrform"> 
+</form>
+<br>
+<textarea rows="4" cols="50" name="comment" form="usrform">
+</textarea>
+      
+  </fieldset>
+<div class="center">
+  <button>submit</button>
+</div>
+
+  
+</body>
+</html>

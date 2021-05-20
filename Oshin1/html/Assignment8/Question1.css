@@ -1,0 +1,16 @@
+.container {
+    width: 100%;
+    height: auto;
+    background-color: rosybrown;
+}
+.image-container {
+    display: flex;
+    justify-content: stretch;
+}
+.image-container img {
+    width: 300px;
+    height: 300px;
+}
+.image-container img,.image-container p {
+    padding: 40px 100px;
+}

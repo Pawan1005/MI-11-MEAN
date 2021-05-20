@@ -1,0 +1,15 @@
+.code1 {
+    background-color: rgb(26, 140, 155);
+    border-radius: 0px 10px 0px 10px;
+    position: relative;
+    text-align: right;
+}
+.code2 {
+    background-color: rgb(26, 140, 155);
+    border-radius: 0px 10px 0px 10px;
+    position: relative;
+    text-align: right;
+}
+.a {
+    font-family: Arial, Helvetica, sans-serif;
+}

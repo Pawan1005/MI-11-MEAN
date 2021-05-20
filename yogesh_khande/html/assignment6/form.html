@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Registration Form</title>
+        <style>
+            .h1 {
+                background-color: hsl(216, 38%, 51%);
+                text-align-last: right;
+                border-radius: 2px 8px;
+            }
+            .h2 {
+                background-color: rgb(83, 120, 177);
+                text-align-last: right;
+                border-radius: 2px 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 class="h1">MI-11 Intern HTML Assesment</h1>
+        <br /><br />
+        <hr />
+        <div>
+            <h2 class="h2">Personal Details</h2>
+            <form>
+                <table>
+                    <tr>
+                        <td>First Name :</td>
+                        <td>
+                            <input type="text" placeholder="First Name" name="" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Last Name :</td>
+                        <td>
+                            <input type="text" placeholder="Last Name" name="" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Gender :</td>
+                        <td><input type="radio" name="Gender" />Male <input type="radio" name="Gender" />Female</td>
+                    </tr>
+                    <tr>
+                        <td>Age :</td>
+                        <td>
+                            <input type="radio" name="Age" />Less than 18 <input type="radio" name="Age" checked />18-25 <input type="radio" name="Age" />26-40
+                        </td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+        <div>
+            <h2 class="h2">Academic Details</h2>
+            <table>
+                <tr>
+                    <td>Skill Set :</td>
+                    <td>
+                        <input type="checkbox" name="Skill Set" />HTML <input type="checkbox" name="Skill Set" />Java Script
+                        <input type="checkbox" name="Skill Set" />Java <input type="checkbox" name="Skill Set" />Oracle
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </body>
+</html>
