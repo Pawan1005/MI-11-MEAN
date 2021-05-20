@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            div {
+                height: 600px;
+                width: 100%;
+                background-color: rgb(214, 197, 123) border: 2px solid green;
+                padding-top: 10px;
+            }
+            body {
+                background-image: url(Image3.jpeg);
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            header {
+                margin-top: 10px;
+                width: 100%;
+                background-color: hsla(162, 52%, 62%, 0.945);
+                height: 50px;
+            }
+            form,
+            fieldset {
+                height: 100%;
+                width: 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <header>
+                <center>
+                    <nav>
+                        <br />
+                        <a href="home.html">HOME |</a>
+                        <a href="newuserlogin.html">NEW USER LOGIN |</a>
+                        <a href="userdetails.html">USER DETAILS AND ACADEMIC DETAILS |</a>
+                        <a href="professionaldetails.html">PROFESSIONAL DETAILS</a>
+                    </nav>
+                </center>
+            </header>
+            <h2>User Details and Academic Details page...</h2>
+            <center>
+                <fieldset>
+                    <legend>PERSONAL AND ACADEMIC DETAILS</legend>
+                    <form action="login">
+                        <label for="Employeename">User Name:</label>
+                        <input type="text" />
+                        <br /><br />
+                        <label for="father">Father Name:</label>
+                        <input type="text" />
+                        <br /><br />
+                        <label for="mother">Mother Name:</label>
+                        <input type="text" />
+                        <br /><br />
+                        <label for="lname">Blood Group:</label>
+                        <input type="text" />
+                        <br /><br />
+                        <label for="lname">Address:</label>
+                        <input type="text" />
+                        <br /><br />
+                        <label for="Password">Password:</label>
+                        <input type="password" />
+                        <br /><br />
+                        <label for="gender">Gender:</label>
+                        <input type="radio" name="gender" value="male" /> Male <input type="radio" name="gender" value="female" /> Female
+                        <input type="radio" name="gender" value="female" /> Other <br /><br />
+                        <label for="Maritalstatus">Marital Status:</label>
+                        <input type="radio" name="Maritalstatus" value="married" /> Married
+                        <input type="radio" name="Maritalstatus" value="unmarried" />Unmarried <br /><br />
+                        <label for="email">Email id:</label>
+                        <input type="email" />
+                        <br /><br />
+                        <label for="">Date of Birth:</label>
+                        <input type="date" /><br /><br />
+                        <label for="">Phone:</label>
+                        <input type="text" /><br /><br />
+                        <h3><i>Academic Details</i></h3>
+                        <label for="highest">Highest Qualification:</label>
+                        <select name="highest qualification" id="">
+                            <option value="Diploma">Master in computer science</option>
+                            <option value="Science">Science Graduate</option>
+                            <option value="Bachelor engg">Bachelor in Engg</option>
+                            <option value="MCA">Diploma in computer science</option>
+                            <option value="Mtech">Master in Engg</option>
+                            <option value="Other">Other</option>
+                        </select>
+                        <br /><br />
+                        <label for="university">University Name:</label>
+                        <input list="university" name="university" />
+                        <datalist id="university">
+                            <option value="Mumbai University"></option>
+                            <option value="Pune University"></option>
+                            <option value="Chennai University"></option>
+                            <option value="Lucknow University"></option>
+                            <option value="Hyderabad University"></option>
+                        </datalist>
+                        <br /><br />
+                        <label for="skill">Skill Set: </label>
+                        <input type="checkbox" name="skill" value="html" />HTML <input type="checkbox" name="skill" value="javascript" /> Java Script
+                        <input type="checkbox" name="skill" value="java" />Java <input type="checkbox" name="skill" value="oracle" />Oracle <br /><br />
+                        <center>
+                            <input type="submit" value="submit" />
+                        </center>
+                    </form>
+                </fieldset>
+            </center>
+        </div>
+    </body>
+</html>
