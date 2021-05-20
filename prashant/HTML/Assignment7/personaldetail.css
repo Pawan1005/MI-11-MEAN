@@ -3,21 +3,12 @@ html,body {
     background-size: cover;
     background-repeat: no-repeat;
     height: 100%;
-    /*background-color: white;*/
     font-family: 'Numans', sans-serif;
 }
 
 .registration-form { 
 	padding: 50px 0;
 }
-
-/*.card {
-    height: 270px;
-    margin-top: auto;
-    margin-bottom: auto;
-    width: 400px;
-    background-color: rgba(0,0,0,0.5) !important;
-    }*/
 
 .registration-form form {
     padding-top: 30px;
@@ -28,17 +19,6 @@ html,body {
     border-top-right-radius: 30px;
     box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
 }
-
-/*.acedmic-form {
-    background-color: rgba(0,0,0,0.5) !important;
-    max-width: 600px;
-    margin: auto;
-    padding: 50px 70px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.075);
-
-}*/
 
 .registration-form .form-icon {
 	text-align: center;
