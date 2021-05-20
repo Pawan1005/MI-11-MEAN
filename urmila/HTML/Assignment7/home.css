@@ -1,5 +1,4 @@
-<style>
-    html{
+   html{
         scroll-behavior: smooth;
     }
    .nav a:hover{
@@ -158,4 +157,3 @@
         height: 200px;
         padding-top: 60px;
     }
-</style>

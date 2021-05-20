@@ -1,193 +1,132 @@
 !DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Document</title>
-		<link rel="stylesheet" href="home.css" />
-	</head>
-	<body>
-		<div class="nav">
-			<a href="home.html">Home</a>
-			<a href="#search">Search for Job</a>
-			<a href="#login">Login</a>
-			<a href="#sec1">Personal Details</a>
-			<a href="#sec2">Academic Details</a>
-			<a href="#sec3">Professional Details</a>
-		</div>
-		<div class="mid" id="search">
-			<strong>Find A Job at Job Site</strong>
-			<div>
-				<input
-					type="text1"
-					placeholder="Skills, Designation, Companies"
-				/>
-				<input type="text2" placeholder="Enter Location" />
-				<button class="search">Search</button>
-			</div>
-		</div>
-		<div class="f1">
-			<form>
-				<div class="con" id="login">
-					<label for="fname" class="fname">First Name:</label><br />
-					<input type="text" placeholder="Enter Name" /><br />
-					<label for="Password" class="pass">Password:</label><br />
-					<input type="password" placeholder="Enter Password" /><br />
-					<button class="login">Login</button>
-				</div>
-			</form>
-		</div>
-		<section>
-			<div>
-				<h2 id="sec1">Personal Details</h2>
-				<hr />
-			</div>
-			<form class="f2">
-				<label for="fname" class="fname"><b>First Name: </b></label>
-				<input
-					type="text"
-					id="fname"
-					placeholder="First Name"
-				/><br /><br />
-				<label for="mname" class="mname"><b>Middle Name: </b></label>
-				<input
-					type="text"
-					id="mname"
-					placeholder="First Name"
-				/><br /><br />
-				<label for="lname" class="lname"><b>Last Name: </b></label>
-				<input
-					type="text"
-					id="lname"
-					placeholder="Last Name"
-				/><br /><br />
-				<label for="mail" class="mail"><b>Email-id: </b></label>
-				<input
-					type="text"
-					id="email"
-					placeholder="Email-id"
-				/><br /><br />
-				<label for="mob" class="mob"><b>Contact No.: </b></label>
-				<input
-					type="number"
-					id="mob"
-					placeholder="Contact Number"
-				/><br /><br />
-				<b class="g">Gender:</b>
-				<input type="radio" id="male" name="gender" value="male" />
-				<label for="male"><b>Male </b></label>
-				<input type="radio" id="female" name="gender" value="female" />
-				<label for="female"><b>Female </b></label>
-				<input type="radio" id="Other" name="gender" value="other" />
-				<label for="male"><b>Other</b></label
-				><br /><br />
-				<b class="a">Age:</b>
-				<input type="radio" id="less" name="age" value="number" />
-				<label for="less"><b>less than 18 </b></label>
-				<input
-					type="radio"
-					id="equal"
-					name="age"
-					value="number"
-					checked
-				/>
-				<label for="equal"><b>18-25 </b></label>
-				<input type="radio" id="more" name="age" value="number" />
-				<label for="more"><b>26-40</b></label>
-			</form>
-			<div>
-				<h2 id="sec2">Academic Details</h2>
-				<hr />
-			</div>
-			<div>
-				<form class="f2">
-					<label class="ss"><b>Skill Set: </b></label>
-					<label class="sk"
-						><input
-							type="checkbox"
-							name="skill1"
-							value="html"
-						/>HTML
-					</label>
-					<label class="sk"
-						><input
-							type="checkbox"
-							name="skill2"
-							value="javascript"
-						/>Java Script
-					</label>
-					<label class="sk"
-						><input
-							type="checkbox"
-							name="skill3"
-							value="java"
-						/>Java
-					</label>
-					<label class="sk"
-						><input
-							type="checkbox"
-							name="skill4"
-							value="oracle"
-						/>Oracle
-					</label>
-					<div class="q">
-						<label class="lq"><b>Highest Qualification:</b></label>
-						<select>
-							<option value="">
-								Diploma in Computer Science
-							</option>
-							<option value="">Science Graduate</option>
-							<option value="">Bachloer in Engineering</option>
-							<option value="">
-								Masters in Computer Science
-							</option>
-							<option value="">Masters in Engineering</option>
-							<option value="">Other</option>
-						</select>
-					</div>
-					<div class="u">
-						<label class="lu"><b>University:</b></label>
-						<input
-							lists="university"
-							placeholder="Select University"
-						/>
-						<datalist id="university">
-							<option value="Mumbai University"></option>
-							<option value="Pune University"></option>
-							<option value="Chennai Unniversity"></option>
-							<option value="Nagpur University"></option>
-							<option value="Manipal University"></option>
-						</datalist>
-					</div>
-					<div class="m">
-						<label class="lm"><b>Areas of Expertise:</b></label>
-						<select multiple>
-							<option>Software</option>
-							<option>Training</option>
-							<option>Networking</option>
-							<option>Management</option>
-							<option>Marketing</option>
-						</select>
-						<simpletext>You can select multiple fields.</simpletext>
-					</div>
-				</form>
-			</div>
-			<div>
-				<h2 id="sec3">Professional Details</h2>
-				<hr />
-				<form class="f2">
-					<b>Resume</b>
-					<label class="lr"><b>Upload Resume:</b></label>
-					<input type="button" value="Browse..." /> No file
-					selected.<br />
-					<div class="c">
-						<label class="lc"><b>Comments:</b></label>
-						<textarea name="" cols="30" rows="10"></textarea>
-					</div>
-					<button class="btnsubmit">Submit</button>
-				</form>
-			</div>
-		</section>
-	</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="home.css" />
+    </head>
+    <body>
+        <div class="nav">
+            <a href="home.html">Home</a>
+            <a href="#search">Search for Job</a>
+            <a href="#login">Login</a>
+            <a href="#sec1">Personal Details</a>
+            <a href="#sec2">Academic Details</a>
+            <a href="#sec3">Professional Details</a>
+        </div>
+        <div class="mid" id="search">
+            <strong>Find A Job at Job Site</strong>
+            <div>
+                <input type="text1" placeholder="Skills, Designation, Companies" />
+                <input type="text2" placeholder="Enter Location" />
+                <button class="search">Search</button>
+            </div>
+        </div>
+        <div class="f1">
+            <form>
+                <div class="con" id="login">
+                    <label for="fname" class="fname">First Name:</label><br />
+                    <input type="text" placeholder="Enter Name" /><br />
+                    <label for="Password" class="pass">Password:</label><br />
+                    <input type="password" placeholder="Enter Password" /><br />
+                    <button class="login">Login</button>
+                </div>
+            </form>
+        </div>
+        <section>
+            <div>
+                <h2 id="sec1">Personal Details</h2>
+                <hr />
+            </div>
+            <form class="f2">
+                <label for="fname" class="fname"><b>First Name: </b></label>
+                <input type="text" id="fname" placeholder="First Name" /><br /><br />
+                <label for="mname" class="mname"><b>Middle Name: </b></label>
+                <input type="text" id="mname" placeholder="First Name" /><br /><br />
+                <label for="lname" class="lname"><b>Last Name: </b></label>
+                <input type="text" id="lname" placeholder="Last Name" /><br /><br />
+                <label for="mail" class="mail"><b>Email-id: </b></label>
+                <input type="text" id="email" placeholder="Email-id" /><br /><br />
+                <label for="mob" class="mob"><b>Contact No.: </b></label>
+                <input type="number" id="mob" placeholder="Contact Number" /><br /><br />
+                <b class="g">Gender:</b>
+                <input type="radio" id="male" name="gender" value="male" />
+                <label for="male"><b>Male </b></label>
+                <input type="radio" id="female" name="gender" value="female" />
+                <label for="female"><b>Female </b></label>
+                <input type="radio" id="Other" name="gender" value="other" />
+                <label for="male"><b>Other</b></label
+                ><br /><br />
+                <b class="a">Age:</b>
+                <input type="radio" id="less" name="age" value="number" />
+                <label for="less"><b>less than 18 </b></label>
+                <input type="radio" id="equal" name="age" value="number" checked />
+                <label for="equal"><b>18-25 </b></label>
+                <input type="radio" id="more" name="age" value="number" />
+                <label for="more"><b>26-40</b></label>
+            </form>
+            <div>
+                <h2 id="sec2">Academic Details</h2>
+                <hr />
+            </div>
+            <div>
+                <form class="f2">
+                    <label class="ss"><b>Skill Set: </b></label>
+                    <label class="sk"><input type="checkbox" name="skill1" value="html" />HTML </label>
+                    <label class="sk"><input type="checkbox" name="skill2" value="javascript" />Java Script </label>
+                    <label class="sk"><input type="checkbox" name="skill3" value="java" />Java </label>
+                    <label class="sk"><input type="checkbox" name="skill4" value="oracle" />Oracle </label>
+                    <div class="q">
+                        <label class="lq"><b>Highest Qualification:</b></label>
+                        <select>
+                            <option value="">Diploma in Computer Science</option>
+                            <option value="">Science Graduate</option>
+                            <option value="">Bachloer in Engineering</option>
+                            <option value="">Masters in Computer Science</option>
+                            <option value="">Masters in Engineering</option>
+                            <option value="">Other</option>
+                        </select>
+                    </div>
+                    <div class="u">
+                        <label class="lu"><b>University:</b></label>
+                        <input lists="university" placeholder="Select University" />
+                        <datalist id="university">
+                            <option value="Mumbai University"></option>
+                            <option value="Pune University"></option>
+                            <option value="Chennai Unniversity"></option>
+                            <option value="Nagpur University"></option>
+                            <option value="Manipal University"></option>
+                        </datalist>
+                    </div>
+                    <div class="m">
+                        <label class="lm"><b>Areas of Expertise:</b></label>
+                        <select multiple>
+                            <option>Software</option>
+                            <option>Training</option>
+                            <option>Networking</option>
+                            <option>Management</option>
+                            <option>Marketing</option>
+                        </select>
+                        <simpletext>You can select multiple fields.</simpletext>
+                    </div>
+                </form>
+            </div>
+            <div>
+                <h2 id="sec3">Professional Details</h2>
+                <hr />
+                <form class="f2">
+                    <b>Resume</b>
+                    <label class="lr"><b>Upload Resume:</b></label>
+                    <input type="button" value="Browse..." /> No file selected.<br />
+                    <div class="c">
+                        <label class="lc"><b>Comments:</b></label>
+                        <textarea name="" cols="30" rows="10"></textarea>
+                    </div>
+                    <button class="btnsubmit">Submit</button>
+                </form>
+            </div>
+        </section>
+    </body>
 </html>
