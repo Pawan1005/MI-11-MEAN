@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="profile.css">
+    </head>
+    <body>
+        <div class="rectangle">
+        <div class="Logo"><img src="1.png" alt="1"></div> 
+        <div class="heading"><h1>Work from home</h1></div> 
+        <div class="inner_rectangle">
+            <div class="navigation" >
+                <ul>
+                    <li><a href="login.html">Profile</a></li>
+                    <li>|</li>
+                    <li><a href="login.html">Login</a></li>
+                    <li>|</li>
+                    <li><a href="signup.html">Signup</a></li>
+                </ul>
+                </div>
+        </div>
+        </div>
+        <div class="background">
+            <div class="heading">
+                <h1>Update your profile</h1>
+            </div>
+            <img src="9.png" alt="9">
+            <div class="black_shade">
+                <img src="8.png" alt="8">
+            </div>
+            <div class="list">
+                <h2 class="a">Update your profile here</h2><hr />
+                <div>
+                    <h4>personal Details</h4>
+                    <form action="/action_page.php">
+                        <label for="fname">first name:</label>
+                        <input type="text" id="fname" name="fname" placeholder=" First Name" /><br /><br />
+                        <label for="lname">Last name:</label>
+                        <input type="text" id="lname" name="lname" placeholder="Last Name" /><br /><br />
+                        <label for="genter"><b>Gender:</b></label>
+                        <input type="radio" id="male" name="male" />
+                        <label for="male">Male</label>
+                        <input type="radio" id="fmale" name="fmale" />
+                        <label for="fmale">Fmale</label>
+                        <input type="radio" id="other" name="other" />
+                        <label for="other">other</label><br /><br />
+                        <label for="age"><b>Age:</b></label>
+                        <input type="radio" id="less than 18" name="less than 18" />
+                        <label for="less than 18">less than 18</label>
+                        <input type="radio" id="18-25" name="18-25" checked />
+                        <label for="18-25">18-25</label>
+                        <input type="radio" id="26-40" name="26-40" />
+                        <label for="26-40">26-40</label>
+                    </form>
+                </div>
+                    <h4></h4>professional Details</h4>
+                <div>
+                    <h4>Academic Details</h4>
+                    <form action="action_page.php">
+                        <label for="age"><b>Skill Set:</b></label>
+                        <input type="checkbox" id="HTML" name="HTML" />
+                        <label for="HTML">HTML</label>
+                        <input type="checkbox" id="Java Script" name="Java Script" />
+                        <label for="Java Script">Java Script</label>
+                        <input type="checkbox" id="Java" name="Java" />
+                        <label for="Java">Java</label>
+                        <input type="checkbox" id="Oracle" name="Oracle" />
+                        <label for="Oracle">Oracle</label><br><br>
+                        <label for="Highest Qualification"><b>Highest Qualification:</b></label>
+                        <select id="Highest Qualification" name="Highest Qualification">
+                        <option value="Diploma in Computer Science">Diploma in Computer Science</option>
+                        <option value="Science Graduate">Science Graduate</option>
+                        <option value="Bachelor in Engg.">Bachelor in Engg.</option>
+                        <option value="Masters in Computer Science">Masters in Computer Science</option>
+                        <option value="Master in Engg.">Master in Engg.</option>
+                        <option value="Other">Other</option>
+                        </select><br><br>
+                        <label for="University"><b>University:</b></label>
+                        <input list="browsers" name="University" id="University">
+                        <datalist id="browsers">
+                            <option value="Mumbai University">
+                            <option value="Pune University">
+                            <option value="Chennai University">
+                            <option value="Nagpur University">
+                            <option value="Badoda University">
+                        </datalist><br><br>
+                        <label for="Areas of Expertise"><b>Areas of Expertise:</b></label>
+                        <select id="Areas of Expertise" name="Areas of Expertise" size="3" multiple>
+                        <option value="Software">Software</option>
+                        <option value="Training">Training</option>
+                        <option value="Networking">Networking</option>
+                        <option value="Marketing">Marketing</option>
+                        </select>You can select multiple files
+                    </form>
+                </div><br><br>
+                <div>
+                    <h4><b>Resume</b></h4>
+                    <form action="job.html">
+                        <label for="file"><b>Upload Resume:</b></label>&nbsp; &nbsp; 
+                        <button onclick="document.getElementById('file').click()">Browse...</button>No file Selected.
+                        <input type="file" id="file" name="files" style="display:none" />
+                        <div class="position">
+                            <button type="submit" > submit</button>
+                        </div>
+                    </form>
+            </div>
+        </div>
+    </body>
+</html>

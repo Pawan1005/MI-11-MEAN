@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>job-portal</title>
+        <style>
+            body {
+                background: turquoise;
+            }
+            form {
+                border: slategrey 2px solid;
+                margin-bottom: 50pxs;
+                width: 500px;
+                height: 250px;
+            }
+            div {
+                background-color: black;
+                width: 1300px;
+                height: 50;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="text-align: right">
+            <a href="NewUser.html">Home</a> | <a href="PersonalDetails.html">PersonalDetails</a> |
+            <a href="Acdmic.html">Acdmic</a>
+        </div>
+        <h2>AcdmicDetails</h2>
+        <form>
+            <label for="Skill Set">Skill Set</label>
+            <input type="checkbox" id="Html" name="Skill Set" value="Html" />
+            <label for="Html">HTML</label>
+            <input type="checkbox" id="JavaScript" name="Skill Set" value="JavaScript" />
+            <label for="JavaScript">JavaScript</label>
+            <input type="checkbox" id="Java" name="Skill Set" value="Java" />
+            <label for="Java">Java</label>
+            <input type="checkbox" id="Oracle" name="Skill Set" value="Oracle" />
+            <label for="Oracl">Oracle</label>
+            <br /><br />
+            <label for="Hg">Highest Qualification:</label>
+            <select id="Hg">
+                <option>Master in Compurte Science</option>
+                <option>Diploma in Computer Science</option>
+                <option>Master in E&TC</option>
+                <option>Diploma in E&TC</option>
+                <option>Other</option>
+            </select>
+            <br /><br />
+            <label for="University">university:</label>
+            <input list="Universites" type="text" name="University" id="University" /><br />
+            <button>Submit</button>
+        </form>
+    </body>
+</html>

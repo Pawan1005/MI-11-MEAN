@@ -1,0 +1,49 @@
+.a {
+    border: rgba(211, 123, 149, 0.4);
+    border-style: solid;
+    text-align: right;
+    background-color: rgba(211, 123, 149, 0.747);
+    border-bottom-left-radius: 8px;
+    border-top-right-radius: 8px;
+    margin-bottom: 20px;
+}
+.f1 {
+    font-family: Arial, Helvetica, sans-serif;
+}
+p{
+    border-style: solid;
+    text-align: left;
+    border-width: 99%;
+    border: blue;
+}
+div.q, div.m, div.u, div.c{ 
+    margin-top: 30px;
+}
+div.b{
+    margin-top: 1%;
+    text-align: center;
+}
+.lc{
+    margin-right: 128px;
+}
+.lq{
+    margin-right: 38px;
+}
+.lu{
+    margin-right: 118px;
+}
+.lm{
+    margin-right: 60px;
+}
+.lc{
+    margin-right: 114px;
+}
+.lr{
+    margin-right: 75px;
+}
+.ss{
+    margin-right: 128px;
+}
+.sk{
+    margin-right: 18%;
+}
