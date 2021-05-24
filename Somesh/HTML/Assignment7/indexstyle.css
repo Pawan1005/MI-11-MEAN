@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+        url("meet.jpg");
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+}
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+}
+nav ul {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none;
+}
+nav ul li {
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 10px;
+    border-radius: 30px;
+    transition: 0.3s;
+    border: white;
+}
+nav ul li:hover {
+    box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.801);
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-family: Poppins;
+    font-size: 14px;
+}
+.logo {
+    font-family: Poppins;
+    font-size: 36px;
+    color: #fff;
+}
+section {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70vw;
+    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.title,
+.sub-title {
+    color: rgb(255, 255, 255);
+    font-family: Poppins;
+    font-size: 45px;
+    padding-top: 20px;
+}
+.sub-title {
+    font-size: 20px;
+    letter-spacing: 6px;
+    padding-top: 0;
+    padding-bottom: 30px;
+}
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.form input {
+    font-family: Poppins;
+    background-color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 20px;
+    padding: 10px;
+    margin: 10px;
+}
+.form input::placeholder {
+    color: rgb(107, 107, 107);
+}
