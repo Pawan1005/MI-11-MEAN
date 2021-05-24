@@ -22,24 +22,27 @@
                 padding: 30px;
             }
             .container {
-                display: flex;
                 padding: 20px;
             }
             img {
                 height: 250px;
                 width: 350px;
             }
-
             .container > div {
                 padding: 30px;
             }
-            .second {
-                flex-direction: row-reverse;
+            .first img,
+            .third img {
+                float: left;
+            }
+
+            .second img {
+                float: right;
             }
         </style>
     </head>
     <body>
-        <div class="main-container">
+        <div class="main-container first">
             <div class="container">
                 <img src="./Abstract.jpg" alt="" />
                 <div>
@@ -72,7 +75,7 @@
                     deserunt? Fugiat corporis ipsum temporibus quia?
                 </div>
             </div>
-            <div class="container">
+            <div class="container third">
                 <img src="./Abstract.jpg" alt="" />
                 <div>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit.
