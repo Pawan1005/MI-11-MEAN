@@ -2,7 +2,7 @@
         scroll-behavior: smooth;
     }
    .nav a:hover{
-       background-color:rgb(16, 16, 44);
+       background-color:rgb(93, 93, 192);
        }
     .f2 {
         width: 50%;
@@ -17,10 +17,10 @@
         text-align: center;
         padding: 20px 32px;
         margin: 1%;
-        background-color: rgba(0, 0, 0);  
+        background-color: rgb(10, 6, 6);  
     }
     .nav{
-        background-color: rgba(220, 20, 60, 0.905);
+        background-color: rgba(98, 49, 179, 0.905);
         overflow: hidden;
         height: 202px;
     }
@@ -34,7 +34,7 @@
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
     body{
-        background-color: rgb(10, 6, 7);
+        background-color: rgb(165, 37, 69);
         opacity: 80%;
         background-image: url('img1.jpeg');
         background-repeat: no-repeat;
@@ -94,7 +94,7 @@
         width: 50%;
     }
     h2{
-        border: 5px dotted crimson;
+        border: 5px dotted rgb(91, 99, 165);
         background-color: black;
         color: white;
         height: 60px;
@@ -146,7 +146,7 @@
         margin-right: 5%;
     }
     .btnsubmit{
-        color:crimson;
+        color:rgb(192, 148, 82);
         margin-top: 60px;
         margin-bottom: 60px;
         margin-left: 700px;
