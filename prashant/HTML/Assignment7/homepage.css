@@ -7,7 +7,6 @@ body {
     color: #212529;
     background-color: #f7f7f7;
 }
-
 .navbar {
     display: -ms-flexbox;
     display: flex;
@@ -19,21 +18,17 @@ body {
     justify-content: space-between;
     padding: 5px;
 }
-
 .header {
     background: linear-gradient(45deg, #1b1e21 48%, #1b1e21 48%);
     height: 20px;
 }
-
 a {
   color: #ffffff;
   text-decoration: none;
 }
-
 li {
     list-style-type: none;
 }
-
 .bg-image-full {
     background-position: center center;
     background-repeat: no-repeat;
@@ -45,11 +40,9 @@ li {
 .bg-dark {
     background-color: #222!important;
 }
-
 .mx-background-top-linear {
     background: linear-gradient(45deg, blue 48%, #1b1e21 48%);   
 }
-
 .nav-link {
     margin-left: 10px;
     padding-left: 10px;
