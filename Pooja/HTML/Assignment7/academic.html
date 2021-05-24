@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<style>
+		.nava: hover {
+			background-color: rgb(16, 16, 44);
+		}
+		.nav a {
+			float: right;
+			color: cornsilk;
+			text-align: center;
+			padding: 20px 32px;
+			margin: 1%;
+			background-color: rgba(0, 0, 0);
+		}
+		.nav {
+			background-color: rgba(220, 20, 60, 0.905);
+			overflow: hidden;
+		}
+		.f2 {
+			width: 50%;
+			font-family: Arial, Helvetica, sans-serif;
+			margin-left: 40px;
+			margin-top: 40px;
+		}
+		.lq {
+			margin-right: 38px;
+		}
+		.lu {
+			margin-right: 118px;
+		}
+		.lm {
+			margin-right: 60px;
+		}
+		.ss {
+			margin-right: 128px;
+		}
+		.sk {
+			margin-right: 5%;
+		}
+		h2 {
+			text-align: center;
+			text-decoration: underline;
+		}
+		div.q,
+		div.u,
+		div.m {
+			margin-top: 3%;
+		}
+	</style>
+	<body>
+		<div class="nav">
+			<a href="home.html">Home</a>
+			<a href="login.html">Login</a>
+			<a href="personal.html">Personal Details</a>
+			<a href="academic.html">Academic Details</a>
+			<a href="professional.html">Professional Details</a>
+		</div>
+		<div>
+			<h2 id="sec2">Academic Details</h2>
+			<hr />
+		</div>
+		<div>
+			<form class="f2">
+				<label class="ss">
+					<b>Skill Set: </b>
+				</label>
+				<label class="sk">
+					<input type="checkbox" name="skill1" value="html" />
+					HTML
+				</label>
+				<label class="sk">
+					<input type="checkbox" name="skill2" value="javascript" />
+					Java Script
+				</label>
+				<label class="sk">
+					<input type="checkbox" name="skill3" value="java" />
+					Java
+				</label>
+				<label class="sk">
+					<input type="checkbox" name="skill4" value="oracle" />
+					Oracle
+				</label>
+				<div class="q">
+					<label class="lq">
+						<b>Highest Qualification:</b>
+					</label>
+					<select>
+						<option value="">Diploma in Computer Science</option>
+						<option value="">Science Graduate</option>
+						<option value="">Bachloer in Engineering</option>
+						<option value="">Masters in Computer Science</option>
+						<option value="">Masters in Engineering</option>
+						<option value="">Other</option>
+					</select>
+				</div>
+				<div class="u">
+					<label class="lu">
+						<b>University:</b>
+					</label>
+					<input lists="university" placeholder="Select University" />
+					<datalist id="university">
+						<option value="Mumbai University"></option>
+						<option value="Pune University"></option>
+						<option value="Chennai Unniversity"></option>
+						<option value="Nagpur University"></option>
+						<option value="Manipal University"></option>
+					</datalist>
+				</div>
+				<div class="m">
+					<label class="lm">
+						<b>Areas of Expertise:</b>
+					</label>
+					<select multiple>
+						<option>Software</option>
+						<option>Training</option>
+						<option>Networking</option>
+						<option>Management</option>
+						<option>Marketing</option>
+					</select>
+					<simpletext>You can select multiple fields.</simpletext>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>
