@@ -13,12 +13,20 @@
                 border: solid 2px orange;
             }
             .img-container {
-                display: flex;
-                justify-content: space-between;
+                height: 250px;
+            }
+            .float-left{
+                float: left;
+            }
+            .float-right{
+                float: right;
             }
             .img-container > img {
                 width: 200px;
                 height: 200px;
+            }
+            .img-container > p{
+                width: 55%;
             }
             .img-container > img, .img-container > p {
                 padding: 0 4rem;
@@ -28,8 +36,8 @@
     <body>
         <div class="container">
             <div class="img-container">
-                <img src="./explorer.jpg" alt="explorer">
-                <p>
+                <img class="float-left" src="./explorer.jpg" alt="explorer">
+                <p class="float-right" >
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla distinctio saepe consequuntur ex repudiandae nihil iste dolorum
                     voluptatibus, quia, quos excepturi modi atque, repellat aliquid qui. Esse incidunt tenetur veritatis! Lorem, ipsum dolor sit amet
                     consectetur adipisicing elit. Nulla distinctio saepe consequuntur ex repudiandae nihil iste dolorum voluptatibus, quia, quos excepturi modi
@@ -39,7 +47,8 @@
                 </p>
             </div>
             <div class="img-container">
-                <p>
+                <img class="float-right" src="./explorer.jpg" alt="explorer">
+                <p class="float-left" >
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla distinctio saepe consequuntur ex repudiandae nihil iste dolorum
                     voluptatibus, quia, quos excepturi modi atque, repellat aliquid qui. Esse incidunt tenetur veritatis! Lorem, ipsum dolor sit amet
                     consectetur adipisicing elit. Nulla distinctio saepe consequuntur ex repudiandae nihil iste dolorum voluptatibus, quia, quos excepturi modi
@@ -47,11 +56,10 @@
                     saepe consequuntur ex repudiandae nihil iste dolorum voluptatibus, quia, quos excepturi modi atque, repellat aliquid qui. Esse incidunt
                     tenetur veritatis!
                 </p>
-                <img src="./explorer.jpg" alt="explorer">
             </div>
             <div class="img-container">
-                <img src="./explorer.jpg" alt="explorer">
-                <p>
+                <img class="float-left" src="./explorer.jpg" alt="explorer">
+                <p class="float-right" >
                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla distinctio saepe consequuntur ex repudiandae nihil iste dolorum
                     voluptatibus, quia, quos excepturi modi atque, repellat aliquid qui. Esse incidunt tenetur veritatis! Lorem, ipsum dolor sit amet
                     consectetur adipisicing elit. Nulla distinctio saepe consequuntur ex repudiandae nihil iste dolorum voluptatibus, quia, quos excepturi modi
