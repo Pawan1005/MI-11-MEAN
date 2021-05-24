@@ -1,4 +1,4 @@
-H1 {
+h1 {
     background-color: rgb(16, 109, 146);
 }
 body {
@@ -13,14 +13,11 @@ body {
     border: 1px solid black;
     padding: 10px;
 }
-
-
 form {
     position: relative;
     width: 70%;
     text-align: right;
 }
-
 label {
     width: 30%;
     position: absolute;
@@ -28,13 +25,11 @@ label {
     text-align: right;
     margin-right: 30px;
 }
-
 input[type=submit] {
     position: absolute;
     left: 25%;
     background-color: #9AE5F8;
 }
-
 a:link {
     text-decoration:none;
     display:inline-flex;
