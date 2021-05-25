@@ -5,6 +5,9 @@
     border: solid 2px red;
     
 }
+img{
+    float: right;
+}
 .ImageMain {
     display: flex;
     justify-content:stretch;
