@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <style>
+        .nava: hover {
+            background-color: rgb(16, 16, 44);
+        }
+        .nav a {
+            float: right;
+            color: cornsilk;
+            text-align: center;
+            padding: 20px 32px;
+            margin: 1%;
+            background-color: rgba(0, 0, 0);
+        }
+        .nav {
+            background-color: rgba(220, 20, 60, 0.905);
+            overflow: hidden;
+        }
+        .f1 {
+            width: 400px;
+            border: 3px black;
+            background-color: white;
+            border-style: solid;
+            margin-left: 35%;
+            margin-right: 35%;
+            margin-top: 10%;
+            padding-right: 10px;
+            height: 220px;
+            border-radius: 5px;
+        }
+        input[type="text"],
+        input[type="password"] {
+            width: 370px;
+            height: 20px;
+            margin: 8px 10px 8px 10px;
+            display: inline-block;
+            padding: 10px;
+            border: 1px solid black;
+        }
+        .fname,
+        .pass {
+            padding-left: 10px;
+        }
+        .login {
+            color: white;
+            background-color: black;
+            padding: 14px 20px;
+            margin: 8px 0;
+            margin-left: 50px;
+            border: none;
+            cursor: pointer;
+            width: 50%;
+        }
+    </style>
+    <body>
+        <div class="nav">
+            <a href="home.html">Home</a>
+            <a href="#search">Search for Job</a>
+            <a href="login.html">Login</a>
+            <a href="personal.html">Personal Details</a>
+            <a href="academic.html">Academic Details</a>
+            <a href="professional.html">Professional Details</a>
+        </div>
+        <div class="f1">
+            <form>
+                <div class="con" id="login">
+                    <label for="fname" class="fname"> First Name: </label>
+                    <br />
+                    <input type="text" placeholder="Enter Name" />
+                    <br />
+                    <label for="Password" class="pass"> Password: </label>
+                    <br />
+                    <input type="password" placeholder="Enter Password" />
+                    <br />
+                    <button class="login">Login</button>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
