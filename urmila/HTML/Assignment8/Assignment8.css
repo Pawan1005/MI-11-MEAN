@@ -6,12 +6,13 @@
 }
 .ImageMain {
     display: flex;
-    justify-content:stretch;
+    justify-content: stretch;
 }
 .ImageMain > img {
     width: 200px;
     height: 200px;
 }
-.ImageMain > img, .ImageMain > p {
+.ImageMain > img,
+.ImageMain > p {
     padding: 0 5px;
-} 
+}
