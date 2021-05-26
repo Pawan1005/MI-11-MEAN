@@ -1,33 +1,43 @@
 * {
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 div.backg {
     background-color: #f09245;
-    height: auto;
+    height: 580px;
     width: 900px;
-    display: flex;
-    padding: 10px;
 }
-.Image {
+img {
     height: 200px;
     width: 200px;
+    padding-left: 25px;
+    padding-top: 25px;
+    padding-right: 25px;
+    padding-bottom: 15px;
+}
+.Image {
+    float: left;
+}
+.Image2 {
+    float: right;
+}
+.container-box1 {
+    padding: 25px;
+}
+.container-box2 {
+    padding: 25px;
+    margin-top: 18px;
+}
+.container-box3 {
     padding: 25px;
 }
 .para1 {
-    padding-left: 48px;
-    padding-bottom: 17px;
+    margin-top: 21px;
 }
 .para2 {
-    padding: 44px;
-    margin-left: -130px;
-    padding-right: 60px;
-}
-#Image3 {
-    margin-left: 130px;
-    padding-top: 18px;
+    margin-top: 22px;
 }
 .para3 {
-    margin-left: -90px;
-    padding-right: 60px;
+    margin-top: 26px;
 }
