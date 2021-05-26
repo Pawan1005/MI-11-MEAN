@@ -1,0 +1,77 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: aliceblue;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover:not(.active) {
+    background-color: rgb(185, 180, 180);
+    color: aliceblue;
+}
+.paddingnav {
+    background-color: aliceblue;
+    padding: 20px 40px;
+}
+.logincentrecard {
+    margin: auto;
+    width: 30%;
+    padding: 10px;
+}
+.container {
+    padding: 2px 16px;
+}
+.texttitle {
+    display: inline-block;
+    color: #2d3a72;
+    font-family: Roboto;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 26px;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    width: 100%;
+    border-radius: 20px;
+}
+.input-container {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.btn:hover {
+    opacity: 1;
+}
+.btn-signup {
+    background-color: rgb(223, 46, 129);
+    color: rgb(255, 255, 255);
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}
+.btn-signup:hover {
+    opacity: 1;
+}
+.btn {
+    background-color: dodgerblue;
+    color: rgb(255, 255, 255);
+    padding: 15px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    opacity: 0.9;
+}

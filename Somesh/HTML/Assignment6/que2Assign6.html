@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>About Professional me</title>
+    </head>
+    <style>
+        .label {
+            display: inline-block;
+            font-weight: 600;
+            width: 20%;
+            padding-top: 25px;
+            padding-bottom: 25px;
+        }
+        .chkbox-label {
+            padding: 0px 10% 0px 0px;
+        }
+        div {
+            text-align: center;
+        }
+    </style>
+    <body>
+        <fieldset>
+            <legend>Academic Details</legend>
+            <span class="label">Skill set:</span>
+            <input type="checkbox" name="skill-set" id="html" />
+            <label class="chkbox-label" for="html">HTML</label>
+            <input type="checkbox" name="skill-set" id="js" />
+            <label class="chkbox-label" for="js">JavaScript</label>
+            <input type="checkbox" name="skill-set" id="java" />
+            <label class="chkbox-label" for="java">Java</label>
+            <input type="checkbox" name="skill-set" id="orcale" />
+            <label class="chkbox-label" for="oracle">Oracle</label>
+            <br />
+            <label class="label" for="q">Highest qualification:</label>
+            <select name="qualif-n" id="q">
+                <option value="DiplomaCS">Diploma in Computer Science</option>
+                <option value="Science">Science Graduate</option>
+                <option value="BachelorsEng">Bachelor in Engg.</option>
+                <option value="MastersCS">Masters in Computer Science</option>
+                <option value="MastersEng">Masters in Engg.</option>
+                <option value="other">Others</option>
+            </select>
+            <br />
+            <label class="label" for="university">University:</label>
+            <input list="university" name="uni" id="uni" />
+            <br />
+            <datalist id="university">
+                <option value="Mumbai University"></option>
+                <option value="Pune University"></option>
+                <option value="Chennai University"></option>
+                <option value="Nagpur University"></option>
+                <option value="Badoda University"></option>
+            </datalist>
+            <br />
+            <label class="label" for="experties">Areas of experties:</label>
+            <select name="experties" id="experties" multiple>
+                <option value="Software">Software</option>
+                <option value="Training">Training</option>
+                <option value="Networking">Networking</option>
+                <option value="Management">Management</option>
+                <option value="Marketing">Marketing</option>
+            </select>
+            <span>you can select multiple options</span>
+        </fieldset>
+        <fieldset>
+            <legend>Resume</legend>
+            <label class="label" for="upload">Upload Resume:</label>
+            <input type="file" name="upload" id="upload" />
+            <br />
+            <label class="label" for="comments">comments</label>
+            <textarea
+                name="comments"
+                id="comments"
+                cols="30"
+                rows="7"
+            ></textarea>
+        </fieldset>
+        <div>
+            <input type="submit" value="submit" />
+        </div>
+    </body>
+</html>

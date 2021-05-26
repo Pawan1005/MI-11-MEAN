@@ -1,0 +1,38 @@
+.bgcolor1 {
+    background-image: url("https://i.pinimg.com/originals/cf/a4/fb/cfa4fb38dae7e98d284573d48825aba8.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 96%;
+    height: 110;
+    padding: 7px;
+}
+.right {
+    text-align: right;
+}
+.titlet {
+    font-weight: 900;
+    font-size: 40px;
+}
+table#table1 {
+    width: 100%;
+}
+table td {
+    border: 1px solid maroon;
+}
+li {
+    font-size: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.shadow {
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 2px 4px;
+}
+li {
+    list-style-type: square;
+    color: rgb(255, 38, 0);
+    font-size: 20px;
+    border: 1px;
+}

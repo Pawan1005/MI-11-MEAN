@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>*Professional Details</title>
+        <style>
+            body {
+                background-image: url(bird.jpg);
+                margin: 30;
+                background-size: cover;
+                text-align: center;
+            }
+            .box {
+                width: 1500px;
+                padding: 50px;
+                float: center;
+                font-size: 30px;
+                font-style: normal;
+            }
+            .h1 {
+                float: center;
+                font-size: 50px;
+                background-color: rgb(236, 231, 229);
+                border-radius: 30px;
+            }
+            .box input {
+                size: 40%;
+            }
+            .logo img {
+                float: left;
+                width: 60px;
+                height: auto;
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="logo">
+            <img src="logo.png"/>
+        </div>
+        <h1 class="h1">Professional Details</h1>
+        <div class="box">
+            <h3>Higher Qualification :</h3>
+            <select name="higher qualification">
+                <option value="Degree In Mechanical">Degree In Mechanical</option>
+                <option value="Degree In Computer">Degree In Computer</option>
+                <option value="Degree In Electrical">Degree In Electrical</option>
+                <option value="Degree In Civil">Degree In Civil</option>
+            </select>
+        </div>
+        <div class="box">
+            <h3>University :</h3>
+            <input list="browsers"/>
+            <datalist id="browsers">
+                <option value="RTMNU Nagpur University"></option>
+                <option value="LP University"></option>
+                <option value="Badoda University"></option>
+                <option value="Nasik University"></option>
+            </datalist>
+        </div>
+        <div class="box">
+            <h3>Area of Expertise :</h3>
+            <select name="Area of Expertise" id="Area of Expertise" size="3" multiple>
+                <option value="Design">Design</option>
+                <option value="Assembly">Assembly</option>
+                <option value="Quality">Quality</option>
+                <option value="Software">Software</option>
+            </select>
+        </div>
+        <div class="box">
+            <h3>Upload Resume :</h3>
+            <button onclick="document.getElementById('file').click()">Browse...</button>
+            <input type="file" id="file" name="files" style="display: none"/>
+            <br/>
+            <h3>Comments :</h3>
+            <textarea name="Comments" id="Comments" cols="25" rows="5"></textarea>
+        </div>
+        <div>
+            <hr size="3px"/>
+            <button>Submit</button>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,14 @@
+.body-width {
+    background-color: aqua;
+    width: 800px;
+    height: 1000px;
+}
+.left img {
+    float: left;
+}
+.right img {
+    float: right;
+}
+.inner-padding {
+    padding: 50px;
+}

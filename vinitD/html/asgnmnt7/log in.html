@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Log In page</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                background-image: url(http://3.bp.blogspot.com/-czZLqG2KVlQ/TozQMC_YotI/AAAAAAAAAfk/nTfRLpVmb3g/s1600/nature+scenery+wallpaper-1.jpg);
+                background-size: cover;
+            }
+            .box {
+                width: 300px;
+                padding: 30px;
+                border: solid;
+                border-radius: 10px;
+                font-size: 20px;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                background: rgb(163, 112, 152);
+                text-align: center;
+            }
+            .box input[type="text"] {
+                background: none;
+                display: block;
+                margin: 20px auto;
+                text-align: center;
+                border-color: rgb(138, 1, 1);
+                padding: 15px 10px;
+                width: 220px;   
+            }
+            .box input[type="password"] {
+                background: none;
+                display: block;
+                margin: 20px auto;
+                text-align: center;
+                border-color: rgb(138, 1, 1);
+                padding: 15px 10px;
+                width: 220px;
+            }
+            .box input[type="submit"]:hover {
+                background-color: #000;
+            }
+            .h {
+                color: rgb(0, 0, 0);
+                font-weight: 500;
+            }
+        </style>
+    </head>
+    <body>
+        <form class="box" action="Log in.html" method="POST">
+            <h1 class="h">LOG IN</h1>
+            <br />
+            <input type="text" name="" placeholder="username" id="username" />
+            <br /><br />
+            <input type="password" name="" placeholder="Password" id="password" />
+            <br /><br />
+            <input type="submit" value="Login" />
+        </form>
+    </body>
+</html>

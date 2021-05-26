@@ -1,0 +1,78 @@
+#main {
+    background-color: #ffffff;
+    width: 280px;
+    margin: 50px auto;
+    border: 0px solid;
+}
+.block2 {
+    text-align: center;
+    position: relative;
+    font-family: "Baloo Bhaina 2", cursive;
+    color: white;
+}
+.block3 {
+    position: relative;
+    text-align: center;
+    font-family: "Baloo Bhaina 2", cursive;
+    color: white;
+}
+body {
+    background-image: url("damian-zaleski-RYyr-k3Ysqg-unsplash.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+}
+.block4 {
+    position: relative;
+    text-align: center;
+    background-color: thistle;
+    color: white;
+    font-family: "Baloo Bhaina 2", cursive;
+}
+.block5 {
+    position: relative;
+    text-align: center;
+    background-color: thistle;
+    color: white;
+}
+.btn {
+    position: relative;
+    text-align: center;
+    background-color: rgb(75, 47, 199);
+    color: white;
+}
+#content {
+    padding: 6em 1em;
+    border: none;
+    margin: 20px;
+}
+.block {
+    position: relative;
+    text-align: center;
+    color: white;
+    border-radius: 10px;
+    width: 516px;
+    left: 365px;
+    background-color: black;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+li a {
+    float: left;
+}
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+li a:hover {
+    background-color: #111;
+}

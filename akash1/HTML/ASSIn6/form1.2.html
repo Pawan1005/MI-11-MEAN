@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>From2</title>
+        <link rel="stylesheet" href="style3.css" />
+    </head>
+    <body>
+        <div class="block4">
+            <h2><em>Professional Details</em></h2>
+        </div>
+        <form>
+            <fieldset>
+                <legend>Academic Details</legend>
+                <label for="age"><strong> Skill Set:</strong></label>
+                <input type="checkbox" id="HTML" name="skillset" value="HTML" />
+                <label for="html">HTML</label>
+                <input type="checkbox" id="Javascript" name="skillset" value="Javascript" />
+                <label for="javascript"> Javascript</label>
+                <input type="checkbox" id="java" name="skillset" value="java" />
+                <label for="java"> Java</label>
+                <input type="checkbox" id="oracle" name="skillset" value="oracle" />
+                <label for="oracle"> oracle</label>
+                <br /><br />
+                <label for="highest Qualification"><strong>Highest Qualification:</strong></label>
+                <select name="highest Qualification" id="Qualification">
+                    <option value="computer science">Diploma In Computer science</option>
+                    <option value="science">science graduate</option>
+                    <option value="engg">Bachelor in Engg</option>
+                    <option value="master">Master in Engg</option>
+                    <option value="other">other</option>
+                </select>
+                <br /><br />
+                <label for="university"><strong>University:</strong></label>
+                <input list="browsers" name="browser" id="browser" />
+                <datalist id="browsers">
+                    <select>
+                        <option value="Mumbai University"></option>
+                        <option value="Pune University"></option>
+                        <option value="Nagpur University"></option>
+                        <option value="Badodara University"></option>
+                        <option value="Chennai University"></option>
+                    </select>
+                </datalist>
+                <br /><br />
+                <label for="multiple"><strong>Area of expertise:</strong></label>
+                <select multiple>
+                    <option>software</option>
+                    <option>Training</option>
+                    <option>Networking</option>
+                    <option>Management</option>
+                    <option>Marketing</option>
+                </select>
+                You can select multiple fields.
+            </fieldset>
+            <fieldset>
+                <legend>Resume</legend>
+                <label for="myfile"><strong>Upload Resume:</strong></label>
+                <input type="file" id="myfile" name="myfile" multiple />
+                <br /><br />
+                <label for="comment"><strong>Comments:</strong></label>
+                <textarea>
+                   Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi corrupti fugiat autem ab rerum deleniti ipsa beatae 
+                   dolor molestiae nemo, officia quae repellendus cupiditate vero delectus ullam obcaecati reiciendis enim?    
+                </textarea>
+            </fieldset>
+            <br />
+            <button class="btn">submit</button>
+        </form>
+    </body>
+</html>

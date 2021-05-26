@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Question 2</title>
+        <link rel="stylesheet" href="./Que.2_Form_effect.css" />
+    </head>
+    <body>
+        <h1>MI-11 Intern HTML Assesment</h1>
+        <hr />
+        <h2>Personal Details</h2>
+        <label for="first-name">First Name: </label>
+        <input type="text" name="fname" id="first-name" placeholder="First Name" />
+        <br />
+        <label for="last-name">Last Name: </label>
+        <input type="text" name="lname" id="last-name" placeholder="Last Name" />
+        <br />
+        <label>Gender : </label>
+        <input type="radio" id="male" name="gender" value="male" />
+        <label for="male">Male</label>
+        <input type="radio" id="female" name="gender" value="female" />
+        <label for="female">Female</label>
+        <input type="radio" id="other" name="gender" value="other" />
+        <label for="other">Other</label>
+        <br />
+        <label>Age : </label>
+        <input type="radio" id="less-18" name="age" />
+        <label for="less-18">less than 18</label>
+        <input type="radio" id="between-18-25" name="age" checked />
+        <label for="between-18-25">18-25</label>
+        <input type="radio" id="between-25-40" name="age" />
+        <label for="between-25-40">25-40</label>
+        <h2>Academics Details</h2>
+        <input type="checkbox" name="skill-1" id="skill-1" value="HTML" />
+        <label for="skill-1">HTML</label>
+        <input type="checkbox" name="skill-2" id="skill-2" value="Java Script" />
+        <label for="skill-2">Java Script</label>
+        <input type="checkbox" name="skill-3" id="skill-3" value="Java" />
+        <label for="skill-3">Java</label>
+        <input type="checkbox" name="skill-4" id="skill-4" value="Oracle" />
+        <label for="skill-4">Oracle</label>
+        <h2>Professional Details</h2>
+        <fieldset>
+            <legend>Academic Details</legend>
+            <div class="container">
+                <label for="skill-set">Skill Set:</label>
+                <div>
+                    <input type="checkbox" name="html" id="talent-1" />
+                    <label for="talent-1">HTML</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="javascript" id="talent-2" />
+                    <label for="talent-2">Java Script</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="java" id="talent-3" />
+                    <label for="talent-3">Java</label>
+                </div>
+                <div>
+                    <input type="checkbox" name="oracle" id="talent-4" />
+                    <label for="talent-4">Oracle</label>
+                </div>
+            </div>
+            <br />
+            <label for="Qualification">Highest Qualification:</label>
+            <select id="Qualification">
+                <option>Masters in Computer Science</option>
+                <option>Diploma in Computer Science</option>
+                <option>Science Graduate</option>
+                <option>Bachelor in Engg.</option>
+                <option>Masters in Engg.</option>
+                <option>Other</option>
+            </select>
+            <br />
+            <label for="university">University:</label>
+            <input list="universities" type="text" name="university" id="university" />
+            <datalist id="universities">
+                <option value="Mumbai University"></option>
+                <option value="Pune University"></option>
+                <option value="Chennai University"></option>
+                <option value="Nagpur University"></option>
+                <option value="Badoda University"></option>
+            </datalist>
+            <br />
+            <label for="expertise">Area of Expertise:</label>
+            <select name="expertise" id="expertise" multiple>
+                <option value="Software">Software</option>
+                <option value="Training">Training</option>
+                <option value="Networking">Networking</option>
+                <option value="Management">Management</option>
+                <option value="Marketing">Marketing</option>
+            </select>
+            <span><small>You can select multiple fields</small></span>
+        </fieldset>
+        <fieldset>
+            <legend>Resume</legend>
+            <label for="resume">Upload Resume:</label>
+            <input id="resume" type="file" />
+            <br />
+            <label for="comment">Comments</label>
+            <textarea name="comment" id="comment" cols="30" rows="5"></textarea>
+        </fieldset>
+        <div id="submit-btn">
+            <button>Submit</button>
+        </div>
+    </body>
+</html>

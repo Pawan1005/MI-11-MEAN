@@ -1,0 +1,19 @@
+#left {
+    float: left;
+}
+
+#right {
+    float: right;
+}
+
+p {
+    text-align: justify;
+}
+
+body {
+    background-color: pink;
+}
+
+a {
+    text-align: center;
+}

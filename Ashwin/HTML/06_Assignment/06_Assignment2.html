@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment 6 Part-2</title>
+        <link rel="stylesheet" href="Assignment06.css" />
+    </head>
+    <body>
+        <div class="blue1">
+            <h1>MI-11 Intern HTML Assesment</h1>
+        </div>
+        <hr style="margin-top: 50px" />
+        <div class="blue1">
+            <h4>Personal Details</h4>
+        </div>
+        <table>
+            <tr>
+                <th>First Name</th>
+                <td><input type="text" placeholder="First Name" /></td>
+            </tr>
+            <tr>
+                <th>last Name</th>
+                <td><input type="text" placeholder="Last Name" /></td>
+            </tr>
+            <tr>
+                <th>Gender:</th>
+                <td>
+                    <input type="radio" value="male" name="g" />Male <input type="radio" value="female" name="g" />Female
+                    <input type="radio" value="other" name="g" />Other
+                </td>
+            </tr>
+            <tr>
+                <th>Age:</th>
+                <td>
+                    <input type="radio" name="g" value="between" />Less than 18 <input type="radio" name="g" value="bilow" />18-25
+                    <input type="radio" name="g" value="above" /> 26-40
+                </td>
+            </tr>
+        </table>
+        <div class="blue2">
+            <h4>Acedemic Details</h4>
+        </div>
+        <tr>
+            <b>Skill Set :</b>
+            <td><input type="checkbox" />HTML</td>
+            <td><input type="checkbox" />JavaScript</td>
+            <td><input type="checkbox" />Java</td>
+            <td><input type="checkbox" />Oracle</td>
+        </tr>
+        <br />
+        <label for="Qualification">Highest Qualification:</label>
+        <select id="Qualification">
+            <option>Masters in Computer Science</option>
+            <option>Diploma in Computer Science</option>
+            <option>Science Graduate</option>
+            <option>Bachelor in Engg.</option>
+            <option>Masters in Engg.</option>
+            <option>Other</option>
+        </select>
+        <br />
+        <br />
+        <label for="university">University:</label>
+        <input list="universities" type="text" name="university" id="university" />
+        <datalist id="universities">
+            <option value="Mumbai University"></option>
+            <option value="Pune University"></option>
+            <option value="Chennai University"></option>
+            <option value="Nagpur University"></option>
+            <option value="Badoda University"></option>
+        </datalist>
+        <br />
+        <br />
+        <label for="expertise">Area of Expertise:</label>
+        <select name="expertise" id="expertise" multiple>
+            <option value="Software">Software</option>
+            <option value="Training">Training</option>
+            <option value="Networking">Networking</option>
+            <option value="Management">Management</option>
+            <option value="Marketing">Marketing</option>
+        </select>
+        <span><small>You can select multiple fields</small></span>
+        <fieldset>
+            <legend>Resume</legend>
+            <label for="resume">Upload Resume:</label>
+            <input id="resume" type="file" />
+            <br />
+            <br />
+            <label for="comment">Comments</label>
+            <textarea name="comment" id="comment" cols="30" rows="5"></textarea>
+        </fieldset>
+        <div id="submit-btn">
+            <button>Submit</button>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal and Academic Details</title>
+        <style>
+            body {
+                background-image: url("login.jpg");
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .box {
+                width: 550px;
+                height: auto;
+                background: darkgrey;
+                box-shadow: 0px 0px 10px 4px #aaa;
+                top: 90px;
+                margin: 20px auto;
+            }
+            h1 {
+                text-align: center;
+            }
+            .submit {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <h1>Personal Details</h1>
+            <form>
+                <label for="name">First Name</label><br>
+                <input type="text" id="first name" name="first name"><br><br>
+                <label for="name">Last Name</label><br>
+                <input type="text" id="last name" name="last name"><br><br>
+                <label for="email">Email Id</label><br>
+                <input type="text" id="email" name="email"><br><br>
+                <lable for="gender"><b>Gender:</b></lable>
+                <input type="radio" id="Male" name="gender" value="male" />
+                <label for="male">Male</label>
+                <input type="radio" id="Female" name="gender" value="Female" />
+                <lable for="Female">Female</lable>
+                <input type="radio" id="other" name="gender" value="other" />
+                <lable for="other">other</lable><br /><br />
+                <h1>Academic Details</h1>
+                <label for="Highest Qualification">Highest Qualification</label><br>
+                <input type="text" id="Highest Qualification" name="Highest Qualification"><br><br>
+                <label for="cgpa">CGPA</label><br>
+                <input type="text" id="Highest Qualification" name="Highest Qualification"><br><br>
+                <label for="skill"><b>Skill Set:</b></label>
+                <input type="checkbox" id="html" name="=html" value="html" />
+                <label for="age">HTML</label>
+                <input type="checkbox" id="javascript" name="=javascript" value="javascript" />
+                <label for="skill">Java Script</label>
+                <input type="checkbox" id="java" name="=java" value="java" />
+                <label for="age">Java</label>
+                <input type="checkbox" id="skillset" name="oracle" value="oracle" />
+                <label for="age">Oracle</label><br><br>
+                <div class="submit">
+                    <input type="button" id="submit" value="Submit">
+                </div >
+            </form>
+        </div>
+    </body>
+</html>

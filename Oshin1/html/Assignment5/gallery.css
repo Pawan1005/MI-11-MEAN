@@ -1,0 +1,17 @@
+body {
+    background-color: azure;
+}
+#main {
+    text-align: center;
+}
+.img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.image {
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+}

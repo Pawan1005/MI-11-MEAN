@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Form1</title>
+        <link rel="stylesheet" href="style2.css" />
+    </head>
+    <body>
+        <form>
+            <div class="block1">
+                <h1>MI-9 Internal HTML Assignment.</h1>
+            </div>
+            <hr />
+            <div class="block2">
+                <h2><em>Personal details</em></h2>
+            </div>
+            <label>First Name:</label>
+            <input type="text" name="fname" placeholder="First name" /><br /><br />
+            <label>Last Name:</label>
+            <input type="text" name="lname" placeholder="Last name" /><br /><br />
+            <label for="gender">Gender:</label>
+            <input type="radio" id="male" name="gender" value="male" />
+            <label for="male">Male</label>
+            <input type="radio" id="female" name="gender" value="female" />
+            <label for="female">Female</label>
+            <input type="radio" id="other" name="other" value="other" />
+            <label for="other">Other</label><br /><br />
+            <label for="age">Age:</label>
+            <input type="radio" id="lessthan18" name="age" value="lessthan18" />
+            <label for="lessthan18">less than 18</label>
+            <input type="radio" id="18-25" name="age" value="18-25" checked />
+            <label for="18-25">18-25</label>
+            <input type="radio" id="26-40" name="age" value="26-40" />
+            <label for="26-40">26-40</label>
+            <div class="block3">
+                <h2>Academic details</h2>
+            </div>
+            <label for="age"> Skill Set:</label>
+            <input type="checkbox" id="HTML" name="skillset" value="HTML" />
+            <label for="vehicle1">HTML</label>
+            <input type="checkbox" id="Javascript" name="skillset" value="Javascript" />
+            <label for="vehicle2">Javascript</label>
+            <input type="checkbox" id="java" name="skillset" value="java" />
+            <label for="vehicle3">Java</label>
+            <input type="checkbox" id="oracle" name="skillset" value="oracle" />
+            <label for="vehicle3">oracle</label>
+        </form>
+    </body>
+</html>
