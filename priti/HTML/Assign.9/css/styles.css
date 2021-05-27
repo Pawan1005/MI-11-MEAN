@@ -257,7 +257,7 @@ header {
 }
 .chat-btn {
     position: fixed;
-    right: 10px !important;
+    right: 10px;
     bottom: 10px;
     color: #fff;
     width: 56px;
@@ -281,6 +281,3 @@ header {
     width: 31.6%;
     background-repeat: no-repeat;
 }
-
- 
-   
