@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assi_9</title>
+        <style>
+            .first {
+                border: 1px outset rgb(226, 226, 226);
+                height: 50px;
+                width: 1400px;
+                position: absolute;
+                top: 10px;
+                left: 20px;
+            }
+            .tjob {
+                position: absolute;
+                top: -10px;
+                left: 50px;
+            }
+            .jobt {
+                position: absolute;
+                top: -5px;
+                left: 250px;
+            }
+            .gjob {
+                position: absolute;
+                top: -5px;
+                left: 350px;
+            }
+            .career {
+                position: absolute;
+                top: -5px;
+                left: 450px;
+            }
+            .no {
+                position: absolute;
+                top: -10px;
+                left: 1000px;
+            }
+            .chat {
+                position: absolute;
+                top: -5px;
+                left: 1150px;
+            }
+            .sec {
+                border: 1px outset rgb(226, 226, 226);
+                height: 50px;
+                width: 400px;
+                position: absolute;
+                top: 10px;
+                left: 1420px;
+            }
+            .login {
+                position: absolute;
+                top: -5px;
+                right: 230px;
+                color: blue;
+            }
+            .buy {
+                position: absolute;
+                top: -5px;
+                right: 80px;
+                color: blue;
+            }
+            .title {
+                position: absolute;
+                top: 90px;
+                left: 70px;
+            }
+            .third {
+                border: 1px outset rgb(226, 226, 226);
+                height: 50px;
+                width: 650px;
+                position: absolute;
+                top: 100px;
+                left: 400px;
+                background-color: wheat;
+            }
+            .que {
+                position: absolute;
+                top: -5px;
+                left: 30px;
+            }
+            .btn1 {
+                position: absolute;
+                top: 10px;
+                left: 450px;
+                width: 10%;
+                padding: 5px 5px;
+                background-color: rgb(231, 22, 39);
+                font-size: 15px;
+                color: rgb(226, 226, 226);
+                cursor: pointer;
+            }
+            .btn2 {
+                position: absolute;
+                top: 10px;
+                left: 550px;
+                width: 10%;
+                padding: 5px 5px;
+                background-color: white;
+                font-size: 15px;
+                color: rgb(12, 12, 12);
+                cursor: pointer;
+            }
+            .log {
+                position: absolute;
+                top: 110px;
+                left: 1500px;
+                width: 5%;
+                padding: 5px 5px;
+                background-color: white;
+                font-size: 15px;
+                color: rgb(226, 29, 29);
+                border-color: red;
+                cursor: pointer;
+            }
+            .reg {
+                position: absolute;
+                top: 110px;
+                left: 1600px;
+                width: 5%;
+                padding: 5px 5px;
+                background-color: white;
+                font-size: 15px;
+                color: rgb(226, 29, 29);
+                border-color: red;
+                cursor: pointer;
+            }
+            .fourth {
+                position: absolute;
+                top: 200px;
+            }
+            .div1 {
+                border: 1px outset rgb(226, 226, 226);
+                height: 50px;
+                width: 650px;
+                position: absolute;
+                top: 50px;
+                left: 40px;
+                background-color: white;
+            }
+            .skill {
+                position: absolute;
+                width: 97%;
+                border: none;
+                top: 15px;
+                left: 20px;
+                font-size: large;
+            }
+            .div2 {
+                border: 1px outset rgb(226, 226, 226);
+                height: 50px;
+                width: 400px;
+                position: absolute;
+                top: 50px;
+                left: 650px;
+                background-color: white;
+            }
+            .loc {
+                position: absolute;
+                width: 97%;
+                border: none;
+                top: 15px;
+                left: 20px;
+                font-size: large;
+            }
+            .div3 {
+                border: 1px outset rgb(226, 226, 226);
+                height: 50px;
+                width: 250px;
+                position: absolute;
+                top: 50px;
+                left: 1000px;
+                background-color: white;
+            }
+            .exp {
+                position: absolute;
+                width: 70%;
+                border: none;
+                top: 15px;
+                left: 20px;
+                color: gray;
+                font-size: large;
+            }
+            .div4 {
+                border: none;
+                height: 50px;
+                width: 150px;
+                position: absolute;
+                top: 50px;
+                left: 1250px;
+                background-color: red;
+            }
+            .job {
+                position: absolute;
+                width: 70%;
+                border: none;
+                top: 15px;
+                left: 20px;
+                font-size: large;
+                color: rgb(226, 226, 226);
+                background-color: red;
+            }
+            .fifth {
+                position: absolute;
+                top: 50px;
+                left: 70px;
+                padding-left: 20px;
+                padding-right: 20px;
+                background-color: rgb(226, 226, 226);
+                border-radius: 0;
+                border: none;
+                width: 10%;
+            }
+            .div5 {
+                border: 1px outset rgb(226, 226, 226);
+                height: 100px;
+                width: 300px;
+                position: absolute;
+                top: -30px;
+                left: 1400px;
+                background-color: white;
+            }
+            .times {
+                position: absolute;
+                top: -10px;
+                right: 60px;
+                color: rgb(28, 182, 209);
+            }
+            .btn3 {
+                position: absolute;
+                top: 15px;
+                left: 1470px;
+                width: 90%;
+                padding: 5px 5px;
+                background-color: white;
+                font-size: 15px;
+                color: rgb(6, 84, 253);
+                border-color: rgb(0, 60, 255);
+                cursor: pointer;
+            }
+            .sixth {
+                position: absolute;
+                top: 400px;
+                left: 200px;
+            }
+            .enable {
+                position: absolute;
+                top: 30px;
+                left: 20px;
+                color: white;
+            }
+            .research {
+                position: absolute;
+                top: 80px;
+                left: 20px;
+                color: white;
+            }
+            .environment {
+                position: absolute;
+                top: 130px;
+                left: 20px;
+                color: white;
+            }
+            .seventh {
+                border: 1px outset rgb(226, 226, 226);
+                height: 150px;
+                width: 300px;
+                position: absolute;
+                top: 40px;
+                left: 650px;
+                background-color: white;
+            }
+            .car {
+                position: absolute;
+                top: 20px;
+                right: 88px;
+            }
+            .uni {
+                position: absolute;
+                top: 40px;
+                right: 25px;
+            }
+            .btn4 {
+                position: absolute;
+                top: 75px;
+                right: 82px;
+            }
+            .div6 {
+                border: 1px outset rgb(226, 226, 226);
+                height: 80px;
+                width: 300px;
+                position: absolute;
+                text-align: right;
+                background-color: white;
+            }
+            .it {
+                position: absolute;
+                top: 25px;
+                right: 95px;
+            }
+            .div7 {
+                border: 1px outset rgb(226, 226, 226);
+                height: 80px;
+                width: 300px;
+                position: absolute;
+                text-align: right;
+                background-color: white;
+                left: 350px;
+            }
+            .me {
+                position: absolute;
+                top: 25px;
+                right: 130px;
+            }
+            .div8 {
+                border: 1px outset rgb(226, 226, 226);
+                height: 80px;
+                width: 300px;
+                position: absolute;
+                text-align: right;
+                background-color: white;
+                left: 700px;
+            }
+            .bf {
+                position: absolute;
+                top: 25px;
+                right: 60px;
+            }
+            .div9 {
+                border: 1px outset rgb(226, 226, 226);
+                height: 80px;
+                width: 300px;
+                position: absolute;
+                text-align: right;
+                background-color: white;
+                left: 0px;
+                top: 450px;
+            }
+            .so {
+                position: absolute;
+                top: 25px;
+                right: 100px;
+            }
+            .div10 {
+                border: 1px outset rgb(226, 226, 226);
+                height: 80px;
+                width: 300px;
+                position: absolute;
+                text-align: right;
+                background-color: white;
+                left: 350px;
+                top: 450px;
+            }
+            .smj {
+                position: absolute;
+                top: 25px;
+                right: 90px;
+            }
+            .div11 {
+                border: 1px outset rgb(226, 226, 226);
+                height: 80px;
+                width: 300px;
+                position: absolute;
+                text-align: right;
+                background-color: white;
+                left: 700px;
+                top: 450px;
+            }
+            .jobs {
+                position: absolute;
+                top: 25px;
+                right: 20px;
+            }
+            .allj {
+                position: absolute;
+                left: 190px;
+            }
+            .img1 {
+                position: absolute;
+                top: 400px;
+                right: 150px;
+            }
+            .img2 {
+                position: absolute;
+                top: 750px;
+                right: 150px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="first">
+            <h4 class="tjob">TimesJobs</h4>
+            <p class="jobt">Jobtuzz</p>
+            <p class="gjob">Gulf Jobs</p>
+            <p class="career">Career Insight</p>
+            <h4 class="no">10208358222</h4>
+            <p class="chat">Live Chat(10am to 6pm IST)</p>
+        </div>
+        <div class="sec">
+            <p class="login">Recrutter's Login</p>
+            <p class="buy">Buy Online</p>
+        </div>
+        <div>
+            <h1 class="title">TIMES<span style="color: red">JOBS</span></h1>
+            <div class="third">
+                <h3 class="que">Is your career affected by Covid-19?</h3>
+                <button class="btn1">YES</button>
+                <button class="btn2">NO</button>
+            </div>
+            <button class="log">LOGIN</button>
+            <button class="reg">REGISTER</button>
+        </div>
+        <div class="fourth">
+            <img src="i1.jpeg" width="1830px" height="150px" />
+            <div class="div1">
+                <input type="text" id="txtKeyword" class="skill" name="txtKwyword" placeholder="Enter Skills, Designation, etc" />
+            </div>
+            <div class="div2">
+                <input type="text" id="txtKeyword" class="loc" name="txtKwyword" placeholder="Enter Location" />
+            </div>
+            <div class="div3">
+                <select name="experience" class="exp" id="Experience">
+                    <option>Experience</option>
+                </select>
+            </div>
+            <div class="div4">
+                <button class="job">FIND JOBS</button>
+            </div>
+            <div class="fifth">
+                <div class="div5">
+                    <h5 class="times">NEW TO TIMESJOBS?</h5>
+                </div>
+                <button class="btn3">UPLOAD YOUR RESUME</button>
+            </div>
+        </div>
+        <div class="sixth">
+            <img src="i2.jpeg" width="1000px" height="250px" />
+            <h2 class="enable">ENABLING</h2>
+            <h2 class="research">RESEARCH</h2>
+            <h2 class="environment">ENVIRONMENT</h2>
+            <div class="seventh">
+                <p class="car">Careers with</p>
+                <h4 class="uni">Shobhit University</h4>
+                <p class="btn4"><span style="color: red">CLICK HERE</span></p>
+            </div>
+            <h4>BROWSE JOBS</h4>
+            <div class="div6">
+                <h5>Information Technology</h5>
+                <h5 class="it"><span style="color: red">85900 Jobs</span></h5>
+            </div>
+            <div class="div7">
+                <h5>Manufacturing/Engineering</h5>
+                <h5 class="me"><span style="color: red">45309 Jobs</span></h5>
+            </div>
+            <div class="div8">
+                <h5>Banking & Finance</h5>
+                <h5 class="bf"><span style="color: red">45309 Jobs</span></h5>
+            </div>
+            <div class="div9">
+                <h5>SCM & Operations/BPO</h5>
+                <h5 class="so"><span style="color: red">4866 Jobs</span></h5>
+            </div>
+            <div class="div10">
+                <h5>Sales $ Marketing Jobs</h5>
+                <h5 class="smj"><span style="color: red">32589 Jobs</span></h5>
+            </div>
+            <div class="div11">
+                <h5 class="allj">All Jobs</h5>
+                <h5 class="jobs"><span style="color: red">246445 Jobs</span></h5>
+            </div>
+        </div>
+        <div class="img1"><img src="i3.gif" width="450px" height="320px" /></div>
+        <div class="img2"><img src="g.png" width="450px" height="320px" /></div>
+    </body>
+</html>
