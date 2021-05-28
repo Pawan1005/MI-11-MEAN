@@ -1,0 +1,314 @@
+body {
+    font-family: "Baloo Bhaina 2", cursive;
+    margin: 0px;
+    padding: 0px;
+    background-color: #ecf0f4;
+}
+.navblock {
+    background-color: #ecf0f4;
+    display: block;
+    height: 49px;
+    border: 1px outset rgb(226, 226, 226);
+}
+.navblock2 {
+    background-color: #ecf0f4;
+    display: block;
+    height: 49px;
+    float: right;
+}
+.navbar,
+li {
+    display: inline-block;
+    font-size: auto;
+}
+.navbar,
+li,
+a {
+    color: black;
+    text-decoration: none;
+    padding: 1px 4px;
+}
+.block2 {
+    position: relative;
+    display: block;
+    right: -98px;
+}
+.block3 {
+    position: relative;
+    display: block;
+    right: -137px;
+    border: 2px solid tomato;
+    top: 41px;
+}
+.btn {
+    position: relative;
+    right: -976px;
+    top: -33px;
+    border: 2px solid red;
+    opacity: 20px;
+    background-color: white;
+    padding: 4px 10px;
+    margin: 13px 4px;
+    font-weight: 600;
+    color: red;
+}
+.btn2 {
+    position: relative;
+    top: -33px;
+    border: 2px solid red;
+    background-color: white;
+    padding: 4px 10px;
+    margin: 13px 4px;
+    font-weight: 600;
+    color: red;
+    right: 22px;
+    left: 976px;
+}
+.img {
+    position: relative;
+    right: 88px;
+    top: 9px;
+}
+.img2 {
+    position: absolute;
+    width: 800px;
+    height: 150px;
+    top: 260px;
+    padding: 12px 10px;
+    left: -1px;
+}
+.img3 {
+    top: -78px;
+    position: relative;
+    float: left;
+    left: 925px;
+    height: 32px;
+    width: 40px;
+}
+.img4 {
+    position: absolute;
+    width: 360px;
+    height: 199px;
+    top: 260px;
+    padding: 12px 10px;
+    left: 870px;
+}
+.img5 {
+    position: relative;
+    top: -61px;
+    left: -2px;
+    width: 1277px;
+    height: 141px;
+}
+.block13 {
+    border: 1px outset rgb(226, 226, 226);
+    height: 50px;
+    width: 650px;
+    position: absolute;
+    top: 155px;
+    left: 32px;
+    background-color: white;
+}
+.inputblock1 {
+    position: absolute;
+    width: 97%;
+    border: none;
+    top: 15px;
+    left: 20px;
+    font-size: large;
+}
+.block14 {
+    border: 1px outset rgb(226, 226, 226);
+    height: 50px;
+    width: 400px;
+    position: absolute;
+    top: 155px;
+    left: 377px;
+    background-color: white;
+}
+.inputblock2 {
+    position: absolute;
+    width: 97%;
+    border: none;
+    top: 15px;
+    left: 20px;
+    font-size: large;
+}
+.block15 {
+    border: 1px outset rgb(226, 226, 226);
+    height: 50px;
+    width: 250px;
+    position: absolute;
+    top: 155px;
+    left: 636px;
+    background-color: white;
+}
+.inputblock3 {
+    position: absolute;
+    width: 70%;
+    border: none;
+    top: 15px;
+    left: 20px;
+    color: gray;
+    font-size: large;
+}
+.block16 {
+    border: none;
+    height: 50px;
+    width: 150px;
+    position: absolute;
+    top: 155px;
+    left: 848px;
+    background-color: red;
+}
+
+.inputblock4 {
+    background-color: red;
+    top: 11px;
+    height: 52px;
+    line-height: 46px;
+    font-size: 16px;
+    width: 100%;
+    color: white;
+}
+.uploadresume {
+    position: absolute;
+    right: 35px;
+    top: 149px;
+    background: white;
+    width: 18%;
+    height: 69px;
+    font-size: 10px;
+}
+.h1 {
+    position: absolute;
+    top: -10px;
+    right: 33px;
+    color: rgb(28, 182, 209);
+    font-size: 10px;
+}
+.h4 {
+    position: absolute;
+    top: 436px;
+    left: 17px;
+}
+.uploadicon {
+    position: absolute;
+    height: 59px;
+    width: 47px;
+    top: 10px;
+    left: 3px;
+}
+.uploadbtn {
+    position: absolute;
+    border: 2px solid blue;
+    background-color: white;
+    width: 175px;
+    height: 27px;
+    top: 27px;
+    font-size: 12px;
+    left: 46px;
+    color: blue;
+}
+.job1 {
+    border: 1px outset rgb(226, 226, 226);
+    height: 80px;
+    width: 253px;
+    position: absolute;
+    text-align: center;
+    background-color: white;
+    top: 500px;
+    left: 0px;
+}
+.job2 {
+    position: absolute;
+    top: 25px;
+    right: 95px;
+}
+.job3 {
+    top: 500px;
+    border: 1px outset rgb(226, 226, 226);
+    height: 80px;
+    width: 253px;
+    position: absolute;
+    text-align: center;
+    background-color: white;
+    left: 280px;
+}
+.job4 {
+    position: absolute;
+    top: 25px;
+    right: 130px;
+}
+.job5 {
+    border: 1px outset rgb(226, 226, 226);
+    height: 80px;
+    width: 253px;
+    position: absolute;
+    text-align: center;
+    background-color: white;
+    left: 557px;
+    top: 500px;
+}
+.job6 {
+    position: absolute;
+    top: 25px;
+    right: 60px;
+}
+.job7 {
+    border: 1px outset rgb(226, 226, 226);
+    height: 80px;
+    width: 253px;
+    position: absolute;
+    text-align: center;
+    background-color: white;
+    left: 0px;
+    top: 595px;
+}
+.job8 {
+    position: absolute;
+    top: 25px;
+    right: 100px;
+}
+.job9 {
+    border: 1px outset rgb(226, 226, 226);
+    height: 80px;
+    width: 253px;
+    position: absolute;
+    text-align: center;
+    background-color: white;
+    left: 276px;
+    top: 595px;
+}
+.job10 {
+    position: absolute;
+    top: 25px;
+    right: 90px;
+}
+.job11 {
+    border: 1px outset rgb(226, 226, 226);
+    height: 80px;
+    width: 253px;
+    position: absolute;
+    text-align: center;
+    background-color: white;
+    left: 556px;
+    top: 598px;
+}
+.job12 {
+    position: absolute;
+    text-align: center;
+    top: 25px;
+    left: 104px;
+}
+.job13 {
+    position: absolute;
+    left: 110px;
+}
+.img6 {
+    position: absolute;
+    height: 231px;
+    width: 362px;
+    left: 879px;
+    top: 490px;
+}
