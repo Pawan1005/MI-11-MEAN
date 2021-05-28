@@ -1,11 +1,11 @@
-.name{
+.name {
     position: absolute;
     width: 269px;
     height: 41px;
     left: 0px;
     top: 16px;
 }
-.allert{
+.allert {
     position: absolute;
     width: 441px;
     height: 49px;
@@ -15,21 +15,21 @@
 li{
     display: inline;
 }
-.background{
+.background {
     position: absolute;
     width: 1440px;
     height: 152px;
     left: 0px;
     top: 90px;
 }
-.inner{
+.inner {
     position: absolute;
     width: 1082px;
     height: 53px;
     left: 137px;
     top: 125px;
 }
-input[type=text]{   
+input[type=text] {   
 width: 30%;   
 margin: 8px 0;  
 padding: 8px 20px;   
@@ -37,21 +37,21 @@ display: 41px;
 left: 70px;
 top: 426px;
 }
-.jobs-list1{
+.jobs-list1 {
 position: absolute;
 width: 906px;
 height: 91px;
 left: 0px;
 top: 489px;
 }
-.jobs-list2{
+.jobs-list2 {
 position: absolute;
 width: 906px;
 height: 91px;
 left: 0px;
 top: 589px;
 }
-.state{
+.state {
 position: absolute;
 width: 435px;
 height: 296px;
@@ -61,33 +61,33 @@ display: inline-block;
 border: 2px solid black;   
 box-sizing: border-box;   
 }
-.inpu, input[type=text]{
+.inpu, input[type=text] {
 width: 40%;   
 display: inline-block;     
 box-sizing: border-box;   
 }
-.job{
+.job {
 position: absolute;
 width: 123px;
 height: 53px;
 left: 950px;
 top: 125px;
 }
-.item{
+.item {
 position: absolute;
 width: 847px;
 height: 125px;
 left: 42px;
 top: 275px;
 }
-.display{
+.display {
 position: absolute;
 width: 435px;
 height: 227px;
 left: 922px;
 top: 275px;
 }
-h1{
+h1 {
 position: absolute;
 width: 396px;
 height: 125px;
