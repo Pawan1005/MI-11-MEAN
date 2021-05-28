@@ -1,0 +1,299 @@
+* {
+    box-sizing: inherit;
+}
+body {
+    font-weight: 400;
+    font-size: 12px;
+    color: #000;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul {
+    margin: auto;
+}
+header {
+    display: block;
+}
+.main-header,
+.top-header {
+    background: #fff;
+}
+.main-tj-nav {
+    float: right;
+    margin: 0;
+}
+.main-tj-nav > li {
+    float: left;
+    position: relative;
+}
+.top-header ul.rec-zone-main {
+    border-left: 1px solid #d0d3d8;
+    margin: -6px 0;
+    padding: 6px 0;
+    margin-left: 20px;
+}
+.top-header ul > li,
+.top-link {
+    float: left;
+}
+.top-contact li {
+    margin-left: 20px;
+}
+.top-contact {
+    float: right;
+    font-weight: 500;
+    font-size: 12px;
+}
+.top-header ul {
+    margin: 0;
+}
+.top-header {
+    border-bottom: 1px solid #e3e8ed;
+    padding: 6px 0;
+    font-size: 11px;
+    font-weight: 500;
+    height: 31px;
+}
+.top-link li {
+    margin-right: 20px;
+}
+.top-link li a.link-active {
+    color: rgba(0, 0, 0, 1);
+    font-weight: 500;
+}
+.top-link li a {
+    color: rgba(0, 0, 0, 0.6);
+}
+.top-tj-logo {
+    padding: 13px 0;
+    display: inline-block;
+}
+
+.login-reg a {
+    padding: 4px 10px;
+    margin: 13px 4px;
+    font-weight: 600;
+}
+.login-reg a {
+    border: 1px solid #f52f2f;
+    box-sizing: border-box;
+    color: #f52f2f;
+    display: inline-block;
+    text-transform: uppercase;
+}
+a {
+    color: #01439f;
+    text-decoration: none;
+    background-color: transparent;
+    box-sizing: inherit;
+}
+.ubility-wrap {
+    width: 1166px;
+    position: relative;
+    margin: auto;
+}
+.open-search {
+    height: 180px;
+    width: 100%;
+    background-image: url("bg1.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+select.browser-default {
+    display: block;
+}
+ul {
+    padding-left: 0;
+    list-style-type: none;
+}
+ul:not(.browser-default) {
+    padding-left: 0;
+    list-style-type: none;
+}
+.usability-srch {
+    width: 100%;
+    z-index: 101;
+    border-radius: 2px 2px 0 0;
+    margin: auto;
+    box-sizing: border-box;
+}
+.usability-srch .btn {
+    height: 46px;
+    line-height: 46px;
+    font-size: 16px;
+    width: 16%;
+}
+.usability-srch select {
+    margin-right: 10px;
+    padding: 0 10px 0 17px;
+    width: 100%;
+    background-color: transparent;
+    border-radius: 0;
+    border: none;
+}
+.usability-srch input[type="text"] {
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 0;
+    border: none;
+}
+.usability-srch input[type="text"],
+.usability-srch select {
+    height: 45px;
+    font-size: 14px;
+    color: #7d7d7d;
+    font-weight: 400;
+}
+.clearfix {
+    clear: both;
+}
+.open-search .usability-srch {
+    width: 1166px;
+    margin: auto;
+    bottom: 135px;
+    position: absolute;
+    margin-left: 200px;
+}
+.open-search .usability-srch .main-srch-form {
+    width: 72%;
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+.usability-srch .auto-suggest-blk {
+    width: 40%;
+    border-right: solid 1px #c8c7c7;
+    box-sizing: border-box;
+    float: left;
+}
+.usability-srch .auto-suggest-blk.location-srch {
+    width: 30%;
+}
+.usability-srch .auto-suggest-blk.location-srch input {
+    border-radius: 0;
+}
+.srch-select {
+    position: relative;
+    float: left;
+    width: 14%;
+    background-color: rgb(255, 255, 255);
+    background-position-x: right 10px;
+    background-position-y: center;
+    background-repeat: no-repeat;
+    background-attachment: scroll;
+    background-size: auto;
+    background-origin: padding-box;
+    background-clip: border-box;
+}
+button,
+input,
+select {
+    color: inherit;
+    margin: 0;
+}
+button {
+    border: none;
+    text-align: center;
+    color: #fff;
+    background-color: #f24141;
+    height: 45px;
+    font-size: 15px;
+}
+.usability-srch .srch-top-right {
+    box-shadow: 0 0 13px 0 rgba(0, 0, 0, 0.24);
+    background: #fff;
+    padding: 6px 10px;
+    width: 72%;
+    box-sizing: border-box;
+    height: 75px;
+    font-size: 10px;
+    font-weight: 600;
+    position: absolute;
+    right: 100px;
+    top: 40px;
+    color: #79bafe;
+    margin-top: 5px;
+}
+.usability-srch .srch-top-right.upload-res-uni {
+    padding-top: 13px;
+    padding-right: 20px;
+    padding-bottom: 13px;
+    padding-left: 20px;
+    position: absolute;
+    right: 100px;
+    top: 40px;
+    background: #fff;
+    width: 22%;
+    height: 75px;
+    font-size: 10px;
+}
+.usability-srch .srch-top-right.upload-res-uni {
+    font-size: 10px;
+}
+h5 {
+    font-size: 10px;
+    font-weight: 600;
+    color: #79bafe;
+}
+.upload-res-txt .upload-icon {
+    width: 41px;
+    height: 41px;
+    float: left;
+    background-image: url(resume.png);
+    background-position: -126px top;
+    margin-top: 5px;
+    margin-right: 15px;
+}
+.upload-res-input {
+    float: left;
+    width: 400px;
+}
+.srch-top-right {
+    background-color: #fff;
+    margin-top: 50px;
+    margin-right: 30px;
+    margin-bottom: 50px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+.ad {
+    margin-top: 10px;
+}
+.col-3 {
+    width: 100%;
+    text-align: center;
+    block-size: 30px;
+    width: 20px;
+    height: 30px;
+    padding-top: 2px;
+    padding-bottom: 8px;
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+    border: 1px solid grey;
+    background-color: whitesmoke;
+    box-shadow: rgba(0, 0, 0, 0.8);
+}
+.car {
+    margin-top: 10px;
+    margin-left: 0px;
+}
+.col-4 {
+    position: relative;
+}
+.row {
+    width: 900px;
+}
+.tab-sub-text {
+    color: red;
+}
+
