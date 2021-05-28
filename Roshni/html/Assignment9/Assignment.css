@@ -149,12 +149,10 @@ img {
     display: table;
     clear: both;
 }
-.media 
-.column {
-        width: 100%;
-        display: block;
-        max-width: 600px;
-    
+.media .column {
+    width: 100%;
+    display: block;
+    max-width: 600px;
 }
 .leftcol {
     width: 70%;
