@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Question 2</title>
+        <link rel="stylesheet" href="Styles.css" />
+    </head>
+    <body>
+        <h1>MI-11 Intern HTML Assesment</h1>
+        <br />
+        <hr />
+        <h2><i>Personal Details</i></h2>
+        <form>
+            <label for="fname"><b>First Name:</b></label>
+            <input type="text" id="fname" name="fname" placeholder="First name" /><br /><br />
+            <label for="lname"><b>Last Name:</b></label>
+            <input type="text" id="lname" name="lname" placeholder="Last name" /><br /><br />
+            <lable for="gender"><b>Gender:</b></lable>
+            <input type="radio" id="Male" name="gender" value="male" />
+            <label for="male">Male</label>
+            <input type="radio" id="Female" name="gender" value="Female" />
+            <lable for="Female">Female</lable>
+            <input type="radio" id="other" name="gender" value="other" />
+            <lable for="other">other</lable><br /><br />
+            <label for="age"><b>Age: </b></label>
+            <input type="radio" id="age" name="age" value="less than 18" />
+            <label for="age">less than 18</label>
+            <input type="radio" id="age" name="=age" value="checked" />
+            <label for="age">18-25</label>
+            <input type="radio" id="age" name="=age" value="26-40" />
+            <label for="age">26-40</label><br />
+            <h2><i>Professional Details</i></h2>
+            <fieldset>
+                <legend>Academics Details</legend>
+                <label for="skill"><b>Skill Set:</b></label>
+                <input type="checkbox" id="html" name="=html" value="html" />
+                <label for="age">HTML</label>
+                <input type="checkbox" id="javascript" name="=javascript" value="javascript" />
+                <label for="skill">Java Script</label>
+                <input type="checkbox" id="java" name="=java" value="java" />
+                <label for="age">Java</label>
+                <input type="checkbox" id="skillset" name="oracle" value="oracle" />
+                <label for="age">Oracle</label><br /><br /><br />
+                <label for="highest qualification"><b>Highest Qualification:</b></label>
+                <select name="qualification" id="qualification">
+                    <option value="diploma">Diploma in Computer Science</option>
+                    <option value="science">Science Graduate</option>
+                    <option value="Bachelor in Engg">Bachelor in Engg</option>
+                    <option value="Masters">Masters in Computer Science</option>
+                    <option value="Masters">Masters in Engg</option>
+                    <option value="other">Other</option>
+                </select><br /><br /><br />
+                <label for="University"><b>University</b></label>
+                <input list="browsers" name="browser" />
+                <datalist id="browsers">
+                    <option value="Software Training"></option>
+                    <option value="Networking"></option>
+                    <option value="Management"></option>
+                    <option value="Marketing"></option>
+                </datalist><br /><br />
+                <label for="Area of Expertise"><b>Area of Expertise</b>&nbsp;</label>
+                <select name="area of Expertise" id="Area of Expertise" multiple>
+                    <option value="software">Software</option>
+                    <option value="training">Training</option>
+                    <option value="Networking">Networking</option>
+                    <option value="management">Management</option>
+                    <option value="Marketing">Marketing</option>
+                </select>
+            </fieldset>
+            <fieldset>
+                <legend>Resume</legend>
+                <label for="upload resume"><b>Upload Resume:</b>&nbsp;&nbsp;&nbsp;</label>
+                <input type="file" id="myfile" name="myfile" /><br /><br /><br />
+                <label for="comment"><b>Comments</b></label>&nbsp;&nbsp;
+                <canvas id="dddsgjh" style="border: 1px solid black"></canvas>
+            </fieldset>
+            <div>
+                <input type="button" id="submit" value="Submit" />
+            </div>
+        </form>
+    </body>
+</html>

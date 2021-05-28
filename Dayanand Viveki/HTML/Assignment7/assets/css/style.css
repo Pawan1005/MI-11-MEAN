@@ -1,0 +1,95 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+.banner-height-35 {
+    height: 35rem;
+}
+.banner-height-55 {
+    height: 55rem;
+}
+.banner-height-65 {
+    height: 65rem;
+}
+.float-none {
+    float: none;
+}
+.float-left {
+    float: left;
+}
+.float-right {
+    float: right;
+}
+.padding {
+    padding: 10px;
+}
+th, td {
+    padding: 3px 10px;
+    border-bottom: 5px solid black;
+    border-top: 5px solid black;
+    border-radius: 20px;
+}
+th, .border-left {
+    border-left: 5px solid black;
+}
+td, .border-right {
+    border-right: 5px solid black;
+}
+.th-width {
+    width: 20px;
+}
+.td-width-70 {
+    width: 70rem;
+}
+body table th {
+    width: 25rem;
+}
+body table td {
+    width: 20rem;
+}
+body table tr { 
+    border-bottom: 5px solid black;
+}
+body {
+    font-size: 20px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 5%;
+}
+body .banner {
+    background-color: gray;
+    border: 2px solid black;
+    border-radius: 30px;
+    text-align: center;
+}
+body .banner input, body .banner textarea {
+    background-color:none;
+    margin: 10px;
+    border-bottom-right-radius: 20px;
+    border-top-left-radius: 20px;
+    text-align: center;
+    padding: 15px 10px;
+    width: 320px;
+    font-size: 20px;
+}
+body table {
+    margin: auto;
+}
+body .banner a {
+    height: 40px;
+    border-radius: 20PX;
+    background-color: white;
+    padding: 10px 15px 5px 15px;
+    text-decoration: none;;
+    color: black;
+    font-size: 20;
+    font-weight: bold;
+}
+body table #gender, body table input[tyep="radio"]{
+    margin: 0px;
+    padding: 0px;
+    width: 40px;
+}
+body table td{
+    font-size: 18px;
+    font-weight: bold;
+}

@@ -1,0 +1,23 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    background-color: aqua;
+}
+.revers {
+    flex-direction: row-reverse;
+}
+.main-banner{
+    display: flex;
+}
+.main-banner img{
+    height: 350px;
+    width: 400px;
+}
+.main-banner img, body .main-banner .para{
+    padding: 30px;
+    justify-content: center;
+    text-align: justify;
+}
