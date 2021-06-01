@@ -1,0 +1,33 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+div.backg {
+    background-color: #e6ecab;
+    height: auto;
+    width: 900px;
+    display: flex;
+    padding: 10px;
+}
+.Image {
+    height: 200px;
+    width: 200px;
+    padding: 25px;
+}
+.para1 {
+    padding-left: 48px;
+    padding-bottom: 17px;
+}
+.para2 {
+    padding: 44px;
+    margin-left: -130px;
+    padding-right: 60px;
+}
+#Image3 {
+    margin-left: 130px;
+    padding-top: 18px;
+}
+.para3 {
+    margin-left: -90px;
+    padding-right: 60px;
+}
