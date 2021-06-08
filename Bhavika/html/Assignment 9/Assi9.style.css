@@ -4,15 +4,6 @@ body {
     padding: 0px;
     background-color: #ecf0f4;
 }
-
-/* .block {
-    display: block;
-    width: 20px;
-    background-color: teal;
-}
- .block ul { 
-    display: inline-block; 
-     text-decoration: none; */
 .tut {
     background-color: #ecf0f4;
     display: block;
@@ -39,10 +30,6 @@ a {
 .tut2 {
     float: right;
 }
-/* .tut3 {
-    position: fixed;
-    right: 804px; */
-
 .block2 {
     position: relative;
     display: block;
@@ -320,70 +307,6 @@ a {
     position: absolute;
     left: 110px;
 }
-
-/* .consultantzone {
-    top: 499px;
-    left: 880px;
-    position: absolute;
-    height: 235px;
-    width: 362px;
-    background-color: #fff9ee;
-    color: 1px solid #ead0a1;
-}
-.consultant {
-    top: -8px;
-    position: absolute;
-    left: 20px;
-}
-.mumbai {
-    position: absolute;
-    top: 67px;
-    left: 11px;
-}
-.chennai {
-    position: absolute;
-    top: 63px;
-    left: 92px;
-}
-.pune {
-    position: absolute;
-    top: 63px;
-    left: 185px;
-}
-.bangloare {
-    position: absolute;
-    top: 63px;
-    left: 248px;
-}
-.delhi {
-    position: absolute;
-    top: 139px;
-    left: 186px;
-}
-.ahemdabad {
-    position: absolute;
-    top: 139px;
-    left: 246px;
-}
-.kolkata {
-    position: absolute;
-    top: 139px;
-    left: 18px;
-}
-.hydrabad {
-    position: absolute;
-    top: 139px;
-    left: 93px;
-}
-.viewbtn {
-    position: absolute;
-    top: 200px;
-    left: 26px;
-    height: 33px;
-    width: 120px;
-    background-color: purple;
-    color: white;
-} */
 .img6 {
     position: absolute;
     height: 231px;
