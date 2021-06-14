@@ -1,0 +1,167 @@
+.header-right{
+    display: inline-block;
+    text-align: center;
+}   
+.btn-yes {
+    background: #f24141;
+    border: #f24141 solid 1px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 6px 14px;
+    margin: 0 5px 0 20px;
+    size: 13px;
+}
+.btn-no {
+    border: #000f3f solid 1px;
+    border-radius: 5px;
+    padding: 6px 14px;
+    text-transform: uppercase;
+    color: #000f3f;
+    font-size: 13px;
+}          
+.covid{
+    text-align: center;
+}          
+span.box {
+    display: inline-block;
+    width: 250px;
+    height: 50px;
+    padding: 5px;
+    border: 1px solid blue;    
+    background-color: rgb(210, 230, 238); 
+    margin: 15px;
+    box-shadow: whitesmoke;
+}
+.images-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    height: 190px;
+    width: 100%;
+}
+.back-image1 {
+    height: 120px;
+    width: 60%;
+}
+.back-image2 {
+    height: 190px;
+    background-repeat: no-repeat;
+    margin-left: 17px;
+}
+.login-register {
+    align-items: center;
+    align-content: center;
+}
+.btn1 {
+    border: 1px solid #f52f2f;
+    box-sizing: border-box;
+    color: #f52f2f;
+    background-color: white;
+    padding: 7px 10px;
+    margin: 13px 4px;
+    font-weight: 600;
+    float: right;
+}
+.btn2 {
+    border: 1px solid #f52f2f;
+    box-sizing: border-box;
+    color: #f52f2f;
+    background-color: white;
+    padding: 7px 10px;
+    margin: 13px 4px;
+    font-weight: 600;
+    float: right;
+}
+.first-background {
+    display: flex;
+    background-image: url("img/open_search.png");
+    justify-content: center;
+    align-items: center;
+    height: 154px;
+    background-size: cover;
+}
+.search-box {
+    display: flex;
+    height: 45px;
+    width: 62%;
+}
+.skil-input {
+    border: none;
+    width: 90%;
+    padding-left: 12px;
+}
+.location-input {
+    width: 67%;
+    border: none;
+    border-right: solid 1px #c8c7c7;
+    border-left: solid 1px #c8c7c7;
+    box-sizing: border-box;
+    float: left;
+    padding-left: 12px;
+}
+.experience-select {
+    background-color: white;
+    border: none;
+    color: rgba(0, 0, 0, 0.747);
+    width: 30%;
+    padding-left: 12px;
+}
+.btn3 {
+    border: none;
+    height: 45px;
+    line-height: 49px;
+    font-size: 16px;
+    width: 40%;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+.upload-resume-box {
+    padding: 3px 20px;
+    background: #fff;
+    width: 18%;
+    height: 65px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 19px;
+    margin-top: 7px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.upload-file {
+    margin-top: 9px;
+}
+.upload-icon {
+    width: 41px;
+    height: 41px;
+    float: left;
+    background-image: url("img/sprite.png");
+    background-position: -126px top;
+    margin-top: 5px;
+    margin-right: 15px;
+}
+.heading5 {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    color: skyblue;
+}
+.upload-res-btn {
+    width: 170px;
+    height: 26px;
+    display: block;
+    overflow: hidden;
+    border: 1px solid #01439f;
+    color: #01439f;
+    text-transform: uppercase;
+    line-height: 26px;
+    text-align: center;
+}
+.btn-input {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
