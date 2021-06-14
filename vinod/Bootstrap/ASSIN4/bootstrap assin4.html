@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+        <title>Document</title>
+        <style>
+              #cards_landscape_wrap-2 {
+                  text-align: center;
+                  background: #f7f7f7;
+              }
+              #cards_landscape_wrap-2 .container {
+                  padding-top: 80px;
+                  padding-bottom: 100px;
+              }
+              #cards_landscape_wrap-2 a {
+                  text-decoration: none;
+                  outline: none;
+              }
+              #cards_landscape_wrap-2 .card-flyer {
+                  border-radius: 5px;
+              }
+              #cards_landscape_wrap-2 .card-flyer .image-box {
+                  background: #ffffff;
+                  overflow: hidden;
+                  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.5);
+                  border-radius: 5px;
+              }
+              #cards_landscape_wrap-2 .card-flyer .image-box img {
+                  -webkit-transition: all 0.9s ease;
+                  -moz-transition: all 0.9s ease;
+                  -o-transition: all 0.9s ease;
+                  -ms-transition: all 0.9s ease;
+                  width: 100%;
+                  height: 200px;
+              }
+              #cards_landscape_wrap-2 .card-flyer:hover .image-box img {
+                  opacity: 0.7;
+                  -webkit-transform: scale(1.15);
+                  -moz-transform: scale(1.15);
+                  -ms-transform: scale(1.15);
+                  -o-transform: scale(1.15);
+                  transform: scale(1.15);
+              }
+              #cards_landscape_wrap-2 .card-flyer .text-box {
+                  text-align: center;
+              }
+              #cards_landscape_wrap-2 .card-flyer .text-box .text-container {
+                  padding: 30px 18px;
+              }
+              #cards_landscape_wrap-2 .card-flyer {
+                  background: #ffffff;
+                  margin-top: 50px;
+                  -webkit-transition: all 0.2s ease-in;
+                  -moz-transition: all 0.2s ease-in;
+                  -ms-transition: all 0.2s ease-in;
+                  -o-transition: all 0.2s ease-in;
+                  transition: all 0.2s ease-in;
+                  box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.4);
+              }
+              #cards_landscape_wrap-2 .card-flyer:hover {
+                  background: #fff;
+                  box-shadow: 0px 15px 26px rgba(0, 0, 0, 0.5);
+                  -webkit-transition: all 0.2s ease-in;
+                  -moz-transition: all 0.2s ease-in;
+                  -ms-transition: all 0.2s ease-in;
+                  -o-transition: all 0.2s ease-in;
+                  transition: all 0.2s ease-in;
+                  margin-top: 50px;
+              }
+              #cards_landscape_wrap-2 .card-flyer .text-box p {
+                  margin-top: 10px;
+                  margin-bottom: 0px;
+                  padding-bottom: 0px;
+                  font-size: 14px;
+                  letter-spacing: 1px;
+                  color: #000000;
+              }
+              #cards_landscape_wrap-2 .card-flyer .text-box h6 {
+                  margin-top: 0px;
+                  margin-bottom: 4px;
+                  font-size: 18px;
+                  font-weight: bold;
+                  text-transform: uppercase;
+                  font-family: "Roboto Black", sans-serif;
+                  letter-spacing: 1px;
+                  color: #00acc1;
+              }
+              .row {
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                margin-right: -304px;
+               margin-left: 106px;
+               top: 20px;
+            }
+              .btn {
+                  position: absolute;
+                  top: 207px;
+                  left: 22px;
+                  height: 30px;
+                  width: 99px;
+              }
+              .aa1 {
+                  position: absolute;
+                  top: 423px;
+                  left: 159px;
+                  border: aliceblue;
+              }
+              .aa {
+                  position: absolute;
+                  top: 422px;
+                  left: 158px;
+              }
+              .block1 {
+                  top: 132px;
+                  left: 10px;
+                  margin-top: -6px;
+                  height: 90px;
+              }
+              .btn1 {
+                  position: absolute;
+                  top: -136px;
+                  left: 424px;
+                  height: 30px;
+                  width: 99px;
+              }
+              .btn2 {
+                  position: absolute;
+                  top: -136px;
+                  left: 527px;
+                  height: 30px;
+                  width: 99px;
+              }
+              .container{
+                  top: 10px;
+                  left: 10px;
+                  height: 332px;
+                  width: 1392px;
+              }
+              p {
+               margin-top: -46px;
+               margin-bottom: 2rem;
+}
+              .container{
+                  position: absolute;
+                  top: 22px;
+
+              }
+        </style>
+    </head>
+    <body>
+        <!--<div class="card mb-3">
+            <img class="card-img-top" src="zz.jpeg" alt="Card image cap" height="200px" width="200px" />
+
+            <div class="card-body">
+                <h5 class="card-title"></h5>
+                <p class="card-text"></p>
+                <p class="card-text"><small class="text-muted"></small></p>
+            </div>
+        </div>-->
+        <!--- <div class="container">
+            <div class="card img-fluid" style="width: 200px height: 200px;">
+                <img class="card-img-top" src="zz.jpeg" alt="Card image" style="width: 200px height: 200px;" />
+                <div class="card-img-overlay">
+                    <h4 class="card-title"></h4>
+                    <center><p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p></center>
+                    <div class="btn1">
+                        <a href="#" class="btn btn-primary">click</a>
+                    </div>
+                    <div class="btn2">
+                        <a href="#" class="btn btn-secondary">click</a>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <!--<div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-8 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img class="card-img" src="zz.jpeg" alt="Bologna" width="1400px" height="300px" />
+                        <div class="card-img-overlay text-white d-flex flex-column justify-content-center">
+                            <h4 class="card-title">Bologna</h4>
+                            <h6 class="card-subtitle mb-2">Emilia-Romagna Region, Italy</h6>
+                            <p class="card-text">
+                                It is the seventh most populous city in Italy, at the heart of a metropolitan area of about one million people.
+                            </p>
+                            <div class="link d-flex">
+                                <a href="#" class="card-link text-warning">Read More</a>
+                                <a href="#" class="card-link text-warning">Book a Trip</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <div class="block1">
+            <div
+                class="bg-image p-5 text-center shadow-1-strong rounded mb-5 text-white"
+                style="background-image: url('https://mdbcdn.b-cdn.net/img/new/slides/003.jpg')"
+            >
+                <h1 class="mb-4 h2"></h1>
+
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit.</p>
+            </div>
+        </div>
+            <div class="btn1">
+                <a href="#" class="btn btn-primary">click</a>
+            </div>
+            <div class="btn2">
+                <a href="#" class="btn btn-secondary">click</a>
+            </div>
+        
+
+        
+            <div id="cards_landscape_wrap-2">
+                <div class="container " >
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <a href="">
+                                <div class="card-flyer">
+                                    <div class="text-box">
+                                        <div class="image-box">
+                                            <img src="https://cdn.pixabay.com/photo/2018/03/30/15/11/deer-3275594_960_720.jpg" alt="" />
+                                        </div>
+                                        <div class="text-container">
+                                            <h6>Title 01</h6>
+                                            <p>
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                                                standard dummy text ever since the 1500s.
+                                            </p>
+                                            <div class="btn">
+                                                <button type="button" class="btn btn-outline-primary">read more</button>
+                                            </div>
+                                            <div class="aa1">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="16"
+                                                    height="16"
+                                                    fill="currentColor"
+                                                    class="bi bi-heart"
+                                                    viewBox="0 0 16 16"
+                                                >
+                                                    <path
+                                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
+                                                    />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <a href="">
+                                <div class="card-flyer">
+                                    <div class="text-box">
+                                        <div class="image-box">
+                                            <img src="https://cdn.pixabay.com/photo/2018/04/09/19/55/low-poly-3305284_960_720.jpg" alt="" />
+                                        </div>
+                                        <div class="text-container">
+                                            <h6>Title 02</h6>
+                                            <p>
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                                                standard dummy text ever since the 1500s.
+                                            </p>
+                                            <div class="btn">
+                                                <button type="button" class="btn btn-outline-primary">read more</button>
+                                            </div>
+                                            <div class="aa">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="16"
+                                                    height="16"
+                                                    fill="currentColor"
+                                                    class="bi bi-heart"
+                                                    viewBox="0 0 16 16"
+                                                >
+                                                    <path
+                                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
+                                                    />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xs-12 col-sm-6 col-md-3 col-lg-3">
+                            <a href="">
+                                <div class="card-flyer">
+                                    <div class="text-box">
+                                        <div class="image-box">
+                                            <img src="https://cdn.pixabay.com/photo/2018/04/06/13/46/poly-3295856_960_720.png" alt="" />
+                                        </div>
+
+                                        <div class="text-container">
+                                            <h6>Title 03</h6>
+                                            <p>
+                                                Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's
+                                                standard dummy text ever since the 1500s.
+                                            </p>
+                                            <div class="btn">
+                                                <button type="button" class="btn btn-outline-primary">read more</button>
+                                            </div>
+                                            <div class="aa">
+                                                <svg
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    width="16"
+                                                    height="16"
+                                                    fill="currentColor"
+                                                    class="bi bi-heart"
+                                                    viewBox="0 0 16 16"
+                                                >
+                                                    <path
+                                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
+                                                    />
+                                                </svg>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script
+            src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
