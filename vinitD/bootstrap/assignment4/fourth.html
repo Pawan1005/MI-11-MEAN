@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Card-hover</title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+            crossorigin="anonymous"
+        />
+        <style>
+            .container .card img{
+                opacity: 0.5;
+            }
+            .container .card img:hover{
+                opacity: 1;
+                box-shadow: 5px 5px 10px black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <div class="card">
+                <img src="LAND.jpg" class="card-img" alt="land" height="150px" />
+                <div class="card-img-overlay text-center">
+                    <div class="card-text">Lorem ipsum dolor sit amet.</div>
+                    <button class="btn btn-primary mt-3">Click</button>
+                    <button class="btn btn-secondary mt-3">Click</button>
+                </div>
+            </div>
+        </div>
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-4">
+                    <div class="card">
+                        <img src="SUM.jpeg" alt="sum" class="card-img" height="200px" />
+                        <div class="card-body">
+                            <div class="catd-title">SUMMER</div>
+                            <div class="card-text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Temporibus, voluptas reiciendis corporis asperiores facere
+                                totam quia sed dicta ab nesciunt. Beatae veritatis dolores,
+                                quisquam voluptate quaerat accusamus quos eius maiores!
+                            </div>
+                            <button class="btn btn-outline-primary mt-2">Read More</button>
+                            <button class="btn btn-outline-danger mt-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" fill="red">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
+                                    />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <img src="WIN.jpeg" alt="win" class="card-img" height="200px" />
+                        <div class="card-body">
+                            <div class="catd-title">WINTER</div>
+                            <div class="card-text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Temporibus, voluptas reiciendis corporis asperiores facere
+                                totam quia sed dicta ab nesciunt. Beatae veritatis dolores,
+                                quisquam voluptate quaerat accusamus quos eius maiores!
+                            </div>
+                            <button class="btn btn-outline-primary mt-2">Read More</button>
+                            <button class="btn btn-outline-danger mt-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" fill="red">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
+                                    />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="card">
+                        <img src="SPI.jpg" alt="spi" class="card-img" height="200px" />
+                        <div class="card-body">
+                            <div class="catd-title">SPRING</div>
+                            <div class="card-text">
+                                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                                Temporibus, voluptas reiciendis corporis asperiores facere
+                                totam quia sed dicta ab nesciunt. Beatae veritatis dolores,
+                                quisquam voluptate quaerat accusamus quos eius maiores!
+                            </div>
+                            <button class="btn btn-outline-primary mt-2">Read More</button>
+                            <button class="btn btn-outline-danger mt-2">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="15" fill="red">
+                                    <path
+                                        d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01L8 2.748zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143c.06.055.119.112.176.171a3.12 3.12 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15z"
+                                    />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script
+        src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+            integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+            integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
