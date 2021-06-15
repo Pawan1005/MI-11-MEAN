@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Personal details</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <script src="https://kit.fontawesome.com/15329e9b1c.js" crossorigin="anonymous"></script>
+        <style>
+            #intro {
+                background-image: url(b1.jpg);
+                height: 91vh;
+                margin-top: 0px;
+                background-size: cover;
+            }
+            </style>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><strong>Job FInder</strong></a>
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-mdb-toggle="collapse"
+                    data-mdb-target="#navbarNav"
+                    aria-controls="navbarNav"
+                    aria-expanded="false"
+                    aria-label="Toggle navigation"
+                >
+                    <i class="fas fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="Assignment6.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="personal.html">Personal details</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="profession.html">Professional details</a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="login.html" class="btn bg-primary text-light">Login</a>
+            </div>
+        </nav>
+        <div id="intro" class="bg-image shadow-2-strong">
+            <div class="mask d-flex align-items-center h-100" style="background-color: rgba(0, 0, 0, 0.8)">
+                <div class="container">
+                    <div class="row justify-content-center">
+                        <div class="col-xl-5 col-md-8">
+                            <form class="bg-white rounded-5 shadow-5-strong p-5">
+                                <div class="form-outline mb-4">
+                                    <h2 class="text-center p-1">Personal Details</h2>
+                                    <input type="text" id="form1Example1" class="form-control" placeholder="Firstname" /><br>
+                                    <input type="text" id="form1Example1" class="form-control" placeholder="Lastname"/><br>
+                                    <div class="radio">
+                                        <label>Gender: </label>
+                                        <label><input type="radio" name="Gender">Male</label>
+                                        <label><input type="radio" name="Gender">Female</label>
+                                      </div>
+                                </div>
+                                <div class="radio">
+                                    <label>Age: </label>
+                                    <label><input type="radio" name="Age" checked>less than 18</label>
+                                    <label><input type="radio" name="Age">18-25</label>
+                                    <label><input type="radio" name="Age">26-40</label>
+                                  </div>
+                                  <br>
+                                <button type="submit" class="btn btn-primary btn-block"><a href="" class="text-light">Save</a></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>   
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>
