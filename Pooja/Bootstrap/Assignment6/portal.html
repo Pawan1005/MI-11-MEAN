@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="Description" content="Enter your description here"/>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<title>Portal</title>
+<style>
+    .open{
+        background-image: url("portal.jpeg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        height: 250px;
+    }
+    li{
+        list-style: none;
+    }
+    .mid{
+        background-color: white;
+        margin-top: 60px;
+        height: 202px;
+        border:1px solid white;
+        border-radius: 20px ;
+        box-shadow: 1px 1px 4px turquoise;
+    }
+    input[type="text"]{
+        padding-left: 10px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        width: 300px;
+    }
+    button.search{
+        width: 70px;
+        text-align: center;
+        font-size: 12px;
+        background-color: rgb(15, 107, 135);
+        color: white;
+        height: 46px;
+        margin-top:70px;
+        margin-left: -30px;
+    }
+    .material-icons{
+        color: grey;
+    }
+    h3.text-dark{
+        font-size: medium;
+    }
+    p.text-dark{
+        font-size: 14px;
+        text-align: left;
+    }
+    .input1,.input2{
+        display: inline-flex;
+    }
+    .input1{
+        margin-top: 70px;
+    }
+    .register,
+    .cv{
+        padding: 5px;
+        width:150px;
+        border-radius: 2px;
+    }
+    .register{
+        background-color: rgb(238, 121, 11);
+        color: white;
+        border: none;
+    }
+    .cv{
+        background-color: rgb(204, 216, 238);
+        color:blue;
+        border:1px solid blue;
+    }
+    p.text-right{
+        font-size:10px;
+    }
+</style>
+</head>
+<body>
+    <div class="open text-center text-light">
+        <div class="container">
+            <nav class="navbar navbar-expand-md ml-5">
+                <a href="#" class="navbar-brand mr-5">
+                    <img src="logo.png">
+                </a>
+                <ul class="navbar-nav">
+                    <li class="nav-item mr-5">
+                        <a href="portal.html" class="nav-link text-light">HOME </a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a href="personal.html" class="nav-link text-light">PERSONAL DETAILS </a>
+                    </li>
+                    <li class="nav-item mr-5">
+                        <a href="academic.html" class="nav-link text-light">ACADEMIC DETAILS </a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="login.html" class="nav-link text-light">LOGIN </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container mid">
+            <div class="row">
+                <div class="col-7">
+                   <div class="input1 ml-4">
+                       <input type="text" class="material-icons" placeholder="search">
+                    </div>   
+                    <div class="input1 ml-1">
+                        <input type="text" class="material-icons" placeholder="location_on" >
+                    </div>   
+                </div>
+                <div class="col-1">
+                    <button class="search">Search</button>
+                </div> 
+                <div class="col-4">
+                    <h3 class="text-dark mt-2">Get Personalised Jobs !!</h3>
+                    <p class="text-dark">Tell us what kind of a job you are looking out for and stay updated with latest opportunities.</p>
+                    <button class="register">Register for Free</button>
+                    <button class="cv">Upload CV</button><br>
+                    <p class="text-dark mr-5 text-right">Max 2MB, doc, docx, rtf, pdf</p>
+                </div>     
+            </div>
+        </div>    
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+</body>
+</html>
