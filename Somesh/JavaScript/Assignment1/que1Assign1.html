@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Swap no.s</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+            .container {
+                margin-top: 30px;
+                height: 500px;
+                max-width: 300px;
+                width: 100%;
+                background-color: rgb(90, 90, 90);
+                padding: 10px;
+                border-radius: 8px;
+                box-shadow: 0px 0px 4px rgb(0, 0, 0),
+                    inset 0px 0px 8px rgb(0, 0, 0);
+                display: flex;
+                flex-direction: column;
+                justify-content: flex-start;
+                align-items: center;
+            }
+
+            .input-container {
+                display: flex;
+            }
+            input,
+            button,
+            p {
+                background-color: #d2d2d2;
+                outline: none;
+                border: none;
+                margin: 3px;
+                height: 40px;
+                width: 80%;
+                font-size: 28px;
+                /* box-shadow: inset 0px 0px 4px rgb(0, 0, 0); */
+                text-align: center;
+                border-radius: 4px;
+                margin-top: 10%;
+                /* border: 1px solid #000; */
+                font-weight: 700;
+            }
+            p {
+                color: tomato;
+                background-color: white;
+                font-size: 22px;
+                line-height: 40px;
+            }
+            button {
+                background-color: rgb(0, 92, 54);
+                border: 2px solid white;
+                color: white;
+                font-size: 14px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="input-container">
+                <input type="text" placeholder="num1" id="num1" value="20" />
+                <input type="text" placeholder="num2" id="num2" value="10" />
+            </div>
+            <button id="M1" onclick="method1()">Swap by Method1</button>
+            <button id="M2" onclick="method2()">Swap by Method2</button>
+            <p id="output"></p>
+        </div>
+        <script>
+            let num1 = document.getElementById("num1");
+            let num2 = document.getElementById("num2");
+            let output = document.getElementById("output");
+            let method1 = () => {
+                let temp = parseInt(num1.value);
+                num1.value = parseInt(num2.value);
+                num2.value = parseInt(temp);
+                output.innerText = `After swap A: ${num1.value} B: ${num2.value}`;
+            };
+            let method2 = () => {
+                let a = parseInt(num1.value);
+                let b = parseInt(num2.value);
+                a = a + b;
+                b = a - b;
+                a = a - b;
+                output.innerText = `After swap A: ${a} B: ${b}`;
+            };
+        </script>
+    </body>
+</html>
