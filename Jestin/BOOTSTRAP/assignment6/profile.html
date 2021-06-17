@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+        <title>bootstrap-ass2</title>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col bg-dark">
+                <div class="col-lg-12">
+                    <img src="1.png" alt="9.png" />
+                    <h2 class="text-white"><center>Work From Home</center></h2>
+                </div>
+                <div class="navbar navbar-expand-md navbar-light bg-white sticky-top">
+                    <div class="container-fluid">
+                        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse bg-info" id="navbarResponsive">
+                            <ul class="navbar-nav ml-auto">
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="index.html">Home</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="login.html">Login</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="signup.html">Signup</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div style="background-image: url(9.png); background-attachment: fixed; background-size: cover; min-height: 800px">
+                        <br /><br /><br />
+                        <div class="bg-dark text-white">
+                            <center>
+                                <h1>Update your profile</h1>
+                            </center>
+                        </div>
+                        <br /><br /><br /><br /><br /><br />
+                        <div class="text-white" style="background-image: url(4.png); min-height: 100px">
+                            <center>
+                                <h4>personal Details</h4>
+                                <form action="bootstrap2.html">
+                                    <label for="fname">first name:</label>
+                                    <input type="text" id="fname" name="fname" placeholder=" First Name" /><br /><br />
+                                    <label for="lname">Last name:</label>
+                                    <input type="text" id="lname" name="lname" placeholder="Last Name" /><br /><br />
+                                    <label for="genter"><b>Gender:</b></label>
+                                    <input type="radio" id="male" name="male" />
+                                    <label for="male">Male</label>
+                                    <input type="radio" id="fmale" name="fmale" />
+                                    <label for="fmale">Fmale</label>
+                                    <input type="radio" id="other" name="other" />
+                                    <label for="other">other</label><br /><br />
+                                    <label for="age"><b>Age:</b></label>
+                                    <input type="radio" id="less than 18" name="less than 18" />
+                                    <label for="less than 18" name="less than 18" id="less than 18">less than 18</label>
+                                    <input type="radio" id="18-25" name="18-25" />
+                                    <label for="18-25" name="18-25" id="18-25">18-25</label>
+                                    <input type="radio" id="26-40" name="26-40" />
+                                    <label for="26-40" name="26-40" id="26-40">26-40</label>
+                                    <h4>Academic Details</h4>
+                                    <label for="age"><b>Skill Set:</b></label>
+                                    <input type="checkbox" id="HTML" name="HTML" />
+                                    <label for="HTML">HTML</label>
+                                    <input type="checkbox" id="Java Script" name="Java Script" />
+                                    <label for="Java Script">Java Script</label>
+                                    <input type="checkbox" id="Java" name="Java" />
+                                    <label for="Java">Java</label>
+                                    <input type="checkbox" id="Oracle" name="Oracle" />
+                                    <label for="Oracle">Oracle</label><br /><br />
+                                    <label for="Highest Qualification"><b>Highest Qualification:</b></label>
+                                    <select id="Highest Qualification" name="Highest Qualification">
+                                        <option value="Diploma in Computer Science">Diploma in Computer Science</option>
+                                        <option value="Science Graduate">Science Graduate</option>
+                                        <option value="Bachelor in Engg.">Bachelor in Engg.</option>
+                                        <option value="Masters in Computer Science">Masters in Computer Science</option>
+                                        <option value="Master in Engg.">Master in Engg.</option>
+                                        <option value="Other">Other</option></select
+                                    ><br /><br />
+                                    <label for="University"><b>University:</b></label>
+                                    <input list="browsers" name="University" id="University" />
+                                    <datalist id="browsers">
+                                        <option value="Mumbai University"></option>
+                                        <option value="Pune University"></option>
+                                        <option value="Chennai University"></option>
+                                        <option value="Nagpur University"></option>
+                                        <option value="Badoda University"></option></datalist
+
+                                    ><br /><br />
+                                    <label for="Areas of Expertise"><b>Areas of Expertise:</b></label>
+                                    <select id="Areas of Expertise" name="Areas of Expertise" size="3" multiple>
+                                        <option value="Software">Software</option>
+                                        <option value="Training">Training</option>
+                                        <option value="Networking">Networking</option>
+                                        <option value="Marketing">Marketing</option></select
+                                    >You can select multiple filesbr <br /><br /><br />
+                                    <a type="submit" class="btn btn-danger">Submit</a>
+                                </form>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
