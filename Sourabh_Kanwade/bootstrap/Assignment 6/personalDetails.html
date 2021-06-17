@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+            crossorigin="anonymous"
+        />
+        <title>Details</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <div class="container-fluid">
+                <a href="./home.html" class="navbar-brand">Job Portal</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-nav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar-nav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="./personalDetails.html">Forms</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="./login.html" class="btn btn-outline-info nav-link px-3">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container">
+            <ul class="nav nav-tabs" id="formTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                    <button class="nav-link active" id="personal-tab" data-bs-toggle="tab" data-bs-target="#personal-form">Personal Details</button>
+                </li>
+                <li class="list-item" role="presentation">
+                    <button class="nav-link" id="academic-tab" data-bs-toggle="tab" data-bs-target="#academic-form">Academic Details</button>
+                </li>
+            </ul>
+            <div class="tab-content" id="formTabContent">
+                <div class="tab-pane active" id="personal-form" role="tabpanel">
+                    <div class="container d-flex flex-column align-items-center mt-5">
+                        <h1>Personal Details</h1>
+                        <form class="w-50 p-3 border border-2 rounded rounded-3">
+                            <label for="fname" class="form-label">First Name</label>
+                            <input type="text" name="fname" id="fname" class="form-control mb-3" placeholder="First name" />
+                            <label for="lanme" class="form-label">Last Name</label>
+                            <input type="text" name="lanme" id="lanme" class="form-control mb-3" placeholder="Last name" />
+                            <div class="row">
+                                <div class="col-2 mb-3">
+                                    <label for="gender" class="form-label me-3">Gender</label>
+                                </div>
+                                <div class="col-10 mb-3">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="male" value="male" />
+                                        <label class="form-check-label" for="male">Male</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="Female" value="Female" />
+                                        <label class="form-check-label" for="Female">Female</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="gender" id="Other" value="Other" />
+                                        <label class="form-check-label" for="Other">Other</label>
+                                    </div>
+                                </div>
+                                <div class="col-2 mb-3">
+                                    <label for="Age" class="form-label me-3">Age</label>
+                                </div>
+                                <div class="col-10 mb-3">
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="Age" id="less18" value="less18" />
+                                        <label class="form-check-label" for="less18">Less than 18</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="Age" id="18-25" value="18-25" />
+                                        <label class="form-check-label" for="18-25">18-25</label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="Age" id="25-40" value="25-40" />
+                                        <label class="form-check-label" for="25-40">25-40</label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary">Save</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="tab-pane" id="academic-form" role="tabpanel">
+                    <div class="container d-flex flex-column align-items-center mt-5">
+                        <h1>Academic Details</h1>
+                        <form class="w-50 p-3 border border-2">
+                            <label for="Qualification" class="form-label">Highest Qualification:</label>
+                            <select id="Qualification" class="form-select mb-3">
+                                <option>Masters in Computer Science</option>
+                                <option>Diploma in Computer Science</option>
+                                <option>Science Graduate</option>
+                                <option>Bachelor in Engg.</option>
+                                <option>Masters in Engg.</option>
+                                <option>Other</option>
+                            </select>
+                            <label for="university" class="form-label">University:</label>
+                            <input list="universities" type="text" name="university" id="university" class="form-control mb-3" />
+                            <datalist id="universities">
+                                <option value="Mumbai University"></option>
+                                <option value="Pune University"></option>
+                                <option value="Chennai University"></option>
+                                <option value="Nagpur University"></option>
+                                <option value="Badoda University"></option>
+                            </datalist>
+                            <label for="skils" class="form-label">Skills</label>
+                            <div class="form-check">
+                                <input type="checkbox" name="html" id="html" class="form-check-input" />
+                                <label for="html" class="form-check-label">HTML</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" name="javaScript" id="javaScript" class="form-check-input" />
+                                <label for="javaScript" class="form-check-label">JavaScript</label>
+                            </div>
+                            <div class="form-check">
+                                <input type="checkbox" name="Java" id="Java" class="form-check-input" />
+                                <label for="Java" class="form-check-label">Java</label>
+                            </div>
+                            <div class="form-check mb-3">
+                                <input type="checkbox" name="Angular" id="Angular" class="form-check-input" />
+                                <label for="Angular" class="form-check-label">Angular</label>
+                            </div>
+                            <div class="d-grid gap-2">
+                                <button class="btn btn-primary">Submit</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
