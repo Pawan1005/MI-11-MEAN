@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Assignment 1</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            .container {
+                background-color: cadetblue;
+                width: 850px;
+                height: 480px;
+                text-align: center;
+                border-radius: 15px;
+                margin-left: 150px;
+            }
+        </style>
+    </head>
+    <script language="javascript">
+        function show() {
+            "use strict";
+            var sum, a, b, temp;
+
+            a = parseInt(document.getElementById("num1").value);
+            b = parseInt(document.getElementById("num2").value);
+            document.getElementById("pid").innerHTML += "<br>Before swapping a= " + a + " and b=" + b + "";
+            temp = a;
+            a = b;
+            b = temp;
+            document.getElementById("pid").innerHTML += "<br>After swapping using third variable a= " + a + " and b=" + b + "";
+        }
+        function show3() {
+            "use strict";
+            var sum, a, b;
+            a = parseInt(document.getElementById("num1").value);
+            b = parseInt(document.getElementById("num2").value);
+            document.getElementById("pid1").innerHTML += "<br>Before swapping  a= " + a + " and b=" + b + "";
+
+            a = a + b;
+            b = a - b;
+            a = a - b;
+            document.getElementById("pid1").innerHTML += "<br>After swapping without using third variable a= " + a + " and b=" + b + "";
+        }
+    </script>
+</html>
+
+<div class="container">
+    <br /><br /><br />
+    <h1>swaping of number</h1>
+    Number1 : <input type="text" id="num1" /><br /><br />
+    Number2 : <input type="text" id="num2" /><br /><br />
+    <button onclick="show()">swap1</button>
+    <button onclick="show3()">swap2</button>
+    <p id="pid"></p>
+    <p id="pid1"></p>
+</div>
