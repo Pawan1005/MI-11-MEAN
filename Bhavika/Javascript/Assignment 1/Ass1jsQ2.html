@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+            crossorigin="anonymous"
+        />
+        <title>Document</title>
+        <script>
+            function temp() {
+                var c, f;
+                c = parseInt(document.getElementById("cel").value);
+                f = (c * 9) / 5 + 32;
+                document.getElementById("m1").innerHTML = "corresponding temperature in fahrenheit = " + f;
+            }
+        </script>
+    </head>
+    <body>
+        <style>
+            .main {
+                border: 2px solid #000;
+                background-color: grey;
+                max-width: fit-content;
+                position: absolute;
+                left: 25%;
+                padding: 5%;
+                top: 144px;
+            }
+        </style>
+        <div class="main">
+            <h1>Conversion of Celsiue to Fahrenheit</h1>
+            <br>
+            <br>
+            <label for=""></label>
+            <input type="number" name="" id="cel" placeholder="" /> C
+            <br>
+            <br>
+            <a class="btn btn-info" onclick="temp()">convert</a>
+            <br>
+            <br>
+            <h1>After conversion</h1>
+            <p id="m1"></p>
+        </div>
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
