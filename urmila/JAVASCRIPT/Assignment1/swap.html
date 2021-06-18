@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>swapping</title>
+        <style>
+            h1 {
+                text-align: center;
+                padding: 20px;
+                background-color: red;
+                color: white;
+            }
+            .swap {
+                  margin: auto;
+                  text-align: center;
+                  border: 2px solid gray;
+                  width: 40%;
+                  padding: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>swap Two Numbrs</h1><br>
+        <div class="swap">
+        <label>value of a :</label>
+        <input id="first"> <br><br>
+        <label>value of b :</label>
+        <input id="second"><br><br><br>
+        <button onclick="swap()">swap</button><br><br>
+        <label>value of a :</label>
+        <input id="answer1"> <br><br>
+        <label>value of b :</label>
+        <input id="answer2"><br><br><br>
+    </div>
+    </body>
+</html>
+<script>
+    function swap(){
+    var a,b, c;
+    a = Number(document.getElementById('first').value);
+    b = Number(document.getElementById('second').value);
+    c = a;
+    a = b;
+    b = c;
+    document.getElementById('answer1').value = a;
+    document.getElementById('answer2').value = b;
+    }
+</script>
