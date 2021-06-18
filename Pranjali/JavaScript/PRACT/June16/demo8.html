@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="eidth=device-eidth, initial-scale=1.0" />
+        <title>demo8</title>
+        <script language="javascript">
+            function show() {
+                "use strict";
+                var a, b;
+                a = document.getElementById("num1").Value;
+                switch (a) {
+                    case "A":
+                        b = "Apple";
+                        break;
+                    case "B":
+                        b = "Ball";
+                        break;
+                    case "C":
+                        b = "Cat";
+                        break;
+                    default:
+                        b = "Error--Valid Values A,B,C";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>My first Js Program</h1>
+        Number 1 : <input type="text" id="num1" />
+        <button onclick="show()">Show</button>
+        <p id="pid"></p>
+    </body>
+</html>

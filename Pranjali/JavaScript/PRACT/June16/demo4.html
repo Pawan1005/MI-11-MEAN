@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="eidth=device-eidth, initial-scale=1.0" />
+        <title>demo4</title>
+        <script language="javascript">
+            function show() {
+                "use strict"
+                var a;
+                a = parseInt(document.getElementById("num1").Value);
+                if(a>10)
+                document.getElementById("pid").innerHTML = "You can continue";
+            }
+        </script>
+    </head>
+    <body>
+        <h1>My first Js Program</h1>
+        Number 1 : <input type="text" id="num1" />
+        <button onclick="show()">Show</button>
+        <p id="pid"></p>
+    </body>
+</html>

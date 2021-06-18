@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>swapping</title>
+        <script language="javascript">
+            function show() {
+                "use strict"
+                var sum, a, b, temp;
+                /*a = parseInt(prompt("Enter the value of a"));
+                b = parseInt(prompt("Enter the value of b"));*/
+                a = parseInt(document.getElementById("num1").Value);
+                b = parseInt(document.getElementById("num2").Value);
+                document.getElementById("pid").innerHTML = "Before swapping values of a=" + a + " and b=" + b ;
+                temp = a;
+                a = b;
+                b = temp;
+                document.getElementById("pid1").innerHTML = "After swapping of a =  " + a + " and b=" + b ;
+                //document.getElementById("pid").innerHTML = "After swapping of a =  " + a + " and b=" + b;
+                //document.write("Sum of " + a + "and" + b + "is" + sum);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>My first Js Program</h1>
+        Number 1 : <input type="number" id="num1" />
+        <br />
+        Number 2 : <input type="number" id="num2" />
+        <button onclick="show()">Swap</button>
+        <p id="pid"></p>
+        <p id="pid1"></p>
+    </body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="eidth=device-eidth, initial-scale=1.0" />
+        <title>JavaScript demo7</title>
+    </head>
+    <body>
+        <h1>My first Js Program</h1>
+        Number 1 : <input type="text" id="num1" />
+        <br />
+        Number 2 : <input type="text" id="num2" />
+        <button onclick="show()">Add</button>
+        <p id="pid"></p>
+        <p id="pid1"></p>
+        <script language="javascript">
+            function show() {
+                "use strict";
+                var sum, a, b;
+                /*a = parseInt(prompt("Enter the value of a"));
+                b = parseInt(prompt("Enter the value of b"));*/
+                a = parseInt(document.getElementById("num1").Value);
+                b = parseInt(document.getElementById("num2").Value);
+                sum = a + b;
+                document.getElementById("pid").innerHTMl = "Sum of" + a + "and" + b + "is" + sum;
+                //document.write("Sum of " + a + "and" + b + "is" + sum);
+            }
+        </script>
+    </body>
+</html>

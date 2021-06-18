@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="eidth=device-eidth, initial-scale=1.0" />
+        <title>demo7</title>
+        <script language="javascript">
+            function show() {
+                "use strict";
+                var a;
+                a = document.getElementById("num1").value;
+                if (a == "A") {
+                    document.getElementById("pid").innerHTML = "Apple";
+                } else if (a == "B") {
+                    document.getElementById("pid").innerHTML = "Ball";
+                } else if (a == "C") {
+                    document.getElementById("pid").innerHTML = "Cat";
+                } else {
+                    document.getElementById("pid").innerHTML = "Error--Valid Values A,B,C";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>My first Js Program</h1>
+        Number 1 : <input type="text" id="num1" />
+        <button onclick="show()">Show</button>
+        <p id="pid"></p>
+    </body>
+</html>
