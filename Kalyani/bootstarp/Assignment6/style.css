@@ -1,0 +1,255 @@
+.navbar {
+    background: linear-gradient(rgba(2, 2, 43, 0.973), rgba(0, 0, 0.6));
+}
+.navbar-brand {
+    float: left;
+}
+.navbar-nav {
+    display: inline-block;
+}
+.nav-item {
+    display: inline-block;
+    margin-right: 50px;
+}
+.stb-ntb {
+    background-color: blue;
+    border: 1px solid;
+    border-radius: 30px;
+    width: 150px;
+    height: 50px;
+}
+.stb-ntb1 {
+    background-color: rgba(12, 172, 12, 0.63);
+    border: 1px solid;
+    border-radius: 30px;
+    width: 150px;
+    height: 50px;
+}
+.input-group {
+    margin-right: 5px;
+}
+.find-job {
+    margin-top: 50px;
+}
+.find-job h5 {
+    color: rgb(31, 31, 206);
+}
+.find-job .btn {
+    border: none;
+    background-color: blue;
+}
+.form-inline {
+    margin-left: 150px;
+}
+.img-com {
+    width: 200px;
+    height: 20vh;
+}
+table {
+    width: 60%;
+    margin: 0 50px 0 100px;
+}
+.gallery {
+    margin: 50px 0 50px 80px;
+    border: 1px solid gray;
+    box-shadow: 10px;
+}
+.gallery h3 {
+    margin-left: 50px;
+    color: blue;
+}
+.Social {
+    margin-left: 560px;
+}
+.Social .fa {
+    margin-right: 20px;
+    width: 10%;
+    height: 50px;
+}
+footer {
+    background-color: gray;
+}
+body {
+    background-color: rgba(128, 128, 128, 0.233);
+}
+/*Register*/
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap");
+
+*,
+body {
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    text-rendering: optimizeLegibility;
+}
+.form-holder {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+.form-holder .form-content {
+    position: relative;
+    text-align: center;
+    display: -webkit-box;
+    display: -moz-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px;
+}
+
+.form-content .form-items {
+    border: 3px solid #fff;
+    padding: 40px;
+    display: inline-block;
+    width: 100%;
+    min-width: 540px;
+    border-radius: 10px;
+    text-align: left;
+    transition: all 0.4s ease;
+    margin-left: 350px;
+}
+
+.form-content h3 {
+    color: #fff;
+    text-align: left;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.form-content h3.form-title {
+    margin-bottom: 30px;
+}
+
+.form-content p {
+    color: #fff;
+    text-align: left;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 20px;
+    margin-bottom: 30px;
+}
+
+.form-content label,
+.was-validated .form-check-input:invalid ~ .form-check-label,
+.was-validated .form-check-input:valid ~ .form-check-label {
+    color: #fff;
+}
+
+.form-content input[type="text"],
+.form-content input[type="password"],
+.form-content input[type="email"],
+.form-content select {
+    width: 100%;
+    padding: 9px 20px;
+    text-align: left;
+    border: 0;
+    outline: 0;
+    border-radius: 6px;
+    background-color: #fff;
+    font-size: 15px;
+    font-weight: 300;
+    color: #8d8d8d;
+    -webkit-transition: all 0.3s ease;
+    transition: all 0.3s ease;
+    margin-top: 16px;
+}
+
+.btn-primary {
+    background-color: #6c757d;
+    outline: none;
+    border: 0px;
+    box-shadow: none;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn-primary:active {
+    background-color: #495056;
+    outline: none !important;
+    border: none !important;
+    box-shadow: none;
+}
+
+.form-content textarea {
+    position: static !important;
+    width: 100%;
+    padding: 8px 20px;
+    border-radius: 6px;
+    text-align: left;
+    background-color: #fff;
+    border: 0;
+    font-size: 15px;
+    font-weight: 300;
+    color: #8d8d8d;
+    outline: none;
+    resize: none;
+    height: 120px;
+    -webkit-transition: none;
+    transition: none;
+    margin-bottom: 14px;
+}
+
+.form-content textarea:hover,
+.form-content textarea:focus {
+    border: 0;
+    background-color: #ebeff8;
+    color: #8d8d8d;
+}
+
+.mv-up {
+    margin-top: -9px !important;
+    margin-bottom: 8px !important;
+}
+
+.invalid-feedback {
+    color: #ff606e;
+}
+
+.valid-feedback {
+    color: #2acc80;
+}
+/*Login*/
+div.para {
+    margin-left: 450px;
+    margin-top: 100px;
+    padding: auto;
+    margin-bottom: 100px;
+    border: black solid;
+    text-align: center;
+    width: 300px;
+    height: 300px;
+    background-color: cornflowerblue;
+}
+.jobsearch .jobs {
+    margin-left: 100px;
+    color: white;
+}
+.jobsearch {
+    background: linear-gradient(rgba(1, 1, 26, 0.884), rgba(0, 0, 0, 0.6));
+    height: 250px;
+}
+.searchkob {
+    margin-top: 50px;
+}
+.second-job .link {
+    margin-left: 40px;
+}
+.second-job h5 {
+    margin-left: 20px;
+}
+.job-img {
+    width: 200px;
+    height: 150px;
+    background-color: grey;
+}
+.location {
+    margin-top: 50px;
+}
+.img-details p {
+    margin-top: 8px;
+    text-align: center;
+}
