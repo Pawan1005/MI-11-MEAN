@@ -4,7 +4,6 @@ let numbers = [];
 Array.from(inputs).forEach((input) => {
     input.addEventListener("change", (e) => {
         numbers.push(parseInt(e.target.value));
-        console.log(numbers);
     });
 });
 let findGrade = () => {
@@ -13,12 +12,10 @@ let findGrade = () => {
         total += numbers[index];
     }
     per = total / numbers.length;
-    console.log(per);
     let grade = "";
     switch (true) {
         case per > 75: {
             grade = "A";
-            console.log("cought");
             break;
         }
         case per > 60: {

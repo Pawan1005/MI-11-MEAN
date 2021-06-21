@@ -6,7 +6,6 @@ Array.from(inputs).forEach((input) => {
     });
 });
 let secondLarge = () => {
-    console.log(numbers);
     let firstMax = 0;
     let secondMax = 0;
     for (let i = 0; i < numbers.length; i++) {
