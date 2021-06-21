@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Second largest number</title>
+        <style>
+            body {
+                background-color: #616161;
+            }
+            h1 {
+                text-align: center;
+                color: white;
+                margin-top: 4%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #ffed89;
+                width: 460px;
+                height: 430px;
+                margin: auto;
+                padding-top: 15px;
+                gap: 20px;
+            }
+            input {
+                margin-left: 10px;
+                margin-bottom: 12px;
+                padding: 4px 8px;
+                font-size: 14px;
+                outline: none;
+                line-height: 19px;
+                border: 1px solid #0000004b;
+            }
+            #firstnumber {
+                margin-left: 15px;
+            }
+            #thirdnumber {
+                margin-left: 12px;
+            }
+            #fourthnumber, #fifthnumber {
+                margin-left: 13px;
+            }
+            p {
+                width: 270px;
+                padding: 9px 2px 9px 13px;
+                background-color: white;
+                font-weight: bold;
+                border: 1px solid #0000004b;
+            }
+            span {
+                color: #ff0000;
+                font-size: 21px;
+            }
+            button {
+                background-color: #7700ff;
+                color: white;
+                padding: 7px 11px;
+                margin: 0 8px;
+                font-weight: bold;
+                font-size: 17px;
+                border: 1px solid gray;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Second largest Number</h1>
+        <div class="main">
+            <div>
+                <div class="input1">
+                    <label for="">1st number</label>
+                    <input type="text" id="firstnumber">
+                </div>
+                <div class="input2">
+                    <label for="">2nd number</label>
+                    <input type="text" id="secondnumber">
+                </div>
+                <div class="input3">
+                    <label for="">3rd number </label>
+                    <input type="text" id="thirdnumber">
+                </div>
+                <div class="input4">
+                    <label for="">4th number </label>
+                    <input type="text" id="fourthnumber">
+                </div>
+                <div class="input5">
+                    <label for="">5th number </label>
+                    <input type="text" id="fifthnumber">
+                </div>
+            </div>
+            <div class="para">
+                <p>Second largest number is &nbsp;&nbsp; = &nbsp;&nbsp;<span id="second-largest"></span></p>
+            </div>
+            <div class="btn">
+                <button class="btn1" onclick="secondlargest()">Second largest</button>
+            </div>
+        </div>
+        <script src="Q1_second_largest_number.js"></script>
+    </body>
+</html>

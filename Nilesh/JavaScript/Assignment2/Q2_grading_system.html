@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Grade System</title>
+        <style>
+            body {
+                background-color: #616161;
+            }
+            h1 {
+                text-align: center;
+                color: white;
+                margin-top: 2%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #ffed89;
+                width: 460px;
+                height: 500px;
+                margin: auto;
+                padding-top: 15px;
+                gap: 20px;
+            }
+            input {
+                margin-left: 10px;
+                margin-bottom: 12px;
+                padding: 4px 8px;
+                font-size: 14px;
+                outline: none;
+                line-height: 19px;
+                border: 1px solid #0000004b;
+            }
+            p {
+                width: 160px;
+                padding: 9px 2px 9px 13px;
+                background-color: white;
+                font-weight: bold;
+                border: 1px solid #0000004b;
+            }
+            span {
+                color: #ff0000;
+                font-size: 21px;
+            }
+            button {
+                background-color: #7700ff;
+                color: white;
+                padding: 7px 11px;
+                margin: 0 8px;
+                font-weight: bold;
+                font-size: 17px;
+                border: 1px solid gray;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Grade System</h1>
+        <div class="main">
+            <div>
+                <div class="input1">
+                    <label for="">Subject 1 </label>
+                    <input type="text" id="firstnumber">
+                </div>
+                <div class="input2">
+                    <label for="">Subject 2 </label>
+                    <input type="text" id="secondnumber">
+                </div>
+                <div class="input3">
+                    <label for="">Subject 3 </label>
+                    <input type="text" id="thirdnumber">
+                </div>
+                <div class="input4">
+                    <label for="">Subject 4 </label>
+                    <input type="text" id="fourthnumber">
+                </div>
+                <div class="input5">
+                    <label for="">Subject 5 </label>
+                    <input type="text" id="fifthnumber">
+                </div>
+            </div>
+            <div class="btn">
+                <button class="btn1" onclick="result()">Calculate</button>
+            </div>
+            <div class="para">
+                <p>Total &nbsp;&nbsp; = &nbsp;&nbsp;<span id="total"></span></p>
+                <p>Percentage &nbsp;&nbsp; = &nbsp;&nbsp;<span id="percentage"></span></p>
+                <p>Grade &nbsp;&nbsp; = &nbsp;&nbsp;<span id="grade"></span></p>
+            </div>
+        </div>
+        <script src="Q2_grading_system.js"></script>
+    </body>
+</html>
