@@ -1,91 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Login</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-</head>
-<style>
-    .header {
-        height: 100%;
-        background-size: cover;
-    }
-    nav {
-        display: flex;
-        padding: 20px;
-        background-color: palevioletred;
-    }
-    nav ul {
-        text-align: right;
-        display: inline;
-        list-style: none;
-        flex: 1;
-    }
-    nav ul li {
-        display: inline-block;
-        margin: 0 20px;
-    }
-    body {
-        background-color: pink;
-        background-size: cover;
-    }
-    center {
-        height: 400px;
-        width: 400px;
-    }
-    .box {
-        height: 500px;
-        width: 500px;
-        border: 1px solid black;
-        padding: 150px;
-        border-radius: 15px;
-    }
-    h2 {
-        color: black;
-    }
-    form {
-        font-family: Georgia, serif;
-    }
-</style>
-<body>
-    <div class="header">
-        <nav>
-            <ul>
-                <li>Home</li>
-                <li>Personal</li>
-                <li>Academic</li>
-                <li>Login</li>
-            </ul>
-        </nav>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-4"></div>
-            <div class="col-md-4">
-                <div class="bigbox">
-                    <form class="box">
-                        <h2>Login</h2>
-                        <div class="form-group">Email Id / Username<input type="text"
-                                placeholder="Enter your Username here" class="form-control" /></div>
-                        <div class="form-group">Password<input type="password" placeholder="Enter your Password here"
-                                class="form-control" />
-                            <p style="color: black; font-size: medium; text-align: right">Forgot Password</p>
-                        </div>
-                        <div class="form-group"><input type="button" value="Submit" class="form-control btn-primary" />
-                            <p style="color:black; font-size: medium; text-align: center;margin-top: 5px;">For New User
-                                Create an Account</p>
-                        </div>
-                    </form>
-              </div>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Login</title>
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </head>
+    <style>
+        .header {
+            height: 100%;
+            background-size: cover;
+        }
+        nav {
+            display: flex;
+            padding: 20px;
+            background-color: palevioletred;
+        }
+        nav ul {
+            text-align: right;
+            display: inline;
+            list-style: none;
+            flex: 1;
+        }
+        nav ul li {
+            display: inline-block;
+            margin: 0 20px;
+        }
+        body {
+            background-color: pink;
+            background-size: cover;
+        }
+        center {
+            height: 400px;
+            width: 400px;
+        }
+        .box {
+            height: 500px;
+            width: 500px;
+            border: 1px solid black;
+            padding: 150px;
+            border-radius: 15px;
+        }
+        h2 {
+            color: black;
+        }
+        form {
+            font-family: Georgia, serif;
+        }
+    </style>
+    <body>
+        <div class="header">
+            <nav>
+                <ul>
+                    <li>Home</li>
+                    <li>Personal</li>
+                    <li>Academic</li>
+                    <li>Login</li>
+                </ul>
+            </nav>
+        </div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <div class="bigbox">
+                        <form class="box">
+                            <h2>Login</h2>
+                            <div class="form-group">
+                                Email Id / Username<input
+                                    type="text"
+                                    placeholder="Enter your Username here"
+                                    class="form-control"/>
+                            </div>
+                            <div class="form-group">
+                                Password<input
+                                    type="password"
+                                    placeholder="Enter your Password here"
+                                    class="form-control" />
+                                <p
+                                    style="
+                                        color: black;
+                                        font-size: medium;
+                                        text-align: right ">
+                                    Forgot Password
+                                </p>
+                            </div>
+                            <div class="form-group">
+                                <input
+                                    type="button"
+                                    value="Submit"
+                                    class="form-control btn-primary"/>
+                                <p
+                                    style="
+                                        color: black;
+                                        font-size: medium;
+                                        text-align: center;
+                                        margin-top: 5px; " >
+                                    For New User Create an Account
+                                </p>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+              <div class="col-md-4"></div>
             </div>
-         <div class="col-md-4"></div>
-      </div>
-    </div>
- </body>
+        </div>
+    </body>
 </html>
