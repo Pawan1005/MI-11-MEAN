@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="Description" content="Enter your description here"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <title>Swap</title>
+        <script language="javascript">
+            function show1(){
+                "use strict"
+                var a,b,temp;
+                a = parseInt(document.getElementById("num1").value);
+                b = parseInt(document.getElementById("num2").value);
+                // document.getElementById("pid").innerHTML="Before swapping values of a = "+a +" and b="+b;
+                temp = a;
+                a = b;
+                b = temp; 
+                document.getElementById("pid").innerHTML="After swapping values of a = "+a +" and b="+b;
+            }
+            function show2(){
+                "use strict"
+                var a,b;
+                a = parseInt(document.getElementById("num1").value);
+                b = parseInt(document.getElementById("num2").value);
+                // document.getElementById("pid").innerHTML="Before swapping values of a = "+a +" and b="+b;
+                a= a+b;
+                b= a-b;
+                a =a-b; 
+                document.getElementById("pid1").innerHTML="After swapping values of a = "+a +" and b="+b ;
+            }
+        </script>
+        <style>
+            .container{
+            background-color: darkcyan;
+            display: block;
+            padding: 10px;
+            margin-top: 50px;
+            width: 600px;
+            height: 440px;
+            border-radius: 5px;
+            }
+            .b1,.b2{
+            margin-top: 30px;
+            width: 200px;
+            box-shadow: 1px 1px 2px whitesmoke;
+            border: none;
+            }
+            button.b1{
+            margin-left: 100px;
+            }
+            button.b2{
+            margin-left: 10px;
+            }
+            #num1, .num1{
+            margin-left: 80px;
+            }
+            .col-6{
+            margin-top: 10px;
+            }
+            h4{
+            margin-left: 100px;
+            color:#000;
+            border: 1px dotted black;
+            background-color: rgb(210, 223, 191);
+            padding: 10px;
+            }
+            .swap1{
+            margin-top: 20px;
+            }
+            p{
+            margin-left: 100px;
+            } 
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-6">
+                    <label class="num1">Value 1</label>  <br> <input type="text" id="num1">   
+                </div>
+                <div class="col-6">
+                    <label class="num2">Value 2</label>  <br> <input type="text" id="num2">   
+                </div>
+                <button class="b1 bg-danger" onclick="show1()">Swap using 3rd variable</button>
+                <button class="b2 bg-primary"onclick="show2()">Swap without using 3rd variable</button>
+                <h4 class="swap1">Output: Swap using 3rd variable</h4>
+                <p id="pid"></p>
+                <h4>Output: Swap without using 3rd variable</h4>
+                <p id="pid1"></p>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    </body>
+</html>
