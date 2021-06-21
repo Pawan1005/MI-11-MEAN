@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Write a JavaScript program to convert temperatures to and from celsius, fahrenheit</title>
+    </head>
+    <body>
+        <p>
+            <label>Fahrenheit</label>
+            <input
+                id="inputFahrenheit"
+                type="number"
+                placeholder="Fahrenheit"
+                oninput="temperatureConverter(this.value)"
+                onchange="temperatureConverter(this.value)"
+            />
+        </p>
+        <p>Celcius: <span id="outputCelcius"></span></p>
+
+        <script>
+            function temperatureConverter(valNum) {
+                valNum = parseFloat(valNum);
+                document.getElementById("outputCelcius").innerHTML = (valNum - 32) / 1.8;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script language="javascript" type="text/javascript">
+            function multiply() {
+                a = Number(document.my_cal.first.value);
+                b = Number(document.my_cal.second.value);
+                c = a * b;
+                document.my_cal.total.value = c;
+            }
+            function addition() {
+                a = Number(document.my_cal.first.value);
+                b = Number(document.my_cal.second.value);
+                c = a + b;
+                document.my_cal.total.value = c;
+            }
+            function subtraction() {
+                a = Number(document.my_cal.first.value);
+                b = Number(document.my_cal.second.value);
+                c = a - b;
+                document.my_cal.total.value = c;
+            }
+            function division() {
+                a = Number(document.my_cal.first.value);
+                b = Number(document.my_cal.second.value);
+                c = a / b;
+                document.my_cal.total.value = c;
+            }
+            function modulus() {
+                a = Number(document.my_cal.first.value);
+                b = Number(document.my_cal.second.value);
+                c = a % b;
+                document.my_cal.total.value = c;
+            }
+        </script>
+        <style>
+            form {
+                border: 1px solid gray;
+                width: 40%;
+                height: 30vh;
+                margin-left: 400px;
+                background-color: rgba(126, 252, 0, 0.452);
+            }
+            .input-grp {
+                width: 50%;
+                margin-bottom: 10px;
+                margin-top: 10px;
+                margin-left: 10px;
+            }
+            .input-grp1 {
+                border-radius: 25px;
+                width: 50px;
+                text-align: center;
+                margin-left: 40px;
+                background-color: indigo;
+            }
+            h6 {
+                text-align: center;
+                font-size: large;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="cals">
+            <h6>Calculator</h6>
+            <form name="my_cal">
+                Number 1: <input type="text" class="input-grp" name="first" /><br />
+                Number 2: <input type="text" class="input-grp" name="second" /><br />
+                <input type="button" class="input-grp1" value="+" onclick="javascript:addition();" />
+                <input type="button" class="input-grp1" value="-" onclick="javascript:subtraction();" />
+                <input type="button" class="input-grp1" value="*" onclick="javascript:multiply();" />
+                <input type="button" class="input-grp1" value="/" onclick="javascript:division();" />
+                <input type="button" class="input-grp1" value="%" onclick="javascript:modulus();" />
+                <br /><br />
+                Get Result: <input type="text" class="input-grp" name="total" />
+            </form>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Swapping a Number</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="input-container">
+                <input type="text" placeholder="A" id="num1" />
+                <input type="text" placeholder="B" id="num2" />
+            </div>
+            <button id="M1" onclick="method1()">Swap by Method1</button>
+            <button id="M2" onclick="method2()">Swap by Method2</button>
+            <p id="output"></p>
+        </div>
+        <script>
+            var num1 = document.getElementById("num1");
+            var num2 = document.getElementById("num2");
+            var output = document.getElementById("output");
+            var method1 = () => {
+                var temp = parseInt(num1.value);
+                num1.value = parseInt(num2.value);
+                var output = document.getElementById("output");
+                var temp = parseInt(num1.value);
+                num1.value = parseInt(num2.value);
+                num2.value = parseInt(temp);
+
+                output.innerHTML = `After swapping A: ${num1.value} B: ${num2.value}`;
+            };
+            var method2 = () => {
+                var a = parseInt(num1.value);
+                var b = parseInt(num2.value);
+                a = a + b;
+                b = a - b;
+                a = a - b;
+                output.innerHTML = `After swapping A: ${a} B: ${b}`;
+            };
+        </script>
+    </body>
+</html>
