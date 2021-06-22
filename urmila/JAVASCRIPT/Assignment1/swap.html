@@ -1,48 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>swapping</title>
-        <style>
-            h1 {
-                text-align: center;
-                padding: 20px;
-                background-color: red;
-                color: white;
-            }
-            .swap {
-                margin: auto;
-                text-align: center;
-                border: 2px solid gray;
-                width: 40%;
-                padding: 25px;
-            }
-        </style>
-        <script>
-            function swap() {
-                var a, b, c;
-                a = Number(document.getElementById("first").value);
-                b = Number(document.getElementById("second").value);
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+        <title>Document</title>
+        <script lang="javascript">
+            function show() {
+              "use strict"
+                var a, b, c, d, e;
+                a = parseInt(document.getElementById("num1").value);
+                b =  parseInt(document.getElementById("num2").value);
+                document.getElementById("pid3").innerHTML = "Method 1";
+                document.getElementById("pid1").innerHTML = "before swapping a is " + a + " and b is " +b ;
                 c = a;
                 a = b;
                 b = c;
-                document.getElementById("answer1").value = a;
-                document.getElementById("answer2").value = b;
+                document.getElementById("pid").innerHTML = "after swapping a is " + a + " and b is " + b;
+            }
+            function map() {
+                var  d, e;
+                d =  parseInt(document.getElementById("num1").value);
+                e =  parseInt(document.getElementById("num2").value);
+                document.getElementById("pid4").innerHTML = "Method 2";
+                document.getElementById("pid5").innerHTML = "before swapping a is " + d + " and b is " + e;
+                d=d+e;
+                e=d-e;
+                d=d-e;
+                document.getElementById("pid2").innerHTML = "after swapping a is " + d + " and b is " + e;
             }
         </script>
     </head>
-    <body>
-        <h1>swap Two Numbrs</h1>
-        <br />
-        <div class="swap">
-            <label>value of a :</label>
-            <input id="first" /> <br /><br />
-            <label>value of b :</label>
-            <input id="second" /><br /><br /><br />
-            <button onclick="swap()">swap</button><br /><br />
-            <label>value of a :</label>
-            <input id="answer1" /> <br /><br />
-            <label>value of b :</label>
-            <input id="answer2" /><br /><br /><br />
+    <body style="background-image: url(4.jpg); background-attachment: fixed">
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <center><h1 class="display-5">SWAPPING 2 NUMBERS</h1></center>
+            </div>
         </div>
+        <div class="form-row">
+            <div class="form-group col-lg-8" style="border: solid green; margin-left: 150px; margin-right: 150px; padding: 20px; background-color: rgba(14, 14, 14, 0.5)">
+                <center>
+                    <h2 class="text-warning bg-dark">Method-1&2</h2>
+                    <hr />
+                </center>
+                <label for="inputEmail4" class="text-white p-2 bg-dark">First number</label>
+                <input type="number" class="form-control" id="num1" placeholder="Enter the First number" />
+                <label for="inputPassword4" class="text-white p-2 bg-dark">Second Number</label>
+                <input type="number" class="form-control" id="num2" placeholder="Enter the Second number" />
+                <div style="background-color: rgba(226, 229, 232, 0.5)">
+                    <center>
+                        <h4 id="pid3" class="text-dark"></h4>
+                        <hr />
+                    </center>
+                    <h5 id="pid1" class="text-success bg-dark"></h5>
+                    <br />
+                    <h5 id="pid" class="text-success bg-dark"></h5>
+                    <br />
+                    <center>
+                        <h3 id="pid4" class="text-dark"></h3>
+                        <hr />
+                    </center>
+                    <h5 id="pid5" class="text-warning bg-dark"></h5>
+                    <br />
+                    <h5 id="pid2" class="text-warning bg-dark"></h5>
+                    <br />
+                </div>
+                <button class="btn btn-success" onclick="show()">Swap using temporary variable</button>
+                <button class="btn btn-success" onclick="map()">Swap using temporary without variable</button>
+            </div>
+        </div>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"
+        ></script>
     </body>
 </html>

@@ -8,25 +8,25 @@
         <title>Document</title>
         <script lang="javascript">
             function show() {
-                "use strict"
+              "use strict"
                 var a, b;
                 a = parseInt(document.getElementById("num1").value);
                 document.getElementById("pid1").innerHTML = "Result";
-                b = (a * 9 / 5) + 32;
-                document.getElementById("pid2").innerHTML = " Corresponding (" + a + ") temperature in fahrenheit " + b;
+                b = (a*9/5)+32;
+                document.getElementById("pid2").innerHTML = " Corresponding (" +a+  ") temperature in fahrenheit " + b;
             }
         </script>
     </head>
     <body style="background-image: url(fire.webp); background-attachment: fixed; background-repeat: no-repeat; background-size: cover">
         <div class="form-row">
-            <div class="form-group col-lg-8" style="border: solid green; margin-top: 100px; margin-left: 150px; margin-right: 150px; padding: 20px; background-color: rgba(14, 14, 14, 0.5); background-image: url(11.gif); background-repeat: no-repeat; height: 500px; background-size: cover">
+            <div class="form-group col-lg-8" style="border: solid red; margin-top: 100px; margin-left: 150px; margin-right: 150px; padding: 20px; background-color: rgba(14, 14, 14, 0.5); background-image: url(11.gif); background-repeat: no-repeat; height: 500px; background-size: cover">
                 <center>
                     <h2 class="text-warning bg-dark-50">Celsius To Fahrenheit Convert</h2>
                     <hr />
                 </center>
                 <label for="inputEmail4" class="text-white p-2 bg-dark">Enter the current temperature in Celsius</label>
                 <input type="number" class="form-control col-xl-8" id="num1" placeholder="Enter the current temperature in Celsius" /><br />
-                <button class="btn btn-pill btn-success" onclick="show()">Swap using temporary variable</button>
+                <!-- <button  class="btn btn-pill btn-success  " onclick="show()">Swap using temporary variable</button>   -->
                 <button class="btn btn-success" onclick="show()">
                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
                         <path d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z" />
