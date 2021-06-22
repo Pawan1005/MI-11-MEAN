@@ -1,0 +1,13 @@
+.container {
+    background-color: aliceblue;
+    width: 50%;
+    margin-top: 50px;
+}
+.form-control {
+    width: 10px;
+}
+p {
+    color: crimson;
+    text-align: center;
+    font-size: 25px;
+}
