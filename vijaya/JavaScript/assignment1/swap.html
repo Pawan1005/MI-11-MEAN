@@ -1,0 +1,54 @@
+<!doctype html>
+<html>
+
+<head>
+    <style>
+        .name{
+            position: relative;
+            width: 500px;
+            background-color: rgba(243, 167, 161, 0.918);
+            padding: 10px 0px 10px 0px;
+            border-radius: 15px 15px 0px 0px;
+            color: rgb(91, 47, 163);
+            text-align: center;
+            margin-top: 80px;
+            margin-left: 450px;
+        }
+    </style>
+    <script>
+        function swap1() {
+            var a, b, c;
+            a = Number(document.getElementById("first").value);
+            b = Number(document.getElementById("second").value);
+            c = a;
+            a = b;
+            b = c;
+            document.getElementById("answer1").value = a;
+            document.getElementById("answer2").value = b;
+        }
+        function swap2() {
+            var a, b, c;
+            a = Number(document.getElementById("first").value);
+            b = Number(document.getElementById("second").value);
+            a=a+b;
+            b=a-b;
+            a=a-b;
+            document.getElementById("answer1").value = a;
+            document.getElementById("answer2").value = b;
+        }
+    </script>
+</head>
+<body>
+    <div class="name"><h2>Swap Operation</h2>
+        <hr style="color: white;">
+        <br>
+        <button onclick="swap1()" style="padding: 6px; background-color: rgb(241, 201, 114);">Swap Method1</button>
+        <button onclick="swap2()" style="padding: 6px; background-color: rgb(28, 225, 231);">Swap Method2</button></br></br>
+        Value of a: <input id="first"></br></br>
+        Value of b: <input id="second"></br></br>
+        After Swapping<br><br>
+        Value of a: <input id="answer1"></br></br>
+        Value of b: <input id="answer2">
+    </div>
+</body>
+</html>
