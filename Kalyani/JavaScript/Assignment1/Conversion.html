@@ -2,26 +2,51 @@
 <html>
     <head>
         <meta charset="utf-8" />
-        <title>Write a JavaScript program to convert temperatures to and from celsius, fahrenheit</title>
-    </head>
-    <body>
-        <p>
-            <label>Fahrenheit</label>
-            <input
-                id="inputFahrenheit"
-                type="number"
-                placeholder="Fahrenheit"
-                oninput="temperatureConverter(this.value)"
-                onchange="temperatureConverter(this.value)"
-            />
-        </p>
-        <p>Celcius: <span id="outputCelcius"></span></p>
-
+        <title>temperatureConverter</title>
         <script>
-            function temperatureConverter(valNum) {
-                valNum = parseFloat(valNum);
-                document.getElementById("outputCelcius").innerHTML = (valNum - 32) / 1.8;
+            var cels = document.getElementById("celius");
+            var far = document.getElementById("fahrenheit");
+            function c2f() {
+                far.Value = (9 / 5) * cels.Value + 32;
             }
         </script>
+        <style>
+            .container {
+                background-color: gray;
+                width: 600px;
+                height: 250px;
+                margin: 0 0 0 300px;
+            }
+            p {
+                margin-top: 100px;
+            }
+            .input {
+                margin: 20px 0 0 100px;
+                width: 50%;
+                border: none;
+                border-radius: 20px;
+                height: 40px;
+            }
+            .input-btn {
+                margin: 20px 0 0 150px;
+                width: 30%;
+                border: none;
+                border-radius: 20px;
+                height: 35px;
+                background-color: green;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="input-grp">
+                <p>
+                    <span><input type="number" class="input" placeholder="fahrenheit" id="celius" /></span>
+                    <span> <input type="button" class="input-btn" onclick="c2f()" value="convert" /> </span>
+                </p>
+                <input type="number" class="input" placeholder="In cels" id="fahrenheit" />
+            </div>
+        </div>
     </body>
 </html>
