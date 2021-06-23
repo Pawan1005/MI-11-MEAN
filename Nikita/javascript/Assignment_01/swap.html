@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Swapping</title>
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+        </style>
+    </head>
+    <body style="background-color: pink">
+        <div class="logincentrecard">
+            <div class="card">
+                <div class="container">
+                    <h1>Swap Program</h1>
+                    <label> Enter the First number :</label>
+                    &nbsp;&nbsp;&nbsp;<input id="num1" /><br /><br />
+                    <label>Enter the Second number:</label>
+                    <input id="num2" /><br /><br />
+                    <button onclick="show()">Method1</button>
+                    <button onclick="show1()">Method2</button>
+                    <p id="pid"></p>
+                    <p id="pid1"></p>
+                </div>
+                <script language="JavaScript">
+                    function show() {
+                        "use strict";
+                        var temp, a, b;
+                        temp = a;
+                        a = b;
+                        b = temp;
+                        a = parseInt(document.getElementById("num1").value);
+                        b = parseInt(document.getElementById("num2").value);
+                        document.getElementById("pid").innerHTML = "<br>Before Swapping Values of a = " + a + "and b=" + b;
+                    }
+                    function show1() {
+                        "use strict";
+                        var a, b;
+                        a = parseInt(document.getElementById("num1").value);
+                        b = parseInt(document.getElementById("num2").value);
+                        a = a + b;
+                        b = a - b;
+                        a = a - b;
+                        document.getElementById("pid1").innerHTML = "<br>After Swapping Values of a = " + a + "and b=" + b;
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
