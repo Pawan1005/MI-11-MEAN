@@ -1,54 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>SWAP TWO NUMBER</title>
-  </head>
-  <body style="background-color:lightblue">
-    <center>
-      <div class="logincentrecard">
-        <div class="card">
-          <div class="container">
-            <fieldset style="width: 500px;height: 500px;background-color: coral;>
-                <h1>Swap Two Number</h1>
-                <label for=" Num1">Enter First Number:</label>
-              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="num1" placeholder="Enter First Number"> <br /><br />
-              <label for="Num2">Enter Second Number:</label>
-              &nbsp;&nbsp;<input type="text" id="num2" placeholder="Enter Second Number"><br /><br />
-              <button onclick="swap()">swap with temp variable</button>
-              <button onclick="swap1()">swap withot temp variable</button>
-              <h4>swap two number with temp variable</h4>
-              <p id="pid"></p>
-              <h4>swap two number without temp variable</h4>
-              <p id="pid1"></p>
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>SWAP TWO NUMBER</title>
+    </head>
+    <body style="background-color:lightblue">
+      <center>
+        <div class="logincentrecard">
+          <div class="card">
+            <div class="container">
+              <fieldset style="width: 500px;height: 500px;background-color: coral;>
+                  <h1>Swap Two Number</h1>
+                  <label for=" Num1">Enter First Number:</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="num1" placeholder="Enter First Number"> <br /><br />
+                <label for="Num2">Enter Second Number:</label>
+                &nbsp;&nbsp;<input type="text" id="num2" placeholder="Enter Second Number"><br /><br />
+                <button onclick="swap()">swap with temp variable</button>
+                <button onclick="swap1()">swap withot temp variable</button>
+                <h4>swap two number with temp variable</h4>
+                <p id="pid"></p>
+                <h4>swap two number without temp variable</h4>
+                <p id="pid1"></p>
+            </div>
+            <script language="JavaScript">
+              function swap() {
+                "use strict"
+                var temp, a, b;
+                a = parseInt(document.getElementById("num1").value);
+                b = parseInt(document.getElementById("num2").value);
+                temp = a;
+                a = b;
+                b = temp;
+                document.getElementById("pid").innerHTML = "<br>After Swaping values of a = " + a + " and b=" + b;
+              }
+              function swap1() {
+                "use strict"
+                var a, b;
+                a = parseInt(document.getElementById("num1").value);
+                b = parseInt(document.getElementById("num2").value);
+                a = a + b;
+                b = a - b;
+                a = a - b;
+                document.getElementById("pid1").innerHTML = "After Swapping: a =" + a + ", b=" + b;
+              }
+            </script>
           </div>
-          <script language="JavaScript">
-            function swap() {
-              "use strict"
-              var temp, a, b;
-              a = parseInt(document.getElementById("num1").value);
-              b = parseInt(document.getElementById("num2").value);
-              temp = a;
-              a = b;
-              b = temp;
-              document.getElementById("pid").innerHTML = "<br>After Swaping values of a = " + a + " and b=" + b;
-            }
-            function swap1() {
-              "use strict"
-              var a, b;
-              a = parseInt(document.getElementById("num1").value);
-              b = parseInt(document.getElementById("num2").value);
-              a = a + b;
-              b = a - b;
-              a = a - b;
-              document.getElementById("pid1").innerHTML = "After Swapping: a =" + a + ", b=" + b;
-            }
-          </script>
         </div>
-      </div>
-      </fieldset>
-    </center>
+        </fieldset>
+      </center>
   </body>
 </html>
