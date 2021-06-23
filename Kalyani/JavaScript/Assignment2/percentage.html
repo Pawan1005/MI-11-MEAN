@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Percentage of student</title>
+        <link rel="stylesheet" href="./style.css" />
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+        <style>
+            .form-control {
+                width: 25%;
+            }
+        </style>
+        <script>
+            function per() {
+                debugger;
+                ma = parseFloatdocument.getElementById("input1").value;
+                hi = parseFloatdocument.getElementById("input2").value;
+                en = parseFloatdocument.getElementById("input3").value;
+                ch = parseFloatdocument.getElementById("input4").value;
+                ph = parseFloatdocument.getElementById("input5").value;
+                total = ma + hi + en + ch + ph;
+                percentage = total / 5;
+                if (percentage >= 85) {
+                    document.getElementById("p").innerHTML = "Your GRade is:A+";
+                } else if (percentage <= 85 && percentage >= 75) {
+                    document.getElementById("p").innerHTML = "Your GRade is:A";
+                } else if (percentage <= 75 && percentage >= 65) {
+                    document.getElementById("p").innerHTML = "Your GRade is:B+";
+                } else if (percentage <= 65 && percentage >= 55) {
+                    document.getElementById("p").innerHTML = "Your GRade is:B";
+                } else if (percentage <= 55 && percentage >= 45) {
+                    document.getElementById("p").innerHTML = "Your GRade is:C+";
+                } else if (percentage <= 45 && percentage >= 35) {
+                    document.getElementById("p").innerHTML = "Your GRade is:C";
+                } else {
+                    document.getElementById("p").innerHTML = "Soory You Are fail";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <form>
+                <div class="row">
+                    <div class="col">
+                        Math<input type="text" class="form-control" placeholder="num1" id="input1" /><br />
+                        Histroy<input type="text" class="form-control" placeholder="num2" id="input2" /><br />
+                        English<input type="text" class="form-control" placeholder="num3" id="input3" /><br />
+                        Chemistroy<input type="text" class="form-control" placeholder="num4" id="input4" /><br />
+                        Phisics<input type="text" class="form-control" placeholder="num5" id="input5" /><br />
+                        <button onclick="per()" type="button" class="btn btn-primary align-content-lg-center">Result</button>
+                    </div>
+                </div>
+            </form>
+            <p id="p"></p>
+        </div>
+    </body>
+</html>
