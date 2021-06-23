@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Celcius</title>
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                transition: 0.3s;
+                width: 50%;
+                height: 100%;
+                border-radius: 20px;
+                background-color: thistle;
+            }
+            .logincentrecard {
+                margin: auto;
+                width: 80%;
+                height: 70%;
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="logincentrecard">
+            <div class="card">
+                <div class="container">
+                    <h1>Conversion of Celsius to Fahrenheit</h1>
+                    <label style="text-align: center;">Enter Temperature in celcius:</label><br /><br />
+                    <input type="text" id="temp" placeholder="Enter the number" /><br /><br />
+                    <button onclick="temp()" style="background-color: thistle;">Convert</button>
+                    <h2>After Conversion</h2>
+                    <p id="pid"></p>
+                </div>
+                <script language="JavaScript">
+                    function temp() {
+                        "use strict";
+                        var c, f;
+                        c = parseInt(document.getElementById("temp").value);
+                        f = c * 1.8 + 32;
+                        document.getElementById("pid").innerHTML = "<br> Temperature in Fahrenheit is = " + f;
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
