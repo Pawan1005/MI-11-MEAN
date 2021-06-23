@@ -27,28 +27,24 @@
                 forth=parseInt(document.getElementById("input4").value);
                 five=parseInt(document.getElementById("input5").value);
                 if(first>second && first>third && first>forth && first<five||first>second && first>third && first<forth && forth>five|| first>second && first<third&& first>forth && first>five|| first<second && first>third && first>forth && first>five)
-                    { 
+                { 
                     document.getElementById("p").innerHTML="<h2>Second Largest Number is :</h2>" +"<h2>" +first +"</h2>";
-                    }
-                else if(second>first && second>third && second>forth && second<five||second>first&& second>third && second<forth && second>five||second>first && second<third && second>forth && second>five|| second<first && second>third && second>forth && second>five)
-                    {
-                    document.getElementById("p").innerHTML="<h2>Second Largest Number is :</h2>" +"<h2>" +second +"</h2>";
-                    }
-                else if(third>first && third>second && third>forth && forth<five||third>first && third>second && third<forth && third>five|| third>first && third<second && third>forth && third>five|| third<first && third>second && third>forth&& third>five)
-                    {
-                        document.getElementById("p").innerHTML="<h2>Second Largest Number is :</h2>" +"<h2>" +third+"</h2>";
-                    }
-                 else if(forth>first && forth>second && forth>third && forth<five||forth>first&& forth>second && forth<third&& forth>five||forth>first && forth<second && forth>third && forth>five||forth<first &&forth>second &&forth>third&&forth>five){
-                    {
-                        document.getElementById("p").innerHTML="<h2>Second Largest Number is :</h2>" +"<h2>" +forth+"</h2>";
-                    }
                 }
-                else if(five>first && five>second && five>third && five<forth||five>first &&five>second&&five<third&&five>forth||five>fist&& five<second&& five>third&& five>forth||five<first&& five>second&& five>third&& five>forth) 
-                    {
-                    document.getElementById("p").innerHTML="<h2>Second Largest Number is :</h2>" +"<h2>" +five +"</h2>";
-                    }
+                else if(second>first && second>third && second>forth && second<five||second>first&& second>third && second<forth && second>five||second>first && second<third && second>forth && second>five|| second<first && second>third && second>forth && second>five)
+                {
+                    document.getElementById("p").innerHTML="<h2>Second Largest Number is :</h2>" +"<h2>" +second +"</h2>";
+                }
+                else if(third>first && third>second && third>forth && forth<five||third>first && third>second && third<forth && third>five|| third>first && third<second && third>forth && third>five|| third<first && third>second && third>forth&& third>five)
+                {
+                    document.getElementById("p").innerHTML="<h2>Second Largest Number is :</h2>" +"<h2>" +third+"</h2>";
+                }
+                 else if(forth>first && forth>second && forth>third && forth<five||forth>first&& forth>second && forth<third&& forth>five||forth>first && forth<second && forth>third && forth>five||forth<first &&forth>second &&forth>third&&forth>five){
+                {
+                    document.getElementById("p").innerHTML="<h2>Second Largest Number is :</h2>" +"<h2>" +forth+"</h2>";
+                }
+                }
                 else{
-                    document.getElementById("p").innerHTML="Enter Number!!";
+                    document.getElementById("p").innerHTML="<h2>Second Largest Number is :</h2>" +"<h2>" +five+"</h2>";
                 }
             }  
         </script>
