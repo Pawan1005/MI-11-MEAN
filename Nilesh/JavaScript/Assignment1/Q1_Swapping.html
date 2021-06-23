@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Swapping</title>
+        <style>
+            body {
+                background-color: rgb(92, 92, 92);
+            }
+            h1 {
+                text-align: center;
+                color: white;
+                margin-top: 5%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(247, 153, 76, 0.596);
+                width: 500px;
+                height: 400px;
+                margin: auto;
+                gap: 30px;
+            }
+            #firstnumber {
+                margin-left: 10px;       
+                margin-bottom: 15px;
+                padding: 4px 8px;
+                font-weight: bold;
+                outline: none;         
+            }
+            #secondnumber {
+                margin-left: 10px;
+                outline: none;
+                padding: 4px 8px;
+                font-weight: bold;
+            }
+            p {
+                width: 270px;
+                padding: 9px 2px 9px 13px;
+                background-color: white;
+                font-weight: bold;
+            }
+            span {
+                color: rgb(0, 68, 255);
+                font-size: 21px;
+            }
+            #value_a, #value_b {
+                color: rgb(255, 0, 0);
+                font-size: 18px;
+            }
+            button {
+                padding: 7px 11px;
+                margin: 0 8px;
+                font-weight: bold;
+                font-size: 17px;
+                text-transform: uppercase;
+                border: 1px solid gray;
+                color: white;
+            }
+            .btn1 {
+                background-color: red;  
+            }
+            .btn2 {
+                background-color: rgb(0, 38, 255);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Swapping of two numbers</h1>
+        <div class="main">
+            <div>
+                <div class="input1">
+                    <label for="">Enter the value of a : </label>
+                    <input type="text" id="firstnumber">
+                </div>
+                <div class="input2">
+                    <label for="">Enter the value of b : </label>
+                    <input type="text" id="secondnumber">
+                </div>
+            </div>
+            <div class="para">
+                <p>After swapping values of : &nbsp;&nbsp;<span>a</span> =  <span id = "value_a"></span></p>
+                <p>After swapping values of : &nbsp;&nbsp;<span>b</span> =  <span id = "value_b"></span></p>
+            </div>
+            <div class="btn">
+                <button class="btn1" onclick="swapping1()">Method 1</button>
+                <button class="btn2" onclick="swapping2()">Method 2</button>
+            </div>
+        </div>
+        <script>
+            function swapping1() {
+                var sum,a,b,temp;
+                a = parseInt(document.getElementById("firstnumber").value);
+                b = parseInt(document.getElementById("secondnumber").value);
+                temp = a;
+                a = b;
+                b = temp;
+                document.getElementById("value_a").innerHTML = +a;
+                document.getElementById("value_b").innerHTML = +b;
+            }
+            function swapping2() {
+                var a,b;
+                a = parseInt(document.getElementById("firstnumber").value);
+                b = parseInt(document.getElementById("secondnumber").value);
+                a = a + b;
+                b = a - b;
+                a = a - b;
+                document.getElementById("value_a").innerHTML = +a;
+                document.getElementById("value_b").innerHTML = +b;
+            }
+        </script>
+    </body>
+</html>
