@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>js1.1</title>
+        <style>
+            body {
+                text-align: center;
+                background-image: url(sc.jpg);
+                background-size: cover;
+            }
+            h1 {
+                background-color: rgba(0, 0, 0, 0.342);
+                text-shadow: 2px 2px wheat;
+            }
+            .a {
+                margin: 40px;
+            }
+            hr {
+                margin-bottom: 200px;
+            }
+            button {
+                background-color: rgb(0, 0, 0);
+                height: 50px;
+                width: 100px;
+                color: rgb(255, 255, 255);
+                font-size: 20px;
+            }
+            input {
+                padding: 10px 50px;
+            }
+        </style>
+        <script>
+            function show() {
+                a = parseInt(document.getElementById("num1").value);
+                b = parseInt(document.getElementById("num2").value);
+                first = b;
+                second = a;
+                document.getElementById("pid").innerHTML = "A is " + first + " and B is " + second;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>NUMBER SWAPPER</h1>
+        <hr />
+        <div class="a">Value of A : <input type="text" id="num1" placeholder="Enter value of A" /></div>
+        <div class="a">Value of B :<input type="text" id="num2" placeholder="Enrer value of B" /></div>
+        <br />
+        <button onclick="show()">SWAP</button>
+        <h4>CONVERTED NUMBERS ARE GIVEN BELOW</h4>
+        <p id="pid">swaped values</p>
+    </body>
+</html>
