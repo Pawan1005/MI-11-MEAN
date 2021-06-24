@@ -17,27 +17,27 @@
         </style>
     </head>
     <script language="javascript">
-        function show() {
+        function show1() {
             "use strict";
             var sum, a, b, temp;
             a = parseInt(document.getElementById("num1").value);
             b = parseInt(document.getElementById("num2").value);
-            document.getElementById("pid").innerHTML += "<br>Before swapping a= " + a + " and b=" + b + "";
+            document.getElementById("pid").innerHTML += "<br>Before swapping a= " + a + " and b=" + b ;
             temp = a;
             a = b;
             b = temp;
-            document.getElementById("pid").innerHTML += "<br>After swapping using third variable a= " + a + " and b=" + b + "";
+            document.getElementById("pid").innerHTML += "<br>After swapping using third variable a= " + a + " and b=" + b ;
         }
-        function show3() {
+        function show2() {
             "use strict";
             var sum, a, b;
             a = parseInt(document.getElementById("num1").value);
             b = parseInt(document.getElementById("num2").value);
-            document.getElementById("pid1").innerHTML += "<br>Before swapping  a= " + a + " and b=" + b + ""
+            document.getElementById("pid1").innerHTML += "<br>Before swapping  a= " + a + " and b=" + b ;
             a = a + b;
             b = a - b;
             a = a - b;
-            document.getElementById("pid1").innerHTML += "<br>After swapping without using third variable a= " + a + " and b=" + b + "";
+            document.getElementById("pid1").innerHTML += "<br>After swapping without using third variable a= " + a + " and b=" + b ;
         }
     </script>
 </html>
@@ -46,8 +46,8 @@
     <h1>swaping of number</h1>
     Number1 : <input type="text" id="num1" /><br /><br />
     Number2 : <input type="text" id="num2" /><br /><br />
-    <button onclick="show()">swap1</button>
-    <button onclick="show3()">swap2</button>
+    <button onclick="show1()">swap1</button>
+    <button onclick="show2()">swap2</button>
     <p id="pid"></p>
     <p id="pid1"></p>
 </div>
