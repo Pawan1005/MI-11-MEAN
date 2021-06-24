@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Assignment 1</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            .container {
+                background-color: rgb(127, 194, 206);
+                width: 850px;
+                height: 600px;
+                border-radius: 15px;
+                margin-left: 260px;
+                border-radius: 15px;
+            }
+            
+            .lable {
+                max-width: 15px;
+                margin-left: 700px;
+            }
+            .btn {
+                background-color: rgb(85, 129, 224);
+                padding: 15px;
+                color: white;
+                border-radius: 15px;
+                margin-left: 270px;
+            }
+            .subject{
+                margin-left: 150px;
+            }
+            .grade{
+                margin-left: 230px;
+            }
+            
+        </style>
+    </head>
+    <script language="javascript">
+        function show() {
+            "use strict";
+            var a,
+                b,
+                c,
+                d,
+                e,
+                t,
+                T = 500,
+                p;
+            a = parseInt(document.getElementById("num1").value);
+            b = parseInt(document.getElementById("num2").value);
+            c = parseInt(document.getElementById("num3").value);
+            d = parseInt(document.getElementById("num4").value);
+            e = parseInt(document.getElementById("num5").value);
+
+            document.getElementById("pid").innerHTML += " Marks English= " + a + " ,Science=" + b + " ,Math=" + c + " ,Geography=" + d + " ,History=" + e;
+
+            {
+                t = a + b + c + d + e;
+            }
+
+            document.getElementById("pid").innerHTML += "<br> Total = " + t;
+            {
+                p = (t / T) * 100;
+            }
+            document.getElementById("pid").innerHTML += "<br> Percentage  = " + p + "%";
+    
+            if (p >= 75) {
+                document.getElementById("pid").innerHTML += "<br> <b>Congratulation</b>";
+                document.getElementById("pid").innerHTML += "<br> <b>A Grade</b>";
+            } else if (p >= 60) {
+                document.getElementById("pid").innerHTML += "<br> <b>Congratulation</b>";
+                document.getElementById("pid").innerHTML += "<br> <b> B Grade </b>";
+            } else if (p >= 40) {
+                document.getElementById("pid").innerHTML += "<br> <b>Congratulation</b>";
+                document.getElementById("pid").innerHTML += "<br> <b> C Grade </b>";
+            } else if (p >= 30) {
+                document.getElementById("pid").innerHTML += "<br> <b>Congratulation</b>";
+                document.getElementById("pid").innerHTML += "<br>  <b> D Grade </b>";
+            } else if (p < 30) {
+                document.getElementById("pid").innerHTML += "<br> <b>Congratulation</b>";
+                document.getElementById("pid").innerHTML += "<br> f = ";
+            }
+        }
+    </script>
+    <body>
+        <div class="container">
+            <br /><br /><br />
+            <h1 style="text-align: center"><b>Student Grade System</b></h1>
+            <div class="subject">
+                Enter marks of English : <input type="text" id="num1" placeholder="enter marks of english" /><br /><br />
+                Enter marks of Science : <input type="text" id="num2" placeholder="enter marks of science" /><br /><br />
+                Enter marks of Math : <input type="text" id="num3" placeholder="enter marks of math" /><br /><br />
+                Enter marks of Geography : <input type="text" id="num4" placeholder="enter marks of geography" /><br /><br />
+                Enter marks of History: <input type="text" id="num5" placeholder="enter marks of history" /><br /><br />
+            </div>    
+                <button onclick="show()" class="btn" style="text-align: center">Submit</button>
+                <div class="grade">
+                <p id="pid"></p>
+                </div>
+        </div>
+    </body>
+</html>
