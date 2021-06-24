@@ -17,7 +17,7 @@
         </style>
     </head>
     <script language="javascript">
-        function  calculat() {
+        function calculat() {
             "use strict";
             var c, f;
             c = document.getElementById("num1").value;
@@ -27,11 +27,13 @@
             document.getElementById("pid").innerHTML += " " + f;
         }
     </script>
+    <body>
+        <div class="container">
+            <br /><br /><br />
+            <h1><b>Convertion of Celcius to Fahrenhet</b></h1>
+            Number : <input type="text" id="num1" /><br />
+            <button onclick="calculat()">Convert</button>
+            <p id="pid"></p>
+        </div>
+    </body>
 </html>
-<div class="container">
-    <br /><br /><br />
-    <h1><b>Convertion of Celcius to Fahrenhet</b></h1>
-    Number : <input type="text" id="num1" /><br />
-    <button onclick="calculat()">Convert</button>
-    <p id="pid"></p>
-</div>
