@@ -2,7 +2,6 @@
 const rowNumInput = document.getElementById("rownum");
 const colNumInput = document.getElementById("colnum");
 const patternOutput = document.getElementById("pattern-output");
-
 function printPattern() {
     let rows = rowNumInput.value;
     let cols = colNumInput.value;
@@ -15,9 +14,7 @@ function printPattern() {
     }
     patternOutput.innerHTML = output;
 }
-
 /* Code for the Prime number */
-
 function isPrime() {
     let num = parseInt(document.getElementById("num").value);
 
@@ -34,7 +31,6 @@ function isPrime() {
         }
     }
 }
-
 function isLeap() {
     let year = parseInt(document.getElementById("year").value);
 
@@ -53,7 +49,6 @@ function isLeap() {
         ).innerHTML = `nope ${year} is not even a year`;
     }
 }
-
 function isEven() {
     let number = parseInt(document.getElementById("even").value);
 
@@ -67,7 +62,6 @@ function isEven() {
         ).innerHTML = `${number} is Odd Number`;
     }
 }
-
 function fact() {
     let number = parseInt(document.getElementById("fact").value);
     let fact = 1;

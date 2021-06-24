@@ -7,13 +7,11 @@ body {
     align-items: center;
     flex-wrap: wrap;
 }
-
 .flex-center {
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .container {
     border-radius: 16px;
     background-color: rgb(255, 255, 255);
@@ -30,7 +28,6 @@ body {
     flex-direction: column;
     margin: 10px;
 }
-
 .container p {
     position: absolute;
     top: -10px;
@@ -38,7 +35,6 @@ body {
     font-weight: 600;
     font-size: 20px;
 }
-
 input {
     background-color: rgb(255, 255, 255);
     border: none;
@@ -51,7 +47,6 @@ input {
     text-align: center;
     font-size: 20px;
 }
-
 button {
     border-radius: 50px;
     height: 50px;
@@ -66,13 +61,11 @@ button {
     outline: none;
     font-size: 18px;
 }
-
 .input-box {
     flex-direction: column;
     padding: 15px;
     text-align: center;
 }
-
 .output-box {
     background-color: #ff645c;
     padding: 20px;
@@ -82,7 +75,6 @@ button {
     stroke-width: 500;
     box-shadow: inset 0px 0px 10px #ff007771;
 }
-
 /* Leap */
 .prime-container input,
 .leap-container input,
