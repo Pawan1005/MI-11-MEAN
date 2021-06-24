@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Leap_year</title>    
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+                transition: 0.3s;
+                width: 40%;
+                height: 100%;
+                border-radius: 20px;
+                background-color: thistle;
+                margin: auto;
+                margin-top: 50px;
+            } 
+            button {
+                position: relative;
+                background-color:purple;
+                border: none;
+                font-size: 20px;
+                color: #ffffff;
+                padding: 10px;
+                width: 180px;
+                text-align: center;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+                text-decoration: none;
+                overflow: hidden;
+                cursor: pointer;
+                margin-left: 130px;
+            } 
+            #pid{
+                color:purple;
+                text-align: center;
+
+            }           
+        </style>  
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <h1 style="text-align: center;"> Leap year or not</h1>
+                &nbsp; &nbsp; &nbsp; &nbsp;  <label for="Num1">Enter the year:</label>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="num1" placeholder="Enter the year"> <br><br>
+                <button  onclick="show()">Check</button>
+                <p id="pid"></p>
+            </div>
+            <script>
+                function show() {
+                    a = parseInt(document.getElementById("num1").value);                  
+                    if ((a % 4 == 0 && a % 100 != 0) || a % 400 == 0) { 
+                        document.getElementById("pid").innerHTML = "This year is a leap year";
+                    } else {
+                        document.getElementById("pid").innerHTML = "This year is not a leap year";                           
+                    }
+                }
+            </script>     
+        </div>
+    </body>
+</html>
