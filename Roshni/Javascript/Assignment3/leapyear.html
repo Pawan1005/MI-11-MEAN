@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>leapyear</title>
+        <style>
+            .container {
+                background-color: rgb(204, 0, 255);
+                width: 500px;
+            }
+            #pid {
+                color: rgb(0, 255, 42);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="container">
+                <div class="card">
+                    <h1>Leap Year</h1>
+                    <label for="Num1">Enter year</label>
+                    <input type="text" id="num1" />
+                    <input type="button" value="Check" onclick="leapyear()" />
+                    <p id="pid"></p>
+
+                    <script>
+                        function leapyear() {
+                            a = parseInt(document.getElementById("num1").value);
+                            if ((a % 4 == 0 && a % 100 != 0) || a % 400 == 0) {
+                                document.getElementById("pid").innerHTML = "<h2>It is Leap Year</h2>";
+                            } else {
+                                document.getElementById("pid").innerHTML = "<h2>It is not a Leap Year</h2>";
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
