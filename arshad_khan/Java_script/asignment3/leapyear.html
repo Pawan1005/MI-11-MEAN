@@ -13,7 +13,7 @@
             }
         </style>
     </head>
-    <body style="background-color:lightblue">
+    <body style="background-color: lightblue">
         <center>
             <div class="logincentrecard">
                 <div class="card">
@@ -21,21 +21,25 @@
                         <fieldset class="ft">
                             <h1>FIND LEAP YEAR</h1>
                             <label for="Num1">Enter Year:</label>
-                            <input type="text" id="leap"
-                                placeholder="Enter year">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
-                            <button onclick="show()" style="background-color: red;color: white;">Find Leap Year</button>
+                            <input
+                                type="text"
+                                id="leap"
+                                placeholder="Enter year"
+                            />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
+                            <button onclick="show()" style="background-color: red; color: white">Find Leap Year</button>
                             <p id="pid"></p>
+                            <script>
+                                function show() {
+                                    year = parseInt(document.getElementById("leap").value);
+                                    if ((year % 4 == 0 && year % 100 != 0) || year % 400 == 0) {
+                                        document.getElementById("pid").innerHTML = "It is Leap Year";
+                                    } else {
+                                        document.getElementById("pid").innerHTML = "It is not a Leap Year";
+                                    }
+                                }
+                            </script>
+                        </fieldset>
                     </div>
-                    <script>
-                        function show() {
-                            year = parseInt(document.getElementById("leap").value);
-                            if ((year % 4 == 0 && year % 100 !=0) || year % 400 == 0) {
-                                document.getElementById("pid").innerHTML = "It is Leap Year";
-                            } else {
-                                document.getElementById("pid").innerHTML = "It is not a Leap Year";
-                            }
-                        }
-                    </script>
                 </div>
             </div>
         </center>

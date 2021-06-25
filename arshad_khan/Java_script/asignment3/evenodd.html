@@ -13,7 +13,7 @@
             }
         </style>
     </head>
-    <body style="background-color:lightblue">
+    <body style="background-color: lightblue">
         <center>
             <div class="logincentrecard">
                 <div class="card">
@@ -21,21 +21,25 @@
                         <fieldset class="ft">
                             <h1>FIND EVEN ODD NUMBER</h1>
                             <label for="Num1">Enter Number:</label>
-                            <input type="text" id="n"
-                                placeholder="Enter Number">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
-                            <button onclick="show()" style="background-color: red;color: white;">Find Even Odd Number</button>
+                            <input
+                                type="text"
+                                id="n"
+                                placeholder="Enter Number"
+                            />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
+                            <button onclick="show()" style="background-color: red; color: white">Find Even Odd Number</button>
                             <p id="pid"></p>
+                            <script>
+                                function show() {
+                                    n = parseInt(document.getElementById("n").value);
+                                    if (n % 2 == 0) {
+                                        document.getElementById("pid").innerHTML = "It is an even no";
+                                    } else {
+                                        document.getElementById("pid").innerHTML = "It is odd no";
+                                    }
+                                }
+                            </script>
+                        </fieldset>
                     </div>
-                    <script>
-                        function show() {
-                             n = parseInt(document.getElementById("n").value);
-                            if (n % 2 == 0) {
-                                document.getElementById("pid").innerHTML = "It is an even no";
-                            } else {
-                                document.getElementById("pid").innerHTML = "It is odd no";
-                            }
-                        }
-                    </script>
                 </div>
             </div>
         </center>
