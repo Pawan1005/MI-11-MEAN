@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Assignment 1</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            .container {
+                background-color: rgb(203, 220, 216);
+                width: 350px;
+                height: 480px;
+                text-align: center;
+                margin-left: 480px;
+                box-shadow: 7px 7px 15px;
+                border-radius: 15px;
+            }
+            .btn {
+                padding: 15px;
+                background-color: red;
+                outline-color: white;
+                outline-width: 15px;
+                color: white;
+            }
+            .label {
+                border-radius: 15px;
+                box-sizing: 30px;
+            }
+        </style>
+    </head>
+    <script language="javascript">
+        function show() {
+            num = document.getElementById("num1").value;
+            var Number = num;
+            var digits = 0;
+            while (num > 0) {
+                digits = digits + 1;
+                num = parseInt(num / 10);
+            }
+            num = Number;
+            var sum = 0;
+            while (num > 0) {
+                var digit = num % 10;
+                sum = sum + Math.pow(digit, digits);
+                num = parseInt(num / 10);
+            }
+            if (sum == Number) {
+                document.getElementById("pid").style.color = "blue";
+                document.getElementById("pid").innerHTML = "The number: " + Number + " is Armstrong Number";
+            } else {
+                document.getElementById("pid").style.color = "red";
+                document.getElementById("pid").innerHTML = "The number: " + Number + " is NOT Armstrong Number";
+            }
+        }
+    </script>
+    <body>
+        <div class="container">
+            <br /><br /><br />
+            <h1 style="color: cornflowerblue;">Chek Armstrong Number Or not</h1>
+            Enter the Number : <input type="text" id="num1" /><br /><br />
+            <button onclick="show()" class="btn">Find</button>
+            <p id="pid"></p>
+        </div>
+    </body>
+</html>
