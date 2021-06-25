@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            function fun() {
+                first = parseInt(document.getElementById("input1").value);
+                second = parseInt(document.getElementById("input2").value);
+                third = parseInt(document.getElementById("input3").value);
+                fourth = parseInt(document.getElementById("input4").value);
+                fifth = parseInt(document.getElementById("input5").value);
+                total = first + second + third + fourth + fifth;
+                percentage = total / 5;
+                if (percentage >= 75 && percentage <= 100) {
+                    document.getElementById("h").innerHTML = "Congratulation You are passed!!!";
+                    parseInt((document.getElementById("pid").innerHTML = "Your Percentage is " + "<h2>" + percentage + "</h2>"));
+                    document.getElementById("pid2").innerHTML = "You are passed with Grade  <h2>A</h2>";
+                } else if (percentage >= 60 && percentage <= 74) {
+                    document.getElementById("h").innerHTML = "Congratulation You are passed!!!";
+                    parseInt((document.getElementById("pid").innerHTML = "Your Percentage is " + "<h2>" + percentage + "</h2>"));
+                    document.getElementById("pid2").innerHTML = "You are passed with Grade  <h2>B</h2>";
+                } else if (percentage >= 40 && percentage <= 59) {
+                    document.getElementById("h").innerHTML = "Congratulation You are passed!!!";
+                    parseInt((document.getElementById("pid").innerHTML = "Your Percentage is " + "<h2>" + percentage + "</h2>"));
+                    document.getElementById("pid2").innerHTML = "You are passed with Grade  <h2>C</h2>";
+                } else if (percentage >= 30 && percentage <= 39) {
+                    document.getElementById("h").innerHTML = "Congratulation You are passed!!!";
+                    parseInt((document.getElementById("pid").innerHTML = "Your Percentage is " + "<h2>" + percentage + "</h2>"));
+                    document.getElementById("pid2").innerHTML = "You are passed with Grade  <h2>D</h2>";
+                } else {
+                    document.getElementById("h").innerHTML = "You are Failed!!!";
+                    parseInt((document.getElementById("pid").innerHTML = "Your Percentage is " + "<h2>" + percentage + "</h2>"));
+                    document.getElementById("pid2").innerHTML = "You are Failed with Grade  <h2>F</h2>";
+                }
+            }
+        </script>
+        <style>
+            body {
+                background-image: linear-gradient(to bottom right, black, rgb(189, 189, 181));
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                display: flex;
+                justify-content: center;
+            }
+            div {
+                display: flex;
+                flex-direction: column;
+                border: 2px solid grey;
+                background-color: white;
+                width: 600px;
+                box-shadow: 10px 5px 5px grey;
+                border-radius: 20px 30px 50px;
+                margin-top: 100px;
+                padding: 10px;
+            }
+            input {
+                width: auto;
+                padding: 10px;
+                border-radius: 10px;
+                margin: 10px;
+            }
+
+            button {
+                margin-top: 20px;
+                padding: 10px;
+                color: white;
+                width: auto;
+                font-size: 25px;
+                border-radius: 40px 20px;
+                background-image: linear-gradient(to right bottom, black, rgb(189, 189, 181));
+            }
+            h2 {
+                align-self: center;
+                padding: 10px;
+                background-color: black;
+                color: white;
+                text-align: center;
+            }
+            p {
+                font-size: 20px;
+                align-self: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <input type="text" id="input1" placeholder="Enter your English Marks" />
+            <input type="text" id="input2" placeholder="Enter your Hindi Marks" />
+            <input type="text" id="input3" placeholder="Enter your Math Marks" />
+            <input type="text" id="input4" placeholder="Enter your Sanskrit Marks" />
+            <input type="text" id="input5" placeholder="Enter your Science Marks" />
+            <button onclick="fun()">button</button>
+            <h1 id="h" style="align-self: center"></h1>
+            <p id="pid"></p>
+            <p id="pid2"></p>
+        </div>
+    </body>
+</html>

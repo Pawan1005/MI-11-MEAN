@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+            function fun() {
+                var C = parseInt(document.getElementById("num").value);
+                var F = (C * 9/5) + 32;
+                parseInt(document.getElementById("pid").innerHTML=C + " °C " + "is equal to "+ F + " °F");
+            }
+        </script>
+    </head>
+    <body>
+        <h1><b>Conversion of Celcius to Fahrenheit </b></h1>
+        <div class="m-5 text-white p-4 shadow" style="height: auto; width: fit-content; background-color: rgb(70, 37, 75);">
+            <label for="">Temp:</label> 
+            <input type="number" name="" id="num">
+            <label for="">°C</label>
+            <button onclick="fun()">Convert</button><br>
+            <h3><b>After Conversion</b></h3>
+            <p id="pid"></p>
+        </div>
+    </body>
+</html>
