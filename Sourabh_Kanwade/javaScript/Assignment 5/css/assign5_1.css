@@ -1,0 +1,36 @@
+#number {
+    font-size: 72px;
+    width: 375px;
+    border-radius: 20px;
+    border: none;
+    outline: none;
+    text-align: center;
+    background-color: transparent;
+    color: #39cefc;
+}
+body {
+    background-image: radial-gradient(circle closest-side at 90% 40%, #39cefc, #b6e5ed);
+    color: #04b7ee;
+}
+.container {
+    background-color: rgb(247, 247, 247);
+    box-shadow: 5px 5px 20px rgb(247, 247, 247);
+}
+small {
+    font-size: 16px;
+    margin: 20px 0;
+}
+button {
+    background-color: #39cefc;
+    color: rgb(238, 238, 238);
+    box-shadow: 2px 5px 10px #39cefc;
+}
+p {
+    font-size: 20px;
+}
+.error {
+    color: #fc7739;
+}
+.true {
+    color: #39fc39;
+}
