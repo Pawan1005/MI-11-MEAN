@@ -28,24 +28,26 @@
         </style>
         <script language="Javascript">
             function isPrime(){
-           prime=parseInt(document.getElementById("input1").value);
-           if(prime==1){
-            document.getElementById("p").innerHTML="It is not a prime nor composite number " +prime;
-           }else if(prime<1){
-            document.getElementById("p").innerHTML="It is not a prime number " +prime;
-           }else{
-               for(var i=2; i<prime; i++){
-                   if(prime%i==0){
+                prime=parseInt(document.getElementById("input1").value);
+                if(prime==1){
+                    document.getElementById("p").innerHTML="It is not a prime nor composite number " +prime;
+                }
+                else if(prime<1){
                     document.getElementById("p").innerHTML="It is not a prime number " +prime;
-                       break;
-                   }
-                   else{
-                    document.getElementById("p").innerHTML="It is a prime number " +prime;
-                       break;
-                   }
-               }
-           }
-        } 
+                }
+                else{
+                    for(var i=2; i<prime; i++){
+                        if(prime%i==0){
+                            document.getElementById("p").innerHTML="It is not a prime number " +prime;
+                            break;
+                        }
+                        else{
+                            document.getElementById("p").innerHTML="It is a prime number " +prime;
+                            break;
+                        }
+                    }
+                }
+            } 
         </script>
     </head>
     <body>
