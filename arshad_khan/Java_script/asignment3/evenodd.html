@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FIND EVEN ODD NUMBER</title>
+        <style>
+            .ft {
+                width: 500px;
+                height: 500px;
+                background-color: lightyellow;
+            }
+        </style>
+    </head>
+    <body style="background-color:lightblue">
+        <center>
+            <div class="logincentrecard">
+                <div class="card">
+                    <div class="container">
+                        <fieldset class="ft">
+                            <h1>FIND EVEN ODD NUMBER</h1>
+                            <label for="Num1">Enter Number:</label>
+                            <input type="text" id="n"
+                                placeholder="Enter Number">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
+                            <button onclick="show()" style="background-color: red;color: white;">Find Even Odd Number</button>
+                            <p id="pid"></p>
+                    </div>
+                    <script>
+                        function show() {
+                             n = parseInt(document.getElementById("n").value);
+                            if (n % 2 == 0) {
+                                document.getElementById("pid").innerHTML = "It is an even no";
+                            } else {
+                                document.getElementById("pid").innerHTML = "It is odd no";
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </center>
+    </body>
+</html>
