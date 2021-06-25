@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Krishnamurthy Number</title>
+        <style>
+            body {
+                height: 1000px;
+                background-image: linear-gradient(rgba(247, 163, 7, 0.74), rgba(247, 163, 7, 0.363), rgba(247, 163, 7, 0.575));
+            }
+        </style>
+    </head>
+    <body>
+        <script language="javascript">
+            function show() {
+                var no,
+                    temp,
+                    rem,
+                    sum = 0,
+                    fact;
+                no = parseInt(document.getElementById("num1").value);
+                sum = 0;
+                temp = no;
+
+                while (temp > 0) {
+                    fact = 1;
+                    rem = temp % 10;
+                    temp = parseInt(temp / 10);
+                    for (var i = rem; i >= 1; i--) {
+                        fact = fact * i;
+                    }
+
+                    sum = sum + fact;
+                }
+                if (sum == no) {
+                    document.getElementById("pid").innerHTML += no + " is an Krishnamurthy number.";
+                } else {
+                    document.getElementById("pid").innerHTML += no + " is not an Krishnamurthy number.";
+                }
+            }
+        </script>
+        <div style="width: 50%; position: absolute; left: 500px; top: 200px">
+            <div style="text-align: center; background-color: rgba(231, 112, 15, 0.747); border-radius: 25px 25px 25px 25px">
+                <br /><br />
+                <h1>Krishnamurthy Number</h1>
+                <br /><br />
+                Enter Number : <input type="text" id="num1" />
+                <button onclick="show()">Click here</button>
+                <br />
+                <p id="pid" style="color: blue"></p>
+                <br /><br />
+            </div>
+        </div>
+    </body>
+</html>
