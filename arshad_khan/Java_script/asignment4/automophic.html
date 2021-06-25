@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FIND VOWELS</title>
+    </head>
+    <body style="background-color:lightgrey">
+        <center>
+            <div class="logincentrecard">
+                <div class="card">
+                    <div class="container">
+                            <h1>FIND AUTOMORPHIC NUMBER</h1>
+                            <label for="Num1">Enter Number:</label>
+                            <input type="text" id="num"
+                                placeholder="Enter Number">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
+                            <button onclick="show()" style="background-color: red;color: white;">Find Automorphic</button>
+                            <p id="pid"></p>
+                    </div>
+                    <script>
+                        function show() {
+                            var a,
+                                b,
+                                c,
+                                temp,
+                                last = 0;
+                            a = parseInt(document.getElementById("num").value);
+                            b = a.toString().length;
+                            c = a * a;
+                            for (i = 1; i <= b; i++) {
+                                temp = c % 10;
+                                last += temp * 10 ** (i - 1);
+                                c = parseInt(c / 10);
+                            }
+                            if (a == last) {
+                                document.getElementById("pid").innerHTML = a + " is a automorphic number";
+                            } else {
+                                document.getElementById("pid").innerHTML = a + " is not automorphic number";
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </center>
+    </body>
+</html>

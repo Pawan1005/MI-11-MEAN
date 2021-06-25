@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body style="background-color:lightgrey">
+        <center>
+            <div class="logincentrecard">
+                <div class="card">
+                    <div class="container">
+                            <h1>Krishnamurthy number</h1>
+                            <label for="Num1">Enter Number:</label>
+                            <input type="text" id="fact"
+                                placeholder="Enter Number">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
+                            <button onclick="show()" style="background-color: red;color: white;">Find Krishnamurthy
+                                Number</button>
+                            <p id="pid"></p>
+                    </div>
+                    <script>
+                        function show() {
+                            var a,
+                                b,
+                                c = 1,
+                                temp,
+                                reminder,
+                                sum = 0;
+                            a = parseInt(document.getElementById("fact").value);
+                            temp = a;
+                            while (temp > 0) {
+                                reminder = temp % 10;
+                                for (i = reminder; i > 0; i--) {
+                                    c *= i;
+                                }
+                                sum = sum + c;
+                                temp = parseInt(temp / 10);
+                                c = 1;
+                            }
+                            if (sum == a) {
+                                document.getElementById("pid").innerHTML = a + " is a krishnamurthy number";
+                            } else {
+                                document.getElementById("pid").innerHTML = a + " is not a krishnamurthy ";
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </center>
+    </body>
+</html>

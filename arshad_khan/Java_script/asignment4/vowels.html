@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FIND VOWELS</title>
+    </head>
+    <body style="background-color:lightgrey">
+        <center>
+            <div class="logincentrecard">
+                <div class="card">
+                    <div class="container">
+                            <h1>FIND VOWELS</h1>
+                            <label for="char">Enter Character:</label>
+                            <input type="text" id="vow"
+                                placeholder="Enter Character">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
+                            <button onclick="show()" style="background-color: red;color: white;">Find Vowels</button>
+                            <p id="pid"></p>
+                    </div>
+                    <script>
+                        function show() {
+                            var a, b;
+                            a = document.getElementById("vow").value;
+                            b = a.toUpperCase();
+                            if (a.length > 1) {
+                                document.getElementById("pid").innerHTML = "Enter only a single character";
+                            } else {
+                                switch (b) {
+                                    case "A":
+                                        document.getElementById("pid").innerHTML = a + "  is a vowel";
+                                        break;
+                                    case "E":
+                                        document.getElementById("pid").innerHTML = a + "  is a vowel";
+                                        break;
+                                    case "I":
+                                        document.getElementById("pid").innerHTML = a + "  is a vowel";
+                                        break;
+                                    case "O":
+                                        document.getElementById("pid").innerHTML = a + "  is a vowel";
+                                        break;
+                                    case "U":
+                                        document.getElementById("pid").innerHTML = a + "  is a vowel";
+                                        break;
+                                    default:
+                                        document.getElementById("pid").innerHTML = a + "  is not a vowel";
+                                }
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </center>
+    </body>
+</html>

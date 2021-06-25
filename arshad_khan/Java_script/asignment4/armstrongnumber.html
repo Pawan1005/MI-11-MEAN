@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ARMSTRONG NUMBER</title>
+        <style>
+            .ft {
+                width: 500px;
+                height: 500px;
+                background-color:blueviolet
+            }
+        </style>
+    </head>
+    <body style="background-color:lightgrey">
+        <center>
+            <div class="logincentrecard">
+                <div class="card">
+                    <div class="container">
+                        <fieldset class="ft">
+                            <h1>ARMSTRONG NUMBER</h1>
+                            <label for="Num1">Enter Number:</label>
+                            <input type="text" id="arm"
+                                placeholder="Enter Number">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
+                            <button onclick="show()" style="background-color: red;color: white;">Find Armstrong Number</button>
+                            <p id="pid"></p>
+                            <script>
+                                function show() {
+                                    var flag,number,remainder,addition = 0;
+                                    number = Number(document.getElementById("arm").value);
+                                    flag = number;
+                                    while(number > 0)
+                                    {
+                                        remainder = number%10;
+                                        addition = addition + remainder*remainder*remainder;
+                                        number = parseInt(number/10);
+                                    }
+                                    if(addition == flag)
+                                    {
+                                        document.getElementById("pid").innerHTML = "This is Armstrong Number";
+                                    }
+                                    else
+                                    {
+                                        document.getElementById("pid").innerHTML = "This is not Armstrong Number";
+                                    }
+                                }
+                            </script>
+                       </fieldset>
+                    </div>
+                </div>
+            </div>
+        </center>
+    </body>
+</html>
