@@ -5,9 +5,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Grade Calculator</title>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous" />
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script>
             function fun() {
                 first = parseInt(document.getElementById("input1").value);
                 second = parseInt(document.getElementById("input2").value);
@@ -30,7 +31,7 @@
                     document.getElementById("pid2").innerHTML = "You are passed with Grade  <h2>C</h2>";
                 } else if (percentage >= 30 && percentage <= 39) {
                     document.getElementById("h").innerHTML = "Congratulation You are passed!!!";
-                    parseInt((document.getElementById("pid").innerHTML = "Your Percentage is " + "<h2>" + percentage  +  "</h2>"));
+                    parseInt((document.getElementById("pid").innerHTML = "Your Percentage is " + "<h2>" + percentage + "</h2>"));
                     document.getElementById("pid2").innerHTML = "You are passed with Grade  <h2>D</h2>";
                 } else {
                     document.getElementById("h").innerHTML = "You are Failed!!!";
@@ -52,17 +53,14 @@
             }
         </style>
     </head>
-      <body>
+    <body>
         <div class="container">
             <div class="row">
                 <div class="col-md-4"></div>
                 <div class="col-md-4 box">
                     <h1 class="ml-5">Grade Calculator</h1>
-                    C++<input type="text" class="form-control" id="input1" placeholder="" />
-                    JAVA<input type="text" class="form-control" id="input2" placeholder=""/>
-                    HTML<input type="text" class="form-control" id="input3" placeholder="" />
-                    PHP<input type="text" class="form-control" id="input4" placeholder=""/>
-                    ANGULAR<input type="text" class="form-control" id="input5" placeholder="">
+                    C++<input type="text" class="form-control" id="input1" placeholder="" /> JAVA<input type="text" class="form-control" id="input2" placeholder="" /> HTML<input type="text" class="form-control" id="input3" placeholder="" /> PHP<input type="text" class="form-control" id="input4" placeholder="" />
+                    ANGULAR<input type="text" class="form-control" id="input5" placeholder="" />
                     <button onclick="fun()" class="btn-success form-control">Result</button>
                     <h1 id="h" style="align-self: center"></h1>
                     <p id="pid"></p>
