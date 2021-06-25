@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Assignment 1</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            .container {
+                width: 350px;
+                height: 280px;
+                text-align: center;
+                margin-left: 480px;
+                box-shadow: 7px 7px 15px;
+                border-radius: 15px;
+            }
+        </style>
+    </head>
+    <script language="javascript">
+            function show() {
+                var a,b,c = 1,temp,reminder,sum = 0;
+                a = parseInt(document.getElementById("num1").value);
+                temp = a;
+                while (temp > 0) {
+                    reminder = temp % 10;
+                    for (i = reminder; i > 0; i--) {
+                        c *= i;
+                    }
+                    sum = sum + c;
+                    temp = parseInt(temp / 10);
+                    c = 1;
+                }
+                if (sum == a) {
+                    document.getElementById("pid").innerHTML = " It is a krishnamurthy number";
+                } else {
+                    document.getElementById("pid").innerHTML = " It is not a krishnamurthy number";
+                }
+            }
+        </script>
+<body>
+        <div class="container">
+            <br /><br /><br />
+            <h1>Krishnamurti</h1>
+            Enter the Number : <input type="text" id="num1"  placeholder="Enter the number" /><br /><br />
+            <button onclick="show()" class="btn">Check</button>
+            <p id="pid"></p>
+        </div>
+    </body>
+</html>

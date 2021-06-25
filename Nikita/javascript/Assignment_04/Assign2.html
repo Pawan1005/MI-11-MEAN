@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Assignment 1</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            .container {
+                width: 350px;
+                height: 280px;
+                text-align: center;
+                margin-left: 480px;
+                box-shadow: 7px 7px 15px;
+                border-radius: 15px;
+            }
+        </style>
+    </head>
+    <script language="javascript">
+        function show() {
+            var a,
+                b,
+                c,
+                temp,
+                last = 0;
+            a = parseInt(document.getElementById("num1").value);
+            b = a.toString().length;
+            c = a * a;
+            for (i = 1; i <= b; i++) {
+                temp = c % 10;
+                last += temp * 10 ** (i - 1);
+                c = parseInt(c / 10);
+            }
+            if (a == last) {
+                document.getElementById("pid").innerHTML = a + " is a automorphic number";
+            } else {
+                document.getElementById("pid").innerHTML = a + " is not automorphic number";
+            }
+        }
+    </script>
+    <body>
+        <div class="container">
+            <br /><br /><br />
+            <h1 >Automorphic Number</h1>
+            Enter Number: <input type="text" id="num1" /><br /><br />
+            <button onclick="show()" class="btn">Check</button>
+            <p id="pid"></p>
+        </div>
+    </body>
+</html>
