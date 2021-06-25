@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Automorphic_number</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+                transition: 0.3s;
+                width: 40%;
+                height: 300px;
+                border-radius: 20px;
+                background-color: rosybrown;
+                margin: auto;
+                margin-top: 50px;
+            }
+            button {
+                position: relative;
+                background-color: white;
+                border: none;
+                font-size: 20px;
+                color:rosybrown;
+                padding: 10px;
+                width: 180px;
+                text-align: center;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+                text-decoration: none;
+                overflow: hidden;
+                cursor: pointer;
+                margin-left: 130px;
+            }
+            #pid{
+                color: white;
+                text-align: center;
+                font-size: large;
+            }
+        </style>
+        <script>
+            function auto() {
+                var a,
+                    b,
+                    c,
+                    temp,
+                    last = 0;
+                a = parseInt(document.getElementById("num").value);
+                b = a.toString().length;
+                c = a * a;
+                for (i = 1; i <= b; i++) {
+                    temp = c % 10;
+                    last += temp * 10 ** (i - 1);
+                    c = parseInt(c / 10);
+                }
+                if (a == last) {
+                    document.getElementById("pid").innerHTML = a + " is a automorphic number";
+                } else {
+                    document.getElementById("pid").innerHTML = a + " is not automorphic number";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <h3 style="text-align: center;">Automorphic Number</h3>
+                <br><br>
+                Enter the number : <input type="text" name="" id="num" placeholder="Enter the number" /> <br />
+                <br /><br>
+                <button onclick="auto()">Check</button>
+                <p id="pid"></p>
+            </div>
+        </div>
+    </body>
+</html>
