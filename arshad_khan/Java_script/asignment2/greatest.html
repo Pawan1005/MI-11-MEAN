@@ -1,59 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Find Second Largest Number</title>
-      <script>
-        function show() {
-          first = parseInt(document.getElementById("num1").value);
-          second = parseInt(document.getElementById("num2").value);
-          third = parseInt(document.getElementById("num3").value);
-          fourth = parseInt(document.getElementById("num4").value);
-          fifth = parseInt(document.getElementById("num5").value);
-          function nextBiggest(arr) {
-            var max = -Infinity,
-              result = -Infinity;
-            for (const value of arr) {
-              const nr = Number(value);
-              if (nr > max) {
-                [result, max] = [max, nr];
-              } else if (nr < max && nr > result) {
-                result = nr;
-              }
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Find Second Largest Number</title>
+        <script>
+            function show() {
+                first = parseInt(document.getElementById("num1").value);
+                second = parseInt(document.getElementById("num2").value);
+                third = parseInt(document.getElementById("num3").value);
+                fourth = parseInt(document.getElementById("num4").value);
+                fifth = parseInt(document.getElementById("num5").value);
+                function nextBiggest(arr) {
+                    var max = -Infinity,
+                        result = -Infinity;
+                    for (const value of arr) {
+                        const nr = Number(value);
+                        if (nr > max) {
+                            [result, max] = [max, nr];
+                        } else if (nr < max && nr > result) {
+                            result = nr;
+                        }
+                    }
+                    document.getElementById("pid").innerHTML = result;
+                }
+                const arr = [first, second, third, fourth, fifth];
+                console.log(nextBiggest(arr));
             }
-            document.getElementById("pid").innerHTML = result;
-          }
-          const arr = [first, second, third, fourth, fifth];
-          console.log(nextBiggest(arr));
-        }
-      </script>
+        </script>
     </head>
-    <body style="background-color:lightblue">
-      <center>
-        <div class="logincentrecard">
-          <div class="card">
-            <div class="container">
-              <h1>Find Second Largest Number</h1>
-              <fieldset style="width: 500px;height: 500px;background-color: rgb(238, 87, 32);>
-                <label for=" Num1">Enter First Number:</label>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="num1" placeholder="Enter First Number"> <br /><br />
-                <label for="Num2">Enter Second Number:</label>
-                &nbsp;&nbsp;<input type="text" id="num2" placeholder="Enter Second Number"><br /><br />
-                <label for="Num1">Enter Third Number:</label>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="num3" placeholder="Enter Third Number"> <br /><br />
-                <label for="Num2">Enter Fourth Number:</label>
-                &nbsp;&nbsp;&nbsp;<input type="text" id="num4" placeholder="Enter Fourth Number"><br /><br />
-                <label for="Num2">Enter Fifth Number:</label>
-                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="num5" placeholder="Enter Fifth Number"><br /><br />
-                <button onclick="show()">Find Second Largest Number</button>
-                <h4>Find Second Largest Number</h4>
-                <p id="pid"></p>
-              </fieldset>
+    <body style="background-color: lightblue">
+        <center>
+            <div class="logincentrecard">
+                <div class="card">
+                    <div class="container">
+                        <h1>Find Second Largest Number</h1>
+                        <label for="Num1">Enter First Number:</label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="num1" placeholder="Enter First Number" /> <br /><br />
+                        <label for="Num2">Enter Second Number:</label>
+                        &nbsp;&nbsp;<input type="text" id="num2" placeholder="Enter Second Number" /><br /><br />
+                        <label for="Num1">Enter Third Number:</label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="num3" placeholder="Enter Third Number" /> <br /><br />
+                        <label for="Num2">Enter Fourth Number:</label>
+                        &nbsp;&nbsp;&nbsp;<input type="text" id="num4" placeholder="Enter Fourth Number" /><br /><br />
+                        <label for="Num2">Enter Fifth Number:</label>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="num5" placeholder="Enter Fifth Number" /><br /><br />
+                        <button onclick="show()">Find Second Largest Number</button>
+                        <h4>Find Second Largest Number</h4>
+                        <p id="pid"></p>
+                    </div>
+                </div>
             </div>
-          </div>
-        </div>
-      </center>
+        </center>
     </body>
 </html>
