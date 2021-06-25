@@ -28,7 +28,7 @@
                     document.getElementById("pid").innerHTML = "You are passed with Grade  <h2>C</h2>";
                 } else if (percentage >= 30 && percentage <= 39) {
                     document.getElementById("pid").innerHTML = "Congratulation You are passed!!!";
-                    parseInt((document.getElementById("pid").innerHTML = "Your Percentage is " + "<h2>" + percentage  +  "</h2>"));
+                    parseInt((document.getElementById("pid").innerHTML = "Your Percentage is " + "<h2>" + percentage + "</h2>"));
                     document.getElementById("pid").innerHTML = "You are passed with Grade  <h2>D</h2>";
                 } else {
                     document.getElementById("pid").innerHTML = "You are Failed!!!";
@@ -52,25 +52,28 @@
     </head>
     <body style="background-color:lightblue">
         <center>
-              <div class="logincentrecard">
+            <div class="logincentrecard">
                 <div class="card">
-                  <div class="container">
-                    <h1>Find Result With Grade</h1>
-                    <fieldset style="width: 500px;height: 500px;background-color: rgb(182, 35, 157);>
-                      <label for="Num1">Enter Maths Marks:</label>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="num1" placeholder="Enter Maths Marks"> <br><br>
-                      <label for="Num2">Enter English Marks:</label>
-                      &nbsp;&nbsp;<input type="text" id="num2" placeholder="Enter English Marks"><br><br>
-                      <label for="Num1">Enter Physics Marks:</label>
-                      &nbsp;&nbsp;&nbsp;<input type="text" id="num3" placeholder="Enter Physics Marks"> <br><br>
-                      <label for="Num2">Enter Chemistry Marks:</label>
-                      <input type="text" id="num4" placeholder="Enter Chemistry Marks"><br><br>
-                      <label for="Num2">Enter Hindi Marks:</label>
-                      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="num5" placeholder="Enter Hindi Marks"><br><br>
-                      <button onclick="show()">Find Result With Grade</button>
-                      <h4>Find Result With Grade</h4>
-                      <p id="pid"></p>
-                  </div>
+                    <div class="container">
+                        <h1>Find Result With Grade</h1>
+                        <fieldset style="width: 500px;height: 500px;background-color: rgb(182, 35, 157);>
+                            <label for=" Num1">Enter Maths Marks:</label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="num1"
+                                placeholder="Enter Maths Marks"> <br><br>
+                            <label for="Num2">Enter English Marks:</label>
+                            &nbsp;&nbsp;<input type="text" id="num2" placeholder="Enter English Marks"><br><br>
+                            <label for="Num1">Enter Physics Marks:</label>
+                            &nbsp;&nbsp;&nbsp;<input type="text" id="num3" placeholder="Enter Physics Marks"> <br><br>
+                            <label for="Num2">Enter Chemistry Marks:</label>
+                            <input type="text" id="num4" placeholder="Enter Chemistry Marks"><br><br>
+                            <label for="Num2">Enter Hindi Marks:</label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="num5"
+                                placeholder="Enter Hindi Marks"><br><br>
+                            <button onclick="show()">Find Result With Grade</button>
+                            <h4>Find Result With Grade</h4>
+                            <p id="pid"></p>
+                        </fieldset>
+                    </div>
                 </div>
             </div>
         </center>
