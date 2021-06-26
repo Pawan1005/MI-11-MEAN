@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <title>Log-In</title>
+        <style>
+            .navbar-brand {
+                margin-left: 30px;
+                font-size: 1.3rem;
+                color: white;
+                font-weight: bold;
+            }
+            a {
+                color: white;
+                font-weight: bold;
+                margin-right: 25px;
+            }
+            a:hover {
+                color: black;
+            }
+            h2 {
+                margin: 7% 0 15px 0;
+            }
+            .form-control {
+                width: 57%;
+            }
+            #form-box {
+                width: 28%;
+                margin: 0 auto;
+                padding: 50px 18px 30px 20px;
+                gap: 20px;
+            }
+            label {
+                width: 30%;
+                margin-left: 20px;
+                color: white;
+                font-weight: bold;
+                margin-top: 8px;
+            }
+            button {
+                width: 25%;
+                margin: 1px auto 0 auto;
+                text-transform: uppercase;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="fluid-container">
+            <nav class="navbar navbar-expand-sm bg-info d-flex justify-content-lg-between">
+                <a class="navbar-brand" href="#">Job Portal</a>
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="Bootstrap_assignment6_homepage.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Bootstrap_assignment6_personal.html">Personal Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="Bootstrap_assignment6_academic.html">Academic Details</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Login</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <h2 class="text-center">Login Form</h2>
+        <form>
+            <div class="d-flex flex-column " id="form-box" style="background-color: rgba(70, 106, 107,0.7);">
+                <div class="form-group d-flex">
+                    <label for="">Email</label>
+                    <input type="email" class="form-control" placeholder="Email">
+                </div>
+                <div class="form-group d-flex">
+                    <label for="">Password</label>
+                    <input type="password" class="form-control" placeholder="Password">
+                </div>
+                <button class="btn btn-primary" type="submit">Submit</button>
+            </div>
+        </form>
+    </body>
+</html>

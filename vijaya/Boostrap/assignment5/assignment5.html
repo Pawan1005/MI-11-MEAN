@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <title>Boostrap Assignment 5</title>
+        <style>
+            .btn {
+                background-color: #09b1c7;
+            }
+            .thead {
+                background-color: lightgray;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <br />
+            <a href="#">Home</a> / <a href="#">Employee</a> / <a href="#">Employee Detail</a> /
+            <br />
+            <br />
+            <h2>
+                List Of Employees
+                <input type="button" value="New" class="btn" />
+            </h2>
+            <table class="table">
+                <thead class="thead">
+                    <tr>
+                        <th scope="col">SrNo.</th>
+                        <th scope="col">First Name</th>
+                        <th scope="col">Last Name</th>
+                        <th scope="col">Mobile</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">1</th>
+                        <td>Nikhil</td>
+                        <td>Raut</td>
+                        <td>9856743334</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">2</th>
+                        <td>Ananya</td>
+                        <td>Sharma</td>
+                        <td>9856743332</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">3</th>
+                        <td>Swapnil</td>
+                        <td>Patel</td>
+                        <td>9856743335</td>
+                    </tr>
+                </tbody>
+            </table>
+            <nav aria-label="Page navigation example">
+                <ul class="pagination justify-content-end">
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Previous">
+                            <span aria-hidden="true">&laquo;</span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                    </li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">4</a></li>
+                    <li class="page-item">
+                        <a class="page-link" href="#" aria-label="Next">
+                            <span aria-hidden="true">&raquo;</span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </body>
+</html>

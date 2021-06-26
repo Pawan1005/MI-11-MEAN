@@ -1,0 +1,30 @@
+.container {
+    width: 90%;
+    height: fit-content;
+}
+.ass {
+    background-color: blueviolet;
+    margin: 0 0 0 200px;
+    width: 90%;
+    height: 100vh;
+}
+.input-grp {
+    width: 30%;
+    height: 30px;
+    margin-left: 50px;
+    margin-top: 20px;
+    border-radius: 20px;
+    border: none;
+}
+.btn {
+    width: 25%;
+    height: 35px;
+    border-radius: 30px;
+    border: 1px solid white;
+    background-color: transparent;
+}
+p {
+    text-align: center;
+    font-size: 25px;
+    color: rgb(128, 0, 0);
+}

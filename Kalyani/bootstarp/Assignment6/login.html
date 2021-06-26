@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>LoginPage</title>
+        <link rel="stylesheet" href="./style.css" />
+        <style>
+            form {
+                border: 1px solid black;
+                width: 40%;
+                height: 20%;
+                margin-left: 300px;
+                box-sizing: content-box;
+                background-color: white;
+                margin-top: 20px;
+            }
+            input[type="text"],
+            input[type="password"] {
+                width: 100%;
+                padding: 12px 20px;
+                margin: 8px 0;
+                display: inline-block;
+                border: 1px solid #ccc;
+                box-sizing: border-box;
+            }
+            button {
+                background-color: #04aa6d;
+                color: white;
+                padding: 14px 20px;
+                margin: 10px 0;
+                border: none;
+                cursor: pointer;
+                width: 50%;
+            }
+            button:hover {
+                opacity: 0.8;
+            }
+            .cancelbtn {
+                width: auto;
+                padding: 10px 18px;
+                background-color: #f44336;
+            }
+            .imgcontainer {
+                text-align: center;
+                margin: 24px 0 12px 0;
+            }
+
+            img.avatar {
+                width: 100px;
+                height: 100px;
+                border-radius: 100%;
+                object-fit: cover;
+            }
+            .container {
+                padding: 16px;
+            }
+            span.psw {
+                float: right;
+                padding-top: 16px;
+            }
+            .login {
+                background-color: rgba(61, 58, 58, 0.452);
+            }
+        </style>
+    </head>
+    <body>
+        <form>
+            <div class="imgcontainer">
+                <img src="./images/194938.png" alt="avtar" class="avtar" style="width: 200px" />
+            </div>
+            <div class="container">
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <label for="UserName"><b>UserName</b></label>
+                <input type="text" placeholder="Enter UserName" name="username" /><br />
+                <label for="Pass"><b>Password</b></label>
+                <input type="password" placeholder="Enter Password" name="Password" />
+                <button type="submit">Login</button>
+                <br />
+                <label> <input type="checkbox" checked="checked" name="remember" /> Remember me </label>
+            </div>
+            <div class="container" style="background-color: #f1f1f1">
+                <button type="button" class="cancelbtn">Cancel</button>
+                <span class="psw">Forgot <a href="#">password?</a></span>
+            </div>
+        </form>
+    </body>
+</html>

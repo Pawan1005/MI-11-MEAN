@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <title>Assignment 1 | Js </title>
+        <style>
+            body {
+                background-color: blueviolet;
+            }
+        </style>
+        <script>
+            function method2(){
+                var a,b,c;
+                a = parseInt(document.getElementById("num1").value);
+                b = parseInt(document.getElementById("num2").value);
+                c = a;
+                a = b
+                b = c
+                document.getElementById("outmet1").value = a;
+                document.getElementById("outmet2").value = b;
+            }
+            function method1(){
+                var a,b;
+                a = parseInt(document.getElementById("num1").value);
+                b = parseInt(document.getElementById("num2").value);
+                a = a + b;
+                b = a - b;
+                a = a - b;
+                document.getElementById("met1").value = a;
+                document.getElementById("met2").value = b;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+           <div class="row" style="margin-left: 260px; margin-top: 180px;">
+                <div class="card" style="background-image: url(backup.jpg); width: 600px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    <h5 style="text-align:center; margin-top: 30px;">Swap  Two Numbers</h5>
+                    <div class="card-body">
+                        <label style="margin-left: 100px;" >A :</label>
+                        <input type="text" id="num1" style="margin-left: 50px; padding-left: 10px;"><br><br>
+                        <label style="margin-left: 100px;">B :</label>
+                        <input type="text" id="num2" style="margin-left: 50px; padding-left: 10px;">
+                        <br><br>
+                        <input type="button" value="Method 1" style="width: 100px; height: 35px; background-color: white; margin-left: 180px;" onclick="method1()" /> </td>
+                        <input type="button" value="Method 2" style="width: 100px; height: 35px; background-color: white;" onclick="method2()" /> </td>
+                        <br><br>
+                        <label>Method 1 : with temperory variable </label><br><br>
+                        After Swap
+                        <input type="text" id="met1" style="margin-left: 60px; padding-left: 10px;"><br><br>
+                        <input type="text" id="met2" style="margin-left: 145px; padding-left: 10px;"><br><br>
+                        <label>Method 2 : without temperory variable </label><br><br>
+                        After Swap
+                        <input type="text" id="outmet1" style="margin-left: 60px; padding-left: 10px;"><br><br>
+                        <input type="text" id="outmet2" style="margin-left: 145px; padding-left: 10px;"><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

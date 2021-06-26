@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="eidth=device-eidth, initial-scale=1.0" />
+        <title>swapping</title>
+        <script language="javascript">
+            function show() {
+                "use strict";
+                var a, b, temp;
+                a = parseInt(document.getElementById("num1").value);
+                b = parseInt(document.getElementById("num2").value);
+                temp = a;
+                a = b;
+                b = temp;
+                document.getElementById("pid").innerHTML += "<br>After swapping (Method1) A :  " + a + " and B:" + b;
+            }
+            function swap() {
+                "use strict";
+                var a, b, c;
+                a = parseInt(document.getElementById("num1").value);
+                b = parseInt(document.getElementById("num2").value);
+                c = a;
+                a = b;
+                b = c;
+                document.getElementById("pid1").innerHTML += "<br>After swapping (Method2) A :  " + a + " and B:" + b;
+            }
+        </script>
+        <style>
+            body {
+                background-color: black;
+            }
+            button {
+                background-color: rgb(82, 238, 20);
+                padding: 10px 15px;
+                text-align: center;
+                font-size: 16px;
+                border-radius: 15px 15px 15px 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="width: 50%; position: absolute; left: 500px; top: 200px">
+            <div style="text-align: center; background-color: rgb(132, 245, 207); border-radius: 25px 25px 25px 25px">
+                <br /><br />
+                <h1>Swap Two Numbers</h1>
+                <br /><br />
+                A : <input type="text" id="num1" /> B : <input type="text" id="num2" /> <br /><br />
+                <button onclick="show()">Method1</button>
+                <button onclick="swap()">Method2</button>
+                <br /><br />
+                <h2>Method1 : With Temporary Variable</h2>
+                <p id="pid"></p>
+                <br />
+                <h2>Method2 : Without Temporary Variable</h2>
+                <p id="pid1"></p>
+                <br />
+            </div>
+        </div>
+    </body>
+</html>

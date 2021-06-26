@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+        <title>Document</title>
+        <script lang="javascript">
+            function show() {
+              "use strict"
+                var a, b;
+                a = parseInt(document.getElementById("num1").value);
+                document.getElementById("pid1").innerHTML = "Result";
+                b = (a*9/5)+32;
+                document.getElementById("pid2").innerHTML = " Corresponding (" +a+  ") temperature in fahrenheit " + b;
+            }
+        </script>
+    </head>
+    <body style="background-image: url(fire.webp); background-attachment: fixed; background-repeat: no-repeat; background-size: cover">
+        <div class="form-row">
+            <div
+                class="form-group col-lg-8"
+                style=" border: solid red; margin-top: 100px; margin-left: 150px; margin-right: 150px; padding: 20px; background-color: rgba(14, 14, 14, 0.5); background-image: url(11.gif);background-repeat: no-repeat; height: 500px; background-size: cover;">
+                <center>
+                    <h2 class="text-warning bg-dark-50">Celsius To Fahrenheit Convert</h2>
+                    <hr />
+                </center>
+                <label for="inputEmail4" class="text-white p-2 bg-dark">Enter the current temperature in Celsius</label>
+                <input type="number" class="form-control col-xl-8" id="num1" placeholder="Enter the current temperature in Celsius" /><br />
+                <!-- <button  class="btn btn-pill btn-success  " onclick="show()">Swap using temporary variable</button>   -->
+                <button class="btn btn-success" onclick="show()">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrow-repeat" viewBox="0 0 16 16">
+                        <path
+                            d="M11.534 7h3.932a.25.25 0 0 1 .192.41l-1.966 2.36a.25.25 0 0 1-.384 0l-1.966-2.36a.25.25 0 0 1 .192-.41zm-11 2h3.932a.25.25 0 0 0 .192-.41L2.692 6.23a.25.25 0 0 0-.384 0L.342 8.59A.25.25 0 0 0 .534 9z"
+                        />
+                        <path
+                            fill-rule="evenodd"
+                            d="M8 3c-1.552 0-2.94.707-3.857 1.818a.5.5 0 1 1-.771-.636A6.002 6.002 0 0 1 13.917 7H12.9A5.002 5.002 0 0 0 8 3zM3.1 9a5.002 5.002 0 0 0 8.757 2.182.5.5 0 1 1 .771.636A6.002 6.002 0 0 1 2.083 9H3.1z"
+                        />
+                    </svg></button
+                ><br />
+                <div style="background-color: rgba(226, 229, 232, 0.5)">
+                    <center>
+                        <h4 id="pid1" class="text-white"></h4>
+                        <hr />
+                    </center>
+                    <h5 id="pid2" class="text-warning bg-dark"></h5>
+                    <br />
+                </div>
+            </div>
+        </div>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

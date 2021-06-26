@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Even-Odd</title>
+    </head>
+    <style>
+        .container {
+            background-color: rgb(204, 0, 255);
+            width: 500px;
+        }
+        #pid {
+            color: aqua;
+        }
+    </style>
+    <body>
+        <div class="box">
+            <div class="container">
+                <h1>Check Even Odd number</h1>
+                Enter the number:-<input type="text" id="num1" />
+                <br />
+                <br />
+                &nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="button" value="Check no is even or odd" onclick="evenodd()" style="background-color: rgb(42, 165, 144)" />
+                <p id="pid"></p>
+                <script>
+                    function evenodd() {
+                        a = parseInt(document.getElementById("num1").value);
+                        if (a % 2 == 0) {
+                            document.getElementById("pid").innerHTML = "&nbsp; &nbsp;&nbsp; &nbsp; <h2>It is an even no<h2>";
+                        } else {
+                            document.getElementById("pid").innerHTML = "&nbsp; &nbsp;&nbsp; &nbsp;<h2>It is an odd no</h2>";
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
