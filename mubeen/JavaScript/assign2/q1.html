@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+            crossorigin="anonymous"
+        />
+        <script>
+            function second() {
+                var a, b, c, d, e, max, max2;
+                a = parseInt(document.getElementById("num1").value);
+                b = parseInt(document.getElementById("num2").value);
+                c = parseInt(document.getElementById("num3").value);
+                d = parseInt(document.getElementById("num4").value);
+                e = parseInt(document.getElementById("num5").value);
+                max = a;
+                if (b > max) {
+                    max = b;
+                }
+                if (c > max) {
+                    max = c;
+                }
+                if (d > max) {
+                    max = d;
+                }
+                if (e > max) {
+                    max = e;
+                }
+                if (a == max) {
+                    a = 0;
+                } else if (b == max) {
+                    b = 0;
+                } else if (c == max) {
+                    c = 0;
+                } else if (d == max) {
+                    d = 0;
+                } else if (e == max) {
+                    e = 0;
+                }
+                max2 = a;
+                if (b > max2) {
+                    max2 = b;
+                }
+                if (c > max2) {
+                    max2 = c;
+                }
+                if (d > max2) {
+                    max2 = d;
+                }
+                if (e > max2) {
+                    max2 = e;
+                }
+                document.getElementById("root").innerHTML = max2 + "is the second greatest";
+            }
+        </script>
+    </head>
+    <body>
+        <style>
+            .content {
+                border: 1px solid blue;
+                padding: 10px;
+                position: absolute;
+                left: 30%;
+                top: 20%;
+            }
+            input {
+                float: right;
+            }
+        </style>
+        <div class="content">
+            <label for="">value of first number</label>
+            <input type="text" name="" id="num1" /> <br />
+            <br />
+            <label for="">value of second number</label>
+            <input type="text" name="" id="num2" /> <br />
+            <label for="">value of third number</label>
+            <input type="text" name="" id="num3" /> <br />
+            <label for="">value of fourth number</label>
+            <input type="text" name="" id="num4" /> <br />
+            <br />
+            <label for="">value of five number</label>
+            <input type="text" name="" id="num5" /> <br />
+            <br />
+            <a class="btn btn-success" onclick="second()">Find</a>
+            <p id="root"></p>
+        </div>
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous">
+        </script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+            crossorigin="anonymous">
+        </script>
+    </body>
+</html>

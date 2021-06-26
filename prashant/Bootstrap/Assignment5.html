@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Table</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, Helvetica, sans-serif;
+            }
+            .topnav {
+                overflow: hidden;
+            }
+            .topnav a {
+                float: left;
+                color: blue;
+                text-align: center;
+                text-decoration: none;
+                padding: 10px;
+                font-size: 17px;
+            }
+            .topnav a.active {
+                background-color: #04AA6D;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container" style="margin-top: 50px;">
+            <div class="topnav">
+                <a href="#Home">Home  / </a>
+                <a href="#Employee"> Employee  / </a>
+                <a href="#Details"> Employee Details</a>
+            </div>
+            <h2>List of Employees<button class="btn btn-primary">New</button></h2>
+            <table class="table table-striped">
+                <thead>
+                    <tr style="background-color: 	#E8E8E8;">
+                        <th>SrNo</th>
+                        <th>Firstname</th>
+                        <th>Lastname</th>
+                        <th>Mobile</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Nikhil</td>
+                        <td>Raut</td>
+                        <td>23456157</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ananya</td>
+                        <td>Sharma</td>
+                        <td>52982525</td>
+                    </tr>
+                    <tr>
+                        <td>3</td>
+                        <td>Swapnil</td>
+                        <td>Patel</td>
+                        <td>52565255</td>
+                    </tr>
+                </tbody>
+            </table>
+            <nav aria-label="Page navigation example" style="float: right;"> 
+                <ul class="pagination">
+                    <li class="page-item"><a class="page-link" href="#"><<</a></li>
+                    <li class="page-item"><a class="page-link" href="#">1</a></li>
+                    <li class="page-item"><a class="page-link" href="#" class = "active">2</a></li>
+                    <li class="page-item"><a class="page-link" href="#">3</a></li>
+                    <li class="page-item"><a class="page-link" href="#">>></a></li>
+                </ul>
+            </nav>
+        </div>
+    </body>
+</html>

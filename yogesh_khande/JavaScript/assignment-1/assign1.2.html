@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .box {
+                text-align: center;
+                margin-top: 100px;
+                text-shadow: 5px 5px 7px black;
+            }
+            body {
+                background-image: url(nature.jpeg);
+                background-size: cover;
+            }
+            input {
+                padding: 10px 20px;
+            }
+            button {
+                width: 60px;
+                height: 30px;
+            }
+        </style>
+        <script>
+            function show() {
+                a = parseInt(document.getElementById("num1").value);
+                pr = a * 9;
+                di = pr / 5;
+                sum = di + 32;
+
+                document.getElementById("pid").innerHTML = "tempreture in farehnite " + sum;
+            }
+            function show1() {
+                b = parseInt(document.getElementById("num2").value);
+                sub = b - 32;
+                pro = sub * 5;
+                div = pro / 9;
+                document.getElementById("pid1").innerHTML = "tempreture in celcius " + div;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="box">
+            Temperature in Celcius:<br /><br /><input type="text" id="num1" placeholder="Enter temperature in celcius" /> <br /><br />
+            <button onclick="show()">convert</button>
+            <br />
+            <p id="pid"></p>
+            <br />
+            Temperature in fahrehneit:<br /><br /><input type="text" id="num2" placeholder="Enter temperature in fahrehneit" /> <br /><br />
+            <button onclick="show1()">convert</button>
+            <p id="pid1"></p>
+        </div>
+    </body>
+</html>

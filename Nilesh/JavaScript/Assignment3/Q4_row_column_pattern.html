@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Row column pattern</title>
+        <style>
+            body {
+                background-color: #616161;
+            }
+            h1 {
+                text-align: center;
+                color: white;
+                margin-top: 5%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #fcf3c1;
+                width: 420px;
+                height:420px;
+                margin: auto;
+                padding-top: 15px;
+                gap: 20px;
+            }
+            input {
+                width: 55%;
+                margin-left: 10px;
+                margin-bottom: 12px;
+                margin-top: 6px;
+                padding: 4px 8px;
+                font-size: 15px;
+                outline: none;
+                line-height: 19px;
+                border: 1px solid #0000004b;
+            }
+            #firstnumber {
+                margin-left: 31px;
+            }
+            p {
+                width: 100%;
+                min-width: 200px;
+                height: 140px;
+                padding: 9px 0 9px 11px;
+                background-color: white;
+                font-weight: bold;
+                border: 1px solid #0000004b;
+            }
+            button {
+                background-color: #ff0000;
+                color: white;
+                padding: 7px 11px;
+                margin: 0 8px 10px 0;
+                font-weight: bold;
+                font-size: 17px;
+                border: 1px solid gray;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Row Column Pattern</h1>
+        <div class="main">
+            <div>
+                <div>
+                    <label for="">Enter the Row</label>
+                    <input type="text" id="firstnumber">
+                </div>
+                <div>
+                    <label for="">Enter the Column</label>
+                    <input type="text" id="secondnumber">
+                </div>
+            </div>  
+            <div>
+                <p <span id="rowcolumn"></span></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="pattern()">Calculate</button>
+            </div>
+        </div>
+        <script>
+            function pattern() {
+                var i,j,row,column;
+                row = parseInt(document.getElementById("firstnumber").value);
+                column = parseInt(document.getElementById("secondnumber").value);
+                for(i=1; i<=row; i++) {
+                    for(j=1; j<=column; j++) {
+                        document.getElementById("rowcolumn").innerHTML += " * ";
+                    }
+                    document.getElementById("rowcolumn").innerHTML += "<br>";
+                }                        
+            }
+        </script>
+    </body>
+</html>
