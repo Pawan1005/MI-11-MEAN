@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="ams.css" />
+        <title>Document</title>
+        <script>
+            function automorphic() {
+                var n, m;
+                n = parseInt(document.getElementById("first").value);
+                m = n * n;
+                document.getElementById("square").innerHTML = "Square of a number is: " + m;
+                if (n % 10 != m % 10) {
+                    document.getElementById("result").innerHTML = n + " is not an atomorphic number";
+                    n = n / 10;
+                    m = m / 10;
+                } else {
+                    document.getElementById("result").innerHTML = n + " is an automorphic number";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h2>Automorphic Number (*_*)</h2>
+            <input type="number" name="" id="first">
+            <button onclick="automorphic()">Click here</button>
+            <h3 id="square"></h3>
+            <h2 id="result"></h2>
+
+        </div>
+
+    </body>
+</html>
