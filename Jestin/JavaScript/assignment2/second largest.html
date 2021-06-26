@@ -19,12 +19,10 @@
                 c = parseInt(document.getElementById("num3").value);
                 d =  parseInt(document.getElementById("num4").value);
                 e =  parseInt(document.getElementById("num5").value);
-
                 if (a>b && a>c && a>d && a>e){
                     if(b>c && b>d && b>e){
                         document.getElementById("pid").innerHTML= " The second largest value is " +b;
                     }
-
                     else if(c>d && c>e){
                         document.getElementById("pid").innerHTML= " The second largest value is " +c;
                     }
@@ -69,7 +67,6 @@
                     }
                     else if(b>c && b>e){
                         document.getElementById("pid").innerHTML= " The second largest value is " +b;
-
                     }
                     else if(c>e){
                         document.getElementById("pid").innerHTML= " The second largest value is " +c;
@@ -81,16 +78,12 @@
                 else{
                     if(a>b && a>c && a>d){
                         document.getElementById("pid").innerHTML= " The second largest value is " +a;
-
                     }
                     else if(b>c && b>d){
                         document.getElementById("pid").innerHTML= " The second largest value is " +b;
-
-
                     }
                     else if(c>d){
                         document.getElementById("pid").innerHTML= " The second largest value is " +c;
-
                     }
                     else{
                         document.getElementById("pid").innerHTML= " The second largest value is " +d;
@@ -113,16 +106,15 @@
             }
         </style>
     </head>
-    <center>
-        <h1 class="text-white">Second largest</h1>
-    </center>
     <body style="background-color: navajowhite; background-image: url(22.jpeg)">
+        <center>
+            <h1 class="text-white">Second largest</h1>
+        </center>
         <div class="jumbotron bg-danger text-white bord" style="background-image: url(22.png)">
             <center>
                 <h2>For Finding The Second Largest Number</h2>
                 <hr />
             </center>
-
             <div class="form-row">
                 <div class="form-group col-md-3">
                     <label for="inputEmail4">First-Number</label>
