@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>JavaScript to print prime numbers between two integers!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function printPrime() {
+                "use strict";
+                 var i, j, c, start, end;
+                 //get the start and end value from form
+                start = parseInt(document.getElementById('start').value);                
+                end = parseInt(document.getElementById('end').value);
+                 //clear the result div
+                document.getElementById("result").innerHTML = '';
+                 //loop till i equals to end
+                for (i = start; i <= end; i++) {                    
+                    c = 0;
+                    for (j = 1; j <= i; j++) {
+                        // % modules will give the reminder value, so if the reminder is 0 then it is divisible
+                        if (i % j == 0) {
+                            //increment the value of c
+                            c++;
+                        }
+                    }
+                     //if the value of c is 2 then it is a prime number
+                    //because a prime number should be exactly divisible by 2 times only (itself and 1)
+                    if (c == 2) {
+                        document.getElementById("result").insertAdjacentHTML('beforeend', i + '<br>');
+                    }
+                }
+            }
+        </script>
+    </head>
+    <style>
+          .container {
+                padding: 2px 16px;
+            }
+            .card {
+                transition: 0.3s;
+                width: 40%;
+                height: 300px;
+                border-radius: 20px;
+                background-color:lightseagreen;
+                margin: auto;
+                margin-top: 50px;
+                border: solid red;
+            }
+            button {
+                position: relative;
+                background-color:red;
+                border: none;
+                font-size: 20px;
+                color: black;
+                padding: 10px;
+                width: 180px;
+                text-align: center;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+                text-decoration: none;
+                overflow: hidden;
+                cursor: pointer;
+                margin-left: 130px;
+            }
+            #pid{
+                color:white;
+                text-align: center;
+                font-size: large;
+            }
+    </style>
+    <body>
+        <div class="card">
+     <div class="container">
+        <h2> To print Prime numbers between two integers!</h2>
+        Start:  <input type="number" name="start" id="start" min="1" style="width: 100px;" value="10" />&nbsp;
+        End:  <input type="number" name="end" id="end" min="1" style="width: 100px;" value="100" />&nbsp;<input type="submit" value="Print Prime Numbers" onclick="printPrime()" name="print" />
+        <center><div id="result"></div></center>
+    </div>
+        </div>
+    </body>
+</html>
