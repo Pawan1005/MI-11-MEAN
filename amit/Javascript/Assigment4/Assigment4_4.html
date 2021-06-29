@@ -32,9 +32,8 @@
     <script>
         function myFunction() {
             var text;
-            var fruits = document.getElementById("myInput").value;
-
-            switch (fruits) {
+            var Vowel = document.getElementById("myInput").value;
+            switch (Vowel) {
                 case "a":
                     text = "Vowel";
                     break;
@@ -65,9 +64,8 @@
                 case "U":
                     text = "Vowel";
                     break;
-
                 default:
-                    text = "I have never heard of that fruit...";
+                    text = "Enter the Vowel";
             }
             document.getElementById("demo").innerHTML = text;
         }
