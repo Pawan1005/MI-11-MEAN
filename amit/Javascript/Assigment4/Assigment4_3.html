@@ -27,10 +27,14 @@
                 box-sizing: 30px;
             }
         </style>
-    </head>
-    <script language="javascript"> 
+        <script language="javascript">
             function show() {
-                var a,b,c = 1,temp,reminder,sum = 0;
+                var a,
+                    b,
+                    c = 1,
+                    temp,
+                    reminder,
+                    sum = 0;
                 a = parseInt(document.getElementById("num1").value);
                 temp = a;
                 while (temp > 0) {
@@ -48,13 +52,13 @@
                     document.getElementById("pid").innerHTML = " It is not a krishnamurthy number";
                 }
             }
-        
         </script>
-<body>
+    </head>
+    <body>
         <div class="container">
             <br /><br /><br />
             <h1>Krishnamurthy</h1>
-            Enter the Number : <input type="text" id="num1"  placeholder="Enter the number" /><br /><br />
+            Enter the Number : <input type="text" id="num1" placeholder="Enter the number" /><br /><br />
             <button onclick="show()" class="btn">Find</button>
             <p id="pid"></p>
         </div>
