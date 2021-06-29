@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Vowel or not</title>
+        <style>
+            body {
+            background-color: #616161;
+            }
+            h1 {
+            text-align: center;
+            color: white;
+            margin-top: 5%;
+            }
+            .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #a1bdcf;
+            width: 380px;
+            height: 380px;
+            margin: auto;
+            padding-top: 15px;
+            gap: 26px;
+            }
+            input {
+            width: 55%;
+            margin-left: 10px;
+            margin-bottom: 12px;
+            padding: 4px 8px;
+            font-size: 15px;
+            outline: none;
+            line-height: 19px;
+            border: 1px solid #0000004b;
+            }
+            p {
+            text-align: center;
+            font-weight: bold;
+            }
+            span, #num {
+            color: #ff0000;
+            font-size: 21px;
+            }
+            button {
+            background-color: #ff0000;
+            color: white;
+            padding: 7px 11px;
+            margin: 0 8px;
+            font-weight: bold;
+            font-size: 17px;
+            border: 1px solid gray;
+            border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Vowel or Not</h1>
+        <div class="main">
+            <div>
+                <label for="">Enter the character</label>
+                <input type="text" id="firstnumber">
+            </div>
+            <div>
+                <p><span id="num"></span><span id="vowels"></span></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="vowels()">Calculate</button>
+            </div>
+        </div>
+        <script>
+            function vowels() {
+                var character,len,number;
+                character = document.getElementById("firstnumber").value;
+                len = character.length;
+                number = parseInt(character);
+                if(number || 0 == number) {
+                    document.getElementById("num").innerHTML = "Accept only character";
+                } 
+                else if(len>1) {
+                    document.getElementById("num").innerHTML = "Accept single character only";
+                } else {
+                    switch (character.toUpperCase()) {
+                        case "A":
+                            document.getElementById("num").innerHTML = character;
+                            document.getElementById("vowels").innerHTML = " is Vowel ";
+                            break;
+                        case "E":
+                            document.getElementById("num").innerHTML = character;
+                            document.getElementById("vowels").innerHTML = " is  Vowel ";
+                            break;
+                        case "I":
+                            document.getElementById("num").innerHTML = character;
+                            document.getElementById("vowels").innerHTML = " is Vowel ";
+                            break;
+                        case "O":
+                            document.getElementById("num").innerHTML = character;
+                            document.getElementById("vowels").innerHTML = " is Vowel ";
+                            break;
+                        case "U":
+                            document.getElementById("num").innerHTML = character;
+                            document.getElementById("vowels").innerHTML = " is Vowel ";
+                            break;
+                        default:
+                            document.getElementById("num").innerHTML = character;
+                            document.getElementById("vowels").innerHTML = " is Consonant ";
+                            break;
+                    }  
+                }            
+            }
+        </script>
+    </body>
+</html>

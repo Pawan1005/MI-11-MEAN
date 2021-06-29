@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Automorphic number</title>
+        <style>
+            body {
+            background-color: #616161;
+            }
+            h1 {
+            text-align: center;
+            color: white;
+            margin-top: 5%;
+            }
+            .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #a1bdcf;
+            width: 380px;
+            height: 380px;
+            margin: auto;
+            padding-top: 15px;
+            gap: 26px;
+            }
+            input {
+            width: 55%;
+            margin-left: 10px;
+            margin-bottom: 12px;
+            padding: 4px 8px;
+            font-size: 15px;
+            outline: none;
+            line-height: 19px;
+            border: 1px solid #0000004b;
+            }
+            p {  
+            font-weight: bold;
+            overflow: auto;
+            }
+            #num1 {
+            font-weight: 300;
+            }
+            #num2 {
+            color: #002fff;
+            font-size: 21px;
+            }
+            #automorphic {
+            color: #ff0000;
+            font-size: 21px;
+            }
+            button {
+            background-color: #ff0000;
+            color: white;
+            padding: 7px 11px;
+            margin: 0 8px;
+            font-weight: bold;
+            font-size: 17px;
+            border: 1px solid gray;
+            border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Automorphic Number</h1>
+        <div class="main">
+            <div>
+                <label for="">Enter the number</label>
+                <input type="text" id="firstnumber" value="76">
+            </div>
+            <div>
+                <p><span id="num1"></span><span id="num2"></span><span id="automorphic"></span></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="automorphic()">Calculate</button>
+            </div>
+        </div>
+        <script>
+            function automorphic() {  
+                var num,sqr,temp,dig=1,last;
+                num = document.getElementById("firstnumber").value;
+                sqr = num*num;
+                temp = num;
+                while(temp>0) {
+                    temp = parseInt(temp/10);
+                    dig = dig*10;             
+                }               
+                last = sqr%dig;
+                if(last==num) {
+                    document.getElementById("num2").innerHTML = ""+num;
+                    document.getElementById("automorphic").innerHTML = " is Automorphic";
+                } else {
+                    document.getElementById("num2").innerHTML = ""+num;
+                    document.getElementById("automorphic").innerHTML = " is not Automorphic";
+                }                         
+            }
+        </script>
+    </body>
+</html>
