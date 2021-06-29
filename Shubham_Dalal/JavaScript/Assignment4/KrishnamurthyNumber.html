@@ -11,22 +11,19 @@
                 var num,temp,rem,sum = 0,factorial;
                 num = parseInt(document.getElementById("Krishnamurthy").value);
                 temp = num;
-                
-                    while (temp > 0) {
-                        factorial = 1;
-                        rem = temp % 10;
-                        temp = parseInt(temp / 10);
-                        for (var i = rem; i >= 1; i--) {
-                            factorial = factorial * i;
-                        }
-                        sum = sum + factorial;
+                while (temp > 0) {
+                    factorial = 1;
+                    rem = temp % 10;
+                    temp = parseInt(temp / 10);
+                    for (var i = rem; i >= 1; i--) {
+                        factorial = factorial * i;
                     }
-                
-                if(sum==num){
-                    document.getElementById("hid").innerHTML="The number "+num+" you entered is Krishnamurthy Number";
+                    sum = sum + factorial;
                 }
-                else{
-                    document.getElementById("hid").innerHTML="The number "+num+" you entered is not an Krishnamurthy Number";
+                if (sum == num) {
+                    document.getElementById("hid").innerHTML = "The number " + num + " you entered is Krishnamurthy Number";
+                } else {
+                    document.getElementById("hid").innerHTML = "The number " + num + " you entered is not an Krishnamurthy Number";
                 }
             }
         </script>

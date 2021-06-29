@@ -4,18 +4,17 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="ams.css">
+        <link rel="stylesheet" href="ams.css" />
         <title>Document</title>
         <script>
             function fun() {
-                var character,len,number;
+                var character, len, number;
                 character = document.getElementById("vowel").value;
                 len = character.length;
                 number = parseInt(character);
-                if(number || 0 == number) {
+                if (number || 0 == number) {
                     document.getElementById("hid").innerHTML = "Accept only character";
-                } 
-                else if(len>1) {
+                } else if (len > 1) {
                     document.getElementById("hid").innerHTML = "Accept single character only";
                 } else {
                     switch (character.toUpperCase()) {
@@ -43,8 +42,8 @@
                             document.getElementById("hid").innerHTML = character;
                             document.getElementById("hid1").innerHTML = "This character is  Consonent ";
                             break;
-                    }  
-                }            
+                    }
+                }
             }
         </script>
     </head>

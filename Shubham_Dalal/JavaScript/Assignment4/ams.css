@@ -1,8 +1,8 @@
-body{
+body {
     background-color: rgb(7, 94, 71);
     color: white;
 }
-div{
+div {
     margin: 200px 600px;
     padding: 50px 40px;
     display: flex;
@@ -11,22 +11,19 @@ div{
     width: 400px;
     border-radius: 20px;
     box-shadow: 10px 10px 10px rgb(23, 222, 169);
-    background-image: linear-gradient(to right,rgba(0, 0, 0, 0.907),rgba(0, 0, 0, 0.763));
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.907), rgba(0, 0, 0, 0.763));
 }
-input{
+input {
     padding: 10px;
     margin: 10px;
 }
-button{
+button {
     padding: 10px;
     margin: 10px;
     font-size: 20px;
     color: white;
     background-image: radial-gradient(black, black, black, rgb(7, 94, 71), white, rgb(7, 94, 71));
 }
-h2{
-    text-align: center;
-}
-h3{
+h2, h3 {
     text-align: center;
 }
