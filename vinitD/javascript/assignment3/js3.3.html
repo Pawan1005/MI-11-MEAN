@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>js3.3</title>
+        <script>
+            function en() {
+                a = parseInt(document.getElementById("num1").value);
+                if (a % 2 == 0) {
+                    document.getElementById("pid").innerHTML = a + " is a even number";
+                } else {
+                    document.getElementById("pid").innerHTML = a + " is not a even or odd number";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="num1" />
+        <button onclick="en()">CHECK</button>
+        <p id="pid"></p>
+    </body>
+</html>
