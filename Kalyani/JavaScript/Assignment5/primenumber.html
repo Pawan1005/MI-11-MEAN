@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Prime Number</title>
+        <script>
+            function printPrime() {
+                var i, j, c, start, end;
+                start = parseInt(document.getElementById("lowernumber").value);
+                end = parseInt(document.getElementById("highernumber").value);
+                document.getElementById("result").innerHTML = "";
+                for (i = start; i <= end; i++) {
+                    c = 0;
+                    for (j = 1; j <= i; j++) {
+                        if (i % j == 0) {
+                            c++;
+                        }
+                    }
+                    if (c == 2) {
+                        document.getElementById("result").insertAdjacentHTML("beforeend", i + "<br>");
+                    }
+                }
+            }
+        </script>
+        <style>
+            .container {
+                width: 45%;
+                height: 300px;
+                border: 1px solid gray;
+                background-color: teal;
+                border-radius: 10px;
+            }
+            .input-grp {
+                width: 30%;
+                height: 10%;
+                border-radius: 20px;
+                border: 1px solid gray;
+                background-color: rgb(255, 255, 255);
+                box-shadow: 10px gray;
+                margin-left: 20px;
+            }
+            .btn {
+                width: 25%;
+                height: 15%;
+                border-radius: 20px;
+                border: none;
+                background-color: black;
+                color: white;
+                margin-left: 150px;
+            }
+            h2 {
+                margin-left: 25px;
+            }
+            #result {
+                background-color: rgb(39, 48, 128);
+                color: white;
+                width: 50%;
+                height: 35%;
+                margin-top: 8px;
+                margin-left: 115px;
+                border-radius: 25px;
+                font-size: 20px;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Print Prime numbers between two integers!</h2>
+            Start: <input type="number" placeholder="LowerNumber" id="lowernumber" class="input-grp" /> End:
+            <input type="number" placeholder="Highernumber" id="highernumber" class="input-grp" />
+            <br /><br /><input type="submit" value="Print Prime Numbers" onclick="printPrime()" class="btn" />
+            <div id="result"></div>
+        </div>
+    </body>
+</html>
