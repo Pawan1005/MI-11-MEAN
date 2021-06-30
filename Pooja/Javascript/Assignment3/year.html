@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="Description" content="Enter your description here"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <title>Leap/Not</title>
+        <script language="javascript">
+            function year(){
+                year= parseInt(document.getElementById("num1").value);
+                if((year % 4 == 0 && year % 100 !=0)|| year % 400 == 0){
+                    document.getElementById("p").innerHTML= +year+" is a leap year ";
+                } 
+                else{
+                    document.getElementById("p").innerHTML= +year+" is not a leap year ";
+                }
+            }  
+        </script>
+        <style>
+            .container{
+            margin-left: 675px;
+            margin-top: 200px;
+            background-color: cadetblue;
+            display: block;
+            width: 400px;
+            height: 250px;
+            padding: 25px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 4px rgb(1, 24, 6);
+            }
+            button{
+            margin-top: 10px;
+            margin-left: 120px;
+            background-color: rgb(4, 4, 17);
+            color:white;
+            }
+            #pid{
+            font-size: medium;
+            margin-left:40px;
+            margin-top: 5px;
+            color: rgb(210, 210, 228);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <strong >Leap year/ not</strong>  <br>
+            <label class="mb-1">Enter year:</label>
+            <input type="number" class="form-control " id="num1" placeholder="Enter year for eg.2015"> 
+            <button onclick="year()">Result</button>
+            <h4 id="p"></h4>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    </body>
+</html>
