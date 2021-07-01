@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head> </head>
+    <body>
+        <style>
+            .as {
+                position: absolute;
+                width: 340px;
+                height: 415px;
+                margin: 51px auto 0px auto;
+                border-style: solid;
+                top: 22px;
+                left: 399px;
+                margin-right: 10px;
+                background-color: darkturquoise;
+            }
+        </style>
+        <div class="as">
+            <center><h3>Factorial number</h3></center>
+            Enter a number: <br /><input id="number" /> <br /><br />
+            <div class="col-md-12 text-center">
+            <button onclick="fact1()" class="btn-primary">Factorial</button>
+            <p id="res"></p>
+        </div>
+        <script>
+            function fact(num) {
+                if (num == 0) {
+                    return 1;
+                } else {
+                    return num * fact(num - 1);
+                }
+            }
+            function fact1() {
+                var num = document.getElementById("number").value;
+                var f = fact(num);
+                document.getElementById("res").innerHTML = "The factorial of the number " + num + " is: " + f;
+            }
+        </script>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>JavaScript program to Check a given number is Automorphic or Not</title>
+    </head>
+    <body>
+        <style>
+            .as {
+                position: absolute;
+                width: 340px;
+                height: 415px;
+                margin: 51px auto 0px auto;
+                border-style: solid;
+                top: 22px;
+                left: 399px;
+                margin-right: 10px;
+                background-color: darkturquoise;
+            }
+        </style>
+        <div class="as">
+            <h1>Automorphic number</h1>
+            <table>
+                <tr>
+                    <td><input type="text" name="a" id="first" placeholder="Enter a number" /></td>
+                </tr>
+                <tr>
+                    <td><button onclick="automorphic ()">Submit</button></td>
+                </tr>
+            </table>
+            <div id="num"></div>
+            <div id="num1"></div>
+        </div>
+    </body>
+
+    <script type="text/javascript">
+        function automorphic() {
+            var n, m;
+            n = parseInt(document.getElementById("first").value);
+            m = n * n;
+            document.getElementById("num").innerHTML = "Square of a number is: " + m;
+            if (n % 10 != m % 10) {
+                document.getElementById("num1").innerHTML = n + " is not an atomorphic number";
+                n = n / 10;
+                m = m / 10;
+            } else {
+                document.getElementById("num1").innerHTML = n + " is an automorphic number";
+            }
+        }
+    </script>
+</html>
