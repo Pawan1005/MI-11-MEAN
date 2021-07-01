@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+            crossorigin="anonymous"/>
+        <title>Document</title>
+        <script>
+            const prime = function prime(a) {
+                var b,
+                    count = 0;
+                if (a == 1) {
+                    document.getElementById("out").innerHTML = "one do not have two distinct divisors hence it is no a prime number";
+                } else {
+                    for (i = 2; i < a; i++) {
+                        b = a % i;
+                        if (b == 0) {
+                            count++;
+                            break;
+                        }
+                    }
+                    if (count == 0) {
+                        return true;
+                    } else {
+                        return false;
+                    }
+                }
+            };
+        </script>
+        <script>
+            const pali = function palindrome(a) {
+                var b,
+                    c,
+                    d = 0,
+                    i = 0,
+                    num = [];
+                c = a;
+                while (c > 0) {
+                    b = c % 10;
+                    num[i] = b;
+                    i++;
+                    c = parseInt(c / 10);
+                }
+                const org = num.slice();
+                num.reverse();
+                var z = num.length;
+                for (j = 0; j < z; j++) {
+                    if (num[j] != org[j]) {
+                        d++;
+                    }
+                }
+                debugger;
+                if (d == 0) {
+                    return true;
+                } else {
+                    return false;
+                }
+            };
+        </script>
+        <script>
+            function p2() {
+                var s = parseInt(document.getElementById("num").value);
+                var x = prime(s);
+                var y = pali(s);
+                if (x) {
+                    document.getElementById("root").innerHTML += s + "&nbsp;is a prime number</br>";
+                }
+                if (y) {
+                    document.getElementById("root").innerHTML += s + "&nbsp;is a palindrome</br>";
+                }
+                if (x && y) {
+                    document.getElementById("root").innerHTML += s + "&nbsp;is a prime palindrome</br>";
+                } else {
+                    document.getElementById("root").innerHTML += s + "&nbsp;is not a prime palindrome</br>";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <style>
+            body {
+                padding: 30px;
+                background-color: rgb(197, 54, 233);
+            }
+            .content {
+                border: 1px solid black;
+                border-radius: 10px;
+                padding: 50px;
+                width: 500px;
+            }
+            input {
+                float: right;
+            }
+        </style>
+        <div class="content">
+            <center><h3>Prime palindrome</h3></center>
+            first:<input type="text" id="num1" /> <br />
+            <br />
+            second: <input type="text" id="num2" /> <br />
+            <br />
+            third: <input type="text" id="num3" /> <br />
+            <br />
+            four: <input type="text" id="num4" /> <br />
+            <br />
+            five: <input type="text" id="num5" /> <br />
+            <br />
+            <button onclick="p2()" class="btn btn-success">Get</button>
+            <p id="root"></p>
+        </div>
+        <script>
+            function p2() {
+                var number = [];
+                number[0] = document.getElementById("num1").value;
+                number[1] = document.getElementById("num2").value;
+                number[2] = document.getElementById("num3").value;
+                number[3] = document.getElementById("num4").value;
+                number[4] = document.getElementById("num5").value;
+                document.getElementById("root").innerHTML += "prime palidrom numbers in the list are:-";
+                for (k = 0; k < 5; k++) {
+                    s = number[k];
+                    var x = prime(s);
+                    var y = pali(s);
+                    if (x && y) {
+                        document.getElementById("root").innerHTML += s + "&nbsp;&nbsp;&nbsp;";
+                    }
+                }
+            }
+        </script>
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous">
+        </script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+            crossorigin="anonymous">
+        </script>
+    </body>
+</html>
