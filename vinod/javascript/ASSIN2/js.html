@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Enter Marks</title>
+        <script type="text/javascript">
+            function Avg_mark() {
+                var sub1 = parseInt(document.getElementById("s1").value);
+                var sub2 = parseInt(document.getElementById("s2").value);
+                var sub3 = parseInt(document.getElementById("s3").value);
+                var sub4 = parseInt(document.getElementById("s4").value);
+                var sub5 = parseInt(document.getElementById("s5").value);
+                var total = sub1 + sub2 + sub3 + sub4 + sub5;
+                var per = total / 5;
+                var grade;
+                if (per >= 1 && per <= 30) {
+                    grade = "F";
+                } else if (per >= 31 && per <= 40) {
+                    grade = "D";
+                } else if (per >= 41 && per <= 59) {
+                    grade = "C";
+                } else if (per >= 60 && per <= 74) {
+                    grade = "B";
+                } else if (per >= 75 && per <= 100) {
+                    grade = "A";
+                } else {
+                    grade = "Invalid or Failed";
+                }
+                document.getElementById("demo").innerHTML = "Your Total Marks : " + total + "<br>Your Percentage : " + per + "<br>Your Grade : " + grade;
+            }
+        </script>
+    </head>
+    <body>
+        <style>
+            .main {
+                border: 1px solid rgb(230, 53, 53);
+                background-color: aqua;
+                max-width: fit-content;
+                position: absolute;
+                left: 25%;
+                padding: 5%;
+            }
+            button {
+                background-color: #4caf50;
+                width: 60%;
+                color: rgb(204, 25, 228);
+                padding: 5px;
+                margin: 10px 0px;
+                border: none;
+                cursor: pointer;
+            }
+        </style>
+        <div class="main">
+            <h1>Enter Students Marks</h1>
+            <label for="">English</label>
+            &emsp; &emsp;<input type="text" id="s1" placeholder="Enter English Marks" /><br /><br />
+            <label for="">chemistry</label>
+            &emsp; &nbsp;<input type="text" id="s2" placeholder="Enter chemestri Marks" /><br /><br />
+            <label for="">maths</label>
+            &emsp; &emsp;&ensp;<input type="text" id="s3" placeholder="Enter math Marks" /><br /><br />
+            <label for="">biology</label>
+            &emsp; &emsp;<input type="text" id="s4" placeholder="Enter biology Marks" /><br /><br />
+            <label for="">physics</label>
+            &emsp; &emsp;<input type="text" id="s5" placeholder="Enter physics Marks" /><br /><br />
+            <button onclick="Avg_mark()">Avg</button>
+            <div id="demo"></div>
+        </div>
+    </body>
+</html>
