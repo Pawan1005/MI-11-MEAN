@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>prime palindromes</title>
+  </head>
+  <body>
+    <script>
+      let numbers = [];
+      for (i = 0; i < 5; i++) numbers[i] = prompt("Enter your Number");
+      let temp = [];
+      for (i = 0; i < 5; i++) {
+        if (primePalindrome(numbers[i])) {
+          temp[i] = numbers[i];
+        }
+      }
+      document.write(temp.join(" ") + " numbers are prime palindromes ");
+      function primePalindrome(number) {
+        let temp = number,
+          reverse = 0,
+          remainder,
+          count = 0;
+        for (let i = 1; i <= number; i++) {
+          if (number % i == 0) count++;
+        }
+        if (count == 2) {
+          while (temp > 0) {
+            remainder = temp % 10;
+            reverse = reverse * 10 + remainder;
+            temp = parseInt(temp / 10);
+          }
+          if (reverse == number) return true;
+        }
+      }
+    </script>
+  </body>
+</html>
