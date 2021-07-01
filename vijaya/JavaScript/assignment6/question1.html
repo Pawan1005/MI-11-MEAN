@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript Arrays</title>
+        <style>
+        h1 {
+            text-align: center;
+            color: rgb(9, 175, 98);
+            margin-top: 4%;
+        }
+        .name {
+            position: relative;
+            width: 600px;
+            background-color: #66054e;
+            padding: 50px 0px 10px 0px;
+            border-radius: 15px 15px 0px 0px;
+            color: white;
+            text-align: center;
+            margin-left: 300px;
+        }
+        </style>
+        <script>
+        var a = 0;
+        var array = Array();
+        function add_element_to_array() {
+            array[a] = document.getElementById("text1").value;
+            a++;
+            document.getElementById("text1").value = "";
+        }
+        function display_array() {
+            var e = "";
+
+            for (var y = 0; y < array.length; y++) {
+                e += array[y] + ",";
+            }
+            document.getElementById("Result").innerHTML = e;
+            for (var y = 0; y < array.length; y++) {
+                e += "<br> " + array[y];
+            }
+            document.getElementById("Result").innerHTML = e;
+        }
+        </script>
+    </head>
+    <body>
+        <h1>Store names in array and display </h1>
+        <div class="name">
+            Enter name:
+            <input type="text" id="text1"></input><br><br>
+            <input type="button" id="button1" value="Add" onclick="add_element_to_array();"></input>
+            <input type="button" id="button2" value="Display with comma" onclick="display_array();"></input><br><br>
+            <div id="Result"></div>
+        </div>
+    </body>
+</html>
