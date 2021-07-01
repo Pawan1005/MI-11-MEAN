@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>double letter</title>
+        <style>
+            .box1 {
+                width: 500px;
+                height: 300px;
+                background-color: rgb(221, 86, 142);
+            }
+            .btn1 {
+                color: rgb(69, 221, 31);
+            }
+            #num1 {
+                color: rgb(45, 62, 211);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <fieldset class="box1">
+                <h1>Double Letter</h1>
+                <div class="main">
+                    <div>
+                        <label for="">Enter the word</label>
+                        <input type="text" id="firstnumber" />
+                    </div>
+                    <div>
+                        <p>Double letter &nbsp; -- &nbsp;<span id="num1"></span></p>
+                    </div>
+                    <div>
+                        <button class="btn1" onclick="doubleletter()">Check</button>
+                    </div>
+                    <script>
+                        function doubleletter() {
+                            var str = [];
+                            var i,
+                                letter1,
+                                letter2,
+                                len,
+                                count = 0;
+                            str = document.getElementById("firstnumber").value;
+                            len = str.length;
+                            for (i = 0; i <= len - 2; i++) {
+                                letter1 = str.charAt(i);
+                                letter2 = str.charAt(i + 1);
+                                if (letter1 == letter2) {
+                                    count = count + 1;
+                                    document.getElementById("num1").innerHTML += "&nbsp;" + letter1 + "&ensp;";
+                                }
+                            }
+                            if (count == 0) {
+                                document.getElementById("num1").innerHTML += "&nbsp; No double letter &ensp;";
+                            }
+                        }
+                    </script>
+                </div>
+            </fieldset>
+        </div>
+    </body>
+</html>

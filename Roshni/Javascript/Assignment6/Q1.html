@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Array Input</title>
+        <style>
+            .box3 {
+                width: 500px;
+                height: 300px;
+                background-color: rgb(216, 204, 101);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="box">
+            <div class="box1">
+                <div class="container">
+                    <fieldset class="box3">
+                        <h1>Array</h1>
+                        <div id="container1"></div>
+                        <script>
+                            array1 = new Array(5);
+                            container1 = document.getElementById("container1");
+                            for (i = 0; i < 5; i++) {
+                                array1[i] = prompt("Enter the name:- " + (i + 1));
+                            }
+                            container1.innerHTML += `<div>${array1}</div>`;
+                            for (i = 0; i < 5; i++) {
+                                container1.innerHTML += `<div>Name :- ${i + 1} : ${array1[i]}</div>`;
+                            }
+                        </script>
+                    </fieldset>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

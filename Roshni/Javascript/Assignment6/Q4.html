@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Question 4</title>
+        <style>
+            .ft {
+                width: 500px;
+                height: 300px;
+                background-color: rgb(216, 204, 101);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="logincentrecard">
+            <div class="card">
+                <div class="container">
+                    <fieldset class="ft">
+                        <h1>Factorials by User</h1>
+                        <div id="container"></div>
+                        <script>
+                           let arr = [],
+                           sum = 0;
+                           let container = document.getElementById("container");
+                           while (true) {
+                           let temp = prompt("Enter a number ");
+                           if (temp == "X" || temp == "x" || temp == null) break;
+                           temp = parseInt(temp);
+                           arr.push(temp);
+                           }
+                           for (let i = 0; i < arr.length; i++) {
+                           sum += factorial(arr[i]);
+                           }
+                           function factorial(n) {
+                               if (n == 0) return 1;
+                               return n * factorial(n - 1);
+                           }
+                           container.innerHTML += `<div>Sum of Factorials are : ${sum}</div>`;
+                        </script>
+                </feildset>
+            </div>
+        </div>
+    </body>
+</html>
