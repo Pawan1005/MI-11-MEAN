@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Vowels</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            h3 {
+                color: white;
+            }
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                transition: 0.3s;
+                width: 40%;
+                height: 300px;
+                border-radius: 20px;
+                background-color: rgb(148, 24, 24);
+                margin: auto;
+                margin-top: 50px;
+            }
+            button {
+                position: relative;
+                background-color:black;
+                border: none;
+                font-size: 20px;
+                color: white;
+                padding: 10px;
+                width: 180px;
+                text-align: center;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+                text-decoration: none;
+                overflow: hidden;
+                cursor: pointer;
+                margin-left: 130px;
+            }
+            #par {
+                color: black;
+                text-align: center;
+                font-size: large;
+            }
+        </style>
+        <script>
+            function vowel() {
+                var a, b;
+                a = document.getElementById("char").value;
+                b = a.toUpperCase();
+                if (a.length > 1) {
+                    document.getElementById("pid").innerHTML = "Enter only a single character";
+                } else {
+                    switch (b) {
+                        case "A":
+                            document.getElementById("par").innerHTML = a + "  is a vowel";
+                            break;
+                        case "E":
+                            document.getElementById("par").innerHTML = a + "  is a vowel";
+                            break;
+                        case "I":
+                            document.getElementById("par").innerHTML = a + "  is a vowel";
+                            break;
+                        case "O":
+                            document.getElementById("par").innerHTML = a + "  is a vowel";
+                            break;
+                        case "U":
+                            document.getElementById("par").innerHTML = a + "  is a vowel";
+                            break;
+                        default:
+                            document.getElementById("par").innerHTML = a + "  is not a vowel";
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <br /><br />
+        <div class="card">
+            <div class="container">
+                <h3 style="text-align: center">Vowel or not</h3>
+                Enter the character : <input type="text" name="" id="char" /> <br />
+                <br />
+                <button onclick="vowel()">Check</button>
+                <p id="par"></p>
+            </div>
+        </div>
+    </body>
+</html>
