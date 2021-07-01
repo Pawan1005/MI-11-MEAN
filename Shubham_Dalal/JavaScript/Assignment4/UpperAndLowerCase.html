@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="ams.css" />
+        <title>Document</title>
+        <script>
+            function fun() {
+                var str, i, len, number, character;
+                str = document.getElementById("word").value;
+                len = str.length;
+                number = parseInt(str);
+                if (number || 0 == number) {
+                    document.getElementById("hid").innerHTML = "Accept only character";
+                } else {
+                    for (i = 0; i < len; i++) {
+                        character = str.charAt(i);
+                        if (character >= "A" && character <= "Z") {
+                            str = str.replace(character, character.toLowerCase());
+                        } else {
+                            str = str.replace(character, character.toUpperCase());
+                        }
+                    }
+                    document.getElementById("hid").innerHTML += str;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h2>!!!Lowercase <-_-> Uppercase!!!</h2>
+            <h3>Enter any word or character (^_^)</h3>
+            <input type="text" name="" id="word" placeholder="enter character or string " />
+            <button onclick="fun()">UppperlowerCase</button>
+            <h2 id="hid"></h2>
+        </div>
+    </body>
+</html>
