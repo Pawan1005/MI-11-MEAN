@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="comman_file.css" />
+        <title>Sum of first and last digit equals to middle digit</title>
+        <script>
+            function fun() {
+                var num, first, last, middle, sum;
+                num = document.getElementById("num").value;
+                len = num.length;
+                if (len != 3) {
+                    document.getElementById("num1").innerHTML = "Invalid Number!! Please enter a 3 digit number";
+                } else {
+                    last = num % 10;
+                    first = parseInt(num / 100);
+                    middle = parseInt(num / 10) % 10;
+                    sum = first + last;
+                    if (sum == middle) {
+                        document.getElementById("num1").innerHTML = "<br><br> Sum match";
+                    } else {
+                        document.getElementById("num1").innerHTML = "<br><br> Sum does not match";
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Sum of first and last digit equals to middle</h1>
+        <div>
+            <input type="number" id="num">
+            <button onclick="fun()"> Check</button>
+            <h2 id="num1"></h2>
+        </div>
+    </body>
+</html>

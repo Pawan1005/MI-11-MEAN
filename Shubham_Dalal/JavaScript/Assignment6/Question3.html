@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="Assignment6.css" />
+        <title>Document</title>
+        <script>
+            function fun() {
+                var array = [];
+                var input,
+                    add = 0;
+                for (var i = 0; i <= 5; i++) {
+                    input = prompt("enter the number");
+                    if (input == "x" || input == "X" || input == null) {
+                        break;
+                    }
+                    array.push(parseInt(input));
+                    add = add + array[i];
+                    document.getElementById("hid").innerHTML = "Number you have entered : "+array;
+                }
+                document.getElementById("pid").innerHTML = "the sum of numbers is :" + add;
+            }
+           
+        </script>
+    </head>
+    <body>
+        <div id="outside">
+            <h1>Sum of numbers:</h1>
+
+            <button onclick="fun()">Click Me</button>
+
+            <div id="inside">
+                <h2 id="hid"></h2>
+                <p id="pid"></p>
+            </div>
+        </div>
+    </body>
+</html>

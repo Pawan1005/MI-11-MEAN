@@ -1,0 +1,38 @@
+body{
+        
+        text-align: center;
+        background-image: radial-gradient(rgba(215, 138, 109, 0.681), rgb(215, 138, 109, 0.681), rgb(249, 183, 160, 0.681));
+}
+div{
+    height: 500px;
+    width: 500px;
+    display: flex;
+    flex-flow: column;
+    background-color: white;
+    box-shadow: 5px -8px 10px 5px rgb(201, 173, 173);
+    border-radius: 20px;
+    padding: 40px;
+    margin: 20px 570px;
+}
+h1{
+    color: aliceblue;
+}
+input{
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: block;
+    border-color: burlywood;
+    margin-top: 20px;
+
+}
+button{
+    background-image: linear-gradient(rgb(160, 98, 130), rgb(160, 98, 130));
+    padding: 10px 20px;
+    color: white;
+    border-radius: 5px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+h2{
+    display: block;
+}
