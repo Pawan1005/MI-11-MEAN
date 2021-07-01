@@ -13,8 +13,6 @@
         <title>Document</title>
         <script lang="javascript">
             function show() {
-               
-              //  let c = getElementById("num1").value;   
                  let h =[];
                  let a = document.getElementById("num1").value;
                  let c = document.getElementById("num2").value;
@@ -27,59 +25,33 @@
                  h.push(e);
                  h.push(f);
                 let b = document.getElementById("pid");
-                  // let c = prompt("enter the value");  
-                           
-                  //  a.push(c);
-
-                    function isPrime(num) {
-                        for(var i = 2; i < num; i++)
-                            if(num % i === 0) return false;
-                            return num > 1;
-                    } 
-
-                
-                    function reverseNum(num) {
-                        return (
-                        parseFloat(
-                        num
-                            .toString()
-                            .split('')
-                            .reverse()
-                            .join('')
-                        ) * Math.sign(num)
-                    )
-                    }
-
-                    for (let g = 0; g<= h.length; g++ ){
-                         let z = h[g];
-
-
-                            let k = isPrime(z);
-                           // let f = k.toString(); 
-                
-                            //  document.write(k);
-                    
-
-                        let j=reverseNum(z);
-                        if(j==z){
-                            if(k == true){
-                                b.innerHTML +=  h[g] +",";
-                            }
-                    
-                            
+                function isPrime(num) {
+                    for(var i = 2; i < num; i++)
+                        if(num % i === 0) return false;
+                        return num > 1;
+                }
+                function reverseNum(num) {
+                    return (
+                    parseFloat(
+                    num
+                        .toString()
+                        .split('')
+                        .reverse()
+                        .join('')
+                    ) * Math.sign(num)
+                )
+                }
+                for (let g = 0; g<= h.length; g++ ){
+                        let z = h[g];
+                        let k = isPrime(z);
+                    let j=reverseNum(z);
+                    if(j==z){
+                        if(k == true){
+                            b.innerHTML +=  h[g] +",";
                         }
-                        // else{
-                        //     b.innerHTML = `<div> ${a} != ${j} so it's not palindrome  </div>`;
-                        // }
-
-
                     }
+                }
 
-
-
-                     
-                    
-                 
             }
         </script>
         <style>
@@ -97,17 +69,13 @@
             }
         </style>
     </head>
-
     <body style="background-image: linear-gradient(120deg, #3c3939, #fda085)">
         <div style="background-image: url(1.png)">
-           
             <div class="jumbotron bg-white bord" style="background-image: linear-gradient(120deg, #15d6ac, #c5dad4)">
                 <center>
-                    <h2> the 5 numbers which are prime
-                        palindromes.</h2>
+                    <h2>the 5 numbers which are prime palindromes.</h2>
                     <hr />
                 </center>
-
                 <div class="form-row">
                     <div class="form-group col-md-5">
                         <label for="inputEmail4">click to start </label>
@@ -129,17 +97,14 @@
                             <input type="text" class="form-control span7 search-query" id="num5" />
                         </div>
                         <center>
-                            <div class="col-md-6"></div>
+                            <div class="col-md-6">
                                 <button class="btn btn-warning" onclick="show()">start</button>
                             </div>
-
                         </center>
-                       
                     </div>
                 </div>
-
                 <center>
-                    <div class="bg-success" id="pid">"it is a prime palindrome":  </div>
+                    <div class="bg-success" id="pid">"it is a prime palindrome":</div>
                 </center>
             </div>
         </div>
