@@ -1,0 +1,42 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Primepalindrom</title>
+        <script>
+            function palindrome() {
+                var string = document.getElementsByName("palindrome[]");
+                for (var i = 0; i < string.length; i++) {
+                    // let temp = string[i].value;
+                    var reveArrVal = string[i].value.split("").reverse();
+                    var revString = reveArrVal.join("");
+                    if (string[i].value == revString) {
+                        flag = 0;
+                        for (let j = 2; j < string[i].value; j++) {
+                            if (string[i] % j == 0) {
+                                document.getElementById("p").innerHTML = "It is not a Prime Palindrome ";
+                                flag = 1;
+                                break;
+                            }
+                            if (flag == 0) {
+                                document.getElementById("p").innerHTML = "It is Prime Palindrome ";
+                            }
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <label> Enter a number : </label> <br />
+        <br />
+        <input name="palindrome[]" />
+        <input name="palindrome[]" />
+        <input name="palindrome[]" />
+        <input name="palindrome[]" />
+        <input name="palindrome[]" />
+        <button type="button" onclick="palindrome()">Check</button>
+        <div id="p"></div>
+    </body>
+</html>

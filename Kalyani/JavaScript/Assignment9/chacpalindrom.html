@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Palindrome</title>
+        <script>
+            function palindrome() {
+                const string = document.getElementById("palindrome").value;
+                const arrValue = string.split("");
+                const reveArrVal = arrValue.reverse();
+                const revString = reveArrVal.join("");
+                if (string == revString) {
+                    document.getElementById("p").innerHTML = "It is  a Palindrome ";
+                } else {
+                    document.getElementById("p").innerHTML = "It is Not a Palindrome ";
+                }
+            }
+        </script>
+        <style>
+            .Palindrome {
+                margin: 10px 0 0 150px;
+                width: 40%;
+                border: 3px solid gray;
+                border-radius: 5px;
+                padding: 30px;
+                height: 40vh;
+                background-color: cyan;
+            }
+            h1 {
+                text-align: center;
+                padding: 30px;
+                background-color: skyblue;
+                color: white;
+            }
+            #palindrome {
+                width: 70%;
+                height: 10%;
+                font-size: 20px;
+            }
+            button {
+                width: 20%;
+                height: 15%;
+                border-radius: 10px;
+                background-color: green;
+                color: black;
+            }
+            #p {
+                width: 50%;
+                border: 1px solid gray;
+                margin-top: 20px;
+                height: 15%;
+                text-align: center;
+                margin-left: 120px;
+                border-radius: 10px;
+                font-size: 30px;
+                background-color: darkgoldenrod;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="Palindrome">
+            <h1>Palindrom</h1>
+            <label> Enter a Name : </label> <br />
+            <br />
+            <input id="palindrome" />
+            <button type="button" onclick="palindrome()">Check</button>
+            <div id="p"></div>
+        </div>
+    </body>
+</html>
