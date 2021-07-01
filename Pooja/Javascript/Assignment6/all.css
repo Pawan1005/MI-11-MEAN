@@ -1,0 +1,41 @@
+body {
+    background-color: #73a797;
+    display: flex;
+    justify-content: center;
+    }
+    #outside {
+    display: flex;
+    flex-direction: column;
+    background-color: #15132b;
+    width: fit-content;
+    padding:10px 30px;
+    margin-top: 200px;
+    border-radius: 20px;
+    }
+    h1,h4 {
+    text-align: center;
+    color: white;
+    }
+    input,textarea {
+    padding: 5px;
+    margin: 7px;
+    border-radius: 10px;
+    text-align: center;
+    }
+    button {
+    padding: 5px;
+    margin: 5px;
+    background-color: #C38D9E;
+    color: white;
+    font-size: 20px;
+    font-weight: bolder;
+    border-radius: 10px;
+    }
+    #inside {
+    background-color: white;
+    height: 180px;
+    width: 350px;
+    align-self: center;
+    border-radius: 10px;    
+    }
+    
