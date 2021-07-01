@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>String is palindrome or not</title>
+        <style>
+            h1 {
+                text-align: center;
+                color: black;
+                margin-top: 5%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color:violet;
+                width: 410px;
+                height: 380px;
+                margin: auto;
+                padding-top: 15px;
+                gap: 15px;
+                border-radius: 10px;
+                border: solid black;
+            }
+            input {
+                width: 55%;
+                margin-left: 10px;
+                margin-bottom: 12px;
+                padding: 4px 8px;
+                font-size: 16px;
+                outline: none;
+                line-height: 19px;
+                border: 1px solid #0000004b;
+            }
+            p {
+                text-align: center;
+                min-width: 260px;
+                height: 70px;
+                padding: 16px 14px 9px 14px;
+                background-color: white;             
+                border: 1px solid #0000004b;
+                font-size: 18px;
+                font-weight: bold;
+            }
+            #num2 {
+                font-size: 19px;
+                color: #ff0000;
+            }
+            button {
+                background-color: #ff0000;
+                color:black;
+                padding: 7px 11px;
+                margin: 0 8px;
+                font-weight: bold;
+                font-size: 17px;
+                border: 1px solid gray;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <br>
+    <body>
+        <div class="main">
+            <h1>String is Palindrome or Not</h1>
+            <div>
+                <label for="">Enter the string </label>
+                <input type="text" id="firstnumber">
+            </div>  
+            <div>
+                <p><span id="num1"></span><span id="num2"></span></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="palindrome()">Check</button>
+            </div>
+        </div>
+        <script>
+            function palindrome() {
+                function str_palindrom(str) {
+                    splitStr = str.split ('');
+                    revArrChar = splitStr.reverse();
+                    revString = revArrChar.join('');
+                    if(revString==str) {
+                        document.getElementById("num1").innerHTML = "<br> It is&nbsp;";
+                        document.getElementById("num2").innerHTML = " Palindrome ";
+                    } else {
+                        document.getElementById("num1").innerHTML = "<br> It is&nbsp;";
+                        document.getElementById("num2").innerHTML = " not Palindrome ";
+                    }
+                }  
+                var string = [], splitStr, revArrChar,revString ;
+                string = document.getElementById("firstnumber").value;
+                str_palindrom(string);                        
+            }
+        </script>
+    </body>
+</html>
