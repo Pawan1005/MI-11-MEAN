@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assign6.css" />
+        <title>Document</title>
+       <script>
+            function fun() {
+                var num_arr = [], arr_x, fact_arr = [];
+                for (let i=0; i<5; i++) {
+                    arr_x = prompt("Enter a number : ");
+                    if (arr_x == "X" || arr_x == "x" || arr_x == null) {
+                        break;
+                    }
+                    num_arr.push(parseInt(arr_x));
+                    document.getElementById("hid").innerHTML += "  " +arr_x;
+                    fact_arr.push(fact(num_arr[i]));
+                    document.getElementById("hid2").innerHTML += "  " +fact(num_arr[i]);
+                }
+                function fact(num) {
+                    if (num == 0) return 1;
+                    return num * fact(num - 1);
+                }
+                document.getElementById("hid3").innerHTML ="Descending order &nbsp; = &nbsp;" +fact_arr.sort(function (x,y) {return y-x;}).join(" ");
+            }
+        </script>
+    </head>
+    <body>
+        <div id="outside">
+            <h4>Calculate factorial and arrange it in Descending order (*_*)</h4>
+            <button onclick="fun()">Click</button>
+            <div id="inside">
+                <h3>Entered Array::</h3>
+                <h2 id="hid"></h2>
+                <h3>Sum of arrays</h3>
+                <h2 id="hid2"></h2>
+                <h3 id="hid3"></h3>
+            </div>
+        </div>
+    </body>
+</html>
