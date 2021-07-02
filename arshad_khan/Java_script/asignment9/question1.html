@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>pelindrome</title>
+        <script>
+            function Palindrome() {
+                var rem,
+                    temp,
+                    final = 0;
+                var number = Number(document.getElementById("num").value);
+                temp = number;
+                while (number > 0) {
+                    rem = number % 10;
+                    number = parseInt(number / 10);
+                    final = final * 10 + rem;
+                }
+                if (final == temp) {
+                    document.getElementById("pid").innerHTML = "This number is pelindrome";
+                } else {
+                    document.getElementById("pid").innerHTML = "This number is not pelindrome";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container" style="border: 1px solid black; width: 600px; height: 400px; background-color: blueviolet; margin-left: 400px; margin-top: 50px">
+            <h1>Check a number is Palindrome or not</h1>
+            Enter The Number :&nbsp;<input type="text" name="n" id="num" /> <br /><br />
+            <center><button onClick="Palindrome()">CHECK</button></center>
+            <br />
+            <hr color="cyan" />
+            <div style="background-color: blanchedalmond; height: 100px">
+                <p id="pid"></p>
+            </div>
+        </div>
+    </body>
+</html>
