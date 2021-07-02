@@ -1,0 +1,101 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assignment9.css" />
+        <title>prime pallindrome out of 5</title>
+        <style>
+            h1 {
+                text-align: center;
+                color: red;
+                margin-top: 5%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 410px;
+                height: 350px;
+                margin: auto;
+                padding-top: 15px;
+                gap: 10px;
+                border-radius: 10px;
+                background-color: rgb(227, 230, 233);
+                box-shadow: 2px 2px 4px;
+            }
+            input {
+                width: 55%;
+                margin-left: 10px;
+                margin-bottom: 12px;
+                padding: 4px 8px;
+                font-size: 16px;
+                outline: none;
+                line-height: 19px;
+                border: 1px solid #0000004b;
+                box-shadow: 2px 2px 4px;
+            }
+            button {
+                background-color: #ff0000;
+                color: white;
+                padding: 7px 11px;
+                margin: 0 8px;
+                font-weight: bold;
+                font-size: 17px;
+            }
+        </style>
+        <script>
+            function numbers() {
+                function str_palindrome(str) {
+                    var sum = 0,
+                        count = 0,
+                        temp,
+                        rem,
+                        j;
+                    temp = parseInt(str);
+                    while (temp > 0) {
+                        rem = temp % 10;
+                        temp = parseInt(temp / 10);
+                        sum = sum * 10 + rem;
+                    }
+                    for (j = 1; j <= str; j++) {
+                        if (str % j == 0) {
+                            count++;
+                        }
+                    }
+                    if (sum == str && count == 2) {
+                        document.getElementById("pid1").innerHTML += +str + " is " + " prime palindrome" + "</br></br>";
+                    } else {
+                        document.getElementById("pid1").innerHTML += +str + " is not an prime palindrome number";
+                    }
+                }
+                var string = [],
+                    i;
+                string[0] = document.getElementById("input1").value;
+                string[1] = document.getElementById("input2").value;
+                string[2] = document.getElementById("input3").value;
+                string[3] = document.getElementById("input4").value;
+                string[4] = document.getElementById("input5").value;
+                for (i = 0; i < 5; i++) {
+                    str_palindrome(string[i]);
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h1>Check prime palindrome or not!!!</h1>
+            <div class="main">
+                <input type="number" name="" id="input1" />
+                <input type="number" name="" id="input2" />
+                <input type="number" name="" id="input3" />
+                <input type="number" name="" id="input4" />
+                <input type="number" name="" id="input5" />
+                <button class="btn1" onclick="numbers()">Check</button>
+                <h4 id="pid1"></h4>
+                <br />
+            </div>
+        </div>
+    </body>
+</html>
