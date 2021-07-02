@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript program to check given string is palindrome or not</title>
+        <style>
+            .name {
+                position: relative;
+                width: 500px;
+                background-color: rgb(248, 201, 131);
+                padding: 10px 0px 10px 0px;
+                border-radius: 15px 15px 0px 0px;
+                color: rgba(10, 83, 71, 0.918);
+                text-align: center;
+                margin-top: 80px;
+                margin-left: 400px;
+            }
+            .resultText {
+                font-size: 18px;
+                font-style: normal;
+                color: rgb(9, 45, 143);
+            }
+        </style>
+        <script>
+            function str_palindrome() {
+                var string,
+                    len,
+                    reverse = "";
+                string = document.getElementById("first").value;
+                len = string.length;
+                for (var i = len - 1; i >= 0; i--) {
+                    reverse = reverse + string.charAt(i);
+                }
+                document.getElementById("num").innerHTML = "<br>Reverse of the string : " + reverse;
+
+                if (string == reverse) {
+                    document.getElementById("num1").innerHTML = "<br> string is palindrome";
+                } else {
+                    document.getElementById("num1").innerHTML = "<br>string is not an palindrome";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="name">
+            <h3>Checking Palindrome String</h3>
+            Enter the String: <input type="text" id="first" placeholder="Enter string" />
+            <button type="button" onclick="str_palindrome()" style="background-color: rgb(35, 12, 165); height: 30px; color: white">Check</button>
+            <div class="resultText">
+                <div id="num"></div>
+                <div id="num1"></div>
+            </div>
+        </div>
+    </body>
+</html>
