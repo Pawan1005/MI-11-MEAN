@@ -75,11 +75,9 @@
                 }
                 document.getElementById("num3").innerHTML =
                     "<br><br><br> Descending order &nbsp; = &nbsp;" +
-                    fact_arr
-                        .sort(function (x, y) {
-                            return y - x;
-                        })
-                        .join("&nbsp;  &nbsp;");
+                    fact_arr.sort(function (x, y) {
+                        return y - x;
+                    }).join("&nbsp;  &nbsp;");
             }
         </script>
     </body>
