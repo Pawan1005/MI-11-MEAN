@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="Ass6.css" />
+        <title>Array Input</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="Q1.html">Question 1</a></li>
+                <li><a href="Q2.html">Question 2</a></li>
+                <li><a href="Q3.html">Question 3</a></li>
+                <li><a href="Q4.html">Question 4</a></li>
+                <li><a href="Q5.html">Question 5</a></li>
+            </ul>
+        </nav>
+        <div id="main-container">
+            <h1>Question 1</h1>
+            <div id="container"></div>
+        </div>
+        <script>
+            let arr = new Array(5);
+            let container = document.getElementById("container");
+            for (let i = 0; i < 5; i++) {
+                arr[i] = prompt("Enter a name:" + (i + 1));
+            }
+            container.innerHTML += `<div>${arr}</div>`;
+            for (let i = 0; i < 5; i++) {
+                container.innerHTML += `<div>Name ${i + 1} : ${arr[i]}</div>`;
+            }
+        </script>
+    </body>
+</html>
