@@ -1,0 +1,17 @@
+body {
+    background-color: #46344e;
+    display: flex;
+    justify-content: center;
+}
+div {
+    background-color: #c5cbe3;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 50px;
+    border-radius: 10px;
+    box-shadow: 5px 5px 10px rgb(100, 157, 172);
+}
+input, button, h4 {
+    margin-top: 10px;
+    border-radius: 10px;
+}
