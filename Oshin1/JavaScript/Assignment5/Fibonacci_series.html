@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>FABONACI SERIES</title>
         <style>
-.container {
+            .container {
                 padding: 2px 16px;
             }
             .card {
@@ -22,7 +22,7 @@
             button {
                 position: relative;
                 border: none;
-                font-size: 20px;               
+                font-size: 20px;
                 padding: 10px;
                 width: 180px;
                 text-align: center;
@@ -40,40 +40,36 @@
             }
         </style>
     </head>
-    <body >
-       
-            <div class="logincentrecard">
-                <div class="card">
-                    <div class="container">
-                        
-                            <h1 style="text-align: center;">FABONACCI SERIES</h1>
-                            <hr>
-                            <label for="Num1">Enter Number:</label>
-                            <input
-                                type="text"
-                                id="num"
-                                placeholder="Enter  Number"
-                            />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
-                            <button onclick="show()" style="background-color:white; color:black">PRINT</button>
-                            <p id="pid"></p>
-                            <script language="JavaScript">
-                                function show() {
-                                    let num = parseInt(document.getElementById("num").value);
-                                    let result = document.getElementById("pid");
-                                    let n1 = 0,
-                                        n2 = 1,
-                                        n3 = 0;
-                                    while (num > 0) {
-                                        result.innerHTML += `<div class="fibItem">${n1}</div>`;
-                                        n3 = n1 + n2;
-                                        n1 = n2;
-                                        n2 = n3;
-                                        num--;
-                                    }
-                                }
-                            </script>
-
-                </div>
+    <body>
+        <div class="card">
+            <div class="container">
+                <h1 style="text-align: center;">FABONACCI SERIES</h1>
+                <hr />
+                <label for="Num1">Enter Number:</label>
+                <input
+                    type="text"
+                    id="num"
+                    placeholder="Enter  Number"
+                />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
+                <button onclick="show()" style="background-color: white; color: black;">PRINT</button>
+                <p id="pid"></p>
+                <script language="JavaScript">
+                    function show() {
+                        let num = parseInt(document.getElementById("num").value);
+                        let result = document.getElementById("pid");
+                        let n1 = 0,
+                            n2 = 1,
+                            n3 = 0;
+                        while (num > 0) {
+                            result.innerHTML += `<div class="fibItem">${n1}</div>`;
+                            n3 = n1 + n2;
+                            n1 = n2;
+                            n2 = n3;
+                            num--;
+                        }
+                    }
+                </script>
             </div>
-
+        </div>
+    </body>
 </html>
