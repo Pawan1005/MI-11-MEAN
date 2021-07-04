@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FABONACI SERIES</title>
+        <style>
+            .ft {
+                width: 500px;
+                height: 500px;
+                background-color: tomato;
+            }
+        </style>
+    </head>
+    <body style="background-color: lightblue">
+        <center>
+            <div class="logincentrecard">
+                <div class="card">
+                    <div class="container">
+                        <fieldset class="ft">
+                            <h1>FABONACI SERIES</h1>
+                            <label for="Num1">Enter Number:</label>
+                            <input
+                                type="text"
+                                id="num"
+                                placeholder="Enter  Number"
+                            />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
+                            <button onclick="show()" style="background-color: red; color: white">RESULT</button>
+                            <p id="pid"></p>
+                            <script language="JavaScript">
+                                function show() {
+                                    let num = parseInt(document.getElementById("num").value);
+                                    let result = document.getElementById("pid");
+                                    let n1 = 0,
+                                        n2 = 1,
+                                        n3 = 0;
+                                    while (num > 0) {
+                                        result.innerHTML += `<div class="fibItem">${n1}</div>`;
+                                        n3 = n1 + n2;
+                                        n1 = n2;
+                                        n2 = n3;
+                                        num--;
+                                    }
+                                }
+                            </script>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </center>
+    </body>
+</html>

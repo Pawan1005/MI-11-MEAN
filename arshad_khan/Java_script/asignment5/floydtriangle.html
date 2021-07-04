@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FLOYD'S TRIANGLE</title>
+        <style>
+            .ft {
+                width: 500px;
+                height: 500px;
+                background-color: yellow;
+            }
+        </style>
+    </head>
+    <body style="background-color: lightblue">
+        <center>
+            <div class="logincentrecard">
+                <div class="card">
+                    <div class="container">
+                        <fieldset class="ft">
+                            <h1>FLOYD'S TRIANGLE</h1>
+                            <button onclick="show()" style="background-color: red; color: white">print pattern</button>
+                            <p id="pid"></p>
+                            <script language="JavaScript">
+                                function show() {
+                                    let k = 0;
+                                    let pattern = document.getElementById("pid");
+                                    for (let i = 0; i < 4; i++) {
+                                        setTimeout(() => {
+                                            for (let j = 0; j <= i; j++) {
+                                                k++;
+                                                pattern.innerHTML += `<span class="patternItems">&nbsp${k}&nbsp</span>`;
+                                            }
+                                            pattern.innerHTML += "<br><br>";
+                                        }, i * 100);
+                                    }
+                                }
+                            </script>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </center>
+    </body>
+</html>

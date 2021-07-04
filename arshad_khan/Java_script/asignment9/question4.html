@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Check String is pelindrome or Not</title>
+    </head>
+    <body>
+        <div class="container" style="border: 1px solid black; width: 600px; height: 400px; background-color: blueviolet; margin-left: 400px; margin-top: 50px">
+            <h1>Check a String is Palindrome or not</h1>
+            <hr color="cyan" />
+            Enter any string : <input type="text" id="a" /><br /><br />
+            Result String :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <input type="text" id="b" /><br /><br />
+            <center><input type="submit" onclick="pal()" value="CHECK" /></center>
+            <script type="text/javascript">
+                function pal() {
+                    var x = document.getElementById("a").value;
+                    var y = "";
+                    for (i = x.length - 1; i >= 0; i--) {
+                        y = y + x[i];
+                    }
+                    if (x == y) document.getElementById("b").value = x + " string is a Palindrome";
+                    else document.getElementById("b").value = x + " string is not a Palindrome";
+                }
+            </script>
+        </div>
+    </body>
+</html>
