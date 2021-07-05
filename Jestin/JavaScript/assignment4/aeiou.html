@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+        <title>Document</title>
+        <script lang="javascript">
+            function show() {
+                var a, b, s, c=1, d=0, k;
+                a= document.getElementById("num1").value;
+                c = a.toUpperCase();
+                b= a.toString().length
+                if(b>1){
+                    document.getElementById("pid").innerHTML="Only one character is allowed";
+                }
+                else{
+                    switch(c){
+                        case "A":
+                            document.getElementById("pid").innerHTML= a+" is a vowel ";
+                            break;
+                        case "E":
+                        document.getElementById("pid").innerHTML= a+" is a vowel ";
+                        break;
+                        case "I":
+                            document.getElementById("pid").innerHTML= a+" is a vowel ";
+                            break;
+                        case "O":
+                            document.getElementById("pid").innerHTML= a+" is a vowel ";
+                            break;
+                        case "U":
+                            document.getElementById("pid").innerHTML= a+" is a vowel ";
+                            break;
+                        default:
+                            document.getElementById("pid").innerHTML= a+" is not a vowel"
+                            break;
+                    }
+                }
+            }
+        </script>
+        <style>
+            .bord {
+                margin-left: 400px;
+                margin-right: 400px;
+            }
+            .jumbotron {
+                border-radius: 10%;
+                box-shadow: rgb(165, 11, 11);
+            }
+            input[type="number"],
+            select {
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body style="background-image: linear-gradient(120deg, #fdf8f8, #5c362c)">
+        <div style="background-image: url(1.png)">
+            <div class="jumbotron bg-white bord" style="background-image: linear-gradient(120deg, #1582d6, #c5dad4); border: solid black">
+                <center>
+                    <h2>vowel or Not</h2>
+                    <hr />
+                </center>
+                <div class="form-row">
+                    <div class="form-group col-md-3">
+                        <label for="inputEmail4">Enter the number</label>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-md-5">
+                            <input type="text" class="form-control span7 search-query" id="num1" />
+                        </div>
+                        <div class="col-md-5">
+                            <button class="btn btn-warning" onclick="show()">GET</button>
+                        </div>
+                    </div>
+                </div>
+                <center>
+                    <p class="bg-success" id="pid"></p>
+                </center>
+            </div>
+        </div>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

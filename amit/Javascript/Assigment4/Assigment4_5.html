@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Assignment 1</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            .container {
+                background-color: rgb(220, 203, 203);
+                width: 350px;
+                height: 480px;
+                text-align: center;
+                margin-left: 480px;
+                box-shadow: 7px 7px 15px;
+                border-radius: 15px;
+            }
+            .btn {
+                padding: 15px;
+                background-color: red;
+                outline-color: white;
+                outline-width: 15px;
+                color: white;
+            }
+            .label {
+                border-radius: 15px;
+                box-sizing: 30px;
+            }
+        </style>
+        <script language="javascript">
+            function show() {
+                var a,
+                    b,
+                    s,
+                    c = 1,
+                    d = 0,
+                    k;
+                a = document.getElementById("num1").value;
+                d = a.charAt(0);
+                b = d.toUpperCase();
+                if (b == d) {
+                    c = a.toLowerCase();
+                    document.getElementById("pid").innerHTML = c;
+                } else {
+                    c = a.toUpperCase();
+                    document.getElementById("pid").innerHTML = c;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <br /><br /><br />
+            <h1>String Converter</h1>
+            Enter String: <input type="text" id="num1" /><br /><br />
+            <button onclick="show()" class="btn">Find</button>
+            <p id="pid"></p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sum of even and product of odd</title>
+        <style>
+            body {
+                background-color: #616161;
+            }
+            h1 {
+                text-align: center;
+                color: white;
+                margin-top: 5%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #fcf3c1;
+                width: 380px;
+                height: 380px;
+                margin: auto;
+                padding-top: 15px;
+                gap: 26px;
+            }
+            input {
+                width: 50%;
+                margin-left: 10px;
+                margin-bottom: 12px;
+                padding: 4px 8px;
+                font-size: 15px;
+                outline: none;
+                line-height: 19px;
+                border: 1px solid #0000004b;
+            }
+            p {
+                text-align: center;
+                min-width: 260px;
+                height: 88px;
+                padding: 9px 5px 9px 1px;
+                background-color: white;
+                font-weight: bold;
+                border: 1px solid #0000004b;
+                color: #ff0000;
+                font-size: 19px;
+            }
+            #num1 {
+                font-weight: 300;
+                margin-left: 1px;
+                position: relative;
+            }
+            #num2 {
+                font-weight: 300;
+                position: relative;
+                margin-top: 20px;
+            }
+            .plus {
+                width: 10px;
+                background: rgb(255, 255, 255);
+                color: white;
+                position: absolute;left: 0;
+            }
+            #middle {
+                color: #ff0000;
+                font-size: 16px;
+            }
+            button {
+                background-color: #ff0000;
+                color: white;
+                padding: 7px 11px;
+                margin: 0 8px;
+                font-weight: bold;
+                font-size: 17px;
+                border: 1px solid gray;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Sum of Even and Product of Odd</h1>
+        <div class="main">
+            <div>
+                <label for="">&nbsp;Enter 6 digit number</label>
+                <input type="text" id="firstnumber">
+            </div>  
+            <div>
+                <p><span id="middle"></span><br><span id="num1"><span class="plus">rt</span></span><br><span id="num2"><span class="plus">rt</span></span></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="firstlast()">Calculate</button>
+            </div>
+        </div>
+        <script>
+            function firstlast() {  
+                var num, rem, sum=0, product=1;
+                num = document.getElementById("firstnumber").value
+                len = num.length;
+                if(len != 6) {
+                    document.getElementById("middle").innerHTML = "Invalid Number!! Please enter a 6 digit number ";
+                } else {
+                    while(num>0) {
+                        rem = num%10;
+                        num = parseInt(num/10);
+                        if(rem%2==0) {
+                            sum = sum + rem;
+                            document.getElementById ("num1").innerHTML += " + "+rem;                       
+                        } else {
+                            product = product * rem;
+                            document.getElementById ("num2").innerHTML += " * "+rem;
+                        }      
+                    }
+                    document.getElementById ("num1").innerHTML += "&nbsp; = &nbsp;"+sum;
+                    document.getElementById ("num2").innerHTML += "&nbsp; = &nbsp;"+product;
+                }                       
+            }
+        </script>
+    </body>
+</html>

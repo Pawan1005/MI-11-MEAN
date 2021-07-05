@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment6-5</title>
+        <style>
+            #p {
+                width: 35%;
+                height: 25%;
+                border: 1px solid black;
+                background-color: black;
+                color: red;
+            }
+            #p > div {
+                border: 1px solid black;
+                background-color: black;
+                font-size: 20px;
+                margin: 10px 0 0 20px;
+                text-align: center;
+            }
+            body {
+                background-color: seagreen;
+            }
+            div {
+                margin: 100px 0 0 400px;
+                width: 100px;
+                height: 200px;
+                background-color: black;
+                color: red;
+            }
+            #pr {
+                margin: 50px 10px 0 400px;
+                font-size: 25px;
+                background-color: transparent;
+                border: 1px solid black;
+                width: 20%;
+                height: fit-content;
+                padding: 5px 0 5px 150px;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="pr">Question5</p>
+        <div id="p"></div>
+        <script>
+            let arr = [];
+            let factorials = [];
+            let p = document.getElementById("p");
+            while (true) {
+                let temp = prompt("Enter a number");
+                if (temp == "X" || temp == "x" || temp == null) break;
+                temp = parseInt(temp);
+                arr.push(temp);
+            }
+            for (i = 0; i < arr.length; i++) {
+                factorials.push(factorial(arr[i]));
+            }
+            function factorial(n) {
+                if (n == 0) return 1;
+                return n * factorial(n - 1);
+            }
+            p.innerHTML += `<div> Factorials: ${factorials.sort(function (a, b) {
+                return b - a;
+            })}
+            </div>`;
+        </script>
+    </body>
+</html>

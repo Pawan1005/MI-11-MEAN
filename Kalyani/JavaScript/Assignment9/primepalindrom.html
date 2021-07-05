@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Primepalindrom</title>
+        <script>
+            function palindrome() {
+                const string = document.getElementById("palindrome").value;
+                const arrValue = string.split("");
+                const reveArrVal = arrValue.reverse();
+                const revString = reveArrVal.join("");
+                if (string == revString) {
+                    flag = 0;
+                    for (let i = 2; i < string; i++) {
+                        if (string % i == 0) {
+                            document.getElementById("p").innerHTML = "It is not a Prime Palindrome ";
+                            flag = 1;
+                            break;
+                        }
+                        if (flag == 0) {
+                            document.getElementById("p").innerHTML = "It is Prime Palindrome ";
+                        }
+                    }
+                }
+            }
+        </script>
+        <style>
+            .Palindrome {
+                margin: 10px 0 0 150px;
+                width: 40%;
+                border: 3px solid gray;
+                border-radius: 5px;
+                padding: 30px;
+                height: 45vh;
+                background-color: cyan;
+            }
+            h1 {
+                text-align: center;
+                padding: 30px;
+                background-color: skyblue;
+                color: rgb(2, 2, 2);
+            }
+            #palindrome {
+                width: 70%;
+                height: 10%;
+                font-size: 20px;
+            }
+            #p {
+                width: 60%;
+                border: 1px solid gray;
+                margin-top: 20px;
+                height: 25%;
+                text-align: center;
+                margin-left: 120px;
+                border-radius: 10px;
+                font-size: 30px;
+                background-color: darkgoldenrod;
+            }
+            button {
+                width: 20%;
+                height: 15%;
+                border-radius: 10px;
+                background-color: green;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="Palindrome">
+            <h1>PrimePalindrom</h1>
+            <label> Enter number : </label> <br />
+            <br />
+            <input id="palindrome" />
+            <button type="button" onclick="palindrome()">Check</button>
+            <div id="p"></div>
+        </div>
+    </body>
+</html>

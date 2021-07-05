@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+        <title>Document</title>
+        <script lang="javascript">
+            function show() {
+                let a =[];
+                let b = document.getElementById("pid");
+                let c = prompt("enter the value");
+                a.push(c);
+                function reverseNum(num) {
+                return (
+                    parseFloat(
+                    num
+                        .toString()
+                        .split('')
+                        .reverse()
+                        .join('')
+                    ) * Math.sign(num)
+                )
+                }
+                let j=reverseNum(a);
+                if(j==a){
+                b.innerHTML = `<div> ${a} = ${j} so it is palindrome  </div>`;
+                }
+                else{
+                b.innerHTML = `<div> ${a} != ${j} so it's not palindrome  </div>`;
+                }
+            }
+        </script>
+        <style>
+            .bord {
+                margin-left: 400px;
+                margin-right: 400px;
+            }
+            .jumbotron {
+                border-radius: 10%;
+                box-shadow: rgb(165, 11, 11);
+            }
+            input[type="number"],
+            select {
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body style="background-image: linear-gradient(120deg, #3c3939, #fda085)">
+        <div style="background-image: url(1.png)">
+            <div class="jumbotron bg-white bord" style="background-image: linear-gradient(120deg, #15d6ac, #c5dad4)">
+                <center>
+                    <h2>check if the number is a palindrome</h2>
+                    <hr />
+                </center>
+                <div class="form-row">
+                    <div class="form-group col-md-5">
+                        <label for="inputEmail4">click to start </label>
+                    </div>
+                    <center>
+                        <div class="col-md-6">
+                            <button class="btn btn-warning" onclick="show()">start</button>
+                        </div>
+                    </center>
+                </div>
+                <center>
+                    <div class="bg-success" id="pid"></div>
+                </center>
+            </div>
+        </div>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
