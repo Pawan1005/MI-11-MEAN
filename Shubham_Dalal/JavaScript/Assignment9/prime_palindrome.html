@@ -9,24 +9,24 @@
         <script>
             function fun() {
                 function str_palindrome(str) {
-                    splitStr = str.split ('');
+                    splitStr = str.split("");
                     revArrChar = splitStr.reverse();
-                    revString = revArrChar.join('');
+                    revString = revArrChar.join("");
                     str = parseInt(str);
-                    for(i=1; i<=str; i++) {
-                        if(str%i==0) {
+                    for (i = 1; i <= str; i++) {
+                        if (str % i == 0) {
                             count++;
                         }
                     }
-                    if(revString==str && count == 2) {
-                        document.getElementById("hid").innerHTML = "The number "+string + " is an prime palindrome number";
+                    if (revString == str && count == 2) {
+                        document.getElementById("hid").innerHTML = "The number " + string + " is an prime palindrome number";
                     } else {
-                        document.getElementById("hid").innerHTML = "The number "+string + " is not an prime palindrome number";     
+                        document.getElementById("hid").innerHTML = "The number " + string + " is not an prime palindrome number";
                     }
-                }  
-                var string = [], splitStr, revArrChar,revString, i, count=0;
+                }
+                var string = [], splitStr, revArrChar, revString, i, count = 0;
                 string = document.getElementById("num").value;
-                str_palindrome(string);                        
+                str_palindrome(string);
             }
         </script>
     </head>
@@ -38,4 +38,4 @@
             <h4 id="hid"></h4>
         </div>
     </body>
-    
+</html>

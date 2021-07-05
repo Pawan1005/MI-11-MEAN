@@ -1,9 +1,8 @@
-body{
-        
-        text-align: center;
-        background-image: radial-gradient(rgba(215, 138, 109, 0.681), rgb(215, 138, 109, 0.681), rgb(249, 183, 160, 0.681));
+body {       
+    text-align: center;
+    background-image: radial-gradient(rgba(215, 138, 109, 0.681), rgb(215, 138, 109, 0.681), rgb(249, 183, 160, 0.681));
 }
-div{
+div {
     height: 500px;
     width: 500px;
     display: flex;
@@ -14,10 +13,10 @@ div{
     padding: 40px;
     margin: 20px 570px;
 }
-h1{
+h1 {
     color: aliceblue;
 }
-input{
+input {
     padding: 10px 20px;
     border-radius: 5px;
     display: block;
@@ -25,7 +24,7 @@ input{
     margin-top: 20px;
 
 }
-button{
+button {
     background-image: linear-gradient(rgb(160, 98, 130), rgb(160, 98, 130));
     padding: 10px 20px;
     color: white;
@@ -33,6 +32,6 @@ button{
     margin-top: 20px;
     font-size: 20px;
 }
-h2{
+h2 {
     display: block;
 }
