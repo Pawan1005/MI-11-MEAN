@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Merge sort</title>
+        <style>
+            body {
+                background-color: #470c23;
+            }
+            h1 {
+                text-align: center;
+                color: white;
+                margin-top: 3%;
+            }
+            .main-box {
+                display: flex;
+                justify-content: center;
+                gap: 4%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #fcf3c1;
+                width: 480px;               
+                padding-top: 15px;
+                border-radius: 10px;
+            }
+            #main1 {
+                gap: 30px;
+                height: 480px;
+            }
+            .section {
+                display: flex;
+                gap: 15px;
+            }
+            #main2 {
+                min-height: 480px;
+                padding-top: 0px;
+            }
+            .display {
+                display: flex;
+                flex-direction: column;
+                gap: 2px;
+            }
+            input {
+                width: 100px;
+                margin-left: 10px;
+                margin-bottom: 12px;
+                padding: 4px 8px;
+                font-size: 16px;
+                outline: none;
+                line-height: 10px;
+                border: 1px solid #0000004b;
+            }
+            #name {
+                background-color: #0d5399;
+                color: #ffffff;
+                padding: 8px 28px;
+                font-weight: bold;
+                border-radius: 0 7px 0 7px;
+            }
+            #result {
+                font-size: 17px;
+                font-weight: bold;
+                line-height: 20px;
+            }
+            #after_sorting {
+                background-color: #0d5399;
+                color: #ffffff;
+                padding: 4px 8px;
+                font-weight: bold;
+                font-size: 17px;
+            }
+            button {
+                background-color: #ff0000;
+                color: white;
+                padding: 7px 11px;
+                margin: 0 8px 10px 8px;
+                font-weight: bold;
+                font-size: 17px;
+                border: 1px solid gray;
+                border-radius: 4px; 
+            }
+        </style>
+    </head>
+    <body>
+        <h1>///////////********* Merge Sort *********///////////</h1>
+        <div class="main-box">
+            <div class="main" id="main1">
+                <div class="section">
+                    <div class="section1">
+                        <div><h2>&emsp;&ensp;Section A</h2></div><br>
+                        <div>
+                            <label for="">Student 1 &nbsp;</label>
+                            <input type="text" id="firstnumber">
+                        </div>
+                        <div>
+                            <label for="">Student 2 &nbsp;</label>
+                            <input type="text" id="secondnumber">
+                        </div>
+                        <div>
+                            <label for="">Student 3 &nbsp;</label>
+                            <input type="text" id="thirdnumber">
+                        </div>
+                        <div>
+                            <label for="">Student 4 &nbsp;</label>
+                            <input type="text" id="fourthnumber">
+                        </div>
+                        <div>
+                            <label for="">Student 5 &nbsp;</label>
+                            <input type="text" id="fifthnumber">
+                        </div>
+                    </div>
+                    <div class="section2">
+                        <div><h2>&emsp;&ensp;Section B</h2></div><br>
+                        <div>
+                            <label for="">Student 1 &nbsp;</label>
+                            <input type="text" id="sixthnumber">
+                        </div>
+                        <div>
+                            <label for="">Student 2 &nbsp;</label>
+                            <input type="text" id="seventhnumber">
+                        </div>
+                        <div>
+                            <label for="">Student 3 &nbsp;</label>
+                            <input type="text" id="eightnumber">
+                        </div>
+                        <div>
+                            <label for="">Student 4 &nbsp;</label>
+                            <input type="text" id="ninenumber">
+                        </div>
+                        <div>
+                            <label for="">Student 5 &nbsp;</label>
+                            <input type="text" id="tenthnumber">
+                        </div>
+                    </div>
+                </div>  
+                <div>
+                    <button class="btn1" onclick="marks()">Check</button>
+                </div>
+            </div>
+            <div class="main" id="main2">
+                <div class="display">           
+                    <div><h2>&ensp;<span id="name">Marks</span></h2></div>
+                    <div><h2><span id="result"></span></h2></div>     
+                </div>
+                <div><h3>Sorted : &ensp;<span id="after_sorting"></span></h3></div>
+            </div>
+        </div>
+        <script>
+            function marks() {
+                function mergeSort(a, b, merge, len1, len2) {
+                    a.sort((a, b) => a - b);
+	                b.sort((a, b) => a - b);
+                    let i = 0, j = 0, k = 0;
+                    while (i < len1 && j < len2) {
+                        if (a[i] <= b[j]) {
+			                merge[k] = a[i];
+			                i += 1;
+			                k += 1;
+		                } else {
+                            merge[k] = b[j];
+			                j += 1;
+			                k += 1;
+                        }
+                    }
+                    while (i < len1) {
+                        merge[k] = a[i];
+		                i += 1;
+		                k += 1;
+                    }
+                    while (j < len2) {
+                        merge[k] = b[j];
+		                j += 1;
+		                k += 1;
+                    }
+                }
+                var sec1 = [], sec2 = [], len1, len2, n=1;
+                sec1[0] = parseInt(document.getElementById("firstnumber").value);
+                sec1[1] = parseInt(document.getElementById("secondnumber").value);
+                sec1[2] = parseInt(document.getElementById("thirdnumber").value);
+                sec1[3] = parseInt(document.getElementById("fourthnumber").value);
+                sec1[4] = parseInt(document.getElementById("fifthnumber").value);
+                sec2[0] = parseInt(document.getElementById("sixthnumber").value);
+                sec2[1] = parseInt(document.getElementById("seventhnumber").value);
+                sec2[2] = parseInt(document.getElementById("eightnumber").value);
+                sec2[3] = parseInt(document.getElementById("ninenumber").value);
+                sec2[4] = parseInt(document.getElementById("tenthnumber").value);                              
+                len1 = sec1.length;
+                len2 = sec2.length;
+                let merge = new Array(len1 + len2);
+                mergeSort(sec1, sec2, merge, len1, len2);
+                for(let i = 0; i < len1+len2; i++) {
+                    if (i<9) {
+                        document.getElementById("result").innerHTML += `Sorted Marks ${n++} &nbsp;: &ensp; <span style="color:red; font-size:18px;">${parseInt(merge[i])}</span> ` +"<br>";
+                    } else if(i>8 && i<10) {
+                        document.getElementById("result").innerHTML += `Sorted Marks ${n++} &nbsp;:&nbsp; <span style="color:red; font-size:18px;">${parseInt(merge[9])}</span> ` +"<br>";
+                    }
+                }
+                document.getElementById("after_sorting").innerHTML +=  merge.join(" &nbsp; ") + "<br>";
+            }
+        </script>
+    </body>
+</html>
