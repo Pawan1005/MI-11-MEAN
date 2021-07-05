@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calculate factorial and list in descending order</title>
+        <style>
+            body {
+                background-color: #000;
+            }
+            h1 {
+                text-align: center;
+                color: white;
+                margin-top: 2%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: grey;
+                width: 410px;
+                height: 485px;
+                margin: auto;
+                padding-top: 15px;
+                gap: 5px;
+                border-radius: 10px;
+            }
+            input {
+                width: 65%;
+                margin-left: 10px;
+                margin-bottom: 12px;
+                padding: 4px 8px;
+                font-size: 15px;
+                outline: none;
+                line-height: 19px;
+                border: 1px solid #0000004b;
+            }
+            p {
+                min-width: 260px;
+                height: 143px;
+                padding: 16px 14px 9px 14px;
+               
+                font-size: 17px;
+            }
+            button {
+                background-color: #000;
+                color: white;
+                padding: 10px 11px;
+                margin: 0 10px;
+                font-weight: bold;
+                font-size: 17px;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> Factorial and List in Descending order</h1>
+        <div class="main">
+            <div>
+                <button class="btn1" onclick="numbers()">Click here</button>
+            </div>
+            <div>
+                <p>Enter numbers : <span id="num1"></span><br /><br />Factorial of number : <span id="num2"></span><span id="num3"></span></p>
+            </div>
+        </div>
+        <script>
+            function numbers() {
+                var num_arr = [],
+                    arr_x,
+                    fact_arr = [];
+                for (let i = 0; i < 5; i++) {
+                    arr_x = prompt("Enter a number : ");
+                    if (arr_x == "X" || arr_x == "x" || arr_x == null) {
+                        break;
+                    }
+                    num_arr.push(parseInt(arr_x));
+                    document.getElementById("num1").innerHTML += " &emsp; " + arr_x;
+                    fact_arr.push(fact(num_arr[i]));
+                    document.getElementById("num2").innerHTML += " &ensp; " + fact(num_arr[i]);
+                }
+                function fact(num) {
+                    if (num == 0) return 1;
+                    return num * fact(num - 1);
+                }
+                document.getElementById("num3").innerHTML =
+                    "<br><br><br> Descending order &nbsp; = &nbsp;" +
+                    fact_arr
+                        .sort(function (x, y) {
+                            return y - x;
+                        })
+                        .join("&nbsp;  &nbsp;");
+            }
+        </script>
+    </body>
+</html>
