@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leap year demo</title>
+    <style>
+        .name {
+            position: relative;
+            width: 500px;
+            background-color: rgba(217, 241, 106, 0.918);
+            padding: 10px 0px 10px 0px;
+            border-radius: 15px 15px 0px 0px;
+            color: rgb(238, 13, 126);
+            text-align: center;
+            margin-top: 80px;
+            margin-left: 400px;
+        }
+    </style>
+    <script>
+        function check() {
+            var x;
+            x = parseInt(document.getElementById("year").value);
+
+            if ((x % 4 == 0) && (x % 100 != 0))
+                document.getElementById("answer").value = "Leap";
+            else if (x % 400 == 0)
+                document.getElementById("answer").value = "Leap";
+            else
+                document.getElementById("answer").value = " Not a Leap";
+        }
+        </script>
+</head>
+    <body style="background-color: rgb(191, 102, 233);">
+        <div class="name">
+        <h2>Check Leap year</h2>
+            <hr style="color: white;">
+            <br>
+            Enter the year: <input id="year"></br></br>
+            The given year is: <input id="answer"></br></br>
+            <button onclick="check()" style="padding: 6px; background-color: rgb(16, 245, 207);">Check</button></br></br>
+        </div>
+    </body>
+</html>

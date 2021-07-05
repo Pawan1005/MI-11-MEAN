@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var ch;
+            function checkVowel() {
+                ch = document.getElementById("char").value;
+                if (ch) {
+                    temp = document.getElementById("resPara");
+                    temp.style.display = "block";
+                    if ((ch >= "a" && ch <= "z") || (ch >= "A" && ch <= "Z")) {
+                        if (ch == "a" || ch == "e" || ch == "i" || ch == "o" || ch == "u") document.getElementById("res").innerHTML = "a Vowel";
+                        else if (ch == "A" || ch == "E" || ch == "I" || ch == "O" || ch == "U") document.getElementById("res").innerHTML = "a Vowel";
+                        else document.getElementById("res").innerHTML = "a Consonant";
+                    } else document.getElementById("res").innerHTML = "neither Vowel nor Consonant";
+                }
+            }
+        </script>
+        <style>
+            .name {
+                position: relative;
+                width: 500px;
+                background-color: rgba(235, 176, 66, 0.918);
+                padding: 10px 0px 10px 0px;
+                border-radius: 15px 15px 0px 0px;
+                color: rgb(17, 36, 212);
+                text-align: center;
+                margin-top: 80px;
+                margin-left: 400px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="name">
+            <h3>Checking Vowel or Consonent</h3>
+            <p>Enter the Character: <input type="text" input id="char" placeholder="Enter a character" /></p>
+            <button onclick="checkVowel()" style="background-color: rgb(243, 40, 50); height: 30px; color: white">Check</button>
+            <p id="resPara" style="display: none">It is <span id="res"></span></p>
+        </div>
+    </body>
+</html>
