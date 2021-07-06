@@ -1,0 +1,42 @@
+<html>
+    <head>
+        <title>JavaScript : Convert text from uppercase to lowercase or lowercase to uppercase.</title>
+    </head>
+    <body>
+        <style>
+            .as {
+                position: absolute;
+                width: 340px;
+                height: 415px;
+                margin: 51px auto 0px auto;
+                border-style: solid;
+                top: 22px;
+                left: 399px;
+                margin-right: 10px;
+                background-color: darkturquoise;
+            }
+        </style>
+        <div class="as">
+            <h1>Conversion</h1>
+            <input type="text" style="width: 300px; padding: 6px; font-size: 13px" id="text" placeholder="Enter text to convert to lowercase or uppercase" />
+            <br /><br />
+            <input type="button" value="Lowercase" onClick="convertToLowercase();" />
+            <input type="button" value="UpperCase" onClick="convertToUppercase();" />
+            <br /><br />
+            <input type="text" style="width: 310px; padding: 6px" id="result" placeholder="Result" />
+        </div>
+        <script type="text/javascript">
+            function convertToLowercase() {
+                var data = document.getElementById("text").value;
+                var lowerCase = data.toLowerCase();
+                document.getElementById("result").value = lowerCase;
+            }
+
+            function convertToUppercase() {
+                var data = document.getElementById("text").value;
+                var upperCase = data.toUpperCase();
+                document.getElementById("result").value = upperCase;
+            }
+        </script>
+    </body>
+</html>
