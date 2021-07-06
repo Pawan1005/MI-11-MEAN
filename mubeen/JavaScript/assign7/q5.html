@@ -47,9 +47,8 @@
                     g=k-1;
                     let temp = arr[k];
                     while ( g >=0 && temp < arr[(g)]) {
-                        
                         arr[g+1] = arr[(g)]
-                       g--;
+                        g--;
                     }
                    arr[g+1] = temp;
                 document.getElementById("root").innerHTML += arr + "<br>";
