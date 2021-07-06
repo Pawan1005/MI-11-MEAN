@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assignment9.css">
+        <title>String Palindrome</title>
+        <script>
+            function fun(){
+                debugger
+                var str , revStr = "";
+                str = document.getElementById("str").value;
+                var len = str.length;
+                for(var i = len-1; i >=0;i--){
+                    revStr = revStr + str.charAt(i);
+                }
+                if(str == revStr){
+                    document.getElementById("pid").innerHTML= " string is palindrome";
+                }
+                else{
+                    document.getElementById("pid").innerHTML= "string is not an palindrome";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h1>Check the String is Palindrome or not!!!</h1>
+            <input type="text" name="" id="str" />
+            <button onclick="fun()">String Palindrome</button>
+            <h2 id="pid"></h2>
+        </div>
+    </body>
+</html>

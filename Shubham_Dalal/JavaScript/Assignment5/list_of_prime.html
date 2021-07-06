@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="comman_file.css" />
+        <title>List of prime number</title>
+        <script>
+            function fun() {
+                var num,j, start, end;
+                start = document.getElementById("first").value;
+                end = document.getElementById("last").value;
+                for (num = start; num < end; num++) {
+                    if (num > 1) {
+                        for (j = 2; j <= num; j++) {
+                            if (num % j == 0) {
+                                break;
+                            } 
+                            else {
+                                document.getElementById("prime").innerHTML += " " + num;
+                            }
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>List of prime Number</h1>
+        <div>
+            <input type="number" id="first" placeholder="enter first number" />
+            <input type="number" id="last" placeholder="enter last number" />
+            <button onclick="fun()">Check</button>
+            <h2 id="prime"></h2>
+            <h2 id="fib"></h2>
+        </div>
+    </body>
+</html>
