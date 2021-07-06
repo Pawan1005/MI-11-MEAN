@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script class="jsbin" src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+        <meta charset="utf-8" />
+        <title>ass6.3</title>
+        <script>
+            function sum(student) {
+                let sum = 0;
+                for (let i = 0; i < student.length; i++) sum += student[i];
+                return sum;
+            }
+        </script>
+    </head>
+    <body style="background-color: cadetblue">
+       
+        <br />
+        <div style="font-size: 20px; background-color: white" id="display"></div>
+        <div style="font-size: 20px; background-color: white" id="display1"></div></br>
+        <p style="justify-content: center;"><input type="button" value="Show" onclick="insert()" style="width: 90px; height: 50px; border-radius: 5px" /></p>
+        <script>
+            function insert() {
+                var student = [];
+                while (true) {
+                    let temp = prompt("Enter a number");
+                    if (temp == "X" || temp == "x" || temp == null) break;
+                    temp = parseInt(temp);
+                    student.push(temp);
+                }
+                document.getElementById("display").innerHTML = "<center>" + "Numbers: " + student + "</center>";
+                student.map(sum);
+                document.getElementById("display1").innerHTML = "<center>" + "After addition numbers: " + sum(student) + "</center>";
+            }
+        </script>
+    </body>
+</html>
