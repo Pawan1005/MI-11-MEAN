@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment 8</title>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li>Assignment 8</li>
+                <li><a href="Q1.html">Question 1</a></li>
+                <li><a href="Q2.html" class="active">Question 2</a></li>
+                <li><a href="Q3.html">Question 3</a></li>
+                <li><a href="Q4.html">Question 4</a></li>
+            </ul>
+        </nav>
+        <div class="flex-container">
+            <div class="container">
+                <label for="sub1">Subject 1</label>
+                <input type="text" class="subjects" />
+                <label for="sub2">Subject 2</label>
+                <input type="text" class="subjects" />
+                <label for="sub3">Subject 3</label>
+                <input type="text" class="subjects" /><br /><br />
+                <label for="sub4">Subject 4</label>
+                <input type="text" class="subjects" />
+                <label for="sub5">Subject 5</label>
+                <input type="text" class="subjects" />
+                <label for="sub6">Subject 6</label>
+                <input type="text" class="subjects" /><br /><br />
+                <label for="sub7">Subject 7</label>
+                <input type="text" class="subjects" />
+                <label for="sub8">Subject 8</label>
+                <input type="text" class="subjects" />
+                <label for="sub9">Subject 9</label>
+                <input type="text" class="subjects" /><br /><br />
+                <label for="sub10">Subject 10</label>
+                <input type="text" class="subjects" /><br /><br />
+                <center><button onclick="calculate()">Calculate</button></center>
+            </div>
+           <center> <div id="result"></div></center>
+        </div>
+        <script>
+            let subjects = document.getElementsByClassName("subjects");
+            let result = document.getElementById("result");
+            let arr = [];
+            function calculate() {
+                result.innerHTML = "";
+                arr = [];
+                for (let i = 0; i < subjects.length; i++) {
+                    subjects[i].style.border = "1px solid ";
+                    if (parseInt(subjects[i].value) <= 95) {
+                        arr.push(parseInt(subjects[i].value));
+                    } else {
+                        subjects[i].style.border = "2px solid red";
+                    }
+                }
+                console.log(arr);
+                if (arr.length != 10) {
+                    alert("All values must be less than 95.");
+                }
+                for (let i = 0; i < arr.length; i++) {
+                    arr[i] = parseInt(arr[i] + arr[i] * 0.2);
+                    result.innerHTML += `<div>Total marks ${i + 1} : ${arr[i]}</div>`;
+                }
+                quickSort(arr, 0, 9);
+                result.innerHTML += `<h2>Total marks after sort </h2>`;
+                for (let i = 0; i < arr.length; i++) {
+                    result.innerHTML += `<div>Total marks ${i + 1} : ${arr[i]}</div>`;
+                }
+            }
+            function partition(arr, low, high) {
+                let pivot = arr[high],
+                    i = low - 1,
+                    temp;
+                for (let j = low; j <= high; j++) {
+                    if (pivot > arr[j]) {
+                        i++;
+                        temp = arr[j];
+                        arr[j] = arr[i];
+                        arr[i] = temp;
+                    }
+                }
+                temp = arr[high];
+                arr[high] = arr[i + 1];
+                arr[i + 1] = temp;
+                return i + 1;
+            }
+            function quickSort(arr, low, high) {
+                if (low < high) {
+                    pi = partition(arr, low, high);
+                    quickSort(arr, low, pi - 1);
+                    quickSort(arr, pi + 1, high);
+                }
+            }
+        </script>
+    </body>
+</html>
