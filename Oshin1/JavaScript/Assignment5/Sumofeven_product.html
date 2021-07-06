@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SUM OF EVEN AND PRODUCT OF ODD NUMBER</title>
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+                transition: 0.3s;
+                width: 40%;
+                height: 300px;
+                border-radius: 20px;
+                background-color: lightpink;
+                margin: auto;
+                margin-top: 50px;
+            }
+            button {
+                position: relative;          
+                border: none;
+                font-size: 20px;          
+                padding: 10px;
+                width: 180px;
+                text-align: center;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+                text-decoration: none;
+                overflow: hidden;
+                cursor: pointer;
+                margin-left: 130px;
+            }
+            #pid {
+                color: black;
+                text-align: center;
+                font-size: large;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="logincentrecard">
+            <div class="card">
+                <div class="container">
+                    <h3>SUM OF EVEN AND PRODUCT OF ODD NUMBER</h3>
+                    <label for="Num1">Enter Number:</label>
+                    <input
+                        type="text"
+                        id="num"
+                        placeholder="Enter  Number"
+                    />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
+                    <button onclick="show()" style="background-color: rosybrown; color: white;">SHOW</button>
+                    <p id="pid"></p>
+                    <script language="JavaScript">
+                        function show() {
+                            let num = document.getElementById("num").value,
+                                result = document.getElementById("pid"),
+                                temp,
+                                sumString = "",
+                                productString = "",
+                                sum = 0,
+                                product = 1;
+                            if (num.length == 6) {
+                                for (let i = 0; i < num.length; i++) {
+                                    temp = parseInt(num[i]);
+                                    if (temp % 2 == 0) {
+                                        sumString += `${temp}+`;
+                                        sum += temp;
+                                    } else {
+                                        productString += `${temp}*`;
+                                        product *= temp;
+                                    }
+                                }
+                                result.innerHTML =
+                                    sumString.slice(0, sumString.length - 1) +
+                                    " = " +
+                                    sum +
+                                    "<br><br>" +
+                                    productString.slice(0, productString.length - 1) +
+                                    " = " +
+                                    product;
+                            } else {
+                                result.innerHTML = "Invalid Number!!Please enter a 6 digit number.";
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

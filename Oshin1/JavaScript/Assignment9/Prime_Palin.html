@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Prime_Palin</title>
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+                transition: 0.3s;
+                width: 50%;
+                height: 620px;
+                border-radius: 20px;
+                background-color: lightgreen;
+                margin: auto;
+                margin-top: 50px;
+            }
+            button {
+                position: relative;
+                border: none;
+                font-size: 20px;
+                padding: 10px;
+                width: 180px;
+                text-align: center;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+                text-decoration: none;
+                overflow: hidden;
+                cursor: pointer;
+                margin-left: 130px;
+                background-color: white;
+                color: black;
+            }
+            #pid {
+                color: black;
+                text-align: center;
+                font-size: large;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <h1 style="text-align: center;">To check Prime Palindrome nos</h1>
+                <label>Enter the first number:</label>
+                &nbsp;&nbsp; &nbsp;&nbsp;<input type="text" id="num" placeholder="Enter a number" /> <br /><br />
+                <label>Enter the second number:</label>
+                <input type="text" id="num1" placeholder="Enter a number" />
+                <br /><br />
+                <label>Enter the third number:</label>
+                &nbsp;&nbsp; <input type="text" id="num2" placeholder="Enter a number" /> <br /><br />
+                <label>Enter the fourth number:</label>
+                &nbsp;<input type="text" id="num3" placeholder="Enter a number" /> <br /><br />
+                <label>Enter the fifth number:</label>
+                &nbsp;&nbsp;&nbsp; <input type="text" id="num4" placeholder="Enter a number" /> <br /><br />
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<button onclick="Palin()">CHECK</button>
+                <p id="pid"></p>
+                <script>
+                    function Palin() {
+                        function str_palindrome(str) {
+                            var sum = 0,
+                                count = 0,
+                                temp,
+                                rem,
+                                j;
+                            temp = parseInt(str);
+                            while (temp > 0) {
+                                rem = temp % 10;
+                                temp = parseInt(temp / 10);
+                                sum = sum * 10 + rem;
+                            }
+                            for (j = 1; j <= str; j++) {
+                                if (str % j == 0) {
+                                    count++;
+                                }
+                            }
+                            if (sum == str && count == 2) {
+                                document.getElementById("num1").innerHTML += +str + "<br><br>";
+                                document.getElementById("num2").innerHTML += " &emsp; is &nbsp;<br><br>";
+                                document.getElementById("pid").innerHTML += "  Prime Palindrome <br><br>";
+                            } else {
+                                document.getElementById("num1").innerHTML += +str + "<br><br>";
+                                document.getElementById("num2").innerHTML += "&emsp; is &nbsp;<br><br>";
+                                document.getElementById("pid").innerHTML += " Not a Prime Palindrome <br><br>";
+                            }
+                        }
+                        var string = [],i;
+                        string[0] = document.getElementById("num").value;
+                        string[1] = document.getElementById("num1").value;
+                        string[2] = document.getElementById("num2").value;
+                        string[3] = document.getElementById("num3").value;
+                        string[4] = document.getElementById("num4").value;
+                        for (i = 0; i < 5; i++) {
+                            str_palindrome(string[i]);
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
