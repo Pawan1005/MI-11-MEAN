@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Palindrome Number</title>
+        <style>
+            body {
+                height: 1500px;
+                background-image: linear-gradient(to bottom right, purple, red);
+            }
+        </style>
+    </head>
+    <body>
+        <p style="color: blue"></p>
+        <script language="javascript">
+            function Palnum() {
+                var rem,
+                    temp,
+                    final = 0;
+                var number = Number(document.getElementById("N").value);
+
+                temp = number;
+                while (number > 0) {
+                    rem = number % 10;
+                    number = parseInt(number / 10);
+                    final = final * 10 + rem;
+                }
+                if (final == temp) {
+                    //window.alert("number is Palindrome");
+                    //document.write("number is Palindrome");
+                    document.getElementById("pid").innerHTML += "Number is Palindrome!!";
+                } else {
+                    // window.alert("number is not palindrome");
+                    //document.write("number is  not Palindrome");
+                    document.getElementById("pid").innerHTML += "Number is not Palindrome!!";
+                }
+            }
+        </script>
+        <div style="width: 50%; position: absolute; left: 430px; top: 200px">
+            <div style="text-align: center; background-color: rgba(243, 243, 8, 0.842); height: 50%; border-radius: 25px 25px 25px 25px">
+                <br /><br />
+                <h1>Number is Palindrome or not?</h1>
+                <hr size="5" color="black" />
+                <br /><br />
+                <h4>Enter The Number : <input type="text" name="n" id="N" /></h4>
+                <p><button style="position: absolute; left: 47%" onClick="Palnum()">Submit</button></p>
+                <br /><br />
+                <p id="pid" style="color: blue; position: absolute; left: 47%"></p>
+                <br /><br /><br />
+            </div>
+        </div>
+    </body>
+</html>
