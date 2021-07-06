@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ass9_5</title>
+    </head>
+    <body>
+        <style>
+            .as {
+                position: absolute;
+                width: 340px;
+                height: 415px;
+                margin: 51px auto 0px auto;
+                border-style: solid;
+                top: 22px;
+                left: 399px;
+                margin-right: 10px;
+                background-color: darkturquoise;
+            }
+        </style>
+        <div class="as">
+            <h2>Double Letter in Word!</h2>
+            <div>
+                <label for="">Enter the word</label>
+                <input type="text" id="firstnumber" />
+            </div>
+            <div>
+                <p>Double letter &nbsp; = &nbsp;<span id="num1"></span></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="double_letter()">Check</button>
+            </div>
+        </div>
+        <script>
+            function double_letter() {
+                var str = [];
+                var i,
+                    letter1,
+                    letter2,
+                    len,
+                    count = 0;
+                str = document.getElementById("firstnumber").value;
+                len = str.length;
+                for (i = 0; i <= len - 2; i++) {
+                    letter1 = str.charAt(i);
+                    letter2 = str.charAt(i + 1);
+                    if (letter1 == letter2) {
+                        count = count + 1;
+                        document.getElementById("num1").innerHTML += "&nbsp;" + letter1 + "&ensp;";
+                    }
+                }
+                if (count == 0) {
+                    document.getElementById("num1").innerHTML += "&nbsp; No double letter &ensp;";
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <style>
+            .as {
+                position: absolute;
+                width: 340px;
+                height: 415px;
+                margin: 51px auto 0px auto;
+                border-style: solid;
+                top: 22px;
+                left: 399px;
+                margin-right: 10px;
+                background-color: darkturquoise;
+            }
+        </style>
+        <div class="as">
+            <h1>sum of two digit</h1>
+            <table>
+                <tr>
+                    <td><input type="text" name="a" id="first" placeholder="Enter a number" /></td>
+                </tr>
+                <tr>
+                    <td><button onclick="middle ()">Submit</button></td>
+                </tr>
+            </table>
+            <div id="num"></div>
+        </div>
+    </body>
+
+    <script type="text/javascript">
+        function middle() {
+            var n, middle, last, sum, first;
+            n = parseInt(document.getElementById("first").value);
+            last = n % 10;
+            m = parseInt(n / 10);
+            middle = m % 10;
+            first = parseInt(n / 100);
+            sum = last + first;
+            if (sum == middle) {
+                document.getElementById("num").innerHTML = "the sum is matching";
+            } else {
+                document.getElementById("num").innerHTML = "the sum is not matchinng";
+            }
+        }
+    </script>
+</html>

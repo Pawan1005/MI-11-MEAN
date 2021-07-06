@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ass</title>
+    </head>
+    <body>
+        <style>
+            .as {
+                position: absolute;
+                width: 340px;
+                height: 415px;
+                margin: 51px auto 0px auto;
+                border-style: solid;
+                top: 22px;
+                left: 399px;
+                margin-right: 10px;
+                background-color: darkturquoise;
+            }
+        </style>
+        <div class="as">
+            <h1>Sum of Numbers</h1>
+            <div>
+                <p>Enter numbers : <span id="num1"></span><span id="num2"></span></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="numbers()">Click here</button>
+            </div>
+        </div>
+        <script>
+            function numbers() {
+                var name_arr = [],
+                    arr_x,
+                    sum = 0;
+                for (let i = 0; i < 5; i++) {
+                    arr_x = prompt("Enter a number : ");
+                    if (arr_x == "X" || arr_x == "x" || arr_x == null) {
+                        break;
+                    }
+                    name_arr.push(parseInt(arr_x));
+                    sum = sum + name_arr[i];
+                    document.getElementById("num1").innerHTML += " &ensp; " + arr_x;
+                }
+                document.getElementById("num2").innerHTML = "<br><br><br>Sum &ensp; = &ensp;" + sum;
+            }
+        </script>
+    </body>
+</html>

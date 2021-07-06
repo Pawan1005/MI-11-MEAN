@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>word and whitespaces</title>    
+    </head>
+    <body>
+        <style>
+            .as {
+                position: absolute;
+                width: 340px;
+                height: 415px;
+                margin: 51px auto 0px auto;
+                border-style: solid;
+                top: 22px;
+                left: 399px;
+                margin-right: 10px;
+                background-color: darkturquoise;
+            }
+        </style>
+        <div class="as">
+                <h1>Total Words and Whitespaces</h1>
+                    <div>
+                        <label for="">Enter the sentence</label>
+                        <input type="text" id="firstnumber" />
+                    </div>
+                    <div>
+                        <p>
+                            Total word &nbsp; = &nbsp;<span id="num1"></span> <br /><br />
+                            Whitespaces &nbsp; = &nbsp;<span id="num2"></span>
+                        </p>
+                    </div>
+                    <div>
+                        <button class="btn1" onclick="centence()">Check</button>
+                    </div>
+        </div>
+                    <script>
+                        function centence() {
+                            var str = [];
+                            var i,
+                                len,
+                                count = 1,
+                                whitespace;
+                            str = document.getElementById("firstnumber").value;
+                            len = str.length;
+                            for (i = 0; i <= len - 1; i++) {
+                                letter1 = str.charAt(i);
+                                if (letter1 == " ") {
+                                    count++;
+                                }
+                            }
+                            whitespace = count - 1;
+                            document.getElementById("num1").innerHTML += "&nbsp;" + count + "&ensp;";
+                            document.getElementById("num2").innerHTML += "&nbsp;" + whitespace + "&ensp;";
+                        }
+                    </script>
+                </div>
+            </fieldset>
+        </div>
+    </body>
+</html>

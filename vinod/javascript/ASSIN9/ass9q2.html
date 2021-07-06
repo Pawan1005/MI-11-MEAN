@@ -1,0 +1,60 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ass9_2</title>
+    </head>
+    <body>
+        <style>
+            .as {
+                position: absolute;
+                width: 340px;
+                height: 415px;
+                margin: 51px auto 0px auto;
+                border-style: solid;
+                top: 22px;
+                left: 399px;
+                margin-right: 10px;
+                background-color: darkturquoise;
+            }
+        </style>
+        <div class="as">
+            <h1>Prime Pallindrome or Not</h1>
+            <label for="">Enter the number </label>
+            <input type="text" id="firstnumber" />
+            <button class="btn1" onclick="palindrome()">Check</button>
+            <p><span id="num1"></span><span id="num2"></span></p>
+        </div>
+        <script>
+            function palindrome() {
+                function str_palindrome(str) {
+                    splitStr = str.split("");
+                    revArrChar = splitStr.reverse();
+                    revString = revArrChar.join("");
+                    str = parseInt(str);
+                    for (i = 1; i <= str; i++) {
+                        if (str % i == 0) {
+                            count++;
+                        }
+                    }
+                    if (revString == str && count == 2) {
+                        document.getElementById("num1").innerHTML = "<br> ";
+                        document.getElementById("num2").innerHTML = " Prime Palindrome ";
+                    } else {
+                        document.getElementById("num1").innerHTML = "<br> ";
+                        document.getElementById("num2").innerHTML = " not Prime Palindrome ";
+                    }
+                }
+                var string = [],
+                    splitStr,
+                    revArrChar,
+                    revString,
+                    i,
+                    count = 0;
+                string = document.getElementById("firstnumber").value;
+                str_palindrome(string);
+            }
+        </script>
+    </body>
+</html>

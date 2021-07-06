@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>JavaScript program to find the Sum of even and Product of odd digits of given 6 digit number</title>
+    </head>
+    <body>
+        <style>
+            .as {
+                position: absolute;
+                width: 340px;
+                height: 415px;
+                margin: 51px auto 0px auto;
+                border-style: solid;
+                top: 22px;
+                left: 399px;
+                margin-right: 10px;
+                background-color: darkturquoise;
+            }
+        </style>
+        <div class="as">
+            <h1>Sum of even ane product od odd number</h1>
+            <table>
+                <tr>
+                    <td><input type="text" name="a" id="first" placeholder="Enter any 6 digit number" maxlength="6" /></td>
+                </tr>
+                <tr>
+                    <td><button onclick="sum_product6 ()">Submit</button></td>
+                </tr>
+            </table>
+            <div id="num"></div>
+            <div id="num1"></div>
+        </div>
+    </body>
+
+    <script type="text/javascript">
+        function sum_product6() {
+            var r,
+                n,
+                sum = 0,
+                product = 1;
+            n = parseInt(document.getElementById("first").value);
+            n1 = n;
+            while (n > 0) {
+                r = n % 10;
+                if (r % 2 == 0) {
+                    sum = sum + r;
+                } else {
+                    product = product * r;
+                }
+                n = parseInt(n / 10);
+            }
+            document.getElementById("num").innerHTML = "Sum of even digits : " + sum;
+            document.getElementById("num1").innerHTML = "Product of odd digits : " + product;
+        }
+    </script>
+</html>

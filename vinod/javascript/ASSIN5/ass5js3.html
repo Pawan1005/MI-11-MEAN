@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <title></title>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script>
+            function printPrime() {
+                "use strict";
+                var i, j, c, start, end;
+                start = parseInt(document.getElementById("start").value);
+                end = parseInt(document.getElementById("end").value);
+                document.getElementById("result").innerHTML = "";
+                for (i = start; i <= end; i++) {
+                    c = 0;
+                    for (j = 1; j <= i; j++) {
+                        if (i % j == 0) {
+                            c++;
+                        }
+                    }
+                    if (c == 2) {
+                        document.getElementById("result").insertAdjacentHTML("beforeend", i + "<br>");
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <style>
+            .as {
+                position: absolute;
+                width: 340px;
+                height: 415px;
+                margin: 51px auto 0px auto;
+                border-style: solid;
+                top: 22px;
+                left: 399px;
+                margin-right: 10px;
+                background-color: darkturquoise;
+            }
+        </style>
+        <div class="as">
+            <h2>Prime numbers between two input</h2>
+            Start: <input type="number" name="start" id="start" min="1" style="width: 100px" value="10" />&nbsp; End:
+            <input type="number" name="end" id="end" min="1" style="width: 100px" value="100" />&nbsp;<input
+                type="submit"
+                value="Print Prime Numbers"
+                onclick="printPrime()"
+                name="print"
+            />
+            <div id="result"></div>
+        </div>
+    </body>
+</html>

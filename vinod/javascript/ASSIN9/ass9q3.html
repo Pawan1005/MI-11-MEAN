@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>assi9_3</title>
+    </head>
+    <body>
+        <script>
+            function PrimePalindrome() {
+                var i,
+                    flag = 0,
+                    number1;
+                number1 = Number(document.getElementById("N1").value);
+                for (i = 2; i <= number1 / 2; i++) {
+                    if (number1 % i == 0) {
+                        flag = 1;
+                        break;
+                    }
+                }
+                var rem1,
+                    temp1,
+                    final1 = 0;
+                temp1 = number1;
+                while (number1 > 0) {
+                    rem1 = number1 % 10;
+                    number1 = parseInt(number1 / 10);
+                    final1 = final1 * 10 + rem1;
+                }
+                if (flag == 0 && final1 == temp1) {
+                    document.getElementById("pid1").innerHTML += "Number1 is a prime palindrome";
+                } else {
+                    document.getElementById("pid1").innerHTML += "Number1 is not a Prime palindrome";
+                }
+                var i,
+                    flag = 0,
+                    number3;
+                number2 = Number(document.getElementById("N2").value);
+                for (i = 2; i <= number2 / 2; i++) {
+                    if (number2 % i == 0) {
+                        flag = 1;
+                        break;
+                    }
+                }
+                var rem2,
+                    temp2,
+                    final2 = 0;
+                temp2 = number2;
+                while (number2 > 0) {
+                    rem2 = number2 % 10;
+                    number2 = parseInt(number2 / 10);
+                    final2 = final2 * 10 + rem2;
+                }
+                if (flag == 0 && final2 == temp2) {
+                    document.getElementById("pid2").innerHTML += "Number2 is a prime palindrome";
+                } else {
+                    document.getElementById("pid2").innerHTML += "Number2 is not a Prime palindrome";
+                }
+                var i,
+                    flag = 0,
+                    number3;
+                number3 = Number(document.getElementById("N3").value);
+                for (i = 2; i <= number3 / 2; i++) {
+                    if (number3 % i == 0) {
+                        flag = 1;
+                        break;
+                    }
+                }
+                var rem3,
+                    temp3,
+                    final3 = 0;
+                temp3 = number3;
+                while (number3 > 0) {
+                    rem3 = number3 % 10;
+                    number3 = parseInt(number3 / 10);
+                    final3 = final3 * 10 + rem3;
+                }
+                if (flag == 0 && final3 == temp3) {
+                    document.getElementById("pid3").innerHTML += "Number3 is a prime palindrome";
+                } else {
+                    document.getElementById("pid3").innerHTML += "Number3 is not a Prime palindrome";
+                }
+                var i,
+                    flag = 0,
+                    numbe4;
+                number4 = Number(document.getElementById("N4").value);
+                for (i = 2; i <= number4 / 2; i++) {
+                    if (number4 % i == 0) {
+                        flag = 1;
+                        break;
+                    }
+                }
+                var rem4,
+                    temp4,
+                    final4 = 0;
+                temp4 = number4;
+                while (number4 > 0) {
+                    rem4 = number4 % 10;
+                    number4 = parseInt(number4 / 10);
+                    final4 = final4 * 10 + rem4;
+                }
+                if (flag == 0 && final4 == temp4) {
+                    document.getElementById("pid4").innerHTML += "Number4 is a prime palindrome";
+                } else {
+                    document.getElementById("pid4").innerHTML += "Number4 is not a Prime palindrome";
+                }
+                var i,
+                    flag = 0,
+                    number5,
+                    number5 = Number(document.getElementById("N5").value);
+                for (i = 2; i <= number5 / 2; i++) {
+                    if (number5 % i == 0) {
+                        flag = 1;
+                        break;
+                    }
+                }
+                var rem5,
+                    temp5,
+                    final5 = 0;
+                temp5 = number5;
+                while (number5 > 0) {
+                    rem1 = number5 % 10;
+                    number5 = parseInt(number5 / 10);
+                    final5 = final5 * 10 + rem5;
+                }
+                if (flag == 0 && final5 == temp5) {
+                    document.getElementById("pid5").innerHTML += "Number5 is a prime palindrome";
+                } else {
+                    document.getElementById("pid5").innerHTML += "Number5 is not a Prime palindrome";
+                }
+            }
+        </script>
+        <style>
+            .as {
+                position: absolute;
+                width: 568px;
+                height: 610px;
+                margin: 51px auto 0px auto;
+                border-style: solid;
+                top: 22px;
+                left: 399px;
+                margin-right: 10px;
+                background-color: darkturquoise;
+            }
+        </style>
+        <div class="as">
+            <h2>Check whether a number is Prime palindrome or not?</h2>
+            <hr size="5" color="black" />
+            <br /><br />
+            Enter Number1 : <input type="text" name="n" id="N1" /><br /><br />
+            Enter Number2 : <input type="text" name="n" id="N2" /> <br /><br />
+            Enter Number3 : <input type="text" name="n" id="N3" /><br /><br />
+            Enter Number4 : <input type="text" name="n" id="N4" /> <br /><br />
+            Enter Number5 : <input type="text" name="n" id="N5" /><br /><br />
+            <p><button onClick="PrimePalindrome()">Submit</button></p>
+            <br />
+            <p id="pid1" style="color: blue; position: relative; right: -9%"></p>
+            <p id="pid2" style="color: blue; position: relative; right: -11%"></p>
+            <p id="pid3" style="color: blue; position: relative; right: -9%"></p>
+            <p id="pid4" style="color: blue; position: relative; right: -9%"></p>
+            <p id="pid5" style="color: blue; position: relative; right: -11%"></p>
+            <br /><br /><br />
+        </div>
+    </body>
+</html>
