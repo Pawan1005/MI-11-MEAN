@@ -18,10 +18,7 @@
             }
             document.write(temp.join(" ") + " numbers are prime palindromes ");
             function primePalindrome(number) {
-                let temp = number,
-                    reverse = 0,
-                    remainder,
-                    count = 0;
+                let temp = number,reverse = 0,remainder,count = 0;
                 for (let i = 1; i <= number; i++) {
                     if (number % i == 0) count++;
                 }
