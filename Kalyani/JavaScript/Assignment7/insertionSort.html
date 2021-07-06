@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>InsertionSort</title>
+        <style>
+            body {
+                background-color: brown;
+            }
+            .marks {
+                text-align: center;
+                font-size: 20px;
+                border: 1px solid black;
+                margin-top: 8px;
+            }
+            input {
+                width: 20%;
+                height: 3vh;
+                border-radius: 20px;
+                border: none;
+            }
+            button {
+                width: 10%;
+                height: 4vh;
+                border-radius: 25px;
+                border: none;
+                margin-top: 5px;
+            }
+             h1 {
+                text-align: center;
+            }
+            .iContainer {
+                margin-left: 250px;
+            }
+            #p {
+                font-size: 20px;
+            }
+            </style>
+    </head>
+    <body>
+        <h1>InsetionSort</h1>
+        <input type="text" id="numOfInputs" /><br />
+        <button onclick="proceed()">Next</button>
+        <br />
+        <div class="iContainer">
+            <div id="inputs_Container" class="container"></div>
+            <div id="p" class="container"></div>
+        </div>
+        <script>
+            function proceed() {
+                let numOfInputs = parseInt(document.getElementById("numOfInputs").value),
+                    inputs_Container = document.getElementById("inputs_Container");
+                inputs_Container.innerHTML = "";
+                for (let i = 0; i < numOfInputs; i++) {
+                    inputs_Container.innerHTML += `<div>Marks ${i + 1} : <input type="text" class="marks" /></div>`;
+                }
+                inputs_Container.innerHTML += `<button onclick="display()">Display</button>`;
+            }
+             function inputToArray() {
+                let marks = document.getElementsByClassName("marks"),
+                    arr = [];
+                for (let i = 0; i < marks.length; i++) {
+                    arr.push(parseInt(marks[i].value));
+                }
+                return arr;
+            }
+            function display() {
+                p = document.getElementById("p");
+                let arr = inputToArray();
+                p.innerHTML = "";
+                p.innerHTML += "<div><span>Before Sorting : </span><br>";
+                for (let i = 0; i < arr.length; i++) {
+                    p.innerHTML += `Marks ${i + 1} : ${parseInt(arr[i])} <br>`;
+                }
+                insertionSort(arr);
+                p.innerHTML += "</div><div><span>After Sorting :</span><br>";
+                for (let i = 0; i < arr.length; i++) {
+                    p.innerHTML += `Marks ${i + 1} : ${parseInt(arr[i])} <br>`;
+                }
+                p.innerHTML += "</div>";
+            }
+            function insertionSort(arr) {
+                let j, key;
+                p.innerHTML += "";
+                for (let i = 1; i < arr.length; i++) {
+                    key = arr[i];
+                    j = i - 1;
+                    while (j >= 0 && key > arr[j]) {
+                        arr[j + 1] = arr[j];
+                        j--;
+                        p.innerHTML += `Iteration : ${i + 1} : ${arr} <br>`;
+                    }
+                    arr[j + 1] = key;
+                }
+                p.innerHTML = `${p.innerHTML}`;
+            }
+        </script>
+    </body>
+</html>
+    </body>
+</html>
