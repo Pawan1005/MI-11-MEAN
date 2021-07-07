@@ -7,15 +7,15 @@
                 background-repeat: no-repeat;
                 height: 100vh;
             }
-        .container{
-            box-shadow: 0 10px 12px 0 rgba(213, 215, 216, 0.973), 0 6px 20px 0 rgba(206, 14, 14, 0.918);
-            top: 149px;
-            position: relative;
-            border-top-left-radius: 10px;
-            border-top-right-radius:10px ;
-            width: 40%;
-        }    
-            </style>
+            .container{
+                box-shadow: 0 10px 12px 0 rgba(213, 215, 216, 0.973), 0 6px 20px 0 rgba(206, 14, 14, 0.918);
+                top: 149px;
+                position: relative;
+                border-top-left-radius: 10px;
+                border-top-right-radius:10px ;
+                width: 40%;
+            }    
+        </style>
         <link
         rel="stylesheet"
         href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
@@ -26,17 +26,17 @@
 			function Palindrome()
 			{
                 let p = document.getElementById("p");
-			var string=document.getElementById("input1").value;
-            var stringArray=string.split('');
-            var stringArrayRev= stringArray.reverse();
-            var revString=stringArrayRev.join('');
-            if(string==revString){
-               document.getElementById("p").innerHTML="Is Palinmdrome"
+                var string=document.getElementById("input1").value;
+                var stringArray=string.split('');
+                var stringArrayRev= stringArray.reverse();
+                var revString=stringArrayRev.join('');
+                if(string==revString){
+                    document.getElementById("p").innerHTML="Is Palinmdrome";
+                }
+                else{
+                    document.getElementById("p").innerHTML="Is not Palinmdrome";
+                }
             }
-            else{
-               document.getElementById("p").innerHTML="Is not Palinmdrome"
-			}
-        }
 		</script>
 	</head>
 	<body>
