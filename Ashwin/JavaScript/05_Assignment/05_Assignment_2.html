@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SumofEvenProductOfOdd</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script>
+            function SumProduct() {
+                var r,
+                    n,
+                    sum = 0,
+                    product = 1;
+                n = parseInt(document.getElementById("first").value);
+                n1 = n;
+                while (n > 0) {
+                    r = n % 10;
+                    if (r % 2 == 0) {
+                        sum = sum + r;
+                    } else {
+                        product = product * r;
+                    }
+                    n = parseInt(n / 10);
+                }
+                document.getElementById("num").innerHTML = "Sum of even digits : " + sum;
+                document.getElementById("num1").innerHTML = "Product of odd digits : " + product;
+            }
+        </script>
+        <style>
+            #num #num1 {
+                text-align: center;
+                font-size: 25px;
+                margin-left: 150px;
+                color: blueviolet;
+            }
+            .box {
+                margin-top: 250px;
+                height: 250px;
+                width: 700px;
+                border: 1px solid black;
+                border-radius: 13px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="box" style="background: url(plain.jpg)">
+                    <div class="container">
+                        <h4 class="text-center" style="margin-top: 35px">Sum Of Even & Product Of Odd</h4>
+                        <input type="text" name="a" id="first" placeholder="Enter any 6 digit number" maxlength="6" class="form-control" />
+                        <button onclick="SumProduct ()" class="btn-success mt-3">Submit</button>
+                        <div id="num" style="margin-top: 10px; color: blueviolet; text-align: center; font-size: 25px"></div>
+                        <div id="num1" style="color: blueviolet; text-align: center; font-size: 25px"></div>
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </body>
+</html>
