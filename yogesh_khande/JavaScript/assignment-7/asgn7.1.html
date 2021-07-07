@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Triangle</title>
+        <script>
+            function show() {
+                let a = document.getElementById("num1").value;
+                for (let i = 0; i <= a; i++) {
+                    for (let j = 1; j <= i; j++) {
+                        document.getElementById("pid").innerHTML += j + "&nbsp;,&nbsp;";
+                    }
+                    document.getElementById("pid").innerHTML += "1" + "<br>";
+                }
+            }
+        </script>
+        <style>
+            body {
+                background-color: skyblue;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>
+            <hr />
+            *Print the Triangle*
+            <hr />
+        </h1>
+        <marquee>This program for print the Triangle</marquee>
+        <br /><br />
+        <input type="text" id="num1" placeholder="Enter Number" />
+        <p id="pid"></p>
+        <button onclick="show()">GET</button>
+    </body>
+</html>

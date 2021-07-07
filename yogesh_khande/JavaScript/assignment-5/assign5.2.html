@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fibonacci Sr.</title>
+        <script>
+            function show() {
+                var a, b, c, input;
+                input = parseInt(document.getElementById("num1").value);
+                a = 0;
+                b = 1;
+                document.getElementById("pid").innerHTML = +a + "";
+                document.getElementById("pid").innerHTML += b;
+                for (i = 3; i <= input; i++) {
+                    c = a + b;
+                    document.getElementById("pid").innerHTML += +c + "";
+                    a = b;
+                    b = c;
+                }
+            }
+        </script>
+    </head>
+    <body style="background-color: aqua; text-align: center; padding: 20px">
+        <h1>
+            <hr />
+            *Get your Fibonacci Series*
+            <hr />
+        </h1>
+        <input type="text" id="num1" placeholder="Enter no. till you want series." />
+        <p id="pid"></p>
+        <button onclick="show()">Get</button>
+    </body>
+</html>

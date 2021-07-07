@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Middle-Digit</title>
+        <script>
+            function show() {
+                var a, b, c;
+                a = parseInt(document.getElementById("num1").value);
+                b = a.toLocaleString().length;
+                if (b == 3) {
+                    var last = a % 10;
+                    var first = parseInt(a / 100);
+                    var mif = parseInt(a / 10);
+                    var mid = mif % 10;
+                    var sum = last + first;
+                    if (mid == sum) {
+                        document.getElementById("pid").innerHTML = "Sum Match";
+                    } else {
+                        document.getElementById("pid").innerHTML = "Sum does not Match";
+                    }
+                } else {
+                    document.getElementById("pid").innerHTML = "Invalid Number!! Please enter 3 Digit Number";
+                }
+            }
+        </script>
+    </head>
+    <body style="background-color: aqua; text-align: center; padding: 20px">
+        <h2 style="color: rgba(224, 16, 16, 0.966)">Note :-</h2>
+        <h3>*If your entered number's first and last digits sum is equal<br />to the middle digit then your sum is match otherwise Not matched shows.*</h3>
+        <h5>Lets Try it now :</h5>
+        <input type="text" id="num1" placeholder="Enter three digits number" />
+        <p id="pid"></p>
+        <button onclick="show()">GET</button>
+    </body>
+</html>
