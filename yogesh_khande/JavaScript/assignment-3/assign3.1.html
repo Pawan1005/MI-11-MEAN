@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                background-color: rgb(0, 195, 255);
+            }
+            .box {
+                text-align: center;
+                padding: 5px 10px;
+                margin-top: 50px;
+                border: 2px solid black;
+                border-radius: 20px;
+            }
+            button {
+                padding: 5px 10px;
+            }
+        </style>
+        <script>
+            function add() {
+                a = parseInt(document.getElementById("num1").value);
+                if (a % 400 == 0) {
+                    document.getElementById("pid").innerHTML = +a + "Is a Leap Year";
+                } else {
+                    year = a;
+                    if (year % 4 == 0) {
+                        document.getElementById("pid1").innerHTML = +year + "=Is a Leap Year";
+                    } else if (year % 4 != 0) {
+                        document.getElementById("pid1").innerHTML = +year + "=Is not a Leap Year";
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body class="box">
+        <h1>*Check Leap years*</h1>
+        <input type="text" id="num1" />
+        <p id="pid1"></p>
+        <button onclick="add()">Click</button>
+        <p><u>Note:</u>Number which is divisible by 4 and 400 is a Leap year<br />and others are the common years.</p>
+    </body>
+</html>

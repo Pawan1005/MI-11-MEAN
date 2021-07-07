@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Odd-Even</title>
+        <style>
+            body {
+                background-color: cadetblue;
+            }
+            .box {
+                text-align: center;
+                padding: 10px 10px;
+                margin-top: 50px;
+                border: 2px solid black;
+                border-radius: 20px;
+            }
+            button {
+                padding: 5px 10px;
+            }
+        </style>
+        <script>
+            function add() {
+                a = parseInt(document.getElementById("num").value);
+                if (a % 2 == 0) {
+                    document.getElementById("pid").innerHTML = a + "is a even number";
+                } else {
+                    document.getElementById("pid").innerHTML = a + "is a odd number";
+                }
+            }
+        </script>
+    </head>
+    <body class="box">
+        <h1><hr>*Find Number Odd or Even*<hr></h1>
+        <input type="text" id="num" placeholder="Enter Number" />
+        <p id="pid"></p>
+        <button onclick="add()">Click</button>
+    </body>
+</html>

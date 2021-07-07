@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+            crossorigin="anonymous"/>
+        <title>Document</title>
+        <script>
+            function swap(arr1, lower, higher) {
+                let temp = arr1[lower];
+                arr1[lower] = arr1[higher];
+                arr1[higher] = temp;
+            }
+            function partition(arr1, lower, higher) {
+                var pivot = arr1[lower],
+                    i = lower,
+                    j = higher;
+                while (i <= j) {
+                    while (arr1[i] < pivot) {
+                        i++;
+                    }
+                    while (arr1[j] > pivot) {
+                        j--;
+                    }
+                    if (i <= j) {
+                        swap(arr1, i, j);
+                        i++;
+                        j--;
+                    }
+                }
+                return i;
+            }
+            function quickSort(arr1, lower, higher) {
+                let index;
+                if (arr1.length > 1) {
+                    index = partition(arr1, lower, higher);
+                    if (lower < index - 1) {
+                        quickSort(arr1, lower, index - 1);
+                    }
+                    if (index < higher) {
+                        quickSort(arr1, index, higher);
+                    }
+                }
+                return arr1;
+            }
+        </script>
+        <script>
+            function insertionSorting(arr1) {
+                for (k = 1; k < arr1.length; k++) {
+                    let g = k - 1;
+                    let temp = arr1[k];
+                    while (g >= 0 && temp < arr1[g]) {
+                        arr1[g + 1] = arr1[g];
+                        g--;
+                    }
+                    arr1[g + 1] = temp;
+                }
+                return arr1;
+            }
+        </script>
+        <script>
+            function bubble(arr1) {
+                for (k = 0; k < arr1.length - 1; k++) {
+                    for (g = 0; g < arr1.length; g++) {
+                        let temp = 0;
+                        if (arr1[g] > arr1[g + 1]) {
+                            temp = arr1[g];
+                            arr1[g] = arr1[g + 1];
+                            arr1[g + 1] = temp;
+                        }
+                    }
+                }
+                return arr1;
+            }
+        </script>
+        <script>
+            function selection(arr1) {
+                for (k = 0; k < arr1.length - 1; k++) {
+                    for (g = k; g < arr1.length - 1; g++) {
+                        let temp = 0;
+                        if (arr1[k] > arr1[g + 1]) {
+                            temp = arr1[k];
+                            arr1[k] = arr1[g + 1];
+                            arr1[g + 1] = temp;
+                        }
+                    }
+                }
+                return arr1;
+            }
+        </script>
+    </head>
+    <body>
+        <style>
+            input {
+                margin: 5px;
+            }
+            body {
+                margin: 10px;
+                background-color: rgb(71, 59, 126);
+            }
+        </style>
+        <center><h1>Integrated Sorting</h1></center>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-4" id="inp">
+                    subject 1:<input type="text" id="num1" /> <br />
+                    subject 2:<input type="text" id="num2" /> <br />
+                    subject 3:<input type="text" id="num3" /> <br />
+                    subject 4:<input type="text" id="num4" /> <br />
+                    subject 5:<input type="text" id="num5" /> <br />
+                    subject 6:<input type="text" id="num6" /> <br />
+                    subject 7:<input type="text" id="num7" /> <br />
+                    subject 8:<input type="text" id="num8" /> <br />
+                    subject 9:<input type="text" id="num9" /> <br />
+                    subject X:<input type="text" id="num10" /> <br />
+                    Type Of Sorting:
+                    <select name="" id="ch">
+                        <option value="1">bubble sort</option>
+                        <option value="2">selection sort</option>
+                        <option value="3">inversion sort</option>
+                        <option value="4">quick sort</option>
+                    </select>
+                    <br />
+                    <button onclick="app()" class="btn btn-dark">Get</button>
+                </div>
+                <div class="col">
+                    <p id="out"></p>
+                    <br />
+                    <br />
+                    <p id="out1"></p>
+                </div>
+            </div>
+        </div>
+        <script>
+            function app() {
+                var arr = [],
+                    sortedArray = [];
+                var choice = parseInt(document.getElementById("ch").value);
+                for (i = 0; i < 10; i++) {
+                    arr[i] = parseInt(document.getElementById(`num${i + 1}`).value);
+                    if (arr[i] > 80) {
+                        window.alert(`${i + 1}th value is in valid`);
+                    } else {
+                        arr[i] = apr(arr[i]);
+                    }
+                }
+                function apr(a) {
+                    a += a * 0.2;
+                    return a;
+                }
+                for (i = 0; i < 10; i++) {
+                    document.getElementById("out").innerHTML += `mark of subject ${i + 1} is: ${arr[i]} <br>`;
+                }
+                switch (choice) {
+                    case 1:
+                        sortedArray = bubble(arr);
+                        document.getElementById("out1").innerHTML += "<h3>Bubble Sorted </h3> <br> <br>" + sortedArray;
+                        break;
+                    case 2:
+                        sortedArray = selection(arr);
+                        document.getElementById("out1").innerHTML += "<h3>Selection Sorted </h3> <br> <br>" + sortedArray;
+                        break;
+                    case 3:
+                        sortedArray = insertionSorting(arr);
+                        document.getElementById("out1").innerHTML += "<h3>Insertion Sorted </h3> <br> <br>" + sortedArray;
+                        break;
+                    case 4:
+                        sortedArray = quickSort(arr, 0, arr.length - 1);
+                        document.getElementById("out1").innerHTML += "<h3>Quick Sorted </h3> <br> <br>" + sortedArray;
+                        break;
+                    default:
+                }
+            }
+        </script>
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous">
+        </script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+            crossorigin="anonymous">
+        </script>
+    </body>
+</html>

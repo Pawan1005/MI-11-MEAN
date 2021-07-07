@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Prime Number</title>
+        <style>
+            body {
+                background-color: cadetblue;
+            }
+            .box {
+                text-align: center;
+                padding: 10px 10px;
+                margin-top: 50px;
+                border: 2px solid black;
+                border-radius: 20px;
+            }
+            button {
+                padding: 5px 10px;
+            }
+        </style>
+        <script>
+            function prm() {
+                a = parseInt(document.getElementById("num1").value);
+                if (a <= 1) {
+                    document.getElementById("pid").innerHTML = +a + "is not a prime number";
+                }
+                for (var i = 2; i < a; i++) {
+                    if (a % i != 0) {
+                        document.getElementById("pid").innerHTML = +a + "is a prime number";
+                    }
+                }
+                for (var i = 2; i < a; i++) {
+                    if (a % i == 0) {
+                        document.getElementById("pid").innerHTML = +a + "is not a prime number";
+                    }
+                }
+                if (a == 2) {
+                    document.getElementById("pid").innerHTML = +a + "is a prime number";
+                }
+            }
+        </script>
+    </head>
+    <body class="box">
+        <h1>*Check Prime Numbers*</h1>
+        <input type="text" id="num1" placeholder="Enter Number" />
+        <p id="pid"></p>
+        <button onclick="prm()">Click</button>
+    </body>
+</html>
