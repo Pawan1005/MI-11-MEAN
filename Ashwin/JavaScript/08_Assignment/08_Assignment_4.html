@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"/>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        <script>
+            function mergeSort(arr) {
+                let len = arr.length;
+                if (len < 2) {
+                    return arr;
+                }
+                let mid = Math.floor(len / 2),
+                    left = arr.slice(0, mid),
+                    right = arr.slice(mid);
+                return merge(mergeSort(left), mergeSort(right));
+            }
+            function merge(left, right) {
+                var result = [],
+                    lLen = left.length,
+                    rLen = right.length,
+                    l = 0,
+                    r = 0;
+                while (l < lLen && r < rLen) {
+                    if (left[l] < right[r]) {
+                        result.push(left[l++]);
+                    } else {
+                        result.push(right[r++]);
+                    }
+                }
+                return result.concat(left.slice(l)).concat(right.slice(r));
+            }
+            function studentMarkMergeSort() {
+                let result = document.getElementById("result");
+                let subjectMarksA = [];
+                let subjectMarksB = [];
+                for (let sectionAb = 0; sectionAb < 2; sectionAb++) {
+                    let subject = 5;
+                    while (subject > 0) {
+                        if (sectionAb < 1) {
+                            marks = parseInt(prompt("Enter a Marks from Section A Student:"));
+                        } else {
+                            marks = parseInt(prompt("Enter a Marks from Section B Student:"));
+                        }
+                        if (marks > 80) {
+                            alert("Please Enter Marks less then equal 80");
+                            subject++;
+                        } else {
+                            marks = marks + parseInt(marks * 0.2);
+                            if (sectionAb < 1) {
+                                subjectMarksA.push(marks);
+                            } else {
+                                subjectMarksB.push(marks);
+                            }
+                        }
+                        subject--;
+                    }
+                }
+                result.innerHTML = "<b>Total Marks Section A Before Merge Sort</b>";
+                subjectMarksA.forEach((value, index) => {
+                    result.innerHTML += `<br> Subject: <b>${index + 1}</b> --> Marks: <b>${value}</b>`;
+                });
+                result.innerHTML += "<br><b>Total Marks Section B Before Merge Sort</b>";
+                subjectMarksB.forEach((value, index) => {
+                    result.innerHTML += `<br> Subject: <b>${index + 1}</b> --> Marks: <b>${value}</b>`;
+                });
+                let subjectMarks = subjectMarksA.concat(subjectMarksB);
+                let subjectMarksSort = mergeSort(subjectMarks);
+                result.innerHTML += "<br><br><b>Total Marks After Applying Merge Sort</b>";
+                subjectMarksSort.forEach((value, index) => {
+                    result.innerHTML += `<br> Subject: <b>${index + 1}</b> --> Marks: <b>${value}</b>`;
+                });
+            }
+        </script>
+        <style>
+            .box {
+                height: fit-content;
+                width: fit-content;
+                border: 1px solid black;
+                border-radius: 13px;
+                background: url(plain.jpg);
+                background-size: cover;
+                margin-top: 100px;
+            }
+            p {
+                text-align: center;
+                font-size: 30px;
+                color: blueviolet;
+            }
+        </style>
+        <title>Merge Sort</title>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="box">
+                    <div class="container">
+                        <h1>Sorting Using Merge Sort</h1>
+                        <h4><span>Enter Student Marks (Section A and Section B)</span></h4>
+                        <button type="submit" onclick="studentMarkMergeSort()" class="btn-success form-control">Start And Sort Marks</button>
+                        <p id="result"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </body>
+</html>
