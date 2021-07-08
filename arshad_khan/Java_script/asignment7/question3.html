@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Question 3</title>
+        <style>
+            p {
+                display: inline-flex;
+            }
+            #num1,
+            #num2,
+            #num3,
+            #num4 {
+                display: inline-flex;
+            }
+        </style>
+        <script>
+            function q3() {
+                function bubbleSort(num) {
+                    var temp, len;
+                    len = num.length;
+                    for (let j = 0; j < len - 1; j++) {
+                        for (let i = 0; i < len - 1; i++) {
+                            if (num[i] > num[i + 1]) {
+                                temp = num[i];
+                                num[i] = num[i + 1];
+                                num[i + 1] = temp;
+                            }
+                            document.getElementById("iteration1").innerHTML +=
+                                ` Swaping iteration ${[i + 1]} :&ensp; <span style="color:indigo;"> ${num.join(", ")} </span>` + "<br>";
+                        }
+                        document.getElementById("iteration1").innerHTML +=
+                            `<strong> Iteration ${[j + 1]} :&ensp; <span style="color:#ff0000;"> ${num.join("  ")} </span> </strong>` + "<br><br>";
+                    }
+                }
+                var student,
+                    marks = [],
+                    l = 1,
+                    m = 1;
+                student = parseInt(document.getElementById("num").value);
+                for (let i = 0; i < student; i++) {
+                    marks[i] = parseInt(prompt("Enter marks : "));
+                    document.getElementById("num1").innerHTML += "Marks " + l++ + "&ensp;:&emsp;<br><br";
+                    document.getElementById("num2").innerHTML += +marks[i] + "<br><br";
+                }
+                document.getElementById("numBefore").innerHTML += marks.join(" &nbsp; ") + "<br>";
+                bubbleSort(marks);
+                for (let i = 0; i < student; i++) {
+                    document.getElementById("num3").innerHTML += "Marks " + m++ + "&ensp;:&emsp;<br><br";
+                    document.getElementById("num4").innerHTML += +marks[i] + "<br><br";
+                }
+                document.getElementById("numBefore1").innerHTML += marks.join(" &nbsp; ") + "<br>";
+            }
+        </script>
+    </head>
+    <body>
+        <div
+            class="container"
+            style="border: 1px solid black; width: 600px; height: 1000px; background-color: blueviolet; margin-left: 400px; margin-top: 50px"
+        >
+            <h1>Question 3</h1>
+            Enter The Student Marks :&nbsp;<input type="text" name="n" id="num" /> <br /><br />
+            <center><button onClick="q3()">CHECK</button></center>
+            <br />
+            <hr color="cyan" />
+            <div style="background-color: blanchedalmond; height: 800px">
+                <p id="pid"></p>
+                <p id="pid1"></p>
+                <span class="before">Before Sorting</span><span class="after">After Sorting</span> <span id="num1"></span><span id="num2"></span
+                ><span id="num3"></span><span id="num4"></span>
+                <h4>Before sorting : &ensp;<span id="numBefore"></span></h4>
+                <span id="iteration1"></span>
+                <h4>After sorting : &ensp;<span id="numBefore1"></span></h4>
+            </div>
+        </div>
+    </body>
+</html>
