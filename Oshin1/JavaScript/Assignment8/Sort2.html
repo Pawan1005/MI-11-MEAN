@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Stud</title>
+        <style>
+           .container {
+                padding: 2px 16px;
+            }
+            .card {
+                box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+                transition: 0.3s;
+                width: 40%;
+                height: 900px;
+                border-radius: 20px;
+                background-color: salmon;
+                margin: auto;
+                margin-top: 50px;
+            }
+            button {
+                position: relative;
+                border: none;
+                font-size: 20px;
+                padding: 10px;
+                width: 180px;
+                text-align: center;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+                text-decoration: none;
+                overflow: hidden;
+                cursor: pointer;
+                margin-left: 130px;
+            }
+            .sub{
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="logincentrecard">
+            <div class="card">     
+                <div class="container">
+                    <label for="sub1">Subject 1</label>
+                    <input type="text" class="sub" />
+                    <br>
+                    <label for="sub2">Subject 2</label>
+                    <input type="text" class="sub" />
+                    <br>
+                    <label for="sub3">Subject 3</label>
+                    <input type="text" class="sub" />
+                    <br>
+                    <label for="sub4">Subject 4</label>
+                    <input type="text" class="sub" />
+                    <br>
+                    <label for="sub5">Subject 5</label>
+                    <input type="text" class="sub" />
+                    <br>
+                    <label for="sub6">Subject 6</label>
+                    <input type="text" class="sub" />
+                    <br>
+                    <label for="sub7">Subject 7</label>
+                    <input type="text" class="sub" />
+                    <br>
+                    <label for="sub8">Subject 8</label>
+                    <input type="text" class="sub" />
+                    <br>
+                    <label for="sub9">Subject 9</label>
+                    <input type="text" class="sub" />
+                    <br>
+                    <label for="sub10">Subject 10</label>
+                    <input type="text" class="sub" />
+                    <button onclick="calc()">Calculate</button>
+                </div>
+                <div id="result"></div>
+            </div>
+            <script>
+                let subj = document.getElementsByClassName("subj");
+                let res = document.getElementById("res");
+                let arr = [];
+                function calc() {
+                    arr = [];
+                    for (let i = 0; i < subj.length; i++) {
+                        subj[i].style.border = "1px solid ";
+                        if (parseInt(subj[i].value) <= 80) {
+                            arr.push(parseInt(subj[i].value));
+                        } else {
+                            subj[i].style.border = "2px solid red";
+                        }
+                    }
+                    console.log(arr);
+                    if (arr.length != 10) {
+                        alert("Enter the values less than 80");
+                    } else {
+                        for (let i = 0; i < arr.length; i++) {
+                            arr[i] = parseInt(arr[i] + arr[i] * 0.2);
+                            result.innerHTML += `<div>Total marks ${i + 1} : ${arr[i]}</div>`;
+                        }
+                    }
+                }
+            </script>
+            </div>
+        </div>
+    </body>
+</html>
