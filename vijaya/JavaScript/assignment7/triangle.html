@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Triangle Demo</title>
+        <style>
+        .name {
+            position: relative;
+            width: 500px;
+            background-color:rgb(92, 8, 60);
+            padding: 10px 0px 10px 0px;
+            border-radius: 15px 15px 0px 0px;
+            color: white;
+            margin-top: 80px;
+            margin-left: 400px;
+        }
+        .one{
+            background-color: white;
+            color: rgb(46, 49, 245);
+            width: 110px;
+            margin-left: 220px;
+        }
+        .btn{
+            padding: 6px;
+            text-align: center;
+        }
+        </style>
+        <script>
+       function floyds(){
+           var n,i,j,number = 1;
+            n = parseInt(document.getElementById("row").value);
+            for(i=1; i<=n; i++){
+                for(j=1; j<=i; j++){
+                   
+                    if(i == j || j==0)
+                    {
+                        document.getElementById("answer").innerHTML += " "+number;  
+                    }
+                    else{
+                        document.getElementById("answer").innerHTML += " "+j;
+                    }
+                } 
+                document.getElementById("answer").innerHTML +="<br>";
+            }
+        }
+        </script>
+    </head>
+        <body style="background-color: rgb(102, 101, 101);">
+            <div class="name">
+                <h2 style="text-align: center;">Triangle Pattern</h2>
+                <hr style="color: white;">
+                <br>
+                Enter the number of row: <input id="row"></br></br>
+                <div class="one">
+                <p><span id="answer"></span></p>
+                </div> 
+                <div class="btn">
+                <button onclick="floyds()" style=" background-color: rgb(17, 175, 223); height: 30px">Show</button></br></br>
+                </div>      
+            </div>
+        </body>
+</html>

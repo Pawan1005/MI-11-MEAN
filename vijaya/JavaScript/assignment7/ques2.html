@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8 />
+        <title>Display The Marks Of Students</title>
+        <style>
+        h1 {
+            text-align: center;
+            color: rgb(196, 199, 6);
+            margin-top: 4%;
+        }
+        body{
+            padding-top: 50px;
+            background-color: gray;
+        }
+        .name{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(224, 192, 131);         
+            width: 500px;
+            height: 400px;
+            margin: auto;
+            padding-top: 25px;
+            gap: 10px;
+            border-radius: 10px;
+        }
+        .res{
+            background-color: rgb(253, 247, 156);
+            width: 150px;
+            padding-left: 10px;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Marks of Students</h1>
+        <div class="name">
+            Enter no.of student:
+            <input type="text" id="text1"></input>
+            Enter Marks of Students:
+            <input type="text" id="text2"></input>
+            <input type="button" value="Add" onclick="add()"></input>
+            <input type="button" value="Display" onclick="display()"></input>
+            <div class="res" id="Result"></div>
+        </div>
+        <script>
+        var size,x = 1;
+        var array = Array();
+        function add() {
+            size = document.getElementById("text1").value;
+            array[x] = document.getElementById("text2").value;
+            x++;
+            document.getElementById("text2").value = "";
+        }
+        function display() {
+            var e = "";
+            for (var y = 1; y <=size; y++) {
+                e += "Marks " + y + " = " + array[y] + "<br/>";
+            }
+            document.getElementById("Result").innerHTML = e;
+        }
+        </script>
+    </body>
+</html>
