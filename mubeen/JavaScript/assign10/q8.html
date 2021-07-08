@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+            crossorigin="anonymous"/>
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            body {
+                background-color: rgb(0, 162, 255);
+            }
+            .content {
+                background-color: rgb(211, 23, 23);
+                position: absolute;
+                left: 30%;
+                top: 20%;
+                border: 1px solid black;
+                border-radius: 20px;
+                width: 400px;
+                height: 400px;
+                padding: 20px;
+            }
+        </style>
+        <div class="content">
+            <center><h3>α,-,_ Checker</h3></center>
+            Enter A String <input type="text" id="text" />
+            <button class="btn btn-primary" onclick="check()">check</button>
+            <p id="root"></p>
+        </div>
+        <script>
+            function check() {
+                var str = document.getElementById("text").value;
+                var che = /[α]/g;
+                var ch1 = /[-]/g;
+                var ch2 = /[_]/g;
+                var result = che.test(str);
+                var result1 = ch1.test(str);
+                var result2 = ch2.test(str);
+                var i = 0;
+                if (result) {
+                    document.getElementById("root").innerHTML += `"${str}" contains α <br>`;
+                    i++;
+                }
+                if (result1) {
+                    document.getElementById("root").innerHTML += `"${str}" contains - <br>`;
+                    i++;
+                }
+                if (result2) {
+                    document.getElementById("root").innerHTML += `"${str}" contains _ <br>`;
+                    i++;
+                }
+                if (i == 0) {
+                    document.getElementById("root").innerHTML = `"${str}" do not contains α space or underscore`;
+                }
+            }
+        </script>
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous">
+        </script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+            crossorigin="anonymous">
+        </script>
+    </body>
+</html>

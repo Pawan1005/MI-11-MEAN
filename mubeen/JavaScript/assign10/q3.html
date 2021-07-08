@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous" />
+        <title>Document</title>
+        <script>
+            function fandl(fl) {
+                let ab = /^[.]/;
+                let ba = /$./;
+                let a1 = /[..]/;
+                let first = !ab.test(fl);
+                let last = !ba.test(fl);
+                let double = !a1.test(fl);
+                if (first && last && double) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+        </script>
+        <script>
+            function domain(dom) {
+                let b1 = /.com/;
+                let b2 = /.org/;
+                let b3 = /.in/;
+                let b4 = /.net/;
+                let f1 = b1.test(dom);
+                let f2 = b2.test(dom);
+                let f3 = b3.test(dom);
+                let f4 = b4.test(dom);
+                if (f1 || f2 || f3 || f4) {
+                    return true;
+                }
+                else {
+                    return false;
+                }
+            }
+        </script>
+    <body>
+        <style>
+            body {
+                background-color: rgb(217, 255, 0);
+            }
+            .content {
+                background-color: rgb(211, 23, 79);
+                position: absolute;
+                left: 30%;
+                top: 20%;
+                border: 1px solid black;
+                border-radius: 20px;
+                width: 400px;
+                height: 400px;
+                padding: 20px;
+            }
+        </style>
+        <div class="content">
+            <center>
+                <h3>Email Validator</h3>
+            </center>
+            Enter Email Id:- <input type="text" id="text" />
+            <button class="btn btn-success" onclick="check()">check</button>
+            <p id="root"></p>
+        </div>
+        <script>
+            function check() {
+                var str = document.getElementById("text").value;
+                let str1 = str;
+                let str2 = str;
+                var che = /@/;
+                var result = str.search(che);
+                let ind = str1.slice(0, result);
+                var user = fandl(ind);
+                var domi = domain(str);
+                if (user && domi) {
+                    document.getElementById("root").innerHTML += `${str} is a valid email address  `;
+                }
+                else {
+                    document.getElementById("root").innerHTML += `${str} is not a valid email address  `;
+                }
+            }
+        </script>
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+        </script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous">
+        </script>
+    </body>
+</html>
