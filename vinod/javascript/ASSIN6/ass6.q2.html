@@ -5,18 +5,19 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Ass</title>
-
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
-            crossorigin="anonymous"
-        />
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
-            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
-            crossorigin="anonymous"
-        ></script>
+        <style>
+            .as {
+                position: absolute;
+                width: 340px;
+                height: 415px;
+                margin: 51px auto 0px auto;
+                border-style: solid;
+                top: 22px;
+                left: 399px;
+                margin-right: 10px;
+                background-color: darkturquoise;
+            }
+        </style>
         <script>
             function names() {
                 var name_arr = [],
@@ -37,25 +38,11 @@
         </script>
     </head>
     <body>
-        <style>
-            .as {
-                position: absolute;
-                width: 340px;
-                height: 415px;
-                margin: 51px auto 0px auto;
-                border-style: solid;
-                top: 22px;
-                left: 399px;
-                margin-right: 10px;
-                background-color: darkturquoise;
-            }
-        </style>
         <div class="as">
             <h5>Display Ascending, Descending Name</h5>
             <div>
                 <button class="btn1" onclick="names()">Enter name</button>
             </div>
-
             <p>
                 <span id="num1"></span>
                 <span id="num2"></span>

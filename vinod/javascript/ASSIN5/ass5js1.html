@@ -1,8 +1,6 @@
 <html>
     <head>
         <title></title>
-    </head>
-    <body>
         <style>
             .as {
                 position: absolute;
@@ -16,6 +14,24 @@
                 background-color: darkturquoise;
             }
         </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function middle() {
+                var n, middle, last, sum, first;
+                n = parseInt(document.getElementById("first").value);
+                last = n % 10;
+                m = parseInt(n / 10);
+                middle = m % 10;
+                first = parseInt(n / 100);
+                sum = last + first;
+                if (sum == middle) {
+                    document.getElementById("num").innerHTML = "the sum is matching";
+                } else {
+                    document.getElementById("num").innerHTML = "the sum is not matchinng";
+                }
+            }
+        </script>
         <div class="as">
             <h1>sum of two digit</h1>
             <table>
@@ -29,21 +45,4 @@
             <div id="num"></div>
         </div>
     </body>
-
-    <script type="text/javascript">
-        function middle() {
-            var n, middle, last, sum, first;
-            n = parseInt(document.getElementById("first").value);
-            last = n % 10;
-            m = parseInt(n / 10);
-            middle = m % 10;
-            first = parseInt(n / 100);
-            sum = last + first;
-            if (sum == middle) {
-                document.getElementById("num").innerHTML = "the sum is matching";
-            } else {
-                document.getElementById("num").innerHTML = "the sum is not matchinng";
-            }
-        }
-    </script>
 </html>

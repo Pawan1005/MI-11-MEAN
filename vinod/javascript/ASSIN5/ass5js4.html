@@ -1,8 +1,6 @@
 <html>
     <head>
         <title>JavaScript program to find the Sum of even and Product of odd digits of given 6 digit number</title>
-    </head>
-    <body>
         <style>
             .as {
                 position: absolute;
@@ -16,6 +14,29 @@
                 background-color: darkturquoise;
             }
         </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function sum_product6() {
+                var r,
+                    n,
+                    sum = 0,
+                    product = 1;
+                n = parseInt(document.getElementById("first").value);
+                n1 = n;
+                while (n > 0) {
+                    r = n % 10;
+                    if (r % 2 == 0) {
+                        sum = sum + r;
+                    } else {
+                        product = product * r;
+                    }
+                    n = parseInt(n / 10);
+                }
+                document.getElementById("num").innerHTML = "Sum of even digits : " + sum;
+                document.getElementById("num1").innerHTML = "Product of odd digits : " + product;
+            }
+        </script>
         <div class="as">
             <h1>Sum of even ane product od odd number</h1>
             <table>
@@ -30,26 +51,4 @@
             <div id="num1"></div>
         </div>
     </body>
-
-    <script type="text/javascript">
-        function sum_product6() {
-            var r,
-                n,
-                sum = 0,
-                product = 1;
-            n = parseInt(document.getElementById("first").value);
-            n1 = n;
-            while (n > 0) {
-                r = n % 10;
-                if (r % 2 == 0) {
-                    sum = sum + r;
-                } else {
-                    product = product * r;
-                }
-                n = parseInt(n / 10);
-            }
-            document.getElementById("num").innerHTML = "Sum of even digits : " + sum;
-            document.getElementById("num1").innerHTML = "Product of odd digits : " + product;
-        }
-    </script>
 </html>
