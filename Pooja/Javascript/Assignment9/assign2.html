@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Number is prime palindrome or not</title>
+        <style>
+            h1 {
+                text-align: center;
+                color: black;
+                margin-top: 5%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #7db4a8;
+                width: 410px;
+                height: 380px;
+                margin: auto;
+                padding-top: 15px;
+                gap: 10px;
+                border-radius: 10px;
+            }
+            input {
+                width: 55%;
+                margin-left: 10px;
+                margin-bottom: 12px;
+                padding: 4px 8px;
+                font-size: 16px;
+                outline: none;
+                line-height: 19px;
+                border: 1px solid #0000004b;
+            }
+            p {
+                text-align: center;
+                min-width: 260px;
+                height: 50px;
+                padding: 16px 14px 9px 14px;
+                font-size: 18px;
+                font-weight: bold;
+            }
+            #num2 {
+                font-size: 19px;
+                color: #ff0000;
+            }
+            button {
+                background-color: #ff0000;
+                color: white;
+                padding: 7px 11px;
+                margin: 0 8px;
+                font-weight: bold;
+                font-size: 17px;
+                border: 1px solid gray;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Number is Prime Palindrome or Not</h1>
+        <div class="main">
+            <div>
+                <label for="">Enter the number </label>
+                <input type="text" id="firstnumber">
+            </div>  
+            <div>
+                <p><span id="num1"></span><span id="num2"></span></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="palindrome()">Check</button>
+            </div>
+        </div>
+        <script>
+            function palindrome() {
+                function str_palindrome(str) {
+                    splitStr = str.split ('');
+                    revArrChar = splitStr.reverse();
+                    revString = revArrChar.join('');
+                    str = parseInt(str);
+                    for(i=1; i<=str; i++) {
+                        if(str%i==0) {
+                            count++;
+                        }
+                    }
+                    if(revString==str && count == 2) {
+                        document.getElementById("num1").innerHTML = "<br> It is&nbsp;";
+                        document.getElementById("num2").innerHTML = " Prime Palindrome ";
+                    } else {
+                        document.getElementById("num1").innerHTML = "<br> It is&nbsp;";
+                        document.getElementById("num2").innerHTML = " not Prime Palindrome ";
+                    }
+                }  
+                var string = [], splitStr, revArrChar,revString, i, count=0;
+                string = document.getElementById("firstnumber").value;
+                str_palindrome(string);                        
+            }
+        </script>
+    </body>
+</html>

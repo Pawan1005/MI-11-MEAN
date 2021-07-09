@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SUM OF TWO NUMBER DIGIT</title>
+        <style>
+            .ft {
+                width: 500px;
+                height: 300px;
+                background-color: rgb(104, 121, 193);
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <div class="logincentrecard">
+                <div class="card">
+                    <div class="container">
+                        <fieldset class="ft">
+                            <h4>SUM OF THE TWO NUMBER</h4>
+                            <label for="Num1">Enter Number:</label>
+                            <input
+                                type="text"
+                                id="num"
+                                placeholder="Enter  Number"
+                            />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
+                            <button onclick="show()" style="background-color: red; color: white">RESULT</button>
+                            <p id="pid"></p>
+                            <script language="JavaScript">
+                                function show() {
+                                    let num = document.getElementById("num").value;
+                                    let result = document.getElementById("pid");
+                                    let len = num.length;
+                                    if (len != 3) {
+                                        result.classList.remove("error", "true");
+                                        result.innerHTML = "Invalid Number!!Please enter a 3 digit number.";
+                                        result.classList.add("error");
+                                    } else if (parseInt(num[0]) + parseInt(num[2]) == parseInt(num[1])) {
+                                        result.classList.remove("error", "true");
+                                        result.innerHTML = "Sum match";
+                                        result.classList.add("true");
+                                    } else {
+                                        result.classList.remove("error", "true");
+                                        result.innerHTML = "Sum does not match";
+                                        result.classList.add("error");
+                                    }
+                                }
+                            </script>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </center>
+    </body>
+</html>

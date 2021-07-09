@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="all.css" />
+        <title>Assignment-4</title>
+        <script>
+            function fun() {
+                var num_arr = [],arr_x,sum = 0;
+                for (let i = 0; i < 5; i++) {
+                    arr_x = prompt("Enter a number : ");
+                    if (arr_x == "X" || arr_x == "x" || arr_x == null) {
+                        break;
+                    }
+                    num_arr.push(parseInt(arr_x));
+                    document.getElementById("hid").innerHTML += "  " + arr_x;
+                    sum = sum + fact(num_arr[i]);
+                    document.getElementById("hid2").innerHTML += " " + fact(num_arr[i]);
+                }
+                function fact(num) {
+                    if (num == 0) return 1;
+                    return num * fact(num - 1);
+                }
+                document.getElementById("hid3").innerHTML = "Sum of all numbers factorial is :" + sum;
+            }
+        </script>
+    </head>
+    <body>
+        <div id="outside">
+            <h1>Sum of all enter factorial !!</h1>
+            <button onclick="fun()">Click Me</button>
+            <div id="inside">
+                <h3 id="hid"></h3>
+                <h3 id="hid2"></h3>
+                <h3 id="hid3"></h3>
+            </div>
+        </div>
+    </body>
+</html>

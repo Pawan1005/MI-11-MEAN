@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Armstrong Number</title>
+        <script>
+            function show() {
+                var a,
+                    number,
+                    remainder,
+                    addition = 0;
+                number = Number(document.getElementById("num").value);
+                a = number;
+                while (number > 0) {
+                    remainder = number % 10;
+                    addition = addition + remainder * remainder * remainder;
+                    number = parseInt(number / 10);
+                }
+                if (addition == a) {
+                    document.getElementById("pid").innerHTML = "This is Armstrong Number";
+                } else {
+                    document.getElementById("pid").innerHTML = "This is not Armstrong Number";
+                }
+            }
+        </script>
+    </head>
+    <body style="text-align: center; background-color: lightsalmon; margin-top: 100px">
+        <h1><hr>*Find Armstrong Number*<hr></h1>
+        <input type="text" id="num" placeholder="Enter number" />
+        <p id="pid"></p>
+        <button onclick="show()">SHOW</button>
+    </body>
+</html>

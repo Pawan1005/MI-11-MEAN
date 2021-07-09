@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Number is user prime palindrome or not</title>
+        <style>
+            .main {
+                width: 500px;
+                height: 300px;
+                background-color: rgb(212, 62, 125);
+            }
+            .btn1 {
+                color: red;
+            }
+            .box1 {
+                background-color: hotpink;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <fieldset class="box1">
+                <h1>Displaying Prime number</h1>
+                <div class="main">
+                    <div>
+                        <label for="">Number 1 </label>
+                        <input type="text" id="firstnumber" />
+                    </div>
+                    <div>
+                        <label for="">Number 2 </label>
+                        <input type="text" id="secondnumber" />
+                    </div>
+                    <div>
+                        <label for="">Number 3 </label>
+                        <input type="text" id="thirdnumber" />
+                    </div>
+                    <div>
+                        <label for="">Number 4 </label>
+                        <input type="text" id="fourthnumber" />
+                    </div>
+                    <div>
+                        <label for="">Number 5 </label>
+                        <input type="text" id="fifthnumber" />
+                    </div>
+                    <div>
+                        <p><span id="num1"></span><span id="num2"></span></p>
+                    </div>
+                    <div>
+                        <button class="btn1" onclick="palindrome()">Check</button>
+                    </div>
+                    <script>
+                        function palindrome() {
+                            function str_palindrome(str) {
+                                var sum = 0,
+                                    count = 0,
+                                    temp,
+                                    rem,
+                                    j;
+                                temp = parseInt(str);
+                                while (temp > 0) {
+                                    rem = temp % 10;
+                                    temp = parseInt(temp / 10);
+                                    sum = sum * 10 + rem;
+                                }
+                                for (j = 1; j <= str; j++) {
+                                    if (str % j == 0) {
+                                        count++;
+                                    }
+                                }
+                                if (sum == str && count == 2) {
+                                    document.getElementById("num2").innerHTML += " &emsp;  Prime Palindrome &nbsp;<br><br>";
+                                } else {
+                                    document.getElementById("num2").innerHTML += "&emsp;  not Prime Palindrome &nbsp;<br><br>";
+                                }
+                            }
+                            var string = [],
+                                i;
+                            string[0] = document.getElementById("firstnumber").value;
+                            string[1] = document.getElementById("secondnumber").value;
+                            string[2] = document.getElementById("thirdnumber").value;
+                            string[3] = document.getElementById("fourthnumber").value;
+                            string[4] = document.getElementById("fifthnumber").value;
+                            for (i = 0; i < 5; i++) {
+                                str_palindrome(string[i]);
+                            }
+                        }
+                    </script>
+                </div>
+            </fieldset>
+        </div>
+    </body>
+</html>
