@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script class="jsbin" src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+        <meta charset="utf-8" />
+        <title>assi6.5</title>
+    </head>
+    <body style="background-color: cadetblue">
+        <h1 style="text-align: center">Factorial in descending order</h1>
+        <hr />
+        <br />
+        <div style="font-size: 20px; background-color: white; text-align: center" id="p"></div>
+        <script>
+            let arr = [];
+            let factorials = [];
+            let p = document.getElementById("p");
+            while (true) {
+                let temp = prompt("Enter a number");
+                if (temp == "X" || temp == "x" || temp == null) break;
+                temp = parseInt(temp);
+                arr.push(temp);
+            }
+            for (i = 0; i < arr.length; i++) {
+                factorials.push(factorial(arr[i]));
+            }
+            function factorial(n) {
+                if (n == 0) return 1;
+                return n * factorial(n - 1);
+            }
+            p.innerHTML += `<div>Enter Number: ${arr}</div><br>`;
+            p.innerHTML += `<div> Factorials in desc: ${factorials.sort(function (a, b) {
+                return b - a;
+            })}
+            </div>`;
+        </script>
+    </body>
+</html>
