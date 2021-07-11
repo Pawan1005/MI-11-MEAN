@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>js5.3</title>
+        <script>
+            function demo() {
+                var num = document.getElementById("num").value;
+                var isprime;
+                for (var i = 2; i <= num; i++) {
+                    isprime = 1;
+                    for (var j = 2; j <= i / 2; j++) {
+                        if (i % j == 0) {
+                            isprime = 0;
+                            break;
+                        }
+                    }
+                    if (isprime == 1) {
+                        document.write(i + "<br>");
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="num" />
+        <button onclick="demo()">do</button>
+    </body>
+</html>
