@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Prime Palindeome</title>
+        <style>
+            body {
+                height: 1500px;
+                background-image: linear-gradient(to bottom right, purple, red);
+            }
+        </style>
+    </head>
+    <body>
+        <script language="javascript">
+            function PrimePalindrome() {
+                var i,
+                    flag = 0,
+                    number;
+                number = Number(document.getElementById("N").value);
+                for (i = 2; i <= number / 2; i++) {
+                    if (number % i == 0) {
+                        flag = 1;
+                        break;
+                    }
+                }
+                var rem,
+                    temp,
+                    final = 0;
+                temp = number;
+                while (number > 0) {
+                    rem = number % 10;
+                    number = parseInt(number / 10);
+                    final = final * 10 + rem;
+                }
+                if (flag == 0 && final == temp) {
+                    document.getElementById("pid").innerHTML += "Number is a prime palindrome";
+                } else {
+                    document.getElementById("pid").innerHTML += "Number is not a Prime palindrome";
+                }
+            }
+        </script>
+        <div style="width: 50%; position: absolute; left: 430px; top: 200px">
+            <div style="text-align: center; background-color: rgba(243, 243, 8, 0.842); height: 50%; border-radius: 25px 25px 25px 25px">
+                <br /><br />
+                <h1>Number is prime palindrome or not?</h1>
+                <hr size="5" color="black" />
+                <br /><br />
+                <h4>Enter Number : <input type="text" name="n" id="N" /></h4>
+                <p>
+                    <button style="position: absolute; left: 45%" onClick="PrimePalindrome()">Submit</button>
+                </p>
+                <br /><br />
+                <p id="pid" style="color: blue; position: absolute; left: 45%"></p>
+                <br /><br /><br />
+            </div>
+        </div>
+    </body>
+</html>
