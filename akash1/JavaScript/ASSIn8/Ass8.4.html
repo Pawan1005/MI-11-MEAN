@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ass8.4</title>
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+        <style>
+            body {
+                background: linear-gradient(#e66465, #9198e5);
+                height: 100vh;
+            }
+            .input {
+                text-align: center;
+                font-size: 20px;
+                border: 1px solid black;
+                margin-top: 8px;
+            }
+            input {
+                width: 40%;
+                height: 3vh;
+                border: none;
+            }
+            button {
+                left: 48px;
+                width: 13%;
+                height: 6vh;
+                border: none;
+                margin-top: 5px;
+                position: absolute;
+                border-radius: 5px;
+            }
+            h1 {
+                text-align: center;
+            }
+            .iContainer {
+                margin-left: 250px;
+            }
+            #p,
+            #pr {
+                top: 20px;
+                position: absolute;
+                background-color: white;
+                padding-top: 10px;
+                width: 36%;
+                border-radius: 5px;
+            }
+            .main-box {
+                background-image: linear-gradient(black, skyblue, black);
+                left: 129px;
+                height: 80vh;
+                width: 80%;
+                margin-top: 10px;
+                position: absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Marks of student MergeSort</h1>
+        <div class="main-box">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="col-sm">
+                            <div>
+                                <h3 style="color: white">Section A</h3>
+                                <input type="text" class="sectionA" id="num" placeholder="sub1" /> <br />
+                                <input type="text" class="sectionA" id="num" placeholder="Sub2" /> <br />
+                                <input type="text" class="sectionA" id="num" placeholder="Sub3" /> <br />
+                                <input type="text" class="sectionA" id="num" placeholder="Sub4" /> <br />
+                                <input type="text" class="sectionA" id="num" placeholder="Sub5" /> <br />
+                            </div>
+                            <div>
+                                <h3 style="color: white">Section B</h3>
+                                <input type="text" class="sectionB" id="num" placeholder="Sub1" /> <br />
+                                <input type="text" class="sectionB" id="num" placeholder="Sub2" /> <br />
+                                <input type="text" class="sectionB" id="num" placeholder="Sub3" /> <br />
+                                <input type="text" class="sectionB" id="num" placeholder="Sub4" /><br />
+                                <input type="text" class="sectionB" id="num" placeholder="Sub5" /> <br /><br />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="row">
+                            <div class="col-sm">
+                                <div id="pr"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="mergeAndSort()">Result</button>
+            </div>
+        </div>
+        <script>
+            let sectionA = document.getElementsByClassName("sectionA");
+            let sectionB = document.getElementsByClassName("sectionB");
+            let p = document.getElementById("p");
+            let a = [],
+                b = [],
+                res = [];
+            function mergeAndSort() {
+                a = [];
+                b = [];
+                for (let i = 0; i < 5; i++) {
+                    a.push(parseInt(sectionA[i].value));
+                    b.push(parseInt(sectionB[i].value));
+                }
+                res = [...a];
+                for (let i = 0; i < b.length; i++) {
+                    res.push(b[i]);
+                }
+                mergeSort(res, 0, 9);
+                pr.innerHTML += "<h3>After Merge</h3>";
+                for (let i = 0; i < res.length; i++) {
+                    pr.innerHTML += `<div>${i + 1} : ${res[i]}</div>`;
+                }
+            }
+            function merge(array, start, mid, end) {
+                let temp = [],
+                    k = 0,
+                    i = start,
+                    j = mid + 1;
+                while (i <= mid && j <= end) {
+                    if (array[i] >= array[j]) {
+                        temp[k] = array[j];
+                        j++;
+                        k++;
+                    } else {
+                        temp[k] = array[i];
+                        i++;
+                        k++;
+                    }
+                }
+                while (i <= mid) {
+                    temp[k] = array[i];
+                    i++;
+                    k++;
+                }
+                while (j <= end) {
+                    temp[k] = array[j];
+                    j++;
+                    k++;
+                }
+                for (let index = start; index <= end; index++) {
+                    array[index] = temp[index - start];
+                }
+            }
+            function mergeSort(array, start, end) {
+                if (start < end) {
+                    let mid = parseInt((start + end) / 2);
+                    mergeSort(array, start, mid);
+                    mergeSort(array, mid + 1, end);
+                    merge(array, start, mid, end);
+                }
+            }
+        </script>
+    </body>
+</html>
