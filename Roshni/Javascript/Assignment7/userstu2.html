@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment 7_2</title>
+    </head>
+    <body>
+        <h1>User Input</h1>
+        <label for="inputs">Enter value what do u want?</label>
+        <input type="text" id="inputno" />
+        <button onclick="user()">Try it</button>
+        <div class="Container">
+            <div id="inputcontainer" class="container1"></div>
+            <div id="result" class="container2"></div>
+        </div>
+        <script>
+            function user() {
+                let inputno = parseInt(document.getElementById("inputno").value),
+                    inputcontainer = document.getElementById("inputcontainer");
+                inputcontainer.innerHTML = "";
+                for (let i = 0; i < inputno; i++) {
+                    inputcontainer.innerHTML += `<div>Marks ${i + 1} : <input type="text" class="marks" /></div>`;
+                }
+                inputcontainer.innerHTML += `<button onclick="user1()">Click</button>`;
+            }
+            function inputToArray() {
+                let marks = document.getElementsByClassName("marks"),
+                    arr = [];
+                for (let i = 0; i < marks.length; i++) {
+                    arr.push(parseInt(marks[i].value));
+                }
+                return arr;
+            }
+            function user1() {
+                result.innerHTML += "<span></span>";
+                result = document.getElementById("result");
+                let arr = inputToArray();
+                for (let i = 0; i < arr.length; i++) {
+                    result.innerHTML += `Marks ${i + 1} : ${parseInt(arr[i])} <br>`;
+                }
+            }
+        </script>
+    </body>
+</html>
