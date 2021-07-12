@@ -32,28 +32,29 @@
                 outline-width: medium;
             }
         </style>
-         <br><br><br><br>
+        <br /><br /><br /><br />
         <div class="container py-5">
-            <h2 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif;"><strong>Enter The Marks Of Student</strong></h2>
-            <hr><br><br>
+            <h2 style="text-align: center; font-family: Georgia, 'Times New Roman', Times, serif"><strong>Enter The Marks Of Student</strong></h2>
+            <hr />
+            <br /><br />
             <div class="row">
                 <div class="col-4" id="inp">
-                    <h4 style="font-family: Georgia, 'Times New Roman', Times, serif;"><strong>Section A :</strong></h4>
+                    <h4 style="font-family: Georgia, 'Times New Roman', Times, serif"><strong>Section A :</strong></h4>
                     Student 1 :<input type="text" id="num1" /> <br />
                     Student 2 :<input type="text" id="num2" /> <br />
                     Student 3 :<input type="text" id="num3" /> <br />
                     Student 4 :<input type="text" id="num4" /> <br />
-                    Student 5 :<input type="text" id="num5" /> <br /><br><br>
-                    <h4  style="font-family: Georgia, 'Times New Roman', Times, serif;"><strong>Section B :</strong></h4>
+                    Student 5 :<input type="text" id="num5" /> <br /><br /><br />
+                    <h4 style="font-family: Georgia, 'Times New Roman', Times, serif"><strong>Section B :</strong></h4>
                     Student 1 :<input type="text" id="num6" /> <br />
                     Student 2 :<input type="text" id="num7" /> <br />
                     Student 3 :<input type="text" id="num8" /> <br />
                     Student 4 :<input type="text" id="num9" /> <br />
-                    Student 5 :<input type="text" id="num10" /> <br /><br>
+                    Student 5 :<input type="text" id="num10" /> <br /><br />
                     <button onclick="app()" class="btn btn-success">Submit</button>
                 </div>
-                <div style="position: relative; left: 200px;">
-                    <p id="root" style="font-family: Georgia, 'Times New Roman', Times, serif;"></p>
+                <div style="position: relative; left: 200px">
+                    <p id="root" style="font-family: Georgia, 'Times New Roman', Times, serif"></p>
                 </div>
             </div>
         </div>
@@ -66,7 +67,9 @@
                     arr1[i] = parseInt(document.getElementById(`num${i + 1}`).value);
                     arr2[i] = parseInt(document.getElementById(`num${i + 6}`).value);
                 }
-                document.getElementById("root").innerHTML += `<br><br><h4><strong>Before sorting an array</strong></h4> <br><strong>Array 1 : </strong>${arr1}<br><strong>Array 2 : </strong>${arr2}<br>`;
+                document.getElementById(
+                    "root"
+                ).innerHTML += `<br><br><h4><strong>Before sorting an array</strong></h4> <br><strong>Array 1 : </strong>${arr1}<br><strong>Array 2 : </strong>${arr2}<br>`;
                 for (i = 0; i < 5; i++) {
                     for (j = i; j < 5; j++) {
                         let temp = 0;
@@ -82,7 +85,9 @@
                         }
                     }
                 }
-                document.getElementById("root").innerHTML += `<br><br><br><h4><strong>After sorting an array : </strong></h4> <br> <strong>Array 1 : </strong>${arr1}<br><strong>Array 2 :</strong>${arr2} <br>`;
+                document.getElementById(
+                    "root"
+                ).innerHTML += `<br><br><br><h4><strong>After sorting an array : </strong></h4> <br> <strong>Array 1 : </strong>${arr1}<br><strong>Array 2 :</strong>${arr2} <br>`;
                 var i = 0,
                     j = 0,
                     k = 0;
