@@ -35,11 +35,10 @@
                 for (j = 0; j < a; j++) {
                     document.getElementById("pid2").innerHTML += "Marks " + (j + 1) + ":&nbsp;" + c[j] + "<br>";
                 }
-                document.getElementById("pid2").innerHTML += ` The sorted array : ${c} ` ;
+                document.getElementById("pid2").innerHTML += ` The sortd array : ${c} ` ;
             }
         </script>
         <style>
-            
             .container {
                 background-color: rgb(203, 220, 216);
                 width: 350px;
@@ -60,31 +59,28 @@
                 border-radius: 15px;
                 box-sizing: 30px;
             }
-           
         </style>
     </head>
     <body>
-    <div class="container">
-        <br /><br /><br />
-        <center>
-            <h1>Selection sort</h1>
-        </center>
-        <center>
-            <h2>For Updating Marks students</h2>
-            <hr />
-        </center>>
-        <label>How many students</label>
-        <input type="number" id="num1" placeholder="Enter the First number" />
-        <button onclick="show()" class="btn">GET</button>
-        <div class="box">
+        <div class="container">
+            <br /><br /><br />
             <center>
-                <h4 id="pid"></h4>
-                <h4 id="pid1"></h4>
-                <h4 id="pid2"></h4>
+                <h1>Selection sort</h1>
             </center>
+            <center>
+                <h2>For Updating Marks students</h2>
+                <hr />
+            </center>
+            <label>How many students</label>
+            <input type="number" id="num1" placeholder="Enter the First number" />
+            <button onclick="show()" class="btn">GET</button>
+            <div class="box">
+                <center>
+                    <h4 id="pid"></h4>
+                    <h4 id="pid1"></h4>
+                    <h4 id="pid2"></h4>
+                </center>
+            </div>
         </div>
-    </div>
-</body>
-
-
+    </body>
 </html>
