@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ass8.2</title>
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+        <style>
+            body {
+                background: linear-gradient(#e66465, #9198e5);
+                height: 100vh;
+            }
+            .input {
+                text-align: center;
+                font-size: 20px;
+                border: 1px solid black;
+                margin-top: 8px;
+            }
+            input {
+                width: 40%;
+                height: 5vh;
+                border: none;
+            }
+            button {
+                left: 48px;
+                width: 13%;
+                height: 6vh;
+                border: none;
+                margin-top: 5px;
+                position: absolute;
+                border-radius: 5px;
+            }
+            h1 {
+                text-align: center;
+            }
+            .iContainer {
+                margin-left: 250px;
+            }
+            #p,
+            #pr {
+                background-color: white;
+            }
+            .main-box {
+                background-image: linear-gradient(black, skyblue, black);
+                left: 129px;
+                height: 80vh;
+                width: 80%;
+                margin-top: 10px;
+                position: absolute;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Marks of student</h1>
+        <div class="main-box">
+            <div class="container">
+                <div class="row">
+                    <div class="col">
+                        <div class="col-sm">
+                            <input type="text" class="input" placeholder="marks1" /><br />
+                            <input type="text" class="input" placeholder="marks2" /><br />
+                            <input type="text" class="input" placeholder="marks3" /><br />
+                            <input type="text" class="input" placeholder="marks4" /><br />
+                            <input type="text" class="input" placeholder="marks5" /><br />
+                            <input type="text" class="input" placeholder="marks6" /><br />
+                            <input type="text" class="input" placeholder="marks7" /><br />
+                            <input type="text" class="input" placeholder="marks8" /><br />
+                            <input type="text" class="input" placeholder="marks9" /><br />
+                            <input type="text" class="input" placeholder="marks10" /><br />
+                        </div>
+                    </div>
+                    <div class="col-sm">
+                        <div class="row">
+                            <div class="col-sm">
+                                <div id="p"></div>
+                            </div>
+                            <div class="col-sm">
+                                <div id="pr"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="calculate()">Result</button>
+            </div>
+        </div>
+        <script>
+            let input = document.getElementsByClassName("input");
+            let p = document.getElementById("p");
+            let arr = [];
+            function calculate() {
+                arr = [];
+                for (let i = 0; i < input.length; i++) {
+                    input[i].style.border = " ";
+                    if (parseInt(input[i].value) <= 80) {
+                        arr.push(parseInt(input[i].value));
+                    } else {
+                        input[i] = "";
+                    }
+                }
+                console.log(arr);
+                if (arr.length != 10) {
+                    alert("All values must be less than 80.");
+                } else {
+                    p.innerHTML += `<h5> Marks Before Sort</h5>`;
+                    for (let i = 0; i < arr.length; i++) {
+                        arr[i] = parseInt(arr[i] + arr[i] * 0.2);
+                        p.innerHTML += `<div>Total marks ${i + 1} : ${arr[i]}</div>`;
+                    }
+                    quickSort(arr, 0, 9);
+                    pr.innerHTML += `<h5> Marks after sort </h5>`;
+                    for (let i = 0; i < arr.length; i++) {
+                        pr.innerHTML += `<div>Total marks ${i + 1} : ${arr[i]}</div>`;
+                    }
+                }
+            }
+            function partition(arr, low, high) {
+                let pivot = arr[high],
+                    i = low - 1,
+                    temp;
+                for (let j = low; j <= high; j++) {
+                    if (pivot > arr[j]) {
+                        i++;
+                        temp = arr[j];
+                        arr[j] = arr[i];
+                        arr[i] = temp;
+                    }
+                }
+                temp = arr[high];
+                arr[high] = arr[i + 1];
+                arr[i + 1] = temp;
+                return i + 1;
+            }
+            function quickSort(arr, low, high) {
+                if (low < high) {
+                    pi = partition(arr, low, high);
+                    quickSort(arr, low, pi - 1);
+                    quickSort(arr, pi + 1, high);
+                }
+            }
+        </script>
+    </body>
+</html>
