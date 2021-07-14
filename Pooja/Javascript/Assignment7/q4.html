@@ -147,13 +147,13 @@
                 student = parseInt(document.getElementById("firstnumber").value)
                 for(let i=0; i<student; i++) {
                     marks[i] = parseInt(prompt("Enter marks : "));
-                    document.getElementById("num1").innerHTML += "Marks " + l++ + "&ensp;:&emsp;<br><br";
+                    document.getElementById("num1").innerHTML += "Marks " + l++ + "&ensp;:&emsp;<br><br>";
                     document.getElementById("num2").innerHTML += +marks[i]+ "<br><br";
                 }
                 document.getElementById("numBefore").innerHTML +=  marks.join(" &nbsp; ") + "<br>";
                 selectionSort(marks);
                 for(let i=0; i<student; i++) {
-                    document.getElementById("num3").innerHTML += "Marks " + m++ + "&ensp;:&emsp;<br><br";
+                    document.getElementById("num3").innerHTML += "Marks " + m++ + "&ensp;:&emsp;<br><br>";
                     document.getElementById("num4").innerHTML += +marks[i]+ "<br><br";
                 }
                 document.getElementById("numBefore1").innerHTML +=  marks.join(" &nbsp; ") + "<br>";
