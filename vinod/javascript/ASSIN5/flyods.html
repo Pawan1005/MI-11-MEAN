@@ -1,0 +1,48 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <style>
+            .as {
+                position: absolute;
+                width: 340px;
+                height: 415px;
+                margin: 51px auto 0px auto;
+                border-style: solid;
+                top: 22px;
+                left: 399px;
+                margin-right: 10px;
+                background-color: darkturquoise;
+            }
+        </style>
+        <div class="as">
+            <h1>Flyoids triangle pattern</h1>
+            <table>
+                <tr>
+                    <td><input type="text" name="a" id="first" placeholder="Enter no. of rows" /></td>
+                </tr>
+                <tr>
+                    <td><button onclick="floyds ()">Submit</button></td>
+                </tr>
+            </table>
+            <div id="num"></div>
+        </div>
+    </body>
+    <script type="text/javascript">
+        function floyds() {
+            var n,
+                i,
+                j,
+                number = 1;
+            n = parseInt(document.getElementById("first").value);
+            for (i = 1; i <= n; i++) {
+                for (j = 1; j <= i; j++) {
+                    document.writeln(number + " ");
+                    number++;
+                }
+                document.write("</br>");
+            }
+        }
+    </script>
+</html>

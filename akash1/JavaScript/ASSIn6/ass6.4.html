@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script class="jsbin" src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+        <script class="jsbin" src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+        <meta charset="utf-8" />
+        <title>ass6.4</title>
+    </head>
+    <body style="background-color: cadetblue">
+        <h1 style="text-align: center">Sum of factorial</h1>
+        <div style="font-size: 20px; background-color: white; text-align: center" id="display"></div>
+        <script>
+            var student = [];
+            sum = 0;
+            let display = document.getElementById("display");
+            while (true) {
+                let temp = prompt("Enter a number");
+                if (temp == "X" || temp == "x" || temp == null) break;
+                temp = parseInt(temp);
+                student.push(temp);
+            }
+            for (i = 0; i < student.length; i++) {
+                sum += factorial(student[i]);
+            }
+            function factorial(n) {
+                if (n == 0) return 1;
+                return n * factorial(n - 1);
+            }
+            display.innerHTML += `<div>Enter Number: ${student}</div>`;
+            display.innerHTML += `<div>Sum of Factorials: ${sum}</div>`;
+        </script>
+    </body>
+</html>

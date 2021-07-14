@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>js5.4</title>
+        <script lang="javascript">
+            function show() {
+                var  b, c, e=1, d=0, input, f, g;
+                debugger;
+                input = parseInt(document.getElementById("num1").value);
+                b=input.toString().length;
+                g=input;
+                debugger;
+                if(b==6){
+                    while(g>0){
+                        c=g%10;
+                        if(c%2 ==0){
+                            d+=c;
+                        }
+                        else{
+                            e*=c;
+                        }
+                        g= parseInt(g/10);
+                        document.getElementById("pid").innerHTML="even sum ="+ d;
+                    document.getElementById("pid1").innerHTML="odd product = "+ e;
+                    }
+                }
+                else{
+                    document.getElementById("pid").innerHTML="invalid Number!! please enter 6 digit number";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <center>
+            <h1>Is odd even</h1>
+        </center>
+        <center>
+            <h2>odd even or Not</h2>
+        </center>
+        <hr />
+        <center>
+            <input type="number" id="num1" />
+            <button>GET</button>
+        </center>
+        <center>
+            <p id="pid"></p>
+            <p id="pid1"></p>
+        </center>
+    </body>
+</html>

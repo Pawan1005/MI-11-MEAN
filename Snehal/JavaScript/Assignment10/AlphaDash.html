@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>alpha dash or underscore</title>
+        <style>
+            h1 {
+                text-align: center;
+                color: black;
+                margin-top: 4%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #da21ab;
+                width: 460px;
+                height: 450px;
+                margin: auto;
+                padding-top: 15px;
+                gap: 40px;
+                border-radius: 10px;
+                border: solid black 5px;
+            }
+            input {
+                width: 53%;
+                margin-left: 10px;
+                margin-bottom: 12px;
+                padding: 4px 8px;
+                font-size: 16px;
+                outline: none;
+                line-height: 19px;
+                border: 1px solid #0000004b;
+            }
+            p {
+                min-width: 90px;
+                height: 25px;
+                padding: 12px 30px 12px 30px;
+                background-color: white;
+                font-weight: bold;
+                border: 1px solid #0000004b;
+                border-radius: 5px;
+            }
+            span {
+                color: #ff0000;
+                font-size: 21px;
+            }
+            button {
+                background-color:white;
+                color:black;
+                padding: 7px 11px;
+                margin: 0 8px;
+                font-weight: bold;
+                font-size: 17px;
+                border: 1px solid gray;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <h1>Alpha Dash or Underscore</h1>
+            <div>
+                <label for="">&ensp;Enter alpha dash</label>
+                <input type="text" id="firstnumber">
+            </div>
+            <div>
+                <p>It is&nbsp;&nbsp;&nbsp;<span id="num1"></span></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="alphaNum()">Check</button>
+            </div>
+        </div>
+        <script>
+            function alphaNum() {
+                function alphaDash(str) {
+                    regExp = /^[a-zA-Z0-9/\-\_]+$/;
+                    if (regExp.test(str)) {
+                        document.getElementById("num1").innerHTML = "Alpha Dash Uderscore";
+                    } else {
+                        document.getElementById("num1").innerHTML = "not Alpha Dash Uderscore";
+                    }
+                }
+                var regExp, str;
+                str = document.getElementById("firstnumber").value;
+                alphaDash(str);
+            }
+        </script>
+    </body>
+</html>

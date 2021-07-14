@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assi7_4</title>
+        <style>
+            body {
+                height: 1700px;
+                background-image: linear-gradient(to bottom right, rgb(97, 4, 97), rgba(255, 0, 0, 0.904));
+            }
+        </style>
+    </head>
+    <body>
+        <div style="width: 40%; position: absolute; left: 500px; top: 200px">
+            <div style="text-align: center; background-color: rgba(236, 236, 146, 0.911); height: 50%; border-radius: 25px 25px 25px 25px">
+                <script language="javascript">
+                    var n = Number(prompt("Enter the total elements in an Array"));
+                    var arr = [];
+                    var i;
+                    document.write('<div style="position: relative; top: 20px"><h1>Selection Sort<h1></div><br><hr size="5" color=black><br><br>');
+                    document.write("<h4>*****Before Sorting*****</h4><br>");
+                    for (let i = 0; i < n; i++) {
+                        arr[i] = Number(prompt("Enter the marks " + (Number(i) + 1)));
+                        document.write("Marks " + i + " : " + arr[i] + "<br>");
+                    }
+                    document.write("<h4>**********Iteration**********</h4><br>");
+                    let temp;
+                    for (let j = 0; j < n - 1; j++) {
+                        for (let i = j + 1; i <= n - 1; i++) {
+                            if (arr[j] > arr[i]) {
+                                temp = arr[j];
+                                arr[j] = arr[i];
+                                arr[i] = temp;
+                            }
+                        }
+                        document.write("Iteration " + j + " : " + arr + "<br>");
+                    }
+                    document.write("<h4>*****After Sorting(Selection Sort)*****</h4><br>");
+                    for (i = 0; i < n; i++) document.write("Marks " + i + " : " + arr[i] + "<br>");
+                    document.write("<br><br>");
+                </script>
+            </div>
+        </div>
+    </body>
+</html>
