@@ -3,11 +3,11 @@
     <head>
         <meta charset=utf-8 />
         <title>Display The Marks Of Students</title>
-            <style>
+        <style>
             h1 {
                 text-align: center;
                 color: rgb(196, 199, 6);
-                margin-top: 4%;
+                margin-top: 3%;
             }
             body{
                 padding-top: 50px;
@@ -30,20 +30,20 @@
                 width: 150px;
                 padding-left: 10px;
             }
-            </style>
+        </style>
     </head>
-        <body>
-            <h1>Marks of Students</h1>
-            <div class="name">
-                Enter no.of student:
-                <input type="text" id="text1"></input>
-                Enter Marks of Students:
-                <input type="text" id="text2"></input>
-                <input type="button" value="Add" onclick="add()"></input>
-                <input type="button" value="Display" onclick="display()"></input>
-                <div class="res" id="Result"></div>
-            </div>
-            <script>
+    <body>
+        <h1>Marks of Students</h1>
+        <div class="name">
+            Enter no.of student:
+            <input type="text" id="text1"></input>
+            Enter Marks of Students:
+            <input type="text" id="text2"></input>
+            <input type="button" value="Add" onclick="add()"></input>
+            <input type="button" value="Display" onclick="display()"></input>
+            <div class="res" id="Result"></div>
+        </div>
+        <script>
             var size,x = 1;
             var array = Array();
             function add() {
@@ -59,6 +59,6 @@
                 }
                 document.getElementById("Result").innerHTML = e;
             }
-            </script>
-        </body>
+        </script>
+    </body>
 </html>
