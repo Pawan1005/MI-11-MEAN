@@ -21,7 +21,7 @@
             }
         </script>
         <style>
-              .container {
+            .container {
                 background-color: rgb(203, 220, 216);
                 width: 350px;
                 height: 480px;
@@ -41,25 +41,23 @@
                 border-radius: 15px;
                 box-sizing: 30px;
             }
-          
         </style>
     </head>
-         <body>
-            <div class="container">
+    <body>
+        <div class="container">
+            <center>
+                <marquee> For updating Marks students</marquee>
+                <hr />
+            </center>
+            <label>How many students</label>
+            <input type="number" id="num1" placeholder="Enter the First number" />
+            <button onclick="show()" class="btn">GET</button>
+            <div class="box">
+                <h3>output is:</h3>
                 <center>
-                    <marquee> For updating Marks students</marquee>
-                    <hr />
+                    <h4 id="pid"></h4>
                 </center>
-                <label>How many students</label>
-                <input type="number" id="num1" placeholder="Enter the First number" />
-                <button onclick="show()" class="btn">GET</button>
-                <div class="box">
-                    <h3>output is:</h3>
-                    <center>
-                         <h4 id="pid"></h4>
-                    </center>
-                </div>
             </div>
-        </body>
+        </div>
     </body>
-</html> 
+</html>
