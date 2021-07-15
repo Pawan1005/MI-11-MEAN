@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="Assignment_10.css" />
+        <title>Assignment 10 | Check string</title>
+        <script>
+            function clickme() {
+                var regExp, str;
+                str = document.getElementById("string").value;
+                regExp = /^[A-Z]/;
+                if (regExp.test(str)) {
+                    document.getElementById("span").innerHTML = "string is in uppercase";
+                } else {
+                    document.getElementById("span").innerHTML = "string is not in UPPERCASE";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <input type="text" placeholder="Enter any word" id="string">
+            <button onclick="clickme()">Click Me</button>
+            <span >
+                <h4 id="span"></h4>
+            </span>
+        </div>
+    </body>
+</html>
