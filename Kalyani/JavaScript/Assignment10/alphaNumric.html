@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AlphaNumric</title>
+        <style>
+            li {
+                list-style-type: none;
+                font-size: 16pt;
+            }
+            body {
+                background-color: rgba(0, 0, 0, 0.897);
+            }
+            .mail {
+                margin: auto;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                width: 400px;
+                background-color: gray;
+                border: 1px soild silver;
+            }
+            .mail h2 {
+                margin-left: 38px;
+            }
+            input {
+                font-size: 20pt;
+            }
+            input:focus,
+            textarea:focus {
+                background-color: lightyellow;
+            }
+            input submit {
+                font-size: 12pt;
+            }
+            .rq {
+                color: #ff0000;
+                font-size: 10pt;
+            }
+        </style>
+    </head>
+    <body onload="document.form1.text1.focus()">
+        <div class="mail">
+            <h2>Enter your AlphaNumric Number</h2>
+            <form name="form1" action="#">
+                <ul>
+                    <li><input type="text" name="text1" /></li>
+                    <li class="rq">*Enter numbers and alphabets only.</li>
+                    <li>&nbsp;</li>
+                    <li><input type="submit" name="submit" value="Submit" onclick="alphanumeric(document.form1.text1)" /></li>
+                    <li>&nbsp;</li>
+                </ul>
+            </form>
+        </div>
+        <script>
+            function alphanumeric(inputtxt) {
+                var letters = /^[0-9a-zA-Z]+$/;
+                if (inputtxt.value.match(letters)) {
+                    alert("Your registration number have accepted : you can try another");
+                    document.form1.text1.focus();
+                    return true;
+                } else {
+                    alert("Please input alphanumeric characters only");
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>

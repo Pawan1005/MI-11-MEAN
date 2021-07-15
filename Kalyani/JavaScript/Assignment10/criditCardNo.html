@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cardnumber</title>
+        <style>
+            body {
+                background-color: rgba(0, 0, 0, 0.897);
+            }
+            .main-box {
+                border: 1px solid gray;
+                width: 50%;
+                height: 40vh;
+                margin: 20px 10px 0 300px;
+                background-color: gray;
+            }
+            input {
+                margin: 20px 0 0 100px;
+                width: 50%;
+                height: 20%;
+                font-size: large;
+                text-align: center;
+            }
+            button {
+                width: 25%;
+                height: 20%;
+                background-color: black;
+                color: white;
+            }
+            h2 {
+                text-align: center;
+            }
+            ul li {
+                list-style: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-box">
+            <h2>Credit Card No.</h2>
+            <form name="form1" action="#">
+                <input type="text" name="text1" />
+                <button class="submit" onclick="cardnumber(document.form1.text1)">Check</button>
+            </form>
+        </div>
+        <script>
+            function cardnumber(inputtxt) {
+                var cardno = /^(?:3[47][0-9]{13})$/;
+                if (inputtxt.value.match(cardno)) {
+                    alert("valid credit card number!");
+                    return true;
+                } else {
+                    alert("Not a valid  credit card number!");
+                    return false;
+                }
+            }
+        </script>
+    </body>
+</html>
