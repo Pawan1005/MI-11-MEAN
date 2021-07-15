@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment12-Quest1</title>
+    </head>
+    <body>
+        <script>
+            class Employee {
+                constructor(empo, name, address, city, salry) {
+                    this.empo = empo;
+                    this.name = name;
+                    this.address = address;
+                    this.city = city;
+                    this.salry = salry;
+                }
+            }
+            const myemployee = new Employee(101, "Kalyani", "43,Ramnagr", "Pune MH", "80,000");
+            document.write(
+                "empo:" +
+                    myemployee.empo +
+                    " <br>" +
+                    "Name:" +
+                    myemployee.name +
+                    "<br> " +
+                    "Address:" +
+                    myemployee.address +
+                    "<br> " +
+                    "City:" +
+                    myemployee.city +
+                    "<br> " +
+                    "Salary:" +
+                    myemployee.salry
+            );
+        </script>
+    </body>
+</html>
