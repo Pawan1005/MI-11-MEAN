@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="Assignment7.css" />
+        <title>Triangle</title>
+        <script>
+            function triangle() {
+                var i,j,row,n = 1;
+                row = parseInt(document.getElementById("rows").value);
+                if (row == null || row == undefined || row == NaN) {
+                    document.getElementById("triangle").innerHTML = "Please enter an valid number!!";
+                } else {
+                    for (i = 0; i <= row - 1; i++) {
+                        for (j = 1; j <= i; j++) {
+                            if (i != 0) {
+                                document.getElementById("triangle").innerHTML += " " + j;
+                            }
+                        }
+                        document.getElementById("triangle").innerHTML += " " + n + "<br>";
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="main">
+            <div id="second">
+                <label for="">Enter the Number of rows : </label>
+                <input type="text" id="rows" />
+            </div>
+            <button onclick="triangle()">click me</button>
+            <div id="triangle"></div>
+        </div>
+    </body>
+</html>

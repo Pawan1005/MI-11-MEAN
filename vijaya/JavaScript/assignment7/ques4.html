@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8 />
+        <title>Display The Marks Of Students</title>
+        <style>
+            h1 {
+                text-align: center;
+                color: rgb(196, 199, 6);
+                margin-top: 4%;
+            }
+            body {
+                padding-top: 3px;
+                background-color: rgb(117, 115, 115);
+            }
+            .name {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: rgb(52, 100, 155);
+                width: 500px;
+                height:500px;
+                margin: auto;
+                padding-top: 10px;
+                gap: 5px;
+                border-radius: 10px;
+            }
+            .res {
+                background-color: rgb(243, 233, 96);
+                width: 150px;
+                padding-left: 10px;
+            }
+            .res1 {
+                background-color: rgb(243, 233, 96);
+                width: 150px;
+                padding-left: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Marks of Students</h1>
+        <div class="name">
+            Enter no.of student:
+            <input type="text" id="text1"></input>
+            Enter Marks of Students:
+            <input type="text" id="text2"></input>
+            <input type="button" value="Add" onclick="add()"></input>
+            <input type="button" value="Display" onclick="display()"></input>
+            Before Sorting:
+            <div class="res" id="Result"></div>
+            <input type="button" value="sort" onclick="sort()"></input>
+            After Sorting:***Selection Sort***
+            <div class="res1" id="Result1"></div>
+        </div>
+        <script>
+            var size, x = 1;
+            var array = Array();
+            function add() {
+                size = document.getElementById("text1").value;
+                array[x] = parseInt(document.getElementById("text2").value);
+                x++;
+                document.getElementById("text2").value = "";
+            }
+            function display() {
+                var e = "";
+                for (var y = 1; y <= size; y++) {
+                    e += "Marks " + y + " = " + array[y] + "<br/>";
+                }
+                document.getElementById("Result").innerHTML = e;
+            }
+            function sort() {
+                size = document.getElementById("text1").value;
+                array[x] = parseInt(document.getElementById("text2").value);
+                var ee = "",y=1;
+                for (var i = 1; i <= size-1; i++) {
+                    for (var j = i+1; j <= size; j++) {
+                        if (array[i] > array[j]) {
+                            var temp = array[i];
+                            array[i] = array[j];
+                            array[j] = temp;
+                        }
+                    }
+                }
+                for (let k = 1; k <= size; k++) {
+                    document.getElementById("Result1").innerHTML += "Marks " + y++ + " = " + array[k] + "<br>";
+                }
+            }
+        </script>
+    </body>
+</html>
+  
