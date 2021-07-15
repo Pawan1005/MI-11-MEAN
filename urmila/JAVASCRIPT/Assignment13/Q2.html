@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Week_day</title>
+        <style>
+            h1 {
+                text-align: center;
+                margin-top: 4%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                margin: auto;
+                padding-top: 15px;
+            }
+            p {
+                min-width: 90px;
+                min-height: 50px;
+                padding: 32px 40px 32px 40px;
+                background-color: greenyellow;
+                border: 2px solid red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Week Day</h1>
+        <div class="main">
+            <div>
+                <p>Date is&ensp;:&emsp;<span id="num1"></span><br /><br />Week Day is&ensp;:&emsp;<span id="num2"></span></p>
+            </div>
+        </div>
+        <script>
+            function getWeekDay(d1) {
+                let days = ["SU", "MO", "TU", "WE", "TH", "FR", "SA"];
+                return days[d1.getDay()];
+            }
+            let d1 = new Date();
+            alert("Week Day is  :   " + getWeekDay(d1));
+            document.getElementById("num1").innerHTML = d1.toDateString();
+            document.getElementById("num2").innerHTML = getWeekDay(d1);
+        </script>
+    </body>
+</html>
