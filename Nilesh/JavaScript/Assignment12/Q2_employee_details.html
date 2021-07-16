@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Display student details</title>
+        <style>
+            body {
+                background-color: #470c23;
+            }
+            h1 {
+                text-align: center;
+                color: white;
+                margin-top: 2%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #fcf3c1;
+                width: 520px;
+                height: 570px;
+                margin: auto;
+                padding-top: 15px;
+                gap: 0px;
+                border-radius: 10px;
+            }
+            p {
+                min-width: 150px;
+                height: 20px;
+                padding: 13px 20px 13px 20px;
+                background-color: white;
+                font-weight: bold;
+                border: 1px solid #0000004b;
+                color: red;
+                border-radius: 5px;
+                text-align: center;
+                font-size: 17px;
+                margin-bottom: 40px;
+            }
+            table {
+                width: 80%;
+                background-color: #ffffff;
+                border-collapse: collapse;
+            }
+            tr, th, td {
+                border: 1px solid rgba(0, 0, 0, 0.219);
+                padding: 10px 5px;
+            }
+            table th {
+                background-color: #76438d94;
+                color: white;
+                font-size: 16px;
+            }
+            tr, td {
+                font-size: 17px;
+                min-width: 100px;
+                padding-left: 20px;
+            }
+            tr:nth-child(odd) {
+                background-color: #f7f7f7;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Display Employee Details</h1>
+        <div class="main">
+            <h2>Employee Table</h2>
+            <table>
+                <tr>
+                    <th>Emp NO</th>
+                    <td id="num1"></td>
+                </tr>
+                <tr>
+                    <th>Name</th>
+                    <td id="num2"></td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td id="num3"></td>
+                </tr>
+                <tr>
+                    <th>City</th>
+                    <td id="num4"></td>
+                </tr>
+                <tr>
+                    <th>Salary</th>
+                    <td id="num5"></td>
+                </tr>
+            </table>
+            <h2>Salary Table</h2>
+            <table>
+                <tr>
+                    <th>Emp NO</th>
+                    <td id="num6"></td>
+                </tr>
+                <tr>
+                    <th>Name</th>
+                    <td id="num7"></td>
+                </tr>
+                <tr>
+                    <th>Gross Salary</th>
+                    <td id="num8"></td>
+                </tr>
+                <tr>
+                    <th>Net Salary</th>
+                    <td id="num9"></td>
+                </tr>
+            </table>
+            <div>
+                <p><span id="num10"></span></p>
+            </div>
+        </div>
+        <script>
+            class Employee {
+                constructor() {
+                    this.empno = 101;
+                    this.name = "Ashok Kumar";
+                    this.address = "43,Ramnagar";
+                    this.city = "Pune ,Maharashtra";
+                    this.salary = "80000";
+                }
+                show_init() {
+                    document.getElementById("num1").innerHTML += this.empno;
+                    document.getElementById("num2").innerHTML += this.name;
+                    document.getElementById("num3").innerHTML += this.address;
+                    document.getElementById("num4").innerHTML += this.city;
+                    document.getElementById("num5").innerHTML += this.salary;
+                }
+                calculate() {
+                    let salary, da, hra, pf;
+                    salary = parseInt(this.salary);
+                    da = (salary * 30) / 100;
+                    hra = (salary * 15) / 100;
+                    pf = (salary * 12.5) / 100;
+                    this.gross = salary + da + hra;
+                    this.net = this.gross - pf;
+                }
+                display() {
+                    document.getElementById("num6").innerHTML += this.empno;
+                    document.getElementById("num7").innerHTML += this.name;
+                    document.getElementById("num8").innerHTML += this.gross;
+                    document.getElementById("num9").innerHTML += this.net;
+                    if (this.gross > 180000) {
+                        document.getElementById("num10").innerHTML += "Income Tax Payer";
+                    } else {
+                        document.getElementById("num10").innerHTML += "Not an Income Tax Payer";
+                    }
+                }
+            }
+            let e1 = new Employee();
+            e1.show_init();
+            e1.calculate();
+            e1.display();
+        </script>
+    </body>
+</html>

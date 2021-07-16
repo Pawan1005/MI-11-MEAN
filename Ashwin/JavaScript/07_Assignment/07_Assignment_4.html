@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"/>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        <title>Display Students marks (Selection Sort)</title>
+    </head>
+    <body class="container">
+        <div class="container-box, shadow p-3 mb-5 bg-body rounded">
+            <h1>Display Students Marks</h1>
+            <label> Display Students Marks Using Selection Sort Method :</label>
+            <input type="number" id="getStudents" placeholder="Enter number number for how many students wants to enter the marks:" />
+            <button type="submit" onclick="studentsMarks()" class="btn btn-primary">Click Here</button>
+            <p id="result"></p>
+        </div>
+        <script>
+            function studentsMarks() {
+                let totalStudents = document.getElementById("getStudents").value;
+                let subjectMarks = document.getElementById("result");
+                marks = [];
+                subjectMarks.innerHTML += `(____Before  Sorting____)<br>`;
+                for (let i = 0; i < totalStudents; i++) {
+                    marks[i] = prompt("Enter Marks");
+
+                    subjectMarks.innerHTML += `Marks   ${i + 1}   :   ${marks[i]}  <br>`;
+                }
+                subjectMarks.innerHTML += `<br>(____Each Iteration____)`;
+                for (let i = 0; i < marks.length; i++) {
+                    let minIndex = i;
+                    for (let j = i; j < marks.length; j++) {
+                        if (marks[j] > marks[minIndex]) {
+                            temp = marks[j];
+                            marks[j] = marks[minIndex];
+                            marks[minIndex] = temp;
+                        }
+                    }
+                    subjectMarks.innerHTML += ` <br>  ${marks}`;
+                }
+                subjectMarks.innerHTML += `<br><br> (____After Sorting(Selection sort)____) <br>`;
+                for (i = 0; i < totalStudents; i++) subjectMarks.innerHTML += `Marks   ${i + 1}   :   ${marks[i]}  <br>`;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,219 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    background-color: #f2f2f2;
+}
+.body {
+    width: 75%;
+}
+header {
+    display: flex;
+    width: 100%;
+    background-color: #f2f2f2;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
+header > .logo {
+    background-image: url("./logo.png");
+    height: 25px;
+    width: 200px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    vertical-align: middle;
+}
+header > .covid {
+    height: 30px;
+    font-family: "tw cen mt";
+    font-size: 20px;
+    background-color: #ffeb9c;
+    border: 1px solid rgb(252, 252, 0);
+    background: #ffeb9c;
+    height: 40px;
+    display: inline-block;
+    position: relative;
+    top: -2px;
+    border: #ead992 solid 1px;
+    line-height: 40px;
+}
+header > .covid .question {
+    line-height: 30px;
+}
+header > .covid .yes-button {
+    background: #f24141;
+    border: #f24141 solid 1px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 4px 14px;
+    margin: 0 5px 0 20px;
+    text-transform: uppercase;
+    font-size: 13px;
+    cursor: pointer;
+}
+header > .covid .no-button {
+    border: #000f3f solid 1px;
+    border-radius: 5px;
+    padding: 4px 14px;
+    text-transform: uppercase;
+    color: #000f3f;
+    font-size: 13px;
+    cursor: pointer;
+}
+.button-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.button-container .notification {
+    background-image: url(./not.jpg);
+    height: 30px;
+    width: 30px;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+.button-container .login,
+.button-container .register {
+    border: 1px solid #f52f2f;
+    box-sizing: border-box;
+    color: #f52f2f;
+    display: inline-block;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-left: 10px;
+    font-size: 14px;
+    padding: 4px;
+    font-family: "tw cen mt";
+}
+form {
+    width: 100%;
+    display: flex;
+    /* flex-wrap: wrap; */
+    padding: 20px;
+    justify-content: space-evenly;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+    background-color: blue;
+}
+form input,
+select,
+button {
+    font-family: Poppins;
+    background-color: #fff;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    font-size: 20px;
+    padding: 5px;
+}
+form input {
+    width: 25%;
+}
+form button {
+    background-color: rgb(231, 66, 99);
+    color: white;
+}
+form .upload {
+    background-color: white;
+    color: blue;
+    height: 40px;
+    width: 100px;
+    font-family: "tw cen mt";
+    font-size: 18px;
+    text-align: center;
+}
+form input::placeholder {
+    color: rgb(107, 107, 107);
+}
+.col1 {
+    width: 74%;
+    height: 500px;
+}
+.col2 {
+    width: 25%;
+    height: 500px;
+}
+.columns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.columns .col1 h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-family: Poppins;
+    font-size: 18px;
+}
+.col1 .slider {
+    background-image: url("./eoc.jpg");
+    height: 100px;
+    width: 100%;
+    background-position: center;
+    background-size: contain;
+}
+.col2 .banner1 {
+    background-image: url(./banner.gif);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 150px;
+    width: 100%;
+}
+.col2 .banner2 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 190px;
+    width: 100%;
+    margin-top: 10px;
+    border: 1px solid #ffa600;
+    background-image: url("./banner2.png");
+}
+.col2 .banner3 {
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 170px;
+    width: 100%;
+    margin-top: 10px;
+    border: 1px solid #ffa600;
+    background-image: url("./banner3.png");
+}
+.job-collection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.job-collection .job {
+    width: 32%;
+    height: 60px;
+    background-color: white;
+    margin: 10px 10px 0px 0px;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
+    background-image: url(./job-data.png);
+}
+.col1 .banner1,
+col1 .banner2 {
+    margin-top: 50px;
+    background-color: white;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+    padding-left: 20px;
+    padding-top: 10px;
+}
+.col1 .comp-collection,
+.col1 .consl-collection {
+    height: 130px;
+    width: 100%;
+    background-image: url(./comp-collection.png);
+    background-repeat: no-repeat;
+}
+.col1 .consl-collection {
+    height: 300px;
+    background-image: url(./consl-collection.png);
+    background-size: contain;
+}

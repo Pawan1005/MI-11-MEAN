@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment 5</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <script src="https://kit.fontawesome.com/15329e9b1c.js" crossorigin="anonymous"></script>
+        <style>
+            .table td {
+                font-size: 15px;
+            }
+            .table th {
+                font-size: 13px;
+            }
+            .btn-toolbar {
+                position: relative;
+                display: -ms-flexbox;
+                display: flex;
+                -ms-flex-wrap: wrap;
+                flex-wrap: wrap;
+                -ms-flex-pack: start;
+                justify-content: flex-start;
+                left: -16%;
+            }
+            .btn-light {
+                color: #2d5e8e;
+                background-color: #f8f9fa;
+                border-color: #f8f9fa;
+            }
+            .btn-light:hover {
+                background-color: rgb(68, 68, 173);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="p-5 mt-5">
+            <small><a href="#">HOME </a>/ <a href="#">EMPLOYEE</a> / EMPLOYEE DETAILS</small>
+        </div>
+        <h3 class="ml-5" style="font-size: 20px"><strong>List of employees</strong> <span class="badge bg-primary text-light">New</span></h3>
+        <table class="table ml-5 pl-5" style="font: size 35px; width: 80%">
+            <thead class="thead-light">
+                <tr>
+                    <th scope="col">SrNo</th>
+                    <th scope="col">First Name</th>
+                    <th scope="col">Last Name</th>
+                    <th scope="col">Mobile</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Akash</td>
+                    <td>Kadam</td>
+                    <td>23232323</td>
+                </tr>
+                <tr>
+                    <th scope="row">2</th>
+                    <td>Bhavika</td>
+                    <td>Madrap</td>
+                    <td>56565656</td>
+                </tr>
+                <tr>
+                    <th scope="row">3</th>
+                    <td>Vinod</td>
+                    <td>Potjale</td>
+                    <td>123456</td>
+                </tr>
+                <tr>
+                    <th scope="row">4</th>
+                    <td>Pranjali</td>
+                    <td>Ajmere</td>
+                    <td>123458</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="btn-toolbar justify-content-end" role="toolbar" aria-label="Toolbar with button groups">
+            <div class="btn-group" role="group" aria-label="First group">
+                <button type="button" class="btn btn-light"><i class="fa fa-backward" aria-hidden="true"></i></button>
+                <button type="button" class="btn btn-light">1</button>
+                <button type="button" class="btn btn-light">2</button>
+                <button type="button" class="btn btn-light">3</button>
+                <button type="button" class="btn btn-light">4</button>
+                <button type="button" class="btn btn-light"><i class="fa fa-forward" aria-hidden="true"></i></button>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

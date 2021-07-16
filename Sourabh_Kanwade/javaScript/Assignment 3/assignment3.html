@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="./css/assignment3.css" />
+        <title>JS | Assignment 3</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Assignment 3</h1>
+            <input type="text" id="year" placeholder="Enter A number" />
+            <div>
+                <button class="btn" onclick="clickHandler()">Is it Leap ?</button>
+                <button class="btn" onclick="clickHandler()">Is it Prime ?</button>
+                <button class="btn" onclick="clickHandler()">Is it Even ?</button>
+            </div>
+            <div>
+                <label for="rows">Rows :</label>
+                <input type="number" id="rows" placeholder="Rows" value="3" />
+                <label for="rows">Columns :</label>
+                <input type="number" id="cols" placeholder="Columns" value="3" />
+            </div>
+            <button class="btn" onclick="patternPrinter()">Print The Pattern</button>
+            <div id="pattern"></div>
+            <input type="text" id="factNum" />
+            <button class="btn" onclick="factorial()">Factorial</button>
+        </div>
+        <script src="./js/assignment3.js"></script>
+    </body>
+</html>

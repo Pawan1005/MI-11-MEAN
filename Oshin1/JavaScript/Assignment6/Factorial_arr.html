@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Factorials</title>
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+                transition: 0.3s;
+                width: 40%;
+                height: 300px;
+                border-radius: 20px;
+                background-color: rosybrown;
+                margin: auto;
+                margin-top: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <h1 style="text-align: center;">FACTORIALS</h1>
+                <div id="container"></div>
+                <script>
+                    let arr = [],
+                        sum = 0;
+                    let container = document.getElementById("container");
+                    while (true) {
+                        let temp = prompt("Enter a number ");
+                        if (temp == "X" || temp == "x" || temp == null) break;
+                        temp = parseInt(temp);
+                        arr.push(temp);
+                    }
+                    for (let i = 0; i < arr.length; i++) {
+                        sum += factorial(arr[i]);
+                    }
+                    function factorial(n) {
+                        if (n == 0) return 1;
+                        return n * factorial(n - 1);
+                    }
+                    container.innerHTML += `<div>Sum of Factorials is: ${sum}</div>`;
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

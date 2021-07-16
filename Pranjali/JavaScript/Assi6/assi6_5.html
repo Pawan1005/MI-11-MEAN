@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>question5</title>
+    </head>
+    <body>
+        <div  style="
+        width: 450px;
+        height: 300px;
+        text-align: center;
+        border: 2px solid black;
+        position: absolute;
+        top: 100px;
+        left: 700px;
+        background-color: rgb(109, 218, 59);">
+        <br />
+        <h2>Factorials in descending order</h2>
+        <br />
+        <hr />
+        <br />
+        <p id="p" style="color: blue;"></p>
+        </div>
+
+        <script>
+            let arr = [];
+            let factorials = [];
+            let p = document.getElementById("p");
+            while (true) {
+                let temp = prompt("Enter a number");
+                if (temp == "X" || temp == "x" || temp == null) break;
+                temp = parseInt(temp);
+                arr.push(temp);
+            }
+            for (i = 0; i < arr.length; i++) {
+                factorials.push(factorial(arr[i]));
+            }
+            function factorial(n) {
+                if (n == 0) return 1;
+                return n * factorial(n - 1);
+            }
+            p.innerHTML += `<div style="position: relative; left: 1%;">Enter Number : ${arr}</div><br>`;
+            p.innerHTML += `<div style="position: relative; left: 4%;"> Factorials in desc : ${factorials.sort(function (a, b) {
+                return b - a;
+            })}
+            </div>`;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Personal Details</title>
+        <style>
+            h1 {
+                color: rgb(106, 20, 128);
+            }
+            div {
+                color: rgb(20, 79, 128);
+                height: 400px;
+                width: 20%;
+                background-color: turquoise;
+                border: 2px solid black;
+            }
+            .button {
+                border-radius: 15px;
+                position: absolute;
+                left: 120px;
+                bottom: 620px;
+                background-color: rgb(231, 22, 39);
+                font-size: 20px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Personal Details:</h1>
+            <br />
+            <p>
+                <label for="firstname"><strong>First Name:</strong></label>
+                <input type="text" id="firstname" name="firstname" placeholder="First name" />
+            </p>
+            <p>
+                <label for="lastname"><strong>Last Name:</strong></label>
+                <input type="text" id="lastname" name="lastname" placeholder="Last name" />
+            </p>
+            <p>
+                <strong>Gender:</strong>
+                <input type="radio" id="male" name="gender" value="male" />
+                <label for="male">Male</label>
+                <input type="radio" />
+                <label for="female">Female</label>
+                <input type="radio" id="male" name="gender" value="other" />
+                <label for="other">Other</label>
+            </p>
+            <p>
+                <strong>Age:</strong>
+                <input type="radio" id="Age" name="age" />
+                <label for="radio">less than 18</label>
+                <input type="radio" id="Age" name="age" />
+                <label for="radio">18-25</label>
+                <input type="radio" id="Age" name="age" />
+                <label for="radio">26-40</label>
+            </p>
+            <br />
+            <button type="button" class="button">Submit</button>
+        </div>
+    </body>
+</html>

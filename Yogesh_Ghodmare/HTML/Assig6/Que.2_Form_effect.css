@@ -1,0 +1,56 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1,
+h2 {
+    background-color: blueviolet;
+    border-bottom-left-radius: 10px;
+    border-top-right-radius: 10px;
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px;
+}
+h1 {
+    margin-bottom: 50px;
+}
+label {
+    font-weight: bold;
+}
+#first-name {
+    margin: 20px 0;
+}
+#last-name {
+    margin: 20px 0;
+}
+#other {
+    margin: 20px 0;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70%;
+}
+fieldset input[list="universities"] {
+    margin-top: 20px;
+    margin-left: 143px;
+    margin-bottom: 20px;
+}
+#Qualification {
+    margin-top: 20px;
+    margin-left: 60px;
+}
+#expertise {
+    margin-left: 90px;
+}
+#resume {
+    margin-left: 95px;
+    margin-bottom: 20px;
+}
+#comment {
+    margin-left: 140px;
+}
+#submit-btn {
+    margin-top: 20px;
+    text-align: center;
+}

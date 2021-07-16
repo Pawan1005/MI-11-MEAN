@@ -1,0 +1,85 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Prime number</title>
+        <style>
+            h1 {
+                text-align: center;
+                color: red;
+                margin-top: 5%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 410px;
+                height: 350px;
+                margin: auto;
+                padding-top: 15px;
+                gap: 10px;
+                border-radius: 10px;
+                background-color: rgb(227, 230, 233);
+                box-shadow: 2px 2px 4px;
+            }
+            input {
+                width: 55%;
+                margin-left: 10px;
+                margin-bottom: 12px;
+                padding: 4px 8px;
+                font-size: 16px;
+                outline: none;
+                line-height: 19px;
+                border: 1px solid #0000004b;
+                box-shadow: 2px 2px 4px;
+            }
+
+            #num2 {
+                font-size: 19px;
+                color: #ff0000;
+            }
+            button {
+                background-color: #ff0000;
+                color: white;
+                padding: 7px 11px;
+                margin: 0 8px;
+                font-weight: bold;
+                font-size: 17px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Prime Number Between Min & Max</h1>
+        <div class="main">
+            Enter Min Num : <input type="text" id="num1" placeholder="enter marks of english" /><br /><br />
+            Enter Max Num : <input type="text" id="num2" placeholder="enter marks of science" /><br /><br />
+            <button onclick="show()" class="btn" style="text-align: center">Submit</button>
+            <div class="grade">
+                <p id="pid"></p>
+            </div>
+        </div>
+        <script>
+            function show() {
+                "use strict";
+                var i, Number, count, Minimum, Maximum;
+                Minimum = parseInt(document.getElementById("num1").value);
+                Maximum = parseInt(document.getElementById("num2").value);
+                document.getElementById("pid").innerHTML += " print NUmber between " + Minimum + " &" + Maximum;
+                for (Number = Minimum; Number <= Maximum; Number++) {
+                    count = 0;
+                    for (i = 2; i <= Number / 2; i++) {
+                        if (Number % i == 0) {
+                            count++;
+                            break;
+                        }
+                    }
+                    if (count == 0 && Number != 1) {
+                        document.getElementById("pid").innerHTML += "<br> " + Number;
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Alphanumeric</title>
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+                transition: 0.3s;
+                width: 50%;
+                height: 300px;
+                border-radius: 20px;
+                background-color: cornflowerblue;
+                margin: auto;
+                margin-top: 50px;
+            }
+            .btn {
+                position: relative;
+                border: none;
+                font-size: 20px;
+                padding: 10px;
+                width: 180px;
+                text-align: center;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+                text-decoration: none;
+                overflow: hidden;
+                cursor: pointer;
+                margin-left: 160px;
+                background-color: white;
+                color: black;
+            }
+            #pid {
+                color: white;
+                text-align: center;
+                font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <h1 style="text-align: center;">Alpha Numeric or Not</h1>
+                <label>Enter the value</label>
+                <input type="text" id="text" />
+                <button class="btn1" onclick="alpha()">Check</button>
+                <p id="pid"></p>
+            </div>
+        </div>
+        <script>
+            function alpha() {
+                function alphaNumric(str) {
+                    regExp = /^[A-Za-z0-9]+$/;
+                    if (regExp.test(str)) {
+                        document.getElementById("pid").innerHTML = "It is an Alpha Numeric value";
+                    } else {
+                        document.getElementById("pid").innerHTML = "It is not an Alpha Numeric value";
+                    }
+                }
+                var regExp, str;
+                str = document.getElementById("text").value;
+                alphaNumric(str);
+            }
+        </script>
+    </body>
+</html>

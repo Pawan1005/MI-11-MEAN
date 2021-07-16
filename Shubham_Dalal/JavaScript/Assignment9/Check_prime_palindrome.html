@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assignment9.css" />
+        <title>palindrome</title>
+        <script>
+            function fun() {
+                function str_palindrome(str) {
+                    var sum=0, count=0, temp, rem, j;
+                    temp = parseInt(str);
+                    while(temp>0) {
+                        rem = temp%10;
+                        temp = parseInt(temp/10);
+                        sum = sum*10+rem;
+                    }
+                    for(j=1; j<=str; j++) {
+                        if(str%j==0) {
+                            count++;
+                        }
+                    }
+                    if(sum==str && count == 2) {
+                        document.getElementById("pid1").innerHTML += +str+ " is "+ " prime palindrome"+"</br></br>";
+                    } else {
+                        document.getElementById("pid1").innerHTML += +str+ " is not an prime palindrome number";
+                    }
+                }  
+                var string = [], i;
+                string[0] = document.getElementById("input1").value;
+                string[1] = document.getElementById("input2").value;
+                string[2] = document.getElementById("input3").value;
+                string[3] = document.getElementById("input4").value;
+                string[4] = document.getElementById("input5").value;
+                for(i=0; i<5; i++) {
+                    str_palindrome(string[i]);
+                }                                        
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h1>Check prime palindrome or  not!!!</h1>
+            <input type="number" name="" id="input1" />
+            <input type="number" name="" id="input2" />
+            <input type="number" name="" id="input3" />
+            <input type="number" name="" id="input4" />
+            <input type="number" name="" id="input5" />
+            <button onclick="fun()">Click me</button>
+            <h4 id="pid1"></h4><br>    
+        </div>
+    </body>
+</html>

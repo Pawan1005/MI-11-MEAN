@@ -1,0 +1,27 @@
+html,
+body {
+    height: auto;
+}
+h1 {
+    font-size: 72px;
+}
+body {
+    background-image: radial-gradient(circle closest-side at 15% 50%, #85c4ee, #bde7d7);
+}
+button {
+    font-size: 36px;
+    border-radius: 40px;
+    padding: 20px 40px;
+    color: rgb(247, 247, 247);
+    background-image: linear-gradient(to right bottom, royalblue, rgb(94, 65, 225));
+}
+#pattern {
+    font-size: 32px;
+}
+.patternItems {
+    background-image: linear-gradient(to right bottom, royalblue, rgb(65, 148, 225));
+    margin: 10px;
+    padding: 10px;
+    border-radius: 10px;
+    color: rgb(247, 247, 247);
+}

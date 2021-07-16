@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Number Swapping</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <style>
+            .box {
+                height: auto;
+                width: fit-content;
+                background-color: bisque;
+                border: 1px solid black;
+                background-image: url("Images/background.jpg");
+                margin-top: 150px;
+                margin-left: 550px;
+                border-radius: 4px;
+            }
+        </style>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script>
+            function one() {
+                var a, b, temp;
+                a = parseInt(document.getElementById("num1").value);
+                b = parseInt(document.getElementById("num2").value);
+                temp = a;
+                a = b;
+                b = temp;
+                document.getElementById("pid").innerHTML = "By method one with using 3rd variable";
+                parseInt((document.getElementById("txt").innerHTML = "values after swapping Number1 = " + a + " Number2 = " + b));
+            }
+            function Two() {
+                var a, b, temp;
+                a = parseInt(document.getElementById("num1").value);
+                b = parseInt(document.getElementById("num2").value);
+                a = a + b;
+                b = a - b;
+                a = a - b;
+                document.getElementById("pid").innerHTML = "By method Two without using 3rd variable";
+                parseInt((document.getElementById("txt").innerHTML = "values after swapping Number1 = " + a + " Number2 = " + b));
+            }
+        </script>
+    </head>
+    <body>
+        <div class="row flex-column justify-content-center m-5 p-4">
+            <div class="col-md-4"></div>
+            <div style="height: auto; width: auto" class="col-md-4 box d-flex justify-content-center flex-column text-black">
+                <h1>Swapping of Two numbers</h1>
+                <br />
+                Number 1: <br />
+                <input type="number" name="" id="num1" placeholder="enter your first number" /><br />
+                Number 2:<br />
+                <input type="number" name="" id="num2" placeholder="enter your second number" /><br />
+                <button onclick="one()" class="btn-primary p-2 m-3">Method With 3rd Variable</button>
+                <button onclick="Two()" class="btn-info p-2 m-3">Method without 3rd Variable</button>
+                <h1 id="pid"></h1>
+                <br />
+                <textarea name="" id="txt" cols="30" rows="2" class="mb-3"></textarea>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </body>
+</html>

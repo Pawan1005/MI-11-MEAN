@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>JOB PORTAL</title>
+        <style>
+            body {
+                margin: 0;
+                padding: 0;
+                font-family: century "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+            }
+            h2 {
+                background-image: url(job.png);
+                height: 100vh;
+                background-size: cover;
+                background-position: center;
+            }
+            ul {
+                float: right;
+                margin-top: 20px;
+                padding-right: 20px;
+            }
+            ul li {
+                display: inline;
+            }
+            ul li a {
+                text-decoration: none;
+                color: #000;
+                padding: 5px 20px;
+                border: 1px solid #000;
+                transition: 0.6s ease;
+            }
+            ul li a:hover {
+                background-color: rgb(237, 236, 243);
+                color: rgb(247, 8, 107);
+            }
+            ul li.active a {
+                background-color: rgb(237, 236, 243);
+                color: rgb(247, 8, 107);
+            }
+            .logo img {
+                float: left;
+                width: 150px;
+                height: auto;
+            }
+            .title {
+                position: absolute;
+                margin-top: 30px;
+                padding-left: 200px;
+                color: #fff;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>
+            <div class="main">
+                <div class="logo">
+                    <img src="logo.png"/>
+                </div>
+                <ul>
+                    <li class="active"><a href="#">HOME</a></li>
+                    <li><a href="Log in.html" target="_blank">Log In</a></li>
+                    <li><a href="personal.html" target="_blank">Personal</a></li>
+                    <li><a href="professional.html" target="_blank">Professional</a></li>
+                </ul>
+            </div>
+            <div class="title">
+                <h1>Find your JOB with us</h1>
+            </div>
+        </h2>
+    </body>
+</html>

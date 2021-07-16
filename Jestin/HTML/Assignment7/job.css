@@ -1,0 +1,81 @@
+.rectangle {
+    position: absolute;
+    width: 1440px;
+    height: 123px;
+    left: 0px;
+    top: 3px;
+    background-color: black;
+}
+.Logo {
+    position: absolute;
+    width: 125.49px;
+    height: 102px;
+    left: 0px;
+    top: 14px;
+}
+.heading {
+    position: absolute;
+    width: 319px;
+    height: 48px;
+    left: 237px;
+    top: 29px;
+    color: white;
+}
+.inner_rectangle {
+    position: absolute;
+    width: 622px;
+    height: 54px;
+    left: 818px;
+    top: 72px;
+    background-color: #ffb6b6;
+}
+
+.navigation {
+    font-family: Telex;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 4px;
+    text-align: left;
+}
+li {
+    display: inline;
+}
+ul {
+    word-spacing: 50px;
+}
+a:link {
+    color: black;
+    background-color: none;
+    text-decoration: none;
+}
+.background {
+    position: absolute;
+    width: 1440px;
+    height: 898px;
+    left: 0px;
+    top: 126px;
+}
+.black_shade {
+    position: absolute;
+    width: 1440px;
+    height: 750px;
+    left: 0px;
+    top: 137px;
+}
+
+.fontstyle {
+    font-family: Telex;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 48px;
+    text-align: center;
+}
+.job {
+    background-color: white;
+    opacity: 0.8;
+}
+button {
+    background-color: unset;
+}

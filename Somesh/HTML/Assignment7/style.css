@@ -1,0 +1,65 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(
+            rgba(82, 86, 173, 0.3),
+            rgba(82, 86, 173, 0.3)
+        ),
+        url("meet.jpg");
+    background-size: cover;
+    background-position: center;
+    height: 95vh;
+}
+.glass,
+input {
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(4px);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.18);
+}
+.container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 70vh;
+    width: 80vw;
+}
+form input[type="text"],
+.radio-container,
+.checkbox-container {
+    background-color: rgba(255, 255, 255, 0);
+    outline: none;
+    border: none;
+    padding: 10px;
+    width: 80%;
+    text-indent: 10px;
+    font-size: 16px;
+    font-family: Poppins;
+    border-radius: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form input[type="text"]::placeholder {
+    color: rgb(100, 42, 55);
+}
+.radio-container label {
+    padding-right: 20px;
+}
+
+.checkbox-container label {
+    padding-left: 20px;
+}
+.Gender-label,
+.desig-label,
+.skill-label,
+.qualn-label {
+    font-size: 16px;
+    font-family: Poppins;
+    width: 80%;
+    border-radius: 50px;
+    text-align: center;
+}

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Words</title>
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+                transition: 0.3s;
+                width: 50%;
+                height: 300px;
+                border-radius: 20px;
+                background-color: aliceblue;
+                margin: auto;
+                margin-top: 50px;
+            }
+            .btn {
+                position: relative;
+                border: none;
+                font-size: 20px;
+                padding: 10px;
+                width: 180px;
+                text-align: center;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+                text-decoration: none;
+                overflow: hidden;
+                cursor: pointer;
+                margin-left: 160px;
+                background-color: white;
+                color: black;
+            }
+            #pid {
+                color: black;
+                text-align: center;
+                font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <h1 style="text-align: center;">Count no of Words in String</h1>
+                <label>Enter the string : </label>
+                <input type="text" id="text" /><br /><br />
+                <button class="btn" onclick="words()">Check</button>
+                <p id="pid"></p>
+            </div>
+        </div>
+        <script>
+            function words() {
+                var regExp, str;
+                str = document.getElementById("text").value;
+                regExp = str.replace(/(^\s*)|(\s*$)/gi, "");
+                regExp = regExp.replace(/[ ]{2,}/gi, " ");
+                regExp = regExp.replace(/\n /, "\n");
+                if (regExp != 0) {
+                    document.getElementById("pid").innerHTML = regExp + "<br><br>";
+                    document.getElementById("pid").innerHTML = regExp.split(" ").length;
+                }
+            }
+        </script>
+    </body>
+</html>

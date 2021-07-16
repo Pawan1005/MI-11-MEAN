@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script>
+            function mergesort() {}
+        </script>
+        <title>Document</title>
+        <style>
+            .container {
+                background-color: rgb(203, 220, 216);
+                width: 350px;
+                height: 480px;
+                text-align: center;
+                margin-left: 480px;
+                box-shadow: 7px 7px 15px;
+                border-radius: 15px;
+            }
+            .btn {
+                padding: 15px;
+                background-color: red;
+                outline-color: white;
+                outline-width: 15px;
+                color: white;
+            }
+            .label {
+                border-radius: 15px;
+                box-sizing: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <center><h1>Marks Approximation</h1></center>
+        <div class="container" id="inp">
+            <h3>Section A</h3>
+            <input type="text" id="num1" /> <br />
+            <input type="text" id="num2" /> <br />
+            <input type="text" id="num3" /> <br />
+            <input type="text" id="num4" /> <br />
+            <input type="text" id="num5" /> <br />
+            <h3>Section B</h3>
+            <input type="text" id="num6" /> <br />
+            <input type="text" id="num7" /> <br />
+            <input type="text" id="num8" /> <br />
+            <input type="text" id="num9" /> <br />
+            <input type="text" id="num10" /> <br />
+            <button onclick="app()" class="btn">Get</button>
+            <p id="root"></p>
+        </div>
+        <script>
+            function app() {
+                var arr1 = [],
+                    arr2 = [],
+                    c = [];
+                for (i = 0; i < 5; i++) {
+                    arr1[i] = parseInt(document.getElementById(`num${i + 1}`).value);
+                    arr2[i] = parseInt(document.getElementById(`num${i + 6}`).value);
+                }
+                document.getElementById("root").innerHTML += `<h3>Arrays Before Sorting</h3> <br> Arr1:${arr1} <br> Arr2:${arr2} <br>`;
+                for (i = 0; i < 5; i++) {
+                    for (j = i; j < 5; j++) {
+                        let temp = 0;
+                        if (arr1[i] > arr1[j]) {
+                            temp = arr1[i];
+                            arr1[i] = arr1[j];
+                            arr1[j] = temp;
+                        }
+                        if (arr2[i] > arr2[j]) {
+                            temp = arr2[i];
+                            arr2[i] = arr2[j];
+                            arr2[j] = temp;
+                        }
+                    }
+                }
+                document.getElementById("root").innerHTML += `<h3>Arrays AfterSorting</h3> <br> Arr1:${arr1} <br> Arr2:${arr2} <br>`;
+                var i = 0,
+                    j = 0,
+                    k = 0;
+                debugger;
+                while (k < 10) {
+                    if (arr1[i] <= arr2[j]) {
+                        c[k] = arr1[i];
+                        k++;
+                        i++;
+                    } else {
+                        c[k] = arr2[j];
+                        k++;
+                        j++;
+                    }
+                }
+                document.getElementById("root").innerHTML += "<h3>After Merge Sort<?h3> <br>";
+                document.getElementById("root").innerHTML += c;
+            }
+        </script>
+    </body>
+</html>

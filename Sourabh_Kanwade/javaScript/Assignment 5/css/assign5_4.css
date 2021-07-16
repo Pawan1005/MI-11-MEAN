@@ -1,0 +1,28 @@
+button {
+    margin: 20px 0;
+}
+body {
+    background-image: linear-gradient(to right, rgb(206, 206, 206), rgb(189, 189, 189));
+}
+h1 {
+    color: rebeccapurple;
+    font-size: 36px;
+}
+.container {
+    background-color: rgba(53, 70, 163, 0.5);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    color: rgb(247, 247, 247);
+    font-weight: bold;
+    font-size: 24px;
+}
+#number {
+    font-size: 24px;
+    text-align: center;
+    outline: none;
+    border-radius: 50px;
+    border: none;
+    border: 2px solid rebeccapurple 30%;
+    box-shadow: 0 5px 20px 0 rebeccapurple;
+}

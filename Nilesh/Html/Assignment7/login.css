@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: rgb(231, 172, 83);
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+div.header1 {
+    height: 85px;
+    margin: 0px;
+    background-color: rgb(50, 250, 133);
+    display: flex;
+}
+h1 {
+    margin-top: 22px;
+    margin-left: 38px;
+}
+div.link-margin {
+    margin-left: 570px;
+    margin-top: 32px;
+}
+a {
+    margin-right: 20px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #000000;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: bold;
+}
+form {
+    padding: 10px;
+}
+.form-name {
+    position: relative;
+    width: 270px;
+    background-color: rgb(0, 0, 0, 0.7);
+    margin: auto;
+    padding: 10px 0px 10px 0px;
+    border-radius: 15px 15px 0px 0px;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 110px;
+}
+.login-box {
+    width: 270px;
+    height: 200px;
+    background-color: rgb(0, 0, 0, 0.5);
+    margin: auto;
+    border-radius: 0px 0px 15px 15px;
+}
+#name {
+    width: 100%;
+    height: 100px;
+}
+label {
+    position: relative;
+    color: #ffffff;
+    font-weight: bold;
+    left: 8px;
+}
+.first-label {
+    top: 37px;
+}
+.second-label {
+    top: 57px;
+}
+#input-id {
+    position: relative;
+    line-height: 23px;
+    width: 140px;
+    border-radius: 6px;
+}
+.input-email {
+    left: 43px;
+    top: 35px;
+}
+.input-password {
+    left: 10px;
+    top: 55px;
+}
+.btn {
+    position: relative;
+    padding: 5px;
+    background-color: #ff0000;
+    color: #ffffff;
+    border-radius: 6px;
+    font-weight: bold;
+    margin-left: 100px;
+    margin-top: 83px;
+}

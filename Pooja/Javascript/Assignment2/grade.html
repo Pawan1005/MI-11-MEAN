@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="Description" content="Enter your description here"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <title>Percentage & Grades</title>
+        <style>
+            .container{
+            margin-left:675px;
+            margin-top: 20px;
+            background-color: cadetblue;
+            display: block;
+            width: 400px;
+            height: 800px;
+            padding: 25px;
+            border-radius: 5px;
+            box-shadow: 1px 1px 4px rgb(1, 24, 6);
+            }
+            #pid{
+            font-size: 20px;
+            }
+        </style>
+        <script language="javascript">
+            function show() {
+                   first=parseInt(document.getElementById("input1").value);
+                   second=parseInt(document.getElementById("input2").value);
+                   third=parseInt(document.getElementById("input3").value);
+                   forth=parseInt(document.getElementById("input4").value);
+                   fifth=parseInt(document.getElementById("input5").value);
+                   var total = first + second + third + forth + fifth;
+                   var per  = total/5;
+                   var grade;
+                   if(per<30) {
+                   grade = 'F';
+                   } 
+                   else if(per>=31 && per<=40){
+                   grade = 'D';
+                   }
+                   else if(per>=41 && per<=59){
+                   grade = 'C';
+                   }
+                   else if(per>=60 && per<=74){
+                   grade = 'B';
+                   }
+                   else if(per>=75 && per<=100){
+                   grade = 'A';
+                   }
+                   else{
+                   grade = "Invalid or Failed";
+                   }
+                   document.getElementById("pid").innerHTML = "Your Total Marks : "+total +"<br>Your Percentage : "+per +"<br>Your Grade : "+grade;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container text-white border-primary">
+            <h1 style="text-align: center"class="mt-3">Percentage & Grades</h1>
+            <form>
+                <div class="row">
+                    <div class="col">
+                        First Number<input type="text" class="form-control" placeholder="First number" id="input1"><br>
+                        Second Number<input type="text" class="form-control" placeholder="Second number" id="input2"><br>
+                        Third Number<input type="text" class="form-control" placeholder="Third number" id="input3"><br>
+                        Forth Number<input type="text" class="form-control" placeholder="Forth number"id="input4"><br>
+                        Fifth Number<input type="text" class="form-control" placeholder="Fifth number"id="input5"><br>
+                        <button onclick="show()" type="button" class="btn btn-dark align-content-lg-center">Result</button>
+                    </div>
+                </div>
+            </form>
+            <p id="pid"></p>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Assignment 1</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            .container {
+                background-color: rgb(220, 203, 203);
+                width: 350px;
+                height: 480px;
+                text-align: center;
+                margin-left: 480px;
+                box-shadow: 7px 7px 15px;
+                border-radius: 15px;
+            }
+            .btn {
+                padding: 15px;
+                background-color: red;
+                outline-color: white;
+                outline-width: 15px;
+                color: white;
+            }
+            .label {
+                border-radius: 15px;
+                box-sizing: 30px;
+            }
+        </style>
+        <script>
+            function myFunction() {
+                var text;
+                var Vowel = document.getElementById("myInput").value;
+                switch (Vowel) {
+                    case "a":
+                        text = "Vowel";
+                        break;
+                    case "e":
+                        text = "Vowel";
+                        break;
+                    case "i":
+                        text = "Vowel";
+                        break;
+                    case "o":
+                        text = "Vowel";
+                        break;
+                    case "u":
+                        text = "Vowel";
+                        break;
+                    case "A":
+                        text = "Vowel";
+                        break;
+                    case "E":
+                        text = "Vowel";
+                        break;
+                    case "I":
+                        text = "Vowel";
+                        break;
+                    case "O":
+                        text = "Vowel";
+                        break;
+                    case "U":
+                        text = "Vowel";
+                        break;
+                    default:
+                        text = "Enter the Vowel";
+                }
+                document.getElementById("demo").innerHTML = text;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Finding Vowel</h1>
+            Enter a Character <input id="myInput" type="text" />
+            <button onclick="myFunction()" class="btn">Find</button>
+            <p id="demo"></p>
+        </div>
+    </body>
+</html>

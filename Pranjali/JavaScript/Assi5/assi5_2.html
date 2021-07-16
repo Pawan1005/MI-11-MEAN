@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fibonacci Series</title>
+        <style>
+            body {
+                height: 1500px;
+                background-image: linear-gradient(to bottom right, purple, red);
+            }
+        </style>
+    </head>
+    <body>
+        <script language="javascript">
+            function fun() {
+                var n;
+                n = parseInt(document.getElementById("first").value);
+                let n1 = 0,
+                    n2 = 1,
+                    nextTerm;
+                for (let i = 1; i <= n; i++) {
+                    document.getElementById("num").innerHTML += n1 + " ";
+                    nextTerm = n1 + n2;
+                    n1 = n2;
+                    n2 = nextTerm;
+                }
+            }
+        </script>
+        <div style="width: 50%; position: absolute; left: 430px; top: 200px">
+            <div style="text-align: center; background-color: rgba(243, 243, 8, 0.842); height: 50%; border-radius: 25px 25px 25px 25px">
+                <br /><br />
+                <h1>Fibonacci Series</h1>
+                <hr size="5" color="black" />
+                <br /><br />
+                <h4>Enter Number : <input type="text" name="a" id="first" placeholder="Enter a number" /></h4>
+                <button style="position: absolute; left: 45%" onclick="fun ()">Submit</button>
+                <p><br /><br /></p>
+                <div id="num" style="color: blue; position: absolute; left: 45%"></div>
+                <br /><br />
+            </div>
+        </div>
+    </body>
+</html>

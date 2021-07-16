@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Uppercase</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+                transition: 0.3s;
+                width: 40%;
+                height: 300px;
+                border-radius: 20px;
+                background-color: rosybrown;
+                margin: auto;
+                margin-top: 50px;
+            }
+            button {
+                position: relative;
+                background-color: white;
+                border: none;
+                font-size: 20px;
+                color: rosybrown;
+                padding: 10px;
+                width: 180px;
+                text-align: center;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+                text-decoration: none;
+                overflow: hidden;
+                cursor: pointer;
+                margin-left: 130px;
+            }
+            #pid{
+                color: white;
+                text-align: center;
+                font-size: large;
+            }
+        </style>
+         <script>
+            function upper() {
+                var a, b;
+                a = document.getElementById("char").value;
+                if (a.charAt(0) == a.charAt(0).toUpperCase()) {
+                    b = a.toLowerCase();
+                    document.getElementById("pid").innerHTML = " Converting in lower case = " + b;
+                } else {
+                    b = a.toUpperCase();
+                    document.getElementById("pid").innerHTML = "Converting in upper case = " + b;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <h3 style="text-align: center;">Conversion</h3>
+                &nbsp;&nbsp; Enter the character: <input type="text" name="" id="char" placeholder="Enter the character" /> <br />
+                <br />
+                <br>
+                <button onclick="upper()">Convert</button>
+                <p id="pid"></p>
+            </div>
+        </div>
+    </body>
+</html>

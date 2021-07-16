@@ -1,0 +1,21 @@
+body {
+    background-color: rosybrown;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30%;
+    background-color: azure;
+    border-radius: 20px;
+    box-shadow: 10px 10px grey;
+}
+ul {
+    list-style: none;
+}

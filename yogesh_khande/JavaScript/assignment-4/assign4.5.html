@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Upper-Lower case</title>
+        <script>
+            function demo() {
+                var a = document.getElementById("char").value;
+                document.getElementById("a").innerHTML = a;
+                var b = a;
+                if (a == b.toUpperCase()) {
+                    var q = a.toLowerCase();
+                    document.getElementById("pid").innerHTML = q;
+                } else if (a == b.toLowerCase()) {
+                    var q = a.toUpperCase();
+                    document.getElementById("pid").innerHTML = q;
+                } else window.alert("wrong");
+            }
+        </script>
+    </head>
+    <body style="text-align: center; background-color: rgb(230, 71, 14); margin-top: 100px">
+        <h1><hr>*Switch alphabets:-Uppercase to Lowercase or LowerCase to Uppercase*<hr></h1>
+        <input type="text" id="char" placeholder="Enter Alphabets" />
+        <br><br>
+        <button onclick="demo()">GET</button>
+        <p id="a"></p>
+        <p id="pid"></p>
+    </body>
+</html>

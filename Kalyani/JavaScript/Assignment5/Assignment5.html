@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment5</title>
+        <script>
+            function midel() {
+                var n, last, first, middle, sum, m;
+                n = document.getElementById("digts").value;
+                last = n % 10;
+                m = parseInt(n / 10);
+                middle = m % 10;
+                first = parseInt(n / 100);
+                sum = first + last;
+                if (sum == middle) {
+                    document.getElementById("p").innerHTML = "The Sum is Matching";
+                } else {
+                    document.getElementById("p").innerHTML = "The Sum is Not Matching";
+                }
+            }
+        </script>
+        <style>
+            .container {
+                width: 45%;
+                height: 300px;
+                border: 1px solid black;
+                background-color: blueviolet;
+            }
+            #digts {
+                margin-top: 10px;
+                margin-left: 200px;
+                width: 50%;
+                height: 5vh;
+                border-radius: 20px;
+                border: 1px solid black;
+            }
+            button {
+                width: 35%;
+                height: 5vh;
+                border: 1px solid black;
+                border-radius: 25px;
+                background-color: black;
+                color: white;
+                font-size: 20px;
+                margin-left: 250px;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <input type="text" placeholder="Enter a Number" id="digts" />
+        <button onclick="midel()" class="btn">Show result</button>
+        <p id="p"></p>
+    </body>
+</html>

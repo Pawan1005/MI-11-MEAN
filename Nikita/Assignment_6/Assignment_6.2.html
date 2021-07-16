@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment6</title>
+        <link rel="stylesheet" href="Ass6.2.css" />
+    </head>
+    <body>
+        <div class="header1">
+            <h2>MI-11 Intern HTML Assesment</h2>
+        </div>
+        <hr />
+        <div class="header2">
+            <h3>Personal Details</h3>
+        </div>
+        <form class="form1">
+            <label><b>First Name:</b>&ensp;&nbsp;</label>
+            <input
+                type="text"
+                name="name"
+                placeholder="First name"
+            /><br /><br />
+            <label><b>Last Name:</b>&ensp;&nbsp;</label>
+            <input
+                type="text"
+                name="name"
+                placeholder="Last name"
+            /><br /><br />
+            <label><b>Gender:</b>&emsp;&emsp;</label>
+            <input type="radio" name="g" value="male" />Male
+            <input type="radio" name="g" value="Female" />Female
+            <input type="radio" name="g" value="other" />Other <br /><br />
+            <label><b>Age:</b>&emsp;&emsp;&emsp;&nbsp&nbsp;</label>
+            <input type="radio" name="g" value="male" />less than 18
+            <input type="radio" name="g" value="Female" checked />18-15
+            <input type="radio" name="g" value="other" />26-40 <br />
+        </form>
+        <div class="header3">
+            <h3>Professional Details</h3>
+        </div>
+        <form class="form2">
+            <fieldset>
+                <legend>Academic details</legend>
+                <label class="label-checkbox1"><b>Skill Set:</b></label>
+                <input type="checkbox" name="g" value="html" />HTML
+                <input type="checkbox" name="g" value="java_script" />Java
+                Script <input type="checkbox" name="g" value="java" />Java
+                <input type="checkbox" name="g" value="oracle" />Oracle
+                <div class="qualification">
+                    <label><b>Highest Qualificatin:</b></label>
+                    <select class="section1">
+                        <option>Diploma in Computer Science</option>
+                        <option>Science Graduate</option>
+                        <option>Bachelor in Engg.</option>
+                        <option>Masters in Computer Science</option>
+                        <option>Masters in Engg.</option>
+                        <option>Other</option>
+                    </select>
+                </div>
+                <div class="university">
+                    <label class="label-university"><b>University:</b></label>
+                    <input list="university" />
+                    <datalist id="university">
+                        <option value="Mumbai University"></option>
+                        <option value="Pune University"></option>
+                        <option value="Chennai University"></option>
+                        <option value="Nagpur University"></option>
+                        <option value="Badoda University"></option>
+                    </datalist>
+                </div>
+                <div class="multipleoption1">
+                    <label class="label-multiple"
+                        ><b>Areas of Expertise:</b></label
+                    >
+                    <select multiple>
+                        <option>Software</option>
+                        <option>Training</option>
+                        <option>Networking</option>
+                        <option>Managrment</option>
+                        <option>Maeketing</option>
+                    </select>
+                    <simpletext>You can select multiple fields.</simpletext>
+                </div>
+            </fieldset>
+            <br />
+            <fieldset>
+                <legend>Resume</legend>
+                <label class="label-upload"><b>Upload Resume:</b></label>
+                <input type="file" name="filename" /><br />
+                <div class="comment1">
+                    <label class="label-comment"><b>Comments:</b></label>
+                    <textarea cols="30" rows="10"></textarea>
+                </div>
+            </fieldset>
+            <div class="btn1">
+                <input type="button" value="Submit" />
+            </div>
+        </form>
+    </body>
+</html>

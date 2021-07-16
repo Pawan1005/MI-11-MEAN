@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Personal & Academic Details</title>
+        <style>
+            body {
+                background-image: url(bird.jpg);
+                margin: 30;
+                background-size: cover;
+                text-align: center;
+            }
+            .box {
+                width: 1500px;
+                padding: 50px;
+                float: center;
+                font-size: 30px;
+                font-style: normal;
+            }
+            .h1 {
+                float: center;
+                font-size: 50px;
+                background-color: rgb(236, 231, 229);
+                border-radius: 30px;
+            }
+            .box input {
+                size: 40%;
+            }
+            .logo img {
+                float: left;
+                width: 60px;
+                height: auto;
+                background-color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="logo">
+            <img src="logo.png"/>
+        </div>
+        <h1 class="h1">*Personal Details</h1>
+        <br/><br/>
+        <div class="box">
+            <h3>Full Name :</h3>
+            <form action="personel.html" method="POST"></form>
+            <input type="text" name="" placeholder="First Name" id="username"/>
+            <br/><br/>
+            <input type="text" name="" placeholder="Middle Name" id="username"/>
+            <br/><br/>
+            <input type="text" name="" placeholder="Last Name" id="username"/>
+            <br/><br/>
+            <h3>Gender :</h3>
+            <input type="radio" name="Gender :" id="gender" />Male <input type="radio" name="Gender :" id="gender"/>Female
+            <h3>Age :</h3>
+            <input type="radio" name="Age" id="Age" />20-29 <input type="radio" name="Age" id="Age"/>30-40
+            <h3>Mobile No :</h3>
+            <select name="Phone No." id="Mobile number">
+                <option value="">91</option>
+                <option value="">92</option>
+            </select>
+            <input type="text" name="Phone No." placeholder="Mobile number" id="Mobile number"/>
+            <h3>Email :</h3>
+            <input type="text" name="Email" placeholder="@Emails" id="emails"/>
+            <br/><br/>
+        </div>
+        <h1 class="h1">*Academic Details</h1>
+        <div class="box">
+            <h3>Skill set :</h3>
+            <input type="checkbox" name="skill set"/>Java <input type="checkbox" name="skill set"/>Oracle <input type="checkbox" name="skill set"/>Figma
+            <input type="checkbox" name="skill set"/>GitHub
+        </div>
+        <br/>
+        <hr size="3px"/>
+        <br/><button>Submit</button><br/>
+    </body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Count words</title>
+        <style>
+            body {
+                height: 1500px;
+                background-image: linear-gradient(to bottom right, purple, red);
+            }
+        </style>
+    </head>
+    <body>
+        <script language="javascript">
+            function count_words() {
+                str1 = document.getElementById("InputText").value;
+                //exclude  start and end white-space
+                str1 = str1.replace(/(^\s*)|(\s*$)/gi, "");
+                //convert 2 or more spaces to 1
+                str1 = str1.replace(/[ ]{2,}/gi, " ");
+                // exclude newline with a start spacing
+                str1 = str1.replace(/\n /, "\n");
+                document.getElementById("noofwords").value = str1.split(" ").length;
+                var spaceCount = str1.split(" ").length - 1;
+                document.getElementById("noofspace").value += spaceCount;
+            }
+        </script>
+        <div style="width: 50%; position: absolute; left: 430px; top: 200px">
+            <div style="text-align: center; background-color: rgba(243, 243, 8, 0.842); height: 50%; border-radius: 25px 25px 25px 25px">
+                <br /><br />
+                <h2>Count the number of words and white-spaces!!</h2>
+                <hr size="5" color="black" />
+                <br /><br />
+                <textarea id="InputText" cols="30" rows="4">Today is Holiday.</textarea>
+                <br />
+                <br />
+                <input type="button" name="Convert" value=" Submit " onClick="count_words ();" />
+                <br /><br />
+                Number of words : <input id="noofwords" type="text" value="" size="6" /> <br /><br />
+                No of white-space : <input id="noofspace" type="text" value="" size="6" /><br /><br />
+            </div>
+        </div>
+    </body>
+</html>

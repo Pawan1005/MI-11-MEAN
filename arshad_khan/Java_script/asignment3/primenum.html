@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FIND PRIME NUMBER</title>
+        <style>
+            .ft {
+                width: 500px;
+                height: 500px;
+                background-color: lightyellow;
+            }
+        </style>
+    </head>
+    <body style="background-color:lightgrey">
+        <center>
+            <div class="logincentrecard">
+                <div class="card">
+                    <div class="container">
+                        <fieldset class="ft">
+                            <h1>PRIME NUMBER</h1>
+                            <label for="Num1">Enter Number:</label>
+                            <input type="text" id="prime"
+                                placeholder="Enter Number">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
+                            <button onclick="show()" style="background-color: red;color: white;">Find Prime Number</button>
+                            <p id="pid"></p>
+                    </div>
+                    <script>
+                        function show() {
+                            var a = parseInt(document.getElementById("prime").value);
+                            var b = 0;
+                            for (i = 2; i < a; i++)
+                                if (a % i == 0) {
+                                    b = 1;
+                                }
+                            if (b == 0) {
+                                document.getElementById("pid").innerHTML = "This is prime no";
+                            } else {
+                                document.getElementById("pid").innerHTML = "This is not prime no";
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </center>
+    </body>
+</html>

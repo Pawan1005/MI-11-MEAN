@@ -1,0 +1,19 @@
+body {
+    background-image: url("Images/3.jpg");
+    background-size: cover;
+    opacity: 0.9;
+}
+.form1 {
+    height: 400px;
+    width: 100%;
+    border: 1px solid grey;
+    padding: 20px;
+    background-color: blanchedalmond;
+}
+.form2 {
+    height: 600px;
+    width: 100%;
+    border: 1px solid red;
+    padding: 20px;
+    background-color: antiquewhite;
+}

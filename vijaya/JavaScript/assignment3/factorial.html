@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Factorial Demo</title>
+        <style>
+        .name {
+            position: relative;
+            width: 500px;
+            background-color: rgba(217, 241, 106, 0.918);
+            padding: 10px 0px 10px 0px;
+            border-radius: 15px 15px 0px 0px;
+            color: rgb(92, 17, 212);
+            text-align: center;
+            margin-top: 80px;
+            margin-left: 400px;
+        }
+        </style>
+        <script>
+        function show() {
+            var i, no, fact;
+            fact = 1;
+            no = Number(document.getElementById("number").value);
+            for (i = 1; i <= no; i++) {
+                fact = fact * i;
+            }
+            document.getElementById("answer").value = fact;
+        }
+        </script>
+    </head>
+        <body style="background-color: rgb(191, 102, 233);">
+            <div class="name">
+                <h2>Factorial of Number</h2>
+                <hr style="color: white;">
+                <br>
+                Enter the number: <input id="number"></br></br>
+                Factorial of given number is: <input id="answer"></br></br>
+                <button onclick="show()" style="padding: 6px; background-color: rgb(42, 192, 238);">Show</button></br></br>
+            </div>
+        </body>
+</html>

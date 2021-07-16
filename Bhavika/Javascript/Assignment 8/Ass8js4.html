@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Question4</title>
+    </head>
+    <body>
+        <div
+            class="main"
+            style="
+                height: 800px;
+                width: 500px;
+                margin-top: 50px;
+                margin-left: 400px;
+                border: 1px solid black;
+                background-color: grey;
+                padding-top: 20px;
+                padding-left: 10px;
+            "
+        >
+            <div>
+                <h3>Section A</h3>
+                Subject 1:&nbsp;<input type="text" class="sectionA" id="num" /> <br />
+                Subject 2:&nbsp;<input type="text" class="sectionA" id="num" /> <br />
+                Subject 3:&nbsp;<input type="text" class="sectionA" id="num" /> <br />
+                Subject 4:&nbsp;<input type="text" class="sectionA" id="num" /> <br />
+                Subject 5:&nbsp;<input type="text" class="sectionA" id="num" /> <br />
+            </div>
+            <div>
+                <h3>Section B</h3>
+                Subject 1:&nbsp;<input type="text" class="sectionB" id="num" /> <br />
+                Subject 2:&nbsp;<input type="text" class="sectionB" id="num" /> <br />
+                Subject 3:&nbsp;<input type="text" class="sectionB" id="num" /> <br />
+                Subject 4:&nbsp;<input type="text" class="sectionB" id="num" /><br />
+                Subject 5:&nbsp;<input type="text" class="sectionB" id="num" /> <br /><br />
+            </div>
+            <center><button onclick="mergeAndSort()">Calculate</button></center>
+            <br />
+            <hr color="cyan" />
+            <div id="result" style="background-color: white"></div>
+        </div>
+        <script>
+            let sectionA = document.getElementsByClassName("sectionA");
+            let sectionB = document.getElementsByClassName("sectionB");
+            let result = document.getElementById("result");
+            let a = [],
+                b = [],
+                res = [];
+            function mergeAndSort() {
+                a = [];
+                b = [];
+                for (let i = 0; i < 5; i++) {
+                    a.push(parseInt(sectionA[i].value));
+                    b.push(parseInt(sectionB[i].value));
+                }
+                res = [...a];
+                for (let i = 0; i < b.length; i++) {
+                    res.push(b[i]);
+                }
+                mergeSort(res, 0, 9);
+                result.innerHTML += "<h3>After Merge</h3>";
+                for (let i = 0; i < res.length; i++) {
+                    result.innerHTML += `<div>${i + 1} : ${res[i]}</div>`;
+                }
+            }
+
+            function merge(array, start, mid, end) {
+                let temp = [],
+                    k = 0,
+                    i = start,
+                    j = mid + 1;
+                while (i <= mid && j <= end) {
+                    if (array[i] >= array[j]) {
+                        temp[k] = array[j];
+                        j++;
+                        k++;
+                    } else {
+                        temp[k] = array[i];
+                        i++;
+                        k++;
+                    }
+                }
+                while (i <= mid) {
+                    temp[k] = array[i];
+                    i++;
+                    k++;
+                }
+                while (j <= end) {
+                    temp[k] = array[j];
+                    j++;
+                    k++;
+                }
+                for (let index = start; index <= end; index++) {
+                    array[index] = temp[index - start];
+                }
+            }
+            function mergeSort(array, start, end) {
+                if (start < end) {
+                    let mid = parseInt((start + end) / 2);
+                    mergeSort(array, start, mid);
+                    mergeSort(array, mid + 1, end);
+                    merge(array, start, mid, end);
+                }
+            }
+        </script>
+    </body>
+</html>

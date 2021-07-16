@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Floyd's Triangle</title>
+        <script>
+            function show() {
+                var a, i, j, z;
+                a = parseInt(document.getElementById("num1").value);
+                z = 1;
+                for (i = 1; i <= a; i++) {
+                    for (j = 1; j <= i; j++) {
+                        document.write(z + " , ");
+                        z++;
+                    }
+                    document.write("<br>");
+                }
+            }
+        </script>
+    </head>
+    <body style="background-color: aqua; text-align: center; padding: 20px">
+        <h1>
+            <hr />
+            *Floyd's Triangle*
+            <hr />
+        </h1>
+        <input type="text" id="num1" placeholder="Enter number" />
+        <br /><br />
+        <button onclick="show()">GET</button>
+    </body>
+</html>

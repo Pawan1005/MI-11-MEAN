@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Factorial</title>
+        <script>
+            function show() {
+                var i, no, fact;
+                fact = 1;
+                no = Number(document.getElementById("num").value);
+                for (i = 1; i <= no; i++) {
+                    fact = fact * i;
+                }
+                document.getElementById("factorial").value = fact;
+            }
+        </script>
+        <style>
+            body {
+                height: 200px;
+                background-image: linear-gradient(to right, rgb(39, 24, 9), rgba(56, 21, 95, 0.63), rgb(39, 24, 9));
+            }
+            button {
+                position: absolute;
+                left: 42%;
+            }
+        </style>
+    </head>
+    <body>
+        <div style="width: 50%; position: absolute; left: 500px; top: 200px">
+            <div style="text-align: center; background-color: rgb(132, 245, 207); border-radius: 25px 25px 25px 25px">
+                <br /><br />
+                <h1>Calculate Factorial</h1>
+                <br /><br />
+                Enter Num: <input id="num" />
+                <br />
+                <br />
+                <button onclick="show()">Factorial</button>
+                <br /><br />
+                Factorial: <input id="factorial" />
+                <br />
+                <br />
+            </div>
+        </div>
+    </body>
+</html>

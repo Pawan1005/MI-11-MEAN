@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Second Largest Number</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+        <script>
+            function fun() {
+                first = parseInt(document.getElementById("input1").value);
+                second = parseInt(document.getElementById("input2").value);
+                third = parseInt(document.getElementById("input3").value);
+                fourth = parseInt(document.getElementById("input4").value);
+                fifth = parseInt(document.getElementById("input5").value);
+                function nextBiggest(arr) {
+                    var max = -Infinity,
+                        result = -Infinity;
+
+                    for (const value of arr) {
+                        const nr = Number(value);
+
+                        if (nr > max) {
+                            [result, max] = [max, nr];
+                        } else if (nr < max && nr > result) {
+                            result = nr;
+                        }
+                    }
+                    document.getElementById("h").innerHTML = result;
+                }
+                const arr = [first, second, third, fourth, fifth];
+                console.log(nextBiggest(arr));
+            }
+        </script>
+        <style>
+            .box {
+                height: 550px;
+                width: 600px;
+                border: 1px solid black;
+                background-image: url("Images/Minimalist-Crumpled-Paper-Simple-Background-Image.jpg");
+                margin-top: 150px;
+            }
+            button {
+                margin-top: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 box">
+                    <h1 class="ml-5">Second Element</h1>
+                    First Element<input type="text" class="form-control" id="input1" placeholder="Enter your First Element" /> 
+                    Second Element<input type="text" class="form-control" id="input2" placeholder="Enter your Second Element"/>
+                    Third Element<input type="text" class="form-control" id="input3" placeholder="Enter your Third Element" />
+                    Fourth Element<input type="text" class="form-control" id="input4" placeholder="Enter your Fourth Element "/>
+                    Fifth Element<input type="text" class="form-control" id="input5" placeholder="Enter your Fifth Element" />
+                    <button onclick="fun()" class="btn-success form-control">Result</button>
+                    <h1>
+                        Second Largest Number is
+                        <p id="h" style="float: right"></p>
+                    </h1>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </body>
+</html>

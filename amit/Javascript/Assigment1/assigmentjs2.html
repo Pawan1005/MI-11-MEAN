@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Assignment 1</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            .container {
+                background-color: cadetblue;
+                width: 560px;
+                height: 290px;
+                text-align: center;
+                border-radius: 15px;
+                margin-left: 350px;
+            }
+        </style>
+    </head>
+    <script language="javascript">
+        function calculat() {
+            "use strict";
+            var c, f;
+            c = document.getElementById("num1").value;
+            {
+                f = (c * 9) / 5 + 32;
+            }
+            document.getElementById("pid").innerHTML += " " + f;
+        }
+    </script>
+    <body>
+        <div class="container">
+            <br /><br /><br />
+            <h1><b>Convertion of Celcius to Fahrenhet</b></h1>
+            Number : <input type="text" id="num1" /><br />
+            <button onclick="calculat()">Convert</button>
+            <p id="pid"></p>
+        </div>
+    </body>
+</html>

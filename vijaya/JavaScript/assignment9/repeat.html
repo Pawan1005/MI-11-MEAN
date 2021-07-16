@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JavaScript program to check given string is palindrome or not</title>
+        <style>
+        .name {
+            position: relative;
+            width: 550px;
+            background-color: rgb(248, 201, 131);
+            padding: 10px 0px 10px 0px;
+            border-radius: 15px 15px 0px 0px;
+            color: rgba(10, 83, 71, 0.918);
+            text-align: center;
+            margin-top: 80px;
+            margin-left: 370px;
+        }
+        .resultText {
+            font-size : 18px;
+            font-style : normal;
+            color : rgb(14, 35, 223);
+        }
+        </style>
+    </head>
+    <body>
+        <div class="name">
+            <h2>Finding double letters of String</h2>
+            <div>
+                <label for="">Enter the word</label>
+                <input type="text" id="first">
+            </div>  
+            <div class="resultText">
+                <p>Repeated letter &nbsp; : &nbsp;<span id="num1"></span></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="findRepeat()" style="background-color: rgb(35, 12, 165); height: 30px; color: white">Find</button>
+            </div>
+        </div>
+        <script>
+            function findRepeat() {  
+                var str = [];
+                var i,j,char1, char2, len, count=0;
+                str = document.getElementById("first").value;
+                len = str.length;
+                for(i=0; i<=len-2; i++) {
+                    for(j=i+1;j < str.length-1; j++)
+                    char1 = str.charAt(i);
+                    char2 = str.charAt(i+1);
+                    if(char1 == char2) {
+                        count=count+1;
+                        document.getElementById("num1").innerHTML += "&nbsp;" +char1+ "&ensp;";
+                    } 
+                }
+                if(count == 0) {
+                    document.getElementById("num1").innerHTML += "&nbsp; No double letter &ensp;";
+                }                                    
+            }
+        </script>
+    </body>
+</html>

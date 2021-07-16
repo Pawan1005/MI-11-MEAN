@@ -1,0 +1,17 @@
+body {
+    background-color: rgba(146, 116, 70, 0.568);
+}
+#main {
+    text-align: center;
+}
+.img-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.image {
+    width: 400px;
+    height: 400px;
+    padding: 10px;
+}

@@ -1,0 +1,33 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+h1 {
+    text-align: center;
+}
+ header {
+    height: 50px;
+    width: auto;
+    background-color: rgba(31, 102, 98, 0.7);
+    display: flex;
+}
+header ul {
+    align-self: center;
+}
+header ul li {
+    list-style-type: none;
+    float: left;
+}
+header ul li a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+li a:hover {
+    background-color: teal;
+}
+div img {
+    height: 500px;
+    width: 100%;
+}

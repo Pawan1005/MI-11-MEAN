@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+            crossorigin="anonymous"
+        />
+        <title>Login</title>
+    </head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-light bg-light">
+            <div class="container-fluid">
+                <a href="./home.html" class="navbar-brand">Job Portal</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-targe="#navbar-nav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar-nav">
+                    <ul class="navbar-nav me-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="./home.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./personalDetails.html">Forms</a>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav">
+                        <li class="nav-item"><a href="./login.html" class="btn btn-outline-info nav-link px-3 active">Login</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="container d-flex align-items-center justify-content-center flex-column mt-5">
+            <h1 class="mb-3">Sign In</h1>
+            <form class="w-25 border rounded border-2 p-3">
+                <div class="form-floating mb-3">
+                    <input class="form-control" type="email" name="email" id="email" placeholder="someone@example.com" />
+                    <label for="email">Email address</label>
+                </div>
+                <div class="form-floating mb-3">
+                    <input class="form-control" type="password" name="pass" id="pass" placeholder="Password" />
+                    <label for="pass">Password</label>
+                </div>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="heck" />
+                    <label class="form-check-label" for="heck"> Remember Me </label>
+                </div>
+                <div class="d-grid gap-2">
+                    <button class="btn btn-primary btn">Login</button>
+                </div>
+            </form>
+        </div>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

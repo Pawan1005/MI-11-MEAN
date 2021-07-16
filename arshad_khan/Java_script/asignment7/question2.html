@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Question 2</title>
+        <style>
+            p {
+                display: inline-flex;
+            }
+        </style>
+        <script>
+            function q2() {
+                var student,
+                    marks = [],
+                    l = 1;
+                student = parseInt(document.getElementById("num").value);
+                for (let i = 0; i < student; i++) {
+                    marks[i] = prompt("Enter marks : ");
+                    document.getElementById("pid").innerHTML += "Marks " + l++ + "&ensp;:&emsp;<br><br>";
+                    document.getElementById("pid1").innerHTML += +marks[i] + "<br><br>";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container" style="border: 1px solid black; width: 600px; height: 400px; background-color: blueviolet; margin-left: 400px; margin-top: 50px">
+            <h1>Question 2</h1>
+            Enter The Student Marks :&nbsp;<input type="text" name="n" id="num" /> <br /><br />
+            <center><button onClick="q2()">CHECK</button></center>
+            <br />
+            <hr color="cyan" />
+            <div style="background-color: blanchedalmond; height: 200px">
+                <p id="pid"></p>
+                <p id="pid1"></p>
+            </div>
+        </div>
+    </body>
+</html>

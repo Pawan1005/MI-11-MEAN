@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Fact_sum</title>
+    </head>
+    <body>
+        <div
+            class="main containe"
+            style="
+                width: 400px;
+                height: 300px;
+                text-align: center;
+                border: 2px solid black;
+                position: absolute;
+                top: 100px;
+                left: 700px;
+                background-color: rgb(109, 218, 59);
+            "
+        >
+            <br />
+            <h2>Sum of Factorial</h2>
+            <br />
+            <hr />
+            <br />
+            <p id="pid" style="color: blue;"></p>
+            <script>
+                let arr = [],
+                    sum = 0;
+                let container = document.getElementById("pid");
+                while (true) {
+                    let temp = prompt("Enter a number ");
+                    if (temp == "X" || temp == "x" || temp == null) break;
+                    temp = parseInt(temp);
+                    arr.push(temp);
+                }
+                for (let i = 0; i < arr.length; i++) {
+                    sum += factorial(arr[i]);
+                }
+                function factorial(n) {
+                    if (n == 0) return 1;
+                    return n * factorial(n - 1);
+                }
+                container.innerHTML += `Sum of Factorials : ${sum}`;
+            </script>
+        </div>
+    </body>
+</html>

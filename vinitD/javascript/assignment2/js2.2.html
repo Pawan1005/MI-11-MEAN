@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>js2.2</title>
+        <script>
+            function add() {
+                a = parseInt(document.getElementById("num1").value);
+                b = parseInt(document.getElementById("num2").value);
+                c = parseInt(document.getElementById("num3").value);
+                d = parseInt(document.getElementById("num4").value);
+                e = parseInt(document.getElementById("num5").value);
+                if (a > 100 || b > 100 || c > 100 || d > 100 || e > 100) {
+                    alert("please enter marks in range of 100");
+                } else {
+                    sum = a + b + c + d + e;
+                    document.getElementById("p").innerHTML = "TOTAL=" + sum;
+                    div = sum / 5;
+                    document.getElementById("p1").innerHTML = "percentage=" + div + "%";
+                }
+            }
+            function grade() {
+                a = parseInt(document.getElementById("num1").value);
+                b = parseInt(document.getElementById("num2").value);
+                c = parseInt(document.getElementById("num3").value);
+                d = parseInt(document.getElementById("num4").value);
+                e = parseInt(document.getElementById("num5").value);
+
+                if (a > 100 || b > 100 || c > 100 || d > 100 || e > 100) {
+                    alert("please enter marks in range of 100");
+                } else {
+                    sum = a + b + c + d + e;
+                    div = sum / 5;
+                    if (div >= 80 && div<=100) {
+                        document.getElementById("grade").innerHTML = "your grade is A";
+                    }
+                    else if (div <= 79 && div >= 60) {
+                        document.getElementById("grade").innerHTML = "your grade is B";
+                    }
+                    else if(div <= 59 && div >= 40) {
+                        document.getElementById("grade").innerHTML = "your grade is C";
+                    }
+                    else if(div <= 49 && div >= 35) {
+                        document.getElementById("grade").innerHTML = "your grade is D";
+                    }
+                    else{
+                        document.getElementById("grade").innerHTML = "you are FAIL in Exam";
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" name="" id="num1" placeholder=" Enter marks" />
+        <input type="text" name="" id="num2" placeholder=" Enter marks" />
+        <input type="text" name="" id="num3" placeholder=" Enter marks" />
+        <input type="text" name="" id="num4" placeholder=" Enter marks" />
+        <input type="text" name="" id="num5" placeholder=" Enter marks" />
+        <button onclick="add()">CALCULATE</button>
+        <button onclick="grade()">GRADE</button>
+        <p id="p"></p>
+        <p id="p1"></p>
+        <p id="grade"></p>
+    </body>
+</html >

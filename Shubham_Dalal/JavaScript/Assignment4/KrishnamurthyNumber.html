@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="ams.css" />
+        <title>Krishnamurthy Number</title>
+        <script>
+            function fun() {
+                var num,temp,rem,sum = 0,factorial;
+                num = parseInt(document.getElementById("Krishnamurthy").value);
+                temp = num;
+                while (temp > 0) {
+                    factorial = 1;
+                    rem = temp % 10;
+                    temp = parseInt(temp / 10);
+                    for (var i = rem; i >= 1; i--) {
+                        factorial = factorial * i;
+                    }
+                    sum = sum + factorial;
+                }
+                if (sum == num) {
+                    document.getElementById("hid").innerHTML = "The number " + num + " you entered is Krishnamurthy Number";
+                } else {
+                    document.getElementById("hid").innerHTML = "The number " + num + " you entered is not an Krishnamurthy Number";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h2>!!! Krishnamurthy Number!!!</h2>
+            <h3>Enter Positive Number (^_^)</h3>
+            <input type="number" name="" id="Krishnamurthy" placeholder="enter number " />
+            <button onclick="fun()">Click here</button>
+            <h2 id="hid"></h2>
+        </div>
+    </body>
+</html>

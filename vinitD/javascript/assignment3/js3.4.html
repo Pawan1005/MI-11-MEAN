@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>js3.4</title>
+        <script>
+            function add() {
+                a = parseInt(document.getElementById("cl").value);
+                b = parseInt(document.getElementById("rw").value);
+                for (var i = 0; i < a; i++) {
+                    for (var k = 0; k < b; k++) {
+                        document.getElementById("pid").innerHTML += " * ";
+                    }
+                    document.getElementById("pid").innerHTML += "<br>";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="cl" />
+        <input type="text" id="rw" />
+        <button onclick="add()">do</button>
+        <p id="pid"></p>
+    </body>
+</html>

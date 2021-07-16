@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <title>Armstrong_number</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            body {
+                background-color: tomato;
+            }
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                transition: 0.3s;
+                width: 40%;
+                height: 300px;
+                border-radius: 20px;
+                background-color:white;
+                margin: auto;
+                margin-top: 50px;
+            }
+            button {
+                position: relative;
+                background-color: rgb(43, 204, 21);
+                border: none;
+                font-size: 20px;
+                color:black;
+                padding: 10px;
+                width: 180px;
+                text-align: center;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+                text-decoration: none;
+                overflow: hidden;
+                cursor: pointer;
+                margin-left: 130px;
+            }
+            #pid{
+                color:black;
+                text-align: center;
+                font-size: large;
+            }
+        </style>
+       <script>
+            function Armstrong() {
+                var a,
+                    b,
+                    temp,
+                    reminder,
+                    sum = 0;
+                a = parseInt(document.getElementById("num").value);
+                b = a.toString().length;
+                temp = a;
+                while (temp > 0) {
+                    reminder = temp % 10;
+                    sum += reminder ** b;
+                    temp = parseInt(temp / 10);
+                }
+                if (sum == a) {
+                    document.getElementById("pid").innerHTML = a + " is an Armstrong number";
+                } else {
+                    document.getElementById("pid").innerHTML = a + " is not an Armstrong number";
+                }
+            }
+        </script>
+    </head>
+    <body><br><br>
+        <div class="card">
+            <div class="container">
+                <h3 style="text-align: center;">Armstrong Number</h3>
+                <br><br>
+                &nbsp;&nbsp; Enter the number : <input type="text" name="" id="num" placeholder="Enter the number" /> <br />
+                <br><br><br>
+                <button onclick="Armstrong()">Check</button>
+                <p id="pid"></p>
+            </div>
+        </div>
+    </body>
+</html>
