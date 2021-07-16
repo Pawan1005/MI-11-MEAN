@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Colors_size_and_Font-family</title>
+        <style>
+            body {
+                background-color: #470c23;
+            }
+            .main-box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #fcf3c1;
+                width: 500px;
+                min-height: 520px;
+                padding: 10px 0 15px 0;
+                border-radius: 10px;
+                margin: auto;
+            }
+            h1 {
+                text-align: center;
+                color: white;
+            }
+            p {
+                width: 450px;
+                background: #ffffff;
+                padding: 12px 12px 12px 12px;
+                background-color: white;
+                border: 1px solid #0000004b;
+                border-radius: 5px;
+            }
+            .field {
+                display: flex;
+                flex-direction: column;
+                gap: 11px;
+            }
+            fieldset {
+                display: flex;
+                justify-content: center;
+                color: red;
+                font-weight: bold;
+                border-radius: 5px;
+                padding: 10px;
+            }
+            button {
+                background-color: #8e2292;
+                color: white;
+                padding: 5px 11px;
+                margin: 0 8px 10px 8px;
+                font-weight: bold;
+                font-size: 17px;
+                border: 1px solid gray;
+                border-radius: 4px;
+            }
+            .red {
+                background: #f5365c;
+            }
+            .green {
+                background: #2dce89;
+            }
+            .blue {
+                background: #5e72e4;
+            }
+            .small {
+                font-size: 13px;
+            }
+            .medium {
+                font-size: 19px;
+            }
+            .large {
+                font-size: 23px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Colors, Size and Font-family</h1>
+        <div class="main-box">
+            <p id="para">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aspernatur, facilis nemo hic, qui molestias animi veniam tenetur necessitatibus neque fugit. Sit reprehenderit, voluptates qui aut laudantium animi nihil praesentium eveniet, dolores delectus, ad temporibus corrupti neque cum vero incidunt?
+            </p>
+            <div class="field">
+                <fieldset>
+                    <legend>Colors</legend>
+                    <div class="box">
+                        <button onclick="red()" class="red">Red</button>
+                        <button onclick="green()" class="green">Green</button>
+                        <button onclick="blue()" class="blue">Blue</button>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Size</legend>
+                    <div class="box">
+                        <button onclick="size1()" class="small">Small</button>
+                        <button onclick="size2()" class="medium">Medium</button>
+                        <button onclick="size3()" class="large">Large</button>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Font</legend>
+                    <div class="box">
+                        <button onclick="monospace()">monospace</button>
+                        <button onclick="sans()">sans-serif</button>
+                        <button onclick="serif()">Serif</button>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <script>
+            function red() {
+                document.getElementById("para").style.color = "red";
+            }
+            function green() {
+                document.getElementById("para").style.color = "green";
+            }
+            function blue() {
+                document.getElementById("para").style.color = "blue";
+            }
+            function size1() {
+                document.getElementById("para").style.fontSize = "small";
+            }
+            function size2() {
+                document.getElementById("para").style.fontSize = "19px";
+            }
+            function size3() {
+                document.getElementById("para").style.fontSize = "27px";
+            }
+            function monospace() {
+                document.getElementById("para").style.fontFamily = "monospace";
+            }
+            function sans() {
+                document.getElementById("para").style.fontFamily = "sans-serif";
+            }
+            function serif() {
+                document.getElementById("para").style.fontFamily = "serif";
+            }
+        </script>
+    </body>
+</html>
