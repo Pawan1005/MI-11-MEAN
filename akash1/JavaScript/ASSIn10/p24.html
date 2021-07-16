@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+            crossorigin="anonymous"
+        />
+        <title>Ass10.2</title>
+        <style>
+            body {
+                height: 1700px;
+                padding: 50px;
+                background-image: linear-gradient(black, skyblue, black);
+                background-repeat: no-repeat;
+            }
+            .content {
+                padding: 30px;
+                border: 1px solid grey;
+                width: 500px;
+                border-radius: 20px;
+                background: linear-gradient(#e66465, #9198e5);
+                height: 80%;
+                position: absolute;
+                left: 30%;
+            }
+            p {
+                background-color: white;
+                position: relative;
+                width: 50%;
+                left: 142px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <h1 style="text-align: center">Check credit card number</h1>
+            <hr />
+            <label> Enter credit card number:</label><input type="text" class="form-control" placeholder="" id="input1" required /><br /><br />
+            <button onclick="show()" type="button" class="btn btn-primary align-content-lg-center">Show</button>
+            <div>
+                <p id="pid"></p>
+            </div>
+        </div>
+        <script>
+            function show() {
+                var chr = document.getElementById("input1").value;
+                var che = /^\d+$/;
+                var result = che.test(chr);
+                var l = chr.length;
+                if (result) {
+                    if (l > 15 && l < 20) {
+                        document.getElementById("pid").innerHTML = `"${chr}" is a credit card number`;
+                    } else {
+                        document.getElementById("pid").innerHTML = `"${chr}" is not a credit card number`;
+                    }
+                }
+            }
+        </script>
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
