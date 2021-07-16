@@ -1,0 +1,51 @@
+body {
+    background-color: rgb(4, 36, 36);
+    display: flex;
+    justify-content: center;
+}
+.same {
+    background-color: rgba(169, 169, 169, 0.42);
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    padding: 20px 0px;
+    margin: 50px;
+    border-radius: 20px;
+    color: white;
+    text-align: center;
+}
+#print {
+    padding: 40px;
+    font-size: 17px;
+    font-weight: bold;
+    width: 300px;
+}
+input {
+    align-self: center;
+    width: 250px;
+    padding: 5px;
+    margin: 5px 60px;
+}
+button {
+    align-self: center;
+    width: 150px;
+    background-color: rgb(10, 45, 28);
+    color: white;
+    padding: 10px;
+    margin-top: 10px;
+    border: 0ch;
+    border-radius: 5px;
+    box-shadow: 5px 5px 20px rgba(13, 94, 49, 0.667);
+}
+h3 {
+    color: white;
+}
+.second_div{
+    display: flex;
+    justify-content: center;
+    padding: 0px;
+}
+.sorting_div{
+    margin: 20px;
+}
