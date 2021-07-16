@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>ass16.1</title>
+        <script>
+            function aligncenter() {
+                document.getElementById("h1").style.textAlign = "center";
+            }
+            function alignleft() {
+                document.getElementById("h1").style.textAlign = "left";
+            }
+            function alignright() {
+                document.getElementById("h1").style.textAlign = "right";
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="h1">heading</h1>
+        <button id="btn" onclick="alignleft()">left</button>
+        <button id="btn1" onclick="aligncenter()">center</button>
+        <button id="btn2" onclick="alignright()">right</button>
+    </body>
+</html>
