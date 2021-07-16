@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Employee Details</title>
+        <style>
+            table {
+                border: 1px solid black;
+                margin-top: 20px;
+                background-color: blanchedalmond;
+                margin-left: 550px;
+            }
+            .display tr th td {
+                border: 1px solid black;
+            }
+            body {
+                background-color: rgba(0, 0, 0, 0.747);
+            }
+            h2 {
+                text-align: center;
+            }
+            #p4 {
+                border: 1px solid black;
+                width: 25%;
+                height: 25%;
+                margin-left: 450px;
+                background-color: rgb(243, 23, 23);
+                padding: 0 0 0 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Employee Details</h2>
+        <table>
+            <tr>
+                <th>Emp No</th>
+                <th>Name</th>
+                <th>Adress</th>
+                <th>City</th>
+                <th>Salary</th>
+            </tr>
+            <tr>
+                <td id="num"></td>
+                <td id="num1"></td>
+                <td id="num2"></td>
+                <td id="num3"></td>
+                <td id="num4"></td>
+            </tr>
+        </table>
+        <h2>Salary Details</h2>
+        <table>
+            <tr>
+                <th>Emp No</th>
+                <th>Name</th>
+                <th>Gros Salary</th>
+                <th>Net Salary</th>
+            </tr>
+            <tr>
+                <td id="p"></td>
+                <td id="p1"></td>
+                <td id="p2"></td>
+                <td id="p3"></td>
+            </tr>
+        </table>
+        <div>
+            <p id="p4"></p>
+        </div>
+        <script>
+            class Employee {
+                constructor(n) {
+                    this.empo = "";
+                    this.name = "";
+                    this.address = "";
+                    this.city = "";
+                    this.salry = "0";
+                }
+                show_int() {
+                    document.getElementById("num").innerHTML += this.empo + "<br><br>";
+                    document.getElementById("num1").innerHTML += this.name + "<br><br>";
+                    document.getElementById("num2").innerHTML += this.address + "<br><br>";
+                    document.getElementById("num3").innerHTML += this.city + "<br><br>";
+                    document.getElementById("num4").innerHTML += this.salry + "<br><br>";
+                }
+                get_data(name, address, city, salry) {
+                    this.name = name;
+                    this.address = address;
+                    this.city = city;
+                    this.salry = salry;
+                }
+                calculate() {
+                    let da, hra, pf, gross, net;
+                    let salry = parseInt(this.salry);
+                    da = 0.3 * salry;
+                    hra = 0.15 * salry;
+                    pf = 0.125 * salry;
+                    this.gross = salry + da + hra;
+                    this.net = this.gross - pf;
+                }
+                display() {
+                    document.getElementById("p").innerHTML += this.empo + "<br><br>";
+                    document.getElementById("p1").innerHTML += this.name + "<br><br>";
+                    document.getElementById("p2").innerHTML += this.gross + "K" + "<br><br>";
+                    document.getElementById("p3").innerHTML += this.net + "K" + "<br><br>";
+                    if (this.salry > 18000) {
+                        document.getElementById("p4").innerHTML = "You Are Income Tax Payer";
+                    } else {
+                        document.getElementById("p4").innerHTML = "You Are Not A Income Tax Payer";
+                    }
+                }
+            }
+            let myemployee = new Employee(1);
+            let myemployee1 = new Employee(2);
+            let empo = prompt("Enter Emp No");
+            let name = prompt("Enter Name");
+            let address = prompt("Enter Adress");
+            let city = prompt("Enter City");
+            let salry = parseInt(prompt("Enter Salary"));
+            myemployee.get_data(name, address, city, salry);
+            myemployee.show_int();
+            myemployee.calculate();
+            myemployee.display();
+            empo = prompt("Enter the Emp No");
+            name = prompt("Enter Name");
+            address = prompt("Enter Adress");
+            city = prompt("Enter City");
+            salry = parseInt(prompt("Enter Salary"));
+            myemployee1.get_data(name, address, city, salry);
+            myemployee1.show_int();
+            myemployee1.calculate();
+            myemployee1.display();
+        </script>
+    </body>
+</html>

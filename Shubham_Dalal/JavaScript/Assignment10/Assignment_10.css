@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(94, 20, 20);
+    display: flex;
+    justify-content: center;
+}
+div{
+    margin-top: 40px;
+    padding: 20px;
+    height:400px;
+    display: flex;
+    flex-direction: column;
+    width: 350px;
+    background-color: rgb(100, 148, 237);
+    border-radius: 20px;
+}
+span{
+    height: 100px;
+    width: 250px;
+    align-self: center;
+    background-color: #fff;
+    margin-top: 40px;
+    border-radius: 10px; 
+    text-align: center;
+}
+button,input{
+    padding: 5px;
+    margin-top: 30px;
+}
+button{
+    width: 100px;
+    background-color: darkblue;
+    color: white;
+    border: 0px;
+    align-self: center;
+}

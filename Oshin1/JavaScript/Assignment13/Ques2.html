@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assign13_Q2</title>
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                margin-top: 50px;
+                align-items: center;
+                justify-content: center;
+                background-color: aliceblue;
+                width: 400px;
+                height: 400px;
+                margin: auto;
+                border-radius: 20px;
+            }
+            p {
+                padding: 32px 40px 32px 40px;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <h1 style="text-align: center;">To show Week Day</h1>
+                <div>
+                    <p>Date is&ensp;:&emsp;<span id="num1"></span><br /><br />Week Day is&ensp;:&emsp;<span id="num2"></span></p>
+                </div>
+            </div>
+        </div>
+        <script>
+            function getWeekDay(d1) {
+                let days = ["SU", "MO", "TU", "WE", "TH", "FR", "SA"];
+                return days[d1.getDay()];
+            }
+            let d1 = new Date();
+            alert("Week Day is  :   " + getWeekDay(d1));
+            document.getElementById("num1").innerHTML = d1.toDateString();
+            document.getElementById("num2").innerHTML = getWeekDay(d1);
+        </script>
+    </body>
+</html>

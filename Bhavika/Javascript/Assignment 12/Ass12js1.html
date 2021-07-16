@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Display student details</title>
+        <style>
+            body {
+                background-color: black;
+            }
+            h1 {
+                text-align: center;
+                color: white;
+                margin-top: 5%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #ffffff;
+                width: 400px;
+                height: 400px;
+                margin: auto;
+                padding-top: 15px;
+                gap: 0px;
+                border-radius: 10px;
+            }
+            table {
+                width: 90%;
+                background-color: #ffffff;
+                border-collapse: collapse;
+            }
+            tr,
+            th,
+            td {
+                border: 1px solid black;
+                padding: 10px 5px;
+            }
+            table th {
+                background-color: black;
+                color: white;
+                font-size: 16px;
+            }
+            tr,
+            td {
+                font-size: 17px;
+                min-width: 100px;
+                text-align: center;
+            }
+            tr:nth-child(odd) {
+                background-color: #f7f7f7;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Display Student Detail</h1>
+        <div class="main">
+            <h2>Student Table</h2>
+            <table>
+                <tr>
+                    <th>Roll NO</th>
+                    <th>Name</th>
+                </tr>
+                <tr>
+                    <td id="num1"></td>
+                    <td id="num2"></td>
+                </tr>
+                <tr>
+                    <td id="num3"></td>
+                    <td id="num4"></td>
+                </tr>
+            </table>
+        </div>
+        <script>
+            class Student {
+                constructor() {
+                    this.RollNo = 1;
+                    this.Name = "Ram";
+                }
+            }
+            let s1 = new Student();
+            document.getElementById("num1").innerHTML += s1.RollNo;
+            document.getElementById("num2").innerHTML += s1.Name;
+            let s2 = new Student();
+            s2.RollNo = 2;
+            s2.Name = "Kittu";
+            document.getElementById("num3").innerHTML += s2.RollNo;
+            document.getElementById("num4").innerHTML += s2.Name;
+        </script>
+    </body>
+</html>

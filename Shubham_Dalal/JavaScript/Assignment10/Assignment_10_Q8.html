@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="Assignment_10.css" />
+        <title>Assignment 10 | alphaDash </title>
+        <script>
+            function clickme() {
+                function alphaDash(str) {
+                    regExp = /^[a-zA-Z0-9/\-\_]+$/;
+                    if (regExp.test(str)) {
+                        document.getElementById("span").innerHTML = "Alpha Dash Underscore";
+                    } else {
+                        document.getElementById("span").innerHTML = "not Alpha Dash Underscore";
+                    }
+                }
+                var regExp, str;
+                str = document.getElementById("number").value;
+                alphaDash(str);
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <input type="text" placeholder="Enter any word" id="number">
+            <button onclick="clickme()">Click Me</button>
+            <span >
+                <h4 id="span"></h4>
+            </span>
+        </div>
+    </body>
+</html>

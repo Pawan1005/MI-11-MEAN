@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>AgeCalculator</title>
+    </head>
+    <body>
+        <script>
+            function getAge(dateString) {
+                var today = new Date();
+                var birthDate = new Date(dateString);
+                var age = today.getFullYear() - birthDate.getFullYear();
+                var m = today.getMonth() - birthDate.getMonth();
+                if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+                    age--;
+                }
+                return age;
+            }
+            function calculate_age(dob) {
+                var diff_ms = Date.now() - dob.getTime();
+                var age_dt = new Date(diff_ms);
+                return Math.abs(age_dt.getUTCFullYear() - 1970);
+            }
+            document.write(calculate_age(new Date()));
+            document.write(calculate_age(new Date()));
+            var year_born = prompt("Please enter your date of birth:");
+            var d = new Date();
+            var n = d.getFullYear();
+            function getAge(birthYear) {
+                var currentDate = new Date();
+                var currentYear = currentDate.getFullYear();
+                age = currentYear - birthYear;
+                return age;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Age_calculator</title>
+        <style>
+            h1 {
+                text-align: center;
+                margin-top: 4%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: rgb(61, 221, 7);
+                border: 2px solid red;
+                width: 400px;
+                height: 320px;
+                margin: auto;
+            }
+            p {
+                min-width: 90px;
+                height: 25px;
+                padding: 12px 20px 12px 20px;
+                background-color: white;
+                border: 1px solid #0000004b;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <h1>Age Calculator</h1>
+            <div>
+                <label for="">Fill date</label>
+                <input type="date" id="firstnumber" />
+            </div>
+            <div>
+                <p>Age is&nbsp;:&nbsp;&nbsp;<span id="num1"></span></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="age()">Check</button>
+            </div>
+        </div>
+        <script>
+            function age() {
+                function calculate_age(dob) {
+                    var dif_date = Date.now() - dob.getTime();
+                    var age_date = new Date(dif_date);
+                    return Math.abs(age_date.getUTCFullYear() - 1970);
+                }
+                let date = document.getElementById("firstnumber").value;
+                alert("Age is  :   " + calculate_age(new Date(date)) + " year ");
+                let age = calculate_age(new Date(date));
+                document.getElementById("num1").innerHTML = +age + " year ";
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="Assignment_8.css" />
+        <title>Marks</title>
+        <script>
+            function show(arr) {
+                var arr = [];
+                arr[0] = parseInt(document.getElementById("input1").value);
+                arr[1] = parseInt(document.getElementById("input2").value);
+                arr[2] = parseInt(document.getElementById("input3").value);
+                arr[3] = parseInt(document.getElementById("input4").value);
+                arr[4] = parseInt(document.getElementById("input5").value);
+                arr[5] = parseInt(document.getElementById("input6").value);
+                arr[6] = parseInt(document.getElementById("input7").value);
+                arr[7] = parseInt(document.getElementById("input8").value);
+                arr[8] = parseInt(document.getElementById("input9").value);
+                arr[9] = parseInt(document.getElementById("input10").value);
+                for (let i = 0; i < arr.length; i++) {
+                    if (arr[i] > 80) {
+                        window.alert("please enter the marks less than 80");
+                    } else {
+                        let mark=[];
+                        let n = arr[i];
+                        let x = (n*20)/100;
+                        mark[i] = n + x;
+                        j = i+1;
+                        parseInt((document.getElementById("print").innerHTML +='Total Marks '+ j +" : " +mark[i] + "<br> <br>"));
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="same">
+            <h2>*******Total Marks*******</h2>
+            <input type="text" placeholder="enter marks 1" id="input1" />
+            <input type="text" placeholder="enter marks 2" id="input2" />
+            <input type="text" placeholder="enter marks 3" id="input3" />
+            <input type="text" placeholder="enter marks 4" id="input4" />
+            <input type="text" placeholder="enter marks 5" id="input5" />
+            <input type="text" placeholder="enter marks 6" id="input6" />
+            <input type="text" placeholder="enter marks 7" id="input7" />
+            <input type="text" placeholder="enter marks 8" id="input8" />
+            <input type="text" placeholder="enter marks 9" id="input9" />
+            <input type="text" placeholder="enter marks 10" id="input10" />
+            <button onclick="show()">Show Marks</button>
+        </div>
+        <div class="same" id="print">
+            <h3>
+                **Your marks**
+            </h3>
+        </div>
+    </body>
+</html>
