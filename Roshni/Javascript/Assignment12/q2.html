@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Display student details</title>
+        <style>
+            h1 {
+                text-align: center;
+                margin-top: 2%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: violet;
+                width: 520px;
+                height: 570px;
+                margin: auto;
+                padding-top: 15px;
+                border-radius: 60%;
+            }
+            #num10{
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1> Employee Tables</h1>
+        <div class="main">
+            <h2>Display Employee Details</h2>
+            <table>
+                <tr>
+                    <th>Emp No : </th>
+                    <td id="num1"></td>
+                </tr>
+                <tr>
+                    <th>Name : </th>
+                    <td id="num2"></td>
+                </tr>
+                <tr>
+                    <th>Address : </th>
+                    <td id="num3"></td>
+                </tr>
+                <tr>
+                    <th>City : </th>
+                    <td id="num4"></td>
+                </tr>
+                <tr>
+                    <th>Salary : </th>
+                    <td id="num5"></td>
+                </tr>
+            </table>
+            <h2>Display Salary Details</h2>
+            <table>
+                <tr>
+                    <th>Emp No : </th>
+                    <td id="num6"></td>
+                </tr>
+                <tr>
+                    <th>Name : </th>
+                    <td id="num7"></td>
+                </tr>
+                <tr>
+                    <th>Gross Salary : </th>
+                    <td id="num8"></td>
+                </tr>
+                <tr>
+                    <th>Net Salary : </th>
+                    <td id="num9"></td>
+                </tr>
+            </table>
+            <div>
+                <p><span id="num10"></span></p>
+            </div>
+        </div>
+        <script>
+            class Employee {
+                constructor() {
+                    this.empno = 1;
+                    this.name = "Roshni Durugwar";
+                    this.address = "Hawamahal Colony";
+                    this.city = "Nagpur ,Maharashtra";
+                    this.salary = "990000";
+                }
+                show_init() {
+                    document.getElementById("num1").innerHTML += this.empno;
+                    document.getElementById("num2").innerHTML += this.name;
+                    document.getElementById("num3").innerHTML += this.address;
+                    document.getElementById("num4").innerHTML += this.city;
+                    document.getElementById("num5").innerHTML += this.salary;
+                }
+                calculate() {
+                    let salary, da, hra, pf;
+                    salary = parseInt(this.salary);
+                    da = (salary * 30) / 100;
+                    hra = (salary * 15) / 100;
+                    pf = (salary * 12.5) / 100;
+                    this.gross = salary + da + hra;
+                    this.net = this.gross - pf;
+                }
+                display() {
+                    document.getElementById("num6").innerHTML += this.empno;
+                    document.getElementById("num7").innerHTML += this.name;
+                    document.getElementById("num8").innerHTML += this.gross;
+                    document.getElementById("num9").innerHTML += this.net;
+                    if (this.gross > 180000) {
+                        document.getElementById("num10").innerHTML += "Income Tax Payer";
+                    } else {
+                        document.getElementById("num10").innerHTML += "Not an Income Tax Payer";
+                    }
+                }
+            }
+            let e1 = new Employee();
+            e1.show_init();
+            e1.calculate();
+            e1.display();
+        </script>
+    </body>
+</html>
