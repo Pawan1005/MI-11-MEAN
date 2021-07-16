@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment13-Quest1</title>
+        <style>
+            #p {
+                border: 1px solid gray;
+                width: 25%;
+                height: 5vh;
+                text-align: center;
+                margin-top: 10px;
+            }
+            .main-box {
+                margin: 150px 0 0 150px;
+            }
+            body {
+                background-color: rgba(0, 0, 0, 0.63);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-box"></div>
+        <div id="p"></div>
+        <div id="pr"></div>
+        <script>
+            let d = new Date();
+            d = new Date("Feb 21,2021 10:00");
+            document.getElementById("p").innerHTML = "Date:" + d.toDateString() + "<br>";
+            alert(d.toLocaleTimeString("en-us"));
+        </script>
+    </body>
+</html>

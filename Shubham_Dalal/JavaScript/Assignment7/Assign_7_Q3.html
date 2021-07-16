@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="Assignment7.css" />
+        <title>Assignment 7</title>
+        <script>
+            function num() {
+                var arr = [];
+                var number = parseInt(document.getElementById("num").value);
+                for (var i = 0; i < number; i++) {
+                    arr[i] = prompt("enter the Marks : ");
+                    j = i + 1;
+                    document.getElementById("divid").innerHTML += "Mark " + j + " :  " + arr[i] + "<br>";
+                }
+                var arrShort = bubbleSort(arr);
+            }
+            function bubbleSort(arrShort) {
+                var temp;
+                for(let j=0;j<arrShort.length;j++){
+                    for(var k =0;k<arrShort.length-1;k++){
+                        if(arrShort[k]>arrShort[k+1]){
+                            temp = arrShort[k];
+                            arrShort[k] = arrShort[k +1];
+                            arrShort[k +1] = temp;
+                        }
+                    }
+                    l = j+1;
+                    document.getElementById("divid1").innerHTML += "Mark " + l +  " : " + arrShort[j] + "<br>";
+                }               
+            }
+        </script>
+    </head>
+    <body>
+        <h1>***** Bubble sort *****</h1>
+        <div id="main">
+            <h4>Enter the number of marks you have to enter</h4>
+            <input type="number" id="num" placeholder="Enter marks here" />
+            <button onclick="num()">click me</button>
+            <div id="container">
+                <div id="common">
+                    <h4>** Before Sorting **</h4>
+                    <div id="divid"></div>
+                </div>
+                <div id="common">
+                    <h4>** After Sorting **</h4>
+                    <div id="divid1"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Students</title>
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+                transition: 0.3s;
+                width: 40%;
+                height: 800px;
+                border-radius: 20px;
+                background-color: aliceblue;
+                margin: auto;
+                margin-top: 20px;
+            }
+            button {
+                position: relative;
+                border: none;
+                font-size: 20px;
+                padding: 10px;
+                width: 180px;
+                text-align: center;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+                text-decoration: none;
+                overflow: hidden;
+                cursor: pointer;
+                margin-left: 130px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="logincentrecard">
+            <div class="card">
+                <div class="container">
+                    <h1 style="text-align: center;">Marks</h1>
+                    <label for="inputs">Enter the number of students : </label>
+                    <input type="text" id="numOfInputs" />
+                    <button onclick="proceed()">Display</button>
+                    <div class="gridContainer">
+                        <div id="inputsContainer" class="container"></div>
+                        <div id="result" class="container"></div>
+                    </div>
+                    <script>
+                        function proceed() {
+                            let numOfInputs = parseInt(document.getElementById("numOfInputs").value),
+                                inputsContainer = document.getElementById("inputsContainer");
+                            inputsContainer.innerHTML = "";
+                            for (let i = 0; i < numOfInputs; i++) {
+                                inputsContainer.innerHTML += `<div>Marks ${i + 1} : <input type="text" class="marks" /></div>`;
+                            }
+                            inputsContainer.innerHTML += `<button onclick="display()">Display</button>`;
+                        }
+                        function inputToArray() {
+                            let marks = document.getElementsByClassName("marks"),
+                                arr = [];
+                            for (let i = 0; i < marks.length; i++) {
+                                arr.push(parseInt(marks[i].value));
+                            }
+                            return arr;
+                        }
+                        function display() {
+                            result.innerHTML += "<span>Marks</span>";
+                            result = document.getElementById("result");
+                            let arr = inputToArray();
+                            for (let i = 0; i < arr.length; i++) {
+                                result.innerHTML += `Marks ${i + 1} : ${parseInt(arr[i])} <br>`;
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

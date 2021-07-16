@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GetDateDay</title>
+        <style>
+            .main-box {
+                border: 1px solid gray;
+                width: 25%;
+                height: 50%;
+                text-align: center;
+                background-color: black;
+                color: blanchedalmond;
+                font-size: 20px;
+                margin: 150px 0 0 450px;
+            }
+            body {
+                background-color: rgba(0, 0, 0, 0.514);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-box">
+            <p id="pr"></p>
+            <p id="p"></p>
+        </div>
+        <script>
+            function getDateAgo(date, days) {
+                var dateCopy = new Date(date);
+                dateCopy.setDate(date.getDate() - days);
+                return dateCopy.getDate();
+            }
+            var date = new Date(2020, 1, 3);
+            document.getElementById("pr").innerHTML = " Currtent Date :1Jan2020";
+            document.getElementById("p").innerHTML = "One Day Ago:" + " " + getDateAgo(date, 1) + "Jan 2020";
+            /*document.write(getDateAgo(date, 2));
+            document.write(getDateAgo(date, 365));*/
+        </script>
+    </body>
+</html>

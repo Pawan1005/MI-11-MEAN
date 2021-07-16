@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Ques2</title>
+    </head>
+    <body>
+        <!--
+        <div class="marks">
+            <form>
+                <input type="text" name="input1[]" />
+                <input type="text" name="input1[]" />
+                <input type="text" name="input1[]" />
+                <input type="text" name="input1[]" />
+                <input type="text" name="input1[]" />
+                <button type="submit" onclick="addMarks()">Result</button>
+            </form>
+            <div id="p"></div>
+        </div>-->
+        <script>
+            var marks = prompt("enter value");
+            var arr = [];
+            for (let i = 0; i <= marks; i++) {
+                arr[i] = prompt("enter marks:");
+            }
+            for (let i = 0; i <= marks; i++) {
+                document.write("Marks:- " + arr[i] + "<br>");
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>sort & separate</title>
+        <script type="text/javascript">
+            function show() {
+                let a = [];
+                let b = document.getElementById("pid");
+                while (true) {
+                    let c = prompt("Enter Name");
+                    if (c == "x" || c == "X" || c == null) break;
+                    a.push(c);
+                }
+                b.innerHTML += `<div>${a.join("~")}</div>`;
+                b.innerHTML += `<div>${a.sort()}</div>`;
+                b.innerHTML += `<div>${a.reverse()}</div>`;
+            }
+        </script>
+    </head>
+    <body style="background-color: aquamarine; text-align: center">
+        <h1>*sort and separate Entered Names*</h1>
+        <h4>NOTE:-Enter "X" or press "cancel" to submit your names or cancel.</h4>
+        <p id="pid"></p>
+        <button onclick="show()">Put Your Inputs</button>
+    </body>
+</html>

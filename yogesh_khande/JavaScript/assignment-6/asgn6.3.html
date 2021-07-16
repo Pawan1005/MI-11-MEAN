@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script type="text/javascript">
+            function show() {
+                let a = [];
+                let b = document.getElementById("pid");
+                while (true) {
+                    let c = prompt("Enter your values");
+                    if (c == "x" || c == "X" || c == null) break;
+                    a.push(parseInt(c));
+                }
+                var output = 0;
+                for (let i = 0; i < a.length; i++) {
+                    output += a[i];
+                }
+                b.innerHTML = `Sum is : ${output}`;
+            }
+        </script>
+    </head>
+    <body style="background-color: aquamarine; text-align: center">
+        <h1>*Sum of entered numbers*</h1>
+        <p id="pid"></p>
+        <button onclick="show()">Put Your Inputs</button>
+    </body>
+</html>
