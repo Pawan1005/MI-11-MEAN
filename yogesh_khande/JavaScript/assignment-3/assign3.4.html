@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Row-Col</title>
+        <style>
+            body {
+                background-color: cadetblue;
+            }
+            .box {
+                text-align: center;
+                padding: 10px 10px;
+                margin-top: 50px;
+                border: 2px solid black;
+                border-radius: 20px;
+            }
+            button {
+                padding: 5px 10px;
+            }
+        </style>
+        <script>
+            function add() {
+                a = parseInt(document.getElementById("cl").value);
+                b = parseInt(document.getElementById("rw").value);
+                for (var i = 0; i < a; i++) {
+                    for (var k = 0; k < b; k++) {
+                        document.getElementById("pid").innerHTML += " * ";
+                    }
+                    document.getElementById("pid").innerHTML += "<br>";
+                }
+            }
+        </script>
+    </head>
+    <body class="box">
+        <h1><hr>*Draw your Pattern*<hr></h1>
+        <input type="text" id="cl" placeholder="Enter number of row" />
+        <input type="text" id="rw" placeholder="Enter number of colum" />
+        <p id="pid"></p>
+        <button onclick="add()">Get</button>
+    </body>
+</html>

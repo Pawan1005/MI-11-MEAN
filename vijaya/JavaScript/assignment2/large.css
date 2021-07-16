@@ -1,0 +1,19 @@
+.form-name {
+    position: relative;
+    width: 400px;
+    background-color: rgba(138, 15, 107, 0.918);
+    padding: 10px 0px 10px 0px;
+    border-radius: 15px 15px 0px 0px;
+    color: white;
+    text-align: center;
+    margin-top: 80px;
+    margin-left: 450px;
+}
+.login-box {
+    width: 400px;
+    height: 370px;
+    background-color: rgba(207, 143, 59, 0.918);
+    border-radius: 0px 0px 15px 15px;
+    margin-left: 450px;
+    padding-bottom: 30px;
+}

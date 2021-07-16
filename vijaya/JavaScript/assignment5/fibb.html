@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pattern Demo</title>
+        <style>
+        .name {
+            position: relative;
+            width: 500px;
+            background-color: rgba(160, 15, 141, 0.918);
+            padding: 10px 0px 10px 0px;
+            border-radius: 15px 15px 0px 0px;
+            color: white;
+            text-align: center;
+            margin-top: 80px;
+            margin-left: 400px;
+        }
+        .one{
+            background-color: rgb(144, 155, 46);
+            width: 120px;
+            margin-left: 180px;
+        }
+        </style>
+        <script>
+        function show() {
+            var n1 = 0,  n2 = 1, n3, i;  
+            var num = Number(document.getElementById("num").value);
+            for ( i = 1; i <= num; i++){
+                document.getElementById("answer").innerHTML +="<br>"+n1;
+                n3 = n1 + n2;
+                n1 = n2; 
+                n2 = n3;   
+            }
+        }
+        </script>
+    </head>
+        <body style="background-color: rgb(247, 234, 162);">
+            <div class="name">
+                <h2>Fibbonacci series</h2>
+                <hr style="color: white;">
+                <br>
+                Enter the limit of fibbonacci series: <input id="num"></br></br>
+                <div class="one">
+                <p><span id="answer"></span></p>
+                </div > 
+                <button onclick="show()" style="padding: 6px; background-color: rgb(42, 192, 238);">Show</button></br></br>
+            </div>
+        </body>
+</html>

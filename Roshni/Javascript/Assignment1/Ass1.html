@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Conversion of Celsius to Fahrenheit</title>
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .ft{
+                background-color: aqua;
+            }
+            
+        </style>
+    </head>
+    <body>
+        <div class="logincentrecard">
+            <div class="card">
+                <div class="container">
+                    <fieldset class="ft">
+                    <h1>Conversion of Celsius to Fahrenheit</h1>
+                    <label for="num1">Temp:</label><br><br>
+                    <input type="text" id="temp" placeholder="Enter the number" /><br><br>
+                    <button onclick="temp()" style="background-color: blueviolet;">Convert</button>
+                    <h1>After Conversion</h1>
+                    <p id="pid"></p>
+                </div>
+                <script language="JavaScript">
+                    function temp() {
+                        "use strict";
+                        var c, f;
+                        c = parseInt(document.getElementById("temp").value);
+                        f = c * 1.8 + 32;
+                        document.getElementById("pid").innerHTML = "<br> Celsius is = " + c + " to fahrenheit is = " + f;
+                    }
+                </script>
+            </div>
+        </div>
+    </fieldset>
+    </body>
+</html>

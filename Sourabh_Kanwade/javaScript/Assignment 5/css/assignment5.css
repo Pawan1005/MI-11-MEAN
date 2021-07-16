@@ -1,0 +1,24 @@
+html,
+body {
+    height: 99.2vh;
+}
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px;
+    border-radius: 10px;
+}
+button {
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    border: none;
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>find the Sum of even and Product of odd digits of given 6 digit</title>
+        <style>
+        .name {
+            position: relative;
+            width: 500px;
+            background-color: rgba(160, 15, 141, 0.918);
+            padding: 10px 0px 10px 0px;
+            border-radius: 15px 15px 0px 0px;
+            color: white;
+            margin-top: 80px;
+            margin-left: 400px;
+        }
+        .one {
+            background-color: white;
+            color: rgb(46, 49, 245);
+            width: 230px;
+            margin-left: 220px;
+        }
+        .btn {
+            padding: 6px;
+            text-align: center;
+        }
+        </style>
+        <script>
+        function sum_product6() {
+            var r, n, sum = 0, product = 1;
+            n = parseInt(document.getElementById("first").value);
+            n1 = n;
+            while (n > 0) {
+                r = n % 10;
+                if (r % 2 == 0) {
+                    sum = sum + r;
+                }
+                else {
+                    product = product * r;
+                }
+                n = parseInt(n / 10);
+            }
+            document.getElementById("num").innerHTML = "Sum of even digits : " + sum;
+            document.getElementById("num1").innerHTML = "Product of odd digits : " + product;
+        }
+        </script>
+    </head>
+    <body style="background-color: rgb(211, 173, 92);">
+        <div class="name">
+            <h2 style="text-align: center;"> Sum of even and Product of odd digits</h2>
+            <hr style="color: rgb(34, 32, 199);">
+            <br>
+            Enter the 6 digit number: <input id="first" maxlength="6"></br></br>
+            <div class="one">
+                <p><span id="num"></span>
+                <span id="num1"></span>
+                </p>
+            </div>
+            <div class="btn">
+                <button onclick="sum_product6()"
+                style=" background-color: rgb(17, 175, 223); height: 30px">Show</button></br></br>
+            </div>
+        </div>
+    </body>
+</html>

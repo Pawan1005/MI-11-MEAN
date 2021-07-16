@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Find Double Letter</title>
+        <script>
+            function show() {
+                let str = prompt("Enter String ");
+                document.getElementById("pid").innerText = str;
+
+                let double;
+                for (let i = 0; i < str.length; i++) {
+                    if (str[i] === str[i + 1]) {
+                        document.getElementById("pid").innerText = `found double of ${str[i]}`;
+                        break;
+                    } else {
+                        document.getElementById("pid").innerText = `found double none`;
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container" style="border: 1px solid black; width: 600px; height: 400px; background-color: blueviolet; margin-left: 400px; margin-top: 50px">
+            <h1>Find Double Letter</h1>
+            Enter The Number :&nbsp;<input type="text" name="n" id="num" /> <br /><br />
+            <center><button onClick="show()">CHECK</button></center>
+            <br />
+            <hr color="cyan" />
+            <div style="background-color: blanchedalmond; height: 100px"><p id="pid"></p></div>
+        </div>
+    </body>
+</html>

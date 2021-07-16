@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>js4.3</title>
+        <script>
+            function sum() {
+                a = parseInt(document.getElementById("num1").value);
+                var input = a;
+                var mul = 1;
+                var sum = 0;
+                while (input > 0) {
+                    var mod = input % 10;
+                    for (var n = 1; n <= mod; n++) {
+                        mul = mul * n;
+                    }
+                    sum = sum + mul;
+                    input = parseInt(input / 10);
+                    mul = 1;
+                    document.getElementById("pid").innerHTML = sum;
+                    if (sum === a) {
+                        document.getElementById("pid1").innerHTML = "km";
+                    } else {
+                        document.getElementById("pid1").innerHTML = "not";
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="num1" />
+        <button onclick="sum()">do</button>
+        <p id="pid"></p>
+        <p id="pid1"></p>
+    </body>
+</html>

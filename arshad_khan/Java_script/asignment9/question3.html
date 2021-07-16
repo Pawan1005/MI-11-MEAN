@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Check Five Prime Pelindrome</title>
+        <style>
+            p {
+                display: flex;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container" style="border: 1px solid black; width: 600px; height: 600px; background-color: blueviolet; margin-left: 400px; margin-top: 50px">
+            <h1>Check a number is primePalindrome or not</h1>
+            Enter first Number :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="n" id="firstnumber" /><br />
+            Enter Second Number :&nbsp;<input type="text" name="n" id="secondnumber" /><br />
+            Enter Third Number :&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="n" id="thirdnumber" /><br />
+            Enter Fourth Number :&nbsp;&nbsp;<input type="text" name="n" id="fourthnumber" /><br />
+            Enter Fifth Number :&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" name="n" id="fifthnumber" /> <br /><br />
+            <center><button onClick="palindrome()">CHECK</button></center>
+            <br />
+            <hr color="cyan" />
+            <div style="background-color: blanchedalmond">
+                <p><span id="num1"></span><span id="num2"></span><span id="num3"></span></p>
+            </div>
+        </div>
+        <script>
+            function palindrome() {
+                function str_palindrome(str) {
+                    var sum = 0,
+                        count = 0,
+                        temp,
+                        rem,
+                        j;
+                    temp = parseInt(str);
+                    while (temp > 0) {
+                        rem = temp % 10;
+                        temp = parseInt(temp / 10);
+                        sum = sum * 10 + rem;
+                    }
+                    for (j = 1; j <= str; j++) {
+                        if (str % j == 0) {
+                            count++;
+                        }
+                    }
+                    if (sum == str && count == 2) {
+                        document.getElementById("num1").innerHTML += +str + "<br><br>";
+                        document.getElementById("num2").innerHTML += " &emsp; is &nbsp;<br><br>";
+                        document.getElementById("num3").innerHTML += " Prime Palindrome <br><br>";
+                    } else {
+                        document.getElementById("num1").innerHTML += +str + "<br><br>";
+                        document.getElementById("num2").innerHTML += "&emsp; is &nbsp;<br><br>";
+                        document.getElementById("num3").innerHTML += " not Prime Palindrome <br><br>";
+                    }
+                }
+                var string = [],
+                var i;
+                string[0] = document.getElementById("firstnumber").value;
+                string[1] = document.getElementById("secondnumber").value;
+                string[2] = document.getElementById("thirdnumber").value;
+                string[3] = document.getElementById("fourthnumber").value;
+                string[4] = document.getElementById("fifthnumber").value;
+                for (i = 0; i < 5; i++) {
+                    str_palindrome(string[i]);
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="file.css" />
+        <title>Prime number between two number</title>
+        <script>
+            function startend() {  
+                var i, j, c, start, end;
+                start = parseInt(document.getElementById("firstnumber").value);
+                end = parseInt(document.getElementById("secondnumber").value);
+                for(i=start; i<=end; i++) {
+                    c = 0;
+                    for (j=1; j<=i; j++) {
+                        if(i%j == 0) {
+                            c++;
+                        }
+                    }
+                    if(c==2) {
+                        document.getElementById("prime").innerHTML += "&nbsp;" +i;
+                    }
+                }                      
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Prime Number Between Two Number</h1>
+        <div>
+            <input type="text" id="num1" placeholder="Enter first number">
+            <input type="text" id="num2" placeholder="Enter last number"> 
+            <h2 id="prime">Prime numbers are: </h2>
+            <button class="btn1" onclick="startend()">Calculate</button>
+        </div>
+    </body>
+</html>

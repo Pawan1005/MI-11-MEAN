@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>js5.2</title>
+        <script>
+            function show(){
+                var a,b,c,input;
+                input=parseInt(document.getElementById("num1").value);
+                a=0;
+                b=1;
+                document.getElementById("pid").innerHTML=a+",";
+                document.getElementById("pid").innerHTML+=b;
+                for(i=3;i<=input;i++){
+                    c=a+b;
+                    document.getElementById("pid").innerHTML+=","+c;
+                    a=b;
+                    b=c;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="num1">
+        <button onclick="show()">do</button>
+        <p id="pid"></p>
+    </body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Question3</title>
+        <script>
+            function inp() {
+                var empno = prompt("Enter employee number");
+                var Name = prompt("Enter employee name");
+                var address = prompt("Enter employee address");
+                var city = prompt("Enter employee city");
+                var salary = parseInt(prompt("Enter employee salary"));
+                return new Employee(empno, Name, address, city, salary);
+            }
+        </script>
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                margin-top: 50px;
+                align-items: center;
+                justify-content: center;
+                background-color: indianred;
+                width: 700px;
+                height: 400px;
+                margin: auto;
+                border-radius: 20px;
+            }
+            #pid {
+                color: white;
+                text-align: center;
+                font-size: large;
+                font-weight: 300;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <p id="pid"></p>
+            </div>
+        </div>
+        <script>
+            class Employee {
+                constructor(eno, Name, add, city, sal) {
+                    this.empno = eno;
+                    this.name = Name;
+                    this.address = add;
+                    this.city = city;
+                    this.salary = sal;
+                    this.gross = 0;
+                    this.net = 0;
+                }
+                show_init() {
+                    document.getElementById("pid").innerHTML += "**Initial Values**<br>";
+                    document.getElementById("pid").innerHTML += "Employee No:-" + this.empno + "<br> ";
+                    document.getElementById("pid").innerHTML += "Name:-" + this.name + "<br>";
+                    document.getElementById("pid").innerHTML += "Address:-" + this.address + "<br>";
+                    document.getElementById("pid").innerHTML += "City:-" + this.city + "<br>";
+                    document.getElementById("pid").innerHTML += "Salary:-" + this.salary + "<br>";
+                }
+                calculate() {
+                    var da = this.salary * 0.3;
+                    var hra = this.salary * 0.15;
+                    var pf = this.salary * 0.125;
+                    this.gross = this.salary + da + hra;
+                    this.net = this.gross - pf;
+                    document.getElementById("pid").innerHTML += "**Tax Paying Status**<br>";
+                    if (this.gross > 180000) {
+                        document.getElementById("pid").innerHTML += "“Income TaxPayer”";
+                    } else {
+                        document.getElementById("pid").innerHTML += "“Not an income TaxPayer”";
+                    }
+                }
+                display() {
+                    document.getElementById("pid").innerHTML += "<br>**Final results**<br>";
+                    document.getElementById("pid").innerHTML += "Name:-" + this.name + "<br>";
+                    document.getElementById("pid").innerHTML += "Employee No:-" + this.empno + "<br> ";
+                    document.getElementById("pid").innerHTML += "Gross Salary:-" + this.gross + "<br>";
+                    document.getElementById("pid").innerHTML += "Net Salary:-" + this.net + "<br>";
+                    document.getElementById("pid").innerHTML += "------------------------------------------------------------------";
+                }
+            }
+            var Em1 = inp();
+            Em1.show_init();
+            Em1.calculate();
+            Em1.display();
+            var Em2 = inp();
+            Em2.show_init();
+            Em2.calculate();
+            Em2.display();
+        </script>
+    </body>
+</html>

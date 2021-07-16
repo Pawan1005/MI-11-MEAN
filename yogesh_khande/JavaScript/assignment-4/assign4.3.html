@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Krishnamurthy No</title>
+        <script>
+            function sum() {
+                a = parseInt(document.getElementById("num1").value);
+                var input = a;
+                var mul = 1;
+                var sum = 0;
+                while (input > 0) {
+                    var mod = input % 10;
+                    for (var n = 1; n <= mod; n++) {
+                        mul = mul * n;
+                    }
+                    sum = sum + mul;
+                    input = parseInt(input / 10);
+                    mul = 1;
+                    document.getElementById("pid").innerHTML = sum;
+                    if (sum === a) {
+                        document.getElementById("pid1").innerHTML = "Krishnamurthy";
+                    } else {
+                        document.getElementById("pid1").innerHTML = "Not K..";
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body style="text-align: center; background-color: lightsalmon; margin-top: 100px">
+        <h1>
+            <hr />
+            *Find Krishnamurthy Number*
+            <hr />
+        </h1>
+        <input type="text" id="num1" placeholder="Enter Number" />
+        <p id="pid"></p>
+        <p id="pid1"></p>
+        <br />
+        <button onclick="sum()">GET</button>
+    </body>
+</html>

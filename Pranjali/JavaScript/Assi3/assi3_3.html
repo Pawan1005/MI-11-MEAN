@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Even/Odd</title>
+        <style>
+            body {
+                height: 200px;
+                background-image: linear-gradient(to right, rgb(39, 24, 9), rgba(56, 21, 95, 0.63), rgb(39, 24, 9));
+            }
+        </style>
+    </head>
+    <body>
+        <script language="javascript">
+            function show() {
+                var a = parseInt(document.getElementById("num1").value);
+                var b;
+                b = a % 2;
+                no = b;
+                if (no == 0) {
+                    document.getElementById("pid").innerHTML += a + " is a even number.";
+                } else {
+                    document.getElementById("pid").innerHTML += a + " is a odd number.";
+                }
+            }
+        </script>
+        <div style="width: 50%; position: absolute; left: 500px; top: 200px">
+            <div style="text-align: center; background-color: rgb(132, 245, 207); border-radius: 25px 25px 25px 25px">
+                <br /><br />
+                <h1>Number is Even/Odd?</h1>
+                <br /><br />
+                Enter Number : <input type="text" id="num1" />
+                <button onclick="show()">Click here</button>
+                <br />
+                <p id="pid" style="color: blue"></p>
+                <br /><br />
+            </div>
+        </div>
+    </body>
+</html>

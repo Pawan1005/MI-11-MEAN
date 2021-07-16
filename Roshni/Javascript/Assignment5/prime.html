@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Prime Number</title>
+        <style>
+            .ft {
+                width: 500px;
+                height: 300px;
+                background-color: rgb(209, 42, 195);
+            }
+        </style>
+    </head>
+    <body>
+        <center>
+            <div class="logincentrecard">
+                <div class="card">
+                    <div class="container">
+                        <fieldset class="ft">
+                            <h1>PRIME NUMBER</h1>
+                            <br /><br />
+                            <label for="Num1">Enter First Number:</label>
+                            <input
+                                type="text"
+                                id="num1"
+                                placeholder="Enter First Number"
+                            />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
+                            <label for="Num1">Enter Second Number:</label>
+                            <input
+                                type="text"
+                                id="num2"
+                                placeholder="Enter Second Number"
+                            />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
+                            <button onclick="show()" style="background-color: rgb(60, 255, 0); color: white">RESULT</button>
+                            <p id="pid"></p>
+                            <script language="JavaScript">
+                                function show() {
+                                    var a, b;
+                                    a = parseInt(document.getElementById("num1").value);
+                                    b = parseInt(document.getElementById("num2").value);
+                                    for (let i = a; i <= b; i++) {
+                                        let flag = 0;
+                                        for (let j = 2; j < i; j++) {
+                                            if (i % j == 0) {
+                                                flag = 1;
+                                                break;
+                                            }
+                                        }
+                                        if (i > 1 && flag == 0) {
+                                            document.getElementById("pid").innerHTML += i + " ";
+                                        }
+                                    }
+                                }
+                            </script>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </center>
+    </body>
+</html>

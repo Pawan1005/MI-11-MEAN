@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Credit_card</title>
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+                transition: 0.3s;
+                width: 50%;
+                height: 300px;
+                border-radius: 20px;
+                background-color: plum;
+                margin: auto;
+                margin-top: 50px;
+            }
+            .btn {
+                position: relative;
+                border: none;
+                font-size: 20px;
+                padding: 10px;
+                width: 180px;
+                text-align: center;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+                text-decoration: none;
+                overflow: hidden;
+                cursor: pointer;
+                margin-left: 160px;
+                background-color: white;
+                color: black;
+            }
+            #pid {
+                color: purple;
+                text-align: center;
+                font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <h3 style="text-align: center;">Credit Card Number Checker</h3>
+                <br />
+                Enter Credit Card Number:- <input type="text" id="text" placeholder="Enter the credit card number" /> <br /><br />
+                <button class="btn" onclick="Check()">Check</button>
+                <p id="pid"></p>
+            </div>
+        </div>
+        <script>
+            function Check() {
+                var str = document.getElementById("text").value;
+                var che = /^\d+$/;
+                var result = che.test(str);
+                var l = str.length;
+                if (result) {
+                    if (l > 15 && l < 20) {
+                        document.getElementById("pid").innerHTML = `"${str}" is a credit card number`;
+                    } else {
+                        document.getElementById("pid").innerHTML = `"${str}" is not a credit card number <br> Digits should be 16`;
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Javascript demo</title>
+        <link rel="stylesheet" href="large.css" />
+        <script>
+        function secondmax() {
+            var a, b, c, d, e, max = 0, secmax;
+            a = parseInt(document.getElementById("num1").value);
+            b = parseInt(document.getElementById("num2").value);
+            c = parseInt(document.getElementById("num3").value);
+            d = parseInt(document.getElementById("num4").value);
+            e = parseInt(document.getElementById("num5").value);
+            if (a >= b && a >= c && a >= d && a >= e) {
+                if (b >= c && b >= d && b >= e) {
+                    document.getElementById("second-largest").value = +b;
+                } else if (c >= b && c >= d && c >= e) {
+                    document.getElementById("second-largest").value = +c;
+                } else if (d >= b && d >= c && d >= e) {
+                    document.getElementById("second-largest").value = +d;
+                } else {
+                    document.getElementById("second-largest").value = +e;
+                }
+            }
+            else if (b >= a && b >= c && b >= d && b >= e) {
+                if (a >= c && a >= d && a >= e) {
+                    document.getElementById("second-largest").value = +a;
+                } else if (c >= a && c >= d && c >= e) {
+                    document.getElementById("second-largest").value = +c;
+                } else if (d >= a && d >= c && d >= e) {
+                    document.getElementById("second-largest").value = +d;
+                } else {
+                    document.getElementById("second-largest").value = +e;
+                }
+            }
+            else if (c >= a && c >= d && c >= d && c >= e) {
+                if (a >= b && a >= d && a >= e) {
+                    document.getElementById("second-largest").value = +a;
+                } else if (b >= a && b >= d && b >= e) {
+                    document.getElementById("second-largest").value = +b;
+                } else if (num4 >= num1 && num4 >= num2 && num4 >= num5) {
+                    document.getElementById("second-largest").value = +d;
+                } else {
+                    document.getElementById("second-largest").value = +e;
+                }
+            }
+            else if (d >= a && d >= b && d >= c && d >= e) {
+                if (a >= b && a >= c && a >= e) {
+                    document.getElementById("second-largest").value = +a;
+                } else if (b >= a && b >= c && b >= e) {
+                    document.getElementById("second-largest").value = +b;
+                } else if (c >= a && c >= b && c >= e) {
+                    document.getElementById("second-largest").value = +c;
+                } else {
+                    document.getElementById("second-largest").value = +e;
+                }
+            }
+            else {
+                if (a >= b && a >= c && a >= d) {
+                    document.getElementById("second-largest").value = +a;
+                } else if (b >= a && b >= c && b >= d) {
+                    document.getElementById("second-largest").value = +b;
+                } else if (c >= a && c >= b && c >= d) {
+                    document.getElementById("second-largest").value = +c;
+                } else {
+                    document.getElementById("second-largest").value = +d;
+                }
+            }
+        }
+        </script>
+    </head>
+    <body>
+        <div class="form-name">
+            <h2>Secong Largest Number</h2>
+        </div>
+        <div class="login-box">
+            <div id="name">
+                <br>
+                Number 1 : <input type="number" id="num1" />
+                <br />
+                <br />
+                Number 2 : <input type="number" id="num2" />
+                <br />
+                <br />
+                Number 3 : <input type="number" id="num3" />
+                <br />
+                <br />
+                Number 4 : <input type="number" id="num4" />
+                <br />
+                <br />
+                Number 5 : <input type="number" id="num5" />
+                <br />
+                <br />Result : <input type="text" id="second-largest" />
+                <br />
+                <br>
+                <br>
+                <button onclick="secondmax()">second-largest</button>
+            </div>
+        </div>
+    </body>
+</html>

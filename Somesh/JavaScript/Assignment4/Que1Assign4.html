@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="armstrong-container container">
+            <p>Check Armstrong</p>
+            <div class="input-box">
+                <div class="input-container">
+                    <input
+                        type="text"
+                        placeholder="number"
+                        id="armstrong-input"
+                    />
+                </div>
+                <button onclick="isArmstrong()">is Armstrong</button>
+            </div>
+            <div class="output-box" id="armstrong-output"></div>
+        </div>
+        <div class="automorphic-container container">
+            <p>Check Automorphic</p>
+            <div class="input-box">
+                <div class="input-container">
+                    <input
+                        type="text"
+                        placeholder="number"
+                        id="automorphic-input"
+                    />
+                </div>
+                <button onclick="isAutomorphic()">is Automorphic</button>
+            </div>
+            <div class="output-box" id="automorphic-output"></div>
+        </div>
+        <div class="krishn-container container">
+            <p>Check Krishnamurthy</p>
+            <div class="input-box">
+                <div class="input-container">
+                    <input type="text" placeholder="number" id="krishn-input" />
+                </div>
+                <button onclick="isKrishn()">is Krishnamurthy</button>
+            </div>
+            <div class="output-box" id="krishn-output"></div>
+        </div>
+        <div class="vowel-container container">
+            <p>Check Vowel</p>
+            <div class="input-box">
+                <div class="input-container">
+                    <input
+                        type="text"
+                        placeholder="number"
+                        id="vowel-input"
+                        maxlength="1"
+                    />
+                </div>
+                <button onclick="isVowel()">is Vowel</button>
+            </div>
+            <div class="output-box" id="vowel-output"></div>
+        </div>
+        <div class="case-container container">
+            <p>Convert Case</p>
+            <div class="input-box">
+                <div class="input-container">
+                    <input type="text" placeholder="text" id="case-input" />
+                </div>
+                <button onclick="toCase()">convert Case</button>
+            </div>
+            <div class="output-box" id="case-output"></div>
+        </div>
+        <script src="./App.js"></script>
+    </body>
+</html>

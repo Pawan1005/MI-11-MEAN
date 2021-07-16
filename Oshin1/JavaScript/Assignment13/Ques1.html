@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assign13_Q1</title>
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                margin-top: 50px;
+                align-items: center;
+                justify-content: center;
+                background-color: palegreen;
+                width: 400px;
+                height: 400px;
+                margin: auto;
+                border-radius: 20px;
+            }
+            p {
+                font-size: large;
+                padding: 32px 40px 32px 40px;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <h1 style="text-align: center; color: white;">DISPLAY DATE AND TIME</h1>
+                <div>
+                    <p>Date is&nbsp;:&ensp;<span id="num1"></span><br /><br />Time is&nbsp;:&ensp;<span id="num2"></span></p>
+                </div>
+            </div>
+        </div>
+        <script>
+            let d = new Date();
+            let hours = d.getHours();
+            let minutes = d.getMinutes();
+            let local = hours >= 12 ? "PM" : "AM";
+            hours = hours % 12;
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+            alert(d.toDateString() + ",   " + hours + " : " + minutes + " " + local);
+            document.getElementById("num1").innerHTML = d.toDateString();
+            document.getElementById("num2").innerHTML = hours + " : " + minutes + " " + local;
+        </script>
+    </body>
+</html>

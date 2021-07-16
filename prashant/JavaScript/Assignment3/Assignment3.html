@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <title>Assignment3</title>
+        <link rel="stylesheet" href="assignment3.css" />
+        <script>
+            // program to check leap year
+            function checkLeapYear() {
+                let year = parseInt(document.getAnimations("input").value);
+                //three conditions to find out the leap year
+                if  ((0 == year % 4) && (0 != year % 100) || (0 == year % 400)) {
+                    document.getElementById("p").innerHTML = "This Year is Leapyear";
+                } else {
+                    document.getElementById("p").innerHTML = "This Year is Not A Leapyear";
+                }
+            }
+            function isPrime() {
+                let number = parseInt(document.getElementById("input1").value);
+                let isPrime = true;
+                if (number === 1) {
+                    document.getElementById("pid").innerHTML = "1 is neither prime nor composite number.";
+                } else if (number > 1) {
+                    for (let i = 2; i < number; i++) {
+                        if (number % i == 0) {
+                            isPrime = false;
+                            break;
+                        }
+                    }
+                    if (isPrime) {
+                        document.getElementById("pid").innerHTML = `${number} is a prime number`;
+                    } else {
+                        document.getElementById("pid").innerHTML = `${number} is a not prime number`;
+                    }
+                } else {
+                    document.getElementById("pid").innerHTML = "The number is not a prime number.";
+                }
+            }
+            function isEvenOdd() {
+                let number1 = parseInt(document.getElementById("input2").value);
+                if (number1 % 2 == 0) {
+                    document.getElementById("pi").innerHTML = "The number is even";
+                } else {
+                    document.getElementById("pi").innerHTML = "The number isOdd.";
+                }
+            }
+            function patternPrinter() {
+                let rows = parseInt(document.getElementById("rows").value);
+                let cols = parseInt(document.getElementById("cols").value);
+                let pattern = document.getElementById("pattern");
+                pattern.innerHTML = "";
+                for (let i = 0; i < rows; i++) {
+                    for (let j = 0; j < cols; j++) {
+                        pattern.innerHTML += "*";
+                    }
+                    pattern.innerHTML += "<br>";
+                }
+            }
+            function findFactorial() {
+                let number3 = parseInt(document.getElementById("input3").value);
+                if (number3 < 0) {
+                    document.getElementById("pid1").innerHTML = "Error! Factorial for negative number does not exist.";
+                } else if (number3 === 0) {
+                    document.getElementById("pid1").innerHTML = `The factorial of ${number3} is 1.`;
+                } else {
+                    let fact = 1;
+                    for (i = 1; i <= number3; i++) {
+                        fact *= i;
+                    }
+                    document.getElementById("pid1").innerHTML = `The factorial of ${number3} is ${fact}`;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container" style="border: 1px solid black;">
+            <h1>Assignment 3</h1>
+            <div class="ass">
+                <input type="text" placeholder="Enter year.." id="input" class="input-grp" />
+                <button onclick="checkLeapYear()" class="btn">Show LeapYear</button>
+                <p id="p"></p>
+                <input type="text" placeholder="Enter Number" id="input1" class="input-grp" />
+                <button onclick="isPrime()" class="btn">Show-Prime</button>
+                <p id="pid"></p>
+                <input type="text" placeholder="Enter Number" id="input2" class="input-grp" />
+                <button onclick="isEvenOdd()" class="btn">Even-Odd</button>
+                <p id="pi"></p>
+                <input type="text" placeholder="Enter No of Rows" id="rows" class="input-grp" />
+                <input type="text" placeholder="Enter No of Col" id="cols" class="input-grp" />
+                <button class="btn-grp" onclick="patternPrinter()">Show Pattern</button>
+                <div id="pattern"></div>
+                <br />
+                <input type="text" placeholder="Enter Number.." id="input3" class="input-grp" />
+                <button onclick="findFactorial()" class="btn">Show Factorial</button>
+                <p id="pid1"></p>
+            </div>
+        </div>
+    </body>
+</html>

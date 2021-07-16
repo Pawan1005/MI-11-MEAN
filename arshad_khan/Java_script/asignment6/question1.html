@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>question1</title>
+    </head>
+    <body>
+        <div
+            class="main containe"
+            style="width: 400px; height: 500px; border: 2px solid black; position: absolute; top: 50px; left: 600px; background-color: brown"
+        >
+            <h1 style="text-align: center">Question 1</h1>
+            <h3 id="pid">Input Array Elements</h3>
+            <script>
+                let arr = new Array(5);
+                let input = document.getElementById("pid");
+                for (let i = 0; i < 5; i++) {
+                    arr[i] = prompt("Enter  name:" + (i + 1));
+                }
+                input.innerHTML += `<div>${arr}</div>`;
+                for (let i = 0; i < 5; i++) {
+                    input.innerHTML += `<div>Name ${i + 1} : ${arr[i]}</div>`;
+                }
+            </script>
+        </div>
+    </body>
+</html>

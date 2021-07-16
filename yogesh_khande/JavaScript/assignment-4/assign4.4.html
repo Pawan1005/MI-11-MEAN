@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vowels</title>
+        <script>
+            function add() {
+                var inp = document.getElementById("cra").value;
+                if (inp == "a" || inp == "e" || inp == "i" || inp == "o" || inp == "u") {
+                    document.getElementById("pid").innerHTML = "vowels";
+                } else {
+                    document.getElementById("pid").innerHTML = "consonants";
+                }
+            }
+        </script>
+    </head>
+    <body style="text-align: center; background-color: rgb(230, 71, 14); margin-top: 100px">
+        <h1><hr>*Find Vowels & Consonants*<hr></h1>
+        <input type="text" id="cra" maxlength="1" placeholder="Enter your Alphabet"/>
+        <br><br>
+        <button onclick="add()">GET</button>
+        <p id="pid"></p>
+    </body>
+</html>

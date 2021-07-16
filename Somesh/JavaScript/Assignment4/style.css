@@ -1,0 +1,79 @@
+body {
+    background: linear-gradient(155deg, #fead39, #f64137);
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container {
+    border-radius: 16px;
+    background-color: rgb(255, 255, 255);
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    box-shadow: 0px 20px 20px rgba(0, 0, 0, 0.2),
+        inset 0px 0px 20px rgba(102, 102, 102, 0.2);
+    min-width: 300px;
+    width: 25%;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    flex-direction: column;
+    margin: 10px;
+}
+.container p {
+    position: absolute;
+    top: -10px;
+    font-family: Poppins;
+    font-weight: 600;
+    font-size: 20px;
+}
+input {
+    background-color: rgb(255, 255, 255);
+    border: none;
+    outline: none;
+    height: 55px;
+    width: 50%;
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.6);
+    margin-top: 10px;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 20px;
+}
+button {
+    border-radius: 50px;
+    height: 50px;
+    width: 170px;
+    background: linear-gradient(155deg, #fead39, #f64137);
+    box-shadow: 0px 10px 40px 5px rgba(255, 99, 71, 0.541);
+    border: none;
+    color: white;
+    font-family: Poppins;
+    font-weight: 600;
+    margin-top: 14px;
+    outline: none;
+    font-size: 16px;
+}
+.input-box {
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
+}
+.output-box {
+    background-color: #ff7c40;
+    padding: 15px;
+    border-radius: 10px;
+    color: #ffffff;
+    font-family: Poppins;
+    stroke-width: 500;
+    box-shadow: inset 0px 0px 10px #a558008c;
+    width: 170px;
+    text-align: center;
+}

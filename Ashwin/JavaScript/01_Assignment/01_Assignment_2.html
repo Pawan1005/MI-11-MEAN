@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Celcius To Ferhenhite Calculator</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <style>
+            .box {
+                height: auto;
+                width: fit-content;
+                background-color: bisque;
+                border: 1px solid black;
+                background-image: url("Images/1.webp");
+                margin-top: 250px;
+                margin-left: 550px;
+                border-radius: 4px;
+            }
+            .boxinner {
+                background-image: url("Images/background.jpg");
+            }
+        </style>
+        <script>
+            function fun() {
+                var C = parseInt(document.getElementById("num").value);
+                var F = (C * 9) / 5 + 32;
+                parseInt((document.getElementById("pid").innerHTML = C + " °C " + "is equal to " + F + " °F"));
+            }
+        </script>
+    </head>
+    <body>
+        <div class="box">
+            <h1 class="text-white"><b>Conversion of Celcius to Fahrenheit </b></h1>
+            <div class="m-4 boxinner text-black p-4 shadow">
+                <label for="">Temp:</label>
+                <input type="number" name="" id="num" class="form-control mt-3" />
+                <label for=""><b>°C</b></label>
+                <button onclick="fun()" class="btn-danger mt-5">Convert</button><br />
+                <h3><b>After Conversion</b></h3>
+                <p id="pid"></p>
+            </div>
+        </div>
+    </body>
+</html>

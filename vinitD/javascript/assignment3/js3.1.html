@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>js3.1</title>
+        <style>
+            body {
+                background-color: indianred;
+            }
+            h1 {
+                background-color: rgba(0, 0, 0, 0.377);
+                text-align: center;
+                text-shadow: 1px 1px grey;
+            }
+            div {
+                display: flex;
+                margin-left: 650px;
+                margin-top: 200px;
+            }
+            input {
+                margin-left: 15px;
+                height: 50px;
+                color: rgb(0, 0, 0);
+                font-weight: bolder;
+                background-color: rgb(136, 136, 136);
+                padding-left: 20px;
+            }
+            button {
+                color: black;
+                background-color: cornflowerblue;
+                width: 50px;
+                margin-left: 800px;
+                margin-top: 20px;
+                width: 100px;
+                height: 50px;
+            }
+            h3 {
+                text-shadow: 1.1px 1.1px rgb(255, 0, 0);
+            }
+            p {
+                text-align: center;
+                font-weight: bolder;
+            }
+        </style>
+        <script>
+            function add() {
+                a = parseInt(document.getElementById("num1").value);
+                if (a % 400 == 0) {
+                    document.getElementById("pid1").innerHTML = +a + " is a leap year";
+                } else {
+                    year = a;
+                    if (year % 4 == 0) {
+                        document.getElementById("pid1").innerHTML = +year + " is a leap year";
+                    } else if (year % 4 != 0) {
+                        document.getElementById("pid1").innerHTML = +year + " is not a leap year";
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>CHECK LEAP YEAR</h1>
+        <hr />
+        <div>
+            <h3>ENTER YEAR :</h3>
+            <input type="text" id="num1" placeholder="Enter year to check" />
+        </div>
+        <button onclick="add()">check</button>
+
+        <p id="pid1"></p>
+    </body>
+</html>

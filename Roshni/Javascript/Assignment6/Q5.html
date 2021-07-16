@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calculate factorial and list in descending order</title>
+        <style>
+            .box1 {
+                width: 500px;
+                height: 300px;
+                background-color: rgb(212, 62, 125);
+            }
+            .btn1 {
+                color: rgb(39, 140, 123);
+            }
+            #num1,
+            #num2 {
+                color: greenyellow;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <fieldset class="box1">
+                <h1>Factorial</h1>
+                <button onclick="fact1()">Click</button>
+                <div>
+                    <p>Entered numbers : <span id="num1"></span><br /><br />Factorial of numbers : <span id="num2"></span><span id="num3"></span></p>
+                </div>
+                <script>
+                    function fact1() {
+                        var num_arr = [],
+                            arr_x,
+                            fact_arr = [];
+                        for (let i = 0; i < 5; i++) {
+                            arr_x = prompt("Enter a number : ");
+                            if (arr_x == "X" || arr_x == "x" || arr_x == null) {
+                                break;
+                            }
+                            num_arr.push(parseInt(arr_x));
+                            document.getElementById("num1").innerHTML += " &emsp; " + arr_x;
+                            fact_arr.push(fact(num_arr[i]));
+                            document.getElementById("num2").innerHTML += " &ensp; " + fact(num_arr[i]);
+                        }
+                        function fact(num) {
+                            if (num == 0) return 1;
+                            return num * fact(num - 1);
+                        }
+                        document.getElementById("num3").innerHTML =
+                            "<br><br>Descending order &nbsp; = &nbsp;" +
+                            fact_arr
+                                .sort(function (x, y) {
+                                    return y - x;
+                                })
+                                .join("&nbsp;  &nbsp;");
+                    }
+                </script>
+            </fieldset>
+        </div>
+    </body>
+</html>

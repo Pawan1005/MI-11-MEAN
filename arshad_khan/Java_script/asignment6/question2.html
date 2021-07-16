@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>question2</title>
+    </head>
+    <body>
+        <div
+            class="main containe"
+            style="width: 400px; height: 500px; border: 2px solid black; position: absolute; top: 50px; left: 600px; background-color: brown"
+        >
+            <h1 style="text-align: center">Question 2</h1>
+            <h3 id="pid"></h3>
+            <script>
+                let arr = [];
+                let container = document.getElementById("pid");
+                while (true) {
+                    let temp = prompt("Enter a name ");
+                    if (temp == "X" || temp == "x" || temp == null) break;
+                    arr.push(temp);
+                }
+                container.innerHTML += ` <div>${arr.join("~")}</div>`;
+                container.innerHTML += ` <div>${arr.sort()}</div>`;
+                container.innerHTML += ` <div>${arr.reverse()}</div>`;
+            </script>
+        </div>
+    </body>
+</html>

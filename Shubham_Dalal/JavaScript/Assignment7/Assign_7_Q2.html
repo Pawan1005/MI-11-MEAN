@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="Assignment7.css" />
+        <title>Question 2</title>
+        <script>
+            function num() {
+                var arr = [];
+                var number = parseInt(document.getElementById("num").value);
+                for (var i = 0; i < number; i++) {
+                    arr[i] = prompt("enter the Marks : ");
+                    j = i + 1;
+                    document.getElementById("divid").innerHTML += "Mark : " + j + " is >> " + arr[i] + "<br>";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="main">
+            <h4>Enter the number of marks you have to enter</h4>
+            <input type="number" id="num" placeholder="Enter marks here"/>
+            <button onclick="num()">click me</button>
+            <h4>Your result ::</h4>
+            <div id="divid"></div>
+        </div>
+    </body>
+</html>

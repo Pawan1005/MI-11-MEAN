@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous"/>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+        <title>Pattern</title>
+        <style>
+            .box {
+                margin-top: 250px;
+                height: 400px;
+                width: 550px;
+                border: 1px solid black;
+                border-radius: 13px;
+                margin-left: 20px;
+                margin-right: 20px;
+                padding: 20px;
+                background: url(plain.jpg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="box">
+                    <h1 class="text-center">Pattern</h1>
+                    <div class="container">
+                        <div id="result" style="margin-left: 150px; margin-top: 50px; color: black; font-size: 25px"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <script>
+            let result = document.getElementById("result");
+            for (let i = 1; i < 7; i++) {
+                for (let j = 1; j < i; j++) {
+                    result.innerHTML += ` ${j} `;
+                }
+                result.innerHTML += "1 <br>";
+            }
+        </script>
+    </body>
+</html>

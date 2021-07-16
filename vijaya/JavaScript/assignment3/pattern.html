@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pattern Demo</title>
+    <style>
+        .name {
+            position: relative;
+            width: 500px;
+            background-color: rgba(217, 241, 106, 0.918);
+            padding: 10px 0px 10px 0px;
+            border-radius: 15px 15px 0px 0px;
+            color: rgb(107, 26, 238);
+            text-align: center;
+            margin-top: 80px;
+            margin-left: 400px;
+        }
+        .one {
+            background-color: white;
+            width: 120px;
+            margin-left: 180px;
+        }
+    </style>
+    <script>
+        function show() {
+            var i, j, row, col;
+            row = Number(document.getElementById("row").value);
+            col = Number(document.getElementById("col").value);
+            for (i = 1; i <= row; i++) {
+                for (j = 1; j <= col; j++) {
+                    document.getElementById("answer").innerHTML += " * ";
+                }
+                document.getElementById("answer").innerHTML += "<br>";
+            }
+        }
+    </script>
+    </head>
+    <body style="background-color: rgb(191, 102, 233);">
+        <div class="name">
+            <h2>Rectangle Pattern</h2>
+            <hr style="color: white;">
+            <br>
+            Enter the row: <input id="row"></br></br>
+            Enter the col: <input id="col"></br></br>
+            <div class="one">
+                <p><span id="answer"></span></p>
+                <button onclick="show()" style="padding: 6px; background-color: rgb(42, 192, 238);">Show</button></br></br>
+            </div>
+        </div>
+    </body>
+</html>
