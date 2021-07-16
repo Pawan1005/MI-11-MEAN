@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Question_2</title>
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                margin-top: 50px;
+                align-items: center;
+                justify-content: center;
+                background-color: gainsboro;
+                width: 500px;
+                height: 400px;
+                margin: auto;
+                border-radius: 20px;
+            }
+            #pid {
+                color: black;
+                text-align: center;
+                font-size: large;
+                font-weight: 300;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <h3 style="text-align: center;">Initial Values</h3>
+                <p id="pid"></p>
+                <h3 style="text-align: center;">Tax Status</h3>
+                <p id="tax"></p>
+                <h3 style="text-align: center;">Final Results</h3>
+                <p id="pid1"></p>
+            </div>
+        </div>
+        <script>
+            class Employee {
+                constructor(eno, Name, add, city, sal) {
+                    this.empno = eno;
+                    this.name = Name;
+                    this.address = add;
+                    this.city = city;
+                    this.salary = sal;
+                    this.gross = 0;
+                    this.net = 0;
+                }
+                show_init() {
+                    document.getElementById("pid").innerHTML += "Employee No:-" + this.empno + "<br> ";
+                    document.getElementById("pid").innerHTML += "Name:-" + this.name + "<br>";
+                    document.getElementById("pid").innerHTML += "Address:-" + this.address + "<br>";
+                    document.getElementById("pid").innerHTML += "City:-" + this.city + "<br>";
+                    document.getElementById("pid").innerHTML += "Salary:-" + this.salary + "<br><br>";
+                }
+                calculate() {
+                    var da = this.salary * 0.3;
+                    var hra = this.salary * 0.15;
+                    var pf = this.salary * 0.125;
+                    this.gross = this.salary + da + hra;
+                    this.net = this.gross - pf;
+                    debugger;
+                    if (this.gross > 180000) {
+                        document.getElementById("tax").innerHTML += "“Income TaxPayer”";
+                    } else {
+                        document.getElementById("tax").innerHTML += "“Not a income TaxPayer”";
+                    }
+                }
+                display() {
+                    document.getElementById("pid1").innerHTML += "Name:-" + this.name + "<br>";
+                    document.getElementById("pid1").innerHTML += "Employee No:-" + this.empno + "<br> ";
+                    document.getElementById("pid1").innerHTML += "Gross Salary:-" + this.gross + "<br>";
+                    document.getElementById("pid1").innerHTML += "Net Salary:-" + this.net + "<br>";
+                }
+            }
+            var obj;
+            var empno = prompt("Enter employee number");
+            var Name = prompt("Enter employee name");
+            var address = prompt("Enter employee address");
+            var city = prompt("Enter employee city");
+            var salary = parseInt(prompt("Enter employee salary"));
+            let Em1 = new Employee(empno, Name, address, city, salary);
+            Em1.show_init();
+            Em1.calculate();
+            Em1.display();
+        </script>
+    </body>
+</html>
