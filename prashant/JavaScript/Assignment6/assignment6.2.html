@@ -52,13 +52,12 @@
                     document.getElementById("pid").innerHTML ="comma seperated list of all the names : " +a;
                     document.getElementById("pie").innerHTML ="After using join list of all the names : " +a.join(" ~ ");
                 }
-                function myFunction() {
-                   
+                function myFunction() {    
                     a.sort();
                     document.getElementById("pif").innerHTML = "After using Sort Asce list of all the names : " +a;
                     a.reverse();
                     document.getElementById("pig").innerHTML = "After using Sort Desc list of all the names : " +a;
-
+                    
                 }
                 myFunction();
             }
@@ -94,7 +93,6 @@
                 <P id="pif"></P>
                 <P id="pig"></P>
             </div>
-
         </div>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
