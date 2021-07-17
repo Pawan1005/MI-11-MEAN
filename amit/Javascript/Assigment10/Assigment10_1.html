@@ -1,0 +1,67 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>First character uppercase or not</title>
+        <style>
+           h1 {
+                text-align: center;
+                color: red;
+                margin-top: 4%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #a3a3a3;
+                width: 410px;
+                height: 420px;
+                margin: auto;
+                padding-top: 15px;
+                gap: 40px;
+                border-radius: 10px;
+            }
+            button {
+                background-color: #ff0000;
+                color: white;
+                padding: 7px 11px;
+                margin: 0 8px;
+                font-weight: bold;
+                font-size: 17px;
+                border: 1px solid gray;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>First Character Uppercase or Not</h1>
+        <div class="main">
+            <div>
+                <label for="">Enter the string</label>
+                <input type="text" id="firstnumber">
+            </div>
+            <div>
+                <p>&nbsp;&nbsp;&nbsp;<span id="num1"></span></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="uppercase()">Check</button>
+            </div>
+        </div>
+        <script>
+            function uppercase() {
+                var regExp, str;
+                str = document.getElementById("firstnumber").value;
+                regExp = /^[A-Z]/;
+                if (regExp.test(str)) {
+                    document.getElementById("num1").innerHTML = "UPPERCASE";
+                } else {
+                    document.getElementById("num1").innerHTML = "not UPPERCASE";
+                }
+            }
+        </script>
+    </body>
+</html>
+
+  

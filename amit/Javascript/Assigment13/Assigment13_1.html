@@ -1,0 +1,55 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Q1_Date_time</title>
+        <style>
+             h1 {
+                text-align: center;
+                color: red;
+                margin-top: 4%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: rgb(157, 153, 192);
+                width: 400px;
+                height: 420px;
+                margin: auto;
+                padding-top: 15px;
+            }
+            p {
+                min-width: 90px;
+                height: 25px;
+                padding: 12px 20px 12px 20px;
+                background-color: white;
+                border: 1px solid #0000004b;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Date and Time</h1>
+        <div class="main">
+            <div>
+                <p>Date is&nbsp;:&ensp;<span id="num1"></span><br /><br />Time is&nbsp;:&ensp;<span id="num2"></span></p>
+            </div>
+        </div>
+        <script>
+            let d = new Date();
+            let hours = d.getHours();
+            let minutes = d.getMinutes();
+            let local = hours >= 12 ? "PM" : "AM";
+            hours = hours % 12;
+            if (minutes < 10) {
+                minutes = "0" + minutes;
+            }
+            alert(d.toDateString() + ",   " + hours + " : " + minutes + " " + local);
+            document.getElementById("num1").innerHTML = d.toDateString();
+            document.getElementById("num2").innerHTML = hours + " : " + minutes + " " + local;
+        </script>
+    </body>
+</html>

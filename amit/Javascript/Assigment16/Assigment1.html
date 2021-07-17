@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <body>
+            <style>
+                .btn {
+                    color: rgb(233, 227, 227);
+                    background-color: red;
+                    font-size: 23px;
+                    border-radius: 13px;
+                }
+            </style>
+            <div id="myDIV">
+                <h1>Lorem</h1>
+            </div>
+            <button class="btn" onclick="myFunction1()" style="text-align: center">center</button>
+            <button class="btn" onclick="myFunction2()" style="text-align: left">left</button>
+            <button class="btn" onclick="myFunction3()" style="text-align: right">right</button>
+            <script>
+                function myFunction1() {
+                    document.getElementById("myDIV").style.textAlign = "center";
+                }
+                function myFunction2() {
+                    document.getElementById("myDIV").style.textAlign = "left";
+                }
+
+                function myFunction3() {
+                    document.getElementById("myDIV").style.textAlign = "right";
+                }
+            </script>
+        </body>
+    </head>
+</html>
