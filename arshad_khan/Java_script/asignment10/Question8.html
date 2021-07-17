@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>alpha dash or underscore</title>
+        <style>
+            body {
+                background-color: cyan;
+            }
+            h1 {
+                text-align: center;
+                margin-top: 4%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: violet;
+                width: 430px;
+                height: 440px;
+                margin-left: 700px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Alpha Dash or Underscore</h1>
+        <div class="main">
+            <div>
+                <label for="">&ensp;Enter alpha dash</label>
+                <input type="text" id="firstnumber" />
+            </div>
+            <div>
+                <p>It is&nbsp;&nbsp;&nbsp;<span id="num1"></span></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="alphaNum()">Check</button>
+            </div>
+        </div>
+        <script>
+            function alphaNum() {
+                function alphaDash(str) {
+                    regExp = /^[a-zA-Z0-9/\-\_]+$/;
+                    if (regExp.test(str)) {
+                        document.getElementById("num1").innerHTML = "Alpha Dash Uderscore";
+                    } else {
+                        document.getElementById("num1").innerHTML = "not Alpha Dash Uderscore";
+                    }
+                }
+                var regExp, str;
+                str = document.getElementById("firstnumber").value;
+                alphaDash(str);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Url</title>
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+                transition: 0.3s;
+                width: 50%;
+                height: 300px;
+                border-radius: 20px;
+                background-color: indianred;
+                margin: auto;
+                margin-top: 50px;
+            }
+            .btn {
+                position: relative;
+                border: none;
+                font-size: 20px;
+                padding: 10px;
+                width: 180px;
+                text-align: center;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+                text-decoration: none;
+                overflow: hidden;
+                cursor: pointer;
+                margin-left: 160px;
+                background-color: white;
+                color: black;
+            }
+            #pid {
+                color: white;
+                text-align: center;
+                font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <h1 style="text-align: center;">Valid Url or Not</h1>
+                <label for="">Enter the url : </label>
+                <input type="text" id="text" /><br><br>
+                <button class="btn" onclick="validUrl()">Check</button>
+                <p id="pid"></p>
+            </div>
+        </div>
+        <script>
+            function validUrl() {
+                function url(str) {
+                    regExp = /^(https:\/\/www\.|http:\/\/www\.|www\.)[a-zA-Z0-9\-_$]+\.[a-zA-Z]{2,3}$/;
+                    if (regExp.test(str)) {
+                        document.getElementById("pid").innerHTML = "It is a URL";
+                    } else {
+                        document.getElementById("pid").innerHTML = "It is not a valid  URL";
+                    }
+                }
+                var regExp, str;
+                str = document.getElementById("text").value;
+                url(str);
+            }
+        </script>
+    </body>
+</html>

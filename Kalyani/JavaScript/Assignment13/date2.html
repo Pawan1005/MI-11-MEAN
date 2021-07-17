@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Day1</title>
+        <style>
+            p {
+                border: 1px solid gray;
+                width: 25%;
+                height: 50%;
+                text-align: center;
+                background-color: black;
+                color: blanchedalmond;
+                font-size: 20px;
+                margin: 150px 0 0 450px;
+            }
+            body {
+                background-color: rgba(0, 0, 0, 0.514);
+            }
+        </style>
+    </head>
+    <body>
+        <p id="p"></p>
+        <script>
+            let d = new Date(2021, 0, 2);
+            var day = ["MO", "TU", "WE", "TH", "FR", "ST", "SU"];
+            document.getElementById("p").innerHTML = day[d.getDay(d)];
+        </script>
+    </body>
+</html>
