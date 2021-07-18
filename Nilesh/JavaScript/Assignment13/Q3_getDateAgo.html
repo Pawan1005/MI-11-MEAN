@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Date_Ago</title>
+        <style>
+            body {
+                background-color: #470c23;
+            }
+            h1 {
+                text-align: center;
+                color: white;
+                margin-top: 4%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #fcf3c1;
+                width: 400px;
+                height: 430px;
+                margin: auto;
+                gap: 11px;
+                border-radius: 10px;
+            }
+            .para1 {
+                min-width: 90px;
+                min-height: 50px;
+                border: 1px solid #0000004b;
+                border-radius: 5px;
+                background-color: white;
+                font-weight: bold;
+                padding: 24px 32px 0px 32px;
+            }
+            .display2 {
+                display: flex;
+                justify-content: center;
+                min-width: 90px;
+                min-height: 50px;
+                border: 1px solid #0000004b;
+                border-radius: 5px;
+                background-color: white;
+                font-weight: bold;
+                padding: 17px 40px 17px 40px;
+            }
+            .para2, .para3 {
+                display: flex;
+                flex-direction: column; 
+            }
+            .para3 {
+                margin-left: 6px;
+            }
+            span {
+                margin: 1px 0;
+            }
+            #num, #num1, #num2, #num3 {
+                color: #ff0000;
+                font-size: 18px;
+                margin: 0 0;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Date Ago</h1>
+        <div class="main">
+            <div>
+                <p class="para1">Current Date &nbsp;:&ensp;<span id="num"></span></p>
+            </div>
+            <div class="display2">
+                <p class="para2"><span>Date 2 day Ago &ensp;:&ensp;</span><br><br><span>Date 1 day Ago &ensp;:&ensp;</span><br><br><span>Date 1 Year Ago&ensp;:&ensp;</span></p>
+                <p class="para3"><span id="num1"></span><br><br><span id="num2"></span><br><br><span id="num3"></span></p>
+            </div>
+        </div>
+        <script>
+            function getDateAgo(date, day) {
+                let d1 = new Date(date);
+                d1.setDate(date.getDate() - day);
+                return d1.toLocaleDateString();
+            }
+            let date = new Date();
+            let month = date.getMonth()+1;
+            let year = date.getFullYear();
+            let year2 = date.getFullYear()-1;
+            alert("Date 2 day Ago  :   " +getDateAgo(date, 2));
+            alert("Date 1 day Ago  :   " +getDateAgo(date, 1));
+            alert("Date 1 Year Ago  :   " +getDateAgo(date, 365));
+            document.getElementById("num").innerHTML = date.toDateString();
+            document.getElementById("num1").innerHTML = getDateAgo(date, 2);
+            document.getElementById("num2").innerHTML = getDateAgo(date, 1);
+            document.getElementById("num3").innerHTML = getDateAgo(date, 365);     
+        </script>
+    </body>
+</html>

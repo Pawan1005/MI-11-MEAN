@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=S, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            function red() {
+                document.getElementById("para").style.color = "red";
+            }
+            function blue() {
+                document.getElementById("para").style.color = "blue";
+            }
+            function green() {
+                document.getElementById("para").style.color = "green";
+            }
+            function size18() {
+                document.getElementById("para").style.fontSize = "18px";
+            }
+            function size24() {
+                document.getElementById("para").style.fontSize = "24px";
+            }
+            function size28() {
+                document.getElementById("para").style.fontSize = "28px";
+            }
+        </script>
+        <style>
+            body {
+                background-color: rgb(224, 197, 160);
+            }
+            .content {
+                position: absolute;
+                top: 20%;
+                left: 20%;
+                right: 20%;
+            }
+            fieldset {
+                width: fit-content;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <p id="para">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda blanditiis quibusdam iste sed hic rem nam voluptate fugiat nulla incidunt
+                tenetur expedita autem magnam quia enim omnis, eligendi libero nihil? Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit
+                quibusdam vitae nemo repudiandae, temporibus consectetur? Ad ullam illo labore excepturi voluptate et deleniti a nulla, ratione dolor delectus
+                omnis quaerat?
+            </p>
+            <br /><br /><br />
+            <fieldset>
+                color:<button onclick="red()">red</button>
+                <button onclick="blue()">blue</button>
+                <button onclick="green()">green</button> <br /><br />
+                size:&nbsp;&nbsp;<button onclick="size18()">18</button>
+                <button onclick="size24()">36</button>
+                <button onclick="size28()">56</button>
+            </fieldset>
+        </div>
+    </body>
+</html>

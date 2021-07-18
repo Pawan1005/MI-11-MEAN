@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Change_image</title>
+        <style>
+            body {
+                background-color: #470c23;
+            }
+            .main-box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: #fcf3c1;
+                width: 440px;
+                height: 464px;
+                padding-top: 10px;
+                border-radius: 10px;
+                margin: auto;
+                margin-top: 4%;
+            }
+            h1 {
+                text-align: center;
+            }
+            .box {
+                margin-top: 22px;
+            }
+            img {
+                width: 300px;
+                height: 300px;
+                border-radius: 6px;
+            }
+            button {
+                background-color: #ff0000;
+                color: white;
+                padding: 5px 11px;
+                margin: 0 8px 10px 8px;
+                font-weight: bold;
+                font-size: 17px;
+                border: 1px solid gray;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-box">
+            <h1 id="heading">Nature</h1>
+            <img src="Images/nature.jpg" id="image" alt="nature" />
+            <div class="box">
+                <button onclick="image()">Play</button>
+            </div>
+        </div>
+        <script>
+            let flag = 0;
+            function image() {
+                if (flag == 0) {
+                    document.getElementById("heading").innerHTML = "Waterfall";
+                    document.getElementById("image").src = "Images/waterfall.jpg";
+                    flag = 1;
+                } else if (flag == 1) {
+                    document.getElementById("heading").innerHTML = "Tree";
+                    document.getElementById("image").src = "Images/tree.jpeg";
+                    flag = 2;
+                } else {
+                    document.getElementById("heading").innerHTML = "Nature";
+                    document.getElementById("image").src = "Images/nature.jpg";
+                    flag = 0;
+                }
+            }
+        </script>
+    </body>
+</html>
