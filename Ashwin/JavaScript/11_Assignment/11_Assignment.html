@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>search marks by roll no</title>
+        <link rel="stylesheet" href="11_Assignment.css">
+        <script src="11_Assignment.js"></script>
+    </head>
+    <body>
+        <h1>Display Marks in Decending Order or Search Marks by Roll No</h1>
+        <div class="main-box">
+            <div class="main" id="main1">
+                <div class="section">
+                    <div class="section1">
+                        <div>
+                            <label for="">Roll No 1 &nbsp;</label>
+                            <input type="text" id="one" />
+                        </div>
+                        <div>
+                            <label for="">Roll No 2 &nbsp;</label>
+                            <input type="text" id="two" />
+                        </div>
+                        <div>
+                            <label for="">Roll No 3 &nbsp;</label>
+                            <input type="text" id="three" />
+                        </div>
+                        <div>
+                            <label for="">Roll No 4 &nbsp;</label>
+                            <input type="text" id="four" />
+                        </div>
+                        <div>
+                            <label for="">Roll No 5 &nbsp;</label>
+                            <input type="text" id="five" />
+                        </div>
+                        <div>
+                            <label for="">Roll No 6 &nbsp;</label>
+                            <input type="text" id="six" />
+                        </div>
+                        <div>
+                            <label for="">Roll No 7 &nbsp;</label>
+                            <input type="text" id="seven" />
+                        </div>
+                        <div>
+                            <label for="">Roll No 8 &nbsp;</label>
+                            <input type="text" id="eight" />
+                        </div>
+                        <div>
+                            <label for="">Roll No 9 &nbsp;</label>
+                            <input type="text" id="nine" />
+                        </div>
+                        <div>
+                            <label for="">Roll No 10 &nbsp;</label>
+                            <input type="text" id="ten" />
+                        </div>
+                    </div>
+                    <div class="section2">
+                        <div>
+                            <label for="">Marks 1 &nbsp;</label>
+                            <input type="text" id="firstnumber" />
+                        </div>
+                        <div>
+                            <label for="">Marks 2 &nbsp;</label>
+                            <input type="text" id="secondnumber" />
+                        </div>
+                        <div>
+                            <label for="">Marks 3 &nbsp;</label>
+                            <input type="text" id="thirdnumber" />
+                        </div>
+                        <div>
+                            <label for="">Marks 4 &nbsp;</label>
+                            <input type="text" id="fourthnumber" />
+                        </div>
+                        <div>
+                            <label for="">Marks 5 &nbsp;</label>
+                            <input type="text" id="fifthnumber" />
+                        </div>
+                        <div>
+                            <label for="">Marks 6 &nbsp;</label>
+                            <input type="text" id="sixthnumber" />
+                        </div>
+                        <div>
+                            <label for="">Marks 7 &nbsp;</label>
+                            <input type="text" id="seventhnumber" />
+                        </div>
+                        <div>
+                            <label for="">Marks 8 &nbsp;</label>
+                            <input type="text" id="eightnumber" />
+                        </div>
+                        <div>
+                            <label for="">Marks 9 &nbsp;</label>
+                            <input type="text" id="ninenumber" />
+                        </div>
+                        <div>
+                            <label for="">Marks 10 &nbsp;</label>
+                            <input type="text" id="tenthnumber" />
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <button class="btn1" onclick="display_marks()">
+                        Check
+                    </button>
+                </div>
+            </div>
+            <div class="main" id="main2">
+                <br />
+                <div>
+                    <input type="text" id="search" />
+                    <button class="btn1" onclick="search()">Search</button>
+                </div>
+                <div>
+                    <h3><span id="searching"></span></h3>
+                </div>
+                <div class="display">
+                    <div class="display2">
+                        <div>
+                            <h2><span id="total_name">Roll No</span></h2>
+                        </div>
+                        <div>
+                            <h2><span id="total_result"></span></h2>
+                        </div>
+                    </div>
+                    <div class="display2">
+                        <div>
+                            <h2><span id="total_name1">Marks</span></h2>
+                        </div>
+                        <div>
+                            <h2><span id="total_result1"></span></h2>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <h3>Decending : &ensp;<span id="after_sorting"></span></h3>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
