@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Country or capital</title>
+        <style>
+            body {
+                background-color: #470c23;
+            }
+            h1 {
+                text-align: center;
+                color: white;
+                margin-top: 5%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #fcf3c1;
+                width: 400px;
+                height: 400px;
+                margin: auto;
+                gap: 22px;
+                border-radius: 10px;
+            }
+            label {
+                font-size: 20px;
+            }
+            .label2 {
+                margin-top: 40px;
+            }
+            select {
+                width: 60%;
+                height: 40px;
+                font-size: 20px;
+                outline: none;
+                border: 2px solid #0000004b;
+                background: #ffffff;
+                padding-left: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Select Country to find its Capital</h1>
+        <div class="main">
+            <label for="country">Country</label>
+            <select name="country" id="country">
+                <option value="0">India</option>
+                <option value="1">Australia</option>
+                <option value="2">Brazil</option>
+                <option value="3">Canada</option>
+                <option value="4">Sri Lanka</option>
+                <option value="5">Germany</option>
+            </select>
+            <label for="capital" class="label2">Capital</label>
+            <select name="capital" id="capital">
+                <option value="0">New Delhi</option>
+                <option value="1">Canberra</option>
+                <option value="2">Brasilia</option>
+                <option value="3">Ottawa</option>
+                <option value="4">Colombo</option>
+                <option value="5">Berlin</option>
+            </select>
+        </div>
+        <script>
+            let country = document.getElementById("country");
+            let capital = document.getElementById("capital");
+            country.onchange = function change() {
+                capital.selectedIndex = country.selectedIndex;
+            };
+        </script>
+    </body>
+</html>
