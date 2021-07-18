@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="Assignment_16.css">
+        <title>Change_image</title>
+       
+    </head>
+    <body>
+        <div class="main-box">
+            <h1 id="heading">Laptop</h1>
+            <img src="image_1.jpeg" id="image" alt="nature" height="300px" width="300px"/>
+            <div class="box">
+                <button onclick="image()" class="btn1 btn">Play</button>
+            </div>
+        </div>
+        <script>
+            let flag = 0;
+            function image() {
+                if (flag == 0) {
+                    document.getElementById("heading").innerHTML = "Laptop";
+                    document.getElementById("image").src = "image_1.jpeg";
+                    flag = 1;
+                } else if (flag == 1) {
+                    document.getElementById("heading").innerHTML = "Mobile";
+                    document.getElementById("image").src = "image_2.jpeg";
+                    flag = 2;
+                } else {
+                    document.getElementById("heading").innerHTML = "Desktop";
+                    document.getElementById("image").src = "image_3.jpeg";
+                    flag = 0;
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="Assignment_16.css" />
+        <title>Assignment16 | Q1</title>
+        <script>
+            function left() {
+                document.getElementById("hid").style.textAlign = "left";
+                document.getElementById("hid").style.boxShadow = "5px 5px 5px 10px red";
+            }
+            function Right() {
+                document.getElementById("hid").style.textAlign = "right";
+                document.getElementById("hid").style.boxShadow = "5px 5px 5px 10px gray";
+            }
+            function center() {
+                document.getElementById("hid").style.textAlign = "center";
+                document.getElementById("hid").style.boxShadow = "5px 5px 5px 10px brown";
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="hid">*** Inside the heading tag ***</h1>
+        <button onclick="left()" id="btn1" class="btn">Left</button>
+        <button onclick="center()" id="btn2" class="btn">Center</button>
+        <button onclick="Right()" id="btn3" class="btn">Right</button>
+    </body>
+</html>
