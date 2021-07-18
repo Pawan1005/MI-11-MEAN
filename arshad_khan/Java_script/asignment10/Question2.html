@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Check credit card number or not</title>
+        <style>
+            body {
+                background-color: cyan;
+            }
+            h1 {
+                text-align: center;
+                margin-top: 4%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: violet;
+                width: 430px;
+                height: 440px;
+                margin-left: 700px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Check Credit Card number or Not</h1>
+        <div class="main">
+            <div>
+                <label for="">Enter 16 digit number</label>
+                <input type="text" id="firstnumber" />
+            </div>
+            <div>
+                <p>It is&nbsp;&nbsp;&nbsp;<span id="num1"></span></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="creditCard()">Check</button>
+            </div>
+        </div>
+        <script>
+            function creditCard() {
+                var regExp, str;
+                str = parseInt(document.getElementById("firstnumber").value);
+                regExp = /^[0-9]{16}$/;
+                if (regExp.test(str)) {
+                    document.getElementById("num1").innerHTML = "Credit Card Number";
+                } else {
+                    document.getElementById("num1").innerHTML = "not Credit Card Number";
+                }
+            }
+        </script>
+    </body>
+</html>

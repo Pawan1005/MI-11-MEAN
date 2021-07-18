@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            i = 0;
+            var arr = ["mango.png", "orange.png", "strawberry.png"];
+            var hea = ["mango", "orange", "strawberry"];
+            function next() {
+                document.getElementById("img").src = arr[i];
+                document.getElementById("head").innerHTML = hea[i];
+                i == 2 ? (i = 0) : i++;
+            }
+        </script>
+        <style>
+            body {
+                padding: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="head">mango</h1>
+        <img id="img" src="mango.png" alt="" width="300px" />
+        <br /><br />
+        <button onclick="next()">next</button>
+    </body>
+</html>
