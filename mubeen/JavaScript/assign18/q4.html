@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            function cc(n) {
+                let a = document.getElementById("coun").value;
+                let b = document.getElementById("cap");
+                switch (a) {
+                    case "India":
+                        b.value = "Delhi";
+                        break;
+                    case "Argentina":
+                        b.value = "Buenos-Aires";
+                        break;
+                    case "USA":
+                        b.value = "Washington";
+                        break;
+                    case "UAE":
+                        b.value = "Abu Dhabi";
+                        break;
+                }
+            }
+        </script>
+        <style>
+            body {
+                padding: 100px;
+                background-color: aliceblue;
+            }
+            .flex-container {
+                border: 1px solid black;
+                padding: 30px;
+                width: 400px;
+                position: absolute;
+                left: 30%;
+            }
+            .flex-container {
+                display: flex;
+            }
+            .fle {
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="flex-container">
+            <div class="fle">
+                country <br /><br />
+                <select onchange="cc()" name="" id="coun">
+                    <option value="Argentina">Argentina</option>
+                    <option value="India">India</option>
+                    <option value="USA">USA</option>
+                    <option value="UAE">UAE</option>
+                </select>
+                <br />
+            </div>
+            <div class="fle">
+                capital <br /><br />
+                <select name="" id="cap">
+                    <option value="Buenos-Aires">Buenos Aires</option>
+                    <option value="Delhi">Delhi</option>
+                    <option value="Washington">Washington</option>
+                    <option value="Abu Dhabi">Abu Dhabi</option>
+                </select>
+            </div>
+        </div>
+    </body>
+</html>
