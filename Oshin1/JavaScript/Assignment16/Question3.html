@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assign16_Q3</title>
+        <script>
+            function change() {
+                if (flag == 0) {
+                    document.getElementById("img1").src = "book_pile.jpeg";
+                    document.getElementById("pid").innerHTML = "Books pile";
+                    flag = 1;
+                } else if (flag == 1) {
+                    document.getElementById("img1").src = "blue_rose.webp";
+                    document.getElementById("pid").innerHTML = "Blue_rose";
+                    flag = 2;
+                } else {
+                    document.getElementById("img1").src = "tree.jpeg";
+                    document.getElementById("pid").innerHTML = "tree";
+                    flag = 0;
+                }
+            }
+        </script>
+    </head>
+    <body style="background-color: lavender">
+        <h1 id="pid">Image</h1>
+        <img src="book_pile.jpeg" id="img1" alt="images" style="height: 400px; width: 400px" />
+        <button id="btn1" onclick="change()">NEXT</button>
+        <script>
+            let flag = 0;
+        </script>
+    </body>
+</html>
