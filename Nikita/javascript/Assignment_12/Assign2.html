@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+            crossorigin="anonymous"/>
+        <title>Document</title>
+        <style>
+            body {
+                margin: 30px;
+                background-color: rgb(187, 145, 82);
+            }
+            .content {
+                background-color: rgb(187, 82, 134);
+                border: 1px solid black;
+                border-radius: 10px;
+                padding: 50px;
+                width: 500px;
+                min-height: 500px;
+                position: absolute;
+                left: 30%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <h3>Initial Values</h3>
+            <p id="root"></p>
+            <h3>Tax Paying Status</h3>
+            <p id="tax"></p>
+            <h3>Final Results</h3>
+            <p id="root1"></p>
+        </div>
+        <script>
+            class Employee {
+                constructor(eno, Name, add, city, sal) {
+                    this.empno = eno;
+                    this.name = Name;
+                    this.address = add;
+                    this.city = city;
+                    this.salary = sal;
+                    this.gross = 0;
+                    this.net = 0;
+                }
+                show_init() {
+                    document.getElementById("root").innerHTML += "Employee No:-" + this.empno + "<br> ";
+                    document.getElementById("root").innerHTML += "Name:-" + this.name + "<br>";
+                    document.getElementById("root").innerHTML += "Address:-" + this.address + "<br>";
+                    document.getElementById("root").innerHTML += "City:-" + this.city + "<br>";
+                    document.getElementById("root").innerHTML += "Salary:-" + this.salary + "<br><br>";
+                }
+                calculate() {
+                    var da = this.salary * 0.3;
+                    var hra = this.salary * 0.15;
+                    var pf = this.salary * 0.125;
+                    this.gross = this.salary + da + hra;
+                    this.net = this.gross - pf;
+                    debugger;
+                    if (this.gross > 180000) {
+                        document.getElementById("tax").innerHTML += "“Income TaxPayer”";
+                    } else {
+                        document.getElementById("tax").innerHTML += "“Not a income TaxPayer”";
+                    }
+                }
+                display() {
+                    document.getElementById("root1").innerHTML += "Name:-" + this.name + "<br>";
+                    document.getElementById("root1").innerHTML += "Employee No:-" + this.empno + "<br> ";
+                    document.getElementById("root1").innerHTML += "Gross Salary:-" + this.gross + "<br>";
+                    document.getElementById("root1").innerHTML += "Net Salary:-" + this.net + "<br>";
+                }
+            }
+            var obj;
+            var empno = prompt("enter employee number");
+            var Name = prompt("enter employee name");
+            var address = prompt("enter employee address");
+            var city = prompt("enter employee city");
+            var salary = parseInt(prompt("enter employee salary"));
+            let Em1 = new Employee(empno, Name, address, city, salary);
+            Em1.show_init();
+            Em1.calculate();
+            Em1.display();
+        </script>
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous">
+        </script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+            crossorigin="anonymous">
+        </script>
+    </body>
+</html>
