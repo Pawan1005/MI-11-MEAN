@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8 />
+        <title>Display The Marks Of Students</title>
+        <style>
+        h1 {
+            text-align: center;
+            color: rgb(189, 8, 107);
+            margin-top: 2%;
+        }
+        body {
+            padding-top: 50px;
+            background-color:rgb(250, 211, 139);  
+        }
+        .name {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: gray;
+            width: 500px;
+            height: 470px;
+            margin: auto;
+            padding-top: 25px;
+            gap: 5px;
+            border-radius: 10px;
+        }
+        .res {
+            background-color: white;
+            width: 200px;
+            padding-left: 10px;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Marks of Students</h1>
+        <div class="name">
+            Enter no.of subject:<input type="text" id="text1"></input>
+            Enter Marks of Students:<input type="text" id="text2"></input>
+            <input type="button" value="Add" onclick="add()"></input>
+            <input type="button" value="Display" onclick="display()"></input>
+            <div class="res" id="Result"></div>
+            <input type="button" value="sort" onclick="sort()"></input>
+            Total marks after sort:
+            <div class="res" id="Result1"></div>
+        </div>
+        <script>
+        var size, x = 1;
+        var array = Array();
+        function add() {
+            size = document.getElementById("text1").value;
+            array[x] = parseInt(document.getElementById("text2").value);
+            if (array[x] > 80) {
+                alert("invalid! please enter less than 80");
+            }
+            x++;
+            document.getElementById("text2").value = "";
+        }
+        function display() {
+            var total = 0, e = "";
+            for (var y = 1; y <= size; y++) {
+                total = (array[y] * 20 / 100) + array[y];
+                array[y] = parseInt(total);
+                e += "subject: " + y + " = " + array[y] + "<br/>";
+            }
+            document.getElementById("Result").innerHTML += "Total score of students:<br>" + e;
+        }
+        function sort() {
+            var res = "";
+            quickSort(array, 1, size);
+            for (let i = 1; i <= size; i++) {
+                res += "Total marks:" + i + " = " + array[i] + "<br>";
+            }
+            document.getElementById("Result1").innerHTML = "Total score of students:<br>" + res;
+        }
+        function partition(array, low, high) {
+            let pivot = array[high],i = low - 1,temp;
+            for (let j = low; j <= high; j++) {
+                if (pivot > array[j]) {
+                    i++;
+                    temp = array[j];
+                    array[j] = array[i];
+                    array[i] = temp;
+                }
+            }
+            temp = array[high];
+            array[high] = array[i + 1];
+            array[i + 1] = temp;
+            return i + 1;
+        }
+        function quickSort(array, low, high) {
+            if (low < high) {
+                pi = partition(array, low, high);
+                quickSort(array, low, pi - 1);
+                quickSort(array, pi + 1, high);
+            }
+        }
+        </script>
+    </body>
+</html>
