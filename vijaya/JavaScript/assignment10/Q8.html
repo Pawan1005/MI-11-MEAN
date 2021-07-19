@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>search alpha dash underscore string.</title>
+        <style>
+        body {
+            background-color: rgb(99, 95, 95);
+            padding-top: 20px;
+        }
+        h1 {
+            text-align: center;
+            color: rgb(117, 177, 5);
+            margin-top: 4%;
+        }
+        .name {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: rgb(11, 224, 214);
+            width: 500px;
+            height:200px;
+            margin: auto;
+            padding-top: 5px;
+            gap: 10px;
+            border-radius: 10px;
+        }
+        .res{
+            background-color: white;
+        }
+        </style>
+    </head>
+    <body>
+        <script>
+            function alphadash() {
+                var regExp, str;
+                str = document.getElementById("string").value;
+                regExp = /^[a-zA-Z0-9/\-\_]+$/;
+                if (regExp.test(str)) {
+                    document.getElementById("Result").innerHTML = "Given string is Alpha Dash Uderscore";
+                } 
+                else {
+                    document.getElementById("Result").innerHTML = "Given string is not Alpha Dash Uderscore";
+                }
+            }
+        </script>
+        <h1>Check Alpha dash underscore String.</h1>
+        <div class="name">
+            Enter Strring:
+            <input type="text" id="string"></input>
+            <input type="button" value="check" onclick="alphadash()"style="padding: 6px; background-color: rgb(117, 177, 5);"></input>
+            <div class="res" id="Result"></div>
+        </div>
+    </body>
+</html>
