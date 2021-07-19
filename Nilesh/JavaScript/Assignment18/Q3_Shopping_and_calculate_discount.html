@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Shopping_and_calculate_discount</title>
+        <style>
+            body {
+                background-color: #470c23;
+            }
+            h1 {
+                text-align: center;
+                color: white;
+                margin-top: 5%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #fcf3c1;
+                width: 400px;
+                height: 400px;
+                margin: auto;
+                padding-top: 15px;
+                gap: 32px;
+                border-radius: 10px;
+            }
+            input {
+                width: 44%;
+                margin-left: 10px;
+                margin-bottom: 12px;
+                padding: 4px 8px;
+                font-size: 16px;
+                outline: none;
+                line-height: 19px;
+                border: 1px solid #0000004b;
+            }
+            p {
+                min-width: 90px;
+                height: 25px;
+                padding: 14px 30px 12px 30px;
+                background-color: white;
+                font-weight: bold;
+                border: 1px solid #0000004b;
+                border-radius: 5px;
+            }
+            span {
+                color: #ff0000;
+                font-size: 21px;
+            }
+            button {
+                background-color: #ff0000;
+                color: white;
+                padding: 7px 11px;
+                margin: 0 8px;
+                font-weight: bold;
+                font-size: 17px;
+                border: 1px solid gray;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Shopping and Calculate Discount</h1>
+        <div class="main">
+            <div>
+                <label for="">&emsp;Enter Shopping amount</label>
+                <input type="text" id="firstnumber">
+            </div>
+            <div>
+                <p>Total Amount&ensp;=&emsp;<span id="shopping"></span></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="shopping()">Calculate</button>
+            </div>
+        </div>
+        <script>
+            function shopping() {
+                var amount, total;
+                amount = parseInt(document.getElementById("firstnumber").value);
+                if (amount > 1000) {
+                    total = amount - parseInt((amount * 15) / 100);
+                    document.getElementById("shopping").innerHTML = total;
+                } else {
+                    total = amount - parseInt((amount * 5) / 100);
+                    document.getElementById("shopping").innerHTML = total;
+                }
+            }
+        </script>
+    </body>
+</html>
