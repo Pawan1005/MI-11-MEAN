@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            function check(n) {
+                let re = /[^0-9]/g;
+                if (re.test(n) || n == "") {
+                    alert(`invalid input`);
+                    throw new Error();
+                }
+            }
+            function oe() {
+                var a = document.getElementById("num").value;
+                check(a);
+                let c = a % 2;
+                if (c == 0) {
+                    document.getElementById("root").innerHTML = `${a} is an Even Number`;
+                } else {
+                    document.getElementById("root").innerHTML = `${a} is an Odd Number`;
+                }
+            }
+        </script>
+        <style>
+            body {
+                padding: 100px;
+                background-color: aliceblue;
+            }
+            .content {
+                border: 1px solid black;
+                padding: 30px;
+                width: 400px;
+                position: absolute;
+                left: 30%;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            Enter A Number:&nbsp;&nbsp;<input type="text" id="num" /> <br /><br />
+            <button onclick="oe()">Even/Odd</button>
+            <p id="root"></p>
+        </div>
+    </body>
+</html>
