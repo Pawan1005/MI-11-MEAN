@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment_16</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+            crossorigin="anonymous"
+        />
+        <style>
+            body{
+                background-color: powderblue;
+            }
+            fieldset.scheduler-border {
+                border: solid 1px #ddd !important;
+                padding: 0 10px 10px 10px;
+                border-bottom: none;
+                background-color: pink;
+            }
+            legend.scheduler-border {
+                width: auto !important;
+                border: black;
+                font-size: 14px;
+            }
+        </style>
+        <script>
+            function red() {
+                document.getElementById("pid").style.color = "red";
+            }
+            function teal() {
+                document.getElementById("pid").style.color = "teal";
+            }
+            function black() {
+                document.getElementById("pid").style.color = "black";
+            }
+            function size1() {
+                document.getElementById("pid").style.fontSize = "26px";
+            }
+            function size2() {
+                document.getElementById("pid").style.fontSize = "30px";
+            }
+            function size3() {
+                document.getElementById("pid").style.fontSize = "15px";
+            }
+            function font1() {
+                document.getElementById("pid").style.fontFamily = "cursive";
+            }
+            function font2() {
+                document.getElementById("pid").style.fontFamily = "courier";
+            }
+            function font3() {
+                document.getElementById("pid").style.fontFamily = "Verdana,sans-serif";
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container pt-4">
+            <p id="pid" class="pt-4 text-center border border-primary">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minus tempore perspiciatis ipsam unde iste sapiente nemo laboriosam, culpa nisi ab
+                inventore, tempora accusamus obcaecati nihil eaque distinctio dolores! Dignissimos provident sit labore dolore ex eius nemo, doloribus itaque
+                minus quibusdam saepe ipsa odio temporibus amet sed exercitationem voluptate culpa soluta.
+            </p>
+            <fieldset class="scheduler-border">
+                <legend class="col">Select color</legend>
+                <button class="btn btn-outline-danger" id="btn1" onclick="red()">Red</button>
+                <button class="btn btn-outline-primary" id="btn2" onclick="teal()">Teal</button>
+                <button class="btn btn-outline-dark" id="btn3" onclick="black()">black</button>
+                <legend class="col">Select size</legend>
+                <button class="btn btn-outline-primary" id="btn4" onclick="size1()">26</button>
+                <button class="btn btn-outline-primary" id="btn5" onclick="size2()">30</button>
+                <button class="btn btn-outline-primary" id="btn6" onclick="size3()">15</button>
+                <legend class="col">Select font</legend>
+                <button class="btn btn-outline-primary" id="btn7" onclick="font1()">cursive</button>
+                <button class="btn btn-outline-primary" id="btn8" onclick="font2()">courier</button>
+                <button class="btn btn-outline-primary" id="btn9" onclick="font3()">san-serif</button>
+            </fieldset>
+        </div>
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
