@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Inheritance demo</title>
+        <style>
+            h1 {
+                text-align: center;
+                color:white;      
+                margin-top: 4%;
+            }
+            body {
+                padding-top: 3px;
+                background-color: rgb(87, 85, 85);
+            }
+            .name {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color:rgb(107, 9, 47);
+                margin-top: 40px;
+                padding-top: 40px;
+                width: 500px;
+                height:350px;
+                margin: auto;
+                gap: 5px;
+                border-radius: 10px;
+            }  
+            .res{
+                margin-top: 30px;
+                padding-left: 30px;
+                padding-right: 30px;
+                background-color: white;
+                font-weight: bold;
+                font-size: 17px;
+                color:rgb(9, 46, 148);
+            }
+        </style>
+    <body>
+        <h1>Display Inheritancy</h1>
+        <div class="name">
+            <div class="res">
+                <p><span id="num1"></span>
+                    <span id="rno"></span>
+                    <span id="name"></span>
+                    <span id="num2"></span>
+                    <span id="name2"></span>
+                    <span id="marks"></span>
+                </p>
+            </div>
+        </div>
+        <script>
+            class student {
+                constructor(RollNo, Name) {
+                    this.RollNo = RollNo;
+                    this.Name = Name;
+                }
+                display() {
+                    document.getElementById("num1").innerHTML = "<br>Inside Display";
+                    document.getElementById("rno").innerHTML = "<br>Roll No " + this.RollNo;
+                    document.getElementById("name").innerHTML = "<br>Name " + this.Name + "<br>";
+                }
+            }
+            class Marks extends student {
+                constructor(RollNo, Name, Marks) {
+                    super(RollNo, Name);
+                    this.Marks = Marks;
+                    let d1 = new Date();
+                    this.created = d1.getDate() + "/" + d1.getMonth() + "/" + d1.getFullYear();
+                }
+                marks() {
+                    document.getElementById("num2").innerHTML = "<br>Inside Marks---Created on <br>" + this.created;
+                    document.getElementById("name2").innerHTML = "<br>Inside Marks---Name " + this.Name;
+                    document.getElementById("marks").innerHTML = "<br>Inside Marks---Marks " + this.Marks;
+                }
+            }
+            m2 = new Marks(2, "ss", 45);
+            m2.display();
+            m2.marks();
+        </script>
+    </body>
+</html>
