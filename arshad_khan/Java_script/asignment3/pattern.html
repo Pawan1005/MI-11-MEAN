@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>PATTERN PRINT</title>
+        <style>
+            .ft {
+                width: 500px;
+                height: 500px;
+                background-color: lightgreen;
+            }
+        </style>
+    </head>
+    <body style="background-color: lightblue">
+        <center>
+            <div class="logincentrecard">
+                <div class="card">
+                    <div class="container">
+                        <h1>PATTERN</h1>
+                        <label for="Num1">Enter Row:</label>
+                        <input
+                            type="text"
+                            id="row"
+                            placeholder="Enter Row"
+                        />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
+                        <label for="Num1">Enter Col:</label>
+                        <input
+                            type="text"
+                            id="col"
+                            placeholder="Enter col"
+                        />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
+                        <button onclick="show()" style="background-color: red; color: white">Print Star</button>
+                        <p id="pid"></p>
+                    </div>
+                    <script>
+                        function show() {
+                            var a, b;
+                            a = parseInt(document.getElementById("col").value);
+                            b = parseInt(document.getElementById("row").value);
+                            for (i = 0; i < b; i++) {
+                                for (j = 0; j < a; j++) {
+                                    document.getElementById("pid").innerHTML += " &nbsp; * &nbsp; ";
+                                }
+                                document.getElementById("pid").innerHTML += "<br>";
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </center>
+    </body>
+</html>

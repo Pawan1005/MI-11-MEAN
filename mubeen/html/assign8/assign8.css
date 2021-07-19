@@ -1,0 +1,12 @@
+body{
+    background-color: indianred;
+    padding: 30px;
+}
+.im1 {
+    float: left;
+    padding-right: 50px;
+}
+.im2 {
+    float: right;
+    padding-left: 50px;
+}

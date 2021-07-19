@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Display separated list, ascending, descending order.</title>
+        <style>
+            h1 {
+                text-align: center;
+                color: white;
+                margin-top: 4%;
+            }
+            .one {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #970555;
+                width: 500px;
+                height: 400px;
+                margin: auto;
+                padding-top: 15px;
+                gap: 20px;
+                border-radius: 10px;
+            }
+            p {
+                min-width: 250px;
+                height: 100px;
+                padding: 50px 9px 9px 9px;
+                background-color: white;
+                border: 1px solid #0000004b;
+                font-size: 16px;
+            }
+            button {
+                background-color: #2b1188;
+                color: white;
+                padding: 7px 11px;
+                font-weight: bold;
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body style="background-color: rgb(172, 182, 82);">
+        <h1>Display Separated list, Ascending, Descending</h1>
+        <div class="one">
+            <div>
+                <p><span id="num1"></span><span id="num2"></span><span id="num3"></span></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="list()">Click here to enter name</button>
+            </div>
+        </div>
+        <script>
+            function list() {
+                var array = [],
+                    a;
+                for (let i = 0; i < 5; i++) {
+                    a = prompt("Enter a name : ");
+                    if (a == "X" || a == "x" || a == null) {
+                        break;
+                    }
+                    array.push(a);
+                }
+                document.getElementById("num1").innerHTML = "Separated list :&ensp;" + array.join(" ~ ");
+                array.sort();
+                document.getElementById("num2").innerHTML = "<br><br> Ascending :&emsp;&nbsp;&nbsp; " + array.join(" , ");
+                array.reverse();
+                document.getElementById("num3").innerHTML = "<br><br> Descending :&emsp; " + array.join(" , ");
+            }
+        </script>
+    </body>
+</html>

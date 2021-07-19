@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            function lar() {
+                a = parseInt(document.getElementById("num1").value);
+                b = parseInt(document.getElementById("num2").value);
+                c = parseInt(document.getElementById("num3").value);
+                d = parseInt(document.getElementById("num4").value);
+                e = parseInt(document.getElementById("num5").value);
+
+                var max, sec;
+                if (a > b && a > c && a > d && a > e) {
+                    max = a;
+                    document.getElementById("pid").innerHTML = +max;
+                    if (b > c && b > d && b > e) {
+                        sec = b;
+                        document.getElementById("pid1").innerHTML = +sec;
+                    } else if (c > b && c > d && c > e) {
+                        sec = c;
+                        document.getElementById("pid1").innerHTML = +sec;
+                    } else if (d > b && d > c && d > e) {
+                        sec = d;
+                        document.getElementById("pid1").innerHTML = +sec;
+                    } else if (e > b && e > c && e > d) {
+                        sec = e;
+                        document.getElementById("pid1").innerHTML = +sec;
+                    }
+                } else if (b > a && b > c && b > d && b > e) {
+                    max = b;
+                    document.getElementById("pid").innerHTML = +max;
+                    if (a > c && a > d && a > e) {
+                        sec = a;
+                        document.getElementById("pid1").innerHTML = +sec;
+                    } else if (c > a && c > d && c > e) {
+                        sec = c;
+                        document.getElementById("pid1").innerHTML = +sec;
+                    } else if (d > a && d > c && d > e) {
+                        sec = d;
+                        document.getElementById("pid1").innerHTML = +sec;
+                    } else if (e > a && e > c && e > d) {
+                        sec = e;
+                        document.getElementById("pid1").innerHTML = +sec;
+                    }
+                } else if (c > a && c > b && c > d && c > e) {
+                    max = c;
+                    document.getElementById("pid").innerHTML = +max;
+                    if (a > b && a > d && a > e) {
+                        sec = a;
+                        document.getElementById("pid1").innerHTML = +sec;
+                    } else if (b > a && b > d && b > e) {
+                        sec = b;
+                        document.getElementById("pid1").innerHTML = +sec;
+                    } else if (d > a && d > b && d > e) {
+                        sec = d;
+                        document.getElementById("pid1").innerHTML = +sec;
+                    } else if (e > a && e > b && e > d) {
+                        sec = e;
+                        document.getElementById("pid1").innerHTML = +sec;
+                    }
+                } else if (d > a && d > b && d > c && d > e) {
+                    max = d;
+                    document.getElementById("pid").innerHTML = +max;
+                    if (a > b && a > c && a > e) {
+                        sec = a;
+                        document.getElementById("pid1").innerHTML = +sec;
+                    } else if (b > a && b > c && b > e) {
+                        sec = b;
+                        document.getElementById("pid1").innerHTML = +sec;
+                    } else if (c > a && c > b && c > e) {
+                        sec = c;
+                        document.getElementById("pid1").innerHTML = +sec;
+                    } else if (e > a && e > b && e > c) {
+                        sec = e;
+                        document.getElementById("pid1").innerHTML = +sec;
+                    }
+                } else {
+                    max = e;
+                    document.getElementById("pid").innerHTML = +max;
+                    if (a > b && a > c && a > d) {
+                        sec = a;
+                        document.getElementById("pid1").innerHTML = +sec;
+                    } else if (b > a && b > c && b > d) {
+                        sec = b;
+                        document.getElementById("pid1").innerHTML = +sec;
+                    } else if (c > a && c > b && c > d) {
+                        sec = c;
+                        document.getElementById("pid1").innerHTML = +sec;
+                    } else if (d > a && d > b && d > c) {
+                        sec = d;
+                        document.getElementById("pid1").innerHTML = +sec;
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="num1" />
+        <input type="text" id="num2" />
+        <input type="text" id="num3" />
+        <input type="text" id="num4" />
+        <input type="text" id="num5" />
+        <button onclick="lar()">DO</button>
+        <p id="pid"></p>
+        <p id="pid1"></p>
+    </body>
+</html>

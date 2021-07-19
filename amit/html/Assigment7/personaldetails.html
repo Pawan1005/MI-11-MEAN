@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Home Page</title>
+        <style>
+            body {
+                background-image: url('portal1.jpg');
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .matter {
+                text-align: center;
+            }
+            .button {
+                background-color: lightblue;
+                padding: 8px 8px;
+                border: none;
+                cursor: pointer;
+                width: auto;
+            }
+            .links {
+                text-align: center;
+            }
+            .h1 {
+                text-align: left;
+            }
+            .submit {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Job Portal</h1>
+            <div class="links">
+                <a href="home.html"><button>home</button></a>
+                <a href="personaldetails.html"><button>Personal Detailes</button></a>
+                <a href="Aboutus.html"><button>Aboutus</button></a>
+                <a href="Contactus.html"><button>Contactus</button></a>
+                <a href="login.html"><button>Login</button></a>
+            </div>
+        </div>
+        <div class="matter">
+            <h1>Personal Details</h1>
+            <form>
+                <label for="first nam">First Name</label>
+                <input type="text" id="first nam" name="first name" /><br /><br />
+                <label for="last name">Last Name</label>
+                <input type="text" id="last name" name="last name" /><br /><br />
+                <label for="email">Email Id</label>
+                <input type="text" id="email" name="email" /><br /><br />
+                <lable for="gender"><b>Gender:</b></lable>
+                <input type="radio" id="Male" name="gender" value="male" />
+                <label for="male">Male</label>
+                <input type="radio" id="Female" name="gender" value="Female" />
+                <lable for="Female">Female</lable>
+                <input type="radio" id="other" name="gender" value="other" />
+                <lable for="other">other</lable><br /><br />
+                <h1>Academic Details</h1>
+                <label for="Highest Qualification">Highest Qualification</label><br />
+                <input type="text" id="Highest Qualification" name="Highest Qualification" /><br />
+                <label for="cgpa">CGPA</label>
+                <input type="text" id="Highest Qualification" name="Highest Qualification" /><br />
+                <label for="skill"><b>Skill Set:</b></label>
+                <input type="checkbox" id="html" name="=html" value="html" />
+                <label for="age">HTML</label>
+                <input type="checkbox" id="javascript" name="=javascript" value="javascript" />
+                <label for="skill">Java Script</label>
+                <input type="checkbox" id="java" name="=java" value="java" />
+                <label for="age">Java</label>
+                <input type="checkbox" id="skillset" name="oracle" value="oracle" />
+                <label for="age">Oracle</label><br /><br />
+                <div class="submit">
+                    <input type="button" id="submit" value="Submit" />
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

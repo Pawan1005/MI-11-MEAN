@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="eidth=device-eidth, initial-scale=1.0" />
+        <title>Sec Largest No.</title>
+        <style>
+            .container {
+                background-color: white;
+                width: 350px;
+                height: 480px;
+                text-align: center;
+                margin-left: 480px;
+                box-shadow: 15px;
+                outline-color: rgb(250, 94, 94);
+                outline-style: solid;
+                outline-width: 7px;
+            }
+            .btn {
+                padding: 15px;
+                background-color: red;
+                outline-color: white;
+                outline-width: 30px;
+                color: white;
+                border-radius: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <script language="javascript">
+            function show() {
+                var a, b, c, d, e;
+                a = parseInt(document.getElementById("num1").value);
+                b = parseInt(document.getElementById("num2").value);
+                c = parseInt(document.getElementById("num3").value);
+                d = parseInt(document.getElementById("num4").value);
+                e = parseInt(document.getElementById("num5").value);
+
+                if (
+                    (a > b && a > c && a > d && a < e) ||
+                    (a > b && a > c && a < d && a > e) ||
+                    (a > b && a < c && a > d && a > e) ||
+                    (a < b && a > c && a > d && a > e)
+                ) {
+                    document.getElementById("pid").innerHTML += "The second largest number is " + a;
+                } else if (
+                    (b > a && b > c && b > d && b < e) ||
+                    (b > a && b > c && b < d && b > e) ||
+                    (b > a && b < c && b > d && b > e) ||
+                    (b < a && b > c && b > d && b > e)
+                ) {
+                    document.getElementById("pid").innerHTML += "The second largest number is " + b;
+                } else if (
+                    (c > a && c > b && c > d && c < e) ||
+                    (c > a && c > b && c < d && c > e) ||
+                    (c > a && c < b && c > d && c > e) ||
+                    (c < a && c > b && c > d && c > e)
+                ) {
+                    document.getElementById("pid").innerHTML += "The second largest number is " + c;
+                } else if (
+                    (d > a && d > b && d > c && d < e) ||
+                    (d > a && d > b && d < c && d > e) ||
+                    (d > a && d < b && d > c && d > e) ||
+                    (d < a && d > b && d > c && d > e)
+                ) {
+                    document.getElementById("pid").innerHTML += "The second largest number is " + d;
+                } else {
+                    document.getElementById("pid").innerHTML += "The second largest number is " + e;
+                }
+            }
+        </script>
+        <div class="container">
+            <br /><br />
+            <h1>Second Largest Number</h1>
+            <br /><br />
+            Number1 : <input type="text" id="num1" /> <br />
+            Number2 : <input type="text" id="num2" /> <br />
+            Number3 : <input type="text" id="num3" /> <br />
+            Number4 : <input type="text" id="num4" /> <br />
+            Number5 : <input type="text" id="num5" /> <br /><br />
+            <button onclick="show()" class="btn">Second largest number</button>
+            <br /><br />
+            <p id="pid"></p>
+            <br />
+        </div>
+    </body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>assi5_3</title>
+        <style>
+            body {
+                height: 1500px;
+                background-image: linear-gradient(to bottom right, purple, red);
+            }
+        </style>
+    </head>
+    <body>
+        <script language="javascript">
+            function fun() {
+                var n, m;
+                n = parseInt(document.getElementById("first").value);
+                m = parseInt(document.getElementById("sec").value);
+
+                for (let i = n; i <= m; i++) {
+                    let flag = 0;
+                    for (let j = 2; j < i; j++) {
+                        if (i % j == 0) {
+                            flag = 1;
+                            break;
+                        }
+                    }
+                    if (i > 1 && flag == 0) {
+                        document.getElementById("num").innerHTML += i + " ";
+                    }
+                }
+            }
+        </script>
+        <div style="width: 50%; position: absolute; left: 430px; top: 200px">
+            <div style="text-align: center; background-color: rgba(243, 243, 8, 0.842); height: 50%; border-radius: 25px 25px 25px 25px">
+                <br /><br />
+                <h2>Print the prime numers between two number</h2>
+                <hr size="5" color="black" />
+                <br /><br />
+                <h4>Enter First Number : <input type="text" name="a" id="first" placeholder="Enter a number" /></h4>
+                <h4>Enter Last Number : <input type="text" name="a" id="sec" placeholder="Enter a number" /></h4>
+                <button style="position: absolute; left: 47%" onclick="fun ()">Submit</button>
+                <p><br /><br /></p>
+                <div id="num" style="color: blue; position: absolute; left: 47%"></div>
+                <br /><br />
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,60 @@
+body {
+    padding: 0px;
+    margin: 0px;
+}
+h1 {
+    text-align: center;
+}
+header {
+    height: 50px;
+    width: auto;
+    background-color: rgba(31, 102, 98, 0.7);
+    display: flex;
+}
+header ul {
+    align-self: center;
+}
+header ul li {
+    list-style-type: none;
+    float: left;
+}
+header ul li a {
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+li a:hover {
+    background-color: teal;
+}
+div img {
+    height: 500px;
+    width: 100%;
+    position: absolute;
+    z-index: -1;
+}
+.container {
+    display: flex;
+    justify-content: center;
+}
+.box {
+    display: flex;
+    height: 400px;
+    width: 450px;
+    background-color: rgba(245, 235, 235, 0.6);
+    justify-content: center;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.box table tr th {
+    padding: 10px;
+    margin: 120px;
+}
+.box table tr td input {
+    padding: 10px;
+    margin: 20px;
+    border-radius: 10px;
+}
+#button {
+    width: 150px;
+}

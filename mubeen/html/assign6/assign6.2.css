@@ -1,0 +1,34 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+h2 {
+    text-align-last: right;
+    border: solid rgb(95, 95, 194);
+    background-color: rgb(95, 95, 194);
+    border-radius: 2px 8px;
+}
+h4 {
+    text-align-last: right;
+    border: solid rgb(95, 95, 194);
+    background-color: rgb(95, 95, 194);
+    border-radius: 2px 8px;
+}
+::placeholder {
+    color: gray;
+    opacity: 0.6;
+}
+.division {
+    border: 1px solid grey;
+    padding: 10px;
+}
+.resume {
+    margin-top: -20px;
+    width: fit-content;
+    background: white;
+}
+.submit {
+    position: absolute;
+    right: 50%;
+    padding-left: 10px;
+    padding-right: 10px;
+}

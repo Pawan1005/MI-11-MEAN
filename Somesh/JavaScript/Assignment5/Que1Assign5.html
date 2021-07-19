@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <div class="que1-container container">
+            <p>Question 1</p>
+            <div class="input-box">
+                <div class="input-container">
+                    <input type="text" placeholder="number" id="que1-input" />
+                </div>
+                <button onclick="checkDigit()">Check</button>
+            </div>
+            <div class="output-box" id="que1-output"></div>
+        </div>
+        <!-- Fibonacci Series -->
+        <div class="fib-container container">
+            <p>Question 2</p>
+            <div class="input-box">
+                <div class="input-container">
+                    <input type="text" placeholder="number" id="fib-input" />
+                </div>
+                <button onclick="fib()">get Series</button>
+            </div>
+            <div class="output-box" id="fib-output"></div>
+        </div>
+        <!-- List Prime -->
+        <div class="prime-list-container container">
+            <p>Question 3</p>
+            <div class="input-box">
+                <div class="input-container">
+                    <input
+                        type="text"
+                        placeholder="no. From"
+                        id="num-from-input"
+                    />
+                    <input type="text" placeholder="no. To" id="num-to-input" />
+                </div>
+                <button onclick="listPrime()">List primes</button>
+            </div>
+            <div class="output-box" id="prime-list-output"></div>
+        </div>
+        <!-- Find Sumof even product of odd  digits  -->
+        <div class="even-odd-container container">
+            <p>Question 4</p>
+            <div class="input-box">
+                <div class="input-container">
+                    <input
+                        type="text"
+                        placeholder="6 digits"
+                        id="even-odd-input"
+                    />
+                </div>
+                <button onclick="sumAndProduct()">List primes</button>
+            </div>
+            <div class="output-box" id="even-odd-output"></div>
+        </div>
+        <!-- Floyed's Triangle -->
+        <div class="floyed-container container">
+            <p>Question 5</p>
+            <div class="input-box">
+                <div class="input-container">
+                    <!-- No need of input -->
+                <button onclick="printTriangle()">make Triangle</button>
+            </div>
+            <div class="output-box" id="floyed-output"></div>
+        </div>
+
+        <script src="./App.js"></script>
+    </body>
+</html>

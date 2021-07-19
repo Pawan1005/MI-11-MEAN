@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Display student details</title>
+        <style>
+            h1 {
+                text-align: center;
+                margin-top: 5%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background:url(plain.jpg);
+                background-size: cover;
+                width: 400px;
+                height: 400px;
+                margin: auto;
+                padding-top: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <h1>Display Student Detail</h1>
+            <h2>Student Table</h2>
+            <table>
+                <tr>
+                    <th>Roll NO</th>
+                    <th>Name</th>
+                </tr>
+                <tr>
+                    <td id="num1"></td>
+                    <td id="num2"></td>
+                </tr>
+                <tr>
+                    <td id="num3"></td>
+                    <td id="num4"></td>
+                </tr>
+            </table>
+        </div>
+        <script>
+            class Student {
+                constructor() {
+                    this.RollNo = 101;
+                    this.Name = "Ashwin";
+                }
+            }
+            let s1 = new Student();
+            document.getElementById("num1").innerHTML += s1.RollNo;
+            document.getElementById("num2").innerHTML += s1.Name;
+            let s2 = new Student();
+            s2.RollNo = 102;
+            s2.Name = "Shubham";
+            document.getElementById("num3").innerHTML += s2.RollNo;
+            document.getElementById("num4").innerHTML += s2.Name;
+        </script>
+    </body>
+</html>

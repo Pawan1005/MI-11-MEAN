@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>js5.1</title>
+        <script>
+            function sum() {
+                n = parseInt(document.getElementById("num").value);
+                var a = n % 10;
+                var dd = parseInt(n / 10);
+                var b = dd % 10;
+                var c = parseInt(dd / 10);
+                var sum = a + c;
+                if (sum == b) {
+                    document.getElementById("pid").innerHTML = "yes";
+                } else {
+                    document.getElementById("pid").innerHTML = "no";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="num" maxlength="3" />
+        <button onclick="sum()">check</button>
+        <p id="pid"></p>
+    </body>
+</html>

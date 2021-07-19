@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment5_4</title>
+        <style>
+            body {
+                height: 1500px;
+                background-image: linear-gradient(to bottom right, purple, red);
+            }
+        </style>
+    </head>
+    <body>
+        <script type="text/javascript">
+            function sum_product6() {
+                var r,
+                    n,
+                    sum = 0,
+                    product = 1;
+                n = parseInt(document.getElementById("first").value);
+                n1 = n;
+                while (n > 0) {
+                    r = n % 10;
+                    if (r % 2 == 0) {
+                        sum = sum + r;
+                    } else {
+                        product = product * r;
+                    }
+                    n = parseInt(n / 10);
+                }
+                document.getElementById("num").innerHTML = "Sum of even digits : " + sum;
+                document.getElementById("num1").innerHTML = "Product of odd digits : " + product;
+            }
+        </script>
+        <div style="width: 50%; position: absolute; left: 430px; top: 200px">
+            <div style="text-align: center; background-color: rgba(243, 243, 8, 0.842); height: 50%; border-radius: 25px 25px 25px 25px">
+                <br /><br />
+                <h2>Sum of Even and product of Odd digit numbers</h2>
+                <hr size="5" color="black" />
+                <br /><br />
+                <h4>Entert 6 digit number : <input type="text" name="a" id="first" placeholder="Enter any 6 digit number" maxlength="6" /></h4>
+                <button style="position: absolute; left: 49%" onclick="sum_product6 ()">Submit</button>
+                <p><br /></p>
+                <div id="num" style="color: blue; position: absolute; left: 49%"></div>
+                <br />
+                <div id="num1" style="color: blue; position: absolute; left: 49%"></div>
+                <br /><br />
+            </div>
+        </div>
+    </body>
+</html>

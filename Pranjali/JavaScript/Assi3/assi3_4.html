@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Pattern</title>
+        <style>
+            body {
+                height: 200px;
+                background-image: linear-gradient(to right, rgb(39, 24, 9), rgba(56, 21, 95, 0.63), rgb(39, 24, 9));
+            }
+        </style>
+    </head>
+    <body>
+        <script lanuage="javascript">
+            function show() {
+                var row, col, i, j;
+                var row = parseInt(document.getElementById("num1").value);
+                var col = parseInt(document.getElementById("num2").value);
+                //pid.innerHTML="";
+                for (i = 1; i <= row; i++) {
+                    for (j = 1; j <= col; j++) {
+                        pid.innerHTML += "*";
+                    }
+                    pid.innerHTML += "<br>";
+                }
+            }
+        </script>
+        <div style="width: 50%; position: absolute; left: 500px; top: 200px">
+            <div style="text-align: center; background-color: rgb(132, 245, 207); border-radius: 25px 25px 25px 25px">
+                <br /><br />
+                <h1>Pattern</h1>
+                <br />
+                <p>Row : <input id="num1" /></p>
+                <p>Col : <input id="num2" /></p>
+                <button onclick="show()">show</button>
+                <p><br /></p>
+                <p id="pid"></p>
+                <br />
+            </div>
+        </div>
+    </body>
+</html>

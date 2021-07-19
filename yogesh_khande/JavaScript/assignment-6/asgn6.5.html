@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script type="text/javascript">
+            function show() {
+                let arr = [],
+                    factorials = [];
+                let output = document.getElementById("pid");
+                while (true) {
+                    let temp = prompt("Enter Numbers");
+                    if (temp == "X" || temp == "x" || temp == null) break;
+                    temp = parseInt(temp);
+                    arr.push(temp);
+                }
+                for (let i = 0; i < arr.length; i++) {
+                    factorials.push(factorial(arr[i]));
+                }
+                function factorial(n) {
+                    if (n == 0) return 1;
+                    return n * factorial(n - 1);
+                }
+                output.innerHTML += `<div>Factorial : ${factorials.sort(function (a, b) {
+                    return b - a;
+                })}</div>`;
+            }
+        </script>
+    </head>
+    <body style="background-color: aquamarine; text-align: center">
+        <h1>*Arrays*</h1>
+        <p id="pid"></p>
+        <button onclick="show()">SHOW</button>
+    </body>
+</html>

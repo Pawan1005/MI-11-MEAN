@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Vowel</title>
+    </head>
+    <body>
+        <script language="javascript">
+            let ch;
+            function getval() {
+                ch = prompt("Enter Character : ");
+                ch = ch.toLowerCase();
+                if (ch == "a" || ch == "e" || ch == "i" || ch == "o" || ch == "u") {
+                    console.log(ch + " is Vowel");
+                } else {
+                    console.log(ch + " is Consonant");
+                }
+            }
+            getval();
+        </script>
+    </body>
+</html>

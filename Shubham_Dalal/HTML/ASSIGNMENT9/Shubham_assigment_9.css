@@ -1,0 +1,247 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+.main {
+    background-color: #ecf0f4;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    justify-content: space-around;
+    height: 58px;
+    background-color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.timesjob-icon {
+    margin: 7px 0 0 0;
+    margin-right: 8px;
+}
+.covid-text {
+    background-color: #ffeb9c;
+    margin-right: 130px;
+    text-align: center;
+    color: #000f3f;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 6px;
+}
+.btn-yes {
+    background: #f24141;
+    border: #f24141 solid 1px;
+    color: #fff;
+    border-radius: 5px;
+    padding: 6px 14px;
+    margin: 0 5px 0 20px;
+    size: 13px;
+}
+.btn-no {
+    border: #000f3f solid 1px;
+    border-radius: 5px;
+    padding: 6px 14px;
+    text-transform: uppercase;
+    color: #000f3f;
+    font-size: 13px;
+}
+.login-register {
+    align-items: center;
+    align-content: center;
+}
+.bel-image {
+    height: 18px;
+    margin: -4px 13px;
+}
+.btn1 {
+    border: 1px solid #f52f2f;
+    box-sizing: border-box;
+    color: #f52f2f;
+    background-color: white;
+    padding: 7px 10px;
+    margin: 13px 4px;
+    font-weight: 600;
+}
+.btn2 {
+    border: 1px solid #f52f2f;
+    box-sizing: border-box;
+    color: #f52f2f;
+    background-color: white;
+    padding: 7px 10px;
+    margin: 13px 4px;
+    font-weight: 600;
+}
+.first-background {
+    display: flex;
+    background-image: url("img/open-search-bg.png");
+    justify-content: center;
+    align-items: center;
+    height: 154px;
+    background-size: cover;
+}
+.search-box {
+    display: flex;
+    height: 45px;
+    width: 62%;
+}
+.skil-input {
+    border: none;
+    width: 90%;
+    padding-left: 12px;
+}
+.location-input {
+    width: 67%;
+    border: none;
+    border-right: solid 1px #c8c7c7;
+    border-left: solid 1px #c8c7c7;
+    box-sizing: border-box;
+    float: left;
+    padding-left: 12px;
+}
+.experience-select {
+    background-color: white;
+    border: none;
+    color: rgba(0, 0, 0, 0.747);
+    width: 30%;
+    padding-left: 12px;
+}
+.btn3 {
+    border: none;
+    height: 45px;
+    line-height: 49px;
+    font-size: 16px;
+    width: 40%;
+    background-color: red;
+    color: white;
+    font-weight: bold;
+}
+.upload-resume-box {
+    padding: 3px 20px;
+    background: #fff;
+    width: 18%;
+    height: 65px;
+    font-size: 12px;
+    font-weight: bold;
+    margin-left: 19px;
+    margin-top: 7px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.upload-file {
+    margin-top: 9px;
+}
+.upload-icon {
+    width: 41px;
+    height: 41px;
+    float: left;
+    background-image: url("img/tj-sprite-icon.png");
+    background-position: -126px top;
+    margin-top: 5px;
+    margin-right: 15px;
+}
+.heading5 {
+    font-size: 11px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    color: skyblue;
+}
+.upload-res-btn {
+    width: 170px;
+    height: 26px;
+    display: block;
+    overflow: hidden;
+    border: 1px solid #01439f;
+    color: #01439f;
+    text-transform: uppercase;
+    line-height: 26px;
+    text-align: center;
+}
+.btn-input {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+}
+.images-box {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    height: 190px;
+    width: 100%;
+}
+.back-image1 {
+    height: 120px;
+    width: 60%;
+}
+.back-image2 {
+    height: 190px;
+    background-repeat: no-repeat;
+    margin-left: 17px;
+}
+.browse-section {
+    width: 61%;
+    margin-left: 105px;
+    margin-top: -44px;
+}
+.heading2 {
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+.brows-list {
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+    font-size: 13px;
+}
+.brows-list li {
+    float: left;
+    width: 271px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    box-shadow: 0.5px 0.87px 10px 0 rgb(0 0 0 / 7%);
+    background: #fff;
+}
+.top-ind-icon {
+    height: 28px;
+    width: 28px;
+    float: left;
+    margin-right: 15px;
+    background-repeat: no-repeat;
+    background-image: url("img/list.png");
+    background-position: -28px 0;
+}
+.tab-sub-text {
+    display: block;
+    color: #f52f2f;
+}
+.list {
+    color: black;
+    font-weight: bold;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.brows-list2 {
+    padding-left: 0;
+    list-style-type: none;
+    display: flex;
+}
+.brows-list2 li {
+    float: left;
+    width: 271px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    box-shadow: 0.5px 0.87px 10px 0 rgb(0 0 0 / 7%);
+    background: #fff;
+}
+.city-box {
+    height: 154px;
+    margin-left: 69%;
+    margin-top: -9.4%;
+}
+.city-image {
+    height: 204px;
+    width: 76%;
+}

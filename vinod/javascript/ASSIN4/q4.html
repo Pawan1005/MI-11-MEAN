@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            var ch;
+            function checkVowel() {
+                ch = document.getElementById("char").value;
+                if (ch) {
+                    temp = document.getElementById("resPara");
+                    temp.style.display = "block";
+                    if ((ch >= "a" && ch <= "z") || (ch >= "A" && ch <= "Z")) {
+                        if (ch == "a" || ch == "e" || ch == "i" || ch == "o" || ch == "u") document.getElementById("res").innerHTML = "a Vowel";
+                        else if (ch == "A" || ch == "E" || ch == "I" || ch == "O" || ch == "U") document.getElementById("res").innerHTML = "a Vowel";
+                        else document.getElementById("res").innerHTML = "a Consonant";
+                    } else document.getElementById("res").innerHTML = "neither Vowel nor Consonant";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <style>
+            .as {
+                position: absolute;
+                width: 340px;
+                height: 415px;
+                margin: 51px auto 0px auto;
+                border-style: solid;
+                top: 22px;
+                left: 399px;
+                margin-right: 10px;
+                background-color: darkturquoise;
+            }
+        </style>
+        <div class="as">
+            <h1>Vowel or not</h1>
+            <p>Enter the Character: <input id="char" /><button onclick="checkVowel()">Check</button></p>
+            <p id="resPara" style="display: none">It is <span id="res"></span></p>
+        </div>
+    </body>
+</html>

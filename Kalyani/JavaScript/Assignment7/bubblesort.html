@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>BubbleSort</title>
+        <style>
+            body {
+                background-color: rgba(65, 42, 165, 0.767);
+            }
+            .main {
+                border: 1px solid gray;
+                margin: 100px 0 0 370px;
+                width: 50%;
+                height: 80vh;
+                background: rgb(231, 40, 215);
+                border-radius: 10px;
+            }
+            #input1 {
+                margin-top: 10px;
+                margin-left: 45px;
+                width: 50%;
+                height: 5vh;
+                border-radius: 10px;
+                border: 1px solid grey;
+                font-size: large;
+            }
+            button {
+                width: 25%;
+                height: 5vh;
+                border-radius: 25px;
+                border: none;
+                background-color: indigo;
+                font-size: 20px;
+            }
+            h1 {
+                border-radius: 25px;
+                border: none;
+                background-color: black;
+                text-align: center;
+                width: 80%;
+                margin-left: 50px;
+            }
+            #p,
+            #pr,
+            #num,
+            #num1 {
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <h1 style="color: palevioletred">BubbleSort</h1>
+            <input type="text" id="input1" placeholder="enter the no " />
+            <button type="button" onclick="bubbleSort()">Show</button>
+            <div id="p"></div>
+            <div id="num"></div>
+            <div id="pr"></div>
+            <div id="num1"></div>
+        </div>
+        <script>
+            function bubbleSort() {
+                var marks = parseInt(document.getElementById("input1").value);
+                var arr = [],
+                    l = 1,
+                    m = 1;
+                for (let i = 0; i < marks; i++) {
+                    arr[i] = prompt("Emter marks");
+                    document.getElementById("num").innerHTML += `<div> marks:${i + 1}${arr}`;
+                }
+                document.getElementById("p").innerHTML += "<h2>Before sorted <br>Marks:" + arr + "<br>";
+                for (var j = 0; j < arr.length; j++) {
+                    for (var i = 0; i < arr.length; i++) {
+                        if (arr[i] > arr[i + 1]) {
+                            var temp = arr[i];
+                            arr[i] = arr[i + 1];
+                            arr[i + 1] = temp;
+                        }
+                    }
+                    document.getElementById("num1").innerHTML += "marks:" + m++ + "&ensp;" + arr + "<br>";
+                }
+                document.getElementById("pr").innerHTML += " <h2>After Sorted <br> marks:" + arr + "<br>";
+            }
+        </script>
+    </body>
+</html>

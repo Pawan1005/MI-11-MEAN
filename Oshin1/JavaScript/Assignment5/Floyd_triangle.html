@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FLOYD'S TRIANGLE</title>
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+                transition: 0.3s;
+                width: 40%;
+                height: 350px;
+                border-radius: 20px;
+                background-color: palegreen;
+                margin: auto;
+                margin-top: 50px;
+            }
+            button {
+                position: relative;
+                border: none;
+                font-size: 20px;
+                padding: 10px;
+                width: 180px;
+                text-align: center;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+                text-decoration: none;
+                overflow: hidden;
+                cursor: pointer;
+                margin-left: 130px;
+            }
+            #pid {
+                color: black;
+                text-align: center;
+                font-size: large;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="logincentrecard">
+            <div class="card">
+                <div class="container">
+                    <h1 style="text-align: center;">FLOYD'S TRIANGLE</h1>
+                    <hr />
+                    &nbsp;<button onclick="show()" style="background-color: green; color: white;">PRINT FLOYD'S PATTERN</button>
+                    <p id="pid"></p>
+                    <script language="JavaScript">
+                        function show() {
+                            let k = 0;
+                            let pattern = document.getElementById("pid");
+                            for (let i = 0; i < 4; i++) {
+                                setTimeout(() => {
+                                    for (let j = 0; j <= i; j++) {
+                                        k++;
+                                        pattern.innerHTML += `<span class="patternItems">&nbsp${k}&nbsp</span>`;
+                                    }
+                                    pattern.innerHTML += "<br><br>";
+                                }, i * 100);
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

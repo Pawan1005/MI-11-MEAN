@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SUM OF TWO NUMBER DIGIT</title>
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+                transition: 0.3s;
+                width: 40%;
+                height: 300px;
+                border-radius: 20px;
+                background-color: darkgray;
+                margin: auto;
+                margin-top: 50px;
+            }
+            button {
+                position: relative;
+                background-color: white;
+                border: none;
+                font-size: 20px;
+                color: rosybrown;
+                padding: 10px;
+                width: 180px;
+                text-align: center;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+                text-decoration: none;
+                overflow: hidden;
+                cursor: pointer;
+                margin-left: 130px;
+            }
+            #pid {
+                color: white;
+                text-align: center;
+                font-size: large;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="logincentrecard">
+            <div class="card">
+                <div class="container">
+                    <h4>SUM OF OTHER TWO DIGIT IS TO MIDDLE OF THE NUMBER</h4>
+                    <label for="Num1">Enter Number:</label>
+                    <input
+                        type="text"
+                        id="num"
+                        placeholder="Enter  Number"
+                    />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
+                    <button onclick="show()">RESULT</button>
+                    <p id="pid"></p>
+                    <script language="JavaScript">
+                        function show() {
+                            let num = document.getElementById("num").value;
+                            let result = document.getElementById("pid");
+                            let len = num.length;
+                            if (len != 3) {
+                                result.classList.remove("error", "true");
+                                result.innerHTML = "Invalid Number!!Please enter a 3 digit number.";
+                                result.classList.add("error");
+                            } else if (parseInt(num[0]) + parseInt(num[2]) == parseInt(num[1])) {
+                                result.classList.remove("error", "true");
+                                result.innerHTML = "Sum match";
+                                result.classList.add("true");
+                            } else {
+                                result.classList.remove("error", "true");
+                                result.innerHTML = "Sum does not match";
+                                result.classList.add("error");
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

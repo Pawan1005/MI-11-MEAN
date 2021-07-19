@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="bootstrap.css" />
+        <link rel="stylesheet" href="Personalstyle.css" />
+        <title>Personal Details</title>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="form1">
+                        <h1 style="color: coral; text-align: center; font-family: cursive">Personal Details</h1>
+                        <div class="form-group">First Name<input type="text" placeholder="First name" class="form-control" /></div>
+                        <div class="form-group">Last Name<input type="text" placeholder="Last Name" class="form-control" /></div>
+                        <div class="form-group">Mobile<input type="tel" placeholder="Mobile" class="form-control" /></div>
+                        <div class="form-group">
+                            Gender <input type="radio" value="male" name="g" />Male <input type="radio" value="female" name="g" />Female<input type="radio" value="other" name="g"/>Other
+                        </div>
+                        <div class="form-group"><input type="button" value="Submit" class="form-control btn-danger" /></div>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <div class="form2">
+                        <h1 style="color: greenyellow; text-align: center; font-family: cursive">Acedamic Details</h1>
+                        <div class="form-group">
+                            <b>Skill Set :</b>
+                            <table class="form-control">
+                                <td><input type="checkbox" />HTML</td>
+                                <td><input type="checkbox" />JavaScript</td>
+                                <td><input type="checkbox" />Java</td>
+                                <td><input type="checkbox" />Oracle</td>
+                            </table>
+                        </div>
+                        Highest Qualification:
+                        <div class="form-group">
+                            <select class="form-control">
+                                <option>Masters in Computer Science</option>
+                                <option>Diploma in Computer Science</option>
+                                <option>Science Graduate</option>
+                                <option>Bachelor in Engg.</option>
+                                <option>Masters in Engg.</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        University:
+                        <div class="form-group">
+                            <select class="form-control">
+                                <option>RGPV Bhopal</option>
+                                <option>Mumbai University</option>
+                                <option>Pune University</option>
+                                <option>Chennai University</option>
+                                <option>Nagpur University</option>
+                                <option>Badoda University</option>
+                            </select>
+                        </div>
+                        Area of Expertise:
+                        <div class="form-group">
+                            <select name="expertise" class="form-control" multiple>
+                                <option value="Software">Software</option>
+                                <option value="Training">Training</option>
+                                <option value="Networking">Networking</option>
+                                <option value="Management">Management</option>
+                                <option value="Marketing">Marketing</option>
+                            </select>
+                            <span><small>You can select multiple fields</small></span>
+                        </div>
+                        <div class="form-group">Resume <input type="file" class="form-control" /></div>
+                        <div class="form-group"><input type="button" value="Submit" class="form-control btn-success" /></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

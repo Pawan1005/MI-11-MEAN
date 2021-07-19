@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>
+Armstrong Number in JavaScript
+</title>
+
+</head>
+<body>
+    <style>
+        .as {
+            position: absolute;
+            width: 340px;
+            height: 415px;
+            margin: 51px auto 0px auto;
+            border-style: solid;
+            top: 22px;
+            left: 399px;
+            margin-right: 10px;
+            background-color: darkturquoise;
+        }
+    </style>
+    <div class="as">
+<div class = "results">
+<h2>  Armstrong Number </h2>
+Enter the Number: <input type = "number" name = "number" required id = "number">
+<button type = "button" onclick = "checkArmstrong()" > Submit </button>
+<div class = "resultText">
+<p id = "result"> </p>
+</div>
+</div>
+</div>
+</div>
+<script>
+function checkArmstrong(){
+num = document.getElementById("number").value;
+var Number = num;
+var digits = 0;
+// Finding the number of digits
+while(num > 0){
+digits = digits + 1;
+num = parseInt(num/10);
+}
+num = Number;
+var sum = 0;
+// calculating sum
+while(num > 0) {
+var digit = num%10;
+sum = sum + Math.pow(digit, digits);
+num = parseInt(num/10);
+}
+// checking sum with original number
+if(sum == Number){
+document.getElementById("result").style.color = "blue";
+document.getElementById("result").innerHTML = "The number: " + Number + " is Armstrong Number";
+}else{
+document.getElementById("result").style.color = "red";
+document.getElementById("result").innerHTML = "The number: " + Number + " is NOT Armstrong Number";
+}
+}
+</script>
+</body>
+</html>

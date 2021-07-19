@@ -1,0 +1,9 @@
+.form {
+    height: 900px;
+    width: 100%;
+    border: 1px solid greenyellow;
+    border-radius: 9px;
+    margin-top: 60px;
+    padding: 20px;
+    background-color: antiquewhite;
+}

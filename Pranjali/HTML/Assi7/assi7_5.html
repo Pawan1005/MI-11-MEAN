@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Personal Details</title>
+        <style>
+            h1 {
+                color: rgb(106, 20, 128);
+            }
+            h2 {
+                color: rgb(8, 5, 5);
+            }
+            div {
+                color: rgb(20, 79, 128);
+                height: 400px;
+                width: 25%;
+                background-color: turquoise;
+                border: 2px solid black;
+            }
+            .button {
+                border-radius: 15px;
+                position: absolute;
+                left: 120px;
+                bottom: 600px;
+                background-color: rgb(231, 22, 39);
+                font-size: 20px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <h1>Professional Details:</h1>
+            <br />
+            <h2>Work Experience:</h2>
+            <p>
+                <label for="companyname"><strong>Company Name:</strong></label>
+                <input type="text" id="companyname" name="companyname" placeholder="Company name" />
+            </p>
+            <p>
+                <label for="jobtitle"><strong>Job Title:</strong></label>
+                <input type="text" id="jobtitle" name="jobtitle" placeholder="Job title" />
+            </p>
+            <p>
+                <label for="decroption"><strong>Description:</strong></label>
+                <textarea></textarea>
+            </p>
+            <button type="button" class="button">Submit</button>
+        </div>
+    </body>
+</html>

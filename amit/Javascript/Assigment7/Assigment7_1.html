@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script lang="javascript">
+            function show() {
+              debugger;
+              let a = document.getElementById("num1").value;
+              for(let i=0; i<=a; i++){
+                for(let j=1; j<=i; j++ ){
+                  document.getElementById("pid").innerHTML += j + "&nbsp;&nbsp;";
+                }
+                document.getElementById("pid").innerHTML+= "1" +"<br>";
+              }
+            }
+        </script>
+        <style>
+            .container {
+                background-color: rgb(203, 220, 216);
+                width: 350px;
+                height: 480px;
+                text-align: center;
+                margin-left: 480px;
+                box-shadow: 7px 7px 15px;
+                border-radius: 15px;
+            }
+            .btn {
+                padding: 15px;
+                background-color: red;
+                outline-color: white;
+                outline-width: 15px;
+                color: white;
+            }
+            .label {
+                border-radius: 15px;
+                box-sizing: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <center>
+                <marquee> The program for print thetriangle</marquee>
+                <hr />
+            </center>
+            <label>First number</label>
+            <input type="number" id="num1" placeholder="Enter the First number" />
+            <button onclick="show()" class="btn">GET</button>
+            <div class="box">
+                <p id="pid"></p>
+            </div>
+        </div>
+    </body>
+</html>

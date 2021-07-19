@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Armstrong Number in JavaScript</title>
+        <script>
+            function checkArmstrong() {
+                num = document.getElementById("number").value;
+                var Number = num;
+                var x = 0;
+
+                while (num > 0) {
+                    x = x + 1;
+                    num = parseInt(num / 10);
+                }
+                num = Number;
+                var sum = 0;
+
+                while (num > 0) {
+                    var x = num % 10;
+                    sum = sum + x * x * x;
+                    num = parseInt(num / 10);
+                }
+
+                if (sum == Number) {
+                    document.getElementById("result").style.color = "green";
+                    document.getElementById("result").innerHTML = "The given number: " + Number + " is Armstrong Number";
+                } else {
+                    document.getElementById("result").style.color = "red";
+                    document.getElementById("result").innerHTML = "The given number: " + Number + " is NOT Armstrong Number";
+                }
+            }
+        </script>
+        <style>
+            .name {
+                position: relative;
+                width: 500px;
+                background-color: rgba(235, 176, 66, 0.918);
+                padding: 10px 0px 10px 0px;
+                border-radius: 15px 15px 0px 0px;
+                color: rgb(17, 36, 212);
+                text-align: center;
+                margin-top: 80px;
+                margin-left: 400px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="name">
+            <h3>Checking Armstrong Number</h3>
+            Enter Number: <input type="number" name="number" required id="number" /><br /><br />
+            <button type="button" onclick="checkArmstrong()" style="background-color: rgb(243, 40, 50); height: 30px; color: white">Check</button>
+            <div>
+                <p id="result"></p>
+            </div>
+        </div>
+    </body>
+</html>

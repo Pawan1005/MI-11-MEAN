@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script lang="javascript">
+            function show() {
+              debugger;
+              let f;
+              let c = [];
+              let a = parseInt(document.getElementById("num1").value);
+              let d = document.getElementById("pid")
+              let e = document.getElementById("pid1")
+             for(let i=1; i<=a; i++){
+                  let b =  parseInt (prompt("Enter the mark of "+i+"student"));
+                    c.push(b);
+                }
+                d.innerHTML = `Bubble sorting <hr> *****before sorting:***** <br>  `
+                for(let z = 0; z<c.length; z++ ){
+                  e.innerHTML += `Marks ${z+1} : ${c[z]} <br>`;
+                }
+                for(let k=0; k<c.length -1; k++){
+                  e.innerHTML += ` Each iteration: Marks ${k+1} ${c} <br>`;
+                  for(let j=0; j<c.length -1; j++){
+                    if (c[j]>c[j+1]){
+                      f=c[j];
+                      c[j] = c[j+1];
+                      c[j+1] = f;
+                    }
+                  }
+                }
+                d.innerHTML = `Bubble sorting <hr> *****before sorting:***** <br>  `
+                for(let r = 0; r<c.length; r++ ){
+                  e.innerHTML += `Marks ${r+1} : ${c[r]} <br>`;
+                }
+            }
+        </script>
+        <style>
+            .container {
+                background-color: rgb(203, 220, 216);
+                width: 350px;
+                height: 480px;
+                text-align: center;
+                margin-left: 480px;
+                box-shadow: 7px 7px 15px;
+                border-radius: 15px;
+            }
+            .btn {
+                padding: 15px;
+                background-color: red;
+                outline-color: white;
+                outline-width: 15px;
+                color: white;
+            }
+            .label {
+                border-radius: 15px;
+                box-sizing: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <br /><br /><br />
+            <center>
+                <marquee> Bubble sort</marquee>
+                <hr />
+            </center>
+            <label>How manystudents</label>
+            <input type="number" id="num1" placeholder="Enter the First number" />
+            <button onclick="show()" class="btn">GET</button>
+            <div class="box">
+                <center>
+                    <h4 id="pid"></h4>
+                    <h4 id="pid1"></h4>
+                </center>
+            </div>
+        </div>
+    </body>
+</html>

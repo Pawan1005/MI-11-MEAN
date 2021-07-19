@@ -1,0 +1,33 @@
+#p {
+    width: 35%;
+    height: 25%;
+    border: 1px solid black;
+    background-color: black;
+    color: red;
+}
+#p > div {
+    border: 1px solid black;
+    background-color: black;
+    font-size: 20px;
+    margin: 10px 0 0 20px;
+    text-align: center;
+}
+body {
+    background-color: seagreen;
+}
+div {
+    margin: 100px 0 0 400px;
+    width: 100px;
+    height: 200px;
+    background-color: black;
+    color: red;
+}
+#pr {
+    margin: 50px 10px 0 400px;
+    font-size: 25px;
+    background-color: transparent;
+    border: 1px solid black;
+    width: 20%;
+    height: fit-content;
+    padding: 5px 0 5px 150px;
+}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="academic.css" />
+        <title>Personal Details</title>
+    </head>
+    <body>
+        <div class="center">
+            <div class="Academic">
+                <h2>Academic Details</h2>
+                <form id="Academic" method="Post"></form>
+                <form class="form2">
+                    <fieldset>
+                        <label class="label-checkbox1"><b>Skill Set:</b></label>
+                        <input type="checkbox" name="g" value="html" />HTML
+                        <input
+                            type="checkbox"
+                            name="g"
+                            value="java_script"/>Java Scrip
+                        <input type="checkbox" name="g" value="java" />Java
+                        <input type="checkbox" name="g" value="oracle" />Oracle
+                        <div class="qualification">
+                            <label><b>Highest Qualificatin:</b></label>
+                            <select class="section1">
+                                <option>Diploma in Computer Science</option>
+                                <option>Science Graduate</option>
+                                <option>Bachelor in Engg.</option>
+                                <option>Masters in Computer Science</option>
+                                <option>Masters in Engg.</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="university">
+                            <label class="label-university"></label>
+                                <b>University:</b></label>
+                            <input list="university" />
+                            <datalist id="university">
+                                <option value="Mumbai University"></option>
+                                <option value="Pune University"></option>
+                                <option value="Chennai University"></option>
+                                <option value="Nagpur University"></option>
+                                <option value="Badoda University"></option>
+                            </datalist>
+                        </div>
+                        <div class="multipleoption1">
+                            <label class="label-multiple"></label>
+                            <b>Areas of Expertise:</b></label>
+                            <select multiple>
+                                <option>Software</option>
+                                <option>Training</option>
+                                <option>Networking</option>
+                                <option>Managrment</option>
+                                <option>Maeketing</option>
+                            </select>
+                            <simpletext You can select multiple fields.></simpletext>
+                        </div>
+                    </fieldset>
+                    <br />
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

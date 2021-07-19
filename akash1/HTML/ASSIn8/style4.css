@@ -1,0 +1,40 @@
+body {
+    font-family: "Baloo Bhaina 2", cursive;
+}
+.block {
+    top: -15px;
+    position: relative;
+    left: -3px;
+    width: 905px;
+    height: 700px;
+    background-color: rgb(10, 241, 241);
+    border: 2px solid red;
+}
+.block1 {
+    padding: 24px 45px 0px 36px;
+}
+.block2 {
+    padding: 87px 45px 0px 36px;
+}
+.block3 {
+    padding: 72px 45px 0px 36px;
+}
+
+.okey {
+    float: left;
+    height: 200px;
+    width: 200px;
+    padding: 24px 45px 31px 36px;
+}
+.okey1 {
+    float: right;
+    height: 200px;
+    width: 200px;
+    padding: 87px 45px 31px 36px;
+}
+.okey3 {
+    float: left;
+    height: 200px;
+    width: 200px;
+    padding: 82px 45px 0px 36px;
+}

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Uppercase</title>
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+                transition: 0.3s;
+                width: 50%;
+                height: 300px;
+                border-radius: 20px;
+                background-color: gainsboro;
+                margin: auto;
+                margin-top: 50px;
+            }
+            .btn {
+                position: relative;
+                border: none;
+                font-size: 20px;
+                padding: 10px;
+                width: 180px;
+                text-align: center;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+                text-decoration: none;
+                overflow: hidden;
+                cursor: pointer;
+                margin-left: 160px;
+                background-color: white;
+                color: black;
+            }
+            #pid {
+                color: white;
+                text-align: center;
+                font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <div class="main">
+                    <h1 style="text-align: center;">
+                        </style> To Check First Character is Uppercase or Not</h1>
+                    <div>
+                        <label for="">Enter the string : </label>
+                        <input type="text" id="firstnumber" />
+                    </div>
+                    <div>
+                        <p>It is&nbsp;&nbsp;&nbsp;<span id="num1"></span></p>
+                    </div>
+                    <div>
+                        <button class="btn" onclick="uppercase()">Check</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function uppercase() {
+                var regExp, str;
+                str = document.getElementById("firstnumber").value;
+                regExp = /^[A-Z]/;
+                if (regExp.test(str)) {
+                    document.getElementById("num1").innerHTML = " in uppercase";
+                } else {
+                    document.getElementById("num1").innerHTML = " not in uppercase";
+                }
+            }
+        </script>
+    </body>
+</html>

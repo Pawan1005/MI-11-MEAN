@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Join</title>
+        <style>
+            h1 {
+                text-align: center;
+                color: red;
+                margin-top: 4%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 440px;
+                height: 380px;
+                margin: auto;
+
+                background-color: rgb(184, 182, 182);
+                gap: 20px;
+                border-radius: 10px;
+            }
+            input {
+                width: 65%;
+                margin-left: 10px;
+                margin-bottom: 12px;
+                padding: 4px 8px;
+                font-size: 15px;
+                outline: none;
+                line-height: 19px;
+                border: 1px solid #0000004b;
+            }
+            button {
+                background-color: #ff0000;
+                color: white;
+                padding: 7px 11px;
+                margin: 0 8px;
+                font-weight: bold;
+                font-size: 17px;
+                border: 1px solid gray;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Seperated List , Ascending , Descending order</h1>
+        <div class="main">
+            <button class="btn1" onclick="numbers()">Enter list</button>
+            <p>Entered name : <span id="num1"></span></p>
+        </div>
+        <script>
+            array = [];
+            container1 = document.getElementById("num1");
+            while (true) {
+                temp = prompt("Enter a name ");
+                if (temp == "X" || temp == "x" || temp == null) break;
+                array.push(temp);
+            }
+            container1.innerHTML += ` <div>${array.join("~")}</div>`;
+            container1.innerHTML += ` <div>${array.sort()}</div>`;
+            container1.innerHTML += ` <div>${array.reverse()}</div>`;
+        </script>
+    </body>
+</html>

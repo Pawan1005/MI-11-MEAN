@@ -1,0 +1,55 @@
+<html>
+	<head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Prime Number Demo</title>
+        <style>
+            .name{
+                position: relative;
+                width: 500px;
+                background-color: rgba(217, 241, 106, 0.918);
+                padding: 10px 0px 20px 0px;
+                border-radius: 15px 15px 0px 0px;
+                color: rgb(238, 13, 126);
+                text-align: center;
+                margin-top: 80px;
+                margin-left: 200px;
+            }
+        </style>
+		<script>
+			function Prime()
+			{
+				var i,flag=0,number;
+				number = Number(document.getElementById("N").value);
+
+				for(i=2; i <= number/2; i++)
+				{
+					if(number%i == 0)
+					{
+						flag = 1;
+						break;
+					}
+				}
+				if(flag == 0)
+				{
+                    document.getElementById("answer").value = "Prime";
+				}
+				else
+				{
+					document.getElementById("answer").value = "Not Prime";
+				}
+			}
+	</script>
+	</head>
+	<body style="background-color: rgb(191, 102, 233);">
+        <div class="name"><h2>Whether a number is Prime or not</h2>
+            <hr style="color: white;">
+		<br>
+		Enter The Number :<input type="text" name="n" id = "N"/>
+		<br>
+		<br>
+        The given number is: <input id="answer"></br></br>
+		<button onClick="Prime()">CHECK</button>
+	</body>
+</html>

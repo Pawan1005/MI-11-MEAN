@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>FIND VOWELS</title>
+    </head>
+    <body style="background-color: lightgrey">
+        <center>
+            <div class="logincentrecard">
+                <div class="card">
+                    <div class="container">
+                        <h1>CONVERT TO UPPERCASE</h1>
+                        <label for="char">Enter Character:</label>
+                        <input
+                            type="text"
+                            id="char"
+                            placeholder="Enter Character"
+                        />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<br /><br />
+                        <button onclick="show()" style="background-color: red; color: white">CONVERT</button>
+                        <p id="pid"></p>
+                    </div>
+                    <script>
+                        function show() {
+                            var a, b;
+                            a = document.getElementById("char").value;
+                            if (a.charAt(0) == a.charAt(0).toUpperCase()) {
+                                b = a.toLowerCase();
+                                document.getElementById("pid").innerHTML = "in lower case = " + b;
+                            } else {
+                                b = a.toUpperCase();
+                                document.getElementById("pid").innerHTML = "in upper case = " + b;
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </center>
+    </body>
+</html>
