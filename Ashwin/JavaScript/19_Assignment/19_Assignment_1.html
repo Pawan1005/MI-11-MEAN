@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Programming_List</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <script src="19_Assignment_1.js"></script>
+        <style>
+            .box {
+                height: fit-content;
+                width: fit-content;
+                border: 1px solid red;
+                margin-top: 150px;
+                margin-left: 150px;
+                padding: 20px;
+                border-radius: 13px;
+                background-color: bisque;
+                background-size: cover;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="box">
+                    <h1>Programming List</h1>
+                    <ol id="programmingList">
+                        <li>SDLC</li>
+                        <li>HTML</li>
+                        <li>FIGMA</li>
+                        <li>CSS</li>
+                    </ol>
+                    <input type="text" id="programming" placeholder="Enter a Programming Language"/>
+                    <button type="submit" onclick="addProgramming()" class="btn-danger"> Add</button>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </body>
+</html>
