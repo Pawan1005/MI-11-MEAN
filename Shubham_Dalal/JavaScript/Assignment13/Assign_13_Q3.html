@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="Assignment_8.css" />
+        <title>Assignment 8 | Q3</title>
+    </head>
+    <body>
+        <h1>Date Ago</h1>
+        <div class="main">
+            <div>
+                <p class="para1">Current Date &nbsp;:&ensp;<span id="num"></span></p>
+            </div>
+            <div class="display2">
+                <p class="para2">
+                </p>
+                <p class="para3"><span id="num1"></span><br /><br /><span id="num2"></span><br /><br /><span id="num3"></span></p>
+            </div>
+        </div>
+        <script>
+            function getDateAgo(date, day) {
+                let d1 = new Date(date);
+                d1.setDate(date.getDate() - day);
+                return d1.toLocaleDateString();
+            }
+            let date = new Date();
+            let month = date.getMonth() + 1;
+            let year = date.getFullYear();
+            let year2 = date.getFullYear() - 1;
+            alert("Date 2 day Ago  :   " + getDateAgo(date, 2));
+            alert("Date 1 day Ago  :   " + getDateAgo(date, 1));
+            alert("Date 1 Year Ago  :   " + getDateAgo(date, 365));
+            document.getElementById("num").innerHTML = date.toDateString();
+            document.getElementById("num1").innerHTML ="Date One day ago : "+ getDateAgo(date, 2);
+            document.getElementById("num2").innerHTML ="Date Two day ago : "+ getDateAgo(date, 1);
+            document.getElementById("num3").innerHTML = "Date three day ago : "+getDateAgo(date, 365);
+        </script>
+    </body>
+</html>

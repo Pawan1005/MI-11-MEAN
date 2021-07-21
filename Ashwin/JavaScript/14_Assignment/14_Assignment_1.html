@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Inheritence</title>
+    </head>
+    <body>
+        <script>
+            class Student {
+                constructor(RollNo, Name) {
+                    this.RollNo = RollNo;
+                    this.Name = Name;
+                }
+                display() {
+                    document.write("<br>Inside Display");
+                    document.write("<br>Roll No " + this.RollNo);
+                    document.write("<br>Name " + this.Name);
+                }
+            }
+            class Marks extends Student {
+                constructor(RollNo, Name, Marks) {
+                    super(RollNo, Name);
+                    this.Marks = Marks;
+                    this.d1 = new Date();
+                    this.created =
+                        this.d1.getDate() +
+                        "/" +
+                        this.d1.getMonth() +
+                        "/" +
+                        this.d1.getFullYear();
+                }
+                marks() {
+                    document.write(
+                        "<br>Inside Marks---Created on " + this.created
+                    );
+                    document.write("<br>Inside Marks---Name " + this.Name);
+                    document.write("<br>Inside Marks---Marks " + this.Marks);
+                }
+                show() {
+                    document.write("<br>Show Method Call With Correct");
+                }
+            }
+            let m2 = new Marks(2, "Ashwin", 22);
+            m2.marks();
+            m2.display();
+            m2.show();
+        </script>
+    </body>
+</html>

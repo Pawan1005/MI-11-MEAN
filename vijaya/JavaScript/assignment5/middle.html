@@ -13,7 +13,6 @@
             padding: 10px 0px 10px 0px;
             border-radius: 15px 15px 0px 0px;
             color: white;
-            
             margin-top: 80px;
             margin-left: 400px;
         }
@@ -29,44 +28,42 @@
         }
         </style>
         <script type="text/javascript">
-            function middle()
-            {
+        function middle() {
             var n,middle,last,sum,first;
             n = parseInt(document.getElementById ("first").value);
             if(n>=101 && n<=999){
-            last = n%10;
-            m = parseInt(n/10);
-            middle = m%10;
-            first = parseInt(n/100);
-            sum = last + first;
-            if(sum==middle)
-            {
-            document.getElementById("num").innerHTML= "Middle digit is equal to the sum of other two digits";
+                last = n%10;
+                m = parseInt(n/10);
+                middle = m%10;
+                first = parseInt(n/100);
+                sum = last + first;
+                if(sum==middle)
+                {
+                document.getElementById("num").innerHTML= "Middle digit is equal to the sum of other two digits";
+                }
+                else
+                {
+                document.getElementById("num").innerHTML="Middle digit is not equal to the sum of other two digits";
+                }
             }
-            else
-            {
-            document.getElementById("num").innerHTML="Middle digit is not equal to the sum of other two digits";
+            else{
+                document.getElementById("num").innerHTML="Invalid Number!! please enter 3 digit number.";
             }
         }
-        else{
-            document.getElementById("num").innerHTML="Invalid Number!! please enter 3 digit number.";
-        }
-            }
-            </script>
-        </head>
-        <body style="background-color: rgb(211, 173, 92);">
-            <div class="name">
-                <h2 style="text-align: center;">Middle digit is equal to sum</h2>
-                <hr style="color: rgb(34, 32, 199);">
-                <br>
-                Enter the 3 digit number: <input id="first"></br></br>
-               
-                <div class="one">
+        </script>
+    </head>
+    <body style="background-color: rgb(247, 234, 162);">
+        <div class="name">
+            <h2 style="text-align: center;">Middle digit is equal to sum</h2>
+            <hr style="color: white;">
+            <br>
+            Enter the 3 digit number: <input id="first"></br></br>
+            <div class="one">
                 <p><span id="num"></span></p>
-                </div> 
-                <div class="btn">
+            </div> 
+            <div class="btn">
                 <button onclick="middle()" style=" background-color: rgb(17, 175, 223); height: 30px">Show</button></br></br>
-                </div>      
-            </div>
-        </body>
+            </div>      
+        </div>
+    </body>
 </html>

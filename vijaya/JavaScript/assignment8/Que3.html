@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8 />
+        <title>Display The Marks Of Students</title>
+        <style>
+        h1 {
+            text-align: center;
+            color: rgb(144, 8, 207);
+            margin-top: 1%;
+        }
+        body{
+            padding-top: 5px;
+            background-color:rgb(250, 211, 139);  
+        }
+        .name{
+            align-items: center;
+            background-color: gray;       
+            width: 500px;
+            height: 560px;
+            margin: auto;
+            padding-top: 10px;
+            gap: 5px;
+            border-radius: 10px;
+        }
+        .res{
+            background-color: white;
+            width: 200px;
+            padding-left: 10px;
+            margin-left: 140px;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Marks of Students</h1>
+        <div class="name">
+            Enter no.of subject:
+            <input type="text" id="text1"></input><br><br>
+            Enter the Marks:
+            <input type="text" id="text2"></input><br><br>
+            <input type="button" value="Add" onclick="add()" style="margin-left: 140px;"></input>
+            <input type="button" value="Display" onclick="display()"style="margin-left: 20px;"></input><br><br>
+            <div class="res" id="Result"></div><br>
+            <input type="button" value="Sort" onclick="sort()" style="margin-left: 200px;"></input><br>
+            After Sorting:
+            <div class="res" id="Result1"></div>
+        </div>
+        <script>
+        var size,x = 1;
+        var array = Array();
+        function add() {
+            size = document.getElementById("text1").value;
+            array[x] = parseInt(document.getElementById("text2").value);
+            if(array[x]>80)
+            {
+                alert("invalid! please enter less than 80");
+            }
+            x++;
+            document.getElementById("text2").value = "";
+        }
+        function display() {
+            var e = "",total=0;
+            for (var y = 1; y <=size; y++) {
+                total=(array[y]*20/100)+array[y];
+                array[y] = parseInt(total);
+                e += "subject: " + y + " = " +array[y]+ "<br/>";
+            }
+            document.getElementById("Result").innerHTML = " Total score of students:<br>"+e;
+        }
+        function sort(){
+        let ch = parseInt(prompt("1 – Bubble sort (Press 1)\n2 – Insertion sort (Press 2)\n3 – selection sort(Press 3)\n4 – Quick Sort(Press 4)\n5 – Exit (Press X or Cancel)"));
+			switch(ch)
+			{
+				case 1:
+                    bubblesort();
+					break;
+				case 2:
+                    insertionsort();
+					break;
+				case 3:
+                    selectionsort();
+					break;
+				case 4:
+                    Quicksort();
+					break;
+				default:
+				document.writeln("Enter correct value");
+			}
+        }
+        function bubblesort() {
+            size = document.getElementById("text1").value;
+            array[x] = parseInt(document.getElementById("text2").value);
+            var ee = "",y=1;
+            for (var i = 1; i <= size; i++) {
+                for (var j = 1; j <= size - 1; j++) {
+                    if (array[j] > array[j + 1]) {
+                        var temp = array[j];
+                        array[j] = array[j + 1];
+                        array[j + 1] = temp;
+                    }
+                }
+            }
+            for (let k = 1; k <= size; k++) {
+                document.getElementById("Result1").innerHTML += "Marks " + y++ + " = " + array[k] + "<br>";
+            }
+        }
+        function insertionsort() {
+            size = document.getElementById("text1").value;
+            array[x] = parseInt(document.getElementById("text2").value);
+            var ee = "",y=1,j;
+            for (var i = 1; i <= size; i++) {
+                var temp = array[i];
+                j=i-1;
+                while(j >= 0 && array[j]>temp) {
+                    array[j+1] = array[j];
+                    j--;
+                    array[j+1] = temp;
+                }
+            }
+            for (let k = 1; k <= size; k++) {
+                document.getElementById("Result1").innerHTML += "Marks " + y++ + " = " + array[k] + "<br>";
+            }
+        }
+        function selectionsort() {
+            size = document.getElementById("text1").value;
+            array[x] = parseInt(document.getElementById("text2").value);
+            var ee = "",y=1;
+            for (var i = 1; i <= size-1; i++) {
+                for (var j = i+1; j <= size; j++) {
+                    if (array[i] > array[j]) {
+                        var temp = array[i];
+                        array[i] = array[j];
+                        array[j] = temp;
+                    }
+                }
+            }
+            for (let k = 1; k <= size; k++) {
+                document.getElementById("Result1").innerHTML += "Marks " + y++ + " = " + array[k] + "<br>";
+            }
+        }
+        function Quicksort() {
+            var res = "";
+            quickSort(array, 1, size);
+            for (let i = 1; i <= size; i++) {
+                res += "Total marks:" + i + " = " + array[i] + "<br>";
+            }
+            document.getElementById("Result1").innerHTML = "Total score of students:<br>" + res;
+        }
+        function partition(array, low, high) {
+            let pivot = array[high],i = low - 1,temp;
+            for (let j = low; j <= high; j++) {
+                if (pivot > array[j]) {
+                    i++;
+                    temp = array[j];
+                    array[j] = array[i];
+                    array[i] = temp;
+                }
+            }
+            temp = array[high];
+            array[high] = array[i + 1];
+            array[i + 1] = temp;
+            return i + 1;
+        }
+        function quickSort(array, low, high) {
+            if (low < high) {
+                pi = partition(array, low, high);
+                quickSort(array, low, pi - 1);
+                quickSort(array, pi + 1, high);
+            }
+        }
+        </script>
+    </body>
+</html>

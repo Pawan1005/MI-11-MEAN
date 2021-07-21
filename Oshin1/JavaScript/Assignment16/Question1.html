@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assign16_Q1</title>
+        <style>
+            #btn1 {
+                width: 100px;
+                height: 40px;
+                background-color: purple;
+                color: white;
+                align-items: center;
+                margin-left: 300px;
+                border-radius: 20px;
+            }
+            #btn1:hover {
+                background-color: thistle;
+            }
+            #btn2 {
+                width: 100px;
+                height: 40px;
+                background-color: purple;
+                color: white;
+                align-items: center;
+                margin-left: 150px;
+                border-radius: 20px;
+            }
+            #btn2:hover {
+                background-color: thistle;
+            }
+            #btn3 {
+                width: 100px;
+                height: 40px;
+                background-color: purple;
+                color: white;
+                align-items: center;
+                margin-left: 170px;
+                border-radius: 20px;
+            }
+            #btn3:hover {
+                background-color: thistle;
+            }
+        </style>
+        <script>
+            function left() {
+                document.getElementById("pid").style = "text-align:left;";
+            }
+            function center() {
+                document.getElementById("pid").style = "text-align:center;";
+            }
+            function right() {
+                document.getElementById("pid").style = "text-align:right;";
+            }
+        </script>
+    </head>
+    <body style="background-color: thistle;">
+        <h1 id="pid">HELLO WORLD</h1>
+        <button id="btn1" onclick="left()">LEFT</button>
+        <button id="btn2" onclick="center()">CENTER</button>
+        <button id="btn3" onclick="right()">RIGHT</button>
+    </body>
+</html>

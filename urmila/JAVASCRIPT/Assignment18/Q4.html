@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+        <title>Document</title>
+        <script lang="javascript">
+                       function myFunction() {
+              var con = document.getElementById("num1").value;
+              switch (con) {
+              case 'India':
+              document.getElementById("pid1").innerHTML =`DELHI`;
+              document.getElementById("pid").innerHTML = "You selected: " + con +" Capital is DELHI ";
+                break;
+              case 'italy':
+              document.getElementById("pid1").innerHTML =`Rome`;
+              document.getElementById("pid").innerHTML = "You selected: " + con +" Capital is Rome ";
+                  break;
+              case 'USA':
+              document.getElementById("pid1").innerHTML =`Washington, D.C.`;
+              document.getElementById("pid").innerHTML = "You selected: " + con +" Capital is Washington, D.C. ";
+                break;
+              case 'FRANCE':
+              document.getElementById("pid1").innerHTML =`Paris`;
+              document.getElementById("pid").innerHTML = "You selected: " + con +" Capital is Paris ";
+                break;
+              default:
+                console.log(`Sorry, we are out of ${con}.`);
+            }
+            }
+        </script>
+        <style>
+            label {
+                color: black;
+            }
+            .vm {
+                padding-left: 200px;
+                padding-right: 200px;
+            }
+            .jumbotron {
+                border: solid rgb(233, 97, 97) 2px;
+                box-shadow: 5px 5px 30px black;
+            }
+            .box {
+                background-image: linear-gradient(50deg, rgb(131, 111, 111), rgb(1, 21, 19));
+                border: inset rgb(209, 103, 103);
+                padding-top: 20px;
+            }
+            input {
+                background-color: rgb(255, 255, 255);
+                margin: 5px;
+                border-radius: 50%;
+                text-align: center;
+                font-size: 20px;
+            }
+        </style>
+    </head>
+    <body >
+        <center>
+            <h1>Country and Capital</h1>
+        </center>
+        <div class="row vm">
+            <div class="col">
+                <div class="jumbotron text-white" style="background-color: cyan;">
+                    <center>
+                        <h3 class="text-danger">Select the Country</h3>
+                        <hr />
+                    </center>
+                    <div class="form-row">
+                        <div class="form-group col-md-2">
+                            <label for="inputEmail4">country</label>
+                            <select name="cars" id="num1" onchange="myFunction()" class="custom-select custom-select-lg mb-3">
+                                <option value="India">India</option>
+                                <option value="italy">italy</option>
+                                <option value="USA">USA</option>
+                                <option value="FRANCE">FRANCE</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-2">
+                            <label for="inputEmail4">Capital</label>
+                            <select name="cars" id="cars" class="custom-select custom-select-lg mb-3">
+                                <span>
+                                    <option value="volvo" id="pid1"></option>
+                                </span>
+                            </select>
+                        </div>
+                    </div>
+                    <br /><br /><br />
+                    <div class="box">
+                        <center>
+                            <div id="pid"></div>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    </body>
+</html>

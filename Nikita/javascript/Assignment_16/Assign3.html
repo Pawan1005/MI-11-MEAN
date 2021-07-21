@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment_16</title>
+        <script>
+            function change() {
+                if (flag == 0) {
+                    document.getElementById("h2").innerHTML =
+                        "Nature picture 1";
+                    document.getElementById("img1").src = "imgc.jpg";
+                    flag = 1;
+                } else if (flag == 1) {
+                    document.getElementById("h2").innerHTML =
+                        "Nature picture 2";
+                    document.getElementById("img1").src = "imgc.jpg";
+                    flag = 2;
+                } else {
+                    document.getElementById("h2").innerHTML =
+                        "Nature picture 3";
+                    document.getElementById("img1").src = "imgc.jpg";
+                    flag = 0;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1 id="h2">Plant picture</h1>
+        <img
+            src="imga.jpg"
+            id="images"
+            style="height: 300px; width: 300px"
+            alt="img part"
+        />
+        <button id="btn" onclick="change()">change</button>
+        <script>
+            let flag = 0;
+        </script>
+    </body>
+</html>
