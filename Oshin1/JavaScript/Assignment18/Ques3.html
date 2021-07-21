@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assign18_Q3</title>
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                margin-top: 50px;
+                align-items: center;
+                justify-content: center;
+                background-color: lightcoral;
+                width: 500px;
+                height: 400px;
+                margin: auto;
+                border-radius: 20px;
+            }
+            #pid {
+                color: white;
+                text-align: center;
+                font-size: large;
+                font-weight: 300;
+            }
+            button {
+                background-color: white;
+                color: lightcoral;
+                padding: 10px;
+                border-radius: 10px;
+                margin-left: 180px;
+                width: 100px;
+            }
+            button:hover {
+                background-color: thistle;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <h1 style="text-align: center; color: white;">Calculate Discount</h1>
+                Enter Shopping Amount:&nbsp;&nbsp;<input type="text" id="num" /> <br /><br />
+                <button onclick="calcu()">Calculate</button>
+                <p id="pid"></p>
+            </div>
+        </div>
+        <script>
+            function check(n) {
+                let re = /[^0-9]/g;
+                if (re.test(n) || n == "") {
+                    alert(`invalid input`);
+                    throw new Error();
+                }
+            }
+            function calcu() {
+                var a = document.getElementById("num").value;
+                check(a);
+                if (a >= 1000) {
+                    document.getElementById("pid").innerHTML = `Total  payable amount ${a - a * 0.15}`;
+                } else {
+                    document.getElementById("pid").innerHTML = `Total  payable amount ${a - a * 0.05}`;
+                }
+            }
+        </script>
+    </body>
+</html>
