@@ -1,11 +1,10 @@
 <html lang="en">
     <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Bank details or transaction</title>
         <style>
-           
             h1 {
                 text-align: center;
                 color: red;
@@ -40,23 +39,27 @@
                 background-color: #ffffff;
                 border-collapse: collapse;
             }
-            tr, th, td {
+            tr,
+            th,
+            td {
                 border: 1px solid rgba(0, 0, 0, 0.219);
                 padding: 10px 5px;
             }
             table th {
-                background-color: #76438d94;
+                background-color: #b7b6b894;
                 color: white;
                 font-size: 16px;
             }
-            tr, td {
+            tr,
+            td {
                 font-size: 17px;
                 min-width: 85px;
                 text-align: center;
                 padding-top: 30px;
                 padding-bottom: -20px;
             }
-            .row, .col {
+            .row,
+            .col {
                 padding-top: 4px;
                 padding-bottom: 4px;
             }
@@ -123,7 +126,9 @@
                 withdraw(with_amt) {
                     this.with_amt = parseInt(with_amt);
                     document.getElementById("num3").innerHTML += this.with_amt + "<br>";
-                    document.getElementById("num4").innerHTML += `<span style="color:#000000;">${this.sr_no}&nbsp;Balance &ensp;=&emsp;</span> ${this.bal} - <span style="color: blue;">${this.with_amt}</span>` + "<br><br>";
+                    document.getElementById("num4").innerHTML +=
+                        `<span style="color:#000000;">${this.sr_no}&nbsp;Balance &ensp;=&emsp;</span> ${this.bal} - <span style="color: blue;">${this.with_amt}</span>` +
+                        "<br><br>";
                     if (this.with_amt > this.bal) {
                         alert("Error:Insufficient Funds");
                     } else {
