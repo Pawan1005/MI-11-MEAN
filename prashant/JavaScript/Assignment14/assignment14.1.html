@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <title>Assignment14.1 Inheritance</title>
+    </head>
+    <body>
+        <script language="javascript">
+            class student {
+                constructor(RollNo, Name) {
+                    this.RollNo = RollNo;
+                    this.Name = Name;
+                }
+                display() {
+                    document.write("<br>Inside Display");
+                    document.write("<br>Roll No " + this.RollNo);
+                    document.write("<br>Name " + this.Name);
+                }
+            }
+            //Marks is a derived class/child class
+            class Marks extends student {
+                //Constructor Overriding
+                constructor(RollNo, Name, Marks) {
+                    super(RollNo, Name);
+                    this.Marks = Marks;
+                    let d1 = new Date();
+                    this.created = d1.getDate() + "/" + d1.getMonth() + "/" + d1.getFullYear();
+                }
+                marks() {
+                    document.write("<br>Inside Marks---Created on " + this.created);
+                    document.write("<br>Inside Marks---Name " + this.Name);
+                    document.write("<br>Inside Marks---Marks " + this.Marks);
+                }
+            }
+            m2 = new Marks(2, "ss", 45);
+            m2.marks();
+            m2.display();
+        </script>
+    </body>
+</html>
