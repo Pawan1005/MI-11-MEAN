@@ -4,58 +4,58 @@
         <title>Cheking credit card number</title>
         <style>
             h1 {
-            text-align: center;
-            color: rgb(117, 177, 5);
-            margin-top: 4%;
-        }
-        .name {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: rgb(11, 224, 214);
-            width: 500px;
-            height:250px;
-            margin: auto;
-            padding-top: 5px;
-            gap: 10px;
-            border-radius: 10px;
-        }
-        .result{
-            background-color: white;
-        }
+                text-align: center;
+                color: rgb(124, 189, 3);
+                margin-top: 4%;
+            }
+            .name {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: rgb(11, 224, 214);
+                width: 500px;
+                height:250px;
+                margin: auto;
+                padding-top: 5px;
+                gap: 10px;
+                border-radius: 10px;
+            }
+            .result {
+                background-color: white;
+            }
         </style>
         <script>
-        function check() {
-            var type=parseInt(document.getElementById("type").value);
-            var cardno=parseInt(document.getElementById("num").value);
-            if(type==1) {
-                var regex=/^5[1-5]{1}[0-9]{2}[\s]?[0-9]{4}[\s]?[0-9]{4}[\s]?[0-9]{4}$/;
-                if(regex.test(cardno)){
-                    document.getElementById("res").innerHTML = "Valid Master-Card";
+            function check() {
+                var type=parseInt(document.getElementById("type").value);
+                var cardno=parseInt(document.getElementById("num").value);
+                if(type==1) {
+                    var regex=/^5[1-5]{1}[0-9]{2}[\s]?[0-9]{4}[\s]?[0-9]{4}[\s]?[0-9]{4}$/;
+                    if(regex.test(cardno)){
+                        document.getElementById("res").innerHTML = "Valid Master-Card";
+                    }
+                    else {
+                        document.getElementById("res").innerHTML = "Invalid card!";
+                    }
+                }
+                else if(type==2) {
+                    var regex=/^4{1}[0-9]{3}[\s]?[0-9]{4}[\s]?[0-9]{4}[\s]?[0-9]{1}$/;
+                    if(regex.test(cardno)||regex1.test(cardno)){
+                        document.getElementById("res").innerHTML = "Valid Visa Card";
+                    }
+                    else {
+                        document.getElementById("res").innerHTML = "Invalid card!";
+                    }
                 }
                 else {
-                    document.getElementById("res").innerHTML = "Invalid card!";
-                }
+                    var regex=/^3[4|7]{1}[0-9]{2}[\s]?[0-9]{4}[\s]?[0-9]{4}[\s]?[0-9]{3}$/;
+                    if(regex.test(cardno)){
+                        document.getElementById("res").innerHTML ="Valid American Express Card";
+                    }
+                    else {
+                        document.getElementById("res").innerHTML = "Invalid card!";
+                    }
+                } 
             }
-            else if(type==2) {
-                var regex=/^4{1}[0-9]{3}[\s]?[0-9]{4}[\s]?[0-9]{4}[\s]?[0-9]{1}$/;
-                if(regex.test(cardno)||regex1.test(cardno)){
-                    document.getElementById("res").innerHTML = "Valid Visa Card";
-                }
-                else {
-                    document.getElementById("res").innerHTML = "Invalid card!";
-                }
-            }
-            else {
-                var regex=/^3[4|7]{1}[0-9]{2}[\s]?[0-9]{4}[\s]?[0-9]{4}[\s]?[0-9]{3}$/;
-                if(regex.test(cardno)){
-                    document.getElementById("res").innerHTML ="Valid American Express Card";
-                }
-                else {
-                    document.getElementById("res").innerHTML = "Invalid card!";
-                }
-            } 
-        }
         </script>
     </head>
     <body  style="background-color: rgb(99, 95, 95);">
