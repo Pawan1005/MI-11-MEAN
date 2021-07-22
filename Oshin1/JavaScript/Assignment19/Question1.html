@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=S, initial-scale=1.0" />
+        <title>Assign19_Q1</title>
+        <style>
+            button {
+                background-color: thistle;
+                width: 100px;
+                height: 40px;
+            }
+            button:hover {
+                background-color: gray;
+            }
+        </style>
+    </head>
+    <body style="background-color: linen;">
+        <h2>Multiplication Table</h2>
+        <input type="text" id="num" />
+        <button onclick="multi()">Display</button>
+        <p id="pid"></p>
+        <script>
+            function check(n) {
+                let re = /[^0-9]/g;
+                if (re.test(n) || n == "") {
+                    alert(`invalid input`);
+                    throw new Error();
+                }
+            }
+            function multi() {
+                n = parseInt(document.getElementById("num").value);
+                check(n);
+                let a = document.createElement("pid");
+                for (i = 0; i <= 10; i++) {
+                    a.innerHTML += `${n} X ${i} = ${n * i}<br>`;
+                    document.body.appendChild(a);
+                }
+            }
+        </script>
+    </body>
+</html>
