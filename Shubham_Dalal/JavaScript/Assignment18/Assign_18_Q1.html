@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Assignment18.css">
+        <title>Even_odd</title>
+    </head>
+    <body>
+        <h1>Even or Odd</h1>
+        <div class="main">
+            <div class="common" >
+                <label for="">Enter a number</label>
+                <input type="text" id="firstnumber">
+            </div>
+            <div class="common">
+                <button class="btn1" onclick="evenOdd()">Even/Odd</button>
+            </div>
+            <div class="common">
+                <span id="evenodd"></span>
+            </div>
+        </div>
+        <script>
+            function evenOdd() {
+                var num;
+                num = parseInt(document.getElementById("firstnumber").value);
+                if (isNaN(num)) {
+                    alert("Enter numbers only !!!");
+                } else {
+                    if (num % 2 == 0) {
+                        document.getElementById("evenodd").innerHTML = "The Number is EVEN";
+                    } else {
+                        document.getElementById("evenodd").innerHTML = "The Number is ODD";
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>
