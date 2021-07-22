@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8 />
+        <title>Display Date and Time </title>
+        <style>
+            h1 {
+                text-align: center;
+                color:white;      
+                margin-top: 4%;
+            }
+            body {
+                padding-top: 3px;
+                background-color: rgb(128, 2, 75); 
+            }
+            .name {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: gray;
+                width: 300px;
+                height:180px;
+                margin: auto;
+                padding-top: 20px;
+                gap: 5px;
+                border-radius: 10px;
+            }  
+            .res{
+                margin-top: 30px;
+                padding: 10px,10px;
+                padding-left: 10px;
+                padding-right: 10px;
+                background-color: white;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Date and Time</h1>
+        <div class="name">
+            <div class="res">
+                <p id="num1"></p>
+                <p id="num2"></p>
+            </div> 
+        </div>
+        <script>
+        var today = new Date();
+        var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+        var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds(); 
+        let hours = today.getHours();
+        let minutes = today.getMinutes();
+        let local = hours>=12?"PM":"AM";
+        hours = hours % 12;
+        if(minutes < 10) {
+            minutes = "0" + minutes
+        }
+        alert(today.toDateString()+",   " +date  +" : "+time+" "+local);    
+        document.getElementById("num1").innerHTML="Date is: "+date;
+        document.getElementById("num2").innerHTML="Time is: "+time +" "+local;
+        </script>
+    </body>
+</html>
