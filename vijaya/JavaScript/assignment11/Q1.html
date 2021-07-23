@@ -7,7 +7,6 @@
             h1 {
                 text-align: center;
                 color:white;
-                margin-top: 1%;
             }
             body {
                 background-color: rgb(66, 65, 65);
@@ -15,10 +14,10 @@
             .name {
                 align-items: center;
                 background-color: rgb(236, 191, 95);
-                width: 550px;
-                height: 575px;
+                width: 650px;
+                height: 600px;
                 margin: auto;
-                padding-top: 7px;
+                padding-top: 5px;
                 padding-left: 10px;
                 gap: 5px;
                 border-radius: 10px;
@@ -42,6 +41,15 @@
                 border-radius: 5px;
                 border-color: black;
             }
+            .res2 {
+                background-color: white;
+                color: rgb(5, 5, 143);
+                width: 180px;
+                margin-left: 250px;
+                padding-left: 20px;
+                border-radius: 5px;
+                border-color: black;
+            }
         </style>
     </head>
     <body>
@@ -53,6 +61,9 @@
             <input type="text" id="text2"></input> <input type="button" value="Add" onclick="add1()"></input>
             <input type="button" value="Display" onclick="display()" style="margin-left: 20px;"></input><br>
             <div class="res" id="Result"></div><br>
+            <input type="text" id="text3" placeholder="Enter Roll no. to search"></input>
+            <input type="button" value="search" onclick="search()" style="margin-left: 120px;"></input>
+            <div class="res2" id="Result2"></div>
             <input type="button" value="sort" onclick="sort()" style="margin-left: 20px;"></input><br>
             Total marks after sort:<br>
             <div class="res1" id="Result1"></div>
@@ -85,6 +96,17 @@
                 }
                 document.getElementById("Result").innerHTML +="Roll no.:" + " " + "Marks:<br>" +e;
             }
+            function search()
+            {
+                num = parseInt(document.getElementById("text3").value);
+                var index=0;
+                for(let i=0; i<=10; i++) {
+                    if(array[i] == num) {
+                        index = i;
+                    }                      
+                }
+                document.getElementById("Result2").innerHTML +="Roll no:"+num +" Has scored marks: "+array1[index]
+            }
             function sort() {
                 array1[x] = parseInt(document.getElementById("text2").value);
                 var y=1;
@@ -103,6 +125,7 @@
                 }
                 document.getElementById("Result1").innerHTML += "  " + "Marks:<br>" + e1;
             }
+            
         </script>
     </body>
 </html>
