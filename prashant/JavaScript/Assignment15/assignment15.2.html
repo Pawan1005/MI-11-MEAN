@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment15.2-Sales</title>
+    </head>
+    <body>
+        <script>
+            class Salesman {
+                constructor(id, name) {
+                    this.id = id;
+                    this.name = name;
+                }
+            }
+            class Sales extends Salesman {
+                constructor(id, name, sales) {
+                    super(id, name);
+                    this.sales = sales;
+                }
+                getCommission() {
+                    if (this.sales >= 0 && this.sales <= 5000) {
+                        this.commission = this.sales * 0.02;
+                    } else if (this.sales >= 5001 && this.sales <= 12000) {
+                        this.commission = this.sales * 0.05;
+                    } else if (this.sales >= 12001 && this.sales <= 50000) {
+                        this.commission = this.sales * 0.1;
+                    } else if (this.sales >= 50000) {
+                        this.commission = this.sales * 0.15;
+                    }
+                    alert("Commission is: " + this.commission);
+                }
+            }
+            try {
+                let id = prompt("Enter a id");
+                let name = prompt("Enter a name");
+                let sales = parseInt(prompt("Enter a sales"));
+                if (!/\d/.test(sales) || sales < 0) {
+                    throw "Enter Proper Salary";
+                }
+                let d = new Sales(id, name, sales);
+                d.getCommission();
+            } catch (error) {
+                alert(error);
+            }
+        </script>
+    </body>
+</html>
