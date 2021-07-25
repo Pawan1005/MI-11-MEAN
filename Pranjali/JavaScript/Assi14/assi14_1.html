@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Inheritence</title>
+            <style>
+                body {
+                    height: 1500px;
+                    background-image: linear-gradient(to bottom right, purple, red);
+                }
+            </style>
+        </head>
+        <body>
+            <div style="width: 30%; position: absolute; left: 700px; top: 250px">
+                <div style="background-color: rgba(236, 236, 146, 0.911); height: 50%; border-radius: 25px 25px 25px 25px">
+                    <br /><br />
+                    <h2 style="text-align: center">After Code Correction</h2>
+                    <hr size="5" color="black" />
+                    <br />
+                    <div style="position: relative; left: 130px">
+                        <script language="javascript">
+                            class student {
+                                constructor(rollNo, name, marks) {
+                                    this.RollNo = rollNo;
+                                    this.Name = name;
+                                    this.Marks = marks;
+                                }
+                                display() {
+                                    document.write("<br>Inside Display");
+                                    document.write("<br>Roll No " + this.RollNo);
+                                    document.write("<br>Name " + this.Name);
+                                    document.write("<br>Marks " + this.Marks);
+                                }
+                                marks() {
+                                    let d1 = new Date();
+                                    this.created = d1.getDate() + "/" + d1.getMonth() + "/" + d1.getFullYear();
+                                    document.write("<br><br><br>Inside Marks---Created on " + this.created);
+                                    document.write("<br>Inside Marks---Name " + this.Name);
+                                    document.write("<br>Inside Marks---Marks " + this.Marks);
+                                }
+                            }
+                            //Marks is a derived class/child class
+                            class Marks extends student {
+                                //Construcor Overrriding
+
+                                constructor(RollNo, Name, Marks) {
+                                    this.RollNo = RollNo;
+                                    this.Name = Name;
+                                    this.Marks = Marks;
+                                }
+                            }
+                            let m2 = new student(2, "ss", 45);
+                            m2.display();
+                            m2.marks();
+                            m2.show();
+                        </script>
+                        <br /><br /><br />
+                    </div>
+                </div>
+            </div>
+        </body>
+    </html>
+</html>
