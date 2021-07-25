@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="Assignment21.css" />
+        <title>Result page</title>
+    </head>
+    <body>
+        <div>
+            <h1>Result</h1>
+        <div id="main">
+            <div class="div1">
+                <div class="display">
+                    <div class="display2">
+                        <div class="input inp"><span class="name1">Roll No : </span> <span id="result1"></span></div>
+                        <div class="input inp"><span class="name1">Name : </span> <span id="result2"></span></div>
+                        <div class="input inp"><span class="name1">Class : </span> <span id="result3"></span></div>
+                        <div class="input inp"><span class="name1">Hindi : </span> <span id="result4"></span></div>
+                        <div class="input inp"><span class="name1">English : </span> <span id="result5"></span></div>
+                        <div class="input inp"><span class="name1">Marathi : </span> <span id="result6"></span></div>
+                        <div class="input inp"><span class="name1">Maths : </span> <span id="result7"></span></div>
+                        <div class="input inp"><span class="name1">Physics : </span> <span id="result8"></span></div>
+                        <div class="input inp"><span class="name1">Total : </span> <span id="result9"></span></div>
+                        <div class="input inp"><span class="name1">Percentage : </span> <span id="result10"></span></div>
+                        <div class="input inp"><span class="name1">Grade : </span> <span id="result11"></span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        <script>
+            window.addEventListener("load", () => {
+                const params = new URL(document.location).searchParams;
+                const rollNo = params.get("rollNo");
+                const Name = params.get("Name");
+                const Class = params.get("Class");
+                const Hindi = params.get("Hindi");
+                const English = params.get("English");
+                const Marathi = params.get("Marathi");
+                const Maths = params.get("Maths");
+                const Physics = params.get("Physics");
+                let total = parseInt(Hindi) + parseInt(English) + parseInt(Marathi) + parseInt(Maths) + parseInt(Physics);
+                let percentage = parseInt((total / 500) * 100);
+                let grade;
+                if (percentage >= 80) {
+                    grade = "A+";
+                } else if (percentage < 80 && percentage >= 60) {
+                    grade = "A";
+                } else if (percentage < 60 && percentage >= 55) {
+                    grade = "B+";
+                } else if (percentage < 55 && percentage >= 40) {
+                    grade = "B";
+                } else {
+                    grade = "Fail";
+                }
+                document.getElementById("result1").innerHTML = rollNo;
+                document.getElementById("result2").innerHTML = Name;
+                document.getElementById("result3").innerHTML = Class;
+                document.getElementById("result4").innerHTML = Hindi;
+                document.getElementById("result5").innerHTML = English;
+                document.getElementById("result6").innerHTML = Marathi;
+                document.getElementById("result7").innerHTML = Maths;
+                document.getElementById("result8").innerHTML = Physics;
+                document.getElementById("result9").innerHTML = total;
+                document.getElementById("result10").innerHTML = percentage + "%";
+                document.getElementById("result11").innerHTML = grade;
+            });
+        </script>
+    </body>
+</html>
