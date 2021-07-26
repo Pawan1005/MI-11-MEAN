@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <title>Web Page Design</title>
+    <head>
+        <style>
+            .container {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                padding: 5px;
+            }
+            .row {
+                background-color: white;
+                border-radius: 10px;
+                padding: 5px;
+            }
+            h1 {
+                text-align: center;
+                background-color: tomato;
+            }
+            .center {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body style="background-color: burlywood">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <h1>Student report card</h1>
+                    <br />
+                    <hr />
+                    <label for="Roll_no">Enter Roll_Number: </label>
+                    <input type="text" id="input1" required /><br /><br />
+                    <label for="name">Enter student Name: </label>
+                    <input type="text" id="input2" required /><br /><br />
+                    <label for="maths">Enter Maths marks: </label>
+                    <input type="number" id="input3" required /><br /><br />
+                    <label for="science">Enter Science marks: </label>
+                    <input type="number" id="input4" required /><br /><br />
+                    <label for="history">Enter History marks: </label>
+                    <input type="number" id="input5" required /><br /><br />
+                    <div class="center">
+                        <button id="btn" onclick="report()">Submit</button>
+                    </div>
+                </div>
+                <div class="col">
+                    <p id="pid"></p>
+                </div>
+            </div>
+        </div>
+        <script>
+            function report() {
+                let a = parseInt(document.getElementById("input1").value);
+                let b = document.getElementById("input2").value;
+                let c = parseInt(document.getElementById("input3").value);
+                let d = parseInt(document.getElementById("input4").value);
+                let e = parseInt(document.getElementById("input5").value);
+                var t = c + d + e;
+                var p = (t / 300) * 100;
+                if (isNaN(c) || isNaN(d) || isNaN(e)) {
+                    alert("Enter Proper marks");
+                }
+
+                document.getElementById("pid").innerHTML += "****Report Card****" + "<br>";
+                document.getElementById("pid").innerHTML += "Roll number " + a + "<br>";
+                b = b.toUpperCase();
+
+                document.getElementById("pid").innerHTML += "Name : " + b + "<br>";
+                document.getElementById("pid").innerHTML += "Math : " + c + "<br>";
+                document.getElementById("pid").innerHTML += "Science : " + d + "<br>";
+                document.getElementById("pid").innerHTML += "History : " + e + "<br>";
+                document.getElementById("pid").innerHTML += "Total : " + t + "<br>";
+                document.getElementById("pid").innerHTML += "Percentage : " + p + "<br>";
+                if (p >= 80) {
+                    document.getElementById("pid").innerHTML += '<h4>Grade: <span style="color:green;">A+</span></h4>';
+                } else if (p < 80 && p >= 60) {
+                    document.getElementById("pid").innerHTML += '<h4>Grade: <span style="color:green;">A</span></h4>';
+                } else if (p < 60 && p >= 55) {
+                    document.getElementById("pid").innerHTML += '<h4>Grade: <span style="color:orange;">B+</span></h4>';
+                } else if (p < 55 && p >= 40) {
+                    document.getElementById("pid").innerHTML += '<h4>Grade: <span style="color:orange;">B</span></h4>';
+                } else {
+                    document.getElementById("pid").innerHTML += '<h4>Grade: <span style="color:red;">No Grade</span></h4>';
+                }
+            }
+        </script>
+    </body>
+</html>
+<script>
+    function lettersNumbersCheck(name) {}
+</script>
