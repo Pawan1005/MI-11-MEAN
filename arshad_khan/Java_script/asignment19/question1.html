@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Multiplication table</title>
+        <style>
+            body {
+                background-color: cyan;
+            }
+            h1 {
+                text-align: center;
+                margin-top: 5%;
+            }
+            #main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: blueviolet;
+                width: 400px;
+                height: 400px;
+                margin: auto;
+                padding-top: 15px;
+            }
+            .div1 {
+                text-align: center;
+            }
+            p {
+                min-width: 90px;
+                min-height: 140px;
+                padding: 14px 30px 12px 30px;
+                background-color: peru;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Multiplication Table</h1>
+        <div id="main">
+            <div class="div1">
+                <label for="">Enter a number</label>
+                <input type="text" id="firstnumber" /><br /><br />
+                <button class="btn1" onclick="table()">Create</button>
+            </div>
+        </div>
+        <script>
+            function table() {
+                var div = document.createElement("div");
+                var p = document.createElement("p");
+                div.appendChild(p);
+                document.getElementById("main").appendChild(div);
+                var num;
+                num = parseInt(document.getElementById("firstnumber").value);
+                if (isNaN(num)) {
+                    alert("Enter number only !!!");
+                } else {
+                    for (let i = 1; i <= 10; i++) {
+                        if (i <= 9) {
+                            p.innerHTML += `${num} &nbsp;x&nbsp; ${i} &ensp;=&ensp; <span>${i * num}</span><br>`;
+                        } else if (i == 10) {
+                            p.innerHTML += `${num} &nbsp;x&nbsp; ${i} =&ensp; <span>${i * num}</span><br>`;
+                        }
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

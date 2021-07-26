@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>POST method</title>
+        <style>
+            body {
+                background-color: cyan;
+            }
+            h1 {
+                text-align: center;
+                margin-top: 3%;
+            }
+            #main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: blueviolet;
+                width: 460px;
+                height: 480px;
+                margin: auto;
+                padding-top: 15px;
+            }
+            .div1 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+            }
+            .display {
+                display: flex;
+                align-items: center;
+                width: 95%;
+            }
+            .display1,
+            .display2 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .display1 {
+                align-items: flex-start;
+                gap: 23px;
+                width: 35%;
+            }
+            .display2 {
+                padding-top: 10px;
+                width: 65%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Student Detail using POST method.</h1>
+        <div id="main">
+            <form action="postResultPage.html" method="POST">
+                <div class="div1">
+                    <div class="display">
+                        <div class="display1">
+                            <label for="">Roll No : </label>
+                            <label for="">Name : </label>
+                            <label for="">Class : </label>
+                            <label for="">Hindi : </label>
+                            <label for="">English : </label>
+                            <label for="">Marathi : </label>
+                            <label for="">Maths : </label>
+                            <label for="">Physics : </label>
+                        </div>
+                        <div class="display2">
+                            <input type="text" id="first1" name="rolNo" />
+                            <input type="text" id="second1" name="ame" />
+                            <input type="text" id="third1" name="Clss" />
+                            <input type="text" id="fourth1" name="Hidi" />
+                            <input type="text" id="fifth1" name="Engish" />
+                            <input type="text" id="sixth1" name="Marahi" />
+                            <input type="text" id="seventh1" name="Mahs" />
+                            <input type="text" id="eight1" name="Phyics" />
+                        </div>
+                    </div>
+                    <input type="submit" value="SUBMIT" class="btn1" onclick="formSubmit()" />
+                </div>
+            </form>
+        </div>
+        <script>
+            function formSubmit() {
+                let rollNo = document.getElementById("first1").value;
+                let Name = document.getElementById("second1").value;
+                let Class = document.getElementById("third1").value;
+                let Hindi = document.getElementById("fourth1").value;
+                let English = document.getElementById("fifth1").value;
+                let Marathi = document.getElementById("sixth1").value;
+                let Maths = document.getElementById("seventh1").value;
+                let Physics = document.getElementById("eight1").value;
+                localStorage.setItem("rollNo", rollNo);
+                localStorage.setItem("Name", Name);
+                localStorage.setItem("Class", Class);
+                localStorage.setItem("Hindi", Hindi);
+                localStorage.setItem("English", English);
+                localStorage.setItem("Marathi", Marathi);
+                localStorage.setItem("Maths", Maths);
+                localStorage.setItem("Physics", Physics);
+                sessionStorage.setItem("rollNo1", rollNo);
+                sessionStorage.setItem("Name1", Name);
+                sessionStorage.setItem("Class1", Class);
+                sessionStorage.setItem("Hindi1", Hindi);
+                sessionStorage.setItem("English1", English);
+                sessionStorage.setItem("Marathi1", Marathi);
+                sessionStorage.setItem("Maths1", Maths);
+                sessionStorage.setItem("Physics1", Physics);
+            }
+        </script>
+    </body>
+</html>

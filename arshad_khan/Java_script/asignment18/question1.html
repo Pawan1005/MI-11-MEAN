@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Even_odd</title>
+        <style>
+            body {
+                background-color: cyan;
+            }
+            h1 {
+                text-align: center;
+                margin-top: 5%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: blueviolet;
+                width: 400px;
+                height: 400px;
+                margin: auto;
+                padding-top: 15px;
+            }
+            p {
+                min-width: 90px;
+                height: 25px;
+                padding: 14px 30px 12px 30px;
+                background-color: white;
+                font-weight: bold;
+                border: 1px solid #0000004b;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Even or Odd</h1>
+        <div class="main">
+            <div>
+                <label for="">Enter a number</label>
+                <input type="text" id="firstnumber" />
+            </div>
+            <div>
+                <p>It is&nbsp;&nbsp;&nbsp;<span id="evenodd"></span></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="evenOdd()">Even/Odd</button>
+            </div>
+        </div>
+        <script>
+            function evenOdd() {
+                var num;
+                num = parseInt(document.getElementById("firstnumber").value);
+                if (isNaN(num)) {
+                    alert("Enter numbers only !!!");
+                } else {
+                    if (num % 2 == 0) {
+                        document.getElementById("evenodd").innerHTML = "EVEN";
+                    } else {
+                        document.getElementById("evenodd").innerHTML = "ODD";
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

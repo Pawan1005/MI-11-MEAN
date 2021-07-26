@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>GET method</title>
+        <style>
+            body {
+                background-color: cyan;
+            }
+            h1 {
+                text-align: center;
+                margin-top: 3%;
+            }
+            #main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: blueviolet;
+                width: 460px;
+                height: 480px;
+                margin: auto;
+                padding-top: 15px;
+            }
+            .div1 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 20px;
+            }
+            .display {
+                display: flex;
+                align-items: center;
+                width: 95%;
+            }
+            .display1,
+            .display2 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .display1 {
+                align-items: flex-start;
+                gap: 23px;
+                width: 35%;
+            }
+            .display2 {
+                padding-top: 10px;
+                width: 65%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Student Detail using GET Method</h1>
+        <div id="main">
+            <form action="getResultPage.html" method="GET">
+                <div class="div1">
+                    <div class="display">
+                        <div class="display1">
+                            <label for="">Roll No : </label>
+                            <label for="">Name : </label>
+                            <label for="">Class : </label>
+                            <label for="">Hindi : </label>
+                            <label for="">English : </label>
+                            <label for="">Marathi : </label>
+                            <label for="">Maths : </label>
+                            <label for="">Physics : </label>
+                        </div>
+                        <div class="display2">
+                            <input type="text" id="first" name="rollNo" />
+                            <input type="text" id="second" name="Name" />
+                            <input type="text" id="third" name="Class" />
+                            <input type="text" id="fourth" name="Hindi" />
+                            <input type="text" id="fifth" name="English" />
+                            <input type="text" id="sixth" name="Marathi" />
+                            <input type="text" id="seventh" name="Maths" />
+                            <input type="text" id="eight" name="Physics" />
+                        </div>
+                    </div>
+                    <input type="submit" value="SUBMIT" class="btn1" />
+                </div>
+            </form>
+        </div>
+    </body>
+</html>
