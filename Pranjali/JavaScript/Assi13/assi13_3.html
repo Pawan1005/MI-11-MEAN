@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assi13_3</title>
+    </head>
+    <body>
+        <script>
+            var d = new Date(prompt("Enter Date"));
+            d.setDate(d.getDate() - 1);
+            d.setMonth(d.getMonth() + 1 - 0);
+            var curr_date = d.getDate();
+            var curr_month = d.getMonth();
+            var curr_year = d.getFullYear();
+            if (curr_month < 10 && curr_date < 10) {
+                var parsedDate = "0" + curr_month + "/" + "0" + curr_date + "/" + curr_year;
+                alert(parsedDate);
+            } else if (curr_month < 10 && curr_date > 9) {
+                var parsedDate = "0" + curr_month + "/" + curr_date + "/" + curr_year;
+                alert("Diplay previous date from the current date : " + parsedDate);
+            } else if (curr_month > 9 && curr_date < 10) {
+                var parsedDate = curr_month + "/" + "0" + curr_date + "/" + curr_year;
+                alert("Diplay previous date from the current date : " + parsedDate);
+            } else {
+                var parsedDate = curr_month + "/" + curr_date + "/" + curr_year;
+                alert("Diplay previous date from the current date : " + parsedDate);
+            }
+        </script>
+    </body>
+</html>
