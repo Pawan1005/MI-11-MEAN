@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Add new row</title>
+        <style>
+           h1 {
+                text-align: center;
+                color:white;      
+                margin-top: 3%;
+            }
+            body {
+                background-color:  rgb(124, 9, 44);
+            }
+            .name {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color:rgb(177, 164, 52);
+                padding-top: 20px;
+                width: 400px;
+                height:260px;
+                margin: auto;
+                font-size: 16px;
+                gap: 8px;
+                border-radius: 10px;
+                border: 3px solid rgb(122, 110, 1);
+            } 
+            .div1 {
+                text-align: center;
+            }
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                background-color: white;
+                padding: 8px;
+            }
+            th, td {
+                min-width: 80px;
+            }
+            th {
+                color: #ffffff;
+                background-color: rgba(206, 44, 238, 0.837);
+            }
+            button {
+                background-color: rgba(206, 44, 238, 0.837);
+                color: white;
+                padding: 7px 11px;
+                margin: 0 8px;
+                font-weight: bold;
+                font-size: 17px;
+                border: 1px solid gray;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Add New Row</h1>
+            <div class="name">
+                <table id="table1">
+                    <tr>
+                        <th>Roll No</th>
+                        <th>Name</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>abc</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>xyz</td>
+                    </tr>
+                </table>
+            </div>
+            <br>
+            <div class="div1">
+                <button class="btn1" onclick="newRow()">Add</button>
+            </div>
+        </div>
+        <script>
+            function newRow() {
+                let table = document.getElementById("table1");
+                let row = table.insertRow();
+                let col1 = row.insertCell();
+                let col2 = row.insertCell();
+                col1.textContent = 3;
+                col2.textContent = "new";
+            }
+        </script>
+    </body>
+</html>
