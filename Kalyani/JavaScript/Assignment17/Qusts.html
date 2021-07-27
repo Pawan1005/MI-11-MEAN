@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>StudentMarks</title>
+        <script>
+            function submit_marks() {
+                var Name = document.getElementById("s1").value;
+                var RollNO = parseInt(document.getElementById("s2").value);
+                var sub3 = parseInt(document.getElementById("s3").value);
+                var sub4 = parseInt(document.getElementById("s4").value);
+                var sub5 = parseInt(document.getElementById("s5").value);
+                var total = sub3 + sub4 + sub5;
+                var per = total / 3;
+                var grade;
+                if (per >= 35 && per <= 60) {
+                    grade = "F";
+                } else if (per >= 61 && per <= 70) {
+                    grade = "D";
+                } else if (per >= 71 && per <= 80) {
+                    grade = "C";
+                } else if (per >= 81 && per <= 90) {
+                    grade = "B";
+                } else if (per >= 91 && per <= 100) {
+                    grade = "A";
+                } else {
+                    grade = "Invalid or Failed";
+                }
+                document.getElementById("p").innerHTML = "****ReportCard****";
+                document.getElementById("demo").innerHTML =
+                    "RollNO:" +
+                    RollNO +
+                    "<br>" +
+                    "Name:" +
+                    Name +
+                    "<br>" +
+                    "Your Total Marks : " +
+                    total +
+                    "<br>Your Percentage : " +
+                    per +
+                    "<br>Your Grade : " +
+                    grade;
+            }
+        </script>
+        <style>
+            body {
+                background-color: brown;
+            }
+            .main-box {
+                background-color: white;
+                margin-left: 350px;
+                border: 1px solid black;
+                padding: 0 0 200px 0;
+                width: 40%;
+            }
+            input {
+                margin-top: 10px;
+                width: 40%;
+                height: 3vh;
+            }
+            label {
+                margin: 10px;
+            }
+            .input-grp {
+                margin-left: 100px;
+            }
+            #p {
+                font-size: 25px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-box">
+            <h1>Enter Students Marks</h1>
+            <div class="input-grp">
+                <label for="name">Name</label><br />
+                <input type="text" id="s1" placeholder="Enter Name" /><br />
+                <label for="roll">RollNo:</label>
+                <br />
+                <input type="text" id="s2" placeholder="Enter RollNO" /><br />
+                <label for="History">History</label><br />
+                <input type="text" id="s3" placeholder="Enter Marks" /><br />
+                <label for="sis">Science:</label><br />
+                <input type="text" id="s4" placeholder="Enter Economics Marks" /><br />
+                <label for="maths">Maths:</label><br />
+                <input type="text" id="s5" placeholder="Enter Maths Marks" /><br />
+                <input type="submit" onclick="submit_marks()" />
+            </div>
+            <div id="p"></div>
+            <div id="demo"></div>
+        </div>
+    </body>
+</html>

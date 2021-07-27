@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>sPageGet</title>
+    </head>
+    <body>
+        <div class="main-box">
+            <div class="dispaly1">
+                <p>
+                    <span id="r1">Name:</span><br /><br />
+                    <span id="r2">RollNO:</span><br /><br />
+                    <span id="r3">History:</span><br /><br />
+                    <span id="r4">Science:</span><br /><br />
+                    <span id="r5">Maths:</span><br /><br />
+                    <span id="r6">Economics:</span><br /><br />
+                    <span id="r7">Evs:</span><br /><br />
+                    <span id="r8">Total:</span><br /><br />
+                    <span id="r9">Percentage:</span><br /><br />
+                    <span id="r10">Grade:</span><br /><br />
+                </p>
+            </div>
+            <div class="dispaly2">
+                <p>
+                    <span id="s1"></span><br /><br />
+                    <span id="s2"></span><br /><br />
+                    <span id="s3"></span><br /><br />
+                    <span id="s4"></span><br /><br />
+                    <span id="s5"></span><br /><br />
+                    <span id="s6"></span><br /><br />
+                    <span id="s7"></span><br /><br />
+                    <span id="s8"></span><br /><br />
+                    <span id="s9"></span><br /><br />
+                    <span id="s10"></span><br /><br />
+                    <span id="s11"></span><br /><br />
+                </p>
+            </div>
+            <div class="rev">
+                <button class="btn1" onclick="remove()">Remove</button>
+            </div>
+        </div>
+        <script>
+            function ShowGet() {
+                window.addEventListener("load", () => {
+                    const params = new URL(document.location).searchParams;
+                    const Name = params.get("Name");
+                    const RollNo = params.get("RollNo");
+                    const History = params.get("History");
+                    const Science = params.get("Science");
+                    const Maths = params.get("Maths");
+                    const Economics = params.get("Economics");
+                    const Evs = params.get("Evs");
+                    let total = parseInt(History) + parseInt(Science) + parseInt(Maths) + parseInt(Economics) + parseInt(Evs);
+                    let percentage = parseInt((total / 500) * 100);
+                    let grade;
+                    if ((percentage) => 80) {
+                        grade = "A+";
+                    } else if (percentage < 80 && percentage >= 60) {
+                        grade = "A";
+                    } else if (percentage < 80 && percentage >= 60) {
+                        grade = "B+";
+                    } else if (percentage < 60 && percentage >= 50) {
+                        grade = "B";
+                    } else if (percentage < 50 && percentage >= 40) {
+                        grade = "C";
+                    } else {
+                        grade = "Fail";
+                    }
+                    this.document.getElementById("s1").innerHTML = Name;
+                    document.getElementById("s2").innerHTML = RollNo;
+                    document.getElementById("s3").innerHTML = History;
+                    document.getElementById("s4").innerHTML = Science;
+                    document.getElementById("s5").innerHTML = Maths;
+                    document.getElementById("s6").innerHTML = Economics;
+                    document.getElementById("s7").innerHTML = Evs;
+                    document.getElementById("s9").innerHTML = total;
+                    document.getElementById("s10").innerHTML = percentage + "%";
+                    document.getElementById("s11").innerHTML = grade;
+                });
+            }
+        </script>
+    </body>
+</html>

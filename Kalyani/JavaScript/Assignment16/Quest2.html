@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment16Quest2</title>
+        <style>
+            .main-box {
+                text-align: center;
+                border: 1px solid black;
+            }
+            button {
+                margin-top: 10px;
+                border: black;
+                width: 50px;
+                height: 5vh;
+                background-color: blue;
+                border: solid 1px black;
+            }
+            body {
+                background-color: rgba(0, 0, 0, 0.404);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-box">
+            <p id="p">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. <br />
+                Nobis repellendus quod porro doloremque exercitationem amet dicta cumque consequuntur!
+                <br />Eligendi tenetur eveniet dolorem nulla quasi eum quia in odio doloribus harum! <br />Lorem ipsum dolor sit amet consectetur adipisicing
+                elit.<br />
+                Vero numquam alias nam provident, adipisci ut fugiat officia aspernatur consequatur, <br />rem esse ad laboriosam atque odio praesentium non
+                reprehenderit. Dignissimos, minima.
+            </p>
+        </div>
+        <button type="submit" onclick="red()">Red</button>
+        <button type="submit" onclick="green()">Green</button>
+        <button type="submit" onclick="blue()">blue</button>
+        <script>
+            function red() {
+                document.getElementById("p").style.backgroundColor = "red";
+                document.getElementById("p").style.fontFamily = "Arial";
+                document.getElementById("p").style.fontSize = "lager";
+            }
+            function blue() {
+                document.getElementById("p").style.backgroundColor = "blue";
+                document.getElementById("p").style.fontFamily = "cursive";
+                document.getElementById("p").style.fontSize = "small";
+            }
+            function green() {
+                document.getElementById("p").style.backgroundColor = "green";
+                document.getElementById("p").style.fontFamily = "Times New Roman', Times, serif;";
+                document.getElementById("p").style.fontSize = "xx-large";
+            }
+        </script>
+    </body>
+</html>
