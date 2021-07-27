@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Check valid email or not</title>
+        <style>
+            body {
+                background-color: rgb(99, 95, 95);
+                padding-top: 20px;
+            }
+            h1 {
+                text-align: center;
+                color: rgb(117, 177, 5);
+                margin-top: 4%;
+            }
+            .name {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: rgb(11, 224, 214);
+                width: 500px;
+                height:200px;
+                margin: auto;
+                padding-top: 5px;
+                gap: 10px;
+                border-radius: 10px;
+            }
+            .res {
+                background-color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function checkemail() {
+                var regExp, str;
+                str = document.getElementById("email").value;
+                regExp = /[a-zA-Z0-9_\-\.]+[@][a-z]+[\.][a-z]{2,3}/;
+                if (regExp.test(str)) {
+                    document.getElementById("Result").innerHTML = "Valid Email Address";
+                } else {
+                    document.getElementById("Result").innerHTML = "Not valid Email Address";
+                }
+            }
+        </script>
+        <h1>Valid Email or not</h1>
+        <div class="name">
+            Enter Email id:
+            <input type="text" id="email"></input>
+            <input type="button" value="check" onclick="checkemail()"style="padding: 6px; background-color: rgb(117, 177, 5);"></input>
+            <div class="res" The given email is:  id="Result"></div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Assignment 1</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            .container {
+                background-color: white;
+                width: 350px;
+                height: 480px;
+                text-align: center;
+                margin-left: 480px;
+                box-shadow: 15px;
+                outline-color: rgb(250, 94, 94);
+                outline-style: solid;
+                outline-width: 7px;
+            }
+            .btn {
+                padding: 15px;
+                background-color: red;
+                outline-color: white;
+                outline-width: 30px;
+                color: white;
+                border-radius: 15px;
+            }
+            .label {
+                border-radius: 15px;
+                box-sizing: 30px;
+            }
+        </style>
+    </head>
+    <script language="javascript">
+        function show() {
+            "use strict";
+            var a;
+            a = parseInt(document.getElementById("num1").value);
+            if (a % 2 == 0) document.getElementById("pid").innerHTML += "<br>  <b>Even Number</b> ";
+            else document.getElementById("pid").innerHTML += "<br>   <b>Odd Number </b>";
+        }
+    </script>
+    <body>
+        <div class="container">
+            <br /><br /><br />
+            <h1>Even Or Odd Number</h1>
+            Enter Number : <input type="text" id="num1" /><br /><br />
+            <button onclick="show()" class="btn">Calculate</button>
+            <p id="pid"></p>
+        </div>
+    </body>
+</html>

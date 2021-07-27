@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Square_pattern</title>
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+                transition: 0.3s;
+                width: 40%;
+                height: 100%;
+                border-radius: 20px;
+                background-color: thistle;
+                margin: auto;
+                margin-top: 50px;
+            }
+            button {
+                position: relative;
+                background-color: purple;
+                border: none;
+                font-size: 20px;
+                color: #ffffff;
+                padding: 10px;
+                width: 180px;
+                text-align: center;
+                -webkit-transition-duration: 0.4s;
+                transition-duration: 0.4s;
+                text-decoration: none;
+                overflow: hidden;
+                cursor: pointer;
+                margin-left: 130px;
+            }
+            #pid {
+                color: purple;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <div class="content">
+                    <h1 style="text-align: center;">Print Pattern</h1>
+                    Enter Number Of Rows:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="number" id="num1" /> <br />
+                    <br />
+                    Enter Number Of Columns:&nbsp;<input type="number" id="num2" /> <br />
+                    <br />
+                    <button onclick="square()">Draw</button>
+                    <p id="pid"></p>
+                </div>
+                <script>
+                    function square() {
+                        var a, b;
+                        a = parseInt(document.getElementById("num1").value);
+                        b = parseInt(document.getElementById("num2").value);
+                        for (i = 0; i < b; i++) {
+                            for (j = 0; j < a; j++) {
+                                document.getElementById("pid").innerHTML += " &nbsp; * &nbsp; ";
+                            }
+                            document.getElementById("pid").innerHTML += "<br>";
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

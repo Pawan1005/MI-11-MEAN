@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Colors_size_and_Font-family</title>
+        <style>
+            body {
+                padding-top: 3px;
+                background-color:  rgb(181, 233, 250);
+            }
+            h1 {
+                text-align: center;
+                color:rgb(7, 63, 165);
+                margin-top: 3%;
+            }
+            .name {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: rgb(91, 207, 243);
+                color: darkblue;
+                margin-top: 100px;
+                padding-top: 20px;
+                width: 450px;
+                height:250px;
+                margin: auto;
+                gap: 5px;
+                border-radius: 10px;
+                border: 2px solid rgb(7, 110, 141);
+            }  
+            .name2{
+                width: 760px;
+                margin-left: 250px;
+                padding-top: 5px;
+                padding-left: 20px;
+                padding-bottom: 10px;
+                background-color: white;
+                border-radius: 10px;
+                border: 2px solid rgb(94, 214, 250);
+            }
+            .res {
+                background-color: rgb(7, 110, 141);
+                height: 30px;
+                padding-top: 5px;
+                padding-left: 5px;
+                padding-right: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Colors, Size and Font-family</h1>
+        <div class="name2">
+            <p id="para">
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro aspernatur, facilis nemo hic, qui molestias animi veniam tenetur necessitatibus neque fugit. Sit reprehenderit, voluptates qui aut laudantium animi nihil praesentium eveniet, dolores delectus, ad temporibus corrupti neque cum vero incidunt?
+            </p>
+            <div class="name">
+                <fieldset>
+                    <legend>Colors</legend>
+                    <div class="res">
+                        <button onclick="red()" class="red">Red</button>
+                        <button onclick="green()" class="green">Green</button>
+                        <button onclick="blue()" class="blue">Blue</button>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Size</legend>
+                    <div class="res">
+                        <button onclick="size1()" class="small">Small</button>
+                        <button onclick="size2()" class="medium">Medium</button>
+                        <button onclick="size3()" class="large">Large</button>
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Font</legend>
+                    <div class="res">
+                        <button onclick="monospace()">monospace</button>
+                        <button onclick="sans()">sans-serif</button>
+                        <button onclick="serif()">Serif</button>
+                    </div>
+                </fieldset>
+            </div>
+        </div>
+        <script>
+            function red() {
+                document.getElementById("para").style.color = "red";
+            }
+            function green() {
+                document.getElementById("para").style.color = "green";
+            }
+            function blue() {
+                document.getElementById("para").style.color = "blue";
+            }
+            function size1() {
+                document.getElementById("para").style.fontSize = "small";
+            }
+            function size2() {
+                document.getElementById("para").style.fontSize = "19px";
+            }
+            function size3() {
+                document.getElementById("para").style.fontSize = "27px";
+            }
+            function monospace() {
+                document.getElementById("para").style.fontFamily = "monospace";
+            }
+            function sans() {
+                document.getElementById("para").style.fontFamily = "sans-serif";
+            }
+            function serif() {
+                document.getElementById("para").style.fontFamily = "serif";
+            }
+        </script>
+    </body>
+</html>

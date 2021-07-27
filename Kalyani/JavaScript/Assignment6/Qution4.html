@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment6-4</title>
+        <link rel="stylesheet" href="./style.css" />
+    </head>
+    <body>
+        <p id="pr">Question4</p>
+        <div id="p"></div>
+        <script>
+            let arr = [];
+            sum = 0;
+            let p = document.getElementById("p");
+            while (true) {
+                let temp = prompt("Enter a number");
+                if (temp == "X" || temp == "x" || temp == null) break;
+                temp = parseInt(temp);
+                arr.push(temp);
+            }
+            for (i = 0; i < arr.length; i++) {
+                sum += factorial(arr[i]);
+            }
+            function factorial(n) {
+                if (n == 0) return 1;
+                return n * factorial(n - 1);
+            }
+            p.innerHTML += `<div>Sum of Factorials: ${sum}</div>`;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Square_pattern</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4" style="margin-top: 225px">
+                <div class="card">
+                    <div class="container" style="background-image: url(plain.jpg)">
+                        <div class="content">
+                            <h1 style="text-align: center">Print Pattern</h1>
+                            Enter Number Of Rows:<input type="number" id="num1" class="form-control" /> Enter Number Of Columns:<input type="number" id="num2" class="form-control"/>
+                            <button onclick="square()" class="btn-success">Draw</button>
+                            <p id="pid" class="text-center mb-1" style="font-size: 25px; color: blueviolet"></p>
+                        </div>
+                    </div>
+                </div>
+                <script>
+                    function square() {
+                        var a, b;
+                        a = parseInt(document.getElementById("num1").value);
+                        b = parseInt(document.getElementById("num2").value);
+                        for (i = 0; i < b; i++) {
+                            for (j = 0; j < a; j++) {
+                                document.getElementById("pid").innerHTML += " &nbsp; * &nbsp; ";
+                            }
+                            document.getElementById("pid").innerHTML += "<br>";
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

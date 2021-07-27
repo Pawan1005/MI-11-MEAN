@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <title>Assignment6-2</title>
+        <style>
+            body {
+                background-color: grey;
+            }
+            .container {
+                margin-top: 60px;
+                background-color: coral;
+            }
+            .row {
+                padding: 30px 20px 10px 10px;
+            }
+            input {
+                margin-left: 50px;
+                width: 400px;
+                height: 35px;
+                border-radius: 20px;
+                padding-left: 10px;
+            }
+            label {
+                margin-left: 250px;
+            }
+            .btn {
+                margin-left: 50px;
+                margin-top: 30px;
+            }
+            p { 
+                padding: 10px;
+            }
+            .card {
+                margin-top: 50px;
+                width: 600px;
+                margin-left: 250px;
+            }
+        </style>
+        <script>
+            function getarray(){
+                var fname   = document.getElementById("fname").value;
+                var sname   = document.getElementById("sname").value;
+                var tname   = document.getElementById("tname").value;
+                var a = [ fname, sname, tname];
+                for(var i=0; i<=a.length ; i++){
+                    document.getElementById("pic").innerHTML ="Names are store in array : " +a;
+                    document.getElementById("pid").innerHTML ="comma seperated list of all the names : " +a;
+                    document.getElementById("pie").innerHTML ="After using join list of all the names : " +a.join(" ~ ");
+                }
+                function myFunction() {    
+                    a.sort();
+                    document.getElementById("pif").innerHTML = "After using Sort Asce list of all the names : " +a;
+                    a.reverse();
+                    document.getElementById("pig").innerHTML = "After using Sort Desc list of all the names : " +a;
+                }
+                myFunction();
+            }
+        </script>
+        <script>  
+            function fun(){  
+              document.getElementById("myForm").reset();  
+            }   
+        </script>  
+    </head>
+    <body>
+        <div class="container">
+            <form id = "myForm">
+                <div class="row" style="padding-top: 60px;">
+                    <label>Name 1 : </label>
+                    <input type="text" id="fname"><br>
+                </div>
+                <div class="row">
+                    <label>Name 2 : </label>
+                    <input type="text" id="sname"><br>
+                </div>
+                <div class="row">
+                    <label>Name 3 : </label>
+                    <input type="text" id="tname"> <br>
+                </div>
+            </form>   
+            <button class="btn btn-primary" type="submit" onclick="getarray()" style="margin-left: 400px;" >Submit  </button>
+            <button class="btn btn-primary" type="submit" onclick="fun()">Cancle  </button>
+            <div class="card">
+                <p id="pic"></p>
+                <p id="pid"></p>
+                <p id="pie"></p>
+                <P id="pif"></P>
+                <P id="pig"></P>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

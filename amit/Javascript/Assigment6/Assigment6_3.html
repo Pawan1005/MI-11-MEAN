@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Display sum of numbers</title>
+        <style>
+            h1 {
+                text-align: center;
+                color: red;
+                margin-top: 4%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+
+                width: 440px;
+                height: 380px;
+                margin: auto;
+                padding-top: 15px;
+                gap: 20px;
+                border-radius: 10px;
+                background-color: rgb(196, 189, 189);
+            }
+            input {
+                width: 65%;
+                margin-left: 10px;
+                margin-bottom: 12px;
+                padding: 4px 8px;
+                font-size: 15px;
+                outline: none;
+                line-height: 19px;
+                border: 1px solid #0000004b;
+            }
+
+            button {
+                background-color: #ff0000;
+                color: white;
+                padding: 7px 11px;
+                margin: 0 8px;
+                font-weight: bold;
+                font-size: 17px;
+                border: 1px solid gray;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Sum of Number</h1>
+        <div class="main">
+            <div>
+                <button class="btn1" onclick="numbers()">Enter the Number</button>
+            </div>
+            <div>
+                <p>Entered numbers : <span id="num1"></span><span id="num2"></span></p>
+            </div>
+        </div>
+        <script>
+            function numbers() {
+                var name_arr = [],
+                    arr_x,
+                    sum = 0;
+                for (let i = 0; i < 5; i++) {
+                    arr_x = prompt("Enter a number : ");
+                    if (arr_x == "X" || arr_x == "x" || arr_x == null) {
+                        break;
+                    }
+                    name_arr.push(parseInt(arr_x));
+                    sum = sum + name_arr[i];
+                    document.getElementById("num1").innerHTML += " &ensp; " + arr_x;
+                }
+                document.getElementById("num2").innerHTML = "<br><br><br>Sum &ensp; = &ensp;" + sum;
+            }
+        </script>
+    </body>
+</html>

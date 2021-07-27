@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Assignment 1</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            .container {
+                background-color: rgb(220, 203, 203);
+                width: 350px;
+                height: 480px;
+                text-align: center;
+                margin-left: 480px;
+                box-shadow: 7px 7px 15px;
+                border-radius: 15px;
+            }
+            .btn {
+                padding: 15px;
+                background-color: red;
+                outline-color: white;
+                outline-width: 15px;
+                color: white;
+            }
+            .label {
+                border-radius: 15px;
+                box-sizing: 30px;
+            }
+        </style>
+    </head>
+    <script language="javascript">
+        function show() {
+            "use strict";
+            var a;
+            a = parseInt(document.getElementById("num1").value);
+            if ((a % 4 == 0 && a % 100 != 0) || a % 400 == 0) document.getElementById("pid").innerHTML += "<br>  <b>Leap year </b> ";
+            else document.getElementById("pid").innerHTML += "<br> <b> Not a Leap year </b>";
+        }
+    </script>
+    <body>
+        <div class="container">
+            <br /><br /><br />
+            <h1>Leap Year Or Not</h1>
+            Enter the Year : <input type="text" id="num1" /><br /><br />
+            <button onclick="show()" class="btn">Calculate</button>
+            <p id="pid"></p>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <script src="https://kit.fontawesome.com/15329e9b1c.js" crossorigin="anonymous"></script>
+        <title>Academic Details</title>
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+            integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+            crossorigin="anonymous"
+        />
+        <style>
+            input[type="text"],
+            input[type="number"] {
+                padding-left: 10px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                width: 300px;
+            }
+            h3.text-dark {
+                font-size: medium;
+            }
+            form {
+                background-color: thistle;
+                border-radius: 20px;
+                padding: 30px;
+                margin-top: 100px;
+                float: left;
+                margin-left: 350px;
+            }
+            .btn1 {
+                float: center;
+                background-color: green;
+                color: whitesmoke;
+                margin-left: 100px;
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body background="job2.webp" style="background-repeat: no-repeat; background-size: cover;">
+        <div class="container-fluid">
+            <nav class="navbar navbar-expand-sm bg-secondary" style="position: absolute; left: 0%; width: 100%; height: 80px;">
+                <a href="Home_page.html" class="col-sm-1" style="color: thistle; padding-right: 50px;">Home</a>
+                <a href="Academic_page.html" class="col-sm-2" style="color: thistle;">Academic Details</a>
+                <a href="Personal_details.html" class="col-sm-2" style="color: thistle;">Personal Details</a>
+                <a href="Login_page.html" class="col-sm-2" style="color: thistle;">Login</a>
+            </nav>
+        </div>
+        <div class="container">
+            <form class="text-left">
+                <h3 style="font-weight: 500; text-align: center;">Academic Details</h3>
+                <br />
+                <div class="dropdown">
+                    <label style="margin-right: 80px;">Qualification:</label>
+                    <button type="button" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" style="margin-bottom: 10px;">
+                        Course
+                    </button>
+                    <div class="dropdown-menu">
+                        <select>
+                            <option value="BCA">BCA</option>
+                            <option value="BBA">BBA</option>
+                            <option value="B.Tech">B.Tech</option>
+                            <option value="MBA">MBA</option>
+                            <option value="MCA">MCA</option>
+                            <option value="M.Tech">M.Tech</option>
+                        </select>
+                    </div>
+                </div>
+                <input type="text" placeholder="Technical skils known" style="margin-bottom: 10px;" /><br />
+                <input type="text" placeholder="Certification courses" style="margin-bottom: 10px;" /><br />
+                <input type="text" placeholder="Previous work experience" style="margin-bottom: 10px;" /><br />
+                <input type="text" placeholder="Graduation Percentage" style="margin-bottom: 10px;" /><br />
+                <input type="text" placeholder="Institution name" style="margin-bottom: 10px;" /><br />
+                <label style="float: left;"> Upload Resume : </label>
+                <br />
+                <div class="input-container">
+                    <input class="input-field" type="file" />
+                </div>
+                <button type="submit" class="btn1">Submit</button>
+            </form>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    </body>
+</html>

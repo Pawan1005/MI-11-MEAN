@@ -1,0 +1,45 @@
+.nava: hover {
+    background-color: rgb(16, 16, 44);
+}
+.nav a {
+    float: right;
+    color: cornsilk;
+    text-align: center;
+    padding: 20px 32px;
+    margin: 1%;
+    background-color: rgba(0, 0, 0);
+}
+.nav {
+    background-color: rgba(220, 20, 60, 0.905);
+    overflow: hidden;
+}
+.mid {
+    width: 1000px;
+    height: 350px;
+    margin-left: 400px;
+    margin-top: 100px;
+    font-size: 30px;
+    color: rgb(5, 3, 1);
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+input[type="text1"],
+input[type="text2"],
+.search {
+    float: left;
+    padding: 6px;
+    border: 1px b;
+    margin-top: 40px;
+    margin-left: 40px;
+    margin-top: 100px;
+    font-size: 17px;
+    width: 300px;
+}
+input[type="text2"],
+.search {
+    margin-left: 10px;
+}
+.search {
+    width: auto;
+    color: white;
+    background-color: black;
+}

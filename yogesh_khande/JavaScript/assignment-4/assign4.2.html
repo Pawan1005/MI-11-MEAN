@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Automorphic No</title>
+        <script lang="javascript">
+            function show() {
+                var a, b, c;
+                a=parseInt(document.getElementById("num1").value);
+                b = a * a;
+                c = b % 10;
+                if(c == a){
+                    document.getElementById("pid").innerHTML= a +" is automorphic ";
+                }
+                else{
+                    document.getElementById("pid").innerHTML= a +" is not automorphic ";
+                }
+            }
+        </script>
+    </head>
+    <body style="text-align: center; background-color: lightyellow; margin-top: 100px">
+        <h1><hr>*For Automorphic Number*<hr></h1>
+        <br>
+        <label>Enter the number :-</label>
+        <input type="text" id="num1" />
+        <br><br>
+        <button onclick="show()">GET</button>
+        <p id="pid"></p>
+    </body>
+</html>

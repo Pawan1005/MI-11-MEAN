@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assijs</title>
+        <script language="Javascript">
+            function show() {
+                "use strict";
+                var a, b, temp;
+                a = parseInt(document.getElementById("num1").value);
+                b = parseInt(document.getElementById("num2").value);
+                document.getElementById("pid").innerHTML = "Before swapping values of a= " + a + " and b=" + b + "";
+                temp = a;
+                a = b;
+                b = temp;
+                document.getElementById("pid").innerHTML = "<br>After swapping (Method1) a= " + a + " and b=" + b + "";
+            }
+            function swap() {
+                "use strict";
+                var a, b, temp;
+                a = parseInt(document.getElementById("num1").value);
+                b = parseInt(document.getElementById("num2").value);
+                a = a + b;
+                b = a - b;
+                a = a - b;
+                document.getElementById("pid1").innerHTML = "<br>After swapping (Method2) a= " + a + " and b=" + b + "";
+            }
+        </script>
+    </head>
+    <body>
+        <style>
+            .main {
+                border: 1px solid rgb(230, 53, 53);
+                background-color: aqua;
+                max-width: fit-content;
+                position: absolute;
+                left: 25%;
+                padding: 5%;
+                top: 144px;
+            }
+            button {
+                background-color: #4caf50;
+                width: 24%;
+                color: rgb(204, 25, 228);
+                padding: 5px;
+                margin: 10px 0px;
+                border: none;
+                cursor: pointer;
+            }
+        </style>
+        <div class="main">
+            <h1>Swapping program</h1>
+            Number1 : <input type="text" id="num1" /><br /><br />
+            Number2 : <input type="text" id="num2" /><br /><br />
+            <button onclick="show()">Method1</button>
+            <button onclick="swap()">Method2</button><br /><br />
+            <h3>Method1: With temparary variable</h3>
+            <p id="pid"></p>
+            <h3>Method2: Without temparary variable</h3>
+            <p id="pid1"></p>
+        </div>
+    </body>
+</html>

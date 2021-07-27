@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Armstrong number</title>
+        <style>
+            body {
+            background-color: #616161;
+            }
+            h1 {
+            text-align: center;
+            color: white;
+            margin-top: 5%;
+            }
+            .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #a1bdcf;
+            width: 380px;
+            height: 380px;
+            margin: auto;
+            padding-top: 15px;
+            gap: 26px;
+            }
+            input {
+            width: 55%;
+            margin-left: 10px;
+            margin-bottom: 12px;
+            padding: 4px 8px;
+            font-size: 15px;
+            outline: none;
+            line-height: 19px;
+            border: 1px solid #0000004b;
+            }
+            p {
+            font-weight: bold;
+            overflow: auto;
+            }
+            #num1 {
+            font-weight: 300;
+            }
+            #num2 {
+            color: #002fff;
+            font-size: 21px;
+            }
+            #armstrong {
+            color: #ff0000;
+            font-size: 21px;
+            }
+            button {
+            background-color: #ff0000;
+            color: white;
+            padding: 7px 11px;
+            margin: 0 8px;
+            font-weight: bold;
+            font-size: 17px;
+            border: 1px solid gray;
+            border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Armstrong Number</h1>
+        <div class="main">
+            <div>
+                <label for="">Enter the number</label>
+                <input type="text" id="firstnumber" placeholder="153">
+            </div>
+            <div>
+                <p><span id="num1"></span><span id="num2"></span> &ensp;&nbsp;<span id="armstrong"></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="armstr()">Calculate</button>
+            </div>
+        </div>
+        <script>
+            function cube(rem) {
+                var arm = rem*rem*rem;
+                return arm;
+            }
+            function armstr() {
+                var num,armstrong=0,rem,temp,i,arm;
+                num = parseInt(document.getElementById("firstnumber").value);
+                temp =  num;
+                while(temp > 0) {
+                    rem = temp%10;
+                    temp = parseInt(temp/10);
+                    arm = cube(rem);
+                    armstrong = armstrong + arm;
+                }
+                if(armstrong==num) {
+                    document.getElementById("num2").innerHTML = "<br>&nbsp;&ensp;"+num;
+                    document.getElementById("armstrong").innerHTML = "is Armstrong number";
+                } else {
+                    document.getElementById("num2").innerHTML = "<br>&nbsp;&ensp;"+num;
+                    document.getElementById("armstrong").innerHTML = "is not Armstrong number";
+                }               
+            }
+        </script>
+    </body>
+</html>

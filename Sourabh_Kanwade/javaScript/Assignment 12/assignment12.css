@@ -1,0 +1,18 @@
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    padding: 20px;
+    border: 1px solid red;
+    box-shadow: 0px 10px 10px 0 red, 0px 30px 8px -10px green, 0px 50px 5px -20px yellow, 0px 70px 5px -30px blue;
+}
+#result {
+    padding: 20px;
+}
+button {
+    padding: 10px 20px;
+    border-radius: 5px;
+}

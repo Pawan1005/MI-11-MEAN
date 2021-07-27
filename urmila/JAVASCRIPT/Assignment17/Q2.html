@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment 18</title>
+        <style>
+            body {
+                display: flex;
+                justify-content: center;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+                border: 1px solid;
+                width: 20%;
+                margin: 10px;
+            }
+            input {
+                margin: 10px 0;
+            }
+            button {
+                margin: 10px 0;
+            }
+            select {
+                width: 70%;
+                margin: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Even Odd</h1>
+            <label for="num">Enter a number</label>
+            <input type="text" name="num" id="num" />
+            <button onclick="oddEven()">Even/Odd</button>
+        </div>
+        <div class="container">
+            <h1>Voter</h1>
+            <label for="name">Enter a Name</label>
+            <input type="text" />
+            <label for="num">Enter a age</label>
+            <input type="text" name="age" id="age" />
+            <button onclick="voter()">Show</button>
+        </div>
+        <div class="container">
+            <h1>Shopping</h1>
+            <label for="amt">Enter a Shopping amount</label>
+            <input type="text" name="amt" id="amt" />
+            <button onclick="discount()">Calculate</button>
+            <div id="res"></div>
+        </div>
+        <div class="container">
+            <h1>Country</h1>
+            <label for="country">Country</label>
+            <select name="country" id="country">
+                <option value="0">Afghanistan</option>
+                <option value="1">Albania</option>
+                <option value="2">Algeria</option>
+                <option value="3">Andorra</option>
+                <option value="4">Angola</option>
+            </select>
+            <label for="capital">Capital </label>
+            <select name="capital" id="capital">
+                <option value="0">Kabul</option>
+                <option value="1">Tirana</option>
+                <option value="2">Algiers</option>
+                <option value="3">Andorra la Vella</option>
+                <option value="4">Luanda</option>
+            </select>
+        </div>
+        <script>
+            function oddEven() {
+                let num = parseInt(document.getElementById("num").value);
+                if (isNaN(num)) {
+                    alert("Enter a Proper number");
+                } else {
+                    if (num % 2 == 0) {
+                        alert("Even");
+                    } else {
+                        alert("Odd");
+                    }
+                }
+            }
+            function voter() {
+                let age = parseInt(document.getElementById("age").value);
+                if (age >= 18) alert("You Can vote");
+                else alert("You can not vote");
+            }
+            function discount() {
+                let amt = parseInt(document.getElementById("amt").value);
+                let res = document.getElementById("res");
+                let temp;
+                if (amt > 1000) {
+                    temp = amt - amt * 0.15;
+                } else {
+                    temp = amt - amt * 0.5;
+                }
+                res.innerHTML = temp;
+            }
+            let countrySel = document.getElementById("country");
+            let capital = document.getElementById("capital");
+            countrySel.onchange = () => {
+                capital.selectedIndex = countrySel.selectedIndex;
+            };
+        </script>
+    </body>
+</html>

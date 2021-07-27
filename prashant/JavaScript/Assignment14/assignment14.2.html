@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment14.2 Inheritance</title>
+    </head>
+    <body>
+        <table id="data">
+            <tr>
+                <th>SrNo.</th>
+                <th>Acc_No</th>
+                <th>name</th>
+                <th>Balance</th>
+            </tr>
+        </table>
+        <script>
+            class BankDet {
+                constructor() {
+                    this.acc_no = 0;
+                    this.acc_name = "";
+                    this.bal = 0;
+                }
+                getData(acc_no, acc_name, bal) {
+                    this.acc_no = acc_no;
+                    this.acc_name = acc_name;
+                    this.bal = bal;
+                }
+                deposit(amount) {
+                    this.bal += amount;
+                }
+                withDraw(amount) {
+                    if (amount > this.bal) {
+                        alert("Error:Insufficient Funds");
+                        return;
+                    } else if (this.bal - amount < 1000) {
+                        this.bal = this.bal - amount;
+                        alert("Warning – Balance below 1000");
+                        return;
+                    } else {
+                        this.bal = this.bal - amount;
+                    }
+                }
+                display() {
+                    let dataRef = document.getElementById("data");
+                    dataRef.innerHTML += `<tr>
+                        <td>1</td>
+                        <td>${this.acc_no}</td>
+                        <td>${this.acc_name}</td>
+                        <td>${this.bal}</td>
+                        </tr>`;
+                }
+            }
+            let acc1 = new BankDet();
+            acc1.getData(121, "Doja Cat", 45000);
+            acc1.deposit(3000);
+            acc1.withDraw(6000);
+            acc1.display();
+            let acc2 = new BankDet();
+            acc2.getData(855, "$ilkMoney", 5000);
+            acc2.deposit(1000);
+            acc2.withDraw(7800);
+            acc2.withDraw(5500);
+            acc2.display();
+        </script>
+    </body>
+</html>

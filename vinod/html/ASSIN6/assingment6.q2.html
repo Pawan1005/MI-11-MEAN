@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" type="text/css" href="style6.2.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <form>
+            <div class="block1">
+                <h1 style="text-align: right"><em>Professional Details</em></h1>
+            </div>
+            <fieldset>
+                <legend>Academic Details</legend>
+                <lable for="Skill set">Skill set:</lable>
+                <input type="checkbox" id="HTML" name="Skill Set" value="HTML" />
+                <label for="HTML">html</label>
+                <input type="checkbox" id="Java Script" name="Skill Set" value="Java Script" />
+                <label for="Java Script">Java Script</label>
+                <input type="checkbox" id="Java" name="Skill Set" value="Java" />
+                <label for="Java">Java</label>
+                <input type="checkbox" id="Oracal" name="Skill Set" value="Oracal" />
+                <label for="Oracal">Oracal</label><br /><br />
+                <lable for="Skill set">Highest Qualification :</lable>
+                <select class="form-control dropdown" id="education" name="education">
+                    <option value="" selected="selected" disabled="disabled">-- select one --</option>
+                    <option value="Diploma in Computer Science">Diploma in Computer Science</option>
+                    <option value="Science Graduated">Science Graduated</option>
+                    <option value="Bachelor in Engg">Bachelor in Engg</option>
+                    <option value="Master in Computer Science">Master in Computer Science</option>
+                    <option value="Master in  Engg">Master in Engg</option>
+                    <option value="Other">Other</option>
+                </select>
+                <br /><br />
+                <label for="University is a datalist">University is a datalist:</label>
+                <input type="text" id="university" name="university " list="University" />
+                <datalist id="University">
+                    <option value="Mumbai University"></option>
+                    <option value="Pune University"></option>
+                    <option value="Chenni University"></option>
+                    <option value="Nagpur University"></option>
+                    <option value="Badoda University"></option>
+                </datalist>
+                <br /><br />
+                <label for="cars">Areas of Experties:</label>
+                <select name="Experties" id="Experties" multiple>
+                    <option value="Software">Software</option>
+                    <option value="Training">Training</option>
+                    <option value="Networking">Networking</option>
+                    <option value="Management">Management</option>
+                    <option value="Marketing">Marketing</option>
+                </select>
+                <br /><br />
+            </fieldset>
+            <fieldset>
+                <legend>Resume</legend>
+                <lable for="Upload Resume">Upload Resume:</lable>
+                <input type="file" id="myFile" name="filename" />
+                <br /><br />
+                <div>
+                    <lable for="comments">Comments:</lable>
+                    <textarea name="comments" id="comments" style="font-family: sans-serif; font-size: 1.2em"> </textarea>
+                </div>
+            </fieldset>
+            <button type="submit" form="form1" value="Submit" class="btn">Submit</button>
+        </form>
+    </body>
+</html>

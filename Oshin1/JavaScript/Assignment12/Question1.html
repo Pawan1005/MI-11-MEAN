@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Student_details</title>
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                margin-top: 50px;
+                align-items: center;
+                justify-content: center;
+                background-color: palegreen;
+                width: 400px;
+                height: 400px;
+                margin: auto;
+                border-radius: 20px;
+            }
+            #pid {
+                color: black;
+                text-align: center;
+                font-size: large;
+                font-weight: 300;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <h1 style="text-align: center;">Display Student Details</h1>
+                <p id="pid"></p>
+            </div>
+        </div>
+        <script>
+            class Student {
+                constructor(RollNo, Name) {
+                    this.RollNo = RollNo;
+                    this.Name = Name;
+                }
+                display() {
+                    document.getElementById("pid").innerHTML += "Roll No:-" + this.RollNo + "<br> ";
+                    document.getElementById("pid").innerHTML += "Name:-" + this.Name + "<br><br>";
+                }
+            }
+            let std1 = new Student(101, "Oshin");
+            let std2 = new Student(202, "Roshni");
+            std1.display();
+            std2.display();
+        </script>
+    </body>
+</html>

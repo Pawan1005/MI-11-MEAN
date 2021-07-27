@@ -1,0 +1,192 @@
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: white;
+}
+li {
+    float: left;
+}
+li a {
+    display: block;
+    color: black;
+    text-align: left;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+p {
+    font-size: xx-large;
+    font-weight: 600;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande", "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+    text-align: left;
+}
+.call {
+    position: absolute;
+    top: 0px;
+    left: 800px;
+}
+.chat {
+    position: absolute;
+    top: 0px;
+    left: 1000px;
+}
+.paddingnav {
+    background-color: cornflowerblue;
+    padding: 30px 20px;
+}
+.input-field {
+    width: 50%;
+    padding: 10px;
+    outline: none;
+}
+.input-container {
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+.container {
+    width: 100%;
+    height: auto;
+    align-items: flex-end;
+    padding: 2px 16px;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ecf0f4;
+}
+a {
+    text-decoration: none;
+}
+.header1 {
+    border-bottom: 1px solid black;
+    height: 31px;
+}
+.sm-links a {
+    color: rgba(0, 0, 0, 0.6);
+    text-decoration: none;
+    font-size: 11px;
+}
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+}
+.row {
+    margin: 0 -5px;
+}
+.leftcol {
+    width: 70%;
+}
+.leftsidecol {
+    width: 33.33%;
+}
+.slideshowcard {
+    width: 100%;
+    padding-bottom: 20px;
+}
+.slidecss {
+    width: 870px;
+    height: 120px;
+}
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    padding: 16px;
+}
+.rightimgcss {
+    width: 100%;
+}
+.redcolor {
+    color: #f52f2f;
+}
+.bottomspace {
+    margin-bottom: 20px;
+}
+header {
+    height: 85px;
+}
+.center {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+}
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+[class*="column-"] {
+    float: left;
+    padding: 1px;
+}
+.column-1 {
+    width: 8%;
+}
+.column-2 {
+    width: 16%;
+}
+.column-3 {
+    width: 25%;
+}
+.msg-container {
+    width: 50%;
+    background: #ffeb9c;
+    height: 40px;
+    border: #ead992 solid 1px;
+    text-align: center;
+    font-size: 15px;
+    padding-top: 8px;
+}
+.yes-button {
+    background: red;
+    border: red solid 1px;
+    color: white;
+    border-radius: 4px;
+    padding: 4px 14px;
+    margin: 0 5px 0 20px;
+    font-size: 13px;
+    cursor: pointer;
+}
+.no-button {
+    background: red;
+    border: red solid 1px;
+    color: white;
+    border-radius: 4px;
+    padding: 4px 14px;
+    margin: 0 5px 0 20px;
+    font-size: 13px;
+    cursor: pointer;
+}
+.login-btn {
+    font-size: 12px;
+    border: 1px solid #f52f2f;
+    box-sizing: border-box;
+    color: #f52f2f;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    font-weight: 600;
+}
+.reg-btn {
+    font-size: 12px;
+    border: 1px solid #f52f2f;
+    box-sizing: border-box;
+    color: #f52f2f;
+    text-transform: uppercase;
+    padding: 4px 10px;
+    font-weight: 600;
+}
+.btn {
+    background-color: red;
+    color: rgb(255, 255, 255);
+    padding: 2px 20px;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    opacity: 0.9;
+}

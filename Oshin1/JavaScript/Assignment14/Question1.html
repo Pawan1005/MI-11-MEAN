@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assign14-Q1</title>
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                margin-top: 50px;
+                align-items: center;
+                justify-content: center;
+                background-color: palegreen;
+                width: 400px;
+                height: 400px;
+                margin: auto;
+                border-radius: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <h1 style="text-align: center;">Inheritance</h1>
+                <script language="javascript">
+                    class student {
+                        constructor(RollNo, Name) {
+                            this.RollNo = RollNo;
+                            this.Name = Name;
+                        }
+                        display() {
+                            document.write("<br>Inside Display");
+                            document.write("<br>Roll No " + this.RollNo);
+                            document.write("<br>Name " + this.Name);
+                        }
+                    }
+                    class Marks extends student {
+                        constructor(RollNo, Name, Marks) {
+                            super();
+                            this.RollNo = RollNo;
+                            this.Name = Name;
+                            this.Marks = Marks;
+                            var d1 = new Date();
+                            this.created = d1.getDate() + "/" + d1.getMonth() + "/" + d1.getFullYear();
+                        }
+                        show() {
+                            document.write("<br>Inside Marks---Created on " + this.created);
+                            document.write("<br>Inside Marks---Name " + this.Name);
+                            document.write("<br>Inside Marks---Marks " + this.Marks);
+                        }
+                    }
+                    var m2 = new Marks(2, "ss", 45);
+                    m2.display();
+                    m2.show();
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

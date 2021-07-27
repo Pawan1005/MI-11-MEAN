@@ -1,0 +1,27 @@
+body{
+   display: flex;
+   flex-direction: row;
+   justify-content: center;
+}
+div{
+    margin-top: 200px;
+    height: 250px;
+    width: fit-content;
+    padding: 90px 70px;
+    background-image: linear-gradient(to left,rgba(35, 151, 143, 0.872),rgb(70, 184, 201));
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+input{
+    padding: 10px;
+    border-radius: 10px;
+}
+button{
+    margin: 20px;
+    padding: 10px 20px;
+    color: white;
+    border-radius: 10px 20px;
+    width: fit-content;
+    background-image: linear-gradient(to right,rgba(0, 0, 0, 0.541),rgb(21, 62, 77)) ;
+}

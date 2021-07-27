@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>assi9_3</title>
+        <style>
+            body {
+                height: 1500px;
+                background-image: linear-gradient(to bottom right, purple, red);
+            }
+        </style>
+    </head>
+    <body>
+        <script language="javascript">
+            function PrimePalindrome() {
+                function str_palindrome(str) {
+                    var sum = 0,
+                        count = 0,
+                        temp,
+                        rem,
+                        j;
+                    temp = parseInt(str);
+                    while (temp > 0) {
+                        rem = temp % 10;
+                        temp = parseInt(temp / 10);
+                        sum = sum * 10 + rem;
+                    }
+                    for (j = 1; j <= str; j++) {
+                        if (str % j == 0) {
+                            count++;
+                        }
+                    }
+                    if (sum == str && count == 2) {
+                        document.getElementById("num1").innerHTML += +str + "<br><br>";
+                        document.getElementById("num2").innerHTML += " &emsp; is &nbsp;<br><br>";
+                        document.getElementById("pid").innerHTML += "Number " + i + " : It's a Prime Palindrome <br><br>";
+                    } else {
+                        document.getElementById("num1").innerHTML += +str + "<br><br>";
+                        document.getElementById("num2").innerHTML += "&emsp; is &nbsp;<br><br>";
+                        document.getElementById("pid").innerHTML += "Number " + i + " : Not a Prime Palindrome <br><br>";
+                    }
+                }
+                var string = [],
+                    i;
+                string[0] = document.getElementById("num").value;
+                string[1] = document.getElementById("num1").value;
+                string[2] = document.getElementById("num2").value;
+                string[3] = document.getElementById("num3").value;
+                string[4] = document.getElementById("num4").value;
+                for (i = 0; i < 5; i++) {
+                    str_palindrome(string[i]);
+                }
+            }
+        </script>
+        <div style="width: 50%; position: absolute; left: 430px; top: 200px">
+            <div style="text-align: center; background-color: rgba(243, 243, 8, 0.842); height: 50%; border-radius: 25px 25px 25px 25px">
+                <br /><br />
+                <h2>Check whether a number is Prime palindrome or not?</h2>
+                <hr size="5" color="black" />
+                <br /><br />
+                Enter Number1 : <input type="text" name="n" id="num" /><br /><br />
+                Enter Number2 : <input type="text" name="n" id="num1" /> <br /><br />
+                Enter Number3 : <input type="text" name="n" id="num2" /><br /><br />
+                Enter Number4 : <input type="text" name="n" id="num3" /> <br /><br />
+                Enter Number5 : <input type="text" name="n" id="num4" /><br /><br />
+                <p><button onClick="PrimePalindrome()">Submit</button></p>
+                <br />
+                <p id="pid" style="color: blue; position: relative; left: 10%"></p>
+                <br /><br /><br />
+            </div>
+        </div>
+    </body>
+</html>

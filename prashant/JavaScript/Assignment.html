@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <title>Assignment 1 | Js </title>
+        <style>
+            button{
+                width: 100px;
+            }
+        </style>
+        <script language="javascript">
+            function show(){
+                "use strict"
+                var sum, a,b;
+                a = parseInt(document.getElementById("num1").value);
+                b = parseInt(document.getElementById("num2").value);
+                sum = a+b;
+               /*document.getElementById("pid").innerHTML= "sum of " +a + "and " +b+ "is " +sum;*/
+                document.getElementById("res").value = sum;
+            }
+            function sub(){
+                "use strict"
+                var sub, a,b;
+                a = parseInt(document.getElementById("num1").value);
+                b = parseInt(document.getElementById("num2").value);
+                sub = a-b;
+               /*document.getElementById("pid").innerHTML= "sum of " +a + "and " +b+ "is " +sum;*/
+                document.getElementById("res").value = sub;
+            }
+            function mul(){
+                "use strict"
+                var mul, a,b;
+                a = parseInt(document.getElementById("num1").value);
+                b = parseInt(document.getElementById("num2").value);
+                mul = a*b;
+               /*document.getElementById("pid").innerHTML= "sum of " +a + "and " +b+ "is " +sum;*/
+                document.getElementById("res").value = mul;
+            }
+            function div(){
+                "use strict"
+                var div, a,b;
+                a = parseInt(document.getElementById("num1").value);
+                b = parseInt(document.getElementById("num2").value);
+                div = a/b;
+               /*document.getElementById("pid").innerHTML= "sum of " +a + "and " +b+ "is " +sum;*/
+                document.getElementById("res").value = div;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                   <h5 style="text-align:center; margin-top: 180px;">Calculator</h5>
+                </div>
+            </div>
+           <div class="row" style="margin-left: 340px; margin-top: 20px;">
+                <div class="card" style="background-image: url(backup.jpg); color: white; ">
+                    <div class="card-body">
+                        <label >Entre first Number :</label>
+                        <input type="text" id="num1" style="margin-left: 50px; padding-left: 10px;"><br><br>
+                        <label >Entre second Number :</label>
+                        <input type="text" id="num2" style="margin-left: 24px; padding-left: 10px;">
+                        <br><br>
+                        <input type="button" value="+" style="width: 100px; height: 35px; background-color: white;" onclick="show()"/> </td>
+                        <input type="button" value="-" style="width: 100px; height: 35px; background-color: white;" onclick="sub()"/> </td>
+                        <input type="button" value="*" style="width: 100px; height: 35px; background-color: white;" onclick="mul()"/> </td>
+                        <input type="button" value="/" style="width: 100px; height: 35px; background-color: white;" onclick="div()"/> </td>
+                        <br><br>
+                        <td><input type="button" value="=" style="width: 100px; height: 35px; background-color: white; margin-left: 150px;" onclick="solve()"/>                                <br><br>
+                        <label>Result :</label>
+                        <input type="text" id="res" style="margin-left: 60px; padding-left: 10px;">
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+         
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

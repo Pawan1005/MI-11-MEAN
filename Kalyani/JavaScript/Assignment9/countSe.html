@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>WordCount</title>
+        <style>
+            .Palindrome {
+                margin: 10px 0 0 150px;
+                width: 40%;
+                border: 3px solid gray;
+                border-radius: 5px;
+                padding: 30px;
+                height: 45vh;
+                background-color: cyan;
+            }
+            #input {
+                width: 70%;
+                height: 10%;
+                font-size: 20px;
+                text-align: center;
+            }
+            #p {
+                width: 60%;
+                border: 1px solid gray;
+                margin-top: 20px;
+                height: 25%;
+                text-align: center;
+                margin-left: 120px;
+                border-radius: 10px;
+                font-size: 30px;
+                background-color: darkgoldenrod;
+            }
+            button {
+                width: 20%;
+                height: 15%;
+                border-radius: 10px;
+                background-color: green;
+                color: black;
+            }
+        </style>
+        <script>
+            function wrodCount() {
+                let sentance = document.getElementById("input").value;
+                console.log(sentance.split(" ").length);
+                document.getElementById("p").innerHTML = `${sentance.split(" ").length} words`;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="Palindrome">
+            <h1>WordCount</h1>
+            <input id="input" />
+            <div id="p"></div>
+            <button type="button" onclick="wrodCount() ">CountWord</button>
+        </div>
+    </body>
+</html>

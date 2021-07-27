@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Result page</title>
+        <style>
+            body {
+                background-color: cyan;
+            }
+            h1 {
+                text-align: center;
+                margin-top: 1%;
+            }
+            #main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: blueviolet;
+                width: 460px;
+                height: 540px;
+                margin: auto;
+            }
+            .div1 {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+            .display {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 95%;
+                min-width: 90px;
+                min-height: 110px;
+                padding: 15px 50px 15px 50px;
+                background-color: white;
+                border: 1px solid #0000004b;
+            }
+            .display1,
+            .display2 {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                align-items: flex-start;
+            }
+            .display1 {
+                width: 90px;
+            }
+            .name1 {
+                font-size: 17px;
+                font-weight: bold;
+                line-height: 17px;
+                color: black;
+            }
+            .display2 {
+                padding-left: 10px;
+                min-width: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Result</h1>
+        <div id="main">
+            <div class="div1">
+                <div class="display">
+                    <div class="display1">
+                        <p>
+                            <span class="name1">Roll No : </span><br /><br />
+                            <span class="name1">Name : </span><br /><br />
+                            <span class="name1">Class : </span><br /><br />
+                            <span class="name1">Hindi : </span><br /><br />
+                            <span class="name1">English : </span><br /><br />
+                            <span class="name1">Marathi : </span><br /><br />
+                            <span class="name1">Maths : </span><br /><br />
+                            <span class="name1">Physics : </span><br /><br /><br /><br />
+                            <span class="name1">Total : </span><br /><br />
+                            <span class="name1">Percentage : </span><br /><br />
+                            <span class="name1">Grade : </span>
+                        </p>
+                    </div>
+                    <div class="display2">
+                        <p>
+                            <span id="result1"></span><br /><br />
+                            <span id="result2"></span><br /><br />
+                            <span id="result3"></span><br /><br />
+                            <span id="result4"></span><br /><br />
+                            <span id="result5"></span><br /><br />
+                            <span id="result6"></span><br /><br />
+                            <span id="result7"></span><br /><br />
+                            <span id="result8"></span><br /><br /><br /><br />
+                            <span id="result9"></span><br /><br />
+                            <span id="result10"></span><br /><br />
+                            <span id="result11"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            window.addEventListener("load", () => {
+                const params = new URL(document.location).searchParams;
+                const rollNo = params.get("rollNo");
+                const Name = params.get("Name");
+                const Class = params.get("Class");
+                const Hindi = params.get("Hindi");
+                const English = params.get("English");
+                const Marathi = params.get("Marathi");
+                const Maths = params.get("Maths");
+                const Physics = params.get("Physics");
+                let total = parseInt(Hindi) + parseInt(English) + parseInt(Marathi) + parseInt(Maths) + parseInt(Physics);
+                let percentage = parseInt((total / 500) * 100);
+                let grade;
+                if (percentage >= 80) {
+                    grade = "A+";
+                } else if (percentage < 80 && percentage >= 60) {
+                    grade = "A";
+                } else if (percentage < 60 && percentage >= 55) {
+                    grade = "B+";
+                } else if (percentage < 55 && percentage >= 40) {
+                    grade = "B";
+                } else {
+                    grade = "Fail";
+                }
+                document.getElementById("result1").innerHTML = rollNo;
+                document.getElementById("result2").innerHTML = Name;
+                document.getElementById("result3").innerHTML = Class;
+                document.getElementById("result4").innerHTML = Hindi;
+                document.getElementById("result5").innerHTML = English;
+                document.getElementById("result6").innerHTML = Marathi;
+                document.getElementById("result7").innerHTML = Maths;
+                document.getElementById("result8").innerHTML = Physics;
+                document.getElementById("result9").innerHTML = total;
+                document.getElementById("result10").innerHTML = percentage + "%";
+                document.getElementById("result11").innerHTML = grade;
+            });
+        </script>
+    </body>
+</html>

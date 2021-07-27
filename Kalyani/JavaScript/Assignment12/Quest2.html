@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Employee Details</title>
+        <style>
+            table {
+                border: 1px solid black;
+                margin-top: 20px;
+                background-color: blanchedalmond;
+                margin-left: 550px;
+            }
+            .display tr th td {
+                border: 1px solid black;
+            }
+            body {
+                background-color: rgba(0, 0, 0, 0.747);
+            }
+            h2 {
+                text-align: center;
+            }
+            #p4 {
+                border: 1px solid black;
+                width: 25%;
+                height: 25%;
+                margin-left: 450px;
+                background-color: rgb(243, 23, 23);
+                padding: 0 0 0 80px;
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Employee Details</h2>
+        <table>
+            <tr>
+                <th>Empo</th>
+                <td id="num"></td>
+            </tr>
+            <tr>
+                <th>Name</th>
+                <td id="num1"></td>
+            </tr>
+            <tr>
+                <th>Address</th>
+                <td id="num2"></td>
+            </tr>
+            <tr>
+                <th>City</th>
+                <td id="num3"></td>
+            </tr>
+            <tr>
+                <th>salry</th>
+                <td id="num4"></td>
+            </tr>
+        </table>
+        <div class="dispaly">
+            <table class="display">
+                <tr>
+                    <th>Empo</th>
+                    <th>Name</th>
+                    <th>Gross</th>
+                    <th>Net</th>
+                </tr>
+                <tr>
+                    <td><p id="p"></p></td>
+                    <td><p id="p1"></p></td>
+                    <td><p id="p2"></p></td>
+                    <td><p id="p3"></p></td>
+                </tr>
+            </table>
+        </div>
+        <p id="p4"></p>
+        <script>
+            class Employee {
+                constructor() {
+                    this.empo = "101";
+                    this.name = "Akshay Kumar";
+                    this.address = "pune maharashtra";
+                    this.city = "pune";
+                    this.salry = "80,000";
+                }
+                show_int() {
+                    document.getElementById("num").innerHTML += this.empo;
+                    document.getElementById("num1").innerHTML += this.name;
+                    document.getElementById("num2").innerHTML += this.address;
+                    document.getElementById("num3").innerHTML += this.city;
+                    document.getElementById("num4").innerHTML += this.salry;
+                }
+                calculate() {
+                    let da, hra, pf, gross, net;
+                    let salry = parseInt(this.salry);
+                    da = 0.3 * salry;
+                    hra = 0.15 * salry;
+                    pf = 0.125 * salry;
+                    this.gross = salry + da + hra;
+                    this.net = this.gross - pf;
+                }
+                display() {
+                    document.getElementById("p").innerHTML += this.empo;
+                    document.getElementById("p1").innerHTML += this.name;
+                    document.getElementById("p2").innerHTML += this.gross + "K";
+                    document.getElementById("p3").innerHTML += this.net + "K";
+                    if (this.salry > 18000) {
+                        document.getElementById("p4").innerHTML = "You Are Income Tax Payer";
+                    } else {
+                        document.getElementById("p4").innerHTML = "You Are Not A Income Tax Payer";
+                    }
+                }
+            }
+            let myemployee = new Employee();
+            myemployee.show_int();
+            myemployee.calculate();
+            myemployee.display();
+        </script>
+    </body>
+</html>

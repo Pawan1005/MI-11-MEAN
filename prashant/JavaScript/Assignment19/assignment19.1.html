@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment 19.1 DOM</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .container {
+                padding: 1.25rem;
+                background-color: #EEA47FFF;
+                border: 1px solid;
+                margin-top: 50px;
+            }
+            #res {
+                margin-top: 1.25rem;
+            }
+            #num {
+                border-radius: 20px;
+                height: 30px;
+                padding-left: 10px;
+            }
+            #btn {
+                height: 30px;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <input type="text" name="number" id="num" />
+            <button id="btn">Create Table</button>
+        </div>
+        <script>
+            function printTable(num) {
+                let res = "";
+                for (let i = 1; i <= 10; i++) {
+                    res += `<div>${num} X ${i} = ${num * i}</div>`;
+                }
+                return res;
+            }
+            document.getElementById("btn").onclick = () => {
+                let num = document.getElementById("num").value;
+                if (/\d/.test(num)) {
+                    num = parseInt(num);
+                    let div = document.createElement("div");
+                    div.id = "res";
+                    div.innerHTML = printTable(num);
+                    document.body.appendChild(div);
+                } else {
+                    alert("enter Number only");
+                }
+            };
+        </script>
+    </body>
+</html>

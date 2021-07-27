@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            body {
+                background-image: linear-gradient(90deg, rgb(238, 167, 214), rgba(236, 236, 146, 0.911));
+            }
+        </style>
+    </head>
+    <body>
+        <div style="position: absolute; left: 25%; top: 100px">
+            <h4>Enter Your Roll Number :</h4>
+            <input type="text" id="id1" /><br /><br />
+            <h4>Enter Your Name :</h4>
+            <input type="text" id="id2" /> <br /><br />
+            <h4>Math Subject Marks:</h4>
+            <input type="text" id="id3" /> <br /><br />
+            <h4>Science Subject Marks :</h4>
+            <input type="text" id="id4" /> <br /><br />
+            <h4>History Subject Marks :</h4>
+            <input type="text" id="id5" /> <br /><br /><br />
+            <button onclick="submit()">Submit</button>
+        </div>
+        <h2 style="position: absolute; left: 50%; top: 100px">********REPORT CARD********</h2>
+        <p id="pid" style="position: absolute; left: 56%; top: 200px"></p>
+        <script language="javascript">
+            let a = Number(document.getElementById("id1").value);
+            let b = document.getElementById("id2").value;
+            let c = Number(document.getElementById("id3").value);
+            let d = Number(document.getElementById("id4").value);
+            let e = Number(document.getElementById("id5").value);
+            var t = c + d + e;
+            var p = (t / 300) * 100;
+            function submit() {
+                document.getElementById("pid").innerHTML += "Roll Number : " + a;
+                b = b.toUpperCase();
+                document.getElementById("pid").innerHTML += " <br>Name : " + b;
+                if (/[^^a-z0-9]/.test(c)) {
+                    //alert('Input is not alphanumeric');
+                    document.getElementById("pid").innerHTML += '<br>Math  : <span style="color:red">Error - Enter a Valid Marks!!</span>';
+                } else {
+                    document.getElementById("pid").innerHTML += "<br>Math  : " + c;
+                }
+                if (/[^^a-z0-9]/.test(d)) {
+                    // alert('Input is not alphanumeric');
+                    document.getElementById("pid").innerHTML += '<br>Science  : <span style="color:red">Error - Enter a Valid Marks!!</span>';
+                } else {
+                    document.getElementById("pid").innerHTML += "<br>Science  : " + d;
+                }
+                if (/[^^a-z0-9]/.test(e)) {
+                    // alert('Input is not alphanumeric');
+                    document.getElementById("pid").innerHTML += '<br>History  : <span style="color:red">Error - Enter a Valid Marks!!</span>';
+                } else {
+                    document.getElementById("pid").innerHTML += "<br>History  : " + e;
+                }
+                document.getElementById("pid").innerHTML += `<h4>Total : ${t}</h4>`;
+                document.getElementById("pid").innerHTML += `<h4>Percentage : ${p}%</h4>`;
+                if (p >= 80) {
+                    document.getElementById("pid").innerHTML += '<h4>Grade : <span style="color:green;">A+</span></h4>';
+                } else if (p < 80 && p >= 60) {
+                    document.getElementById("pid").innerHTML += '<h4>Grade : <span style="color:green;">A</span></h4>';
+                } else if (p < 60 && p >= 55) {
+                    document.getElementById("pid").innerHTML += '<h4>Grade : <span style="color:orange;">B+</span></h4>';
+                } else if (p < 55 && p >= 40) {
+                    document.getElementById("pid").innerHTML += '<h4>Grade : <span style="color:orange;">B</span></h4>';
+                } else {
+                    document.getElementById("pid").innerHTML += '<h4>Grade : <span style="color:red;">No Grade</span></h4>';
+                }
+            }
+        </script>
+    </body>
+</html>

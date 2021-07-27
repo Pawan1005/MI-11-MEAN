@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Armstrong Number</title>
+        <link rel="stylesheet" href="ams.css" />
+        <script>
+            function fun() {
+                var Armstrong,tempVar,sum = 0;
+                Armstrong = parseInt(document.getElementById("ams").value);
+                tempVar = Armstrong;
+                while (tempVar > 0) {
+                    remainder = tempVar % 10;
+                    sum += remainder * remainder * remainder;
+                    tempVar = parseInt(tempVar / 10);
+                }
+                if (sum == Armstrong) {
+                    document.getElementById("hid").innerHTML = "the number " + Armstrong + " is an Armstrong Number";
+                } else {
+                    document.getElementById("hid").innerHTML = "the number " + Armstrong + " is not an Armstrong Number";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h2>!!!Armstrong Number!!!</h2>
+            <h3>Enter Positive Number (^_^)</h3>
+            <input type="number" name="" id="ams" placeholder="enter number " />
+            <button onclick="fun()">Armstrong</button>
+            <h2 id="hid" style="border: 1px solid white; padding: 5px; height: 30px"></h2>
+        </div>
+    </body>
+</html>

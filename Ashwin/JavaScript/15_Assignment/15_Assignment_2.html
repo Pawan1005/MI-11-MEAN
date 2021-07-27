@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="15_Assignment_2.js"></script>
+        <title>Sales </title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <style>
+            h4 > span:nth-child(1) {
+                color: red;
+            }
+            h4 > span:last-child {
+                color: rgb(2, 133, 209);
+            }
+            .box {
+                height: fit-content;
+                width: 800px;
+                margin-top: 50px;
+                border: 1px solid black;
+                padding: 50px;
+                background: url(plain.jpg);
+                background-size: cover;
+            }
+            table,
+            td,
+            th {
+                border: 1px solid blueviolet;
+                border-collapse: collapse;
+            }
+            th,
+            td {
+                text-align: center;
+                padding: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="box">
+                    <h1 class="mt-5">Sales Details Using Try Catch Block</h1>
+                    <h4>
+                        Click on <span>Get Button</span>,
+                        <span>Enter Sales Person Details</span>
+                    </h4>
+                    <h4>
+                        Click on <span>Sales Input Button</span>,
+                        <span>Enter Sales made by salesman</span>
+                    </h4>
+                    <h4>
+                        Click on <span>Display Button</span>,
+                        <span>Whole Sales Details With TotalSales</span>
+                    </h4>
+                    <button type="button" onclick="getSalesData()" class="form-control btn-danger mt-5">Get</button>
+                    <button type="button" onclick="inputSales()" class="form-control btn-success mt-2">Sales Input</button>
+                    <button type="button" onclick="displayDetails()" class="form-control btn-primary mt-2">Display</button>
+                    <p id="errorMessage"></p>
+                    <table style="display: none" id="table">
+                        <thead>
+                            <tr>
+                                <th>SrNo.</th>
+                                <th>Id</th>
+                                <th>Name</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                    <p id="totalSales"></p>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </body>
+</html>

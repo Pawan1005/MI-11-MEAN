@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment-8</title>
+    </head>
+    <body>
+        <div class="main">
+            <h1>Alpha Dash or Underscore</h1>
+            <div>
+                <label for="">&ensp;Enter alpha dash</label>
+                <input type="text" id="firstnumber" />
+            </div>
+            <div>
+                <p>It is&nbsp;&nbsp;&nbsp;<span id="num"></span></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="alphaDash()">Check</button>
+            </div>
+        </div>
+        <script>
+            function alphaDash() {
+                function alphaScore(str) {
+                    regExp = /^[a-zA-Z0-9/\-\_]+$/;
+                    if (regExp.test(str)) {
+                        document.getElementById("num").innerHTML = "Alpha Dash Uderscore";
+                    } else {
+                        document.getElementById("num").innerHTML = "not Alpha Dash Uderscore";
+                    }
+                }
+                var regExp, str;
+                str = document.getElementById("firstnumber").value;
+                alphaScore(str);
+            }
+        </script>
+    </body>
+</html>

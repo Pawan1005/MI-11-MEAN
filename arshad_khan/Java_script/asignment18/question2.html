@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Voter check</title>
+        <style>
+            body {
+                background-color: cyan;
+            }
+            h1 {
+                text-align: center;
+                margin-top: 5%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: blueviolet;
+                width: 400px;
+                height: 400px;
+                margin: auto;
+                padding-top: 15px;
+            }
+            p {
+                min-width: 90px;
+                height: 25px;
+                padding: 14px 30px 12px 30px;
+                background-color: white;
+                font-weight: bold;
+                border: 1px solid #0000004b;
+                border-radius: 5px;
+                font-size: 21px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Check Voter</h1>
+        <div class="main">
+            <div>
+                <label for="">Enter a name</label>
+                <input type="text" id="firstnumber" />
+            </div>
+            <div>
+                <label for="">Enter a age &ensp;</label>
+                <input type="text" id="secondnumber" />
+            </div>
+            <div>
+                <p><span id="vote"></span></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="checkVoter()">Show</button>
+            </div>
+        </div>
+        <script>
+            function checkVoter() {
+                var name, age;
+                name = document.getElementById("firstnumber").value;
+                age = parseInt(document.getElementById("secondnumber").value);
+                if (age >= 18) {
+                    document.getElementById(
+                        "vote"
+                    ).innerHTML = `<span style="color: blue;">${name}</span>&nbsp; is &nbsp;<span style="color: red;">eligible to Vote</span>`;
+                } else {
+                    document.getElementById(
+                        "vote"
+                    ).innerHTML = `<span style="color: blue;">${name}</span>&nbsp; is &nbsp;<span style="color: red;">not eligible to Vote</span>`;
+                }
+            }
+        </script>
+    </body>
+</html>

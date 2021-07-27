@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>First character uppercase or not</title>
+        <style>
+            h1 {
+                text-align: center;
+                color: black;
+                margin-top: 4%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color:greenyellow;
+                width: 400px;
+                height: 420px;
+                margin: auto;
+                padding-top: 15px;
+                gap: 40px;
+                border-radius: 10px;
+                border: 3px solid purple;
+            }
+            input {
+                width: 50%;
+                margin-left: 10px;
+                margin-bottom: 12px;
+                padding: 4px 8px;
+                font-size: 16px;
+                outline: none;
+                line-height: 19px;
+                border: 1px solid #0000004b;
+            }
+            p {
+                min-width: 150px;
+                height: 25px;
+                padding: 12px 20px 12px 20px;
+                background-color: white;
+                font-weight: bold;
+                border: 1px solid #0000004b;
+                border-radius: 5px;
+            }
+            span {
+                color: #ff0000;
+                font-size: 21px;
+            }
+            button {
+                background-color: black;
+                color: white;
+                padding: 7px 11px;
+                margin: 0 8px;
+                font-weight: bold;
+                font-size: 17px;
+                border: 1px solid gray;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main">
+            <h1>First Character Uppercase or Not</h1>
+            <div>
+                <label for="">Enter the string</label>
+                <input type="text" id="firstnumber">
+            </div>
+            <div>
+                <p>It is&nbsp;&nbsp;&nbsp;<span id="num1"></span></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="uppercase()">Check</button>
+            </div>
+        </div>
+        <script>
+            function uppercase() {
+                var regExp, str;
+                str = document.getElementById("firstnumber").value;
+                regExp = /^[A-Z]/;
+                if (regExp.test(str)) {
+                    document.getElementById("num1").innerHTML = "UPPERCASE";
+                } else {
+                    document.getElementById("num1").innerHTML = "not UPPERCASE";
+                }
+            }
+        </script>
+    </body>
+</html>

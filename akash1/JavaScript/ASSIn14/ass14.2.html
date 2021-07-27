@@ -94,9 +94,9 @@
 					</div>
 				</div>
 			</div>
-			<script>
-                var ind = 1;
-                var table = document.getElementById("pid");
+			  <script>
+         var ind = 1;
+         var table = document.getElementById("pid");
                 var row = table.insertRow(1);
                 var cell1 = row.insertCell(0);
                 var cell2 = row.insertCell(1);
@@ -117,7 +117,29 @@
                 user2.deposit();
                 user2.withdraw();
                 user2.display();
-			</script>
+                var ind = 1;
+                var table = document.getElementById("pid");
+                var row = table.insertRow(1);
+                var cell1 = row.insertCell(0);
+                var cell2 = row.insertCell(1);
+                var cell3 = row.insertCell(2);
+                var cell4 = row.insertCell(3);
+                var user1 = new BankDet();
+                var user2 = new BankDet();
+                user1.getData();
+                user1.deposit();
+                user1.withdraw();
+                user1.display();
+                row = table.insertRow(2);       
+                cell1 = row.insertCell(0);
+                cell2 = row.insertCell(1);
+                cell3 = row.insertCell(2);
+                cell4 = row.insertCell(3);
+                user2.getData();
+                user2.deposit();
+                user2.withdraw();
+                user2.display();
+			      </script>
             <script
                 src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
                 integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Calculate Marks or Display Total, Percentage and Grade</title>
+        <style>
+            h1 {
+                text-align: center;
+                color:white;      
+                margin-top: 2%;
+            }
+            body {
+                background-color: rgb(116, 15, 65);
+            }
+            .name {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: rgb(252, 236, 184);
+                padding-top: 20px;
+                width: 600px;
+                height:530px;
+                margin: auto;
+                font-size: 16px;
+                gap: 8px;
+                border-radius: 10px;
+                border: 2px solid rgb(252, 212, 103);
+            }  
+            .display {
+                display: flex;
+                min-width: 230px;
+                height: 220px;
+                padding-left: 10px;
+                background-color: white;
+                border: 1px solid #0000004b;
+                border-radius: 5px;
+                font-size: 17px;
+            }
+            .btn1{
+                background-color: tomato;
+                height: 30px;
+                color: rgb(63, 66, 243);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Calculate Marks or Display Total, Percentage and Grade</h1>
+        <div class="name">
+            <div>
+                Roll No :<input type="text" id="rno" placeholder="Enter roll no.">
+            </div><br>
+            <div>
+                Name :<input type="text" id="name" placeholder="Enter name">
+            </div><br>
+            <div>
+                Maths :<input type="text" id="math"placeholder="Enter marks of math">
+            </div><br>
+            <div>
+                Science :<input type="text" id="science"placeholder="Enter Enter marks of science">
+            </div><br>
+            <div>
+                History :<input type="text" id="history"placeholder="Enter marks of history">
+            <div><br>
+                <button class="btn1" onclick="calculate()">Calculate</button>
+            </div>
+            <div>
+                <h2>REPORT CARD</h2>
+            </div>
+            <div class="display">
+                <p>
+                    Roll No <br>Name <br>Maths <br>Science <br>History<br><br><span class="num">TOTAL &ensp;:&emsp;</span><br><span class="num">PERCENTAGE &ensp;:&emsp;</span><br><span class="num">GRADE &ensp;:&emsp;</span>
+                </p>
+                <p>
+                    <span id="num1"></span><br><span id="num2"></span><br><span id="num3"></span><br><span id="num4"></span><br><span id="num5"></span><br><Br><span id="num6" class="num"></span><br><span id="num7" class="num"></span><br><span id="num8" class="num"></span>
+                </p>
+            </div>
+        </div>
+        <script>
+            function calculate() {
+                class Student {
+                    constructor() {
+                        this.RollNo = 0;
+                        this.Name = "";
+                        this.Maths = 0;
+                        this.Science = 0;
+                        this.History = 0;
+                    }
+                    read(RollNo, Name, Maths, Science, History) {
+                        this.RollNo = RollNo;
+                        this.Name = Name;
+                        this.Maths = Maths;
+                        this.Science = Science;
+                        this.History = History;
+                    }
+                    calculate() {
+                        this.total = this.Maths + this.Science + this.History;
+                        this.percentage = parseInt((this.total / 300) * 100);
+                        if (this.percentage >= 80) {
+                            this.grade = "A+";
+                        } else if (this.percentage < 80 && this.percentage >= 60) {
+                            this.grade = "A";
+                        } else if (this.percentage < 60 && this.percentage >= 55) {
+                            this.grade = "B+";
+                        } else if (this.percentage < 55 && this.percentage >= 40) {
+                            this.grade = "B";
+                        } else {
+                            this.grade = "No Grade  ";
+                        }
+                    }
+                    display() {
+                        if (this.grade == "A+" || this.grade == "A") {
+                            num8.style = "color: #0b751d;";
+                        } else if (this.grade == "B+" || this.grade == "B") {
+                            num8.style = "color: #bb9b0b;";
+                        } else {
+                            num8.style = "color: #FF0000;";
+                        }
+                        document.getElementById("num1").innerHTML += this.RollNo;
+                        document.getElementById("num2").innerHTML += this.Name;
+                        document.getElementById("num3").innerHTML += this.Maths;
+                        document.getElementById("num4").innerHTML += this.Science;
+                        document.getElementById("num5").innerHTML += this.History;
+                        document.getElementById("num6").innerHTML += this.total;
+                        document.getElementById("num7").innerHTML += this.percentage;
+                        document.getElementById("num8").innerHTML += this.grade;
+                        num6.style = "color: #0000ff;";
+                        num7.style = "color: #0000ff;";
+                    }
+                }
+                try {
+                let s1 = new Student();
+                let RollNo = document.getElementById("rno").value;
+                let Name = document.getElementById("name").value.toUpperCase();
+                let Maths = parseInt(document.getElementById("math").value);
+                let Science = parseInt(document.getElementById("science").value);
+                let History = parseInt(document.getElementById("history").value);
+                if (isNaN(Maths) || isNaN(Science) || isNaN(History)) {
+                    alert("Enter numbers only !!!");
+                } else {
+                    s1.read(RollNo, Name, Maths, Science, History);
+                    s1.calculate();
+                    s1.display();
+                }
+            } catch (error) {
+                    alert(error);
+                }
+            }
+        </script>
+    </body>
+</html>

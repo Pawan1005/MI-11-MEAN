@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+        <title>Document</title>
+        <script lang="javascript">
+             class salesman {
+                constructor(nam, id) {
+                    this.name = nam;
+                    this.id = id;
+                }
+            }
+            class details extends salesman {
+                constructor(nam, id) {
+                    super(nam, id);
+                    let a = prompt(`Enter the sales done by ${this.name}`);
+                    this.com = 0;
+                    try {
+                        if (isNaN(a)) throw "empty input is invalid";
+                        try {
+                            let z = parseInt(a);
+                            if (isNaN(z)) throw "for sales string input is not valid";
+                            try {
+                                if (z < 0) throw "negative values are not allowed";
+                                this.sales = z;
+                            } catch (err) {
+                                alert(err);
+                            }
+                        } catch (err) {
+                            alert(err);
+                        }
+                    } catch (err) {
+                        alert(err);
+                    }
+                }
+                math() {
+                    if (this.sales <= 5000) {
+                        this.com = this.sales * 0.02;
+                    } else if (this.sales <= 12000) {
+                        this.com = this.sales * 0.05;
+                    } else if (this.sales <= 50000) {
+                        this.com = this.sales * 0.1;
+                    } else if (this.sales > 50000) {
+                        this.com = this.sales * 0.15;
+                    }
+                }
+                output() {
+                    document.getElementById("pid").innerHTML = `salesman id:${this.id} <br>salesman name: ${this.name}`;
+                    document.getElementById("pid").innerHTML += `<br>total sales done:${this.sales} <br> total commission earned ${this.com}`;
+                }
+            }
+        </script>
+    </head>
+    <body style="background-color: pink; background-image: url(2.png)">
+        <center>
+            <h1>sales</h1>
+        </center>
+        <div class="row vm">
+            <div class="col">
+                <div class="jumbotron bg-dark text-white">
+                    <center>
+                        <h2>sales commission calculation</h2>
+                        <hr />
+                    </center>
+                    <div class="box">
+                        <center>
+                            <p id="pid"></p>
+                        </center>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            let f = prompt("Enter your name");
+            let b = prompt("what is your id");
+            let jes = new details(f, b);
+            jes.math();
+            jes.output();
+        </script>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

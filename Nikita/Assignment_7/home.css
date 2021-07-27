@@ -1,0 +1,26 @@
+* {
+    margin: 10;
+    padding: 10;
+    font-family: sans-serif;
+    background-color: pink;
+}
+.header {
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+}
+nav {
+    display: flex;
+    padding: 10px;
+    background-color: tomato;
+}
+nav ul {
+    text-align: right;
+    display: inline;
+    list-style: none;
+    flex: 1;
+}
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}

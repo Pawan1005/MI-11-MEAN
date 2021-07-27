@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assign14_Q2</title>
+        <script>
+            class BankDet {
+                constructor() {
+                    this.acco_no = 0;
+                    this.acc_name = "";
+                    this.bal = 0;
+                }
+                getData() {
+                    this.acco_no = parseInt(prompt("Enter your account number"));
+                    this.acc_name = prompt("Enter your account name");
+                    this.bal = parseInt(prompt("Enter your account balance"));
+                }
+                deposit() {
+                    let de = parseInt(prompt("Enter your amount to deposite"));
+                    this.bal += de;
+                }
+                withdraw() {
+                    let wt = parseInt(prompt("Enter your amount to withdraw"));
+                    if (this.bal < wt) {
+                        alert("insufficient balance");
+                    } else if (this.bal - wt < 1000) {
+                        this.bal -= wt;
+                        alert("warning balance is below minimum balance of 1000");
+                    } else {
+                        this.bal -= wt;
+                    }
+                }
+                display() {
+                    var row = table.insertRow(ind);
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    var cell3 = row.insertCell(2);
+                    var cell4 = row.insertCell(3);
+                    cell1.innerHTML = ind;
+                    cell2.innerHTML = this.acco_no;
+                    cell3.innerHTML = this.acc_name;
+                    cell4.innerHTML = this.bal;
+                    ind++;
+                }
+            }
+        </script>
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                margin-top: 50px;
+                align-items: center;
+                justify-content: center;
+                background-color: lavender;
+                width: 400px;
+                height: 400px;
+                margin: auto;
+                border-radius: 20px;
+            }
+            table,
+            th,
+            td {
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <table id="myTable">
+                    <tr>
+                        <th>S.no</th>
+                        <th>Account Num</th>
+                        <th>Name</th>
+                        <th>Balance</th>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        <script>
+            var ind = 1;
+            var table = document.getElementById("myTable");
+            var row = table.insertRow(1);
+            var cell1 = row.insertCell(0);
+            var cell2 = row.insertCell(1);
+            var cell3 = row.insertCell(2);
+            var cell4 = row.insertCell(3);
+            var user1 = new BankDet();
+            var user2 = new BankDet();
+            user1.getData();
+            user1.deposit();
+            user1.withdraw();
+            user1.display();
+            row = table.insertRow(2);
+            cell1 = row.insertCell(0);
+            cell2 = row.insertCell(1);
+            cell3 = row.insertCell(2);
+            cell4 = row.insertCell(3);
+            user2.getData();
+            user2.deposit();
+            user2.withdraw();
+            user2.display();
+        </script>
+    </body>
+</html>

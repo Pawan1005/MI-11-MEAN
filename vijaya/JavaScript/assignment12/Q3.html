@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Display student details</title>
+        <style>
+            body {
+                background-color:rgb(92, 6, 43);   
+            }
+            h1 {
+                text-align: center;
+                color: rgba(255, 196, 119, 0.993);
+                margin-top: 2%;
+            }
+            h2{
+                color: white;
+                margin-left: 20px;
+            }
+            .name {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color:  gray;
+                width: 560px;
+                height: 550px;
+                margin: auto;
+                gap: 5px;
+                border-radius: 10px;
+            }
+            table {
+                width: 200px;
+                background-color: #ffffff;
+                border-collapse: separate;
+            }
+            tr, th, td {
+                border: 1px solid black;
+                padding: 10px 5px;
+            }
+            table th {
+                background-color:rgba(252, 175, 74, 0.993);
+                color:rgb(23, 57, 211);
+                font-size: 15px;
+            }
+            tr, td {
+                font-size: 15px;
+                min-width: 80px;
+                text-align: center;
+                padding-top: 10px;
+                padding-bottom: -5px;
+            }
+            .res{
+                color: white;
+                font-weight: bold;
+                font-size: 17px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Employee Details</h1>
+        <div class="name">
+            <h2>Employee Table</h2>
+            <table>
+                <tr>
+                    <th>Emp NO</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>Salary</th>
+                </tr>
+                <tr>
+                    <td id="num1"></td>
+                    <td id="name"></td>
+                    <td id="add"></td>
+                    <td id="city"></td>
+                    <td id="sal"></td>
+                </tr>
+            </table>
+            <h2>Salary Table</h2>
+            <table>
+                <tr>
+                    <th>Emp NO</th>
+                    <th>Name</th>
+                    <th>Gross Salary</th>
+                    <th>Net Salary</th>
+                </tr>
+                <tr>
+                    <td id="num2"></td>
+                    <td id="name2"></td>
+                    <td id="gross"></td>
+                    <td id="netsal"></td>
+                </tr>
+            </table>
+            <br>
+            <br>
+            <div>
+                <div class="res" id="result"></div>
+            </div>
+        </div>
+        <script>
+            class Employee {
+                constructor(n) {
+                    this.empno = n;
+                    this.name = "";
+                    this.address = "";
+                    this.city = "";
+                    this.salary = 0;
+                }
+                show_init() {
+                    document.getElementById("num1").innerHTML += this.empno + "<br><br>";
+                    document.getElementById("name").innerHTML += this.name + "<br><br>";
+                    document.getElementById("add").innerHTML += this.address + "<br><br>";
+                    document.getElementById("city").innerHTML += this.city + "<br><br>";
+                    document.getElementById("sal").innerHTML += this.salary + "<br><br>";
+                }
+                get_data(name, address, city, salary) {
+                    this.name = name;
+                    this.address = address;
+                    this.city = city;
+                    this.salary = salary;
+                }
+                calculate() {
+                    let salary, da, hra, pf, gross, net;
+                    salary = parseInt(this.salary);
+                    da = (salary * 30) / 100;
+                    hra = (salary * 15) / 100;
+                    pf = (salary * 12.5) / 100;
+                    gross = salary + da + hra;
+                    net = gross - pf;
+                    this.gross = parseInt(gross);
+                    this.net = parseInt(net);
+                }
+                display() {
+                    document.getElementById("num2").innerHTML += this.empno + "<br><br>";
+                    document.getElementById("name2").innerHTML += this.name + "<br><br>";
+                    document.getElementById("gross").innerHTML += this.gross + "<br><br>";
+                    document.getElementById("netsal").innerHTML += this.net + "<br><br>";
+                    if (this.gross > 180000) {
+                        document.getElementById("result").innerHTML += "&emsp;Income Tax Payer&emsp;";
+                    } else {
+                        document.getElementById("result").innerHTML += "&emsp;Not an Income Tax Payer&emsp;";
+                    }
+                }
+            }
+            let e1 = new Employee(1);
+            let e2 = new Employee(2);
+            let name = prompt("Enter Name : ");
+            let address = prompt("Enter Address : ");
+            let city = prompt("Enter City : ");
+            let salary = parseInt(prompt("Enter Salary : "));
+            e1.get_data(name, address, city, salary);
+            e1.show_init();
+            e1.calculate();
+            e1.display();
+            name = prompt("Enter Name : ");
+            address = prompt("Enter Address : ");
+            city = prompt("Enter City : ");
+            salary = parseInt(prompt("Enter Salary : "));
+            e2.get_data(name, address, city, salary);
+            e2.show_init();
+            e2.calculate();
+            e2.display();
+        </script>
+    </body>
+</html>

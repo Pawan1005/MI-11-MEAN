@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+            crossorigin="anonymous"
+        />
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            input {
+                margin: 5px;
+            }
+            body {
+                margin: 10px;
+                background-image: linear-gradient(120deg, rgb(0, 0, 0), rgb(209, 23, 255));
+            }
+            .container {
+                background-image: linear-gradient(50deg, rgb(19, 26, 238), rgb(30, 237, 216));
+                border: inset rgb(209, 103, 103);
+                outline-style: solid;
+                outline-color: rgb(57, 250, 250);
+                outline-width: medium;
+            }
+        </style>
+        <center><h1 class="text-white">Marks Approximation</h1></center>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-4" id="inp">
+                    <input type="text" id="num1" /> <br />
+                    <input type="text" id="num2" /> <br />
+                    <input type="text" id="num3" /> <br />
+                    <input type="text" id="num4" /> <br />
+                    <input type="text" id="num5" /> <br />
+                    <input type="text" id="num6" /> <br />
+                    <input type="text" id="num7" /> <br />
+                    <input type="text" id="num8" /> <br />
+                    <input type="text" id="num9" /> <br />
+                    <input type="text" id="num10" /> <br />
+                    <button onclick="app()" class="btn btn-success">Get</button>
+                </div>
+                <div class="col">
+                    <p id="out" style="background-color: blanchedalmond"></p>
+                </div>
+            </div>
+        </div>
+        <script>
+            function app() {
+                var arr = [];
+                for (i = 0; i < 10; i++) {
+                    arr[i] = parseInt(document.getElementById(`num${i + 1}`).value);
+                    if (arr[i] > 80) {
+                        window.alert(`${i + 1}th value is in valid`);
+                    } else {
+                        arr[i] = apr(arr[i]);
+                    }
+                }
+                function apr(a) {
+                    a += a * 0.2;
+                    return a;
+                }
+                for (i = 0; i < 10; i++) {
+                    document.getElementById("out").innerHTML += `mark of subject ${i + 1} is: ${arr[i]} <br>`;
+                }
+            }
+        </script>
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

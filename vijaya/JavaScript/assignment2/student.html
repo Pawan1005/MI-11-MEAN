@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Student Result</title>
+        <style>
+            .name {
+                position: relative;
+                width: 500px;
+                background-color: rgba(88, 24, 206, 0.918);
+                padding: 10px 0px 5px 0px;
+                border-radius: 15px 15px 0px 0px;
+                color: white;
+                text-align: center;
+                margin-top: 40px;
+                margin-left: 430px;
+            }
+            .one {
+                background-color: rgb(213, 167, 250);
+                padding-bottom: 20px;
+            }
+        </style>
+        <script type="text/javascript">
+            function submit_marks() {
+                var sub1 = parseInt(document.getElementById("s1").value);
+                var sub2 = parseInt(document.getElementById("s2").value);
+                var sub3 = parseInt(document.getElementById("s3").value);
+                var sub4 = parseInt(document.getElementById("s4").value);
+                var sub5 = parseInt(document.getElementById("s5").value);
+                var sub6 = parseInt(document.getElementById("s6").value);
+                var total = sub1 + sub2 + sub3 + sub4 + sub5 + sub6;
+                var per = total / 6;
+                var grade;
+                if (per <= 30) {
+                    grade = "F";
+                } else if (per >= 31 && per <= 40) {
+                    grade = "D";
+                } else if (per >= 41 && per <= 60) {
+                    grade = "C";
+                } else if (per >= 61 && per <= 75) {
+                    grade = "B";
+                } else if (per >= 76 && per <= 100) {
+                    grade = "A";
+                } else {
+                    grade = "Invalid or Failed";
+                }
+                document.getElementById("demo").innerHTML =
+                    "Your Total Marks : " + total + "<br><br>Your Percentage : " + per + "<br><br>Your Grade : " + grade;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="name">
+            <h2>Student Result</h2>
+            <div class="one">
+                <hr style="color: white" />
+                <h3 style="color: rgb(207, 32, 149)">Enter Students Marks</h3>
+                <input type="text" id="s1" placeholder="Enter English Marks" /><br /><br />
+                <input type="text" id="s2" placeholder="Enter IT Marks" /><br /><br />
+                <input type="text" id="s3" placeholder="Enter OCM Marks" /><br /><br />
+                <input type="text" id="s4" placeholder="Enter Economics Marks" /><br /><br />
+                <input type="text" id="s5" placeholder="Enter Maths Marks" /><br /><br />
+                <input type="text" id="s6" placeholder="Enter Account Marks" /><br /><br />
+                <input type="submit" value="Result" style="background-color: chartreuse; height: 25px" onclick="submit_marks()" />
+                <br />
+                <div style="color: black; margin-top: 10px" id="demo"></div>
+            </div>
+        </div>
+    </body>
+</html>

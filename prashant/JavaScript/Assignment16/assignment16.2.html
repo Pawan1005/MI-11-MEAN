@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DOM | Q2</title>
+    </head>
+    <style>
+        .container {
+            padding: 50px 20%;
+        }
+        fieldset {
+            display: flex;
+            justify-content: center;
+            margin: 20px;
+        }
+        button {
+            padding: 10px 50px;
+            margin: 10px;
+            border-radius: 30px;
+        }
+    </style>
+    <body>
+        <div class="container">
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio consectetur nobis quam nesciunt! Ipsam distinctio illo molestiae ratione
+                reprehenderit perspiciatis maiores! Ipsum consectetur odio eaque neque vero quo fugiat iure ut numquam aut, magni minima quod mollitia nam
+                exercitationem porro tempore minus, eligendi obcaecati cupiditate veniam unde ratione sit ad?
+            </p>
+            <fieldset>
+                <legend>Colors</legend>
+                <button id="blue">Blue</button>
+                <button id="purple">Purple</button>
+                <button id="red">Red</button>
+            </fieldset>
+            <fieldset>
+                <legend>Size</legend>
+                <button id="first">24px</button>
+                <button id="second">32px</button>
+                <button id="third">10px</button>
+            </fieldset>
+            <fieldset>
+                <legend>Font</legend>
+                <button id="firstFont">Times New Roman</button>
+                <button id="secondFont">Georgia</button>
+                <button id="thirdFont">Courier New</button>
+            </fieldset>
+        </div>
+        <script>
+            let pRef = document.getElementsByTagName("p")[0];
+            document.getElementById("blue").onclick = () => {
+                pRef.style.color = "#3DB4F2";
+            };
+            document.getElementById("purple").onclick = () => {
+                pRef.style.color = "#C273FB";
+            };
+            document.getElementById("red").onclick = () => {
+                pRef.style.color = "#E24134";
+            };
+            document.getElementById("first").onclick = () => {
+                pRef.style.fontSize = "24px";
+            };
+            document.getElementById("second").onclick = () => {
+                pRef.style.fontSize = "32px";
+            };
+            document.getElementById("third").onclick = () => {
+                pRef.style.fontSize = "10px";
+            };
+            document.getElementById("firstFont").onclick = () => {
+                pRef.style.fontFamily = "Times New Roman";
+            };
+            document.getElementById("secondFont").onclick = () => {
+                pRef.style.fontFamily = "Georgia";
+            };
+            document.getElementById("thirdFont").onclick = () => {
+                pRef.style.fontFamily = "Courier New";
+            };
+        </script>
+    </body>
+</html>

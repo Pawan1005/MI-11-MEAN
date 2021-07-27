@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="all.css" />
+        <title>Assignment-1</title>
+        <script>
+            function fun() {
+                var array = [];
+                array[0] = document.getElementById("inp1").value;
+                array[1] = document.getElementById("inp2").value;
+                array[2] = document.getElementById("inp3").value;
+                array[3] = document.getElementById("inp4").value;
+                array[4] = document.getElementById("inp5").value;
+                for(var i=0; i<5;i++){
+                    j=i+1;
+                    document.getElementById("show").innerHTML +="Name :"+j+" " +array[i]+"\n";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div id="outside">
+            <h1>Print name with its number:</h1>
+            <input type="text" id="inp1" />
+            <input type="text" id="inp2" />
+            <input type="text" id="inp3" />
+            <input type="text" id="inp4" />
+            <input type="text" id="inp5" />
+            <button onclick="fun()">Click Me</button>
+            <textarea name="" id="show" cols="30" rows="10"></textarea>
+        </div>
+    </body>
+</html>

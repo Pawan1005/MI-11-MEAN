@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Assignment_17.css">
+        <title>Calculate Marks or Display Total, Percentage and Grade</title>
+    </head>
+    <body>
+        <h1>Calculate Marks or Display Total, Percentage and Grade</h1>
+        <div class="container">
+            <div class="main" id="main1">
+                <div class="textfield">
+                    <div class="field">
+                        <label for="">&nbsp;Roll No &nbsp;</label>
+                        <input type="text" id="firstnumber">
+                    </div>
+                    <div class="field">
+                        <label for="">&nbsp;Name &nbsp; &nbsp;&nbsp;</label>
+                        <input type="text" id="secondnumber">
+                    </div>
+                    <div class="field">
+                        <label for="">&nbsp;Maths &nbsp;&nbsp;&nbsp;&nbsp;</label>
+                        <input type="text" id="thirdnumber">
+                    </div>
+                    <div class="field">
+                        <label for="">&nbsp;Science &nbsp;&nbsp;</label>
+                        <input type="text" id="fourthnumber">
+                    </div>
+                    <div class="field">
+                        <label for="">&nbsp;History&nbsp;&nbsp;&nbsp;</label>
+                        <input type="text" id="fifthnumber">
+                    </div>
+                </div>
+                <div>
+                    <button id="btn1" onclick="calculate()">Calculate</button>
+                </div>
+            </div>
+            <div class="main" id="main2">
+                <div>
+                    <h2><span id="total_name" style="color: #e9e9e9;">REPORT CARD</span></h2>
+                </div>
+                <div class="display">
+                    <p>
+                        <span id="num1"></span><br><span id="num2"></span><br><span id="num3"></span><br><span id="num4"></span><br><span id="num5"></span><br><Br><span id="num6" class="num"></span><br><span id="num7" class="num"></span><br><span id="num8" class="num"></span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <script>
+            function calculate() {
+                class Student {
+                    constructor() {
+                        this.RollNo = 0;
+                        this.Name = "";
+                        this.Maths = 0;
+                        this.Science = 0;
+                        this.History = 0;
+                    }
+                    read(RollNo, Name, Maths, Science, History) {
+                        this.RollNo = RollNo;
+                        this.Name = Name;
+                        this.Maths = Maths;
+                        this.Science = Science;
+                        this.History = History;
+                    }
+                    calculate() {
+                        this.total = this.Maths + this.Science + this.History;
+                        this.percentage = parseInt((this.total / 300) * 100);
+                        if (this.percentage >= 80) {
+                            this.grade = "A+";
+                        } else if (this.percentage < 80 && this.percentage >= 60) {
+                            this.grade = "A";
+                        } else if (this.percentage < 60 && this.percentage >= 55) {
+                            this.grade = "B+";
+                        } else if (this.percentage < 55 && this.percentage >= 40) {
+                            this.grade = "B";
+                        } else {
+                            this.grade = "No Grade  ";
+                        }
+                    }
+                    display() {
+                        if (this.grade == "A+" || this.grade == "A") {
+                            num8.style = "color: #0b751d;";
+                        } else if (this.grade == "B+" || this.grade == "B") {
+                            num8.style = "color: #bb9b0b;";
+                        } else {
+                            num8.style = "color: #FF0000;";
+                        }
+                        document.getElementById("num1").innerHTML += "Roll No : " +this.RollNo;
+                        document.getElementById("num2").innerHTML += "Name : " +this.Name;
+                        document.getElementById("num3").innerHTML += "Math : " +this.Maths;
+                        document.getElementById("num4").innerHTML += "Science : " +this.Science;
+                        document.getElementById("num5").innerHTML += "Total : " +this.History;
+                        document.getElementById("num6").innerHTML += "Total : " +this.total;
+                        document.getElementById("num7").innerHTML += "Percentage : " +this.percentage;
+                        document.getElementById("num8").innerHTML += "Grade : " +this.grade;
+                        num6.style = "color: #e9e9e9;";
+                        num7.style = "color: #e9e9e9 ;";
+                    }
+                }
+                let s1 = new Student();
+                let RollNo = document.getElementById("firstnumber").value;
+                let Name = document.getElementById("secondnumber").value.toUpperCase();
+                let Maths = parseInt(document.getElementById("thirdnumber").value);
+                let Science = parseInt(document.getElementById("fourthnumber").value);
+                let History = parseInt(document.getElementById("fifthnumber").value);
+                if (isNaN(Maths) || isNaN(Science) || isNaN(History)) {
+                    alert("Enter numbers only !!!");
+                } else {
+                    s1.read(RollNo, Name, Maths, Science, History);
+                    s1.calculate();
+                    s1.display();
+                }
+            }
+        </script>
+    </body>
+</html>

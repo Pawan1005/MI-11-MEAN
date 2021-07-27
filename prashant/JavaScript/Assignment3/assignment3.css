@@ -1,0 +1,43 @@
+.container {
+    margin-top: 50px;
+}
+.ass {
+    margin: 0 0 0 200px;
+    width: 90%;
+    height: 100vh;
+}
+.input-grp {
+    width: 60%;
+    height: 35px;
+    margin-top: 20px;
+    border: 2px solid black;
+    padding: 20px;
+    margin: 20px;
+}
+.btn {
+    width: 200px;
+    height: 35px;
+    border: 1px solid black;
+    background-color: bluE;
+    color: white;
+}
+.btn-grp {
+    width: 150px;
+    height: 35px;
+    background-color: bluE;
+    color: white;
+    margin-left: 20px;
+}
+p {
+    font-size: 25px;
+    color: blues;
+    margin-left: 60px;
+}
+#pattern {
+    margin-left: 60px;
+}
+h1{
+    text-align: center;
+    padding: 50px;
+    color: bluE;
+}

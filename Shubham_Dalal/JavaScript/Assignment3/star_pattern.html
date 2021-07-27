@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Star Pattern</title>
+        <link rel="stylesheet" href="common.css" />
+        <script>
+            function fun() {
+                var row, column;
+                var count = "";
+
+                row = parseInt(document.getElementById("row").value);
+                column = parseInt(document.getElementById("column").value);
+                for (var i = 1; i <= row; i++) {
+                    for (var j = 1; j <= column; j++) {
+                        count += "*";
+                    }
+                    count += "</br>";
+                }
+                parseInt((document.getElementById("hid").innerHTML = count));
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <input type="number" id="row" />
+            <input type="number" id="column" style="margin-top: 10px" />
+            <button onclick="fun()">Click here</button>
+            <h2 id="hid" style="color: white"></h2>
+        </div>
+    </body>
+</html>

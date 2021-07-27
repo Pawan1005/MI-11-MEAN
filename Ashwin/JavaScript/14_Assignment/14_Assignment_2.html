@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="14_Assignment_2.js"></script>
+        <title>Bank Class</title>
+        <style>
+            h4 > span:nth-child(1) {
+                color: red;
+            }
+            h4 > span:last-child {
+                color: rgb(2, 133, 209);
+            }
+            button {
+                padding: 8px;
+                border: none;
+                background-color: rgb(0, 153, 255);
+                color: white;
+                font-family: "Times New Roman", Times, serif;
+                font-weight: 700;
+                font-size: 15px;
+            }
+            table,
+            td,
+            th {
+                border: 1px solid blueviolet;
+                border-collapse: collapse;
+            }
+            th,
+            td {
+                text-align: center;
+                padding: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Bank Details</h1>
+        <h4>
+            Click on <span>Get Button</span>,
+            <span>Enter Person Bank Details</span>
+        </h4>
+        <h4>
+            Click on <span>Deposit Button</span>,
+            <span>Deposit amount into the your Bank account</span>
+        </h4>
+        <h4>
+            Click on <span>Withdraw Button</span>,
+            <span>Withdraw amount from your Bank account</span>
+        </h4>
+        <h4>
+            Click on <span>Display Button</span>,
+            <span>Display the Whole Bank Details</span>
+        </h4>
+        <button type="button" onclick="getBankData()">Get</button>
+        <button type="button" onclick="depositAmount()">Deposit</button>
+        <button type="button" onclick="withdrawAmount()">Withdraw</button>
+        <button type="button" onclick="displayDetails()">Display</button>
+        <p id="errorMessage"></p>
+        <p id="warningMessage"></p>
+        <table style="display: none" id="table">
+            <thead>
+                <tr>
+                    <th>SrNo.</th>
+                    <th>Acc_No</th>
+                    <th>Name</th>
+                    <th>Balance</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </body>
+</html>

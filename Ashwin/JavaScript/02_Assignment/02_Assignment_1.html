@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Grade Calculator</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"/>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"/>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><script>
+            function fun() {
+                first = parseInt(document.getElementById("input1").value);
+                second = parseInt(document.getElementById("input2").value);
+                third = parseInt(document.getElementById("input3").value);
+                fourth = parseInt(document.getElementById("input4").value);
+                fifth = parseInt(document.getElementById("input5").value);
+                total = first + second + third + fourth + fifth;
+                percentage = total / 5;
+                if (percentage >= 75 && percentage <= 100) {
+                    document.getElementById("h").innerHTML = "Congratulation You are passed!!!";
+                    parseInt((document.getElementById("pid").innerHTML = "Your Percentage is " + "<h2>" + percentage + "</h2>"));
+                    document.getElementById("pid2").innerHTML = "You are passed with Grade  <h2>A</h2>";
+                } else if (percentage >= 60 && percentage <= 74) {
+                    document.getElementById("h").innerHTML = "Congratulation You are passed!!!";
+                    parseInt((document.getElementById("pid").innerHTML = "Your Percentage is " + "<h2>" + percentage + "</h2>"));
+                    document.getElementById("pid2").innerHTML = "You are passed with Grade  <h2>B</h2>";
+                } else if (percentage >= 40 && percentage <= 59) {
+                    document.getElementById("h").innerHTML = "Congratulation You are passed!!!";
+                    parseInt((document.getElementById("pid").innerHTML = "Your Percentage is " + "<h2>" + percentage + "</h2>"));
+                    document.getElementById("pid2").innerHTML = "You are passed with Grade  <h2>C</h2>";
+                } else if (percentage >= 30 && percentage <= 39) {
+                    document.getElementById("h").innerHTML = "Congratulation You are passed!!!";
+                    parseInt((document.getElementById("pid").innerHTML = "Your Percentage is " + "<h2>" + percentage  +  "</h2>"));
+                    document.getElementById("pid2").innerHTML = "You are passed with Grade  <h2>D</h2>";
+                } else {
+                    document.getElementById("h").innerHTML = "You are Failed!!!";
+                    parseInt((document.getElementById("pid").innerHTML = "Your Percentage is " + "<h2>" + percentage + "</h2>"));
+                    document.getElementById("pid2").innerHTML = "You are Failed with Grade  <h2>F</h2>";
+                }
+            }
+        </script>
+        <style>
+            .box {
+                height: 700px;
+                width: 600px;
+                border: 1px solid black;
+                background-image: url("Images/Minimalist-Crumpled-Paper-Simple-Background-Image.jpg");
+                margin-top: 150px;
+            }
+            button {
+                margin-top: 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4 box">
+                    <h1 class="ml-5">Grade Calculator</h1>
+                    English<input type="text" class="form-control" id="input1" placeholder="Enter your English Marks" />
+                    Hindi<input type="text" class="form-control" id="input2" placeholder="Enter your Hindi Marks"/>
+                    Maths<input type="text" class="form-control" id="input3" placeholder="Enter your Math Marks" />
+                    Physics<input type="text" class="form-control" id="input4" placeholder="Enter your Physics Marks"/>
+                    Chemistry<input type="text" class="form-control" id="input5" placeholder="Enter your Chemistry Marks" />
+                    <button onclick="fun()" class="btn-success form-control">Result</button>
+                    <h1 id="h" style="align-self: center"></h1>
+                    <p id="pid"></p>
+                    <p id="pid2"></p>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+        </div>
+    </body>
+</html>

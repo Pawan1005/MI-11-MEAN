@@ -1,0 +1,22 @@
+.container {
+    width: 100%;
+    height: auto;
+    background-color: rgb(194, 84, 152);
+    border: solid 2px red;
+    
+}
+img{
+    float: right;
+}
+.ImageMain {
+    display: flex;
+    justify-content:stretch;
+}
+.ImageMain  img {
+    width: 250px;
+    height: 250px;
+    box-shadow: 5px 10px 8px 5px #888888;
+}
+.ImageMain  img, .ImageMain p {
+    padding: 40px 150px;
+}

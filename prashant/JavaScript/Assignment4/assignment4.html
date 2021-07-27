@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <title>Assignment4</title>
+        <link rel="stylesheet" href="./style.css" />
+        <style>
+            .container {
+                height: fit-content;
+                border: 1px solid black;
+                margin-top: 50px;
+            }
+            .ass {
+                margin: 0 0 0 200px;
+                width: 90%;
+                height: 100vh;
+            }
+            .input-grp , #textOut {
+                width: 60%;
+                height: 35px;
+                margin-top: 20px;
+                border: 2px solid black;
+                padding: 20px;
+                margin: 20px;
+            }
+            .btn {
+                width: 200px;
+                height: 35px;
+                border: 1px solid black;
+                background-color: bluE;
+                color: white;
+            }
+            p {
+                font-size: 25px;
+                color: blue;
+                margin-left: 60px;
+            }
+            h1 {
+                text-align: center;
+                padding: 50px;
+                color: bluE;
+            }
+        </style>
+        <script>
+            function amstrong() {
+                let number = parseInt(document.getElementById("input").value),
+                    originalNum = number,
+                    n = 0,
+                    result = 0;
+                while (originalNum > 0) {
+                    originalNum = parseInt(originalNum / 10);
+                    n++;
+                }
+                originalNum = number;
+                while (originalNum > 0) {
+                    let remainder = originalNum % 10;
+                    result += remainder ** n;
+                    originalNum = parseInt(originalNum / 10);
+                }
+                if (number == result) {
+                    document.getElementById("p").innerHTML = "It is Amstrong Number";
+                } else {
+                    document.getElementById("p").innerHTML = "It is not a Amstrong Number";
+                }
+            }
+            function Automarphic() {
+                let number = parseInt(document.getElementById("input1").value),
+                    square = number ** 2,
+                    remainder = square % 10;
+                if (number == remainder) {
+                    document.getElementById("pid").innerHTML = "It is Automarphic Number";
+                } else {
+                    document.getElementById("pid").innerHTML = "It is Not a Automarphic Number";
+                }
+            }
+            function Krishnamurthy() {
+                let number = parseInt(document.getElementById("input2").value),
+                    originalNum = number,
+                    result = 0;
+                while (originalNum > 0) {
+                    let remainder = originalNum % 10;
+                    result += factorial(remainder);
+                    originalNum = parseInt(originalNum / 10);
+                }
+                if (number == result) {
+                    document.getElementById("pid1").innerHTML = "It is KrishnamurthyNumber";
+                } else {
+                    document.getElementById("pid1").innerHTML = "It is not a KrishnamurthyNumber";
+                }
+            }
+            function factorial(n) {
+                if (n == 0) return 1;
+                return n * factorial(n - 1);
+            }
+            function checkVowel() {
+                let letter = document.getElementById("input3").value,
+                    flag;
+                switch (letter.toLowerCase()) {
+                    case "a":
+                        flag = true;
+                        break;
+                    case "e":
+                        flag = true;
+                        break;
+                    case "i":
+                        flag = true;
+                        break;
+                    case "o":
+                        flag = true;
+                        break;
+                    case "u":
+                        flag = true;
+                        break;
+                    default:
+                        flag = false;
+                        break;
+                }
+                if (flag) {
+                    document.getElementById("pid2").innerHTML = "This is Vowel";
+                } else {
+                    document.getElementById("pid2").innerHTML = "This is not a vowel";
+                }
+            }
+            function leCase() {
+                let str = document.getElementById("input4").value;
+                for (let i = 0; i < str.length; i++) {
+                    if (str.charAt(i) != str.charAt(i).toLowerCase()) {
+                        str = str.replace(str.charAt(i), str.charAt(i).toLowerCase());
+                    } else {
+                        str = str.replace(str.charAt(i), str.charAt(i).toUpperCase());
+                    }
+                }
+                document.getElementById("textOut").value = str;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Assignment 4</h1>
+            <div class="ass">
+                <input type="text" placeholder="Enter Number" id="input" class="input-grp" />
+                <button onclick="amstrong()" class="btn">Amstrong Number</button>
+                <p id="p"></p>
+                <input type="text" placeholder="Enter Number" id="input1" class="input-grp" />
+                <button onclick="Automarphic()" class="btn">Automarphic</button>
+                <p id="pid"></p>
+                <input type="text" placeholder="Enter Number" id="input2" class="input-grp" />
+                <button onclick="Krishnamurthy()" class="btn">Krishnamurthy</button>
+                <p id="pid1"></p>
+                <input type="text" placeholder="Enter letter" id="input3" class="input-grp" />
+                <button onclick="checkVowel()" class="btn">checkVowel</button>
+                <p id="pid2"></p>
+                <input type="text" placeholder="Enter " id="input4" class="input-grp" />
+                <button onclick="leCase()" class="btn">Convert</button>
+                <input type="text" id="textOut" />
+                <p id="pid3"></p>
+            </div>
+        </div>
+    </body>
+</html>

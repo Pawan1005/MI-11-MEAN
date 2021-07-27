@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Assigment6</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <style>
+            body,
+            html {
+                height: 100%;
+                margin: 0;
+            }
+            .bg {
+                background-image: url("jobportal.png");
+                height: 100%;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-size: cover;
+            }
+            .cont {
+                color: white;
+            }
+            .h1 {
+                font-size: 3px;
+            }
+            .container {
+                margin-left: 450px;
+                background-color: rgb(196, 198, 204);
+                width: 350px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="bg">
+            <h1><b>Job Portal</b></h1>
+            <div class="cont">
+                <nav class="navbar navbar-expand-sm bg-primary navbar-dark" style="text-align: center">
+                    <ul class="navbar-nav" style="text-align: center">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="">Home</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="academicdetails">Academic Detailes</a>
+                        </li>
+                        <li class="nav-item active">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+            <br />
+            <div class="container">
+                <h3><b>Personal Details</b></h3>
+                <form>
+                    <label for="first nam"><b>First Name:</b></label>
+                    <input type="text" id="first nam" name="first name" /><br /><br />
+                    <label for="last name"><b>Last Name:</b></label>
+                    <input type="text" id="last name" name="last name" /><br /><br />
+                    <label for="email"><b>Email Id:</b></label>
+                    <input type="text" id="email" name="email" /><br /><br />
+                    <lable for="gender"><b>Gender:</b></lable>
+                    <input type="radio" id="Male" name="gender" value="male" />
+                    <label for="male">Male</label>
+                    <input type="radio" id="Female" name="gender" value="Female" />
+                    <lable for="Female">Female</lable>
+                    <input type="radio" id="other" name="gender" value="other" />
+                    <lable for="other">other</lable><br /><br />
+                    <h3><b>Academic Details</b></h3>
+                    <label for="Highest Qualification"><b>Highest Qualification</b></label
+                    ><br />
+                    <input type="text" id="Qualification" name="Qualification" /><br />
+                    <label for="cgpa">CGPA</label>
+                    <input type="text" id="Highest Qualification" name="Highest Qualification" /><br />
+                    <label for="skill"><b>Skill Set:</b></label>
+                    <input type="checkbox" id="html" name="=html" value="html" />
+                    <label for="age">HTML</label>
+                    <input type="checkbox" id="javascript" name="=javascript" value="javascript" />
+                    <label for="skill">Java Script</label>
+                    <input type="checkbox" id="java" name="=java" value="java" />
+                    <label for="age">Java</label>
+                    <input type="checkbox" id="skillset" name="oracle" value="oracle" />
+                    <label for="age">Oracle</label><br /><br />
+                    <button type="submit" class="btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

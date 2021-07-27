@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="ams.css" />
+        <title>Check vowel</title>
+        <script>
+            function fun() {
+                var character, len, number;
+                character = document.getElementById("vowel").value;
+                len = character.length;
+                number = parseInt(character);
+                if (number || 0 == number) {
+                    document.getElementById("hid").innerHTML = "Accept only character";
+                } else if (len > 1) {
+                    document.getElementById("hid").innerHTML = "Accept single character only";
+                } else {
+                    switch (character.toUpperCase()) {
+                        case "A":
+                            document.getElementById("hid").innerHTML = character;
+                            document.getElementById("hid1").innerHTML = " This is Vowel ";
+                            break;
+                        case "E":
+                            document.getElementById("hid").innerHTML = character;
+                            document.getElementById("hid1").innerHTML = " This is Vowel ";
+                            break;
+                        case "I":
+                            document.getElementById("hid").innerHTML = character;
+                            document.getElementById("hid1").innerHTML = " This is Vowel ";
+                            break;
+                        case "O":
+                            document.getElementById("hid").innerHTML = character;
+                            document.getElementById("hid1").innerHTML = " This is Vowel ";
+                            break;
+                        case "U":
+                            document.getElementById("hid").innerHTML = character;
+                            document.getElementById("hid1").innerHTML = " This is Vowel ";
+                            break;
+                        default:
+                            document.getElementById("hid").innerHTML = character;
+                            document.getElementById("hid1").innerHTML = "This character is  Consonent ";
+                            break;
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h2>!!! Checking the character is vowel or not!!!</h2>
+            <h3>Enter any character (" __ ")</h3>
+            <input type="text" name="" id="vowel" placeholder="enter number " />
+            <button onclick="fun()">Click here</button>
+            <h2 id="hid"></h2>
+            <h2 id="hid1"></h2>
+        </div>
+    </body>
+</html>

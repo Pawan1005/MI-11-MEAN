@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            function left() {
+                let h = (document.getElementById("head").style.left = "0%");
+            }
+            function center() {
+                let h = (document.getElementById("head").style.left = "40%");
+            }
+            function right() {
+                let h = (document.getElementById("head").style.left = "90%");
+            }
+        </script>
+        <style>
+            #head {
+                position: absolute;
+                left: 40%;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="head">Mubeen</h1>
+        <br /><br /><br />
+        <button onclick="left()">left</button>
+        <button onclick="center()">center</button>
+        <button onclick="right()">right</button>
+    </body>
+</html>

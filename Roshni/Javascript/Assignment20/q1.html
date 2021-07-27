@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assign20_Q1</title>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <h1>Add New Row</h1>
+                <table id="tab">
+                    <tr>
+                        <th>Roll No</th>
+                        <th>Name</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Oshin</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Roshni</td>
+                    </tr>
+                </table>
+                <br /><br />
+                <button class="btn" onclick="new1()">Add</button>
+            </div>
+        </div>
+        <script>
+            function new1() {
+                let table = document.getElementById("tab");
+                let row = table.insertRow();
+                let col1 = row.insertCell();
+                let col2 = row.insertCell();
+                col1.textContent = 3;
+                col2.textContent = "xyz";
+            }
+        </script>
+    </body>
+</html>

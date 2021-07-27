@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Automorphic</title>
+        <style>
+            body {
+                height: 1000px;
+                background-image: linear-gradient(rgba(247, 163, 7, 0.74), rgba(247, 163, 7, 0.363), rgba(247, 163, 7, 0.575));
+            }
+        </style>
+    </head>
+    <body>
+        <script language="javascript">
+            function show() {
+                var no, temp, rem;
+                no = parseInt(document.getElementById("num1").value);
+                temp = no * no;
+                rem = temp % 10;
+                if (no == rem) {
+                    document.getElementById("pid").innerHTML += no + " is an Automorphic number.";
+                } else {
+                    document.getElementById("pid").innerHTML += no + " is not an Automorphic number.";
+                }
+            }
+        </script>
+        <div style="width: 50%; position: absolute; left: 500px; top: 200px">
+            <div style="text-align: center; background-color: rgba(231, 112, 15, 0.747); border-radius: 25px 25px 25px 25px">
+                <br /><br />
+                <h1>Automorphic Number</h1>
+                <hr size="5" color="black" />
+                <br /><br />
+                Enter number : <input type="text" id="num1" />
+                <button onclick="show()">Result</button>
+                <br />
+                <p id="pid" style="color: blue"></p>
+                <br /><br />
+            </div>
+        </div>
+    </body>
+</html>

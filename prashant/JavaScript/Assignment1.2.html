@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <title>Assignment 1.2 | Js </title>
+        <style>
+            body {
+                background-color: blueviolet;
+            }
+        </style>
+        <script>
+            function temperatureConverter(valNum) {
+                valNum = parseFloat(valNum);
+                document.getElementById("outputFahrenheit").innerHTML=(valNum*1.8)+32;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+           <div class="row" style="margin-left: 260px; margin-top: 180px;">
+                <div class="card" style="background-image: url(backup.jpg); width: 600px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                    <h5 style="text-align:center; margin-top: 30px;">Conversion of Celcius to Fahrenheit</h5>
+                    <div class="card-body">
+                        <p>        
+                            <label>Temp : </label>
+                            <input id="inputFahrenheit" type="text" style="margin-left: 60px;" placeholder="" oninput="temperatureConverter(this.value)" onchange="temperatureConverter(this.value)">°C
+                        </p>
+                        <p>Fahrenheit : 
+                            <span id="outputFahrenheit" style="margin-left: 80px;"></span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

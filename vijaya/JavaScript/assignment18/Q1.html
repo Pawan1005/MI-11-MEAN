@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment 18</title>
+        <style>
+            h1 {
+                text-align: center;
+                color:rgb(7, 153, 19);      
+                margin-top: 2%;
+            }
+            body {
+                display: flex;
+                justify-content: center;
+                background-color: rgb(112, 6, 59);
+            }
+            .container {
+                background-color: rgb(252, 236, 184);
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                padding: 20px;
+                border: 1px solid;
+                width: 20%;
+                margin-top: 130px;
+                margin-left: 15px;
+                gap: 5px;
+            }
+            input {
+                margin: 10px 0;
+            }
+            button {
+                margin: 10px 0;
+            }
+            select {
+                width: 70%;
+                margin: 20px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Even Odd</h1>
+            <label for="num">Enter a number</label>
+            <input type="text" name="num" id="num" />
+            <div>
+                <p>It is <span id="evenodd"></span></p>
+            </div>
+            <button onclick="oddEven()">Even/Odd</button>
+        </div>
+        <div class="container">
+            <h1>Voter</h1>
+            <label for="name">Enter a Name</label>
+            <input type="text" />
+            <label for="num">Enter a age</label>
+            <input type="text" name="age" id="age" />
+            <div>
+                <p><span id="vote"></span></p>
+            </div>
+            <button onclick="voter()">Show</button>
+        </div>
+        <div class="container">
+            <h1>Shopping</h1>
+            <label for="amt">Enter a Shopping amount</label>
+            <input type="text" name="amt" id="amt" />
+            <button onclick="discount()">Calculate</button>
+            <div id="res"></div>
+        </div>
+        <div class="container">
+            <h1>Country</h1>
+            <label for="country">Country</label>
+            <select name="country" id="country">
+                <option value="0">India</option>
+                <option value="1">Australia</option>
+                <option value="2">Brazil</option>
+                <option value="3">Canada</option>
+                <option value="4">Sri Lanka</option>
+                <option value="5">Germany</option>
+            </select>
+            <label for="capital">Capital </label>
+            <select name="capital" id="capital">
+                <option value="0">New Delhi</option>
+                <option value="1">Canberra</option>
+                <option value="2">Brasilia</option>
+                <option value="3">Ottawa</option>
+                <option value="4">Colombo</option>
+                <option value="5">Berlin</option>
+            </select>
+        </div>
+        <script>
+            function oddEven() {
+                let num = parseInt(document.getElementById("num").value);
+                if (isNaN(num)) {
+                    alert("Enter a Proper number");
+                } else {
+                    if (num % 2 == 0) {
+                        document.getElementById("evenodd").innerHTML = '<span style="color: red;">EVEN</span>';
+                    } else {
+                        document.getElementById("evenodd").innerHTML ='<span style="color: red;">ODD</span>';
+                    }
+                }
+            }
+            function voter() {
+                let age = parseInt(document.getElementById("age").value);
+                if (age >= 18) {
+                    document.getElementById("vote").innerHTML ='<span style="color: red;">eligible to Vote</span>';
+                } else {
+                    document.getElementById("vote").innerHTML = `<span style="color: red;">not eligible to Vote</span>`;
+                }
+            }
+            function discount() {
+                var amount, total;
+                amount = parseInt(document.getElementById("amt").value);
+                if (amount > 1000) {
+                    total = amount - parseInt((amount * 15) / 100);
+                    document.getElementById("res").innerHTML = total;
+                } else {
+                    total = amount - parseInt((amount * 5) / 100);
+                    document.getElementById("res").innerHTML = total;
+                }
+            }
+
+            let countrySel = document.getElementById("country");
+            let capital = document.getElementById("capital");
+            countrySel.onchange = () => {
+                capital.selectedIndex = countrySel.selectedIndex;
+            };
+        </script>
+    </body>
+</html>

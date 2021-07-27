@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Prime no</title>
+        <style>
+            .container {
+                background-color: rgb(204, 0, 255);
+                width: 500px;
+            }
+            #pid {
+                color: greenyellow;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="cardbox">
+            <div class="container">
+                <div class="card">
+                    <div class="box">
+                        <h1>Prime no</h1>
+                        <label for="Num1">Enter Number :</label>
+                        <input type="text" id="num1" />
+                        <button onclick="prime()">Check Prime no</button>
+                        <p id="pid"></p>
+                    </div>
+
+                    <script>
+                        function prime() {
+                            var a = parseInt(document.getElementById("num1").value);
+                            var b = 0;
+
+                            for (i = 2; i < a; i++)
+                                if (a % i == 0) {
+                                    b = 1;
+                                }
+                            if (b == 0) {
+                                document.getElementById("pid").innerHTML = "<h2>This is prime no</h2>";
+                            } else {
+                                document.getElementById("pid").innerHTML = "<h2>This is not prime no</h2>";
+                            }
+                        }
+                    </script>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

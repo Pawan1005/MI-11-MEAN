@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Change Value in Table Accept Row and Column</title>
+        <style>
+            h1 {
+                text-align: center;
+                color:white;      
+                margin-top: 3%;
+            }
+            body {
+                background-color:  rgb(124, 9, 44);
+            }
+            .name {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: rgb(177, 164, 52);
+                padding-top: 20px;
+                width: 450px;
+                height:430px;
+                margin: auto;
+                font-size: 16px;
+                gap: 8px;
+                border-radius: 10px;
+                border: 3px solid rgb(122, 110, 1);
+            } 
+            .display1 {
+                width: 50%;
+                gap: 22px;
+                color: rgb(3, 124, 3);
+                font-weight: bold;
+            }
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 8px;
+                background-color: white;
+            }
+            th, td {
+                min-width: 70px;
+            }
+            th {
+                color: #ffffff;
+                background-color: rgba(206, 44, 238, 0.837);
+            }
+            button {
+                background-color: rgba(206, 44, 238, 0.837);
+                color: white;
+                padding: 7px 11px;
+                margin: 0 8px;
+                font-weight: bold;
+                font-size: 17px;
+                border: 1px solid rgb(109, 109, 109);
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Change Value in Table Accept Row and Column</h1>
+        <div class="name">
+            <table id="table1">
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                    <th>Data</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>abc</td>
+                    <td>abc</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>xyz</td>
+                    <td>abc</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>abc</td>
+                    <td>abc</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>xyz</td>
+                    <td>abc</td>
+                </tr>
+            </table>
+            <br>
+            <div class="display1">
+                Row <input type="text" id="first"><br><br>
+                Col<input type="text" id="second"><br><br>
+                Change Value<input type="text" id="third">
+            </div>
+            <br>
+            <button class="btn1" onclick="changeValue()">Change</button>
+        </div>       
+        <script>
+            function changeValue() {
+                let row = document.getElementById("first").value;
+                let col = document.getElementById("second").value;
+                let value = document.getElementById("third").value;
+                let table = document.getElementById("table1");
+                let acceptRow = table.getElementsByTagName("tr")[row];
+                let acceptCol = acceptRow.getElementsByTagName("td")[--col];
+                acceptCol.textContent = value;
+            }
+        </script>
+    </body>
+</html>

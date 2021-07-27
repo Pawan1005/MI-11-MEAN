@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assign18_Q4</title>
+        <style>
+            .flex-container {
+                border: 1px solid black;
+                padding: 30px;
+                width: 400px;
+                position: absolute;
+                left: 30%;
+                display: flex;
+            }
+            .gap {
+                margin: 10px;
+            }
+        </style>
+    </head>
+    <body style="background-color: thistle;">
+        <h1 style="text-align: center; color: purple;">Country and its Capital</h1>
+        <div class="flex-container">
+            <div class="gap">
+                Country <br /><br />
+                <select onchange="Cap()" name="" id="coun">
+                    <option value="India">India</option>
+                    <option value="Belgium">Belgium</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="UAE">UAE</option>
+                    <option value="Canada">Canada</option>
+                </select>
+                <br />
+            </div>
+            <div class="gap">
+                Capital <br /><br />
+                <select name="" id="cap">
+                    <option value="Delhi">Delhi</option>
+                    <option value="Brussels">Brussels</option>
+                    <option value="Brasilia">Brasilia</option>
+                    <option value="Abu Dhabi">Abu Dhabi</option>
+                    <option value="Ottawa">Ottawa</option>
+                </select>
+            </div>
+        </div>
+        <script>
+            function Cap(n) {
+                let a = document.getElementById("coun").value;
+                let b = document.getElementById("cap");
+                switch (a) {
+                    case "India":
+                        b.value = "Delhi";
+                        break;
+                    case "Belgium":
+                        b.value = "Brussels";
+                        break;
+                    case "UAE":
+                        b.value = "Abu Dhabi";
+                        break;
+                    case "Canada":
+                        b.value = "Ottawa";
+                        break;
+                }
+            }
+        </script>
+    </body>
+</html>
