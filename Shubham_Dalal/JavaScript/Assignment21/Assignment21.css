@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(210, 38, 38);
+    color: white;
+    display: flex;
+    justify-content: center;
+}
+.div1{
+    display: flex;
+    justify-content: center;
+}
+.input{
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+}
+form{
+    height: fit-content;
+    width: fit-content;
+    border-radius: 20px ;
+    padding: 10px 30px;
+    box-shadow: 5px 5px 10px rgb(249, 100, 100),
+    -5px -5px 10px rgb(225, 95, 95);
+}
+.btn1{
+    padding: 5px 10px;
+    color: wheat;
+    background-color: rgb(106, 72, 89);
+    border-radius: 5px;
+    border: 0ch;
+    box-shadow: 5px 5px 10px rgb(189, 81, 81),
+    -5px -5px 10px rgb(181, 82, 82);
+}
+.inp{
+    background-color: burlywood;
+}
