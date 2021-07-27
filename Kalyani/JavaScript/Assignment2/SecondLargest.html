@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>LargestNumber</title>
+        <link rel="stylesheet" href="./style.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+         crossorigin="anonymous" 
+         />
+        <script>
+            function show() {
+                num1 = parseInt(document.getElementById("input1").value);
+                num2 = parseInt(document.getElementById("input2").value);
+                num3 = parseInt(document.getElementById("input3").value);
+                num4 = parseInt(document.getElementById("input4").value);
+                num5 = parseInt(document.getElementById("input5").value);
+                if (num1 > num2 && num1 > num3 && num1 > num4 && num1 > num5) {
+                    if (num2 > num3 && num2 > num4 && num2 > num5) {
+                        document.getElementById("p").innerHTML = "Second Largest number is:" + num2;
+                    } else if (num2 < num3 && num3 > num4 && num3 > num5) {
+                        document.getElementById("p").innerHTML = "Second Largest number is:" + num3;
+                    } else if (num4 > num2 && num4 > num3 && num4 > num5) {
+                        document.getElementById("p").innerHTML = "Second Largest number is:" + num4;
+                    } else {
+                        document.getElementById("p").innerHTML = "Second Largest number is:" + num5;
+                    }
+                }
+                if (num2 > num1 && num2 > num3 && num2 > num4 && num2 > num5) {
+                    if (num1 > num3 && num1 > num4 && num1 > num5) {
+                        document.getElementById("p").innerHTML = "Second Largest number is:" + num1;
+                    } else if (num1 < num3 && num3 > num4 && num3 > num5) {
+                        document.getElementById("p").innerHTML = "Second Largest number is:" + num3;
+                    } else if (num4 > num1 && num4 > num3 && num4 > num5) {
+                        document.getElementById("p").innerHTML = "Second Largest number is:" + num4;
+                    } else {
+                        document.getElementById("p").innerHTML = "Second Largest number is:" + num5;
+                    }
+                }
+                if (num3 > num1 && num3 > num2 && num3 > num4 && num3 > num5) {
+                    if (num1 > num2 && num1 > num4 && num1 > num5) {
+                        document.getElementById("p").innerHTML = "Second Largest number is:" + num1;
+                    } else if (num1 < num2 && num2 > num4 && num2 > num5) {
+                        document.getElementById("p").innerHTML = "Second Largest number is:" + num2;
+                    } else if (num4 > num2 && num4 > num1 && num4 > num5) {
+                        document.getElementById("p").innerHTML = "Second Largest number is:" + num4;
+                    } else {
+                        document.getElementById("p").innerHTML = "Second Largest number is:" + num5;
+                    }
+                }
+                if (num1 < num4 && num2 < num4 && num3 < num4 && num4 > num5) {
+                    if (num1 > num2 && num1 > num3 && num1 > num5) {
+                        document.getElementById("p").innerHTML = "Second Largest number is:" + num1;
+                    } else if (num1 < num2 && num2 > num3 && num2 > num5) {
+                        document.getElementById("p").innerHTML = "Second Largest number is:" + num2;
+                    } else if (num3 > num2 && num3 > num1 && num3 > num5) {
+                        document.getElementById("p").innerHTML = "Second Largest number is:" + num3;
+                    } else {
+                        document.getElementById("p").innerHTML = "Second Largest number is:" + num5;
+                    }
+                }
+                if (num1 < num5 && num2 < num5 && num5 > num4 && num3 < num5) {
+                    if (num1 > num2 && num1 > num4 && num1 > num3) {
+                        document.getElementById("p").innerHTML = "Second Largest number is:" + num1;
+                    } else if (num1 < num2 && num2 > num4 && num2 > num3) {
+                        document.getElementById("p").innerHTML = "Second Largest number is:" + num2;
+                    } else if (num4 > num2 && num4 > num1 && num4 > num3) {
+                        document.getElementById("p").innerHTML = "Second Largest number is:" + num4;
+                    } else {
+                        document.getElementById("p").innerHTML = "Second Largest number is:" + num3;
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <form>
+                <div class="row">
+                    <div class="col">
+                        First Number<input type="text" class="form-control" placeholder="num1" id="input1" /><br />
+                        Second Number<input type="text" class="form-control" placeholder="num2" id="input2" /><br />
+                        Third Number<input type="text" class="form-control" placeholder="num3" id="input3" /><br />
+                        Fourth Number<input type="text" class="form-control" placeholder="num4" id="input4" /><br />
+                        Fifth Number<input type="text" class="form-control" placeholder="num5" id="input5" /><br />
+                        <button onclick="show()" type="button" class="btn btn-primary align-content-lg-center">Result</button>
+                    </div>
+                </div>
+            </form>
+            <p id="p"></p>
+            </div>
+        </div>
+        <script
+                src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+                integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+                crossorigin="anonymous"
+            ></script>
+            <script
+                src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+                integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+                crossorigin="anonymous"
+            ></script>
+    </body>
+</html>

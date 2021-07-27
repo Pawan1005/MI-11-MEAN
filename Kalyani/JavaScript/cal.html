@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>cal</title>
+        <link rel="stylesheet" href="./style.css" />
+        <script>
+            //function that display value
+            function dis(val) {
+                document.getElementById("result").value += val;
+            }
+            //function that evaluates the digit and return result
+            function solve() {
+                let x = document.getElementById("result").value;
+                let y = eval(x);
+                document.getElementById("result").value = y;
+            }
+            //function that clear the display
+            function clr() {
+                document.getElementById("result").value = "";
+            }
+        </script>
+        <style>
+            table {
+                margin: 50px 0 0 500px;
+            }
+        </style>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td colspan="3"><input type="text" id="result" /></td>
+                <!-- clr() function will call clr to clear all value -->
+                <td><input type="button" value="c" onclick="clr()" /></td>
+            </tr>
+            <tr>
+                <!-- create button and assign value to each button -->
+                <!-- dis("1") will call function dis to display value -->
+                <td><input type="text" placeholder="enter num1" onclick="dis('1')" /></td>
+                <td><input type="button" value="/" onclick="dis('/')" /></td>
+                <td><input type="button" value="+" onclick="dis('+')" /></td>
+                <td><input type="button" value="." onclick="dis('.')" /></td>
+                <td><input type="button" value="-" onclick="dis('-')" /></td>
+                <td><input type="button" value="*" onclick="dis('*')" /></td>
+            </tr>
+            <tr>
+                <td><input type="text" placeholder="Enter Num2" onclick="dis('4')" /></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="." onclick="dis('.')" /></td>
+                <td><input type="button" value="0" onclick="dis('0')" /></td>
+                <!-- solve function call function solve to evaluate value -->
+                <td><input type="button" value="=" onclick="solve()" /></td>
+            </tr>
+        </table>
+    </body>
+</html>

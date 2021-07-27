@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment19</title>
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+        <script>
+            function prinTable() {
+                var num;
+                num = document.getElementById("input").value;
+                for (var i = 0; i <= 10; i++) {
+                    var temp = document.getElementById("output");
+                    temp.innerHTML += num * i + "<br>";
+                }
+            }
+        </script>
+        <script>
+            function add() {
+                let li = document.createElement("li");
+                li.textContent = "javascript";
+                let ol = document.getElementById("ol1");
+                ol.insertBefore(li.ol.lastElementChild.nextSibling);
+            }
+        </script>
+        <style>
+            .main-box {
+                border: 1px solid black;
+                width: 300px;
+                height: 450px;
+                padding: 50px;
+            }
+            h2 {
+                text-align: center;
+            }
+            p {
+                text-align: center;
+                font-size: 20px;
+            }
+            h1 {
+                text-align: center;
+                color: black;
+            }
+            body {
+                background-color: rgba(102, 21, 21, 0.473);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Assignment19</h1>
+        <div class="row">
+            <div class="col-sm">
+                <div class="main-box">
+                    <p>Assignment19-Quest.1</p>
+                    <div class="input-container">
+                        <h2>Tables</h2>
+                        <input id="input" placeholder="Enter A Number" />
+                        <input type="button" value="Show Table" onclick="prinTable()" />
+                    </div>
+                    <p id="output"></p>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="main-box">
+                    <div class="input-container">
+                        <ol id="ol1">
+                            <li>SDL</li>
+                            <li>HTML</li>
+                            <li>CSS</li>
+                            <li>JAVA</li>
+                        </ol>
+                        <input type="text" placeholder="Etner List Item" id="input" />
+                        <input type="button" value="Add" onclick="add()" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

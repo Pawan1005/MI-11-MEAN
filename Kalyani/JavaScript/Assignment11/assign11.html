@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment11</title>
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+        <style>
+            body {
+                background-color: brown;
+            }
+            button {
+                width: 10%;
+                height: 4vh;
+                border-radius: 25px;
+                border: none;
+                margin-top: 5px;
+            }
+            h1 {
+                text-align: center;
+            }
+            input {
+                width: 20%;
+                height: 3vh;
+                border-radius: 20px;
+                border: none;
+            }
+            #p {
+                font-size: 21px;
+          }
+        </style>
+    </head>
+    <body>
+        <body>
+            <h1>Assignment11</h1>
+            <div id="searchContainer">
+                <input type="text" id="searchMarks" />
+                <button onclick="search()">Search</button>
+            </div>
+            <div id="searchRoll"></div>
+            <div class="container">
+                <div id="input"></div>
+                <div id="p">
+                    <div>Roll number</div>
+                    <div>Marks</div>
+                </div>
+            </div>
+            <button onclick="check()">Check</button>
+        </body>
+        <script>
+            let input = document.getElementById("input");
+            let p = document.getElementById("p");
+            let searchRoll = document.getElementById("searchRoll");
+            data = [];
+            for (let i = 0; i < 10; i++) {
+                input.innerHTML += `<div>Roll number : <input type="number" class="rolls"></div>
+                                    <div>Marks : <input type="number" class="marks"></div>`;
+            }
+            function check() {
+                let marks = document.getElementsByClassName("marks");
+                let rolls = document.getElementsByClassName("rolls");
+                let error = 0,
+                    mark;
+                for (let i = 0; i < marks.length; i++) {
+                    mark = parseInt(marks[i].value);
+                    console.log(isNaN(mark), mark == NaN);
+                    if (mark > 50 || mark < 0 || isNaN(mark)) {
+                        error = 1;
+                        marks[i].style = "border:1px solid red";
+                    } else {
+                        data.push([parseInt(rolls[i].value), mark]);
+                    }
+                }
+                if (error || data.length != 10) {
+                    alert("Invalid Marks");
+                } else {
+                    for (let i = 0; i < data.length; i++) {
+                        data[i][1] = parseInt(data[i][1] + data[i][1] * 0.2);
+                    }
+                    data.sort((a, b) => {
+                        return b[1] - a[1];
+                    });
+                    for (let i = 0; i < data.length; i++) {
+                        p.innerHTML += `<div>${data[i][0]}</div><div>${data[i][1]} </div>`;
+                    }
+                }
+            }
+            function search() {
+                let searchMarks = parseInt(document.getElementById("searchMarks").value);
+                for (let i = 0; i < data.length; i++) {
+                    if (data[i][0] == searchMarks) {
+                        searchRoll.innerHTML = `<div>Roll No ${data[i][0]} has scored ${data[i][1]}</div>`;
+                        break;
+                    } else searchRoll.innerHTML = `<div>Roll No ${searchMarks} not found`;
+                }
+            }
+        </script>
+    </body>
+</html>

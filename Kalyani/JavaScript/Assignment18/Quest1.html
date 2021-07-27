@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Qusest1EvenOdd</title>
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+        <style>
+            body {
+                background-color: rgba(0, 0, 0, 0.568);
+            }
+            .main-box {
+                width: 300px;
+                height: 200px;
+                border: 1px solid black;
+                background-color: blanchedalmond;
+            }
+            .input-container {
+                margin-top: 10px;
+                margin-left: 50px;
+            }
+            #btn {
+                width: 100px;
+                height: 4vh;
+                margin-top: 8px;
+            }
+            p {
+                font-size: 20px;
+                font-style: oblique;
+                color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-sm" style="margin: 10px 0 0 50px">
+                <div class="main-box">
+                    <div class="input-container">
+                        <label for=" number">Enter a Number</label>
+                        <input type="text" id="input" />
+                        <input type="submit" onclick=" evenOdd()" placeholder="Even/Odd" id="btn" />
+                        <p id="pid"></p>
+                    </div>
+                </div>
+                <div class="main-box" style="margin-top: 10px; width: 350px; height: 250px">
+                    <div class="input-container">
+                        <label for="Name">Enter your Name</label>
+                        <input type="text" id="input1" />
+                        <label for="Age">Enter your Age</label>
+                        <input type="text" id="input2" />
+                        <button type="submit" id="btn" onclick="vote()">Show</button>
+                        <p id="pid1"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm">
+                <div class="main-box" style="margin-top: 10px">
+                    <div class="input-container">
+                        <label for="amount">Enter Shopping Amount</label>
+                        <input type="text" id="input3" />
+                        <button onclick="shopping()" class="btn">Calculate</button>
+                        <p id="pid2"></p>
+                    </div>
+                </div>
+                <div class="main-box" style="margin-top: 10px; width: 400px">
+                    <div class="input-container" style="margin-top: 10px">
+                        <h3>Select The Countrys</h3>
+                        <label for="for country">country</label>
+                        <select id="country" name="country">
+                            <option value="0">India</option>
+                            <option value="1">Uk</option>
+                            <option value="2">America</option>
+                            <option value="3">Canada</option>
+                            <option value="4">Pakistan</option>
+                        </select>
+                        <label id="capital" name="capital">Capital</label>
+                        <select>
+                            <option value="0">Delhi</option>
+                            <option value="1">London</option>
+                            <option value="2">Washington</option>
+                            <option value="3">Ottawa</option>
+                            <option value="4">islamabad</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function evenOdd() {
+                var input = document.getElementById("input").value;
+                if (isNaN(input)) {
+                    document.getElementById("pid").innerHTML = "Enter Proper Number";
+                } else if (input % 2 == 0) {
+                    alert("Even Number");
+                } else {
+                    document.getElementById("pid").innerHTML = "Number is Odd";
+                }
+            }
+            function vote() {
+                var input1 = document.getElementById("input1").value;
+                var age = parseInt(document.getElementById("input2").value);
+                if (age >= 18) {
+                    document.getElementById("pid1").innerHTML += input1 + " ," + "you are eligible to vote";
+                } else {
+                    document.getElementById("pid1").innerHTML += input1 + " ," + "you are not eligible to vote";
+                }
+            }
+            function shopping() {
+                var discount, totalamount;
+                var amount = parseInt(document.getElementById("input3").value);
+                if (amount > 1000) {
+                    discount = amount * 0.15;
+                    totalamount = amount - discount;
+                    document.getElementById("pid2").innerHTML += "Total Amount:" + totalamount;
+                } else {
+                    discount = amount * 0.05;
+                    totalamount = amount - discount;
+                    document.getElementById("pid2").innerHTML += "Total Amount:" + totalamount;
+                }
+            }
+            let countryCout = document.getElementById("country");
+            let capital = document.getElementById("capital");
+            countryCout.onchange = () => {
+                capital.selectedIndex = countryCout.selectedIndex;
+            };
+        </script>
+    </body>
+</html>

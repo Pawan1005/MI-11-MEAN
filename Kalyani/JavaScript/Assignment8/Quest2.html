@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Quest2</title>
+        <link
+            rel="stylesheet"
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+        <style>
+            body {
+                background-color: brown;
+            }
+            .input {
+                text-align: center;
+                font-size: 20px;
+                border: 1px solid black;
+                margin-top: 8px;
+            }
+            input {
+                width: 40%;
+                height: 3vh;
+                border-radius: 20px;
+                border: none;
+            }
+            button {
+                width: 10%;
+                height: 4vh;
+                border-radius: 25px;
+                border: none;
+                margin-top: 5px;
+            }
+            h1 {
+                text-align: center;
+            }
+            .iContainer {
+                margin-left: 250px;
+            }
+            #p,
+            #pr {
+                font-size: 20px;
+            }
+            .main-box {
+                height: 80vh;
+                width: 80%;
+                margin-top: 10px;
+            }
+            .container {
+                margin-left: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Quest2</h1>
+        <div class="main-box">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm">
+                        <input type="text" class="input" placeholder="subject1" /><br />
+                        <input type="text" class="input" placeholder="subject2" /><br />
+                        <input type="text" class="input" placeholder="subject3" /><br />
+                        <input type="text" class="input" placeholder="subject4" /><br />
+                        <input type="text" class="input" placeholder="subject5" /><br />
+                        <input type="text" class="input" placeholder="subject6" /><br />
+                        <input type="text" class="input" placeholder="subject7" /><br />
+                        <input type="text" class="input" placeholder="subject8" /><br />
+                        <input type="text" class="input" placeholder="subject9" /><br />
+                        <input type="text" class="input" placeholder="subject10" /><br />
+                    </div>
+                    <div class="col-sm">
+                        <div class="row">
+                            <div class="col-sm">
+                                <div id="p"></div>
+                            </div>
+                            <div class="col-sm">
+                                <div id="pr"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button onclick="calculate()">Result</button>
+            </div>
+        </div>
+        <script>
+            let input = document.getElementsByClassName("input");
+            let p = document.getElementById("p");
+            let arr = [];
+            function calculate() {
+                arr = [];
+                for (let i = 0; i < input.length; i++) {
+                    input[i].style.border = " ";
+                    if (parseInt(input[i].value) <= 80) {
+                        arr.push(parseInt(input[i].value));
+                    } else {
+                        input[i] = "";
+                    }
+                }
+                console.log(arr);
+                if (arr.length != 10) {
+                    alert("All values must be less than 80.");
+                } else {
+                    p.innerHTML += `<h2>Total Marks Before Sort</h2>`;
+                    for (let i = 0; i < arr.length; i++) {
+                        arr[i] = parseInt(arr[i] + arr[i] * 0.2);
+                        p.innerHTML += `<div>Total marks ${i + 1} : ${arr[i]}</div>`;
+                    }
+                    quickSort(arr, 0, 9);
+                    pr.innerHTML += `<h2>Total marks after sort </h2>`;
+                    for (let i = 0; i < arr.length; i++) {
+                        pr.innerHTML += `<div>Total marks ${i + 1} : ${arr[i]}</div>`;
+                    }
+                }
+            }
+            function partition(arr, low, high) {
+                let pivot = arr[high],
+                    i = low - 1,
+                    temp;
+                for (let j = low; j <= high; j++) {
+                    if (pivot > arr[j]) {
+                        i++;
+                        temp = arr[j];
+                        arr[j] = arr[i];
+                        arr[i] = temp;
+                    }
+                }
+                temp = arr[high];
+                arr[high] = arr[i + 1];
+                arr[i + 1] = temp;
+                return i + 1;
+            }
+            function quickSort(arr, low, high) {
+                if (low < high) {
+                    pi = partition(arr, low, high);
+                    quickSort(arr, low, pi - 1);
+                    quickSort(arr, pi + 1, high);
+                }
+            }
+        </script>
+    </body>
+</html>

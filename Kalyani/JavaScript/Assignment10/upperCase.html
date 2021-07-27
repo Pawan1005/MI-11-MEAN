@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>checkUppercase</title>
+        <style>
+            body {
+                background-color: rgba(0, 0, 0, 0.897);
+            }
+            .main-box {
+                border: 1px solid gray;
+                width: 50%;
+                height: 40vh;
+                margin: 20px 10px 0 300px;
+                background-color: gray;
+            }
+            #input {
+                margin: 20px 0 0 100px;
+                width: 50%;
+                height: 20%;
+                font-size: large;
+                text-align: center;
+            }
+            button {
+                width: 25%;
+                height: 15%;
+                background-color: black;
+                color: white;
+            }
+            h1 {
+                text-align: center;
+            }
+            #pr {
+                font-size: large;
+                text-align: center;
+                margin-top: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-box">
+            <h1>UpperCase</h1>
+            <input id="input" />
+            <button onclick="checkUppercase()">Check</button>
+            <div id="pr"></div>
+        </div>
+        <script>
+            function checkUppercase() {
+                str = document.getElementById("input").value;
+                regexp = /[A-Z]/;
+                if (regexp.test(str)) {
+                    document.getElementById("pr").innerHTML = "String's first character is uppercase";
+                } else {
+                    document.getElementById("pr").innerHTML = "String's first character is Not uppercase";
+                }
+            }
+        </script>
+    </body>
+</html>
