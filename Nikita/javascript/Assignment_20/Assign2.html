@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment_20</title>
+        <style>
+            .card {
+                margin-top: 70px;
+                align-items: center;
+                justify-content: center;
+                background-color: pink;
+                width: 400px;
+                height: 350px;
+                margin: auto;
+                border-radius: 20px;
+            }
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 8px;
+            }
+            .btn {
+                width: 80px;
+                height: 40px;
+                border-radius: 20px;
+                margin-left: 120px;
+            }
+        </style>
+    </head>
+        <div class="card">
+            <div class="container">
+                <h1 style="text-align: center; color: black">
+                    Change Value in Table
+                </h1>
+                <table id="tab">
+                    <tr>
+                        <th>Roll No</th>
+                        <th>Name</th>
+                        <th>Marks</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>payal</td>
+                        <td>75</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Ragini</td>
+                        <td>90</td>
+                    </tr>
+                </table>
+                <div class="display1">
+                    <div class="display">
+                        <label for="">Row</label>
+                        <label for="">Column</label>
+                        <label for="">Change Value</label>
+                    </div>
+                    <div class="display2">
+                        <input type="text" id="num" />
+                        <input type="text" id="num1" />
+                    </div>
+                </div>
+                <br /><br /><br />
+                <button class="btn" onclick="val()">Change</button>
+            </div>
+        </div>
+        <script>
+            function val() {
+                let row = document.getElementById("num").value;
+                let col = document.getElementById("num1").value;
+                let table = document.getElementById("tab");
+                let acceptRow = table.getElementsByTagName("tr")[row];
+                let acceptCol = acceptRow.getElementsByTagName("td")[--col];
+                acceptCol.textContent = value;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment_18</title>
+        <style>
+            .card {
+                margin-top: 50px;
+                align-items: center;
+                justify-content: center;
+                background-color: pink;
+                width: 400px;
+                height: 200px;
+                margin: auto;
+                border-radius: 20px;
+            }
+            button {
+                padding: 10px;
+                border-radius: 10px;
+                margin-left: 180px;
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <h1 style="text-align: center">Even or Odd</h1>
+                Enter A Number:&nbsp;&nbsp;<input type="text" id="num" />
+                <br /><br />
+                <button onclick="even_odd()">Even/Odd</button>
+                <p id="pid"></p>
+            </div>
+        </div>
+        <script>
+            function check(n) {
+                let re = /[^0-9]/g;
+                if (re.test(n) || n == "") {
+                    alert(`invalid input`);
+                    throw new Error();
+                }
+            }
+            function even_odd() {
+                var a = document.getElementById("num").value;
+                check(a);
+                let c = a % 2;
+                if (c == 0) {
+                    document.getElementById(
+                        "pid"
+                    ).innerHTML = `${a} is an Even Number`;
+                } else {
+                    document.getElementById(
+                        "pid"
+                    ).innerHTML = `${a} is an Odd Number`;
+                }
+            }
+        </script>
+    </body>
+</html>
