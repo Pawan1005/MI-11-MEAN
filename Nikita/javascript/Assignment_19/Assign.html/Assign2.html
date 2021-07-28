@@ -1,0 +1,45 @@
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment_19</title>
+    <style>
+        .card {
+            margin-top: 50px;
+            align-items: center;
+            justify-content: center;
+            background-color: pink;
+            width: 400px;
+            height: 300px;
+            margin: auto;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="container">
+            <h1 style="text-align: center; color: black;">Add Text In List</h1>
+            <ol id="ol2">
+                <li> HTML</li>
+                <li>SDLC</li>
+                <li>FIGMA</li>
+                <li>CSS</li>
+            </ol>
+                <label for="">Enter Text : </label>
+                <input type="text" id="num1" />
+                <br /><br />
+                <button class="btn1" onclick="add()">Add</button>
+        </div>
+    </div>
+    <script>
+        function add() {
+            let name = document.getElementById("num1").value.toUpperCase();
+            let li = document.createElement("li");
+            li.textContent = name;
+            let ol = document.getElementById("ol2");
+            ol.insertBefore(li, ol.lastElementChild.nextSibling);
+        }
+    </script>
+</body>
+</html>

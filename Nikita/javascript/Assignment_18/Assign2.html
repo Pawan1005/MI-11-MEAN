@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment_18</title>
+        <style>
+            .card {
+                margin-top: 50px;
+                align-items: center;
+                justify-content: center;
+                background-color: lightblue;
+                width: 400px;
+                height: 250px;
+                margin: auto;
+            }
+            button {
+                padding: 10px;
+                border-radius: 10px;
+                margin-left: 180px;
+                width: 100px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <h1 style="text-align: center; color: black">
+                    Eligible voting or not
+                </h1>
+                Enter Name:&nbsp;&nbsp;<input type="text" id="name" />
+                <br /><br />
+                Enter Age:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input
+                    type="text"
+                    id="age"
+                />
+                <br /><br />
+                <button onclick="show()">Check</button>
+                <p id="pid"></p>
+            </div>
+        </div>
+        <script>
+            function check(n) {
+                let re = /[^0-9]/g;
+                if (re.test(n) || n == "") {
+                    alert(`invalid input`);
+                    throw new Error();
+                }
+            }
+            function show() {
+                var a = document.getElementById("name").value;
+                var b = document.getElementById("age").value;
+                check(b);
+                if (b >= 18) {
+                    document.getElementById(
+                        "pid"
+                    ).innerHTML = `${a} is eligible for voting`;
+                } else {
+                    document.getElementById(
+                        "pid"
+                    ).innerHTML = `${a} is not eligible for voting`;
+                }
+            }
+        </script>
+    </body>
+</html>
