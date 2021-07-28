@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment 21</title>
+        <style>
+            h1 {
+                text-align: center;
+                color:white;      
+                margin-top: 3%;
+            }
+            body {
+                background-color:  rgb(94, 4, 60);
+            }
+            .name {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: rgb(159, 176, 250);
+                padding-top: 10px;
+                width: 540px;
+                height:530px;
+                margin: auto;
+                font-size: 16px;
+                font-weight: bold;
+                gap: 8px;
+                border-radius: 10px;
+                border: 3px solid rgb(107, 133, 252);
+            } 
+            .display {
+                width: 360px;
+                height:460px;
+                padding-left: 20px;
+                padding-top: 10px;
+                background-color: white;
+                font-size: 16px;
+                font-weight: bold;
+                border: 2px solid rgb(114, 140, 255);
+                border-radius: 5px;
+            } 
+            #result1,#result2,#result3,#result4, #result5, #result6, #result7, #result8 {
+                color: #062eb4;
+                font-size: 14px;
+                font-weight: bold;
+            }
+            #result9 {
+                color: #db0771;
+                font-size: 14px;
+                font-weight: bold;
+            }
+            #result10 {
+                color: #068b1c;
+                font-size: 14px;
+                font-weight: bold;
+            }
+            #result11 {
+                color: #b61705;
+                font-size: 14px;
+                font-weight: bold;
+            }
+            .btn1{
+                background-color: rgb(6, 64, 224);
+                font-weight: bold;
+                font-size: 15px;
+                height: 40px;
+                width: 140px;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Result using LocalStorage and SessionStorage</h1>
+        <div class="name">
+            <div class="display">
+                Roll No : <input type="text" id="result1"><br><br>
+                Name : <input type="text"   id="result2"><br><br>
+                Class : <input type="text"    id="result3"><br><br>
+                Hindi : <input type="text" id="result4"><br><br>
+                English : <input type="text"  id="result5"><br><br>
+                Marathi : <input type="text"  id="result6"><br><br>
+                Maths : <input type="text"  id="result7"><br><br>
+                Physics : <input type="text" id="result8"><br><br>
+                Total : <input type="text" id="result9"><br><br>
+                Percentage : <input type="text"  id="result10"><br><br>
+                Grade : <input type="text"  id="result11">
+            </div>
+            <button class="btn1" onclick="remove()">Remove Storage</button>
+        </div>
+        <script>
+            window.addEventListener("load", ()=> {
+                const rollNo = localStorage.getItem("rollNo");
+                const Name = localStorage.getItem("Name");
+                const Class = localStorage.getItem("Class");
+                const Hindi = localStorage.getItem("Hindi");
+                const English = localStorage.getItem("English");
+                const Marathi = localStorage.getItem("Marathi");
+                const Maths = localStorage.getItem("Maths");
+                const Physics = localStorage.getItem("Physics");
+                sessionStorage.getItem("rollNo1");
+                sessionStorage.getItem("Name1");
+                sessionStorage.getItem("Class1");
+                sessionStorage.getItem("Hindi1");
+                sessionStorage.getItem("English1");
+                sessionStorage.getItem("Marathi1");
+                sessionStorage.getItem("Maths1");
+                sessionStorage.getItem("Physics1");
+                let total = parseInt(Hindi) + parseInt(English) + parseInt(Marathi) + parseInt(Maths) + parseInt(Physics);
+                let percentage = parseInt((total / 500) * 100);
+                let grade;
+                if (percentage >= 80) {
+                    grade = "A+";
+                } else if (percentage < 80 && percentage >= 60) {
+                    grade = "A";
+                } else if (percentage < 60 && percentage >= 55) {
+                    grade = "B+";
+                } else if (percentage < 55 && percentage >= 40) {
+                    grade = "B";
+                } else {
+                    grade = "Fail";
+                }
+                document.getElementById("result1").value = rollNo;
+                document.getElementById("result2").value = Name;
+                document.getElementById("result3").value = Class;
+                document.getElementById("result4").value = Hindi;
+                document.getElementById("result5").value = English;
+                document.getElementById("result6").value = Marathi;
+                document.getElementById("result7").value = Maths;
+                document.getElementById("result8").value = Physics;
+                document.getElementById("result9").value = total;
+                document.getElementById("result10").value = percentage +"%";
+                document.getElementById("result11").value = grade;
+            });
+            function remove() {
+                localStorage.clear();
+                sessionStorage.clear();
+            }
+        </script>
+    </body>
+</html>
