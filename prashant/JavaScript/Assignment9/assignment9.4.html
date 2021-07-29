@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Assignment 9.4 Palindrome String </title>
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+            crossorigin="anonymous"
+        />
+        <script type = "text/javascript">
+            function palindrome(){
+                var a= document.getElementById("pa").value;
+                var b = "";
+                for (i = a.length-1; i >= 0; i--)
+                    {
+                    b = b + a[i]
+                    }
+                if (a == b)
+                    document.getElementById("pa2"). value = b + " is a Palindrome String ";
+                else
+                    document.getElementById("pa2"). value = b + " is not a Palindrome String";
+            }
+        </script>
+    </head>
+    <body style="background-color: indigo;"> 
+        <div class="container text-center">
+            <div class="card" style="background-color: #ffc107; margin-top: 50px;">
+                <div class="row" style="padding: 50px;">
+                    <h1>Palindrome String </h1>
+                </div>
+                <div class="palin">
+                    <label> Enter any string : </label> 
+                    <input type="text" id= "pa" style="width: 600px; margin-left: 40px;"> <br> <br>
+                    <button class="btn btn-primary m-3"  onclick = "palindrome()" style="margin-bottom:50px; width: 200px;" >Submit</button><br><br>
+                    <label> Resultant string : </label> 
+                    <input type = "text" id = "pa2" style="width: 600px; margin-left: 40px; "><b> <br> <br>
+                </div>
+            </div>
+        </div>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

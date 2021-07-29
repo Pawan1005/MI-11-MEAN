@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            function total(a, b, c, d, e) {
+                return a + b + c + d + e;
+            }
+            function percentage(tot) {
+                return parseInt(tot / 5);
+            }
+            function grad(per) {
+                if (per > 80) {
+                    return "A+";
+                } else if (per > 60) {
+                    return "A";
+                } else if (per > 55) {
+                    return "B+";
+                } else if (per > 40) {
+                    return "B";
+                } else {
+                    return "No Grade";
+                }
+            }
+        </script>
+        <style>
+            body {
+                background-color: rgb(142, 226, 198);
+            }
+            .content {
+                padding: 100px;
+                width: 500px;
+                margin: 100px;
+                background-color: rgb(133, 146, 216);
+                position: relative;
+                left: 100px;
+            }
+            input {
+                float: right;
+            }
+            input.btn {
+                background-color: rgb(183, 0, 255);
+                padding: 5px;
+                border-radius: 10%;
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <p id="con"></p>
+        </div>
+        <script>
+            const params = new URL(document.location).searchParams;
+            let rno = params.get("Rno");
+            let name = params.get("name");
+            let clas = params.get("Class");
+            let english = parseInt(params.get("m1"));
+            let social = parseInt(params.get("m2"));
+            let maths = parseInt(params.get("m3"));
+            let physics = parseInt(params.get("m4"));
+            let chemistry = parseInt(params.get("m5"));
+            let tot = total(english, social, maths, physics, chemistry);
+            let per = percentage(tot);
+            grade = grad(per);
+            document.getElementById("con").innerHTML += `Roll number: ${rno}<br><br>`;
+            document.getElementById("con").innerHTML += `name:${name}<br><br>`;
+            document.getElementById("con").innerHTML += `class:${clas}<br><br>`;
+            document.getElementById("con").innerHTML += `Mark of Enghish:${english}<br><br>`;
+            document.getElementById("con").innerHTML += `Mark of Social:${social}<br><br>`;
+            document.getElementById("con").innerHTML += `Mark of maths:${maths}<br><br>`;
+            document.getElementById("con").innerHTML += `Mark of physics:${physics}<br><br>`;
+            document.getElementById("con").innerHTML += `Mark of chemistry:${chemistry}<br><br>`;
+            document.getElementById("con").innerHTML += `Total:${tot}<br><br>`;
+            document.getElementById("con").innerHTML += `Percentage:${per}<br><br>`;
+            document.getElementById("con").innerHTML += `Grade:${grade}<br><br>`;
+        </script>
+    </body>
+</html>

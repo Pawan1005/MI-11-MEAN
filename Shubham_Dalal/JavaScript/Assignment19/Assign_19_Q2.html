@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="Assignment18.css" />
+        <title>Add text in list</title>
+    </head>
+    <body>
+        <div>
+            <h1>Add Text in List</h1>
+            <div id="main">
+                <div class="div2">
+                    <ol id="ol1">
+                        <li>Frontend</li>
+                        <li>Backend</li>
+                        <li>Database</li>
+                        <li>Server</li>
+                    </ol>
+                </div>
+                <div class="div1">
+                    <label for="">Enter a text</label>
+                    <input type="text" id="firstnumber" />
+                    <button class="btn1" onclick="list()">Add</button>
+                </div>
+            </div>
+        </div>
+        <script>
+            function list() {
+                let name = document.getElementById("firstnumber").value.toUpperCase();
+                let li = document.createElement("li");
+                li.textContent = name;
+                let ol = document.getElementById("ol1");
+                ol.insertBefore(li, ol.lastElementChild.nextSibling);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+        <title>Document</title>
+        <script>
+            function fun() {
+                debugger;
+                var a = document.getElementById("num1").value;
+                var b = document.getElementById("num2").value;
+                var c = document.getElementById("num3").value;
+                var d = document.getElementById("num4").value;
+                var e = document.getElementById("num5").value;
+                localStorage.setItem("RollNo.", a);
+                localStorage.setItem("Name", b);
+                localStorage.setItem("Maths", c);
+                localStorage.setItem("Science", d);
+                localStorage.setItem("History", e);
+            }
+        </script>
+        <style>
+            .vm {
+                padding-left: 200px;
+                padding-right: 200px;
+            }
+        </style>
+    </head>
+    <body >
+            <h1>Mark calculator</h1>
+        <div class="row vm">
+            <div class="col">
+                        <h2>for uploading Mark <span class="text-success">LocalStorage</span></h2>
+                        <hr />
+                    <div class="form-row">
+                        <form action="q2 (localStorage).html">
+                            <div class="form-group col-md-8">
+                                <label for="inputEmail4">RollNo</label>
+                                <input type="number" class="form-control" id="num1" name="rollNo" placeholder="Enter the rollNo." />
+                            </div>
+                            <div class="form-group col-md-8">
+                                <label for="inputPassword4">Name</label>
+                                <input type="text" class="form-control" id="num2" name="fName" placeholder="Enter the Name" />
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <label for="inputEmail4">Maths</label>
+                                    <input type="number" class="form-control" id="num3" placeholder="Maths" name="Maths" />
+                                </div>
+                                <div class="form-group col-md-3">
+                                    <label for="inputPassword4">Science</label>
+                                    <input type="number" class="form-control" id="num4" placeholder="Science" name="Science" />
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-3">
+                                    <label for="inputEmail4">History:</label>
+                                    <input type="number" class="form-control" id="num5" placeholder="History" name="History" />
+                                </div>
+                            </div>
+                            <input class="btn btn-outline-danger" type="submit" value="submit" onclick="fun()" />
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

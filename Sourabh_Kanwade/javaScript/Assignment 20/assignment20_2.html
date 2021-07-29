@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment 20 | Table</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            .container {
+                display: flex;
+                flex-direction: column;
+                width: 25%;
+                border-radius: 10px;
+                padding: 1.25rem;
+                background-color: aliceblue;
+                border: 1px solid;
+            }
+            table,
+            th,
+            td {
+                border: 1px solid;
+                border-collapse: collapse;
+                padding: 1.25rem;
+            }
+            table {
+                margin-bottom: 1.25rem;
+            }
+            button {
+                margin-top: 1.25rem;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <table id="table">
+                <tr>
+                    <th>Name</th>
+                    <th>Marks</th>
+                </tr>
+                <tr>
+                    <td>Suresh</td>
+                    <td>34</td>
+                </tr>
+                <tr>
+                    <td>Ramesh</td>
+                    <td>54</td>
+                </tr>
+            </table>
+            <label>Row</label>
+            <input type="text" id="row" />
+            <label>Column</label>
+            <input type="text" id="col" />
+            <label>Text to update</label>
+            <input type="text" id="txt" />
+            <button onclick="Update()">Update Row</button>
+        </div>
+        <script>
+            function Update() {
+                let row = document.getElementById("row").value;
+                let col = document.getElementById("col").value;
+                let txt = document.getElementById("txt").value;
+                let table = document.getElementById("table");
+                table.rows[row].cells[col].innerHTML = txt;
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment20</title>
+        <style>
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 8px;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function addRow() {
+                let table = document.getElementsByClassName("myTable");
+                let row = table.insertRow();
+                let col1 = row.insertCell();
+                let col2 = row.insertCell();
+                col1.textContent = 3;
+                col2.textContent = "new";
+            }
+        </script>
+        <div class="main-box">
+            <table id="myTable">
+                <tr>
+                    <th>Roll No</th>
+                    <th>Name</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>Kalyani</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Mayuri</td>
+                </tr>
+            </table>
+            <div class="output-container">
+                <button class="btn" onclick="addRow()">Add Row</button>
+            </div>
+        </div>
+    </body>
+</html>

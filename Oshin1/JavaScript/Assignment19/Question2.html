@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assign19_Q2</title>
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                margin-top: 50px;
+                align-items: center;
+                justify-content: center;
+                background-color: lightcoral;
+                width: 400px;
+                height: 400px;
+                margin: auto;
+                border-radius: 20px;
+            }
+            .btn1 {
+                background-color: white;
+                color: lightcoral;
+                width: 130px;
+                height: 40px;
+                font-size: large;
+                font-weight: 300;
+                margin-left: 130px;
+            }
+            .btn1:hover {
+                background-color: lightcoral;
+            }
+            #ol2{
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <h1 style="text-align: center; color: white;">Add Text in List</h1>
+                <ol id="ol2">
+                    <li>SDLC</li>
+                    <li>HTML</li>
+                    <li>FIGMA</li>
+                    <li>CSS</li>
+                </ol>
+                    <label for="">Enter text : </label>
+                    <input type="text" id="num1" />
+                    <br /><br />
+                    <button class="btn1" onclick="add()">Add</button>
+            </div>
+        </div>
+        <script>
+            function add() {
+                let name = document.getElementById("num1").value.toUpperCase();
+                let li = document.createElement("li");
+                li.textContent = name;
+                let ol = document.getElementById("ol2");
+                ol.insertBefore(li, ol.lastElementChild.nextSibling);
+            }
+        </script>
+    </body>
+</html>

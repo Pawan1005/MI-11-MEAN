@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8 />
+        <title>Display Student detail</title>
+        <style>
+            h1 {
+                text-align: center;
+                color:rgb(183, 191, 253) ;    
+                margin-top: 1%;
+            }
+            h2{
+                color: white;
+                margin-left: 60px;
+            }
+            body {
+                padding-top: 2px;
+                background-color: rgb(73, 5, 34);   
+            }
+            .name {
+                background-color: gray;
+                width: 500px;
+                height:550px;
+                margin: auto;
+                padding-top: 2px;
+                padding-left: 140px;
+                gap: 3px;
+                border-radius: 10px;
+            }
+            table{
+                width: 330px;
+                border-collapse: separate;
+                background-color: white;
+            }
+            th{
+                border: 1px solid black;
+                padding: 5px 3px;  
+                background-color: rgb(121, 137, 238);           
+            }
+            tr, td {
+                font-size: 14px;
+                min-width: 80px;
+                text-align: center;
+                padding-top: 10px;
+                padding-bottom: 7px;
+                border: 1px solid black;
+            }
+            .res{
+                color: white;
+                font-weight: bold;
+                font-size: 18px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Display Employee Details</h1>
+        <div class="name">
+            <h2>Employee Table</h2>
+            <table>
+                <tr>
+                    <th>Emp NO</th>
+                    <td id="num"></td>
+                </tr>
+                <tr>
+                    <th>Name</th>
+                    <td id="name"></td>
+                </tr>
+                <tr>
+                    <th>Address</th>
+                    <td id="add"></td>
+                </tr>
+                <tr>
+                    <th>City</th>
+                    <td id="city"></td>
+                </tr>
+                <tr>
+                    <th>Salary</th>
+                    <td id="sal"></td>
+                </tr>
+            </table>
+            <h2>Salary Table</h2>
+            <table>
+                <tr>
+                    <th>Emp NO</th>
+                    <td id="num2"></td>
+                </tr>
+                <tr>
+                    <th>Name</th>
+                    <td id="name2"></td>
+                </tr>
+                <tr>
+                    <th>Gross Salary</th>
+                    <td id="sal2"></td>
+                </tr>
+                <tr>
+                    <th>Net Salary</th>
+                    <td id="netsal"></td>
+                </tr>
+            </table>
+            <br>
+            <div class="res" id="tax"></div>
+            </div>
+        </div>
+        <script>
+            class Employee {
+                constructor() {
+                    this.empno = 101;
+                    this.name = "Ashok Kumar";
+                    this.address = "43,Ramnagar";
+                    this.city = "Pune ,Maharashtra";
+                    this.salary = "80000";
+                }
+                show_init() {
+                    document.getElementById("num").innerHTML += this.empno;
+                    document.getElementById("name").innerHTML += this.name;
+                    document.getElementById("add").innerHTML += this.address;
+                    document.getElementById("city").innerHTML += this.city;
+                    document.getElementById("sal").innerHTML += this.salary;
+                }
+                calculate() {
+                    let salary, da, hra, pf;
+                    salary = parseInt(this.salary);
+                    da = (salary * 30) / 100;
+                    hra = (salary * 15) / 100;
+                    pf = (salary * 12.5) / 100;
+                    this.gross = salary + da + hra;
+                    this.net = this.gross - pf;
+                }
+                display() {
+                    document.getElementById("num2").innerHTML += this.empno;
+                    document.getElementById("name2").innerHTML += this.name;
+                    document.getElementById("sal2").innerHTML += this.gross;
+                    document.getElementById("netsal").innerHTML += this.net;
+                    if (this.gross > 180000) {
+                        document.getElementById("tax").innerHTML += "Income Tax Payer";
+                    } else {
+                        document.getElementById("tax").innerHTML += "Not an Income Tax Payer";
+                    }
+                }
+            }
+            let e1 = new Employee();
+            e1.show_init();
+            e1.calculate();
+            e1.display();
+        </script>
+    </body>
+</html>

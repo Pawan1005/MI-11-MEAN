@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            function table() {
+                let table = document.getElementById("tab");
+                let r = parseInt(document.getElementById("i1").value);
+                let c = parseInt(document.getElementById("i2").value);
+                let con = document.getElementById("i3").value;
+                let tab = table.rows[r].cells;
+                tab[c].innerHTML = con;
+            }
+        </script>
+        <style>
+            body {
+                padding-left: 500px;
+                padding-top: 50px;
+                background-color: rgb(143, 192, 127);
+            }
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 5px;
+            }
+            .content {
+                width: 300px;
+            }
+            input {
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <table id="tab">
+            <tr>
+                <th>Code</th>
+                <th>Name</th>
+                <th>Quantity</th>
+            </tr>
+            <tr>
+                <td>234</td>
+                <td>apple</td>
+                <td>5</td>
+            </tr>
+            <tr>
+                <td>123</td>
+                <td>orange</td>
+                <td>7</td>
+            </tr>
+            <tr>
+                <td>214</td>
+                <td>grape</td>
+                <td>3</td>
+            </tr>
+        </table>
+        <br />
+        <div class="content">
+            row: <input type="text" id="i1" /> <br />
+            <br />
+            column: <input type="text" id="i2" /> <br />
+            <br />
+            content: <input type="text" id="i3" />
+            <button onclick="table()">Change</button>
+        </div>
+    </body>
+</html>

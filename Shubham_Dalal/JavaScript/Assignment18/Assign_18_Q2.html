@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Assignment18.css">
+        <title>Voter check</title>
+    </head>
+    <body>
+        <h1>Check Voter</h1>
+        <div class="main">
+            <div class="common">
+                <label for="">Enter a name</label>
+                <input type="text" id="firstnumber">
+            </div>
+            <div class="common">
+                <label for="">Enter a age &ensp;</label>
+                <input type="text" id="secondnumber">
+            </div>
+            <div class="common">
+                <button class="btn1" onclick="checkVoter()">Show</button>
+            </div>
+            <div class="common">
+                <p><span id="vote"></span></p>
+            </div>
+        </div>
+        <script>
+            function checkVoter() {
+                var name, age;
+                name = document.getElementById("firstnumber").value;
+                age = parseInt(document.getElementById("secondnumber").value);
+                if (age >= 18) {
+                    document.getElementById("vote").innerHTML = `<span style="color: white;">${name}</span>&nbsp; is &nbsp;<span style="color: red;">eligible to Vote</span>`;
+                } else {
+                    document.getElementById("vote").innerHTML = `<span style="color: white;">${name}</span>&nbsp; is &nbsp;<span style="color: red;">not eligible to Vote</span>`;
+                }
+            }
+        </script>
+    </body>
+</html>

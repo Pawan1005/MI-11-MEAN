@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Q4_Age_calculator</title>
+        <style>
+            h1 {
+                text-align: center;
+                color:white;      
+                margin-top: 4%;
+            }
+            body {
+                padding-top: 3px;
+                background-color: rgb(128, 2, 75);
+            }
+            .name {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: gray;
+                margin-top: 40px;
+                padding-top: 40px;
+                width: 500px;
+                height:300px;
+                margin: auto;
+                gap: 5px;
+                border-radius: 10px;
+            }  
+            .res{
+                margin-top: 30px;
+                padding-left: 10px;
+                padding-right: 10px;
+                background-color: white;
+                font-weight: bold;
+                font-size: 18px;
+                color:rgb(2, 51, 187);
+            }
+            .btn{
+                padding-top: 80px;
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Calculate Age</h1>
+        <div class="name">
+            <b> Enter Date of Birth: <input type=date id = DOB> </b> <br>
+            <div class="btn">    
+                <button type="submit" onclick = "ageCalculator()" style="background-color: rgb(1, 223, 149); height: 35px;"> Calculate</button> 
+            </div>        
+            <div class="res">
+                <p id="result"></p>
+            </div>
+        </div>
+        <script>  
+            function ageCalculator() {  
+                var userinput = document.getElementById("DOB").value;  
+                var dob = new Date(userinput);  
+                if(userinput==null || userinput=='') {   
+                    return false;   
+                }
+                else {  
+                    var month_diff = Date.now() - dob.getTime();  
+                    var age_dt = new Date(month_diff);   
+                    var year = age_dt.getUTCFullYear();  
+                    var age = Math.abs(year - 1970);  
+                    alert("Age is  :   " + age +" years ");
+                    return document.getElementById("result").innerHTML ="Age is: " + age + " years. ";  
+                }  
+            }  
+        </script>  
+    </body>
+</html>

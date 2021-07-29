@@ -1,0 +1,100 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Calculate_commission</title>
+        <style>
+            
+            h1 {
+                text-align: center;
+                color: rgb(235, 22, 22);
+                margin-top: 4%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #fcf3c1;
+                width: 400px;
+                height: 370px;
+                margin: auto;
+                padding-top: 15px;
+                gap: 40px;
+                border-radius: 10px;
+            }
+            p {
+                min-width: 90px;
+                min-height: 50px;
+                padding: 32px 40px 32px 40px;
+                background-color: white;
+                font-weight: bold;
+                border: 1px solid #0000004b;
+                border-radius: 5px;
+            }
+            span {
+                color: red;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Calculate Commission</h1>
+        <div class="main">
+            <div>
+                <p>
+                    Id &ensp;:&emsp;<span id="num1"></span>Name &ensp;:&emsp;<span id="num2"></span>Total Sales &ensp;:&emsp;<span id="num3"></span>Total
+                    Commission &ensp;:&emsp;<span id="num4"></span>
+                </p>
+            </div>
+        </div>
+        <script>
+            class SalesMan {
+                constructor(Id, Name) {
+                    this.Id = Id;
+                    this.Name = Name;
+                }
+                display1() {
+                    document.getElementById("num1").innerHTML = this.Id + "<br><br>";
+                    document.getElementById("num2").innerHTML = this.Name + "<br><br>";
+                }
+            }
+            class Sales extends SalesMan {
+                constructor(Id, Name) {
+                    super(Id, Name);
+                    this.sales = 0;
+                    this.comm = 0;
+                }
+                commission(sales) {
+                    this.sales = sales;
+                    let comm;
+                    if (sales < 0) {
+                        alert("Please enter positive number !!!");
+                    } else if (isNaN(sales)) {
+                        alert("Please enter number only !!!");
+                    } else {
+                        if (this.sales > 0 && this.sales <= 5000) {
+                            comm = (sales * 2) / 100;
+                        } else if (this.sales > 5000 && this.sales <= 12000) {
+                            comm = (sales * 5) / 100;
+                        } else if (this.sales > 12000 && this.sales <= 50000) {
+                            comm = (sales * 10) / 100;
+                        } else if (this.sales > 50000) {
+                            comm = (sales * 15) / 100;
+                        }
+                        this.comm = parseInt(comm);
+                    }
+                }
+                display2() {
+                    document.getElementById("num3").innerHTML = +this.sales + "<br><br>";
+                    document.getElementById("num4").innerHTML = +this.comm;
+                }
+            }
+            let s1 = new Sales(2, "Yuvraaj");
+            let sales = parseInt(prompt("Enter sales : "));
+            s1.commission(sales);
+            s1.display1();
+            s1.display2();
+        </script>
+    </body>
+</html>

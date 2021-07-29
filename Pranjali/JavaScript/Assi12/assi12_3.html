@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assi12_3</title>
+        <style>
+            body {
+                height: 1500px;
+                background-image: linear-gradient(to bottom right, purple, red);
+            }
+        </style>
+    </head>
+    <body>
+        <div style="width: 30%; position: absolute; left: 700px; top: 50px">
+            <div style="text-align: center; background-color: rgba(236, 236, 146, 0.911); height: 50%; border-radius: 25px 25px 25px 25px">
+                <br /><br />
+                <h1>Display Employee Details</h1>
+                <hr size="5" color="black" />
+                <br />
+                <script language="javascript">
+                    class Employee {
+                        constructor() {
+                            this.EmpNo = 101;
+                            this.Name = "Ashok Kumar";
+                            this.Address = "43, Ramnagar";
+                            this.City = "Pune, Maharashtra";
+                            this.Salary = 200000;
+                        }
+                    }
+                    let e1 = new Employee();
+                    document.write("<br>Emp Number : " + e1.EmpNo + "<br>");
+                    document.write('<br><span style="position: relative; left: 29px;">Emp Name : ' + e1.Name + "<br>");
+                    document.write('<br><span style="position: relative; left: 12px;">Emp Address : ' + e1.Address + "<br>");
+                    document.write('<br><span style="position: relative; left: 5px;">Emp City : ' + e1.City + "<br>");
+                    document.write('<br><span style="position: relative; left: -42px;">Emp Salary : ' + e1.Salary + "<br>");
+                </script>
+                <br /><br /><br />
+            </div>
+        </div>
+        <div style="width: 30%; position: absolute; left: 700px; top: 500px">
+            <div style="text-align: center; background-color: rgba(236, 236, 146, 0.911); height: 50%; border-radius: 25px 25px 25px 25px">
+                <br /><br />
+                <h1>Display Salary Details</h1>
+                <hr size="5" color="black" />
+                <br />
+                <script language="javascript">
+                    class Salary {
+                        constructor() {
+                            this.EmpNo = 101;
+                            this.Name = "Ashok Kumar";
+                            this.Address = "43, Ramnagar";
+                            this.City = "Pune, Maharashtra";
+                            this.salary = 200000;
+                        }
+                    }
+                    let s1 = new Salary();
+                    document.write("<br>Emp Number : " + s1.EmpNo + "<br>");
+                    document.write('<br><span style="position: relative; left: 29px;">Emp Name : ' + s1.Name + "<br>");
+                    let da = 0.3 * s1.salary;
+                    let hra = 0.15 * s1.salary;
+                    let pf = 0.125 * s1.salary;
+                    let gross = s1.salary + da + hra;
+                    let net = gross - pf;
+                    if (gross > 180000) {
+                        document.write('<br><span style="position: relative; left: -19px;">Gross Salary : ' + gross);
+                        document.write('<span style="color: red; position: relative; top: 60px; left: 0px;"><h4>Income tax payer!!</h4></span>');
+                    } else {
+                        document.write('<br><span style="position: relative; left: -19px;">Gross Salary : ' + gross);
+                        document.write('<span style="color: red; position: relative; top: 50px; left: 24px;"><h4>Not an income tax payer!!</h4></span>');
+                    }
+                    document.write('<br><span style="position: relative; left: -8px; bottom: 65px;">Net Salary : ' + net + "<br><br><br>");
+                </script>
+                <br />
+            </div>
+        </div>
+    </body>
+</html>

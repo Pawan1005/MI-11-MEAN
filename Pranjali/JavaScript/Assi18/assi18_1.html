@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assi18_1</title>
+        <style>
+            body {
+                height: 1700px;
+                background-image: linear-gradient(to bottom right, rgb(97, 4, 97), rgba(255, 0, 0, 0.904));
+            }
+            .main {
+                background-image: linear-gradient(50deg, rgb(238, 167, 214), rgba(236, 236, 146, 0.911));
+                width: 550px;
+                height: 500px;
+                padding-top: 15px;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <br /><br /><br /><br />
+        <div style="text-align: center; position: absolute; left: 650px" class="main">
+            <br /><br />
+            <h2 style="color: 32a80f; text-align: center">Check Number is Even/Odd?<br /></h2>
+            <br />
+            <hr size="5" color="black" />
+            <br /><br /><br /><br />
+            <label for="">Enter a Number : </label>
+            <input type="text" id="firstnumber" />
+            <br /><br /><br />
+            <h4>It is&nbsp;&nbsp;<span id="num1"></span></h4>
+            <br /><br />
+            <button
+                style="
+                    background-color: #417c2a;
+                    color: white;
+                    padding: 7px 11px;
+                    margin: 0 8px 10px 8px;
+                    font-weight: bold;
+                    font-size: 17px;
+                    border: 1px solid gray;
+                    border-radius: 4px;
+                "
+                type="submit"
+                onclick="evenodd()"
+            >
+                Even/Odd
+            </button>
+            <br /><br />
+        </div>
+        <script>
+            function evenodd() {
+                let No;
+                No = Number(document.getElementById("firstnumber").value);
+                if (No % 2 == 0) {
+                    document.getElementById("num1").innerHTML = "a Even Number";
+                } else {
+                    document.getElementById("num1").innerHTML = "a Odd Number";
+                }
+            }
+        </script>
+    </body>
+</html>

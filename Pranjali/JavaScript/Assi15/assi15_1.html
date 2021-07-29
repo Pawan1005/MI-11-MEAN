@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8" />
+            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+            <title>Assi15_1</title>
+            <style>
+                body {
+                    height: 1500px;
+                    background-image: linear-gradient(to bottom right, purple, red);
+                }
+                th,
+                td,
+                tr {
+                    padding: 15px;
+                    text-align: center;
+                }
+                table,
+                tr {
+                    text-align: center;
+                }
+            </style>
+        </head>
+        <body>
+            <div style="width: 55%; position: absolute; left: 400px; top: 250px">
+                <div style="background-color: rgba(236, 236, 146, 0.911); height: 50%; border-radius: 25px 25px 25px 25px">
+                    <br /><br />
+                    <h2 style="text-align: center">Display Customer Bank Details</h2>
+                    <hr size="5" color="black" />
+                    <br />
+                    <div style="position: relative; left: 130px">
+                        <script language="javascript">
+                            document.write(
+                                '<table style="width: 80%;"><tr><h4><th>Acc_Number</th><th>Acc_Name</th><th>Deposite</th><th>Withdraw</th><th>Balance</th></h4></tr></table>'
+                            );
+                            class BankDet {
+                                constructor(n) {
+                                    this.acc_no = 0;
+                                    this.acc_name = "";
+                                    this.deposit = 0;
+                                    this.withdraw = 0;
+                                    this.balance = 0;
+                                }
+                                getData(no, n, d, w, b) {
+                                    this.acc_no = no;
+                                    this.acc_name = n;
+                                    this.deposit = d;
+                                    this.withdraw = w;
+                                    this.balance = b;
+                                }
+                                display() {
+                                    document.write(
+                                        `<table style="width: 80%;">
+                                            <tr><td>${this.acc_no}</td><td>${this.acc_name}</td><td>${this.deposit}</td><td>${this.withdraw}</td><td>${this.balance}</td></tr>
+                                        </table>`
+                                    );
+                                }
+                                withdraw() {
+                                    try {
+                                        if (d > w) {
+                                            `<span>${(this.balance = d - w)}</span>`;
+                                        }
+                                        try {
+                                            if (this.balance - w < 1000) throw "Warning – Balance below 1000";
+                                            this.balance -= w;
+                                        } catch (err) {
+                                            this.balance -= w;
+                                            alert(err);
+                                        }
+                                    } catch (err) {
+                                        alert(err);
+                                    }
+                                }
+                            }
+                            let e1 = new BankDet(1);
+                            let e2 = new BankDet(2);
+                            let no = parseInt(prompt("Enter Account NO"));
+                            let n = prompt("Enter Account Name");
+                            let d = parseInt(prompt("Enter Deposite"));
+                            let w = parseInt(prompt("Enter Withdraw"));
+
+                            let b = d - w;
+                            e1.getData(no, n, d, w, b);
+                            no = parseInt(prompt("Enter Account NO"));
+                            n = prompt("Enter Account Name");
+                            d = parseInt(prompt("Enter Deposite"));
+                            w = parseInt(prompt("Enter Withdraw"));
+                            b = d - w;
+                            e2.getData(no, n, d, w, b);
+                            e1.display();
+                            e2.display();
+                            e1.withDraw();
+                            e2.withDraw();
+                        </script>
+                        <br /><br /><br />
+                    </div>
+                </div>
+            </div>
+        </body>
+    </html>
+</html>

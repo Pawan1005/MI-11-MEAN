@@ -1,0 +1,87 @@
+ <!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8 />
+        <title>Display Student detail</title>
+        <style>
+            h1 {
+                text-align: center;
+                color:rgb(255, 129, 139);         
+                margin-top: 4%;
+            }
+            h2{
+                color: white;
+            }
+            body {
+                padding-top: 3px;
+                background-color: rgb(73, 5, 34);   
+            }
+            .name {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: gray;
+                width: 500px;
+                height:300px;
+                margin: auto;
+                padding-top: 10px;
+                gap: 5px;
+                border-radius: 10px;
+            }
+            table{
+                width: 240px;
+                border-collapse: separate;
+                background-color: white;
+            }
+            th{
+                border: 1px solid black;
+                padding: 10px 5px;  
+                background-color: rgb(252, 126, 136);              
+            }
+            tr, td {
+                font-size: 15px;
+                min-width: 80px;
+                text-align: center;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Student Detail</h1>
+        <div class="name">
+            <h2>Student Table</h2>
+            <table>
+                <tr>
+                    <th>Roll NO</th>
+                    <th>Name</th>
+                </tr>
+                <tr>
+                    <td id="rno1"></td>
+                    <td id="name1"></td>
+                </tr>
+                <tr>
+                    <td id="rno2"></td>
+                    <td id="name2"></td>
+                </tr>
+            </table>
+        </div>
+        <script>
+            class Student {
+                constructor() {
+                    this.RollNo = 1;
+                    this.Name = "Vijaya";
+                }
+            }
+            let s1 = new Student();
+            document.getElementById("rno1").innerHTML += s1.RollNo;
+            document.getElementById("name1").innerHTML += s1.Name;
+            let s2 = new Student();
+            s2.RollNo = 2;
+            s2.Name = "Kavya";
+            document.getElementById("rno2").innerHTML += s2.RollNo;
+            document.getElementById("name2").innerHTML += s2.Name;
+        </script>
+    </body>
+</html>

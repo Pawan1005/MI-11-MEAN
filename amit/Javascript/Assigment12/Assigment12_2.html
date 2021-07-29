@@ -1,0 +1,176 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Display student details</title>
+        <style>
+            body {
+                background-color: #470c23;
+            }
+            h1 {
+                text-align: center;
+                color: white;
+                margin-top: 1%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #fcf3c1;
+                width: 520px;
+                height: 570px;
+                margin: auto;
+                padding-top: 15px;
+                gap: 8px;
+                border-radius: 10px;
+            }
+            p {
+                min-width: 150px;
+                height: 20px;
+                padding: 13px 20px 13px 20px;
+                background-color: white;
+                font-weight: bold;
+                border: 1px solid #0000004b;
+                color: red;
+                border-radius: 5px;
+                text-align: center;
+                font-size: 17px;
+                margin-top: 22px;
+                margin-bottom: 40px;
+            }
+            table {
+                width: 80%;
+                background-color: #ffffff;
+                border-collapse: collapse;
+            }
+            tr,
+            th,
+            td {
+                border: 1px solid rgba(0, 0, 0, 0.219);
+                padding: 10px 5px;
+            }
+            table th {
+                background-color: #76438d94;
+                color: white;
+                font-size: 16px;
+            }
+            tr,
+            td {
+                font-size: 17px;
+                min-width: 85px;
+                text-align: center;
+                padding-top: 30px;
+                padding-bottom: -20px;
+            }
+            tr:nth-child(odd) {
+                background-color: #f7f7f7;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Display Employee Details</h1>
+        <div class="main">
+            <h2>Employee Table</h2>
+            <table>
+                <tr>
+                    <th>Emp NO</th>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>City</th>
+                    <th>Salary</th>
+                </tr>
+                <tr>
+                    <td id="num1"></td>
+                    <td id="num2"></td>
+                    <td id="num3"></td>
+                    <td id="num4"></td>
+                    <td id="num5"></td>
+                </tr>
+            </table>
+            <h2 class="heading2">Salary Table</h2>
+            <table>
+                <tr>
+                    <th>Emp NO</th>
+                    <th>Name</th>
+                    <th>Gross Salary</th>
+                    <th>Net Salary</th>
+                </tr>
+                <tr>
+                    <td id="num6"></td>
+                    <td id="num7"></td>
+                    <td id="num8"></td>
+                    <td id="num9"></td>
+                </tr>
+            </table>
+            <div>
+                <p><span id="num10"></span></p>
+            </div>
+        </div>
+        <script>
+            class Employee {
+                constructor(n) {
+                    this.empno = n;
+                    this.name = "";
+                    this.address = "";
+                    this.city = "";
+                    this.salary = 0;
+                }
+                show_init() {
+                    document.getElementById("num1").innerHTML += this.empno + "<br><br>";
+                    document.getElementById("num2").innerHTML += this.name + "<br><br>";
+                    document.getElementById("num3").innerHTML += this.address + "<br><br>";
+                    document.getElementById("num4").innerHTML += this.city + "<br><br>";
+                    document.getElementById("num5").innerHTML += this.salary + "<br><br>";
+                }
+                get_data(name, address, city, salary) {
+                    this.name = name;
+                    this.address = address;
+                    this.city = city;
+                    this.salary = salary;
+                }
+                calculate() {
+                    let salary, da, hra, pf, gross, net;
+                    salary = parseInt(this.salary);
+                    da = (salary * 30) / 100;
+                    hra = (salary * 15) / 100;
+                    pf = (salary * 12.5) / 100;
+                    gross = salary + da + hra;
+                    net = gross - pf;
+                    this.gross = parseInt(gross);
+                    this.net = parseInt(net);
+                }
+                display() {
+                    document.getElementById("num6").innerHTML += this.empno + "<br><br>";
+                    document.getElementById("num7").innerHTML += this.name + "<br><br>";
+                    document.getElementById("num8").innerHTML += this.gross + "<br><br>";
+                    document.getElementById("num9").innerHTML += this.net + "<br><br>";
+                    if (this.gross > 180000) {
+                        document.getElementById("num10").innerHTML += "&emsp;Income Tax Payer&emsp;";
+                    } else {
+                        document.getElementById("num10").innerHTML += "&emsp;Not an Income Tax Payer&emsp;";
+                    }
+                }
+            }
+            let e1 = new Employee(1);
+            let e2 = new Employee(2);
+            let name = prompt("Enter Name : ");
+            let address = prompt("Enter Address : ");
+            let city = prompt("Enter City : ");
+            let salary = parseInt(prompt("Enter Salary : "));
+            e1.get_data(name, address, city, salary);
+            e1.show_init();
+            e1.calculate();
+            e1.display();
+            name = prompt("Enter Name : ");
+            address = prompt("Enter Address : ");
+            city = prompt("Enter City : ");
+            salary = parseInt(prompt("Enter Salary : "));
+            e2.get_data(name, address, city, salary);
+            e2.show_init();
+            e2.calculate();
+            e2.display();
+        </script>
+    </body>
+</html>

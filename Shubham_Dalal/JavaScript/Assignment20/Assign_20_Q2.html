@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="Assignment20.css" />
+        <title>Change Value in Table Accept Row and Column</title>
+    </head>
+    <body>
+        <div>
+            <h1>Change Value in Table Accept Row and Column</h1>
+            <div id="main">
+                <div>
+                    <div class="div2">
+                        <table id="table1">
+                            <tr>
+                                <th>Roll No</th>
+                                <th>Name</th>
+                                <th>Data</th>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td>xyz</td>
+                                <td>abc</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td>abc</td>
+                                <td>abc</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td>xyz</td>
+                                <td>abc</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="div1">
+                        <div class="display1">
+                            <div class="display2">
+                                <label for="">Row</label>
+                                <input type="text" id="firstnumber" /><br>
+                                <label for="">Col</label>
+                                <input type="text" id="firstnumber1" /><br>
+                                <label for="">Change Value</label>
+                                <input type="text" id="firstnumber2" />
+                            </div>
+                        </div>
+                        <button class="btn1" onclick="changeValue()">Change</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            function changeValue() {
+                let row = document.getElementById("firstnumber").value;
+                let col = document.getElementById("firstnumber1").value;
+                let value = document.getElementById("firstnumber2").value;
+                let table = document.getElementById("table1");
+                let acceptRow = table.getElementsByTagName("tr")[row];
+                let acceptCol = acceptRow.getElementsByTagName("td")[--col];
+                acceptCol.textContent = value;
+            }
+        </script>
+    </body>
+</html>

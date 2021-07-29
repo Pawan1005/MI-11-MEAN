@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=S, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            function check(n) {
+                let re = /[^0-9]/g;
+                if (re.test(n) || n == "") {
+                    alert(`invalid input`);
+                    throw new Error();
+                }
+            }
+            function mul() {
+                n = parseInt(document.getElementById("num").value);
+                check(n);
+                let a = document.createElement("p");
+                for (i = 0; i <= 10; i++) {
+                    a.innerHTML += `${n} X ${i} = ${n * i}<br>`;
+                    document.body.appendChild(a);
+                }
+            }
+        </script>
+        <style>
+            body {
+                padding-left: 500px;
+                background-color: rgb(143, 192, 127);
+            }
+        </style>
+    </head>
+    <body>
+        <h2>Multiplication Table</h2>
+        <input type="text" id="num" />
+        <button onclick="mul()">Create</button>
+    </body>
+</html>

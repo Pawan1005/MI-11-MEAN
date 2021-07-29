@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Question 2</title>
+        <script>
+            function red() {
+                document.getElementById("pid").style.color = "red";
+            }
+            function blue() {
+                document.getElementById("pid").style.color = "blue";
+            }
+            function green() {
+                document.getElementById("pid").style.color = "green";
+            }
+            function size1() {
+                document.getElementById("pid").style.fontSize = "25px";
+            }
+            function size2() {
+                document.getElementById("pid").style.fontSize = "35px";
+            }
+            function size3() {
+                document.getElementById("pid").style.fontSize = "45px";
+            }
+            function font1() {
+                document.getElementById("pid").style.fontFamily = "times";
+            }
+            function font2() {
+                document.getElementById("pid").style.fontFamily = "arial";
+            }
+            function font3() {
+                document.getElementById("pid").style.fontFamily = "courier";
+            }
+        </script>
+    </head>
+    <body style="background-color: violet">
+        <p id="pid" style="text-align: justify">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.<br />
+            Accusamus officiis beatae quod ex?Aspernatur natus recusandae veniam vitae? <br />Dolore facilis ut illum quos iusto atque, voluptate quia porro non
+            reiciendis nisi minima odit,<br />
+            vel assumenda rerum labore error delectus amet distinctio ab?<br />
+            Deleniti debitis quisquam laborum vitae, quidem pariatur consectetur.
+        </p>
+        <fieldset style="height: 400px; width: 400px">
+            <legend>Para Graph color,Font and Size Changes</legend>
+            <h4 style="color: teal">paragraph color Changes !!!</h4>
+            <button id="btn1" onclick="red()" style="background-color: red">RED</button>
+            <button id="btn2" onclick="blue()" style="background-color: blue">BLUE</button>
+            <button id="btn3" onclick="green()" style="background-color: green">GREEN</button>
+            <br /><br />
+            <h4 style="color: teal">paragraph Size Changes !!!</h4>
+            <button id="btn1" onclick="size1()" style="background-color: red">25PX</button>
+            <button id="btn2" onclick="size2()" style="background-color: blue">35PX</button>
+            <button id="btn3" onclick="size3()" style="background-color: green">45PX</button>
+            <br /><br />
+            <h4 style="color: teal">paragraph Font Family Changes !!!</h4>
+            <button id="btn1" onclick="font1()" style="background-color: red">TIMES</button>
+            <button id="btn2" onclick="font2()" style="background-color: blue">ARIAL</button>
+            <button id="btn3" onclick="font3()" style="background-color: green">COURIER</button>
+        </fieldset>
+    </body>
+</html>

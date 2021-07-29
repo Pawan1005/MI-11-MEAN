@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HomePage Post</title>
+    </head>
+    <body>
+        <form action="Result.html" method="POST">
+            <label for="name">Name</label><br />
+            <input type="text" id="s1" placeholder="Enter Name" name="Name" /><br />
+            <label for="roll">RollNo:</label>
+            <br />
+            <input type="text" id="s2" placeholder="Enter RollNO" name="RollNo" /><br />
+            <label for="History">History</label><br />
+            <input type="text" id="s3" placeholder="Enter History Marks" name="History" /><br />
+            <label for="sis">Science:</label><br />
+            <input type="text" id="s4" placeholder="Enter Science Marks" name="Science" /><br />
+            <label for="maths">Maths:</label><br />
+            <input type="text" id="s5" placeholder="Enter Maths Marks" name="Maths" /><br />
+            <label for="maths">Economics:</label><br />
+            <input type="text" id="s6" placeholder="Enter Economics Marks" name="Economics" /><br />
+            <label for="maths">Evs:</label><br />
+            <input type="text" id="s7" placeholder="Enter Evs Marks" name="Evs" /><br />
+            <input type="submit" onclick="submit_marks()" />
+        </form>
+    </body>
+    <script>
+        function submit_marks() {
+            let Name = document.getElementById("s1").value;
+            let RollNO = document.getElementById("s2").value;
+            let History = document.getElementById("s3").value;
+            let Science = document.getElementById("s4").value;
+            let Maths = document.getElementById("s5").value;
+            let Economics = document.getElementById("s6").value;
+            let Evs = document.getElementById("s7").value;
+        }
+        localStorage.setItem("Name", Name);
+        localStorage.setItem("RollNo", RollNo);
+        localStorage.setItem("History", History);
+        localStorage.setItem("Science", Science);
+        localStorage.setItem("Maths", Maths);
+        localStorage.setItem("Economics", Economics);
+        localStorage.setItem("Evs", Evs);
+        sessionStorage.setItem("Name1", Name);
+        sessionStorage.setItem("RollNo1", RollNo);
+        sessionStorage.setItem("History1", History);
+        sessionStorage.setItem("Sicence1", Science);
+        sessionStorage.setItem("Maths1", Maths);
+        sessionStorage.setItem("Economics1", Economics);
+        sessionStorage.setItem("Evs", Evs);
+    </script>
+</html>

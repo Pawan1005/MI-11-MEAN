@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>HTML-DOM</title>
+        <style>
+            .main-box {
+                border: 1px solid black;
+                border-radius: none;
+                border: 10px solid black;
+                text-align: center;
+                width: 200px;
+                height: 200px;
+                padding: 100px;
+                margin-left: 300px;
+            }
+            button {
+                margin-top: 10px;
+                border: black;
+                width: 50px;
+                height: 5vh;
+                background-color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="main-box">
+            <h1 id="p1">HTML DOM</h1>
+        </div>
+        <button type="submit" onclick="left()" value="Left">Left</button>
+        <button type="submit" onclick="center()" value="Center">Center</button>
+        <button type="submit" onclick="right()" value="Left">Right</button>
+        <script>
+            function left() {
+                document.getElementById("p1").style.float = "left";
+            }
+            function center() {
+                document.getElementById("p1").style.textAlign = "center";
+            }
+            function right() {
+                document.getElementById("p1").style.float = "right";
+            }
+        </script>
+    </body>
+</html>

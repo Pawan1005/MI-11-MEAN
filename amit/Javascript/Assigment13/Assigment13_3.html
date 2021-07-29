@@ -1,0 +1,68 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Q3_Date_Ago</title>
+        <style>
+            h1 {
+                text-align: center;
+                color: red;
+                margin-top: 4%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: rgb(157, 153, 192);
+                width: 400px;
+                height: 420px;
+                margin: auto;
+                padding-top: 15px;
+            }
+            p {
+                min-width: 90px;
+                height: 25px;
+                padding: 12px 20px 12px 20px;
+                background-color: white;
+                border: 1px solid #0000004b;
+                border-radius: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Date Ago</h1>
+        <div class="main">
+            <div>
+                <p class="para1">Current Date &nbsp;:&ensp;<span id="num"></span></p>
+            </div>
+            <div class="display2">
+                <p class="para2">
+                    <span>Date 2 day Ago &ensp;:&ensp;</span><br /><br /><span>Date 1 day Ago &ensp;:&ensp;</span><br /><br /><span
+                        >Date 1 Year Ago&ensp;:&ensp;</span
+                    >
+                </p>
+                <p class="para3"><span id="num1"></span><br /><br /><span id="num2"></span><br /><br /><span id="num3"></span></p>
+            </div>
+        </div>
+        <script>
+            function getDateAgo(date, day) {
+                let d1 = new Date(date);
+                d1.setDate(date.getDate() - day);
+                return d1.toLocaleDateString();
+            }
+            let date = new Date();
+            let month = date.getMonth() + 1;
+            let year = date.getFullYear();
+            let year2 = date.getFullYear() - 1;
+            alert("Date 2 day Ago  :   " + getDateAgo(date, 2));
+            alert("Date 1 day Ago  :   " + getDateAgo(date, 1));
+            alert("Date 1 Year Ago  :   " + getDateAgo(date, 365));
+            document.getElementById("num").innerHTML = date.toDateString();
+            document.getElementById("num1").innerHTML = getDateAgo(date, 2);
+            document.getElementById("num2").innerHTML = getDateAgo(date, 1);
+            document.getElementById("num3").innerHTML = getDateAgo(date, 365);
+        </script>
+    </body>
+</html>

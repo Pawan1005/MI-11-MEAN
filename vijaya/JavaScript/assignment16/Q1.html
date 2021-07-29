@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alignment Demo</title>
+        <style>
+            body {
+                padding-top: 3px;
+                background-color: rgb(181, 233, 250);
+            }
+             h1 {
+                text-align: center;
+                color :rgb(7, 63, 165);
+                margin-top: 4%;
+            }
+            .name {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: rgb(91, 207, 243);
+                margin-top: 60px;
+                padding-top: 20px;
+                width: 400px;
+                height:200px;
+                margin: auto;
+                gap: 5px;
+                border-radius: 10px;
+                border: 2px solid rgb(7, 110, 141);
+            }  
+            .res{
+                height: 40px;
+                background-color:  rgb(7, 110, 141);
+                margin-top: 40px;
+                padding-top: 20px;
+                padding-left: 10px;
+                padding-right: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="heading">JavaScript Demo</h1>
+        <div class="name">
+            <div class="res">
+                <button onclick="left()">Left</button>
+                <button onclick="center()">Center</button>
+                <button onclick="right()">Right</button>
+            </div>
+        </div>
+        <script>
+            function left() {
+                document.getElementById("heading").style = "text-align: left;";
+            }
+            function center() {
+                document.getElementById("heading").style = "text-align: center;";
+            }
+            function right() {
+                document.getElementById("heading").style = "text-align: right;";
+            }
+        </script>
+    </body>
+</html>
