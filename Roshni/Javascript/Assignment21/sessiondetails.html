@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            function total(a, b, c, d, e) {
+                return a + b + c + d + e;
+            }
+            function percentage(tot) {
+                return parseInt(tot / 5);
+            }
+            function grad(per) {
+                if (per > 80) {
+                    return "A+";
+                } else if (per > 60) {
+                    return "A";
+                } else if (per > 55) {
+                    return "B+";
+                } else if (per > 40) {
+                    return "B";
+                } else {
+                    return "No Grade";
+                }
+            }
+        </script>
+        <style>
+            body {
+                background-color: rgb(142, 226, 198);
+            }
+            .content {
+                padding: 100px;
+                width: 500px;
+                margin: 100px;
+                background-color: rgb(133, 146, 216);
+                position: relative;
+                left: 100px;
+            }
+            input {
+                float: right;
+            }
+            input.btn {
+                background-color: rgb(183, 0, 255);
+                padding: 5px;
+                border-radius: 10%;
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <p id="con"></p>
+        </div>
+        <script>
+            var Rno = sessionStorage.getItem("Rno");
+            var name = sessionStorage.getItem("name");
+            var clas = sessionStorage.getItem("class");
+            var M1 = parseInt(sessionStorage.getItem("english"));
+            var M2 = parseInt(sessionStorage.getItem("social"));
+            var M3 = parseInt(sessionStorage.getItem("maths"));
+            var M4 = parseInt(sessionStorage.getItem("physics"));
+            var M5 = parseInt(sessionStorage.getItem("chemistry"));
+            var tot = total(M1, M2, M3, M4, M5);
+            var per = percentage(tot);
+            var grade = grad(per);
+            document.getElementById("con").innerHTML += `Roll number: ${Rno}<br><br>`;
+            document.getElementById("con").innerHTML += `name:${name}<br><br>`;
+            document.getElementById("con").innerHTML += `class:${clas}<br><br>`;
+            document.getElementById("con").innerHTML += `Mark of Enghish:${M1}<br><br>`;
+            document.getElementById("con").innerHTML += `Mark of Social:${M2}<br><br>`;
+            document.getElementById("con").innerHTML += `Mark of maths:${M3}<br><br>`;
+            document.getElementById("con").innerHTML += `Mark of physics:${M4}<br><br>`;
+            document.getElementById("con").innerHTML += `Mark of chemistry:${M5}<br><br>`;
+            document.getElementById("con").innerHTML += `Total:${tot}<br><br>`;
+            document.getElementById("con").innerHTML += `Percentage:${per}<br><br>`;
+            document.getElementById("con").innerHTML += `Grade:${grade}<br><br>`;
+        </script>
+    </body>
+</html>
