@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>studmarks</title>
+        <style>
+            .content {
+                padding: 100px;
+                width: 500px;
+                margin: 100px;
+                background-color: rgb(133, 216, 144);
+                position: relative;
+                left: 100px;
+                border-radius: 20%;
+            }
+            input {
+                float: right;
+            }
+            input.btn {
+                background-color: rgb(255, 0, 119);
+                padding: 5px;
+                border-radius: 10%;
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <form action="getdetails.html" method="GET">
+                Roll number: <input type="number" id="Rno" name="Rno" /> <br />
+                <br />
+                name: <input type="text" id="name" name="name" /> <br />
+                <br />
+                class: <input type="text" id="Class" name="Class" /> <br />
+                <br />
+                Mark of Enghish: <input type="number" id="m1" name="m1" /> <br />
+                <br />
+                Mark of Social: <input type="number" id="m2" name="m2" /> <br />
+                <br />
+                Mark of maths: <input type="number" id="m3" name="m3" /> <br />
+                <br />
+                Mark of physics: <input type="number" id="m4" name="m4" /> <br />
+                <br />
+                Mark of chemistry: <input type="number" id="m5" name="m5" /> <br />
+                <br />
+                <input type="submit" class="btn" /> <br />
+            </form>
+        </div>
+    </body>
+</html>
