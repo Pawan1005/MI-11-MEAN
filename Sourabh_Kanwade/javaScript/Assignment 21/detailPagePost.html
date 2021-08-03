@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Detail Page | POST</title>
+        <style>
+            body {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+            }
+            #container {
+                padding: 20px;
+                background-color: aliceblue;
+                border-radius: 10px;
+            }
+        </style>
+        <script>
+            window.addEventListener("load", () => {
+                console.log("loaded");
+                let rno = localStorage.getItem("rno"),
+                    name = localStorage.getItem("name"),
+                    std = localStorage.getItem("std"),
+                    phy = parseInt(localStorage.getItem("phy")),
+                    che = parseInt(localStorage.getItem("che")),
+                    maths = parseInt(localStorage.getItem("maths")),
+                    history = parseInt(localStorage.getItem("history")),
+                    eng = parseInt(localStorage.getItem("eng")),
+                    total = phy + che + maths + history + eng,
+                    percentage = (total / 500) * 100,
+                    grade = "";
+                if (percentage >= 80) {
+                    grade = "A+";
+                } else if (percentage < 80 && percentage >= 60) {
+                    grade = "A";
+                } else if (percentage < 60 && percentage >= 55) {
+                    grade = "B+";
+                } else if (percentage < 55 && percentage >= 40) {
+                    grade = "B";
+                } else {
+                    grade = "No Grade  ";
+                }
+                let template = `<h1>Name : ${name}</h1>
+                <h1>Roll No : ${rno}</h1>
+                <h1>Standard : ${std}</h1>
+                <h1>Total : ${total}</h1>
+                <h1>Percentage : ${percentage.toFixed(2)} %</h1>
+                <h1>Grade : ${grade}</h1>`;
+                document.getElementById("container").innerHTML = template;
+            });
+        </script>
+    </head>
+    <body>
+        <h2>Results</h2>
+        <div id="container"></div>
+    </body>
+</html>
