@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sum of first and last digit equal to middle</title>
+        <style>
+            body {
+                background-color: #616161;
+            }
+            h1 {
+                text-align: center;
+                color: white;
+                margin-top: 5%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #fcf3c1;
+                width: 380px;
+                height: 380px;
+                margin: auto;
+                padding-top: 15px;
+                gap: 26px;
+            }
+            input {
+                width: 55%;
+                margin-left: 10px;
+                margin-bottom: 12px;
+                padding: 4px 8px;
+                font-size: 15px;
+                outline: none;
+                line-height: 19px;
+                border: 1px solid #0000004b;
+            }
+            p {
+                min-width: 260px;
+                height: 93px;
+                padding: 9px 5px 9px 11px;
+                background-color: white;
+                font-weight: bold;
+                border: 1px solid #0000004b;
+            }
+            #num1 {
+                font-weight: 300;
+            }
+            #num2 {
+                font-weight: 300;
+            }
+            #middle {
+                color: #ff0000;
+                font-size: 21px;
+            }
+            button {
+                background-color: #ff0000;
+                color: white;
+                padding: 7px 11px;
+                margin: 0 8px;
+                font-weight: bold;
+                font-size: 17px;
+                border: 1px solid gray;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Sum of First and Last digit</h1>
+        <div class="main">
+            <div>
+                <label for="">Enter the number</label>
+                <input type="text" id="firstnumber">
+            </div>  
+            <div>
+                <p><span id="num2"></span><span id="num1"></span> &ensp;<span id="middle"></span></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="firstlast()">Calculate</button>
+            </div>
+        </div>
+        <script>
+            function firstlast() {  
+                var num, first, last, middle, sum;
+                num = document.getElementById("firstnumber").value;
+                len = num.length;
+                if(len != 3) {
+                    document.getElementById("num1").innerHTML = "Invalid Number!! Please enter a 3 digit number";
+                } else {
+                    last = num%10;
+                    first = parseInt(num/100);
+                    middle = parseInt(num/10)%10;
+                    sum = first+last;
+                    document.getElementById("num1").innerHTML += " sum = first + last &emsp;" +first+ " + " +last+ " = " +middle;
+                    document.getElementById("num1").innerHTML += "<br> sum = middle &emsp;&emsp;&nbsp;" +sum+ " = " +middle;
+                    if(sum == middle) {
+                        document.getElementById("middle").innerHTML = "<br><br> Sum match";
+                    } else {
+                        document.getElementById("middle").innerHTML = "<br><br> Sum does not match";
+                    }
+                }                        
+            }
+        </script>
+    </body>
+</html>

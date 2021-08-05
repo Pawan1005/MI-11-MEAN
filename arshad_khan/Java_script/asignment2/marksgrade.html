@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Result Show in Grade</title>
+        <script>
+            function show() {
+                a = parseInt(document.getElementById("num1").value);
+                b = parseInt(document.getElementById("num2").value);
+                c = parseInt(document.getElementById("num3").value);
+                d = parseInt(document.getElementById("num4").value);
+                e = parseInt(document.getElementById("num5").value);
+                result = a + b + c + d + e;
+                percentage = result / 5;
+                if (percentage >= 75 && percentage <= 100) {
+                    document.getElementById("pid").innerHTML = "Congratulation You are passed!!!";
+                    parseInt((document.getElementById("pid").innerHTML = "Your Percentage is " + "<h2>" + percentage + "</h2>"));
+                    document.getElementById("pid").innerHTML = "You are passed with Grade  <h2>A</h2>";
+                } else if (percentage >= 60 && percentage <= 74) {
+                    document.getElementById("pid").innerHTML = "Congratulation You are passed!!!";
+                    parseInt((document.getElementById("pid").innerHTML = "Your Percentage is " + "<h2>" + percentage + "</h2>"));
+                    document.getElementById("pid").innerHTML = "You are passed with Grade  <h2>B</h2>";
+                } else if (percentage >= 40 && percentage <= 59) {
+                    document.getElementById("pid").innerHTML = "Congratulation You are passed!!!";
+                    parseInt((document.getElementById("pid").innerHTML = "Your Percentage is " + "<h2>" + percentage + "</h2>"));
+                    document.getElementById("pid").innerHTML = "You are passed with Grade  <h2>C</h2>";
+                } else if (percentage >= 30 && percentage <= 39) {
+                    document.getElementById("pid").innerHTML = "Congratulation You are passed!!!";
+                    parseInt((document.getElementById("pid").innerHTML = "Your Percentage is " + "<h2>" + percentage + "</h2>"));
+                    document.getElementById("pid").innerHTML = "You are passed with Grade  <h2>D</h2>";
+                } else {
+                    document.getElementById("pid").innerHTML = "You are Failed!!!";
+                    parseInt((document.getElementById("pid").innerHTML = "Your Percentage is " + "<h2>" + percentage + "</h2>"));
+                    document.getElementById("pid").innerHTML = "You are Failed with Grade  <h2>F</h2>";
+                }
+            }
+        </script>
+        <style>
+            .box {
+                height: 700px;
+                width: 600px;
+                border: 1px solid black;
+                background-image: url("Images/Minimalist-Crumpled-Paper-Simple-Background-Image.jpg");
+                margin-top: 150px;
+            }
+            button {
+                margin-top: 30px;
+            }
+        </style>
+    </head>
+    <body style="background-color:lightblue">
+        <center>
+            <div class="logincentrecard">
+                <div class="card">
+                    <div class="container">
+                        <h1>Find Result With Grade</h1>
+                        <fieldset style="width: 500px;height: 500px;background-color: rgb(182, 35, 157);>
+                            <label for=" Num1">Enter Maths Marks:</label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="num1"
+                                placeholder="Enter Maths Marks"> <br><br>
+                            <label for="Num2">Enter English Marks:</label>
+                            &nbsp;&nbsp;<input type="text" id="num2" placeholder="Enter English Marks"><br><br>
+                            <label for="Num1">Enter Physics Marks:</label>
+                            &nbsp;&nbsp;&nbsp;<input type="text" id="num3" placeholder="Enter Physics Marks"> <br><br>
+                            <label for="Num2">Enter Chemistry Marks:</label>
+                            <input type="text" id="num4" placeholder="Enter Chemistry Marks"><br><br>
+                            <label for="Num2">Enter Hindi Marks:</label>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="num5"
+                                placeholder="Enter Hindi Marks"><br><br>
+                            <button onclick="show()">Find Result With Grade</button>
+                            <h4>Find Result With Grade</h4>
+                            <p id="pid"></p>
+                        </fieldset>
+                    </div>
+                </div>
+            </div>
+        </center>
+    </body>
+</html>

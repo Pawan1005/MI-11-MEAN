@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <title>Assignment 2.2 | Js </title>
+        <style>
+            label{
+                padding-left: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row" style="margin-left: 260px; margin-top: 180px;">
+                <div class="card" style=" width: 600px;  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+                     <h5 style="text-align:center; margin-top: 30px;">Calculator of Total, Percentage and Grade</h5>
+                    <div class="card-body">
+                        <label >English :</label>
+                        <input type="text" id="num1" style="margin-left: 80px; padding-left: 10px;"><br><br>
+                        <label >Hindi :</label>
+                        <input type="text" id="num2" style="margin-left: 95px; padding-left: 10px;"><br><br>
+                        <label >Maths :</label>
+                        <input type="text" id="num3" style="margin-left: 87px; padding-left: 10px;"><br><br>
+                        <label >Science :</label>
+                        <input type="text" id="num4" style="margin-left: 73px; padding-left: 10px;"><br><br>
+                        <label >Sanskrit :</label>
+                        <input type="text" id="num5" style="margin-left: 72px; padding-left: 10px;"><br><br>
+                        <br><br>
+                        <input type="button" value="Total" style="width: 100px; margin-left: 50px; height: 35px; background-color: white;" onclick="show()"/> </td>
+                        <input type="button" value="Average" style="width: 100px; margin-left: 50px; height: 35px; background-color: white;" onclick="average()"/> </td><br><br>
+                        <label>Total :</label>
+                        <input type="text" id="res" style="margin-left: 116px; padding-left: 10px;"><br><br>
+                        <label>Average :</label>
+                        <input type="text" id="averg" style="margin-left: 90px; padding-left: 10px;"><br><br>
+                        <label>Grade :</label>
+                        <input type="text" id="grd" style="margin-left: 105px; padding-left: 10px;">
+                <script>
+                    function show(){
+                        "use strict"
+                        var sum, a,b,c,d,e;
+                        a = parseInt(document.getElementById("num1").value);
+                        b = parseInt(document.getElementById("num2").value);
+                        c = parseInt(document.getElementById("num3").value);
+                        d = parseInt(document.getElementById("num4").value);
+                        e = parseInt(document.getElementById("num5").value);
+                        sum = a+b+c+d+e;    
+                        document.getElementById("res").value = sum;
+                    }
+                    function average(){
+                        "use strict"
+                        var averg, a,b,c,d,e;
+                        a = parseInt(document.getElementById("num1").value);
+                        b = parseInt(document.getElementById("num2").value);
+                        c = parseInt(document.getElementById("num3").value);
+                        d = parseInt(document.getElementById("num4").value);
+                        e = parseInt(document.getElementById("num5").value);
+                        averg = (a+b+c+d+e)/5;
+                        document.getElementById("averg").value = averg;
+
+                        if (averg >= 75) {
+                            document.getElementById("grd").value = "A";
+                        } else if (averg >= 60 && averg < 75) {
+                            document.getElementById("grd").value = "B";
+                        } else if (averg >= 40 && averg < 60) {
+                            document.getElementById("grd").value = "C";
+                        } else if (averg >= 30 && averg < 40) {
+                            document.getElementById("grd").value = "D";
+                        } else if (averg < 30) {
+                            document.getElementById("grd").value = "F";
+                        }
+                    }
+                </script>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="comman_file.css" />
+        <title>Even_odd_product_sum</title>
+        <script>
+            function fun() {
+                var num,rem,sum = 0,product = 1;
+                num = document.getElementById("num").value;
+                len = num.length;
+                if (len != 6) {
+                    document.getElementById("sum").innerHTML = "Invalid Number!! Please enter a 6 digit number ";
+                } else {
+                    while (num > 0) {
+                        rem = num % 10;
+                        num = parseInt(num / 10);
+                        if (rem % 2 == 0) {
+                            sum = sum + rem;
+                            document.getElementById("sum").innerHTML += " + " + rem;
+                        } else {
+                            product = product * rem;
+                            document.getElementById("product").innerHTML += " * " + rem;
+                        }
+                    }
+                    document.getElementById("sum").innerHTML += "  =  " + sum;
+                    document.getElementById("product").innerHTML += "  =  " + product;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Sum of even and product of odd number !!</h1>
+        <div>
+            <input type="number" id="num" />
+            <button onclick="fun()">Check</button>
+            <h2 id="sum"></h2>
+            <h2 id="product"></h2>
+        </div>
+    </body>
+</html>

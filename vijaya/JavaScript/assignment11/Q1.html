@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset=utf-8 />
+        <title>Display The Marks Of Students</title>
+        <style>
+            h1 {
+                text-align: center;
+                color:white;
+            }
+            body {
+                background-color: rgb(66, 65, 65);
+            }
+            .name {
+                align-items: center;
+                background-color: rgb(236, 191, 95);
+                width: 650px;
+                height: 600px;
+                margin: auto;
+                padding-top: 5px;
+                padding-left: 10px;
+                gap: 5px;
+                border-radius: 10px;
+                border-color: rgb(4, 29, 253);
+            }
+            .res {
+                background-color: white;
+                color: rgb(5, 5, 143);
+                width: 180px;
+                margin-left: 30px;
+                padding-left: 20px;
+                border-radius: 5px;
+                border-color: black;
+            }
+            .res1 {
+                background-color: white;
+                color: rgb(219, 11, 46);
+                width: 100px;
+                margin-left: 30px;
+                padding-left: 20px;
+                border-radius: 5px;
+                border-color: black;
+            }
+            .res2 {
+                background-color: white;
+                color: rgb(5, 5, 143);
+                width: 180px;
+                margin-left: 250px;
+                padding-left: 20px;
+                border-radius: 5px;
+                border-color: black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Marks of Students</h1>
+        <div class="name">
+            Enter Roll no. of 10 Students:<br>
+            <input type="text" id="text1"></input> <input type="button" value="Add" onclick="add()"></input><br>
+            Enter Marks of 10 Students:<br>
+            <input type="text" id="text2"></input> <input type="button" value="Add" onclick="add1()"></input>
+            <input type="button" value="Display" onclick="display()" style="margin-left: 20px;"></input><br>
+            <div class="res" id="Result"></div><br>
+            <input type="text" id="text3" placeholder="Enter Roll no. to search"></input>
+            <input type="button" value="search" onclick="search()" style="margin-left: 120px;"></input>
+            <div class="res2" id="Result2"></div>
+            <input type="button" value="sort" onclick="sort()" style="margin-left: 20px;"></input><br>
+            Total marks after sort:<br>
+            <div class="res1" id="Result1"></div>
+        </div>
+        <script>
+            var a = 1;
+            var array = Array();
+            function add() {
+                array[a] = parseInt(document.getElementById("text1").value);
+                a++;
+                document.getElementById("text1").value = "";
+            }
+            var x = 1;
+            var array1 = Array();
+            function add1() {
+                array1[x] = parseInt(document.getElementById("text2").value);
+                if (array1[x] > 50 || array1[x]<0) {
+                    alert("invalid! please enter less than 50");
+                    array1[x]="";
+                }
+                x++;
+                document.getElementById("text2").value = "";
+            }
+            function display() {
+                var total = 0, e = "";
+                for (var y = 1; y <= 10; y++) {
+                    total = (array1[y] * 20 / 100) + array1[y];
+                    array1[y] = parseInt(total);
+                    e += "  " + array[y] +"  "+ " = " +"  "+ array1[y] + "<br/>";
+                }
+                document.getElementById("Result").innerHTML +="Roll no.:" + " " + "Marks:<br>" +e;
+            }
+            function search()
+            {
+                num = parseInt(document.getElementById("text3").value);
+                var index=0;
+                for(let i=0; i<=10; i++) {
+                    if(array[i] == num) {
+                        index = i;
+                    }                      
+                }
+                document.getElementById("Result2").innerHTML +="Roll no:"+num +" Has scored marks: "+array1[index]
+            }
+            function sort() {
+                array1[x] = parseInt(document.getElementById("text2").value);
+                var y=1;
+                for (var i = 1; i <= 10; i++) {
+                    for (var j = 1; j <= 10 - 1; j++) {
+                        if (array1[j] < array1[j + 1]) {
+                            var temp = array1[j];
+                            array1[j] = array1[j + 1];
+                            array1[j + 1] = temp;
+                        }
+                    }
+                }
+                var e1="";
+                for (let k = 1; k <= 10; k++) {
+                   e1 += "  " + array1[k] + "<br/>";
+                }
+                document.getElementById("Result1").innerHTML += "  " + "Marks:<br>" + e1;
+            }
+            
+        </script>
+    </body>
+</html>

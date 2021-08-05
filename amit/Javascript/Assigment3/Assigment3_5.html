@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Assignment 1</title>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <style>
+            .container {
+                background-color: rgb(220, 203, 203);
+                width: 350px;
+                height: 480px;
+                text-align: center;
+                margin-left: 480px;
+                box-shadow: 7px 7px 15px;
+                border-radius: 15px;
+            }
+            .btn {
+                padding: 15px;
+                background-color: red;
+                outline-color: white;
+                outline-width: 15px;
+                color: white;
+            }
+            .label {
+                border-radius: 15px;
+                box-sizing: 30px;
+            }
+        </style>
+    </head>
+    <script language="javascript">
+        function show() {
+            "use strict";
+            var a,
+                c,
+                f = 1;
+            a = parseInt(document.getElementById("num1").value);
+            {
+                for (c = 1; c <= a; c++) f = f * c;
+            }
+            document.getElementById("pid").innerHTML += "<br> Factorial of  " + a;
+            document.getElementById("pid").innerHTML += "<br> is " + f;
+        }
+    </script>
+</html>
+<div class="bordertad">
+    <div class="container">
+        <br /><br /><br />
+        <h1>Factorial of Number</h1>
+        Enter the Number: <input type="text" id="num1" /><br /><br />
+        <button onclick="show()" class="btn">Calculate</button>
+        <p id="pid"></p>
+    </div>
+</div>

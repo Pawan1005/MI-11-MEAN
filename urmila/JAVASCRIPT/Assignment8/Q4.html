@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="Ass8.css" />
+        <title>Assignment 8</title>
+        <style>
+            .container {
+                width: 70%;
+            }
+            .flex-container {
+                flex-direction: column;
+            }
+            .flex-container > .container {
+                grid-template-columns: 1fr 1fr;
+                justify-items: center;
+            }
+            button {
+                padding: 10px 30px;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <ul>
+                <li>Assignment 8</li>
+                <li><a href="Q1.html">Question 1</a></li>
+                <li><a href="Q2.html">Question 2</a></li>
+                <li><a href="Q3.html">Question 3</a></li>
+                <li><a href="Q4.html" class="active">Question 4</a></li>
+            </ul>
+        </nav>
+        <div class="flex-container">
+            <div class="container">
+                <h3>Section 1</h3>
+                <h3>Section 2</h3>
+                <div class="container">
+                    <label for="sub1">Subject 1</label>
+                    <input type="text" class="sectionA" />
+                    <label for="sub2">Subject 2</label>
+                    <input type="text" class="sectionA" />
+                    <label for="sub3">Subject 3</label>
+                    <input type="text" class="sectionA" />
+                    <label for="sub4">Subject 4</label>
+                    <input type="text" class="sectionA" />
+                    <label for="sub5">Subject 5</label>
+                    <input type="text" class="sectionA" />
+                </div>
+                <div class="container">
+                    <label for="sub6">Subject 1</label>
+                    <input type="text" class="sectionB" />
+                    <label for="sub7">Subject 2</label>
+                    <input type="text" class="sectionB" />
+                    <label for="sub8">Subject 3</label>
+                    <input type="text" class="sectionB" />
+                    <label for="sub9">Subject 4</label>
+                    <input type="text" class="sectionB" />
+                    <label for="sub10">Subject 5</label>
+                    <input type="text" class="sectionB" />
+                </div>
+                <center><button onclick="mergeAndSort()">Merge and Sort</button></center>
+            </div>
+            <center><div id="result"></div></center>
+        </div>
+        <script>
+            let sectionA = document.getElementsByClassName("sectionA");
+            let sectionB = document.getElementsByClassName("sectionB");
+            let result = document.getElementById("result");
+            let a = [],
+                b = [],
+                res = [];
+            function mergeAndSort() {
+                a = [];
+                b = [];
+                for (let i = 0; i < 5; i++) {
+                    a.push(parseInt(sectionA[i].value));
+                    b.push(parseInt(sectionB[i].value));
+                }
+                res = [...a];
+                for (let i = 0; i < b.length; i++) {
+                    res.push(b[i]);
+                }
+                mergeSort(res, 0, 9);
+                result.innerHTML += "<h3>After Merge</h3>";
+                for (let i = 0; i < res.length; i++) {
+                    result.innerHTML += `<div>${i + 1} : ${res[i]}</div>`;
+                }
+            }
+            function merge(array, start, mid, end) {
+                let temp = [],
+                    k = 0,
+                    i = start,
+                    j = mid + 1;
+                while (i <= mid && j <= end) {
+                    if (array[i] >= array[j]) {
+                        temp[k] = array[j];
+                        j++;
+                        k++;
+                    } else {
+                        temp[k] = array[i];
+                        i++;
+                        k++;
+                    }
+                }
+                while (i <= mid) {
+                    temp[k] = array[i];
+                    i++;
+                    k++;
+                }
+                while (j <= end) {
+                    temp[k] = array[j];
+                    j++;
+                    k++;
+                }
+                for (let index = start; index <= end; index++) {
+                    array[index] = temp[index - start];
+                }
+            }
+
+            function mergeSort(array, start, end) {
+                if (start < end) {
+                    let mid = parseInt((start + end) / 2);
+                    mergeSort(array, start, mid);
+                    mergeSort(array, mid + 1, end);
+                    merge(array, start, mid, end);
+                }
+            }
+        </script>
+    </body>
+</html>

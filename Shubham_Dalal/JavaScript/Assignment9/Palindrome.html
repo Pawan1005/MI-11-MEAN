@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assignment9.css">
+        <title>Check palindrome</title>
+        <script>
+            function fun() {
+                var num,temp,rem,rev = 0;
+                num = parseInt(document.getElementById("num").value);
+                temp = num;
+                while (temp != 0) {
+                    rem = temp % 10;
+                    rev = rev * 10 + rem;
+                    temp = parseInt(temp / 10);
+                }
+                if (num == rev) {
+                    document.getElementById("pid").innerHTML = "Number is palindrome!!";
+                } else {
+                    document.getElementById("pid").innerHTML = "Number is not palindrome!!";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div>
+            <h1>Check the number is Palindrome or not!!!</h1>
+            <input type="number" name="" id="num" />
+            <button onclick="fun()">check Palindrome</button>
+            <h2 id="pid"></h2>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment-6</title>
+    </head>
+    <body>
+        <div class="main">
+            <h1>Valid Url or Not</h1>
+            <div>
+                <label for="">Enter the url</label>
+                <input type="text" id="firstnumber" />
+            </div>
+            <div>
+                <p>It is&nbsp;&nbsp;&nbsp;<span id="num1"></span></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="validUrl()">Check</button>
+            </div>
+        </div>
+        <script>
+            function validUrl() {
+                function url(str) {
+                    regExp = /^(https:\/\/www\.|http:\/\/www\.|www\.)[a-zA-Z0-9\-_$]+\.[a-zA-Z]{2,3}$/;
+                    if (regExp.test(str)) {
+                        document.getElementById("num1").innerHTML = "URL";
+                    } else {
+                        document.getElementById("num1").innerHTML = "not URL";
+                    }
+                }
+                var regExp, str;
+                str = document.getElementById("firstnumber").value;
+                url(str);
+            }
+        </script>
+    </body>
+</html>

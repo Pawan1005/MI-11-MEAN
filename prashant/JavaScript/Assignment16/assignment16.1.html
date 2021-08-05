@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DOM | Question 1</title>
+        <style>
+            .container {
+                display: flex;
+                justify-content: center;
+            }
+            button {
+                padding: 10px 20px;
+                margin: 20px;
+                border-radius: 10px;
+                font-weight: bold;
+                font-size: 24px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Heading</h1>
+        <div class="container">
+            <button id="left">Left</button>
+            <button id="center">Center</button>
+            <button id="right">Right</button>
+        </div>
+        <script>
+            let h1Ref = document.getElementsByTagName("h1")[0];
+            h1Ref.style.textAlign = "center";
+            document.getElementById("left").onclick = () => {
+                h1Ref.style.textAlign = "left";
+            };
+            document.getElementById("center").onclick = () => {
+                h1Ref.style.textAlign = "center";
+            };
+            document.getElementById("right").onclick = () => {
+                h1Ref.style.textAlign = "right";
+            };
+        </script>
+    </body>
+</html>

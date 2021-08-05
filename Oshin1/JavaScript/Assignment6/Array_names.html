@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Array_names</title>
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+                transition: 0.3s;
+                width: 40%;
+                height: 300px;
+                border-radius: 20px;
+                background-color: thistle;
+                margin: auto;
+                margin-top: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <h1 style="text-align: center; color: purple;"> Print Array</h1>
+                <div id="container1"></div>     
+                <script>
+                    array1 = new Array(5);
+                    container1 = document.getElementById("container1");
+                    for ( i = 0; i < 5; i++) {
+                        array1[i] = prompt("Enter the name:- " + (i + 1));
+                    }
+                    container1.innerHTML += `<div>${array1}</div>`;
+                    for ( i = 0; i < 5; i++) {
+                        container1.innerHTML += `<div>Name :- ${i + 1} : ${array1[i]}</div>`;
+                    }
+                </script>
+            </div>
+        </div>        
+    </body>
+</html>

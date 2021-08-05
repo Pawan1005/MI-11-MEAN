@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assign17_Q1</title>
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                margin-top: 50px;
+                align-items: center;
+                justify-content: center;
+                background-color: indianred;
+                width: 600px;
+                height: 700px;
+                margin: auto;
+                border-radius: 20px;
+            }
+            #pid {
+                color: white;
+                text-align: center;
+            }
+            button {
+                background-color: white;
+                color: purple;
+                padding: 10px;
+                border-radius: 10px;
+                margin-left: 200px;
+                width: 100px;
+            }
+            button:hover {
+                background-color: thistle;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <label>Name of Student </label>:- <input type="text" id="a1" required /> <br />
+                <br />
+                <label> Roll No of Student</label>:-<input type="text" id="a2" required /> <br />
+                <br />
+                <label>Marks of Maths</label>:-&nbsp;&nbsp;&nbsp;&nbsp;<input type="text" id="a3" required /> <br />
+                <br />
+                <label> Marks of Science </label>:-&nbsp;<input type="text" id="a4" required /> <br />
+                <br />
+                <label>Marks of History </label>:-&nbsp;&nbsp;<input type="text" id="a5" required /> <br />
+                <br />
+                <button onclick="main()">Submit</button>
+                <p id="pid"></p>
+            </div>
+        </div>
+        <script>
+            function check(n, v) {
+                let re = /[^0-9]/g;
+                if (re.test(n) || n == "") {
+                    alert(`invalid input for ${v}`);
+                    throw new error();
+                }
+            }
+            class Student {
+                constructor() {
+                    this.name = "";
+                    this.rno = 0;
+                    this.math = 0;
+                    this.science = 0;
+                    this.history = 0;
+                    this.total = 0;
+                    this.per = 0;
+                    this.grd = 0;
+                }
+                read() {
+                    this.name = document.getElementById("a1").value;
+                    this.rno = document.getElementById("a2").value;
+                    this.math = document.getElementById("a3").value;
+                    this.science = document.getElementById("a4").value;
+                    this.history = document.getElementById("a5").value;
+                    check(this.rno, "roll number");
+                    check(this.math, "Maths");
+                    check(this.science, "Science");
+                    check(this.history, "History");
+                }
+                calculate() {
+                    this.total = parseInt(this.math) + parseInt(this.science) + parseInt(this.history);
+                    this.per = Math.round(this.total / 3);
+                    if (this.per > 80) {
+                        this.grd = "A+";
+                    } else if (this.per > 60) {
+                        this.grd = "A";
+                    } else if (this.per > 55) {
+                        this.grd = "B+";
+                    } else if (this.per > 40) {
+                        this.grd = "B";
+                    } else {
+                        this.grd = "No Grade";
+                    }
+                }
+                display() {
+                    document.getElementById("pid").innerHTML += `<h3>******REPORT CARD*********</h3>`;
+                    document.getElementById("pid").innerHTML += `<br>Name of the student:${this.name}`;
+                    document.getElementById("pid").innerHTML += `<br>Roll no of the student:${this.rno}`;
+                    document.getElementById("pid").innerHTML += `<br>Maths Marks:${this.math}`;
+                    document.getElementById("pid").innerHTML += `<br>Science Marks:${this.science}`;
+                    document.getElementById("pid").innerHTML += `<br> History Marks:${this.history}`;
+                    document.getElementById("pid").innerHTML += `<h3>Total Marks:${this.total}</h3>`;
+                    document.getElementById("pid").innerHTML += `<h3>Percentage:${this.per}</h3>`;
+                    document.getElementById("pid").innerHTML += `<h3>Grade:${this.grd}</h3>`;
+                }
+            }
+            function main() {
+                let s1 = new Student();
+                s1.read();
+                s1.calculate();
+                s1.display();
+            }
+        </script>
+    </body>
+</html>

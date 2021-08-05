@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment_20</title>
+        <style>
+            .card {
+                margin-top: 70px;
+                align-items: center;
+                justify-content: center;
+                background-color: pink;
+                width: 400px;
+                height: 300px;
+                margin: auto;
+                border-radius: 20px;
+            }
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 8px;
+            }
+            th,
+            td {
+                min-width: 60px;
+            }
+            th {
+                color: #ffffff;
+                background-color: black;
+            }
+            .btn {
+                width: 120px;
+                height: 40px;
+                border-radius: 20px;
+                margin-left: 120px;
+            }
+        </style>
+    </head>
+    <body style="background-color: white">
+        <div class="card">
+            <div class="container">
+                <h1 style="text-align: center; color: black">Add New Row</h1>
+                <table id="tab">
+                    <tr>
+                        <th>Roll No</th>
+                        <th>Name</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>Nikita</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Komal</td>
+                    </tr>
+                </table>
+                <br /><br />
+                <button class="btn" onclick="new1()">Add</button>
+            </div>
+        </div>
+        <script>
+            function new1() {
+                let table = document.getElementById("tab");
+                let row = table.insertRow();
+                let col1 = row.insertCell();
+                let col2 = row.insertCell();
+                col1.textContent = 3;
+                col2.textContent = "xyz";
+            }
+        </script>
+    </body>
+</html>

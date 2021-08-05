@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>DOM | Q3</title>
+        <style>
+            .container {
+                display: flex;
+                flex-direction: column;
+                padding: 0% 25%;
+            }
+            img {
+                width: 950px;
+                height: 700px;
+            }
+            button {
+                margin-top: 20px;
+                padding-top: 10px;
+                padding-bottom: 10px;
+                font-size: 20px;
+                font-weight: bold;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h1 id="title">Black Clover</h1>
+            <img src="./black-clover.jpg" alt="image" id="image" />
+            <button id="nextBtn">Next</button>
+        </div>
+        <script>
+            let i = 0;
+            let images = [
+                { title: "Dhoni", img: "dhoni.jpg" },
+                { title: "A.B Divillears", img: "abd.jpg" },
+                { title: "David Miller", img: "miller.jpg" },
+            ];
+            let title = document.getElementById("title");
+            let image = document.getElementById("image");
+            title.innerText = images[0].title;
+            image.src = images[0].img;
+            document.getElementById("nextBtn").onclick = () => {
+                i++;
+                title.innerText = images[i].title;
+                image.src = images[i].img;
+            };
+        </script>
+    </body>
+</html>

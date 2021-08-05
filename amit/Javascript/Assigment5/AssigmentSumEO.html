@@ -1,0 +1,83 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>sum of number</title>
+        <style>
+            h1 {
+                text-align: center;
+                color: red;
+                margin-top: 5%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 410px;
+                height: 230px;
+                margin: auto;
+                padding-top: 15px;
+                gap: 10px;
+                border-radius: 10px;
+                background-color: rgb(227, 230, 233);
+                box-shadow: 2px 2px 4px;
+            }
+            input {
+                width: 55%;
+                margin-left: 10px;
+                margin-bottom: 12px;
+                padding: 4px 8px;
+                font-size: 16px;
+                outline: none;
+                line-height: 19px;
+                border: 1px solid #0000004b;
+                box-shadow: 2px 2px 4px;
+            }
+
+            #num2 {
+                font-size: 19px;
+                color: #ff0000;
+            }
+            button {
+                background-color: #ff0000;
+                color: white;
+                padding: 7px 11px;
+                margin: 0 8px;
+                font-weight: bold;
+                font-size: 17px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Sum of Even num & Product of Odd</h1>
+        <div class="main">
+            <label for="">Enter the number </label>
+            <input type="text" id="firstnumber" />
+            <button class="btn1" onclick="sum_product6()">Check</button>
+            <p><span id="num1"></span><span id="num2"></span></p>
+        </div>
+        <script>
+            function sum_product6() {
+                var r,
+                    n,
+                    sum = 0,
+                    product = 1;
+                n = parseInt(document.getElementById("firstnumber").value);
+                n1 = n;
+                while (n > 0) {
+                    r = n % 10;
+                    if (r % 2 == 0) {
+                        sum = sum + r;
+                    } else {
+                        product = product * r;
+                    }
+                    n = parseInt(n / 10);
+                }
+                document.getElementById("num1").innerHTML = "Sum of even digits : " + sum;
+                document.getElementById("num2").innerHTML = "Product of odd digits : " + product;
+            }
+        </script>
+    </body>
+</html>

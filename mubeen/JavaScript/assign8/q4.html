@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+            crossorigin="anonymous"/>
+        <script>
+            function mergesort() {}
+        </script>
+        <title>Document</title>
+    </head>
+    <body>
+        <style>
+            input {
+                margin: 5px;
+            }
+            body {
+                margin: 10px;
+                background-color: darkcyan;
+            }
+        </style>
+        <center><h1>Merge Sorting</h1></center>
+        <div class="container py-5">
+            <div class="row">
+                <div class="col-4" id="inp">
+                    <h3>Section A</h3>
+                    <input type="text" id="num1" /> <br />
+                    <input type="text" id="num2" /> <br />
+                    <input type="text" id="num3" /> <br />
+                    <input type="text" id="num4" /> <br />
+                    <input type="text" id="num5" /> <br />
+                    <h3>Section B</h3>
+                    <input type="text" id="num6" /> <br />
+                    <input type="text" id="num7" /> <br />
+                    <input type="text" id="num8" /> <br />
+                    <input type="text" id="num9" /> <br />
+                    <input type="text" id="num10" /> <br />
+                    <button onclick="app()" class="btn btn-dark">Get</button>
+                </div>
+                <div class="col">
+                    <p id="root"></p>
+                </div>
+            </div>
+        </div>
+        <script>
+            function app() {
+                var arr1 = [],
+                    arr2 = [],
+                    c = [];
+                for (i = 0; i < 5; i++) {
+                    arr1[i] = parseInt(document.getElementById(`num${i + 1}`).value);
+                    arr2[i] = parseInt(document.getElementById(`num${i + 6}`).value);
+                }
+                document.getElementById("root").innerHTML += `<h3>Arrays Before Sorting</h3> <br> Arr1:${arr1} <br> Arr2:${arr2} <br>`;
+                for (i = 0; i < 5; i++) {
+                    for (j = i; j < 5; j++) {
+                        let temp = 0;
+                        if (arr1[i] > arr1[j]) {
+                            temp = arr1[i];
+                            arr1[i] = arr1[j];
+                            arr1[j] = temp;
+                        }
+                        if (arr2[i] > arr2[j]) {
+                            temp = arr2[i];
+                            arr2[i] = arr2[j];
+                            arr2[j] = temp;
+                        }
+                    }
+                }
+                document.getElementById("root").innerHTML += `<h3>Arrays After Sorting</h3> <br> Arr1:${arr1} <br> Arr2:${arr2} <br>`;
+                var i = 0,
+                    j = 0,
+                    k = 0;
+                debugger;
+                while (k < 10) {
+                    if (arr1[i] <= arr2[j]) {
+                        c[k] = arr1[i];
+                        k++;
+                        i++;
+                    } else {
+                        c[k] = arr2[j];
+                        k++;
+                        j++;
+                    }
+                }
+                document.getElementById("root").innerHTML += "<h3>After Merge Sort<?h3> <br>";
+                document.getElementById("root").innerHTML += c;
+            }
+        </script>
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous">
+        </script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+            crossorigin="anonymous">
+        </script>
+    </body>
+</html>

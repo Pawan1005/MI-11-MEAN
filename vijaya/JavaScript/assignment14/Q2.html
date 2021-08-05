@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bank details or transaction</title>
+        <style>
+            h1 {
+                text-align: center;
+                color:white;      
+                margin-top: 2%;
+            }
+            body {
+                padding-top: 3px;
+                background-color: rgb(87, 85, 85);
+            }
+            .name {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: rgb(107, 9, 47);
+                margin-top: 5px;
+                padding-top: 5px;
+                width: 600px;
+                height:520px;
+                margin: auto;
+                gap: 5px;
+                border-radius: 10px;
+                border: 1px solid white;
+            }  
+            table{
+                height: 100px;
+                background-color: white;
+                border: solid;
+                border-collapse: separate;
+                border-radius: 1px;
+                border-color: black;
+            }
+            th{
+                border: 1px solid black;
+                padding-top: 5px;
+                padding-bottom: 3px;
+                          
+            }
+            tr, td {
+                font-size: 14px;
+                min-width: 100px;
+                text-align: center;
+                padding-top: 5px;
+                padding-bottom: 3px;
+                border: 1px solid black;
+            }         
+        </style>
+    <body>
+        <h1>Bank Details or Transaction</h1>
+        <div class="name">
+            <h3>Transaction</h3>
+            <table>
+                <tr>
+                    <th>SrNO.</th>
+                    <th>Deposit Amount</th>
+                    <th>Withdraw Amount</th>
+                </tr>
+                <tr class="row">
+                    <td id="no" class="col"></td>
+                    <td id="bal" class="col"></td>
+                    <td id="amt" class="col"></td>
+                </tr>
+            </table>
+            <div>
+                <p><span id="result"></span></p>
+            </div>
+            <h3>Bank Details</h3>
+            <table>
+                <tr>
+                    <th>SrNO.</th>
+                    <th>Acc_No</th>
+                    <th>Name</th>
+                    <th>Balance</th>
+                </tr>
+                <tr>
+                    <td id="no2"></td>
+                    <td id="acc"></td>
+                    <td id="acname"></td>
+                    <td id="bal"><span id="bal1"></span></td>
+                </tr>
+            </table>
+        </div>
+        <script>
+            class Bank {
+                constructor(n) {
+                    this.sr_no = n;
+                    this.acc_no = 0;
+                    this.acc_name = "";
+                    this.bal = 0;
+                }
+                get_data(acc_no, acc_name) {
+                this.acc_no = acc_no;
+                this.acc_name = acc_name;
+                }
+                deposit(bal) {
+                    this.bal = parseInt(bal);
+                    document.getElementById("no").innerHTML += this.sr_no + "<br>";
+                    document.getElementById("bal").innerHTML += this.bal + "<br>";
+                }
+                withdraw(with_amt) {
+                    var total=0;
+                    this.with_amt = parseInt(with_amt);
+                    document.getElementById("amt").innerHTML += this.with_amt + "<br>";
+                    this.total=this.bal-this.with_amt;
+                    document.getElementById("result").innerHTML += "Balance &ensp;=&emsp;"+this.total + "<br><br>";
+                        if (this.with_amt > this.bal) {
+                        alert("Error:Insufficient Funds");
+                    } else {
+                        this.bal = this.bal - this.with_amt;
+                    }
+                    if (this.bal < 1000) {
+                        alert("Warning – Balance below 1000");
+                    }
+                }
+                display() {
+                    document.getElementById("no2").innerHTML += this.sr_no + "<br><br>";
+                    document.getElementById("acc").innerHTML += this.acc_no + "<br><br>";
+                    document.getElementById("acname").innerHTML += this.acc_name + "<br><br>";
+                    document.getElementById("bal1").innerHTML += this.bal + "<br><br>";
+                }
+            }
+            let b1 = new Bank(1);
+            let b2 = new Bank(2);
+            let acc_no = prompt("Enter Account Number : ");
+            let acc_name = prompt("Enter Account Name : ");
+            let dep_amt = parseInt(prompt("Enter amount for deposit : "));
+            let with_amt = parseInt(prompt("Enter amount for withdraw : "));
+            b1.get_data(acc_no, acc_name);
+            b1.deposit(dep_amt);
+            b1.withdraw(with_amt);
+            b1.display();
+            acc_no = prompt("Enter Account Number : ");
+            acc_name = prompt("Enter Account Name : ");
+            dep_amt = parseInt(prompt("Enter amount for deposit : "));
+            with_amt = parseInt(prompt("Enter amount for withdraw : "));
+            b2.get_data(acc_no, acc_name);
+            b2.deposit(dep_amt);
+            b2.withdraw(with_amt);
+            b2.display();
+        </script>
+    </body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Age_calculator</title>
+        <style>
+            body {
+                background-color: #470c23;
+            }
+            h1 {
+                text-align: center;
+                color: white;
+                margin-top: 4%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #fcf3c1;
+                width: 400px;
+                height: 420px;
+                margin: auto;
+                padding-top: 15px;
+                gap: 40px;
+                border-radius: 10px;
+            }
+            input {
+                width: 60%;
+                margin-left: 10px;
+                margin-bottom: 12px;
+                padding: 4px 8px;
+                font-size: 16px;
+                outline: none;
+                line-height: 19px;
+                border: 1px solid #0000004b;
+            }
+            p {
+                min-width: 90px;
+                height: 25px;
+                padding: 12px 20px 12px 20px;
+                background-color: white;
+                font-weight: bold;
+                border: 1px solid #0000004b;
+                border-radius: 5px;
+            }
+            span {
+                color: #ff0000;
+                font-size: 21px;
+            }
+            button {
+                background-color: #ff0000;
+                color: white;
+                padding: 7px 11px;
+                margin: 0 8px;
+                font-weight: bold;
+                font-size: 17px;
+                border: 1px solid gray;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Age Calculator</h1>
+        <div class="main">
+            <div>
+                <label for="">Fill date</label>
+                <input type="date" id="firstnumber">
+            </div>
+            <div>
+                <p>Age is&nbsp;:&nbsp;&nbsp;<span id="num1"></span></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="age()">Check</button>
+            </div>
+        </div>
+        <script>
+            function age() {
+                function calculate_age(dob) {
+                    var dif_date = Date.now() - dob.getTime();
+                    var age_date = new Date(dif_date);
+                    return Math.abs(age_date.getUTCFullYear() - 1970);
+                }
+                let date = document.getElementById("firstnumber").value;
+                alert("Age is  :   " + calculate_age(new Date(date)) +" year ");
+                let age =  calculate_age(new Date(date));
+                document.getElementById("num1").innerHTML = +age +" year ";
+            }       
+        </script>
+    </body>
+</html>

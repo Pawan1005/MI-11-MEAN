@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Country</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"/>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+        <style>
+            .box {
+                height: 450px;
+                width: 700px;
+                border: 1px solid red;
+                margin-top: 150px;
+                padding: 20px;
+                border-radius: 13px;
+                background: url(plain.jpg);
+            }
+        </style>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <div class="box">
+                    <h1>Country</h1>
+                    <label for="country">Country</label>
+                    <select name="country" id="country" class="form-control">
+                        <option value="0">India</option>
+                        <option value="1">Albania</option>
+                        <option value="2">Algeria</option>
+                        <option value="3">Andorra</option>
+                        <option value="4">Angola</option>
+                    </select>
+                    <label for="capital">Capital </label>
+                    <select name="capital" id="capital" class="form-control">
+                        <option value="0">Delhi</option>
+                        <option value="1">Tirana</option>
+                        <option value="2">Algiers</option>
+                        <option value="3">Andorra la Vella</option>
+                        <option value="4">Luanda</option>
+                    </select>
+                </div>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+        <script>
+            let countrySel = document.getElementById("country");
+            let capital = document.getElementById("capital");
+            countrySel.onchange = () => {
+                capital.selectedIndex = countrySel.selectedIndex;
+            };
+        </script>
+    </body>
+</html>

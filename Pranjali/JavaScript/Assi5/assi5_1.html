@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>assi5_1</title>
+        <style>
+            body {
+                height: 1500px;
+                background-image: linear-gradient(to bottom right, purple, red);
+            }
+        </style>
+    </head>
+    <body>
+        <script language="javascript">
+            function middle() {
+                var n, middle, last, sum, first;
+                n = parseInt(document.getElementById("first").value);
+                last = n % 10;
+                m = parseInt(n / 10);
+                middle = m % 10;
+                first = parseInt(n / 100);
+                sum = last + first;
+                if (sum == middle) {
+                    document.getElementById("num").innerHTML = "Sum Match!!";
+                } else {
+                    document.getElementById("num").innerHTML = "Sum does not match!!";
+                }
+            }
+        </script>
+        <div style="width: 50%; position: absolute; left: 430px; top: 200px">
+            <div style="text-align: center; background-color: rgba(243, 243, 8, 0.842); height: 50%; border-radius: 25px 25px 25px 25px">
+                <br /><br />
+                <h2>Middle digit is equal to sum of other two digit or not?</h2>
+                <hr size="5" color="black" />
+                <br /><br />
+                <h4>Enter three digit number : <input type="text" name="a" id="first" placeholder="Enter a number" /></h4>
+                <button style="position: absolute; left: 50%;" onclick="middle ()">Submit</button>
+                <p><br><br></p>
+                <div id="num" style="color: blue; position: absolute; left: 50%;"></div>
+                <br><br>
+            </div>
+        </div>
+    </body>
+</html>

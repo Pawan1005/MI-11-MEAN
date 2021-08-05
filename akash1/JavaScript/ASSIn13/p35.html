@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>10.4</title>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+            integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l"
+            crossorigin="anonymous"
+        />
+        <style>
+            body {
+                background-image: linear-gradient(black, skyblue, black);
+                background-repeat: no-repeat;
+                height: 100vh;
+            }
+            .container {
+                box-shadow: 0 10px 12px 0 rgba(213, 215, 216, 0.973), 0 6px 20px 0 rgba(206, 14, 14, 0.918);
+                top: 149px;
+                position: relative;
+                border-top-left-radius: 10px;
+                border-top-right-radius: 10px;
+                width: 50%;
+            }
+            .block {
+                justify-content: center;
+                align-items: center;
+            }
+        </style>
+        <script>
+            function ageCalculator() {
+                var userinput = document.getElementById("DOB").value;
+                var dob = new Date(userinput);
+                if (userinput == null || userinput == "") {
+                    document.getElementById("message").innerHTML = "**Choose a date please!";
+                    return false;
+                } else {
+                    var month_diff = Date.now() - dob.getTime();
+                    var age_dt = new Date(month_diff);
+                    var year = age_dt.getUTCFullYear();
+                    var age = Math.abs(year - 1970);
+                    return (document.getElementById("result").innerHTML = "Age is: " + age + " years. ");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container text-white border-primary bg-dark">
+            <h2 style="color: 32a80f" text-align="center">
+                Calculate Age from Date of Birth <br />
+                <br />
+            </h2>
+            <div class="row">
+                <div class="col">
+                    <b> Enter Date of Birth: <input type="date" id="DOB" /> </b>
+                    <span id="message" style="color: red"> </span> <br /><br />
+                    <button type="submit" onclick="ageCalculator()">Calculate age</button> <br /><br />
+                    <h3 style="color: 32a80f" id="result" text-align="center"></h3>
+                </div>
+            </div>
+        </div>
+        <script
+            src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+            integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>

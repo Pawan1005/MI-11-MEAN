@@ -1,0 +1,72 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>floyds</title>
+        <style>
+            h1 {
+                text-align: center;
+                color: red;
+                margin-top: 5%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                width: 410px;
+                height: 350px;
+                margin: auto;
+                padding-top: 15px;
+                gap: 10px;
+                border-radius: 10px;
+                background-color: rgb(227, 230, 233);
+                box-shadow: 2px 2px 4px;
+            }
+            input {
+                width: 55%;
+                margin-left: 10px;
+                margin-bottom: 12px;
+                padding: 4px 8px;
+                font-size: 16px;
+                outline: none;
+                line-height: 19px;
+                border: 1px solid #0000004b;
+                box-shadow: 2px 2px 4px;
+            }
+            button {
+                background-color: #ff0000;
+                color: white;
+                padding: 7px 11px;
+                margin: 0 8px;
+                font-weight: bold;
+                font-size: 17px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Floyds triangle</h1>
+        <div class="main">
+            <label for="">Enter number of rows</label>
+            <input type="text">
+            <button class="btn1" onclick="floyds()">Check</button>
+            <p><span id="num1"></span></p>
+        </div>
+        <script>
+            function floyds() {
+                let k = 0;
+                let pattern = document.getElementById("num1");
+                for (let i = 0; i < 4; i++) {
+                    setTimeout(() => {
+                        for (let j = 0; j <= i; j++) {
+                            k++;
+                            pattern.innerHTML += `<span class="patternItems">&nbsp${k}&nbsp</span>`;
+                        }
+                        pattern.innerHTML += "<br><br>";
+                    }, i * 100);
+                }
+            }
+        </script>
+    </body>
+</html>

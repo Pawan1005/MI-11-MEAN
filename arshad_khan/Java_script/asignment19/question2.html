@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Add text in list</title>
+        <style>
+            body {
+                background-color: cyan;
+            }
+            h1 {
+                text-align: center;
+                margin-top: 5%;
+            }
+            #main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: blueviolet;
+                width: 400px;
+                height: 400px;
+                margin: auto;
+                padding-top: 15px;
+            }
+            .div1 {
+                text-align: center;
+            }
+            .div2 {
+                min-width: 90px;
+                min-height: 110px;
+                padding: 14px 40px 12px 16px;
+                background-color: peru;
+                border: 1px solid black;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Add Text in List</h1>
+        <div id="main">
+            <div class="div2">
+                <ol id="ol1">
+                    <li>SDLC</li>
+                    <li>HTML</li>
+                    <li>FIGMA</li>
+                    <li>CSS</li>
+                </ol>
+            </div>
+            <div class="div1">
+                <label for="">Enter a text</label>
+                <input type="text" id="firstnumber" />
+                <button class="btn1" onclick="list()">Add</button>
+            </div>
+        </div>
+        <script>
+            function list() {
+                let name = document.getElementById("firstnumber").value.toUpperCase();
+                let li = document.createElement("li");
+                li.textContent = name;
+                let ol = document.getElementById("ol1");
+                ol.insertBefore(li, ol.lastElementChild.nextSibling);
+            }
+        </script>
+    </body>
+</html>

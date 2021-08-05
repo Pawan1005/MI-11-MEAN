@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Triangle</title>
+        <script>
+            function triangle() {
+                var i,
+                    j,
+                    row,
+                    n = 1;
+                row = parseInt(document.getElementById("num").value);
+                for (i = 0; i <= row - 1; i++) {
+                    for (j = 1; j <= i; j++) {
+                        if (i != 0) {
+                            document.getElementById("pid").innerHTML += "&ensp;" + j;
+                        }
+                    }
+                    document.getElementById("pid").innerHTML += "&ensp;" + n + "<br>";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container" style="border: 1px solid black; width: 600px; height: 400px; background-color: grey; margin-left: 400px; margin-top: 50px">
+            <h1>Triangle Number</h1>
+            Enter The Number Of Row :&nbsp;<input type="text" name="n" id="num" /> <br /><br />
+            <center><button onClick="triangle()">CHECK</button></center>
+            <br />
+            <hr color="cyan" />
+            <div style="background-color: white; height: 200px">
+                <p id="pid"></p>
+            </div>
+        </div>
+    </body>
+</html>

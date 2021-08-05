@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="Assignment_16.css" />
+        <title>Assignment16 | Q2</title>
+        <script>
+            debugger
+            function colorone() {
+                document.getElementById("pid").style.color = "rgb(156, 32, 172)";
+            }
+            function colortwo() {
+                document.getElementById("pid").style.color = "rgb(9, 90, 128)";
+            }
+            function colorthree() {
+                document.getElementById("pid").style.color = "rgb(71, 99, 7)";
+            }
+            // font - size
+            function small() {
+                document.getElementById("pid").style.fontSize = "small";
+            }
+            function medium() {
+                document.getElementById("pid").style.fontSize = "medium";
+            }
+            function large() {
+                document.getElementById("pid").style.fontSize = "large";
+            }
+            // font-family
+            function cursive() {
+                document.getElementById("pid").style.fontFamily = "Times New Roman";
+            }
+            function courier() {
+                document.getElementById("pid").style.fontFamily = "courier";
+            }
+            function san_sarif() {
+                document.getElementById("pid").style.fontFamily = "Arial, Helvetica, sans-serif";
+            }
+        </script>
+    </head>
+    <body>
+        <p id="pid">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores vel, sunt dolorum doloremque quo quidem eaque odit corporis dolorem voluptatum
+            sit saepe minima laudantium ex provident ducimus a eos reprehenderit sapiente facere ipsa assumenda. Eos esse et corporis soluta ab consequatur.
+        </p>
+        <fieldset style="margin-top: 30px" id="mainfieldset">
+            <legend>Manipulation</legend>
+            <fieldset>
+                <legend>Colors</legend>
+                <button onclick="colorone()" class="btn1 btn" >color One</button>
+                <button onclick="colortwo()" class="btn2 btn" >Color Two</button>
+                <button onclick="colorthree()" class="btn3 btn" >color Three</button>
+            </fieldset>
+            <fieldset>
+                <legend>Font-size</legend>
+                <button onclick="small()" class="btn1 btn" >small</button>
+                <button onclick="medium()" class="btn2 btn" >Medium</button>
+                <button onclick="large()" class="btn3 btn">Large</button>
+            </fieldset>
+            <fieldset>
+                <legend>Font-family</legend>
+                <button onclick="cursive()" class="btn1 btn" >Times New Roman</button>
+                <button onclick="courier()" class="btn2 btn" >courier</button>
+                <button onclick="san_sarif()" class="btn3 btn" >Arial</button>
+            </fieldset>
+        </fieldset>
+    </body>
+</html>

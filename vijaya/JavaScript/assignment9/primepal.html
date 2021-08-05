@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Check prime palindrome numbers</title>
+        <style>
+            h2 {
+                text-align: center ;
+                color: rgb(7, 136, 76);
+                margin-top: 4%;
+            }
+            .name {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #66054e;
+                color: rgb(9, 175, 98);
+                width: 500px;
+                height: 400px;
+                margin: auto;
+                padding-top: 15px;
+                gap: 20px;
+                border-radius: 10px;
+            }
+            p {
+                min-width: 250px;
+                height: 40px;
+                padding: 30px 9px 9px 9px;
+                background-color: white;
+                color: rgba(11, 35, 248, 0.952);
+                border: 1px solid #0000004b;
+                font-size: 16px;
+            }
+        </style>
+    </head>
+    <body>
+        <script>
+            function palindrome() {
+                var sum = 0,count = 0,temp,rem,j;
+                var number = parseInt(document.getElementById("N").value);
+                temp = parseInt(number);
+                while (temp > 0) {
+                    rem = temp % 10;
+                    temp = parseInt(temp / 10);
+                    sum = sum * 10 + rem;
+                }
+                for (j = 1; j <= number; j++) {
+                    if (number % j == 0) {
+                        count++;
+                    }
+                }
+                if (sum == number && count == 2) {
+                    document.getElementById("result").innerHTML += +number + " is " + " prime palindrome" + "</br></br>";
+                } else {
+                    document.getElementById("result").innerHTML += +number + " is not an prime palindrome number";
+                }
+            }
+        </script>
+        <h2>Checking Prime Palindrome Number</h2>
+        <div class="name">
+            Enter the Number: <input type="text" required id="N" />
+            <button type="button" onclick="palindrome()" style="background-color: rgb(5, 153, 190); height: 30px; color: white">Check</button>
+            <div class="resultText">
+                <p id="result"></p>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Array</title>
+        <script>
+            function show() {
+                var a, b, i;
+                a = Array(5);
+                b = document.getElementById("pid");
+                for (i = 0; i < 5; i++) {
+                    a[i] = prompt("Enter a name:" + (i + 1));
+                }
+                b.innerHTML += `<div>${a}</div>`;
+                for (let i = 0; i < 5; i++) {
+                    b.innerHTML += `<div>Name ${i + 1} : ${a[i]}</div>`;
+                }
+            }
+        </script>
+    </head>
+    <body style="background-color: aquamarine; text-align: center">
+        <h1>*Save your names in Array*</h1>
+        <p id="pid"></p>
+        <button onclick="show()">SHOW</button>
+    </body>
+</html>

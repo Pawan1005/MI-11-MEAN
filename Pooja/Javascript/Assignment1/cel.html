@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <meta name="Description" content="Enter your description here"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+        <link rel="stylesheet" href="assets/css/style.css">
+        <title>CelToFer</title>
+        <script language="javascript">
+            function ctof(){
+                    "use strict"
+                    var a,t;
+                    a = parseInt(document.getElementById("num1").value);
+                    t = ((a * (9/5))+32);
+                    document.getElementById("pid").innerHTML= +a +"<sup>o</sup>C is equal to "+t +"<sup>o</sup>F";
+                }
+        </script>
+        <style>
+            .container{
+            background-color: darkcyan;
+            display: block;
+            padding: 10px;
+            margin-top: 40px;
+            width: 600px;
+            height: 280px;
+            border-radius: 5px;
+            }
+            #pid{
+            margin-left: 80px;
+            color:#000;
+            border: 1px dotted black;
+            background-color: rgb(210, 223, 191);
+            padding: 8px;
+            display: flexbox;
+            width: 420px;
+            height: 50px;
+            }
+            #num1, .num1, h4{
+            margin-left: 36px;
+            }
+            .num1{
+            padding: 5px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <h3 class="text-center">Converting Celcius to Fahrenheit </h3>
+            <label class="num1">
+                <p><strong>
+                    Temperature:
+                    </strong>
+                </p>
+                <input type="text" id="num1">
+            </label>
+            <button class="b1 bg-danger" onclick="ctof()">Convert</button><br>
+            <h4 class="text-black">After Conversion</h4>
+            <p id="pid"></p>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.6.0/js/bootstrap.min.js"></script>
+    </body>
+</html>

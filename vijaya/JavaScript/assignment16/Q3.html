@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Change_image Demo</title>
+        <style>
+            body {
+                padding-top: 3px;
+                background-color:  rgb(181, 233, 250);
+            }
+            h1 {
+                text-align: center;
+                color:rgb(7, 63, 165);
+                margin-top: 3%;
+            }
+            h2{
+                color: rgb(19, 4, 156);   
+            }
+            .name {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: rgb(91, 207, 243);
+                margin-top: 60px;
+                padding-top: 10px;
+                width: 600px;
+                height:300px;
+                margin: auto;
+                gap: 5px;
+                border-radius: 10px;
+                border: 2px solid rgb(7, 110, 141);
+            }  
+            .res{
+                background-color:  rgb(109, 214, 247);
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Change Images</h1>
+        <div class="name">
+            <h2 id="heading">Nature</h2>
+            <img src="img/nature.jpeg" id="image" alt="nature" />
+            <div class="res">
+                <button onclick="image()">Play</button>
+            </div>
+        </div>
+        <script>
+            let flag = 0;
+            function image() {
+                if (flag == 0) {
+                    document.getElementById("heading").innerHTML = "Flowers";
+                    document.getElementById("image").src = "img/flower.jpeg";
+                    flag = 1;
+                } else if (flag == 1) {
+                    document.getElementById("heading").innerHTML = "Sunset";
+                    document.getElementById("image").src = "img/sun.jpeg";
+                    flag = 2;
+                } else {
+                    document.getElementById("heading").innerHTML = "Nature";
+                    document.getElementById("image").src = "img/nature.jpeg";
+                    flag = 0;
+                }
+            }
+        </script>
+    </body>
+</html>

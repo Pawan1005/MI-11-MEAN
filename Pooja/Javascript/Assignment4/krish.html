@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Krishnamurthy number</title>
+        <style>
+            body {
+            background-color: #616161;
+            }
+            h1 {
+            text-align: center;
+            color: white;
+            margin-top: 5%;
+            }
+            .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #a1bdcf;
+            width: 380px;
+            height: 380px;
+            margin: auto;
+            padding-top: 15px;
+            gap: 26px;
+            }
+            input {
+            width: 55%;
+            margin-left: 10px;
+            margin-bottom: 12px;
+            padding: 4px 8px;
+            font-size: 15px;
+            outline: none;
+            line-height: 19px;
+            border: 1px solid #0000004b;
+            }
+            p {          
+            font-weight: bold;
+            overflow: auto;
+            }
+            #fact {
+            font-weight: 300;
+            }
+            #num {
+            color: #002fff;
+            font-size: 21px;
+            }
+            #krishnaMurthy {
+            color: #ff0000;
+            font-size: 21px;
+            }
+            button {
+            background-color: #ff0000;
+            color: white;
+            padding: 7px 11px;
+            margin: 0 8px;
+            font-weight: bold;
+            font-size: 17px;
+            border: 1px solid gray;
+            border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Krishnamurthy Number</h1>
+        <div class="main">
+            <div>
+                <label for="">Enter the number</label>
+                <input type="text" id="firstnumber" value="145">
+            </div>
+            <div>
+                <p><span id="fact"></span><span id="num"></span><span id="krishnaMurthy"></span></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="krishnamurthy()">Calculate</button>
+            </div>
+        </div>
+        <script>
+            function krishnamurthy() {
+                var num,temp,rem,sum=0,i,factorial;
+                num = parseInt(document.getElementById("firstnumber").value);
+                temp = num;
+                while(temp>0) {
+                    factorial=1;
+                    rem = temp%10;
+                    temp = parseInt(temp/10);
+                    for(i=1;i<=rem;i++) {
+                        factorial=factorial*i;
+                    }
+                    sum = sum+factorial;                     
+                }
+                if(sum==num) {
+                    document.getElementById("num").innerHTML = "<br><br>"+num;
+                    document.getElementById("krishnaMurthy").innerHTML = " is Krishnamurthy ";
+                } else {
+                    document.getElementById("num").innerHTML = "<br><br>"+num;
+                    document.getElementById("krishnaMurthy").innerHTML = " is not Krishnamurthy ";
+                }               
+            }
+        </script>
+    </body>
+</html>

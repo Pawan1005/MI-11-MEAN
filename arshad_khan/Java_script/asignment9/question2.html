@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>prime pelindrome</title>
+        <script>
+            function Palindrome() {
+                var string = document.getElementById("num").value;
+                const arrValue = string.split("");
+                const reveArrVal = arrValue.reverse();
+                const revString = reveArrVal.join("");
+                if (string == revString) {
+                    flag = 0;
+                    for (let i = 2; i < string; i++) {
+                        if (string % i == 0) {
+                            document.getElementById("pid").innerHTML = "This number is not prime pelindrome";
+                            flag = 1;
+                            break;
+                        }
+                        if (flag == 0) {
+                            document.getElementById("pid").innerHTML = "This number is prime pelindrome";
+                        }
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container" style="border: 1px solid black; width: 600px; height: 400px; background-color: blueviolet; margin-left: 400px; margin-top: 50px">
+            <h1>Check a number is primePalindrome or not</h1>
+            Enter The Number :&nbsp;<input type="text" name="n" id="num" /> <br /><br />
+            <center><button onClick="Palindrome()">CHECK</button></center>
+            <br />
+            <hr color="cyan" />
+            <div style="background-color: blanchedalmond; height: 100px">
+                <p id="pid"></p>
+            </div>
+        </div>
+    </body>
+</html>

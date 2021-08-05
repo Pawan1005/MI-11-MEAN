@@ -1,0 +1,71 @@
+body {
+    height: 98vh;
+    width: 99vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(135deg, #735c86, #423152);
+    color: #dedede;
+}
+h1 {
+    font-size: 72px;
+}
+#year {
+    font-size: 36px;
+    font-weight: bold;
+    color: inherit;
+    text-align: center;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.btn {
+    margin: 20px 10px;
+    padding: 15px 30px;
+    border-radius: 10px;
+    color: inherit;
+    font-size: 18px;
+    background-color: #0a0a0a;
+    box-shadow: 5px 5px 10px #0a0a0a;
+}
+#pattern {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    width: 200px;
+    height: 200px;
+    overflow: auto;
+}
+.success {
+    background-color: #bbe250;
+    color: #0a0a0a;
+}
+.fail {
+    background-color: #cd9e47;
+}
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: linear-gradient(115deg, #6b3e90, #2b1c4a);
+    padding: 30px;
+    border-radius: 10px;
+}
+#rows,
+#cols {
+    margin: 20px 20px 20px 0;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border: none;
+    border-radius: 0px 20px;
+    text-align: center;
+}
+#factNum {
+    font-size: 20px;
+    text-align: center;
+    width: 20%;
+}

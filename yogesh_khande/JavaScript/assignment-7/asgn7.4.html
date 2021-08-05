@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Js-Q4</title>
+        <script>
+            function show() {
+                debugger;
+                let f;
+                let c = [];
+                let a = parseInt(document.getElementById("num1").value);
+                for (let i = 1; i <= a; i++) {
+                    let b = parseInt(prompt("Enter the mark of " + i + "student"));
+                    c.push(b);
+                }
+                document.getElementById("pid").innerHTML += `(*****Before Sorting******)<br> ${c}`;
+                for (j = 0; j < a; j++) {
+                    document.getElementById("pid1").innerHTML += "Marks " + (j + 1) + ":&nbsp;" + c[j] + "<br>";
+                }
+                for (k = 0; k <= c.length - 1; k++) {
+                    for (g = k; g < c.length - 1; g++) {
+                        let temp = 0;
+                        if (c[k] > c[g + 1]) {
+                            temp = c[k];
+                            c[k] = c[g + 1];
+                            c[g + 1] = temp;
+                        }
+                    }
+                    document.getElementById("pid2").innerHTML += `iteration ${k + 1}:  `;
+                    document.getElementById("pid2").innerHTML += c + "<br>";
+                }
+                document.getElementById("pid2").innerHTML += "<br>*****After Sorting******<br>";
+                for (j = 0; j < a; j++) {
+                    document.getElementById("pid2").innerHTML += "Marks " + (j + 1) + ":&nbsp;" + c[j] + "<br>";
+                }
+                document.getElementById("pid2").innerHTML += ` The sorted array : ${c} `;
+            }
+        </script>
+    </head>
+    <body style="background-color: steelblue; text-align: center">
+        <h1>
+            <hr />
+            *Enter Marks of students*
+            <hr />
+        </h1>
+        <input type="text" id="num1" placeholder="Enter number of students" />
+        <button onclick="show()">GET</button>
+        <p id="pid"></p>
+        <p id="pid1"></p>
+        <p id="pid2"></p>
+    </body>
+</html>

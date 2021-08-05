@@ -1,0 +1,60 @@
+<html>
+    <head>
+        <title>JavaScript to print prime numbers between two integers!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            .name {
+                position: relative;
+                width: 500px;
+                background-color: rgba(160, 15, 141, 0.918);
+                padding: 10px 0px 10px 0px;
+                border-radius: 15px 15px 0px 0px;
+                color: white;
+                text-align: center;
+                margin-top: 80px;
+                margin-left: 400px;
+            }
+            .one {
+                background-color: rgb(144, 155, 46);
+                width: 120px;
+                margin-left: 180px;
+            }
+        </style>
+        <script>
+        function printPrime() {
+            "use strict";
+            var i, j, c, start, end;
+            start = parseInt(document.getElementById('start').value);
+            end = parseInt(document.getElementById('end').value);
+            document.getElementById("answer").innerHTML = '';
+            for (i = start; i <= end; i++) {
+                c = 0;
+                for (j = 1; j <= i; j++) {
+                    if (i % j == 0) {
+                        c++;
+                    }
+                }
+                if (c == 2) {
+                    document.getElementById("answer").insertAdjacentHTML('beforeend', i + '<br>');
+                }
+            }
+        }
+        </script>
+    </head>
+    <body style="background-color: rgb(247, 234, 162);">
+        <div class="name">
+            <h2>Prime Numbers</h2>
+            <hr style="color: white;">
+            <br>
+            <h2> Print Prime numbers between two integers!</h2>
+            Start: <input type="number" name="start" id="start" style="width: 100px;" /><br><br>
+            End: <input type="number" name="end" id="end" style="width: 100px;" /><br><br>
+            <div class="one">
+                <p><span id="answer"></span></p>
+            </div>
+            <button onclick="printPrime()"
+                style="padding: 6px; background-color: rgb(42, 192, 238);">Print</button></br></br>
+        </div>
+    </body>
+</html>

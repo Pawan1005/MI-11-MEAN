@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Odd-Even</title>
+        <script>
+            function show() {
+                var input,
+                    b,
+                    c,
+                    e = 1,
+                    d = 0,
+                    f,
+                    g;
+                input = parseInt(document.getElementById("num1").value);
+                b = input.toString().length;
+                g = input;
+                if (b == 6) {
+                    while (g > 0) {
+                        c = g % 10;
+                        if (c % 2 == 0) {
+                            d += c;
+                        } else {
+                            e *= c;
+                        }
+                        g = parseInt(g / 10);
+                        document.getElementById("pid").innerHTML = "even sum =" + d;
+                        document.getElementById("pid1").innerHTML = "odd product=" + e;
+                    }
+                } else {
+                    document.getElementById("pid").innerHTML = "Invalid Number!! please enter 6 digit number";
+                }
+            }
+        </script>
+    </head>
+    <body style="background-color: aqua; text-align: center; padding: 20px">
+        <h1>
+            <hr />
+            *Enter any six digit number and <u>get addition of even no. & Product of odd no.</u>*
+            <hr />
+        </h1>
+        <input type="text" id="num1" placeholder="Enter six digit number" />
+        <p id="pid"></p>
+        <p id="pid1"></p>
+        <button onclick="show()">Click</button>
+    </body>
+</html>

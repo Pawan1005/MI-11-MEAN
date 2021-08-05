@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script type="text/javascript">
+            function show() {
+                let arr = [];
+                let sum = 0;
+                let output = document.getElementById("pid");
+                while (true) {
+                    let temp = prompt("Enter Number");
+                    if (temp == "x" || temp == "X" || temp == null) break;
+                    temp = parseInt(temp);
+                    arr.push(temp);
+                }
+                for (let i = 0; i < arr.length; i++) {
+                    sum += factorial(arr[i]);
+                }
+                function factorial(n) {
+                    if (n == 0) return 1;
+                    return n * factorial(n - 1);
+                }
+                output.innerHTML += `<div>sum of factorials: ${sum}</div>`;
+            }
+        </script>
+    </head>
+    <body style="background-color: aquamarine; text-align: center">
+        <h1>*Get sum of factorial of entered numbers*</h1>
+        <p id="pid"></p>
+        <button onclick="show()">Submit</button>
+    </body>
+</html>

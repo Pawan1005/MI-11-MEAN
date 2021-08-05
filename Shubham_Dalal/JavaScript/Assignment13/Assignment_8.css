@@ -1,0 +1,11 @@
+body{
+    background-color: cornflowerblue;
+}
+button{
+    background-image: linear-gradient(to right,red,purple);
+    color: white;
+    padding: 5px 10px;
+    border: 0px;
+    font: 20px;
+    font-weight: bold;
+}

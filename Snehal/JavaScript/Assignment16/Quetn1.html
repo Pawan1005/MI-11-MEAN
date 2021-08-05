@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Alignment</title>
+        <style>
+            body {
+                background-color: #8d77f1;
+            }
+            .main-box {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: #fcf3c1;
+                width: 320px;
+                height: 120px;
+                padding: 10px 0 0px 0;
+                border-radius: 10px;
+                margin: auto;
+                margin-top: 8%;
+            }
+            h1 {
+                text-align: center;
+                color: white;
+                margin-top: 5%;
+            }
+            button {
+                background-color: #eb6c45;
+                color: white;
+                padding: 5px 11px;
+                margin: 0 8px 10px 8px;
+                font-weight: bold;
+                font-size: 17px;
+                border: 1px solid gray;
+                border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1 id="heading">JavaScript</h1>
+        <div class="main-box">
+            <div class="box">
+                <button onclick="left()">Left</button>
+                <button onclick="center()">Center</button>
+                <button onclick="right()">Right</button>
+            </div>
+        </div>
+        <script>
+            function left() {
+                document.getElementById("heading").style = "text-align: left;";
+            }
+            function center() {
+                document.getElementById("heading").style = "text-align: center;";
+            }
+            function right() {
+                document.getElementById("heading").style = "text-align: right;";
+            }
+        </script>
+    </body>
+</html>

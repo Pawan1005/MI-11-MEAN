@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>assi16_2</title>
+        <style>
+            body {
+                height: 1500px;
+                background-image: linear-gradient(to bottom right, purple, red);
+                color: white;
+            }
+            p {
+                text-align: center;
+                line-height: 1.8;
+            }
+            h1 {
+                text-align: center;
+            }
+            #btn1,
+            #btn2,
+            #btn3 {
+                position: relative;
+                left: 40%;
+            }
+        </style>
+    </head>
+    <body>
+        <br /><br />
+        <h1 id="text" style="color: white">Hello! Welcome......!!</h1>
+        <br />
+        <button id="btn1" onclick="left()">Left</button>
+        <button id="btn2" onclick="center()">Center</button>
+        <button id="btn3" onclick="right()">Right</button>
+        <script>
+            function left() {
+                document.getElementById("text").style.textAlign = "left";
+            }
+            function center() {
+                document.getElementById("text").style.textAlign = "center";
+            }
+            function right() {
+                document.getElementById("text").style.textAlign = "right";
+            }
+        </script>
+        <br /><br /><br /><br />
+        <p id="color">
+            A paragraph is a group of words put together to form a <br />group that is usually longer than a sentence. Paragraphs<br />
+            are often made up of several sentences. There are usually<br />
+            between three and eight sentences. <br />Paragraphs can begin with an indentation (about five spaces),<br />
+            or by missing a line out, and then starting again.
+        </p>
+        <br /><br />
+        <script>
+            function tur() {
+                document.getElementById("color").style.color = "mediumturquoise";
+            }
+            function yellow() {
+                document.getElementById("color").style.color = "yellow";
+            }
+            function chartreuse() {
+                document.getElementById("color").style.color = "chartreuse";
+            }
+            function twelve() {
+                document.getElementById("color").style.fontSize = "12px";
+            }
+            function fifteen() {
+                document.getElementById("color").style.fontSize = "15px";
+            }
+            function twenty() {
+                document.getElementById("color").style.fontSize = "20px";
+            }
+            function f1() {
+                document.getElementById("color").style.fontFamily = "cursive";
+            }
+            function f2() {
+                document.getElementById("color").style.fontFamily = "Arial, Helvetica, sans-serif";
+            }
+            function f3() {
+                document.getElementById("color").style.fontFamily = "Cambria, Cochin, Georgia, Times, 'Times New Roman', serif";
+            }
+        </script>
+        <div style="width: 40%">
+            <fieldset style="position: absolute; left: 39%">
+                <legend>Design Paragraph</legend>
+                <h4>Paragraph Color :</h4>
+                <button id="btn4" onclick="tur()">Turquoise</button>
+                <button id="btn5" onclick="yellow ()">Yellow</button>
+                <button id="btn6" onclick="chartreuse()">Chartreuse</button>
+                <h4><br />Font Size :</h4>
+                <button id="btn7" onclick="twelve()">Twelve</button>
+                <button id="btn8" onclick="fifteen ()">Fifteen</button>
+                <button id="btn9" onclick="twenty()">Twenty</button>
+                <h4><br />Font Family :</h4>
+                <button id="btn10" onclick="f1()">Cursive</button>
+                <button id="btn11" onclick="f2 ()">Arial</button>
+                <button id="btn12" onclick="f3()">Roman</button>
+                <br /><br /><br />
+            </fieldset>
+        </div>
+    </body>
+</html>

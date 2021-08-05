@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="Assignment18.css">
+        <title>Shopping_and_calculate_discount</title>
+    </head>
+    <body>
+        <h1>Shopping and Calculate Discount</h1>
+        <div class="main">
+            <div>
+                <label for="">&emsp;Enter Shopping amount</label>
+                <input type="text" id="firstnumber">
+            </div>
+            <div>
+                <p>Total Amount&ensp;=&emsp;<span id="shopping"></span></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="shopping()">Calculate</button>
+            </div>
+        </div>
+        <script>
+            function shopping() {
+                var amount, total;
+                amount = parseInt(document.getElementById("firstnumber").value);
+                if (amount > 1000) {
+                    total = amount - parseInt((amount * 15) / 100);
+                    document.getElementById("shopping").innerHTML = total;
+                } else {
+                    total = amount - parseInt((amount * 5) / 100);
+                    document.getElementById("shopping").innerHTML = total;
+                }
+            }
+        </script>
+    </body>
+</html>

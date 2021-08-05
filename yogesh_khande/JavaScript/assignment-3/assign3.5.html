@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Factorial</title>
+        <style>
+            body {
+                background-color: cadetblue;
+            }
+            .box {
+                text-align: center;
+                padding: 10px 10px;
+                margin-top: 50px;
+            }
+            button {
+                padding: 5px 10px;
+            }
+        </style>
+        <script>
+            function sum() {
+                a = parseInt(document.getElementById("num1").value);
+                input = a;
+                var mul = 1;
+                if (input == 0) {
+                    alert("Enter number above 0");
+                }
+                for (var n = 1; n <= input; n++) {
+                    mul = mul * n;
+                    document.getElementById("pid").innerHTML = +mul;
+                }
+            }
+        </script>
+    </head>
+    <body class="box">
+        <h1><hr>*Find Factorial of Number*<hr></h1>
+        <input type="text" id="num1" placeholder="Enter Number" />
+        <p id="pid"></p>
+        <button onclick="sum()">Get</button>
+    </body>
+</html>

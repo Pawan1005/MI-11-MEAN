@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            function formSubmit() {
+                let rno = document.getElementById("Rno").value;
+                let name = document.getElementById("name").value;
+                let clas = document.getElementById("Class").value;
+                let english = document.getElementById("m1").value;
+                let social = document.getElementById("m2").value;
+                let maths = document.getElementById("m3").value;
+                let physics = document.getElementById("m4").value;
+                let chemistry = document.getElementById("m5").value;
+                sessionStorage.setItem("Rno", rno);
+                sessionStorage.setItem("name", name);
+                sessionStorage.setItem("class", clas);
+                sessionStorage.setItem("english", english);
+                sessionStorage.setItem("social", social);
+                sessionStorage.setItem("maths", maths);
+                sessionStorage.setItem("physics", physics);
+                sessionStorage.setItem("chemistry", chemistry);
+            }
+        </script>
+        <style>
+            body {
+                background-color: rgb(142, 226, 198);
+            }
+            .content {
+                padding: 100px;
+                width: 500px;
+                margin: 100px;
+                background-color: rgb(133, 146, 216);
+                position: relative;
+                left: 100px;
+            }
+            input {
+                float: right;
+            }
+            input.btn {
+                background-color: rgb(183, 0, 255);
+                padding: 5px;
+                border-radius: 10%;
+                border: none;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <form action="localdetails.html" method="POST">
+                Roll number: <input type="number" id="Rno" /> <br />
+                <br />
+                name: <input type="text" id="name" /> <br />
+                <br />
+                class: <input type="text" id="Class" /> <br />
+                <br />
+                Mark of Enghish: <input type="number" id="m1" /> <br />
+                <br />
+                Mark of Social: <input type="number" id="m2" /> <br />
+                <br />
+                Mark of maths: <input type="number" id="m3" /> <br />
+                <br />
+                Mark of physics: <input type="number" id="m4" /> <br />
+                <br />
+                Mark of chemistry: <input type="number" id="m5" /> <br />
+                <br />
+                <input type="submit" class="btn" onclick="formSubmit()" /> <br />
+            </form>
+        </div>
+    </body>
+</html>

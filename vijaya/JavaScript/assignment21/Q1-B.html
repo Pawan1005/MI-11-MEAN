@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment 21</title>
+        <style>
+            h1 {
+                text-align: center;
+                color:white;      
+                margin-top: 3%;
+            }
+            body {
+                background-color:  rgb(94, 4, 60);
+            }
+            .name {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: rgb(159, 176, 250);
+                padding-top: 10px;
+                width: 540px;
+                height:450px;
+                margin: auto;
+                font-size: 16px;
+                font-weight: bold;
+                gap: 8px;
+                border-radius: 10px;
+                border: 3px solid rgb(107, 133, 252);
+            }  
+            .btn1{
+                background-color: rgb(6, 64, 224);
+                height: 38px;
+                width: 65px;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Student Detail using GET Method</h1>
+        <div class="name">
+            <form action="getResult.html" method="GET">
+                Roll No : <input type="text" id="first" name="rollNo"><br><br>
+                Name : <input type="text" id="second" name="Name"><br><br>
+                Class : <input type="text" id="third" name="Class"><br><br>
+                Hindi :<input type="text" id="fourth" name="Hindi"><br><br>
+                English :<input type="text" id="fifth" name="English"><br><br>
+                Marathi :<input type="text" id="sixth" name="Marathi"><br><br>
+                Maths : <input type="text" id="seventh" name="Maths"><br><br>
+                Physics :<input type="text" id="eight" name="Physics"><br><br>
+                <input type="submit" value="SUBMIT" class="btn1"><br>
+            </form>
+        </div>
+    </body>
+</html>

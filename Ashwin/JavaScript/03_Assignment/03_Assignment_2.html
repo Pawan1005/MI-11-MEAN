@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Prime_number</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <div class="row">
+            <div class="col-md-4"></div>
+            <div class="col-md-4" style="margin-top: 225px">
+                <div class="card">
+                    <div class="container" style="background-image: url(plain.jpg)">
+                        <h1 class="text-center mt-2">Prime Number</h1>
+                        <label for="Num1">Enter the number:</label>
+                        <input type="text" id="num1" placeholder="Enter the number" class="form-control mt-2" /> <br /><br />
+                        <button onclick="show()" class="btn-success">Check</button>
+                        <p id="pid" class="text-center mb-1" style="font-size: 25px; color: blueviolet"></p>
+                    </div>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+            <script>
+                function show() {
+                    a = parseInt(document.getElementById("num1").value);
+                    b = 0;
+                    for (i = 2; i < a; i++)
+                        if (a % i == 0) {
+                            b = 1;
+                        }
+                    if (b == 0) {
+                        document.getElementById("pid").innerHTML = "The number is a prime number";
+                    } else {
+                        document.getElementById("pid").innerHTML = "The number is not a prime number";
+                    }
+                }
+            </script>
+        </div>
+    </body>
+</html>

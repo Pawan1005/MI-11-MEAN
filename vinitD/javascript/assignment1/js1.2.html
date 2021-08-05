@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>js1.2</title>
+        <style>
+            body {
+                background-image: url(flames.jpg);
+                background-size: cover;
+            }
+            h1 {
+                color: rgb(8, 4, 0);
+                text-align: center;
+                text-shadow: 2px 2px rgb(255, 0, 0);
+                background-color: rgba(255, 138, 71, 0.541);
+                padding: 10px;
+            }
+            h3 {
+                color: rgb(255, 0, 43);
+                text-shadow: 1px 1px yellow;
+                background-color: rgba(255, 187, 0, 0.178);
+                padding-right: 10px;
+            }
+            h5 {
+                color: wheat;
+            }
+            .b {
+                display: flex;
+            }
+            .c {
+                margin-top: 50px;
+                margin-left: 150px;
+                margin-right: 100px;
+            }
+            button {
+                color: rgb(0, 39, 39);
+                background-color: tomato;
+            }
+            p {
+                color: wheat;
+            }
+        </style>
+        <script>
+            function show() {
+                a = parseInt(document.getElementById("num1").value);
+                product = 9 * a;
+                division = product / 5;
+                sum = division + 32;
+                document.getElementById("pid").innerHTML = "Entered" + " tempreture" + " in" + " FAHREHNEIT" + " is " + sum;
+            }
+            function show1() {
+                b = parseInt(document.getElementById("num2").value);
+                subtract = b - 32;
+                multiplication = subtract * 5;
+                divide = multiplication / 9;
+                document.getElementById("pid1").innerHTML = "Entered" + " tempreture" + " in" + " CELCIUS" + " is " + divide;
+            }
+        </script>
+    </head>
+    <body>
+        <h1>TEMPRETURE UNIT CONVERTOR</h1>
+        <hr />
+        <div class="b">
+            <div class="c">
+                <h3>COVERT TEMPRETURE FROM CELCIUS TO FAHREHNEIT</h3>
+                <h5>Enter temperature in celcius:</h5>
+                <input type="text" id="num1" placeholder="In degree celcius" />
+                <button onclick="show()">CONVERT</button>
+                <p id="pid"></p>
+            </div>
+            <br />
+            <div class="c">
+                <h3>COVERT TEMPRETURE FROM FAHREHNEIT TO CELCIUS</h3>
+                <h5>Enter tempreture in fahrehneit:</h5>
+                <input type="text" id="num2" placeholder="In degree fahrehneit" />
+                <button onclick="show1()">CONVERT</button>
+                <p id="pid1"></p>
+            </div>
+        </div>
+    </body>
+</html>

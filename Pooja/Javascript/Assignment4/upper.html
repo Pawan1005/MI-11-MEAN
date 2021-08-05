@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Uppercase lowercase</title>
+        <style>
+            body {
+            background-color: #616161;
+            }
+            h1 {
+            text-align: center;
+            color: white;
+            margin-top: 5%;
+            }
+            .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background-color: #a1bdcf;
+            width: 380px;
+            height: 380px;
+            margin: auto;
+            padding-top: 15px;
+            gap: 26px;
+            }
+            #firstnumber {
+            width: 55%;
+            margin-left: 10px;
+            margin-bottom: 12px;
+            padding: 4px 8px;
+            font-size: 15px;
+            outline: none;
+            line-height: 19px;
+            border: 1px solid #0000004b;
+            }
+            p {
+            text-align: center;
+            width: 240px;
+            height: 40px;
+            padding: 9px 5px 9px 5px;
+            background-color: white;
+            font-weight: bold;
+            border: 1px solid #0000004b;
+            }
+            #upperLower {
+            text-align: center;
+            margin-top: 4px;
+            color: #ff0000;
+            font-size: 25px;
+            width: 90%;
+            border: none;
+            outline: none;
+            }
+            button {
+            background-color: #ff0000;
+            color: white;
+            padding: 7px 11px;
+            margin: 0 8px;
+            font-weight: bold;
+            font-size: 17px;
+            border: 1px solid gray;
+            border-radius: 4px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>UpperCase and LowerCase</h1>
+        <div class="main">
+            <div>
+                <label for="">Enter the character</label>
+                <input type="text" id="firstnumber">
+            </div>
+            <div>
+                <p id="number"><input id="upperLower"></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="upperLower()">Calculate</button>
+            </div>
+        </div>
+        <script>
+            function upperLower() {
+                var str, i, len, number, character;
+                str = document.getElementById("firstnumber").value;
+                len = str.length;
+                number = parseInt(str);
+                if (number || 0 == number) {                  
+                    document.getElementById("number").innerHTML = "Accept only character";
+                } else {
+                    for (i = 0; i < len; i++) {
+                        character = str.charAt(i);
+                        if (character >= "A" && character <= "Z") {
+                            str = str.replace(character, character.toLowerCase());
+                        } else {
+                            str = str.replace(character, character.toUpperCase());
+                        }
+                    }
+                    document.getElementById("upperLower").value += str;
+                }
+            }
+        </script>
+    </body>
+</html>

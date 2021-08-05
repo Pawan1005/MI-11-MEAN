@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assign13_Q3</title>
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                margin-top: 50px;
+                align-items: center;
+                justify-content: center;
+                background-color: peachpuff;
+                width: 400px;
+                height: 400px;
+                margin: auto;
+                border-radius: 20px;
+            }
+            .btn {
+                background-color: white;
+                color: black;
+                width: 100px;
+                height: 40px;
+                margin-left: 120px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <h2 style="text-align: center;">Display Dates</h2>
+                Enter the date:<input type="date" id="dat" /> <br />
+                <br />
+                Enter the no.of Days ago:<input type="numbet" id="num" /> <br />
+                <br />
+                <button class="btn" onclick="getWeekDay()">Display</button>
+                <p id="pid"></p>
+            </div>
+        </div>
+        <script>
+            function getWeekDay() {
+                let a = document.getElementById("dat").value;
+                let b = parseInt(document.getElementById("num").value);
+                a.replace(/-/, ",");
+                let d = new Date(a);
+                var d1 = new Date();
+                let a1 = d.getTime();
+                let nod = 1000 * 60 * 60 * 24 * b;
+                let c = a1 - nod;
+                d1.setTime(c);
+                document.getElementById("pid").innerHTML = `${d1}`;
+            }
+        </script>
+    </body>
+</html>

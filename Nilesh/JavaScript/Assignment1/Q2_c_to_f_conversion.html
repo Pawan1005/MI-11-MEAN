@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Conversion of celcius to fahrenheit</title>
+        <style>
+            body {
+                background-color: rgb(92, 92, 92);font-size: 20px;
+            }
+            h1 {
+                text-align: center;
+                color: white;
+                margin-top: 5%;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: rgba(247, 153, 76, 0.596);
+                width: 500px;
+                height: 400px;
+                margin: auto;
+                gap: 30px;
+            }
+            #firstnumber {
+                margin-left: 10px;       
+                margin-bottom: 15px;
+                padding: 6px 8px;
+                font-weight: bold;
+                font-size: 15px;
+                outline: none;         
+            }
+            p {
+                width: 200px;
+                padding: 9px 13px 9px 13px;
+                background-color: white;
+                font-weight: bold;
+                text-align: center;
+            }
+            span {
+                color: rgb(255, 0, 0);
+                font-size: 21px;
+            }
+            button {
+                background-color: rgb(0, 60, 255);
+                color: white;
+                padding: 7px 11px;
+                margin: 0 8px;
+                font-weight: bold;
+                font-size: 17px;
+                text-transform: uppercase;
+                border: 1px solid gray;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Conversion of Celcius to Fahrenheit</h1>
+        <div class="main">
+            <div class="input1">
+                <label for="">Enter the Celcius : </label>
+                <input type="text" id="firstnumber">
+            </div>
+            <div class="para">
+                <p>Fahrenheit is : &nbsp;&nbsp;<span id = "value_a"></span></p>
+            </div>
+            <div class="btn">
+                <button class="btn1" onclick="conversion()">Convert</button>
+            </div>
+        </div>
+        <script>
+            function conversion() {
+                var number;
+                number = parseInt(document.getElementById("firstnumber").value);
+                document.getElementById("value_a").innerHTML = (number*1.8)+32;
+            }
+        </script>
+    </body>
+</html>

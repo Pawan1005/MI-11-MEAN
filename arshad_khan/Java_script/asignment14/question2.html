@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Bank details or transaction</title>
+        <style>
+            body {
+                background-color: cyan;
+            }
+            h1 {
+                text-align: center;
+            }
+            .main {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                background-color: blueviolet;
+                width: 520px;
+                height: 550px;
+                margin: auto;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Bank Details or Transaction</h1>
+        <div class="main">
+            <h2 class="heading1">Transaction</h2>
+            <table>
+                <tr>
+                    <th>SrNO.</th>
+                    <th>Deposit Amount</th>
+                    <th>Withdraw Amount</th>
+                </tr>
+                <tr class="row">
+                    <td id="num1" class="col"></td>
+                    <td id="num2" class="col"></td>
+                    <td id="num3" class="col"></td>
+                </tr>
+            </table>
+            <div>
+                <p><span id="num4"></span></p>
+            </div>
+            <h2 class="heading2">Bank Details</h2>
+            <table>
+                <tr>
+                    <th>SrNO.</th>
+                    <th>Acc_No</th>
+                    <th>Name</th>
+                    <th>Balance</th>
+                </tr>
+                <tr>
+                    <td id="num6"></td>
+                    <td id="num7"></td>
+                    <td id="num8"></td>
+                    <td id="nu"><span id="num9"></span></td>
+                </tr>
+            </table>
+        </div>
+        <script>
+            class BankDet {
+                constructor(n) {
+                    this.sr_no = n;
+                    this.acc_no = 0;
+                    this.acc_name = "";
+                    this.bal = 0;
+                }
+                get_data(acc_no, acc_name) {
+                    this.acc_no = acc_no;
+                    this.acc_name = acc_name;
+                }
+                deposit(bal) {
+                    this.bal = parseInt(bal);
+                    document.getElementById("num1").innerHTML += this.sr_no + "<br>";
+                    document.getElementById("num2").innerHTML += this.bal + "<br>";
+                }
+                withdraw(with_amt) {
+                    this.with_amt = parseInt(with_amt);
+                    document.getElementById("num3").innerHTML += this.with_amt + "<br>";
+                    if (this.with_amt > this.bal) {
+                        alert("Error:Insufficient Funds");
+                    } else {
+                        document.getElementById("num4").innerHTML +=
+                            `<span style="color:#000000;">${this.sr_no}&nbsp;Balance &ensp;=&emsp;</span> ${this.bal} - ${this.with_amt}` + "<br><br>";
+                        this.bal = this.bal - this.with_amt;
+                    }
+                    if (this.bal < 1000) {
+                        alert("Warning – Balance below 1000");
+                        num9.style = "color: red;";
+                    }
+                }
+                display() {
+                    document.getElementById("num6").innerHTML += this.sr_no + "<br><br>";
+                    document.getElementById("num7").innerHTML += this.acc_no + "<br><br>";
+                    document.getElementById("num8").innerHTML += this.acc_name + "<br><br>";
+                    document.getElementById("num9").innerHTML += this.bal + "<br><br>";
+                }
+            }
+            let b1 = new BankDet(1);
+            let b2 = new BankDet(2);
+            let acc_no = prompt("Enter Account Number : ");
+            let acc_name = prompt("Enter Account Name : ");
+            let dep_amt = parseInt(prompt("Enter amount for deposit : "));
+            let with_amt = parseInt(prompt("Enter amount for withdraw : "));
+            b1.get_data(acc_no, acc_name);
+            b1.deposit(dep_amt);
+            b1.withdraw(with_amt);
+            b1.display();
+            acc_no = prompt("Enter Account Number : ");
+            acc_name = prompt("Enter Account Name : ");
+            dep_amt = parseInt(prompt("Enter amount for deposit : "));
+            with_amt = parseInt(prompt("Enter amount for withdraw : "));
+            b2.get_data(acc_no, acc_name);
+            b2.deposit(dep_amt);
+            b2.withdraw(with_amt);
+            b2.display();
+        </script>
+    </body>
+</html>

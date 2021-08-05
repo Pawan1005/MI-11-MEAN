@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="Assignment12.css">
+        <title>Assignment12 || Q1</title>
+    </head>
+    <body>
+        <div style="width: 30%; position: absolute; top: 200px">
+            <div style="text-align: center; background-color: rgba(34, 159, 140, 0.911); height: 50%; border-radius: 25px 25px 25px 25px">
+                <br /><br />
+                <h1>Display Student Details</h1>
+                <hr size="5" color="black" />
+                <br />
+                <script language="javascript">
+                    class Student {
+                        constructor() {
+                            this.Rno = 1;
+                            this.Name = "Darshan";
+                        }
+                    }
+                    let s1 = new Student();
+                    let s2 = new Student();
+                    document.write("<br>RollNo : " + s1.Rno) ;
+                    document.write('<br><span style="position: relative; left: 12px;">Name : ' + s1.Name + "<br>");
+                    document.write("<br>");
+                    s2.Rno = 2;
+                    s2.Name = "Shubham";
+                    document.write('<br><span style="position: relative; left: -12px;">RollNo : ' + s2.Rno);
+                    document.write('<br><span style="position: relative; left: 12px;">Name : ' + s2.Name);
+                </script>
+                <br /><br /><br />
+            </div>
+        </div>
+    </body>
+</html>

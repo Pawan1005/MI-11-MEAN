@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment-5</title>
+    </head>
+    <body>
+        <div class="main">
+            <h1>Count No of Words in String</h1>
+            <div>
+                <label for="">Enter the value</label>
+                <input type="text" id="firstnumber" />
+            </div>
+            <div>
+                <p><span id="num1"></span>No of Words&nbsp;&nbsp;&nbsp;= &ensp;<span id="num2"></span></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="words()">Check</button>
+            </div>
+        </div>
+        <script>
+            function words() {
+                var regExp, str;
+                str = document.getElementById("firstnumber").value;
+                regExp = str.replace(/(^\s*)|(\s*$)/gi, "");
+                regExp = regExp.replace(/[ ]{2,}/gi, " ");
+                regExp = regExp.replace(/\n /, "\n");
+                if (regExp != 0) {
+                    document.getElementById("num1").innerHTML = regExp + "<br><br>";
+                    document.getElementById("num2").innerHTML = regExp.split(" ").length;
+                }
+            }
+        </script>
+    </body>
+</html>

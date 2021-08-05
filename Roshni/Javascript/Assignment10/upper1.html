@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assignment-1</title>
+    </head>
+    <body>
+        <div class="main">
+            <h1>First Character Uppercase or Not</h1>
+            <div>
+                <label for="">Enter the string</label>
+                <input type="text" id="firstnumber" />
+            </div>
+            <div>
+                <p>It is&nbsp;&nbsp;&nbsp;<span id="num1"></span></p>
+            </div>
+            <div>
+                <button class="btn1" onclick="uppercase()">Check</button>
+            </div>
+        </div>
+        <script>
+            function uppercase() {
+                var regExp, str;
+                str = document.getElementById("firstnumber").value;
+                regExp = /^[A-Z]/;
+                if (regExp.test(str)) {
+                    document.getElementById("num1").innerHTML = "UPPERCASE";
+                } else {
+                    document.getElementById("num1").innerHTML = "not UPPERCASE";
+                }
+            }
+        </script>
+    </body>
+</html>

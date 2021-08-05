@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Sum</title>
+        <style>
+            .container {
+                padding: 2px 16px;
+            }
+            .card {
+                box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2);
+                transition: 0.3s;
+                width: 40%;
+                height: 300px;
+                border-radius: 20px;
+                background-color: plum;
+                margin: auto;
+                margin-top: 50px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="card">
+            <div class="container">
+                <h1 style="text-align: center;">Sum</h1>
+                <div id="container1"></div>
+                <script>
+                    (array = []), (sum = 0);
+                    container1 = document.getElementById("container1");
+                    while (true) {
+                        temp = prompt("Enter a number ");
+                        if (temp == "X" || temp == "x" || temp == null) break;
+                        temp = parseInt(temp);
+                        array.push(temp);
+                    }
+                    for (i = 0; i < array.length; i++) {
+                        sum += array[i];
+                    }
+                    container1.innerHTML += `<div>Sum of all the numbers is : ${sum}</div>`;
+                </script>
+            </div>
+        </div>
+    </body>
+</html>

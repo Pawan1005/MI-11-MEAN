@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
+        <title>Assignment6-1</title>
+        <script>
+            function getarray(){
+                var fname   = document.getElementById("fname").value;
+                var sname   = document.getElementById("sname").value;
+                var tname   = document.getElementById("tname").value;
+                var forname   = document.getElementById("forname").value;
+                var fivname   = document.getElementById("fivname").value;
+                var a = [ fname, sname, tname, forname, fivname ];
+                for(var i=0; i<=a.length ; i++){
+                    document.getElementById("pic").innerHTML ="Names are store in array : " +a;
+                    document.getElementById("pid").innerHTML ="comma seperated list of all the names : " +a;
+                    document.getElementById("pie").innerHTML ="Name 1 : " +a[0];
+                    document.getElementById("pif").innerHTML ="Name 2 : " +a[1];
+                    document.getElementById("pig").innerHTML ="Name 3 : " +a[2];
+                    document.getElementById("pih").innerHTML ="Name 4 : " +a[3];
+                    document.getElementById("pii").innerHTML ="Name 5 : " +a[4];
+                }
+            }
+        </script>
+        <style>
+            body {
+                background-color: grey;
+            }
+            .container {
+                margin-top: 60px;
+                background-color: coral;
+            }
+            .row {
+                padding: 30px 20px 10px 10px;
+            }
+            input {
+                margin-left: 50px;
+                width: 400px;
+                height: 35px;
+                border-radius: 20px;
+                padding-left: 10px;
+            }
+            label {
+                margin-left: 250px;
+            }
+            .btn {
+                margin-left: 450px;
+                margin-top: 30px;
+            }
+            p { 
+                padding: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row" style="padding-top: 60px;">
+                <label>Name 1 : </label>
+                <input type="text" id="fname"><br>
+            </div>
+            <div class="row">
+                <label>Name 2 : </label>
+                <input type="text" id="sname"><br>
+            </div>
+            <div class="row">
+                <label>Name 3 : </label>
+                <input type="text" id="tname"> <br>
+            </div>
+            <div class="row">
+                <label>Name 4 : </label>
+                <input type="text" id="forname"><br>
+            </div>
+            <div class="row">
+                <label>Name 5 : </label>
+                <input type="text" id="fivname">
+            </div>    
+            <button class="btn btn-primary" type="submit" onclick="getarray()" >Submit  </button>  
+            <p id="pic"></p>
+            <p id="pid"></p>
+            <p id="pie"></p>
+            <p id="pif"></p>
+            <p id="pig"></p>
+            <p id="pih"></p>
+            <p id="pii"></p>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>

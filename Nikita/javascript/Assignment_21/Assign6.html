@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link
+            rel="stylesheet"
+            href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+            crossorigin="anonymous"
+        />
+        <title>Document</title>
+        <script lang="javascript">
+                function gread(x){
+                  if(x>=80){
+                    return  "A+";
+                  }
+                  else if(x>=60){
+                    return "A";
+                  }
+                  else if (x>=55){
+                    return "B+";
+                  }
+                  else if (x>=40){
+                    return "B";
+                  }
+                  else{
+                    return" No Grade"
+                  }
+                }
+                function color(y){
+                  debugger;
+                  if(y == "A+"|| y == "A"){
+                    return "blue";
+                  }
+                  else if(y=="B"|| y=="B+"){
+                    return "yellow"
+                  }
+                  else{
+                    return "red"
+                  }
+                }
+                function percentage(t){
+                  jj=(t/300)*100;
+                  return jj;
+                }
+                  window.addEventListener("load",()=>{
+                const param = (new URL (document.location)).searchParams;
+                     var a = parseInt (param.get("rollNo")) ;
+                     var b =  param.get("fName");
+                     var c = parseInt(param.get("Maths")) ;
+                      var d = parseInt(param.get("Science")) ;
+                      var e = parseInt(param.get("History")) ;
+                      var total = c+d+e;
+                      var rr = percentage(total);
+                      var c1= gread(rr);
+                      var m1 = color(c1);
+                      var outp = document.getElementById("pid");
+                      outp.innerHTML+= `<h1>REPORT CARD</h1><br>`;
+                      outp.innerHTML+= `<p><b>RollNo</b> : ${a}</p>`;
+                      outp.innerHTML+= `<p><b>Name </b>:  ${b}</p>`;
+                      outp.innerHTML+= `<p><b>Maths </b>:  ${c}</p>`;
+                      outp.innerHTML+= `<p><b>Science </b>:  ${d}</p>`;
+                      outp.innerHTML+= `<p><b>History </b>:  ${e}</p>`;
+                      outp.innerHTML+= `<h4><b>Total </b>:  ${total}</h4>`;
+                      outp.innerHTML+= `<h4> PERCENTAGE: ${rr}%</h4><br>`;
+                      outp.innerHTML+=`<h1>GRADE : <span style="color: ${m1};">${c1}</span> <br></h1>`;
+            })
+        </script>
+        <style>
+            .vm {
+                padding-left: 200px;
+                padding-right: 200px;
+            }
+        </style>
+    </head>
+    <body>
+            <h1>Mark calculator</h1>
+        <div class="row vm">
+            <div class="col">
+                <div class="">
+                        <h2>for uploading Mark</h2>
+                        <hr />
+                    </center>
+                    <center>
+                        <div id="pid"></div>
+                    </center>
+                </div>
+            </div>
+        </div>
+        <script
+            src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"
+        ></script>
+        <script
+            src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"
+        ></script>
+    </body>
+</html>
