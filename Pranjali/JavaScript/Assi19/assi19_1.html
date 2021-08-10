@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Assi19_1</title>
+        <style>
+            body {
+                height: 1700px;
+                background-image: linear-gradient(to bottom right, rgb(97, 4, 97), rgba(255, 0, 0, 0.904));
+            }
+            .main {
+                background-image: linear-gradient(50deg, rgb(238, 167, 214), rgba(236, 236, 146, 0.911));
+                width: 550px;
+                height: 500px;
+                padding-top: 15px;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body>
+        <br /><br /><br /><br />ss
+        <div style=" position: absolute; left: 650px" class="main">
+            <br />
+            <h1 style="color: 32a80f; text-align: center">Create Table<br /></h1>
+            <hr size="5" color="black" />
+            <br /><br /><br />
+            <label for="" ></label>
+            <input type="text" id="firstnumber" style="position: absolute; left: 20%;" />
+            <button
+                style="
+                    background-color: #417c2a;
+                    color: white;
+                    padding: 7px 11px;
+                    margin: 0 8px 10px 8px;
+                    font-weight: bold;
+                    font-size: 17px;
+                    border: 1px solid gray;
+                    border-radius: 4px;
+                    position: absolute; left: 70%;
+                "
+                type="submit"
+                onclick="table()"
+            >
+                Create
+            </button>
+            <br /><br><br></br>
+            <p id="num1" style="position: absolute; left: 30%;"></p>
+        </div>
+        <script>
+            function table() {
+                let No;
+                No = Number(document.getElementById("firstnumber").value);
+                let i;
+                if (No >= 1) {
+                    for(i=1;i<=10;i++){
+                        document.getElementById("num1").innerHTML += `${No} x ${i} = ${No*i}<br>`;
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>assi20_1</title>
+        <style>
+            body {
+                height: 1700px;
+                background-image: linear-gradient(to bottom right, rgb(97, 4, 97), rgba(255, 0, 0, 0.904));
+                text-align: center;;
+            }
+            .main {
+              background-color: white;
+                width: 550px;
+                height: 500px;
+                padding-top: 15px;
+                border-radius: 10px;
+            }
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 8px;
+            }
+            th,
+            td {
+                min-width: 60px;
+            }
+            th {
+                color: #ffffff;
+                background-color: rgba(71, 26, 8, 0.837);
+            }
+        </style>
+    </head>
+    <body>
+        <br /><br /><br /><br />
+        <div style="position: absolute; left: 650px" class="main">
+            <br />
+            <h1>Add New Row<br></h1>
+            <hr size="5" color="black" />
+            <br /><br /><br />
+            <div id="main">
+                <div class="div2">
+                    <table id="table1" style="position: relative; left: 35%;">
+                        <tr>
+                            <th>Roll No</th>
+                            <th>Name</th>
+                        </tr>
+                        <tr>
+                            <td>1</td>
+                            <td>Mahi</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>Rohit</td>
+                        </tr>
+                    </table>
+                </div>
+                <br><br><br><br>
+                <div class="div1">
+                    <button
+                        class="btn1"
+                        onclick="newRow()"
+                        style="
+                            background-color: #417c2a;
+                            color: white;
+                            padding: 7px 11px;
+                            margin: 0 8px 10px 8px;
+                            font-weight: bold;
+                            font-size: 17px;
+                            border: 1px solid gray;
+                            border-radius: 4px;
+                        "
+                    >
+                        Add
+                    </button>
+                </div>
+            </div>
+        </div>
+        <script>
+            function newRow() {
+                let table = document.getElementById("table1");
+                let row = table.insertRow();
+                let col1 = row.insertCell();
+                let col2 = row.insertCell();
+                col1.textContent = 3;
+                col2.textContent = "new";
+            }
+        </script>
+    </body>
+</html>
