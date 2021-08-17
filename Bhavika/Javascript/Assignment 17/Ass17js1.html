@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Grades</title>
+        <style>
+             body {
+                padding-left: 100px;
+                background-color: gray;
+            }
+            .container {
+                padding: 0 40%;
+                display: flex;
+                flex-direction: column;
+            }
+            input {
+                margin: 10px 0;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <label for="Roll">Roll No :</label>
+            <input type="text" id="Roll" />
+            <label for="name">Name :</label>
+            <input type="text" id="name" />
+            <label for="Maths">Maths :</label>
+            <input type="text" id="Maths" />
+            <label for="Science">Science :</label>
+            <input type="text" id="Science" />
+            <label for="History">History :</label>
+            <input type="text" id="History" />
+            <button id="sub">Submit</button>
+            <div id="res"></div>
+        </div>
+        <script>
+            class Student {
+                constructor() {
+                    this.name = "";
+                    this.roll = 0;
+                    this.maths = 0;
+                    this.science = 0;
+                    this.history = 0;
+                }
+                addData(name, roll, m, s, h) {
+                    this.name = name;
+                    this.roll = roll;
+                    this.maths = m;
+                    this.science = s;
+                    this.history = h;
+                }
+                calculate() {
+                    this.total = this.maths + this.science + this.history;
+                    this.percentage = (this.total / 300) * 100;
+                    if (this.percentage >= 80) {
+                        this.grade = "A+";
+                    } else if (this.percentage < 80 && this.percentage >= 60) {
+                        this.grade = "A";
+                    } else if (this.percentage < 60 && this.percentage >= 55) {
+                        this.grade = "B+";
+                    } else if (this.percentage < 55 && this.percentage >= 40) {
+                        this.grade = "B";
+                    } else {
+                        this.grade = "No Grade  ";
+                    }
+                }
+                display() {
+                    return `<div>
+                        <h1>** REPORT CARD **</h1>
+                        <div>RollNO : ${this.roll}</div>
+                        <div>Name : ${this.name}</div>
+                        <div>Maths : ${this.maths}</div>
+                        <div>Science : ${this.science}</div>
+                        <div>History : ${this.history}</div>
+                        <div><strong>TOTAL</strong> : ${this.total}</div>
+                        <div><strong>PERCENTAGE</strong> : ${this.percentage} %</div>
+                        <div><strong>GRADE</strong> : <span id="grade">${this.grade}</span></div>
+                        </div>`;
+                }
+            }
+
+            document.getElementById("sub").onclick = () => {
+                let roll = document.getElementById("Roll"),
+                    name = document.getElementById("name"),
+                    maths = document.getElementById("Maths"),
+                    science = document.getElementById("Science"),
+                    history = document.getElementById("History"),
+                    res = document.getElementById("res");
+                try {
+                    let st = new Student();
+                    name = name.value;
+                    name = name.toUpperCase();
+                    roll = parseInt(roll.value);
+                    maths = parseInt(maths.value);
+                    science = parseInt(science.value);
+                    history = parseInt(history.value);
+                    if (isNaN(maths) || isNaN(science) || isNaN(history)) {
+                        throw "Enter Proper marks";
+                    } else {
+                        st.addData(name, roll, maths, science, history);
+                        st.calculate();
+                        res.innerHTML = st.display();
+                        let grade = document.getElementById("grade");
+                        if (st.grade.includes("A")) {
+                            grade.style.color = "green";
+                        } else {
+                            grade.style.color = "red";
+                        }
+                    }
+                } catch (error) {
+                    alert(error);
+                }
+            };
+        </script>
+    </body>
+</html>

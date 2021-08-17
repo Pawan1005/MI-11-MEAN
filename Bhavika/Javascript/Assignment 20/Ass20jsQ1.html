@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            function table() {
+                let table = document.getElementById("tab");
+                let cd = parseInt(document.getElementById("i1").value);
+                let na = document.getElementById("i2").value;
+                let row = table.insertRow(-1);
+                let col1 = row.insertCell(0);
+                let col2 = row.insertCell(1);
+                col1.innerHTML = cd;
+                col2.innerHTML = na;
+            }
+        </script>
+        <style>
+            body {
+                padding-left: 500px;
+                padding-top: 50px;
+                background-color: gray;
+            }
+            table,
+            th,
+            td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                padding: 5px;
+            }
+            .content {
+                width: 300px;
+            }
+            input {
+                float: right;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="content">
+            <h1>Insert New Row</h1>
+            <table id="tab">
+                <tr>
+                    <th>Code</th>
+                    <th>Name</th>
+                </tr>
+                <tr>
+                    <td>234</td>
+                    <td>apple</td>
+                </tr>
+                <tr>
+                    <td>123</td>
+                    <td>orange</td>
+                </tr>
+            </table>
+            <br />
+            <br />
+            <br />
+            code: <input type="text" id="i1" /> <br />
+            <br />
+            name: <input type="text" id="i2" /> <br />
+            <br />
+            <button onclick="table()">Create New Row</button>
+        </div>
+    </body>
+</html>
